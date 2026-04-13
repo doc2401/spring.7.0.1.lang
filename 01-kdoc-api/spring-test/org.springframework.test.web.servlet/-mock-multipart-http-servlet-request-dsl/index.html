@@ -1,0 +1,600 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MockMultipartHttpServletRequestDsl</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    spring-framework
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">7.0.1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":spring-test/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":spring-test/main" data-filter=":spring-test/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    spring-framework
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="spring-test::org.springframework.test.web.servlet/MockMultipartHttpServletRequestDsl///PointingToDeclaration//1785539840">
+  <div class="breadcrumbs"><a href="../../index.html">spring-test</a><span class="delimiter">/</span><a href="../index.html">org.springframework.test.web.servlet</a><span class="delimiter">/</span><span class="current">MockMultipartHttpServletRequestDsl</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mock</span><wbr><span>Multipart</span><wbr><span>Http</span><wbr><span>Servlet</span><wbr><span>Request</span><wbr><span><span>Dsl</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">MockMultipartHttpServletRequestDsl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/MockMultipartHttpServletRequestBuilder///PointingToDeclaration/">MockMultipartHttpServletRequestBuilder</span></span></span><span class="token punctuation">)</span> : <a href="../-mock-http-servlet-request-dsl/index.html">MockHttpServletRequestDsl</a></div><p class="paragraph">Provide a <span data-unresolved-link="org.springframework.test.web.servlet.request/MockMultipartHttpServletRequestBuilder///PointingToDeclaration/">MockMultipartHttpServletRequestBuilder</span> Kotlin DSL in order to be able to write idiomatic Kotlin code.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">Sebastien Deleuze</p></span><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">5.2</p></span><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../multipart.html"><span><span>multipart</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1303419619%2FConstructors%2F1785539840" anchor-label="MockMultipartHttpServletRequestDsl" id="-1303419619%2FConstructors%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mock-multipart-http-servlet-request-dsl.html"><span>Mock</span><wbr><span>Multipart</span><wbr><span>Http</span><wbr><span>Servlet</span><wbr><span>Request</span><wbr><span><span>Dsl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1303419619%2FConstructors%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/MockMultipartHttpServletRequestBuilder///PointingToDeclaration/">MockMultipartHttpServletRequestBuilder</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="339386446%2FProperties%2F1785539840" anchor-label="accept" id="339386446%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/accept.html"><span><span>accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="339386446%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/accept.html">accept</a><span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-592972440%2FProperties%2F1785539840" anchor-label="characterEncoding" id="-592972440%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/character-encoding.html"><span>character</span><wbr><span><span>Encoding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-592972440%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/character-encoding.html">characterEncoding</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1613769749%2FProperties%2F1785539840" anchor-label="content" id="-1613769749%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/content.html"><span><span>content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1613769749%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/content.html">content</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1174887727%2FProperties%2F1785539840" anchor-label="contentType" id="-1174887727%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/content-type.html"><span>content</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1174887727%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/content-type.html">contentType</a><span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1023962832%2FProperties%2F1785539840" anchor-label="contextPath" id="1023962832%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/context-path.html"><span>context</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1023962832%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/context-path.html">contextPath</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="27121028%2FProperties%2F1785539840" anchor-label="flashAttrs" id="27121028%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/flash-attrs.html"><span>flash</span><wbr><span><span>Attrs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="27121028%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/flash-attrs.html">flashAttrs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="580505049%2FProperties%2F1785539840" anchor-label="formFields" id="580505049%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/form-fields.html"><span>form</span><wbr><span><span>Fields</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="580505049%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/form-fields.html">formFields</a><span class="token operator">: </span><span data-unresolved-link="org.springframework.util/MultiValueMap///PointingToDeclaration/">MultiValueMap</span><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1193461136%2FProperties%2F1785539840" anchor-label="params" id="1193461136%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/params.html"><span><span>params</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1193461136%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/params.html">params</a><span class="token operator">: </span><span data-unresolved-link="org.springframework.util/MultiValueMap///PointingToDeclaration/">MultiValueMap</span><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1872908035%2FProperties%2F1785539840" anchor-label="pathInfo" id="1872908035%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/path-info.html"><span>path</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1872908035%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/path-info.html">pathInfo</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1551644694%2FProperties%2F1785539840" anchor-label="principal" id="1551644694%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/principal.html"><span><span>principal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1551644694%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/principal.html">principal</a><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/security/Principal.html">Principal</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="840241686%2FProperties%2F1785539840" anchor-label="queryParams" id="840241686%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/query-params.html"><span>query</span><wbr><span><span>Params</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840241686%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/query-params.html">queryParams</a><span class="token operator">: </span><span data-unresolved-link="org.springframework.util/MultiValueMap///PointingToDeclaration/">MultiValueMap</span><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-236403521%2FProperties%2F1785539840" anchor-label="secure" id="-236403521%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/secure.html"><span><span>secure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-236403521%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/secure.html">secure</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1732386310%2FProperties%2F1785539840" anchor-label="servletPath" id="-1732386310%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/servlet-path.html"><span>servlet</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1732386310%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/servlet-path.html">servletPath</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="491303022%2FProperties%2F1785539840" anchor-label="session" id="491303022%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/session.html"><span><span>session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="491303022%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/session.html">session</a><span class="token operator">: </span><span data-unresolved-link="org.springframework.mock.web/MockHttpSession///PointingToDeclaration/">MockHttpSession</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="716447594%2FProperties%2F1785539840" anchor-label="sessionAttrs" id="716447594%2FProperties%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/session-attrs.html"><span>session</span><wbr><span><span>Attrs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="716447594%2FProperties%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-mock-http-servlet-request-dsl/session-attrs.html">sessionAttrs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="2037406127%2FFunctions%2F1785539840" anchor-label="accept" id="2037406127%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/accept.html"><span><span>accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2037406127%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>mediaTypes<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="250072171%2FFunctions%2F1785539840" anchor-label="cookie" id="250072171%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/cookie.html"><span><span>cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="250072171%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/cookie.html"><span class="token function">cookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>cookies<span class="token operator">: </span><a href="https://javadoc.io/doc/jakarta.servlet/jakarta.servlet-api/latest/jakarta.servlet/jakarta/servlet/http/Cookie.html">Cookie</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1971829934%2FFunctions%2F1785539840" anchor-label="file" id="1971829934%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file.html"><span><span>file</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1971829934%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="file.html"><span class="token function">file</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><span data-unresolved-link="org.springframework.mock.web/MockMultipartFile///PointingToDeclaration/">MockMultipartFile</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/MockMultipartHttpServletRequestBuilder///PointingToDeclaration/">MockMultipartHttpServletRequestBuilder</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="file.html"><span class="token function">file</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/MockMultipartHttpServletRequestBuilder///PointingToDeclaration/">MockMultipartHttpServletRequestBuilder</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="423608287%2FFunctions%2F1785539840" anchor-label="flashAttr" id="423608287%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/flash-attr.html"><span>flash</span><wbr><span><span>Attr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="423608287%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/flash-attr.html"><span class="token function">flashAttr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-36933765%2FFunctions%2F1785539840" anchor-label="formField" id="-36933765%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/form-field.html"><span>form</span><wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-36933765%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/form-field.html"><span class="token function">formField</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>values<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1954837851%2FFunctions%2F1785539840" anchor-label="header" id="-1954837851%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1954837851%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>values<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-177115468%2FFunctions%2F1785539840" anchor-label="headers" id="-177115468%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/headers.html"><span><span>headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-177115468%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/headers.html"><span class="token function">headers</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">headers<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/HttpHeaders///PointingToDeclaration/">HttpHeaders</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-689665054%2FFunctions%2F1785539840" anchor-label="locale" id="-689665054%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/locale.html"><span><span>locale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-689665054%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/locale.html"><span class="token function">locale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>locales<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html">Locale</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="579621791%2FFunctions%2F1785539840" anchor-label="merge" id="579621791%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/merge.html"><span><span>merge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="579621791%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/merge.html"><span class="token function">merge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">parent<span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/MockHttpServletRequestBuilder///PointingToDeclaration/">MockHttpServletRequestBuilder</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="946970738%2FFunctions%2F1785539840" anchor-label="param" id="946970738%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/param.html"><span><span>param</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="946970738%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/param.html"><span class="token function">param</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>values<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1990650225%2FFunctions%2F1785539840" anchor-label="part" id="1990650225%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="part.html"><span><span>part</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1990650225%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="part.html"><span class="token function">part</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>parts<span class="token operator">: </span><a href="https://javadoc.io/doc/jakarta.servlet/jakarta.servlet-api/latest/jakarta.servlet/jakarta/servlet/http/Part.html">Part</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/MockMultipartHttpServletRequestBuilder///PointingToDeclaration/">MockMultipartHttpServletRequestBuilder</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1974750856%2FFunctions%2F1785539840" anchor-label="queryParam" id="-1974750856%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/query-param.html"><span>query</span><wbr><span><span>Param</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1974750856%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/query-param.html"><span class="token function">queryParam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>values<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1525992672%2FFunctions%2F1785539840" anchor-label="requestAttr" id="1525992672%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/request-attr.html"><span>request</span><wbr><span><span>Attr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1525992672%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/request-attr.html"><span class="token function">requestAttr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-225594567%2FFunctions%2F1785539840" anchor-label="sessionAttr" id="-225594567%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/session-attr.html"><span>session</span><wbr><span><span>Attr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-225594567%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/session-attr.html"><span class="token function">sessionAttr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1762349704%2FFunctions%2F1785539840" anchor-label="with" id="-1762349704%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mock-http-servlet-request-dsl/with.html"><span><span>with</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1762349704%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-mock-http-servlet-request-dsl/with.html"><span class="token function">with</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processor<span class="token operator">: </span><span data-unresolved-link="org.springframework.test.web.servlet.request/RequestPostProcessor///PointingToDeclaration/">RequestPostProcessor</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

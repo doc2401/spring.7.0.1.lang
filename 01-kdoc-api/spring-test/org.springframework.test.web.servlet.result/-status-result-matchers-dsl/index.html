@@ -1,0 +1,1177 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>StatusResultMatchersDsl</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    spring-framework
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">7.0.1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":spring-test/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":spring-test/main" data-filter=":spring-test/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    spring-framework
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="spring-test::org.springframework.test.web.servlet.result/StatusResultMatchersDsl///PointingToDeclaration//1785539840">
+  <div class="breadcrumbs"><a href="../../index.html">spring-test</a><span class="delimiter">/</span><a href="../index.html">org.springframework.test.web.servlet.result</a><span class="delimiter">/</span><span class="current">StatusResultMatchersDsl</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Status</span><wbr><span>Result</span><wbr><span>Matchers</span><wbr><span><span>Dsl</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">StatusResultMatchersDsl</a></div><p class="paragraph">Provide a <a href="../../../spring-test/org.springframework.test.web.servlet.result/-status-result-matchers/index.html">StatusResultMatchers</a> Kotlin DSL in order to be able to write idiomatic Kotlin code.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">Sebastien Deleuze</p></span><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">5.3</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-824130831%2FFunctions%2F1785539840" anchor-label="is1xxInformational" id="-824130831%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is1xx-informational.html"><span>is1xx</span><wbr><span><span>Informational</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-824130831%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is1xx-informational.html"><span class="token function">is1xxInformational</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-873092809%2FFunctions%2F1785539840" anchor-label="is2xxSuccessful" id="-873092809%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is2xx-successful.html"><span>is2xx</span><wbr><span><span>Successful</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-873092809%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is2xx-successful.html"><span class="token function">is2xxSuccessful</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2108874110%2FFunctions%2F1785539840" anchor-label="is3xxRedirection" id="2108874110%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is3xx-redirection.html"><span>is3xx</span><wbr><span><span>Redirection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2108874110%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is3xx-redirection.html"><span class="token function">is3xxRedirection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1309536370%2FFunctions%2F1785539840" anchor-label="is4xxClientError" id="-1309536370%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is4xx-client-error.html"><span>is4xx</span><wbr><span>Client</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309536370%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is4xx-client-error.html"><span class="token function">is4xxClientError</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2095505479%2FFunctions%2F1785539840" anchor-label="is5xxServerError" id="2095505479%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is5xx-server-error.html"><span>is5xx</span><wbr><span>Server</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2095505479%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is5xx-server-error.html"><span class="token function">is5xxServerError</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1696409392%2FFunctions%2F1785539840" anchor-label="isAccepted" id="1696409392%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-accepted.html"><span>is</span><wbr><span><span>Accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1696409392%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-accepted.html"><span class="token function">isAccepted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1978269272%2FFunctions%2F1785539840" anchor-label="isAlreadyReported" id="1978269272%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-already-reported.html"><span>is</span><wbr><span>Already</span><wbr><span><span>Reported</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1978269272%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-already-reported.html"><span class="token function">isAlreadyReported</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1541603544%2FFunctions%2F1785539840" anchor-label="isBadGateway" id="1541603544%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-bad-gateway.html"><span>is</span><wbr><span>Bad</span><wbr><span><span>Gateway</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1541603544%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-bad-gateway.html"><span class="token function">isBadGateway</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="743649005%2FFunctions%2F1785539840" anchor-label="isBadRequest" id="743649005%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-bad-request.html"><span>is</span><wbr><span>Bad</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="743649005%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-bad-request.html"><span class="token function">isBadRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-143698150%2FFunctions%2F1785539840" anchor-label="isBandwidthLimitExceeded" id="-143698150%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-bandwidth-limit-exceeded.html"><span>is</span><wbr><span>Bandwidth</span><wbr><span>Limit</span><wbr><span><span>Exceeded</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-143698150%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-bandwidth-limit-exceeded.html"><span class="token function"><strike>isBandwidthLimitExceeded</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1450512741%2FFunctions%2F1785539840" anchor-label="isConflict" id="1450512741%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-conflict.html"><span>is</span><wbr><span><span>Conflict</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1450512741%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-conflict.html"><span class="token function">isConflict</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1172163741%2FFunctions%2F1785539840" anchor-label="isContentTooLarge" id="-1172163741%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-content-too-large.html"><span>is</span><wbr><span>Content</span><wbr><span>Too</span><wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1172163741%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-content-too-large.html"><span class="token function">isContentTooLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2080163280%2FFunctions%2F1785539840" anchor-label="isContinue" id="-2080163280%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-continue.html"><span>is</span><wbr><span><span>Continue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2080163280%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-continue.html"><span class="token function">isContinue</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1445650085%2FFunctions%2F1785539840" anchor-label="isCreated" id="-1445650085%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-created.html"><span>is</span><wbr><span><span>Created</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1445650085%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-created.html"><span class="token function">isCreated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1563075950%2FFunctions%2F1785539840" anchor-label="isEarlyHints" id="1563075950%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-early-hints.html"><span>is</span><wbr><span>Early</span><wbr><span><span>Hints</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1563075950%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-early-hints.html"><span class="token function">isEarlyHints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2079914377%2FFunctions%2F1785539840" anchor-label="isEqualTo" id="2079914377%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-equal-to.html"><span>is</span><wbr><span>Equal</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2079914377%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-equal-to.html"><span class="token function">isEqualTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-equal-to.html"><span class="token function">isEqualTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">matcher<span class="token operator">: </span><a href="https://javadoc.io/doc/org.hamcrest/hamcrest/2.1/org/hamcrest/Matcher.html">Matcher</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1289955402%2FFunctions%2F1785539840" anchor-label="isExpectationFailed" id="1289955402%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-expectation-failed.html"><span>is</span><wbr><span>Expectation</span><wbr><span><span>Failed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1289955402%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-expectation-failed.html"><span class="token function">isExpectationFailed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="405216399%2FFunctions%2F1785539840" anchor-label="isFailedDependency" id="405216399%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-failed-dependency.html"><span>is</span><wbr><span>Failed</span><wbr><span><span>Dependency</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="405216399%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-failed-dependency.html"><span class="token function">isFailedDependency</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="356671466%2FFunctions%2F1785539840" anchor-label="isForbidden" id="356671466%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-forbidden.html"><span>is</span><wbr><span><span>Forbidden</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="356671466%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-forbidden.html"><span class="token function">isForbidden</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1991848833%2FFunctions%2F1785539840" anchor-label="isFound" id="1991848833%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-found.html"><span>is</span><wbr><span><span>Found</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1991848833%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-found.html"><span class="token function">isFound</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="666264986%2FFunctions%2F1785539840" anchor-label="isGatewayTimeout" id="666264986%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-gateway-timeout.html"><span>is</span><wbr><span>Gateway</span><wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="666264986%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-gateway-timeout.html"><span class="token function">isGatewayTimeout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1023837640%2FFunctions%2F1785539840" anchor-label="isGone" id="-1023837640%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-gone.html"><span>is</span><wbr><span><span>Gone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1023837640%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-gone.html"><span class="token function">isGone</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1728571192%2FFunctions%2F1785539840" anchor-label="isHttpVersionNotSupported" id="1728571192%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-http-version-not-supported.html"><span>is</span><wbr><span>Http</span><wbr><span>Version</span><wbr><span>Not</span><wbr><span><span>Supported</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1728571192%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-http-version-not-supported.html"><span class="token function">isHttpVersionNotSupported</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2020269114%2FFunctions%2F1785539840" anchor-label="isIAmATeapot" id="-2020269114%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-i-am-a-teapot.html"><span>is</span><wbr><span>IAm</span><wbr><span><span>ATeapot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2020269114%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-i-am-a-teapot.html"><span class="token function"><strike>isIAmATeapot</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1562956906%2FFunctions%2F1785539840" anchor-label="isImUsed" id="-1562956906%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-im-used.html"><span>is</span><wbr><span>Im</span><wbr><span><span>Used</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1562956906%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-im-used.html"><span class="token function">isImUsed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1848870837%2FFunctions%2F1785539840" anchor-label="isInsufficientStorage" id="-1848870837%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-insufficient-storage.html"><span>is</span><wbr><span>Insufficient</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1848870837%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-insufficient-storage.html"><span class="token function">isInsufficientStorage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-211731013%2FFunctions%2F1785539840" anchor-label="isInternalServerError" id="-211731013%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-internal-server-error.html"><span>is</span><wbr><span>Internal</span><wbr><span>Server</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-211731013%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-internal-server-error.html"><span class="token function">isInternalServerError</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-721950606%2FFunctions%2F1785539840" anchor-label="isLengthRequired" id="-721950606%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-length-required.html"><span>is</span><wbr><span>Length</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-721950606%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-length-required.html"><span class="token function">isLengthRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1631510611%2FFunctions%2F1785539840" anchor-label="isLocked" id="-1631510611%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-locked.html"><span>is</span><wbr><span><span>Locked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631510611%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-locked.html"><span class="token function">isLocked</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1099988337%2FFunctions%2F1785539840" anchor-label="isLoopDetected" id="1099988337%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-loop-detected.html"><span>is</span><wbr><span>Loop</span><wbr><span><span>Detected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1099988337%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-loop-detected.html"><span class="token function">isLoopDetected</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1552685919%2FFunctions%2F1785539840" anchor-label="isMethodNotAllowed" id="-1552685919%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-method-not-allowed.html"><span>is</span><wbr><span>Method</span><wbr><span>Not</span><wbr><span><span>Allowed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1552685919%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-method-not-allowed.html"><span class="token function">isMethodNotAllowed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-354213241%2FFunctions%2F1785539840" anchor-label="isMisdirectedRequest" id="-354213241%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-misdirected-request.html"><span>is</span><wbr><span>Misdirected</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-354213241%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-misdirected-request.html"><span class="token function">isMisdirectedRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="405081281%2FFunctions%2F1785539840" anchor-label="isMultipleChoices" id="405081281%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-multiple-choices.html"><span>is</span><wbr><span>Multiple</span><wbr><span><span>Choices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="405081281%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-multiple-choices.html"><span class="token function">isMultipleChoices</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1805076456%2FFunctions%2F1785539840" anchor-label="isMultiStatus" id="-1805076456%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-multi-status.html"><span>is</span><wbr><span>Multi</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1805076456%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-multi-status.html"><span class="token function">isMultiStatus</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="974772318%2FFunctions%2F1785539840" anchor-label="isNetworkAuthenticationRequired" id="974772318%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-network-authentication-required.html"><span>is</span><wbr><span>Network</span><wbr><span>Authentication</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="974772318%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-network-authentication-required.html"><span class="token function">isNetworkAuthenticationRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1521015477%2FFunctions%2F1785539840" anchor-label="isNoContent" id="-1521015477%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-no-content.html"><span>is</span><wbr><span>No</span><wbr><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1521015477%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-no-content.html"><span class="token function">isNoContent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1012384633%2FFunctions%2F1785539840" anchor-label="isNonAuthoritativeInformation" id="1012384633%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-non-authoritative-information.html"><span>is</span><wbr><span>Non</span><wbr><span>Authoritative</span><wbr><span><span>Information</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1012384633%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-non-authoritative-information.html"><span class="token function">isNonAuthoritativeInformation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1560088882%2FFunctions%2F1785539840" anchor-label="isNotAcceptable" id="-1560088882%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-acceptable.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Acceptable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1560088882%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-not-acceptable.html"><span class="token function">isNotAcceptable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1809762455%2FFunctions%2F1785539840" anchor-label="isNotExtended" id="1809762455%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-extended.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Extended</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1809762455%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-not-extended.html"><span class="token function"><strike>isNotExtended</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1161555816%2FFunctions%2F1785539840" anchor-label="isNotFound" id="1161555816%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-found.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Found</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1161555816%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-not-found.html"><span class="token function">isNotFound</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1031271464%2FFunctions%2F1785539840" anchor-label="isNotImplemented" id="1031271464%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-implemented.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Implemented</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1031271464%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-not-implemented.html"><span class="token function">isNotImplemented</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1364814585%2FFunctions%2F1785539840" anchor-label="isNotModified" id="-1364814585%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-modified.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Modified</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1364814585%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-not-modified.html"><span class="token function">isNotModified</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-492330469%2FFunctions%2F1785539840" anchor-label="isOk" id="-492330469%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-ok.html"><span>is</span><wbr><span><span>Ok</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-492330469%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-ok.html"><span class="token function">isOk</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1030850369%2FFunctions%2F1785539840" anchor-label="isPartialContent" id="-1030850369%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-partial-content.html"><span>is</span><wbr><span>Partial</span><wbr><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030850369%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-partial-content.html"><span class="token function">isPartialContent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="962739438%2FFunctions%2F1785539840" anchor-label="isPayloadTooLarge" id="962739438%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-payload-too-large.html"><span>is</span><wbr><span>Payload</span><wbr><span>Too</span><wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="962739438%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-payload-too-large.html"><span class="token function"><strike>isPayloadTooLarge</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1686462178%2FFunctions%2F1785539840" anchor-label="isPaymentRequired" id="-1686462178%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-payment-required.html"><span>is</span><wbr><span>Payment</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1686462178%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-payment-required.html"><span class="token function">isPaymentRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-354177959%2FFunctions%2F1785539840" anchor-label="isPermanentRedirect" id="-354177959%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-permanent-redirect.html"><span>is</span><wbr><span>Permanent</span><wbr><span><span>Redirect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-354177959%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-permanent-redirect.html"><span class="token function">isPermanentRedirect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1058446878%2FFunctions%2F1785539840" anchor-label="isPreconditionFailed" id="-1058446878%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-precondition-failed.html"><span>is</span><wbr><span>Precondition</span><wbr><span><span>Failed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1058446878%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-precondition-failed.html"><span class="token function">isPreconditionFailed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="506893376%2FFunctions%2F1785539840" anchor-label="isPreconditionRequired" id="506893376%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-precondition-required.html"><span>is</span><wbr><span>Precondition</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="506893376%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-precondition-required.html"><span class="token function">isPreconditionRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1977474364%2FFunctions%2F1785539840" anchor-label="isProcessing" id="-1977474364%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-processing.html"><span>is</span><wbr><span><span>Processing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1977474364%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-processing.html"><span class="token function"><strike>isProcessing</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1630398878%2FFunctions%2F1785539840" anchor-label="isProxyAuthenticationRequired" id="1630398878%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-proxy-authentication-required.html"><span>is</span><wbr><span>Proxy</span><wbr><span>Authentication</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1630398878%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-proxy-authentication-required.html"><span class="token function">isProxyAuthenticationRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1629521810%2FFunctions%2F1785539840" anchor-label="isRequestedRangeNotSatisfiable" id="-1629521810%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-requested-range-not-satisfiable.html"><span>is</span><wbr><span>Requested</span><wbr><span>Range</span><wbr><span>Not</span><wbr><span><span>Satisfiable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1629521810%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-requested-range-not-satisfiable.html"><span class="token function">isRequestedRangeNotSatisfiable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1931727495%2FFunctions%2F1785539840" anchor-label="isRequestHeaderFieldsTooLarge" id="1931727495%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-request-header-fields-too-large.html"><span>is</span><wbr><span>Request</span><wbr><span>Header</span><wbr><span>Fields</span><wbr><span>Too</span><wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1931727495%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-request-header-fields-too-large.html"><span class="token function">isRequestHeaderFieldsTooLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-187750939%2FFunctions%2F1785539840" anchor-label="isRequestTimeout" id="-187750939%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-request-timeout.html"><span>is</span><wbr><span>Request</span><wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-187750939%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-request-timeout.html"><span class="token function">isRequestTimeout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="186333965%2FFunctions%2F1785539840" anchor-label="isResetContent" id="186333965%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-reset-content.html"><span>is</span><wbr><span>Reset</span><wbr><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="186333965%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-reset-content.html"><span class="token function">isResetContent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-554076902%2FFunctions%2F1785539840" anchor-label="isSeeOther" id="-554076902%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-see-other.html"><span>is</span><wbr><span>See</span><wbr><span><span>Other</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-554076902%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-see-other.html"><span class="token function">isSeeOther</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1106226564%2FFunctions%2F1785539840" anchor-label="isServiceUnavailable" id="-1106226564%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-service-unavailable.html"><span>is</span><wbr><span>Service</span><wbr><span><span>Unavailable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1106226564%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-service-unavailable.html"><span class="token function">isServiceUnavailable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1474996022%2FFunctions%2F1785539840" anchor-label="isSwitchingProtocols" id="-1474996022%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-switching-protocols.html"><span>is</span><wbr><span>Switching</span><wbr><span><span>Protocols</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1474996022%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-switching-protocols.html"><span class="token function">isSwitchingProtocols</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1292796694%2FFunctions%2F1785539840" anchor-label="isTemporaryRedirect" id="1292796694%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-temporary-redirect.html"><span>is</span><wbr><span>Temporary</span><wbr><span><span>Redirect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1292796694%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-temporary-redirect.html"><span class="token function">isTemporaryRedirect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1852956008%2FFunctions%2F1785539840" anchor-label="isTooEarly" id="1852956008%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-too-early.html"><span>is</span><wbr><span>Too</span><wbr><span><span>Early</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1852956008%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-too-early.html"><span class="token function">isTooEarly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-679829908%2FFunctions%2F1785539840" anchor-label="isTooManyRequests" id="-679829908%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-too-many-requests.html"><span>is</span><wbr><span>Too</span><wbr><span>Many</span><wbr><span><span>Requests</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-679829908%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-too-many-requests.html"><span class="token function">isTooManyRequests</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2113823107%2FFunctions%2F1785539840" anchor-label="isUnauthorized" id="2113823107%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-unauthorized.html"><span>is</span><wbr><span><span>Unauthorized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2113823107%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-unauthorized.html"><span class="token function">isUnauthorized</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1168549208%2FFunctions%2F1785539840" anchor-label="isUnavailableForLegalReasons" id="-1168549208%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-unavailable-for-legal-reasons.html"><span>is</span><wbr><span>Unavailable</span><wbr><span>For</span><wbr><span>Legal</span><wbr><span><span>Reasons</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1168549208%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-unavailable-for-legal-reasons.html"><span class="token function">isUnavailableForLegalReasons</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1899631666%2FFunctions%2F1785539840" anchor-label="isUnprocessableContent" id="-1899631666%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-unprocessable-content.html"><span>is</span><wbr><span>Unprocessable</span><wbr><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1899631666%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-unprocessable-content.html"><span class="token function">isUnprocessableContent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="690236816%2FFunctions%2F1785539840" anchor-label="isUnprocessableEntity" id="690236816%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-unprocessable-entity.html"><span>is</span><wbr><span>Unprocessable</span><wbr><span><span>Entity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="690236816%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-unprocessable-entity.html"><span class="token function"><strike>isUnprocessableEntity</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="391174030%2FFunctions%2F1785539840" anchor-label="isUnsupportedMediaType" id="391174030%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-unsupported-media-type.html"><span>is</span><wbr><span>Unsupported</span><wbr><span>Media</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="391174030%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-unsupported-media-type.html"><span class="token function">isUnsupportedMediaType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="910562248%2FFunctions%2F1785539840" anchor-label="isUpgradeRequired" id="910562248%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-upgrade-required.html"><span>is</span><wbr><span>Upgrade</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="910562248%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-upgrade-required.html"><span class="token function">isUpgradeRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-962905069%2FFunctions%2F1785539840" anchor-label="isUriTooLong" id="-962905069%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-uri-too-long.html"><span>is</span><wbr><span>Uri</span><wbr><span>Too</span><wbr><span><span>Long</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-962905069%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-uri-too-long.html"><span class="token function">isUriTooLong</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-675909854%2FFunctions%2F1785539840" anchor-label="isVariantAlsoNegotiates" id="-675909854%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-variant-also-negotiates.html"><span>is</span><wbr><span>Variant</span><wbr><span>Also</span><wbr><span><span>Negotiates</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-675909854%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="is-variant-also-negotiates.html"><span class="token function">isVariantAlsoNegotiates</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-231558953%2FFunctions%2F1785539840" anchor-label="reason" id="-231558953%2FFunctions%2F1785539840" data-filterable-set=":spring-test/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-test/main" data-filterable-set=":spring-test/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reason.html"><span><span>reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-231558953%2FFunctions%2F1785539840"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-test/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="reason.html"><span class="token function">reason</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="reason.html"><span class="token function">reason</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">matcher<span class="token operator">: </span><a href="https://javadoc.io/doc/org.hamcrest/hamcrest/2.1/org/hamcrest/Matcher.html">Matcher</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

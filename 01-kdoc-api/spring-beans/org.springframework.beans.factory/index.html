@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>org.springframework.beans.factory</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    spring-framework
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">7.0.1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":spring-beans/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":spring-beans/main" data-filter=":spring-beans/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    spring-framework
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="spring-beans::org.springframework.beans.factory////PointingToDeclaration//699603971">
+  <div class="breadcrumbs"><a href="../index.html">spring-beans</a><span class="delimiter">/</span><span class="current">org.springframework.beans.factory</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1241525786%2FClasslikes%2F699603971" anchor-label="BeanRegistrarDsl" id="1241525786%2FClasslikes%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bean-registrar-dsl/index.html"><span>Bean</span><wbr><span>Registrar</span><wbr><span><span>Dsl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1241525786%2FClasslikes%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-bean-registrar-dsl/index.html">BeanRegistrarDsl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">init<span class="token operator">: </span><a href="-bean-registrar-dsl/index.html">BeanRegistrarDsl</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span> : <a href="../../spring-beans/org.springframework.beans.factory/-bean-registrar/index.html">BeanRegistrar</a></div><div class="brief "><p class="paragraph">Contract for registering programmatically beans.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1784420170%2FFunctions%2F699603971" anchor-label="findAnnotationOnBean" id="1784420170%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-annotation-on-bean.html"><span>find</span><wbr><span>Annotation</span><wbr><span>On</span><wbr><span><span>Bean</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1784420170%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="find-annotation-on-bean.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/index.html">ListableBeanFactory</a><span class="token punctuation">.</span><a href="find-annotation-on-bean.html"><span class="token function">findAnnotationOnBean</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="find-annotation-on-bean.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/find-annotation-on-bean.html">ListableBeanFactory.findAnnotationOnBean</a> providing a <code class="lang-kotlin">findAnnotationOnBean&lt;Foo&gt;("foo")</code> variant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1354198520%2FFunctions%2F699603971" anchor-label="getBean" id="-1354198520%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-bean.html"><span>get</span><wbr><span><span>Bean</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1354198520%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-bean.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/index.html">BeanFactory</a><span class="token punctuation">.</span><a href="get-bean.html"><span class="token function">getBean</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-bean.html">T</a></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/get-bean.html">BeanFactory.getBean</a> providing a <code class="lang-kotlin">getBean&lt;Foo&gt;()</code> variant. This extension is not subject to type erasure and retains actual generic type arguments.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-bean.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/index.html">BeanFactory</a><span class="token punctuation">.</span><a href="get-bean.html"><span class="token function">getBean</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-bean.html">T</a></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/get-bean.html">BeanFactory.getBean</a> providing a <code class="lang-kotlin">getBean&lt;Foo&gt;(arg1, arg2)</code> variant. This extension is not subject to type erasure and retains actual generic type arguments.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-bean.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/index.html">BeanFactory</a><span class="token punctuation">.</span><a href="get-bean.html"><span class="token function">getBean</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-bean.html">T</a></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/get-bean.html">BeanFactory.getBean</a> providing a <code class="lang-kotlin">getBean&lt;Foo&gt;("foo")</code> variant. Like the original Java method, this extension is subject to type erasure.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1954694487%2FFunctions%2F699603971" anchor-label="getBeanNamesForAnnotation" id="-1954694487%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-bean-names-for-annotation.html"><span>get</span><wbr><span>Bean</span><wbr><span>Names</span><wbr><span>For</span><wbr><span><span>Annotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1954694487%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-bean-names-for-annotation.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/index.html">ListableBeanFactory</a><span class="token punctuation">.</span><a href="get-bean-names-for-annotation.html"><span class="token function">getBeanNamesForAnnotation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/get-bean-names-for-annotation.html">ListableBeanFactory.getBeanNamesForAnnotation</a> providing a <code class="lang-kotlin">getBeanNamesForAnnotation&lt;Foo&gt;()</code> variant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-195141781%2FFunctions%2F699603971" anchor-label="getBeanNamesForType" id="-195141781%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-bean-names-for-type.html"><span>get</span><wbr><span>Bean</span><wbr><span>Names</span><wbr><span>For</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-195141781%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-bean-names-for-type.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/index.html">ListableBeanFactory</a><span class="token punctuation">.</span><a href="get-bean-names-for-type.html"><span class="token function">getBeanNamesForType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">includeNonSingletons<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">allowEagerInit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/get-bean-names-for-type.html">ListableBeanFactory.getBeanNamesForType</a> providing a <code class="lang-kotlin">getBeanNamesForType&lt;Foo&gt;()</code> variant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1742535166%2FFunctions%2F699603971" anchor-label="getBeanProvider" id="-1742535166%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-bean-provider.html"><span>get</span><wbr><span>Bean</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1742535166%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-bean-provider.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/index.html">BeanFactory</a><span class="token punctuation">.</span><a href="get-bean-provider.html"><span class="token function">getBeanProvider</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../spring-beans/org.springframework.beans.factory/-object-provider/index.html">ObjectProvider</a><span class="token operator">&lt;</span><a href="get-bean-provider.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-bean-factory/get-bean-provider.html">BeanFactory.getBeanProvider</a> providing a <code class="lang-kotlin">getBeanProvider&lt;Foo&gt;()</code> variant. This extension is not subject to type erasure and retains actual generic type arguments.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1549556610%2FFunctions%2F699603971" anchor-label="getBeansOfType" id="-1549556610%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-beans-of-type.html"><span>get</span><wbr><span>Beans</span><wbr><span>Of</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1549556610%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-beans-of-type.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/index.html">ListableBeanFactory</a><span class="token punctuation">.</span><a href="get-beans-of-type.html"><span class="token function">getBeansOfType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">includeNonSingletons<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">allowEagerInit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="get-beans-of-type.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/get-beans-of-type.html">ListableBeanFactory.getBeansOfType</a> providing a <code class="lang-kotlin">getBeansOfType&lt;Foo&gt;()</code> variant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="376614821%2FFunctions%2F699603971" anchor-label="getBeansWithAnnotation" id="376614821%2FFunctions%2F699603971" data-filterable-set=":spring-beans/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-beans/main" data-filterable-set=":spring-beans/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-beans-with-annotation.html"><span>get</span><wbr><span>Beans</span><wbr><span>With</span><wbr><span><span>Annotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="376614821%2FFunctions%2F699603971"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-beans/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-beans-with-annotation.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/index.html">ListableBeanFactory</a><span class="token punctuation">.</span><a href="get-beans-with-annotation.html"><span class="token function">getBeansWithAnnotation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Extension for <a href="../../spring-beans/org.springframework.beans.factory/-listable-bean-factory/get-beans-with-annotation.html">ListableBeanFactory.getBeansWithAnnotation</a> providing a <code class="lang-kotlin">getBeansWithAnnotation&lt;Foo&gt;()</code> variant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
