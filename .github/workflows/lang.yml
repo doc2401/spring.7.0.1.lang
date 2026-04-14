@@ -1,0 +1,119 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy Language‌ content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["lang"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      generate_sitemap:
+        description: 'Whether to generate sitemap.xml'
+        required: true
+        type: boolean
+        default: true
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build localized pages
+        run: |
+          mkdir -p _public
+          if [ -f config.json ]; then
+            jq -c '.pages[]' config.json | while read -r item; do
+              url=$(echo "$item" | jq -r '.url')
+              clean_url="${url%/}"
+              
+              echo "Processing URL directory: $clean_url"
+              mkdir -p "_public/$clean_url"
+              
+              # Iterate through the path array
+              echo "$item" | jq -r '.path[]' | while read -r src_path; do
+                clean_path="${src_path%/}"
+                if [ -d "$clean_path" ]; then
+                  echo "  -> Copying $clean_path/* to _public/$clean_url/"
+                  cp -a "$clean_path"/. "_public/$clean_url"/
+                else
+                  echo "  -> Warning: Source path $clean_path not found!"
+                fi
+              done
+            done
+          else
+            echo "config.json not found."
+          fi
+      - name: Generate sitemap.xml
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.generate_sitemap }}
+        run: |
+          BASE_URL="${{ steps.pages.outputs.base_url }}"
+          BASE_URL="${BASE_URL%/}" # Remove trailing slash if present
+          
+          INDEX_FILE="_public/sitemap.xml"
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > "$INDEX_FILE"
+          echo '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "$INDEX_FILE"
+          
+          if [ -f config.json ]; then
+            jq -r '.pages[].url' config.json | while read -r url; do
+              clean_url="${url%/}"
+              [ -z "$clean_url" ] && continue
+              
+              SITEMAP_REL_PATH="${clean_url}/sitemap.xml"
+              SITEMAP_FILE="_public/${SITEMAP_REL_PATH}"
+              
+              echo "Generating sub-sitemap: $SITEMAP_REL_PATH"
+              echo '<?xml version="1.0" encoding="UTF-8"?>' > "$SITEMAP_FILE"
+              echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "$SITEMAP_FILE"
+              
+              count=0
+              while read -r file; do
+                rel_path="${file#_public/}"
+                echo "  <url>" >> "$SITEMAP_FILE"
+                echo "    <loc>${BASE_URL}/${rel_path}</loc>" >> "$SITEMAP_FILE"
+                echo "    <lastmod>$(date -I)</lastmod>" >> "$SITEMAP_FILE"
+                echo "  </url>" >> "$SITEMAP_FILE"
+                count=$((count + 1))
+              done < <(find "_public/$clean_url" -type f -name "*.html")
+              
+              echo "</urlset>" >> "$SITEMAP_FILE"
+              echo "  -> Added $count URLs to $SITEMAP_REL_PATH"
+              
+              # Add this sub-sitemap to the index
+              echo "  <sitemap>" >> "$INDEX_FILE"
+              echo "    <loc>${BASE_URL}/${SITEMAP_REL_PATH}</loc>" >> "$INDEX_FILE"
+              echo "    <lastmod>$(date -I)</lastmod>" >> "$INDEX_FILE"
+              echo "  </sitemap>" >> "$INDEX_FILE"
+            done
+          fi
+          
+          echo "</sitemapindex>" >> "$INDEX_FILE"
+          echo "Sitemap Index created at $INDEX_FILE"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './_public'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

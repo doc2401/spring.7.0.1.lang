@@ -1,0 +1,28 @@
+
+
+# 01-javadoc-api.qwen_qwen3.5-9b.202604140700
+
+```log
+
+2026-04-14 07:00:00 - INFO - ==================================================
+2026-04-14 07:00:00 - INFO - Translate AI - Modular HTML Translation Tool
+2026-04-14 07:00:00 - INFO - ==================================================
+2026-04-14 07:00:00 - INFO - Profile 'javadoc' loaded: merged into configuration.
+2026-04-14 07:00:00 - INFO - 发现 10373 个HTML/HTM文件, 总大小: 217.9MB
+2026-04-14 07:00:00 - INFO - 输出目录 (translate) 为: 01-javadoc-api.qwen_qwen3.5-9b.202604140700
+2026-04-14 07:00:00 - INFO - 开始翻译文件: input_path=01-javadoc-api\allclasses-index.html, output_path=01-javadoc-api.qwen_qwen3.5-9b.202604140700\allclasses-index.html, 大小: 2.4MB
+2026-04-14 07:00:00 - INFO - translation_cache - Type: <class 'modules.tracked_lru_cache.TrackedLRUCache'>
+2026-04-14 07:00:00 - INFO - Using global translation cache with 8532 items (maxsize: 1000000)
+
+2026-04-14 20:39:07 - INFO - 总耗时: 49147.44 秒
+2026-04-14 20:39:07 - INFO - ==================================================
+2026-04-14 20:39:07 - INFO - 任务完成总结
+2026-04-14 20:39:07 - INFO - ==================================================
+2026-04-14 20:39:07 - INFO - 总共处理文件: 10373 个
+2026-04-14 20:39:07 - INFO - 总文件大小: 217.9MB
+2026-04-14 20:39:07 - INFO - API 调用次数: 74542 次
+2026-04-14 20:39:07 - INFO - API 调用全部成功
+2026-04-14 20:39:07 - INFO - 缓存统计: 当前大小 83074/1000000
+2026-04-14 20:39:07 - INFO - 缓存命中: 214631 次, 命中率: 100.0%
+2026-04-14 20:39:07 - INFO - ==================================================
+```
