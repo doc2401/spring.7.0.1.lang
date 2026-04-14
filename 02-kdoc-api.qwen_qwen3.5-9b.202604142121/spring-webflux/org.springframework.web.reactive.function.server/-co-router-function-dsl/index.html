@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>CoRouterFunctionDsl</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"/><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script async="" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" type="text/javascript"></script>
+<script async="" src="../../../scripts/sourceset_dependencies.js" type="text/javascript"></script>
+<link href="../../../styles/style.css" rel="Stylesheet"/>
+<link href="../../../styles/main.css" rel="Stylesheet"/>
+<link href="../../../styles/prism.css" rel="Stylesheet"/>
+<link href="../../../styles/logo-styles.css" rel="Stylesheet"/>
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet"/>
+<script src="../../../scripts/safe-local-storage_blocking.js" type="text/javascript"></script>
+<script async="" src="../../../scripts/navigation-loader.js" type="text/javascript"></script>
+<script async="" src="../../../scripts/platform-content-handler.js" type="text/javascript"></script>
+<script defer="" src="../../../scripts/main.js" type="text/javascript"></script>
+<script async="" src="../../../scripts/prism.js" type="text/javascript"></script>
+<script defer="" src="../../../ui-kit/ui-kit.min.js" type="text/javascript"></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    spring-framework
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">切换目录</button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">7.0.1
+        </div>
+        <div class="navigation-controls">
+        <ul aria-label="Target filter" class="filter-section filter-section_loading" id="filter-section">
+                <button aria-pressed="true" class="platform-tag platform-selector jvm-like" data-active="" data-filter=":spring-webflux/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button aria-controls="platform-tags-listbox" aria-expanded="false" aria-haspopup="listbox" aria-label="Toggle source sets" class="button button_dropdown filter-section--dropdown-toggle" data-role="dropdown-toggle" role="combobox"></button>
+                <ul aria-label="Target filter" class="dropdown--list" data-role="dropdown-listbox" id="platform-tags-listbox" role="listbox">
+                    <div class="dropdown--header"><span>目标过滤器</span>
+<button aria-label="关闭目标过滤器" class="button" data-role="dropdown-toggle">
+<i class="ui-kit-icon ui-kit-icon_cross"></i>
+</button></div>
+                        <li class="dropdown--option platform-selector-option jvm-like" role="option" tabindex="0">
+                            <label class="checkbox">
+                                <input class="checkbox--input" data-filter=":spring-webflux/main" id=":spring-webflux/main" type="checkbox"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">切换主题</button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">在 API 中搜索</div>
+        </div>
+    </header>
+    <div id="container">
+        <nav class="sidebar" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}' data-item-type="SECTION" id="leftColumn">
+            <a class="toc--skip-link" href="#main">跳到内容</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul aria-label="Table of contents" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" id="toc-listbox" role="listbox">
+                    <div class="dropdown--header">
+                            <span>
+                                    spring-framework
+                            </span>
+                        <button aria-label="Close table of contents" class="button" data-role="dropdown-toggle">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div class="resizer" data-item-type="BAR" id="resizer"></div>
+        <div data-item-type="SECTION" id="main" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="spring-webflux::org.springframework.web.reactive.function.server/CoRouterFunctionDsl///PointingToDeclaration//-535100867">
+  <div class="breadcrumbs"><a href="../../index.html">spring-webflux</a><span class="delimiter">/</span><a href="../index.html">org.springframework.web.reactive.function.server</a><span class="delimiter">/</span><span class="current">CoRouterFunctionDsl</span></div>
+  <div class="cover">
+    <h1 class="cover"><span>Co</span><wbr/><span>Router</span><wbr/><span>Function</span><wbr/><span><span>Dsl</span></span></h1>
+    <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">CoRouterFunctionDsl</a></div><p class="paragraph">提供由 `<code class="lang-kotlin">coRouter { }</code>` 创建的 WebFlux.fn <a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-router-function/index.html">RouterFunction</a> Coroutines Kotlin DSL，以便能够编写惯用的 Kotlin 代码。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">Sebastien Deleuze</p></span><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">5.2</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a anchor-label="accept" data-filterable-set=":spring-webflux/main" data-name="-784345454%2FFunctions%2F-535100867" id="-784345454%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept.html"><span><span>accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-784345454%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter"><span class="token keyword">vararg </span>mediaType<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，用于测试请求的<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/-headers/accept.html">accept</a> } 头是否与给定的任何媒体类型<span data-unresolved-link="org.springframework.http/MediaType/isCompatibleWith/#org.springframework.http.MediaType?/PointingToDeclaration/">兼容</span>。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">mediaType<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的接受谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="accepted" data-filterable-set=":spring-webflux/main" data-name="829644077%2FFunctions%2F-535100867" id="829644077%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accepted.html"><span><span>accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="829644077%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="accepted.html"><span class="token function">accepted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="add" data-filterable-set=":spring-webflux/main" data-name="2103756324%2FFunctions%2F-535100867" id="2103756324%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add.html"><span><span>add</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2103756324%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add.html"><span class="token function">add</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">routerFunction<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-router-function/index.html">RouterFunction</a><span class="token operator">&lt;</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">将外部定义的路由器函数合并到此函数中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="after" data-filterable-set=":spring-webflux/main" data-name="1080172736%2FFunctions%2F-535100867" id="1080172736%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="after.html"><span><span>after</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1080172736%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="after.html"><span class="token function">after</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">responseProcessor<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">, </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">使用给定的响应处理函数，过滤由该构建器创建的所有路由的响应对象。过滤器通常用于解决横切关注点，例如日志记录、安全等。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="and" data-filterable-set=":spring-webflux/main" data-name="-1422555917%2FFunctions%2F-535100867" id="-1422555917%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="and.html"><span><span>and</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1422555917%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个组合请求谓词，该谓词针对此谓词（字符串作为路径谓词）和<a href="and.html">其他</a>谓词进行测试。在评估组合谓词时，如果此谓词为<code class="lang-kotlin">false</code>，则不评估<a href="and.html">其他</a>谓词。</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个组合请求谓词，该谓词针对此谓词 AND <a href="and.html">其他</a> 谓词进行测试（String 作为路径谓词处理）。在评估组合谓词时，如果此谓词为 <code class="lang-kotlin">false</code>，则不评估 <a href="and.html">其他</a> 谓词。</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个组合请求谓词，该谓词针对此谓词 AND <a href="and.html">其他</a> 谓词进行测试。在评估组合谓词时，如果此谓词为 <code class="lang-kotlin">false</code>，则不评估 <a href="and.html">其他</a> 谓词。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="badRequest" data-filterable-set=":spring-webflux/main" data-name="1005836714%2FFunctions%2F-535100867" id="1005836714%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bad-request.html"><span>bad</span><wbr/><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1005836714%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="bad-request.html"><span class="token function">badRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="before" data-filterable-set=":spring-webflux/main" data-name="893291373%2FFunctions%2F-535100867" id="893291373%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="before.html"><span><span>before</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="893291373%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="before.html"><span class="token function">before</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">requestProcessor<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">使用给定的请求处理函数，过滤由该构建器创建的所有路由的请求对象。过滤器通常用于解决横切关注点，例如日志记录、安全等。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="contentType" data-filterable-set=":spring-webflux/main" data-name="-1354349258%2FFunctions%2F-535100867" id="-1354349258%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="content-type.html"><span>content</span><wbr/><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1354349258%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="content-type.html"><span class="token function">contentType</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter"><span class="token keyword">vararg </span>mediaTypes<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，用于测试请求的<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/-headers/content-type.html">内容类型</a>是否包含在给定媒体类型中的任何一个。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="content-type.html"><span class="token function">contentType</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">mediaType<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/MediaType///PointingToDeclaration/">MediaType</span><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的 contentType 谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="context" data-filterable-set=":spring-webflux/main" data-name="272236828%2FFunctions%2F-535100867" id="272236828%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="context.html"><span><span>context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="272236828%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="context.html"><span class="token function">context</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">provider<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">允许提供默认的<a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a>，该上下文可能根据传入的<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a>动态生成。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="created" data-filterable-set=":spring-webflux/main" data-name="534669743%2FFunctions%2F-535100867" id="534669743%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="created.html"><span><span>created</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="534669743%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="created.html"><span class="token function">created</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">location<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/URI.html">URI</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="DELETE" data-filterable-set=":spring-webflux/main" data-name="-1673509207%2FFunctions%2F-535100867" id="-1673509207%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-l-e-t-e.html"><span><span>DELETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1673509207%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-d-e-l-e-t-e.html"><span class="token function">DELETE</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">DELETE</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-d-e-l-e-t-e.html"><span class="token function">DELETE</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">DELETE</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-d-e-l-e-t-e.html"><span class="token function">DELETE</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定谓词的 HTTP `<code class="lang-kotlin">DELETE</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-d-e-l-e-t-e.html"><span class="token function">DELETE</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一条路由，该路由处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">DELETE</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="filter" data-filterable-set=":spring-webflux/main" data-name="1633409405%2FFunctions%2F-535100867" id="1633409405%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="filter.html"><span><span>filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1633409405%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="filter.html"><span class="token function">filter</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">filterFunction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">, </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">使用给定的过滤函数过滤由该路由器创建的所有路由。过滤函数通常用于处理横切关注点，例如日志记录、安全等。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="from" data-filterable-set=":spring-webflux/main" data-name="-943050229%2FFunctions%2F-535100867" id="-943050229%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from.html"><span><span>from</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-943050229%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="from.html"><span class="token function">from</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="GET" data-filterable-set=":spring-webflux/main" data-name="105601703%2FFunctions%2F-535100867" id="105601703%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-e-t.html"><span><span>GET</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="105601703%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-g-e-t.html"><span class="token function">GET</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">GET</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-g-e-t.html"><span class="token function">GET</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">GET</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-g-e-t.html"><span class="token function">GET</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定谓词的 HTTP `<code class="lang-kotlin">GET</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-g-e-t.html"><span class="token function">GET</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">GET</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="HEAD" data-filterable-set=":spring-webflux/main" data-name="-1420899981%2FFunctions%2F-535100867" id="-1420899981%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-e-a-d.html"><span><span>HEAD</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1420899981%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-h-e-a-d.html"><span class="token function">HEAD</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">HEAD</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-h-e-a-d.html"><span class="token function">HEAD</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">HEAD</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-h-e-a-d.html"><span class="token function">HEAD</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-h-e-a-d.html"><span class="token function">HEAD</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一条路由，该路由处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">HEAD</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="headers" data-filterable-set=":spring-webflux/main" data-name="71157618%2FFunctions%2F-535100867" id="71157618%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="headers.html"><span><span>headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="71157618%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="headers.html"><span class="token function">headers</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">headersPredicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/-headers/index.html">ServerRequest.Headers</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个 `<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>`，用于根据给定的头信息谓词测试请求的头信息。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="headers.html"><span class="token function">headers</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">headersPredicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/-headers/index.html">ServerRequest.Headers</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的头部谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="invoke" data-filterable-set=":spring-webflux/main" data-name="-1862434945%2FFunctions%2F-535100867" id="-1862434945%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="invoke.html"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1862434945%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的谓词（字符串作为路径谓词）适用，则路由到给定的处理函数。</p></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的请求谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="method" data-filterable-set=":spring-webflux/main" data-name="-1422363620%2FFunctions%2F-535100867" id="-1422363620%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="method.html"><span><span>method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1422363620%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="method.html"><span class="token function">method</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">httpMethod<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/HttpMethod///PointingToDeclaration/">HttpMethod</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个用于测试给定 HTTP 方法的<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="method.html"><span class="token function">method</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">httpMethod<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/HttpMethod///PointingToDeclaration/">HttpMethod</span><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的方法谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="nest" data-filterable-set=":spring-webflux/main" data-name="840463967%2FFunctions%2F-535100867" id="840463967%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nest.html"><span><span>nest</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840463967%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="nest.html"><span class="token function">nest</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">r<span class="token operator">: </span><a href="index.html">CoRouterFunctionDsl</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的请求谓词（字符串作为路径谓词）适用，则路由到给定的路由器函数。此方法可用于创建<i>嵌套路由</i>，其中一组路由共享公共路径（前缀）、标头或其他请求谓词。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="nest.html"><span class="token function">nest</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">r<span class="token operator">: </span><a href="index.html">CoRouterFunctionDsl</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的请求谓词适用，则路由到给定的路由器函数。此方法可用于创建<i>嵌套路由</i>，其中一组路由共享公共路径（前缀）、标头或其他请求谓词。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="noContent" data-filterable-set=":spring-webflux/main" data-name="1674030830%2FFunctions%2F-535100867" id="1674030830%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="no-content.html"><span>no</span><wbr/><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1674030830%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="no-content.html"><span class="token function">noContent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-headers-builder/index.html">ServerResponse.HeadersBuilder</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="not" data-filterable-set=":spring-webflux/main" data-name="-1821570214%2FFunctions%2F-535100867" id="-1821570214%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="not.html"><span><span>not</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1821570214%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="not.html"><span class="token function">not</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个表示该谓词逻辑否定的谓词。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="notFound" data-filterable-set=":spring-webflux/main" data-name="294790501%2FFunctions%2F-535100867" id="294790501%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="not-found.html"><span>not</span><wbr/><span><span>Found</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="294790501%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="not-found.html"><span class="token function">notFound</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-headers-builder/index.html">ServerResponse.HeadersBuilder</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="ok" data-filterable-set=":spring-webflux/main" data-name="-513189416%2FFunctions%2F-535100867" id="-513189416%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ok.html"><span><span>ok</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-513189416%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="ok.html"><span class="token function">ok</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="onError" data-filterable-set=":spring-webflux/main" data-name="1380951099%2FFunctions%2F-535100867" id="1380951099%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-error.html"><span>on</span><wbr/><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1380951099%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="on-error.html">E</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">&gt; </span><a href="on-error.html"><span class="token function">onError</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter"><span class="token keyword">noinline </span>responseProvider<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">, </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-error.html"><span class="token function">onError</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter">responseProvider<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">, </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">通过应用给定的响应提供器函数，过滤所有匹配谓词的异常。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="OPTIONS" data-filterable-set=":spring-webflux/main" data-name="-1688669417%2FFunctions%2F-535100867" id="-1688669417%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-p-t-i-o-n-s.html"><span><span>OPTIONS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1688669417%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-o-p-t-i-o-n-s.html"><span class="token function">OPTIONS</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">OPTIONS</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-o-p-t-i-o-n-s.html"><span class="token function">OPTIONS</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">OPTIONS</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-o-p-t-i-o-n-s.html"><span class="token function">OPTIONS</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一条路由，用于处理所有匹配给定谓词的 HTTP `<code class="lang-kotlin">OPTIONS</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-o-p-t-i-o-n-s.html"><span class="token function">OPTIONS</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">OPTIONS</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="or" data-filterable-set=":spring-webflux/main" data-name="-919392019%2FFunctions%2F-535100867" id="-919392019%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="or.html"><span><span>or</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-919392019%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="or.html"><span class="token function">or</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个组合请求谓词，该谓词针对此谓词（字符串作为路径谓词）或<a href="or.html">其他</a>谓词进行测试。在评估组合谓词时，如果此谓词为<code class="lang-kotlin">true</code>，则不会评估<a href="or.html">其他</a>谓词。</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="or.html"><span class="token function">or</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个组合请求谓词，该谓词针对此谓词或<a href="or.html">其他</a>谓词进行测试（String 作为路径谓词处理）。在评估组合谓词时，如果此谓词为<code class="lang-kotlin">true</code>，则不评估<a href="or.html">其他</a>谓词。</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">.</span><a href="or.html"><span class="token function">or</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">other<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个组合请求谓词，该谓词针对此谓词或<a href="or.html">其他</a>谓词进行测试。在评估组合谓词时，如果此谓词为<code class="lang-kotlin">true</code>，则不会评估<a href="or.html">其他</a>谓词。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="PATCH" data-filterable-set=":spring-webflux/main" data-name="2106944515%2FFunctions%2F-535100867" id="2106944515%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-a-t-c-h.html"><span><span>PATCH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2106944515%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-a-t-c-h.html"><span class="token function">PATCH</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">PATCH</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-a-t-c-h.html"><span class="token function">PATCH</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">PATCH</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-a-t-c-h.html"><span class="token function">PATCH</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-a-t-c-h.html"><span class="token function">PATCH</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">PATCH</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="path" data-filterable-set=":spring-webflux/main" data-name="-2112489992%2FFunctions%2F-535100867" id="-2112489992%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="path.html"><span><span>path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2112489992%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="path.html"><span class="token function">path</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个 `<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>`，用于根据给定的路径模式测试请求路径。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="path.html"><span class="token function">path</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的路径谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="pathExtension" data-filterable-set=":spring-webflux/main" data-name="-886097844%2FFunctions%2F-535100867" id="-886097844%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="path-extension.html"><span>path</span><wbr/><span><span>Extension</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-886097844%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="path-extension.html"><span class="token function"><strike>pathExtension</strike></span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的路径匹配给定的谓词，则进行匹配。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="path-extension.html"><span class="token function"><strike>pathExtension</strike></span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">extension<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个 `<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>`，如果请求的路径具有给定的扩展名，则匹配。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="path-extension.html"><span class="token function"><strike>pathExtension</strike></span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="path-extension.html"><span class="token function"><strike>pathExtension</strike></span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">extension<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的 pathExtension 谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="permanentRedirect" data-filterable-set=":spring-webflux/main" data-name="-420632595%2FFunctions%2F-535100867" id="-420632595%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="permanent-redirect.html"><span>permanent</span><wbr/><span><span>Redirect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-420632595%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="permanent-redirect.html"><span class="token function">permanentRedirect</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">location<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/URI.html">URI</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="POST" data-filterable-set=":spring-webflux/main" data-name="1234822899%2FFunctions%2F-535100867" id="1234822899%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-o-s-t.html"><span><span>POST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1234822899%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-o-s-t.html"><span class="token function">POST</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">POST</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-o-s-t.html"><span class="token function">POST</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">POST</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-o-s-t.html"><span class="token function">POST</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定谓词的 HTTP `<code class="lang-kotlin">POST</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-o-s-t.html"><span class="token function">POST</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">POST</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="PUT" data-filterable-set=":spring-webflux/main" data-name="378726869%2FFunctions%2F-535100867" id="378726869%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-u-t.html"><span><span>PUT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="378726869%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-u-t.html"><span class="token function">PUT</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>，如果请求的 HTTP 方法是<code class="lang-kotlin">PUT</code>且给定的<code class="lang-kotlin">pattern</code>与请求路径匹配，则返回该结果。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-u-t.html"><span class="token function">PUT</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一条路由，用于处理所有匹配给定模式的 HTTP `<code class="lang-kotlin">PUT</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-u-t.html"><span class="token function">PUT</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一条路由，用于处理所有匹配给定谓词的 HTTP `<code class="lang-kotlin">PUT</code>` 请求。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-p-u-t.html"><span class="token function">PUT</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">向给定的处理函数添加一个路由，该路由处理所有匹配给定模式和谓词的 HTTP `<code class="lang-kotlin">PUT</code>` 请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="queryParam" data-filterable-set=":spring-webflux/main" data-name="330292946%2FFunctions%2F-535100867" id="330292946%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="query-param.html"><span>query</span><wbr/><span><span>Param</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="330292946%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="query-param.html"><span class="token function">queryParam</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a></div><div class="brief"><p class="paragraph">返回一个 `<a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a>`，用于根据给定谓词测试请求中指定名称的查询参数。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="query-param.html"><span class="token function">queryParam</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter">f<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/index.html">ServerResponse</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">如果给定的 queryParam 谓词适用，则路由到给定的处理函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="resource" data-filterable-set=":spring-webflux/main" data-name="728064224%2FFunctions%2F-535100867" id="728064224%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resource.html"><span><span>resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="728064224%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="resource.html"><span class="token function">resource</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">predicate<span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-request-predicate/index.html">RequestPredicate</a><span class="token punctuation">, </span></span><span class="parameter">resource<span class="token operator">: </span><span data-unresolved-link="org.springframework.core.io/Resource///PointingToDeclaration/">Resource</span><span class="token punctuation">, </span></span><span class="parameter">headersConsumer<span class="token operator">: </span><span class="token punctuation">(</span><span data-unresolved-link="org.springframework.core.io/Resource///PointingToDeclaration/">Resource</span><span class="token punctuation">, </span><span data-unresolved-link="org.springframework.http/HttpHeaders///PointingToDeclaration/">HttpHeaders</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ _, _ -&gt; }</span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">将匹配给定谓词的请求路由到给定资源。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="resources" data-filterable-set=":spring-webflux/main" data-name="-2066468734%2FFunctions%2F-535100867" id="-2066468734%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resources.html"><span><span>resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2066468734%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="resources.html"><span class="token function">resources</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">lookupFunction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-request/index.html">ServerRequest</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="org.springframework.core.io/Resource///PointingToDeclaration/">Resource</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">使用提供的查找函数路由到资源。如果该查找函数为给定请求提供了 `<span data-unresolved-link="org.springframework.core.io/Resource///PointingToDeclaration/">Resource</span>`，则它将使用一个处理 GET、HEAD 和 OPTIONS 请求的 <a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-handler-function/index.html">HandlerFunction</a> 进行暴露。</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="resources.html"><span class="token function">resources</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">location<span class="token operator">: </span><span data-unresolved-link="org.springframework.core.io/Resource///PointingToDeclaration/">Resource</span></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">将匹配给定模式的请求路由到相对于给定根位置的资源。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="seeOther" data-filterable-set=":spring-webflux/main" data-name="1565859720%2FFunctions%2F-535100867" id="1565859720%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="see-other.html"><span>see</span><wbr/><span><span>Other</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1565859720%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="see-other.html"><span class="token function">seeOther</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">location<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/URI.html">URI</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="status" data-filterable-set=":spring-webflux/main" data-name="-650785754%2FFunctions%2F-535100867" id="-650785754%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="status.html"><span><span>status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-650785754%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="status.html"><span class="token function">status</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="status.html"><span class="token function">status</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">status<span class="token operator">: </span><span data-unresolved-link="org.springframework.http/HttpStatusCode///PointingToDeclaration/">HttpStatusCode</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="temporaryRedirect" data-filterable-set=":spring-webflux/main" data-name="-129807574%2FFunctions%2F-535100867" id="-129807574%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="temporary-redirect.html"><span>temporary</span><wbr/><span><span>Redirect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-129807574%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="temporary-redirect.html"><span class="token function">temporaryRedirect</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">location<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/URI.html">URI</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="unprocessableContent" data-filterable-set=":spring-webflux/main" data-name="1643253323%2FFunctions%2F-535100867" id="1643253323%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unprocessable-content.html"><span>unprocessable</span><wbr/><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1643253323%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unprocessable-content.html"><span class="token function">unprocessableContent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="unprocessableEntity" data-filterable-set=":spring-webflux/main" data-name="-858044557%2FFunctions%2F-535100867" id="-858044557%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unprocessable-entity.html"><span>unprocessable</span><wbr/><span><span>Entity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-858044557%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="unprocessable-entity.html"><span class="token function"><strike>unprocessableEntity</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../spring-webflux/org.springframework.web.reactive.function.server/-server-response/-body-builder/index.html">ServerResponse.BodyBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="withAttribute" data-filterable-set=":spring-webflux/main" data-name="358099564%2FFunctions%2F-535100867" id="358099564%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-attribute.html"><span>with</span><wbr/><span><span>Attribute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="358099564%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="with-attribute.html"><span class="token function">withAttribute</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">为使用此构建器构建的最后一个路由添加具有给定名称和值的属性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a anchor-label="withAttributes" data-filterable-set=":spring-webflux/main" data-name="-473381675%2FFunctions%2F-535100867" id="-473381675%2FFunctions%2F-535100867"></a>
+          <div class="table-row table-row_content" data-filterable-current=":spring-webflux/main" data-filterable-set=":spring-webflux/main">
+            <div class="main-subrow keyValue">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-attributes.html"><span>with</span><wbr/><span><span>Attributes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-473381675%2FFunctions%2F-535100867"></span>
+                    <div class="copy-popup-wrapper"><span class="copy-popup-icon"></span><span>链接已复制到剪贴板</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":spring-webflux/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="with-attributes.html"><span class="token function">withAttributes</span></a><span class="token punctuation">(</span><span class="parameters"><span class="parameter">attributesConsumer<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief"><p class="paragraph">使用给定的消费者操作最后构建的路由的属性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a class="footer--button footer--button_go-to-top" href="#content" id="go-to-top-link"></a>
+            <div class="footer--content">
+                <div>
+                    <span>由生成</span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 版权所有</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+</body></html>
