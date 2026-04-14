@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-04-14 11:42:38",
+  "updated_at": "2026-04-14 11:42:38",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 36,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "The parser will call <a href=\"#parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)\"><code>parse(Element, ParserContext)</code></a> when it encounters a custom tag\ndirectly under the <code>&lt;beans&gt;</code> tags and <a href=\"#decorate(org.w3c.dom.Node,org.springframework.beans.factory.config.BeanDefinitionHolder,org.springframework.beans.factory.xml.ParserContext)\"><code>decorate(Node, BeanDefinitionHolder, ParserContext)</code></a> when\nit encounters a custom tag directly under a <code>&lt;bean&gt;</code> tag.",
+      "translation": "解析器在遇到直接位于 `<beans>` 标签下的自定义标签时，将调用 <a href=\"#parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)\"><code>parse(Element, ParserContext)</code></a>，并在遇到直接位于 `<bean>` 标签下的自定义标签时，调用 <a href=\"#decorate(org.w3c.dom.Node,org.springframework.beans.factory.config.BeanDefinitionHolder,org.springframework.beans.factory.xml.ParserContext)\"><code>decorate(Node, BeanDefinitionHolder, ParserContext)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a> may be either an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Attr.html\" title=\"class or interface in org.w3c.dom\"><code>Attr</code></a> or an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>, depending on whether a custom attribute or element\nis being parsed.",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a>` 可能是 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Attr.html\" title=\"class or interface in org.w3c.dom\"><code>Attr</code></a>` 或 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>`，具体取决于正在解析的是自定义属性还是元素。",
+      "count": 2
+    },
+    {
+      "source": "Implementations are expected to return implementations of the\n<a href=\"BeanDefinitionParser.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionParser</code></a> interface for custom top-level tags and\nimplementations of the <a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a> interface for\ncustom nested tags.",
+      "translation": "实现应返回自定义顶层标签的<a href=\"BeanDefinitionParser.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionParser</code></a>接口实现，以及自定义嵌套标签的<a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a>接口实现。",
+      "count": 2
+    },
+    {
+      "source": "Developers writing their own custom element extensions typically will\nnot implement this interface directly, but rather make use of the provided\n<a href=\"NamespaceHandlerSupport.html\" title=\"class in org.springframework.beans.factory.xml\"><code>NamespaceHandlerSupport</code></a> class.",
+      "translation": "编写自定义元素扩展的开发人员通常不会直接实现该接口，而是使用提供的 <a href=\"NamespaceHandlerSupport.html\" title=\"class in org.springframework.beans.factory.xml\"><code>NamespaceHandlerSupport</code></a> 类。",
+      "count": 2
+    },
+    {
+      "source": "Implementations should return the primary <code>BeanDefinition</code>\nthat results from the parse phase if they wish to be used nested\ninside (for example) a <code>&lt;property&gt;</code> tag.",
+      "translation": "实现应返回解析阶段生成的主`BeanDefinition`，如果它们希望被嵌套使用（例如在`<property>`标签内）。",
+      "count": 2
+    },
+    {
+      "source": "Implementations may return <code>null</code> if they will\n<strong>not</strong> be used in a nested scenario.",
+      "translation": "实现可能会返回<code>null</code>，如果它们将不会在嵌套场景中使用的情况。",
+      "count": 2
+    },
+    {
+      "source": "Implementations may choose to return a completely new definition,\nwhich will replace the original definition in the resulting\n<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.",
+      "translation": "实现可以选择返回一个全新的定义，该定义将替换结果中<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>的原始定义。",
+      "count": 2
+    },
+    {
+      "source": "The supplied <a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a> can be used to register any\nadditional beans needed to support the main definition.",
+      "translation": "提供的 `<a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a>` 可用于注册任何支持主定义所需的额外 bean。",
+      "count": 2
+    },
+    {
+      "source": "Parse the specified <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> and register any resulting\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> with the\n<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>\nthat is embedded in the supplied <a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a>.",
+      "translation": "解析指定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>，并将生成的任何<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>注册到提供的<a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a>中嵌入的<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Parse the specified <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a> and decorate the supplied\n<a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>BeanDefinitionHolder</code></a>, returning the decorated definition.",
+      "translation": "解析指定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a> 并装饰提供的\n<a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>BeanDefinitionHolder</code></a>，返回装饰后的定义。",
+      "count": 2
+    },
+    {
+      "source": "Invoked by the <a href=\"DefaultBeanDefinitionDocumentReader.html\" title=\"class in org.springframework.beans.factory.xml\"><code>DefaultBeanDefinitionDocumentReader</code></a> after\nconstruction but before any custom elements are parsed.",
+      "translation": "由<a href=\"DefaultBeanDefinitionDocumentReader.html\" title=\"class in org.springframework.beans.factory.xml\"><code>DefaultBeanDefinitionDocumentReader</code></a>在构建后但在解析任何自定义元素之前调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>element</code> - the element that is to be parsed into one or more <code>BeanDefinitions</code>",
+      "translation": "<code>element</code> - 要解析为一个或多个 <code>BeanDefinitions</code> 的元素",
+      "count": 2
+    },
+    {
+      "source": "the primary <code>BeanDefinition</code> (can be <code>null</code> as explained above)",
+      "translation": "主要的<code>BeanDefinition</code>（如上所述，可以为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>parserContext</code> - the object encapsulating the current state of the parsing process",
+      "translation": "<code>parserContext</code> - 封装当前解析过程状态的对象",
+      "count": 2
+    },
+    {
+      "source": "<code>source</code> - the source element or attribute that is to be parsed",
+      "translation": "<code>source</code> - 要解析的源元素或属性",
+      "count": 2
+    },
+    {
+      "source": "<code>definition</code> - the current bean definition",
+      "translation": "<code>definition</code> - 当前的 Bean 定义",
+      "count": 2
+    },
+    {
+      "source": "the decorated definition (to be registered in the BeanFactory),\nor simply the original bean definition if no decoration is required.\nA <code>null</code> value is strictly speaking invalid, but will be leniently\ntreated like the case where the original bean definition gets returned.",
+      "translation": "装饰后的定义（注册到 BeanFactory 中），或者如果不需要装饰，则直接返回原始的 Bean 定义。严格来说，`null` 值是无效的，但会被宽容地处理为返回原始 Bean 定义的情况。",
+      "count": 2
+    },
+    {
+      "source": "Rob Harrop, Erik Wiersma",
+      "translation": "Rob Harrop，Erik Wiersma",
+      "count": 2
+    }
+  ]
+}

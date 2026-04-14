@@ -1,0 +1,221 @@
+{
+  "created_at": "2026-04-14 11:17:37",
+  "updated_at": "2026-04-14 11:17:37",
+  "stats": {
+    "total_entries": 41,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 67,
+    "entries_with_hits": 41,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6341463414634145,
+    "usage_percentage": 0.0041
+  },
+  "items": [
+    {
+      "source": "This subinterface of <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>\nis not meant to be used in normal application code: Stick to\n<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> or\n<a href=\"../ListableBeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ListableBeanFactory</code></a> for typical\nuse cases. This interface is just meant to allow for framework-internal\nplug'n'play even when needing access to bean factory configuration methods.",
+      "translation": "此 `<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>` 的子接口并非用于常规应用程序代码：对于典型用例，请坚持使用 `<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>` 或 `<a href=\"../ListableBeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ListableBeanFactory</code></a>`。此接口仅用于在需要访问 Bean 工厂配置方法时，允许框架内部实现即插即用。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This method does <i>not</i> consider ancestor factories.\nIt is only meant for accessing local bean definitions of this factory.",
+      "translation": "<b>注意：</b>此方法不考虑祖先工厂。它仅用于访问该工厂的本地 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "Typically triggered after changes to the original bean definitions,\nfor example, after applying a <a href=\"BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanFactoryPostProcessor</code></a>. Note that metadata\nfor beans which have already been created at this point will be kept around.",
+      "translation": "通常在原始 bean 定义更改后触发，例如在应用 <a href=\"BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanFactoryPostProcessor</code></a> 之后。请注意，此时已创建的 bean 的元数据将保留。",
+      "count": 2
+    },
+    {
+      "source": "Any such marker is to be removed at the end of the managed bootstrap in\n<a href=\"#preInstantiateSingletons()\"><code>preInstantiateSingletons()</code></a>.",
+      "translation": "任何此类标记都应在受管理的引导结束时的 <a href=\"#preInstantiateSingletons()\"><code>preInstantiateSingletons()</code></a> 中移除。",
+      "count": 2
+    },
+    {
+      "source": "This will typically be used by application contexts to register\ndependencies that are resolved in other ways, like BeanFactory through\nBeanFactoryAware or ApplicationContext through ApplicationContextAware.",
+      "translation": "这通常由应用程序上下文使用，以注册通过其他方式解析的依赖项，例如通过 `BeanFactoryAware` 接口通过 `BeanFactory`，或通过 `ApplicationContextAware` 接口通过 `ApplicationContext`。",
+      "count": 2
+    },
+    {
+      "source": "By default, only the BeanFactoryAware interface is ignored.\nFor further types to ignore, invoke this method for each type.",
+      "translation": "默认情况下，仅忽略 BeanFactoryAware 接口。若要忽略其他类型，请为每种类型调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "This is intended for factory/context references that are supposed\nto be autowirable but are not defined as beans in the factory:\nfor example, a dependency of type ApplicationContext resolved to the\nApplicationContext instance that the bean is living in.",
+      "translation": "这旨在用于工厂/上下文引用，这些引用本应支持自动注入，但在工厂中未定义为 Bean：例如，类型为 `ApplicationContext` 的依赖项被解析为该 Bean 所在的 `ApplicationContext` 实例。",
+      "count": 2
+    },
+    {
+      "source": "Note: There are no such default types registered in a plain BeanFactory,\nnot even for the BeanFactory interface itself.",
+      "translation": "注意：在普通的 BeanFactory 中，没有注册任何此类默认类型，甚至不包括 BeanFactory 接口本身。",
+      "count": 2
+    },
+    {
+      "source": "This method checks ancestor factories as well.",
+      "translation": "此方法也会检查祖先工厂。",
+      "count": 2
+    },
+    {
+      "source": "A returned BeanDefinition object should not be a copy but the original\ndefinition object as registered in the factory. This means that it should\nbe castable to a more specific implementation type, if necessary.",
+      "translation": "返回的 BeanDefinition 对象不应是副本，而应是工厂中注册的原始定义对象。这意味着如有必要，它应可转换为更具体的实现类型。",
+      "count": 2
+    },
+    {
+      "source": "Includes bean definition names as well as names of manually registered\nsingleton instances, with bean definition names consistently coming first,\nanalogous to how type/annotation specific retrieval of bean names works.",
+      "translation": "包含 Bean 定义名称以及手动注册的单例实例名称，其中 Bean 定义名称始终排在前面，类似于按类型/注解获取 Bean 名称的方式。",
+      "count": 2
+    },
+    {
+      "source": "This allows the factory to aggressively cache bean definition metadata\ngoing forward, after clearing the initial temporary metadata cache.",
+      "translation": "这允许工厂在清除初始临时元数据缓存后，从此积极缓存 Bean 定义元数据。",
+      "count": 2
+    },
+    {
+      "source": "Ensure that all non-lazy-init singletons are instantiated, also considering\n<a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBeans</code></a>.",
+      "translation": "确保所有非懒加载单例都得到实例化，同时考虑 <a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBeans</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Ensure that all non-lazy-init singletons are instantiated, also considering\n<a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBeans</code></a>.\nTypically invoked at the end of factory setup, if desired.",
+      "translation": "确保所有非懒加载单例实例化，同时考虑\n<a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBeans</code></a>。\n通常在工厂设置结束时调用，如果希望如此。",
+      "count": 2
+    },
+    {
+      "source": "Ignore the given dependency type for autowiring:\nfor example, String. Default is none.",
+      "translation": "忽略用于自动装配的给定依赖类型，例如 String。默认值为无。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this factory's bean definitions are frozen,\ni.e. are not supposed to be modified or post-processed any further.",
+      "translation": "返回该工厂的 Bean 定义是否已冻结，即不应再对其进行修改或后处理。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - if one of the singleton beans could not be created.\nNote: This may have left the factory with some beans already initialized!\nCall <a href=\"ConfigurableBeanFactory.html#destroySingletons()\"><code>ConfigurableBeanFactory.destroySingletons()</code></a> for full cleanup in this case.",
+      "translation": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 如果其中一个单例 Bean 无法创建。注意：这可能导致工厂中已初始化了一些 Bean！在这种情况下，请调用 <a href=\"ConfigurableBeanFactory.html#destroySingletons()\"><code>ConfigurableBeanFactory.destroySingletons()</code></a> 进行彻底清理。",
+      "count": 2
+    },
+    {
+      "source": "<code>autowiredValue</code> - the corresponding autowired value. This may also be an\nimplementation of the <a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a>\ninterface, which allows for lazy resolution of the actual target value.",
+      "translation": "<code>autowiredValue</code> - 对应的自动注入值。这也可能是 <a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a> 接口的一个实现，该接口允许对实际目标值进行延迟解析。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - if there is no bean with the given name\ndefined in this factory",
+      "translation": "<code><a href=\"../NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - 如果此工厂中未定义具有给定名称的 Bean",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the dependency type to ignore",
+      "translation": "<code>type</code> - 要忽略的依赖类型",
+      "count": 2
+    },
+    {
+      "source": "<code>ifc</code> - the dependency interface to ignore",
+      "translation": "<code>ifc</code> - 要忽略的依赖接口",
+      "count": 2
+    },
+    {
+      "source": "<code>dependencyType</code> - the dependency type to register. This will typically\nbe a base interface such as BeanFactory, with extensions of it resolved\nas well if declared as an autowiring dependency (for example, ListableBeanFactory),\nas long as the given value actually implements the extended interface.",
+      "translation": "`dependencyType` - 要注册的依赖类型。这通常是一个基础接口，例如 BeanFactory；如果将其声明为自动装配的依赖（例如 ListableBeanFactory），其扩展也会被解析，前提是给定的值确实实现了该扩展接口。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the factory's configuration is considered frozen",
+      "translation": "<code>true</code> 表示工厂的配置被视为已冻结。",
+      "count": 2
+    },
+    {
+      "source": "whether the bean should be considered as autowire candidate",
+      "translation": "bean 是否应被视为自动注入候选者",
+      "count": 2
+    },
+    {
+      "source": "the registered BeanDefinition",
+      "translation": "已注册的 BeanDefinition",
+      "count": 2
+    },
+    {
+      "source": "the composite iterator for the bean names view",
+      "translation": "bean names view 的复合迭代器",
+      "count": 2
+    },
+    {
+      "source": "Clear the merged bean definition cache, removing entries for beans\nwhich are not considered eligible for full metadata caching yet.",
+      "translation": "清除合并的 Bean 定义缓存，移除那些尚未被认为符合完整元数据缓存条件的 Bean 的条目。",
+      "count": 1
+    },
+    {
+      "source": "Freeze all bean definitions, signalling that the registered bean definitions\nwill not be modified or post-processed any further.",
+      "translation": "冻结所有 Bean 定义，表示已注册的 Bean 定义将不再被修改或进行后续处理。",
+      "count": 1
+    },
+    {
+      "source": "Return the registered BeanDefinition for the specified bean, allowing access\nto its property values and constructor argument value (which can be\nmodified during bean factory post-processing).",
+      "translation": "返回指定 Bean 的已注册 BeanDefinition，以便访问其属性值和构造函数参数值（这些值可以在 Bean 工厂后处理期间进行修改）。",
+      "count": 1
+    },
+    {
+      "source": "Return a unified view over all bean names managed by this factory.",
+      "translation": "返回该工厂管理的所有 Bean 名称的统一视图。",
+      "count": 1
+    },
+    {
+      "source": "Ignore the given dependency interface for autowiring.",
+      "translation": "忽略用于自动装配的给定依赖接口。",
+      "count": 1
+    },
+    {
+      "source": "Ignore the given dependency type for autowiring:\nfor example, String.",
+      "translation": "忽略用于自动装配的给定依赖类型，例如 String。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the specified bean qualifies as an autowire candidate,\nto be injected into other beans which declare a dependency of matching type.",
+      "translation": "确定指定的 Bean 是否为自动装配候选者，以便注入到声明了匹配类型依赖的其他 Bean 中。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this factory's bean definitions are frozen,\ni.e.",
+      "translation": "返回该工厂的 Bean 定义是否已冻结，即",
+      "count": 1
+    },
+    {
+      "source": "Mark current thread as main bootstrap thread for singleton instantiation,\nwith lenient bootstrap locking applying for background threads.",
+      "translation": "将当前线程标记为主引导线程，用于单例实例化，并对后台线程应用宽松的引导锁。",
+      "count": 1
+    },
+    {
+      "source": "Register a special dependency type with corresponding autowired value.",
+      "translation": "注册具有相应注入值的特殊依赖类型。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - if there is no bean with the given name",
+      "translation": "<code><a href=\"../NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - 如果不存在具有给定名称的 Bean",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean to check",
+      "translation": "<code>beanName</code> - 要检查的 Bean 的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>descriptor</code> - the descriptor of the dependency to resolve",
+      "translation": "<code>descriptor</code> - 要解析的依赖项的描述符",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

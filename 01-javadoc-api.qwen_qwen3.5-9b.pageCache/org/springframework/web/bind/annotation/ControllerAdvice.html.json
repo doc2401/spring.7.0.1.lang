@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-04-14 18:16:58",
+  "updated_at": "2026-04-14 18:16:58",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "Alias for <a href=\"../../../stereotype/Component.html#value()\"><code>Component.value()</code></a>.",
+      "translation": "`<a href=\"../../../stereotype/Component.html#value()\"><code>Component.value()</code></a>` 的别名。",
+      "count": 3
+    },
+    {
+      "source": "Classes annotated with <code>@ControllerAdvice</code> can be declared explicitly\nas Spring beans or auto-detected via classpath scanning. All such beans are\nsorted based on <a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> semantics or\n<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> /\n<code>@Priority</code> declarations, with <code>Ordered</code>\nsemantics taking precedence over <code>@Order</code> / <code>@Priority</code> declarations.\n<code>@ControllerAdvice</code> beans are then applied in that order at runtime.\nNote, however, that <code>@ControllerAdvice</code> beans that implement\n<a href=\"../../../core/PriorityOrdered.html\" title=\"interface in org.springframework.core\"><code>PriorityOrdered</code></a> are <em>not</em>\ngiven priority over <code>@ControllerAdvice</code> beans that implement <code>Ordered</code>.\nIn addition, <code>Ordered</code> is not honored for scoped <code>@ControllerAdvice</code>\nbeans — for example if such a bean has been configured as a request-scoped\nor session-scoped bean.  For handling exceptions, an <code>@ExceptionHandler</code>\nwill be picked on the first advice with a matching exception handler method. For\nmodel attributes and data binding initialization, <code>@ModelAttribute</code> and\n<code>@InitBinder</code> methods will follow <code>@ControllerAdvice</code> order.",
+      "translation": "使用 `<code>@ControllerAdvice</code>` 注解标注的类可以显式声明为 Spring Bean，也可以通过类路径扫描自动检测。所有这些 Bean 均根据 `<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>` 语义或\n<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> /\n<code>@Priority</code> 声明进行排序，其中 `<code>Ordered</code>` 语义优先于 `<code>@Order</code>` / `<code>@Priority</code>` 声明。运行时将按此顺序应用这些 `<code>@ControllerAdvice</code>` Bean。但请注意，实现\n<a href=\"../../../core/PriorityOrdered.html\" title=\"interface in org.springframework.core\"><code>PriorityOrdered</code></a> 的 `<code>@ControllerAdvice</code>` Bean <em>不会</em>\n获得相对于实现 `<code>Ordered</code>` 的 `<code>@ControllerAdvice</code>` Bean 的优先级。此外，对于作用域为请求级或会话级的 `<code>@ControllerAdvice</code>` Bean（例如配置为请求级或会话级 Bean），其 `<code>Ordered</code>` 语义不会被遵循。在处理异常时，将选择第一个具有匹配异常处理方法的建议中的 `<code>@ExceptionHandler</code>`。对于模型属性和数据绑定初始化，`<code>@ModelAttribute</code>` 和\n<code>@InitBinder</code> 方法将遵循 `<code>@ControllerAdvice</code>` 的顺序。",
+      "count": 2
+    },
+    {
+      "source": "By default, the methods in an <code>@ControllerAdvice</code> apply globally to\nall controllers. Use selectors such as <a href=\"#annotations()\"><code>annotations()</code></a>,\n<a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a>, and <a href=\"#basePackages()\"><code>basePackages()</code></a> (or its alias\n<a href=\"#value()\"><code>value()</code></a>) to define a more narrow subset of targeted controllers.\nIf multiple selectors are declared, boolean <code>OR</code> logic is applied, meaning\nselected controllers should match at least one selector. Note that selector checks\nare performed at runtime, so adding many selectors may negatively impact\nperformance and add complexity.",
+      "translation": "默认情况下，<code>@ControllerAdvice</code> 中的方法全局适用于所有控制器。使用诸如 <a href=\"#annotations()\"><code>annotations()</code></a>、<a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> 和 <a href=\"#basePackages()\"><code>basePackages()</code></a>（或其别名 <a href=\"#value()\"><code>value()</code></a>）等选择器来定义更窄的目标控制器子集。如果声明了多个选择器，将应用布尔 <code>OR</code> 逻辑，这意味着所选控制器必须至少匹配一个选择器。请注意，选择器检查是在运行时执行的，因此添加过多选择器可能会对性能产生负面影响并增加复杂性。",
+      "count": 2
+    },
+    {
+      "source": "Allows for more concise annotation declarations — for example,\n<code>@ControllerAdvice(\"org.my.pkg\")</code> is equivalent to\n<code>@ControllerAdvice(basePackages = \"org.my.pkg\")</code>.",
+      "translation": "允许使用更简洁的注解声明——例如，`@ControllerAdvice(\"org.my.pkg\")` 等价于 `@ControllerAdvice(basePackages = \"org.my.pkg\")`。",
+      "count": 2
+    },
+    {
+      "source": "Controllers that belong to those base packages or sub-packages thereof\nwill be included — for example,\n<code>@ControllerAdvice(basePackages = \"org.my.pkg\")</code> or\n<code>@ControllerAdvice(basePackages = {\"org.my.pkg\", \"org.my.other.pkg\"})</code>.",
+      "translation": "属于这些基础包或其子包的控制器将被包含在内——例如，\n<code>@ControllerAdvice(basePackages = \"org.my.pkg\")</code> 或\n<code>@ControllerAdvice(basePackages = {\"org.my.pkg\", \"org.my.other.pkg\"})</code>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#value()\"><code>value()</code></a> is an alias for this attribute, simply allowing for\nmore concise use of the annotation.",
+      "translation": "<a href=\"#value()\"><code>value()</code></a> 是该属性的别名，仅允许更简洁地使用此注解。",
+      "count": 2
+    },
+    {
+      "source": "Also consider using <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> as a type-safe\nalternative to String-based package names.",
+      "translation": "此外，还可以考虑使用 `<a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a>` 作为基于字符串的包名的类型安全替代方案。",
+      "count": 2
+    },
+    {
+      "source": "Consider creating a custom composed annotation or use a predefined one,\nlike <a href=\"RestController.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RestController</code></a>.",
+      "translation": "考虑创建自定义组合注解或使用预定义的注解，例如<a href=\"RestController.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RestController</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note: For <code>@ExceptionHandler</code> methods, a root exception match will be\npreferred to just matching a cause of the current exception, among the handler\nmethods of a particular advice bean. However, a cause match on a higher-priority\nadvice will still be preferred over any match (whether root or cause level)\non a lower-priority advice bean. As a consequence, please declare your primary\nroot exception mappings on a prioritized advice bean with a corresponding order.",
+      "translation": "注意：对于 `<code>@ExceptionHandler</code>` 方法，在特定建议（advice）bean 的处理方法中，根异常匹配将优先于仅匹配当前异常的成因。然而，更高优先级建议中的成因匹配仍将优于任何较低优先级建议 bean 中的匹配（无论是根级别还是成因级别）。因此，请在具有相应顺序的已排序建议 bean 上声明您的主要根异常映射。",
+      "count": 2
+    },
+    {
+      "source": "Controllers that are assignable to at least one of the given types\nwill be advised by the <code>@ControllerAdvice</code> annotated class.",
+      "translation": "可以被分配给给定类型之一的控制器将由带有 `<code>@ControllerAdvice</code>` 注解的类进行增强。",
+      "count": 2
+    },
+    {
+      "source": "Controllers that are annotated with at least one of the supplied annotation\ntypes will be advised by the <code>@ControllerAdvice</code> annotated class.",
+      "translation": "由至少一个提供的注解类型标注的控制器将由带有 `<code>@ControllerAdvice</code>` 注解的类进行增强。",
+      "count": 2
+    },
+    {
+      "source": "Type-safe alternative to <a href=\"#basePackages()\"><code>basePackages()</code></a> for specifying the packages\nin which to select controllers to be advised by the <code>@ControllerAdvice</code>\nannotated class.",
+      "translation": "用于指定要由 `@ControllerAdvice` 注解的类建议的控制器所在的包的 `<a href=\"#basePackages()\"><code>basePackages()</code></a>` 的类型安全替代方案。",
+      "count": 2
+    },
+    {
+      "source": "Alias for the <a href=\"#basePackages()\"><code>basePackages()</code></a> attribute.",
+      "translation": "`<a href=\"#basePackages()\">`<code>basePackages()</code></a>` 属性的别名。",
+      "count": 2
+    },
+    {
+      "source": "Consider creating a special no-op marker class or interface in each package\nthat serves no purpose other than being referenced by this attribute.",
+      "translation": "在每个包中创建一个特殊的无操作标记类或接口，其唯一用途是被此属性引用。",
+      "count": 1
+    },
+    {
+      "source": "Array of annotation types.",
+      "translation": "注解类型的数组。",
+      "count": 1
+    },
+    {
+      "source": "Array of classes.",
+      "translation": "类数组。",
+      "count": 1
+    },
+    {
+      "source": "Array of base packages.",
+      "translation": "基础包数组。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Brian Clozel, Sam Brannen",
+      "translation": "Rossen Stoyanchev，Brian Clozel，Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

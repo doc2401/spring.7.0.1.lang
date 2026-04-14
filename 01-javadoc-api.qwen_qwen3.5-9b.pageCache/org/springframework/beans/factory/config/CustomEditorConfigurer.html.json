@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-04-14 11:17:58",
+  "updated_at": "2026-04-14 11:17:58",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4545454545454546,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Note, that you shouldn't register <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> bean instances via\nthe <code>customEditors</code> property as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditors</code></a> are stateful\nand the instances will then have to be synchronized for every editing\nattempt. In case you need control over the instantiation process of\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditors</code></a>, use a <a href=\"../../PropertyEditorRegistrar.html\" title=\"interface in org.springframework.beans\"><code>PropertyEditorRegistrar</code></a> to register\nthem.",
+      "translation": "请注意，不应通过 `customEditors` 属性注册 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>` Bean 实例，因为 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditors</code></a>` 是有状态的，因此每次编辑尝试时都必须对实例进行同步。如果您需要控制 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditors</code></a>` 的实例化过程，请使用 `<a href=\"../../PropertyEditorRegistrar.html\" title=\"interface in org.springframework.beans\"><code>PropertyEditorRegistrar</code></a>` 来注册它们。",
+      "count": 2
+    },
+    {
+      "source": "In case you want to register <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> instances,\nthe recommended usage is to use custom\n<a href=\"../../PropertyEditorRegistrar.html\" title=\"interface in org.springframework.beans\"><code>PropertyEditorRegistrar</code></a> implementations that in turn register any\ndesired editor instances on a given\n<a href=\"../../PropertyEditorRegistry.html\" title=\"interface in org.springframework.beans\"><code>registry</code></a>. Each\nPropertyEditorRegistrar can register any number of custom editors.",
+      "translation": "如果您想注册 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>` 实例，建议的做法是使用自定义的\n<a href=\"../../PropertyEditorRegistrar.html\" title=\"interface in org.springframework.beans\"><code>PropertyEditorRegistrar</code></a> 实现，这些实现进而将任何所需的编辑器实例注册到给定的\n<a href=\"../../PropertyEditorRegistry.html\" title=\"interface in org.springframework.beans\"><code>registry</code></a> 上。每个 `PropertyEditorRegistrar` 可以注册任意数量的自定义编辑器。",
+      "count": 2
+    },
+    {
+      "source": "It's perfectly fine to register <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> <em>classes</em> via\nthe <code>customEditors</code> property. Spring will create fresh instances of\nthem for each editing attempt then:",
+      "translation": "通过 `customEditors` 属性注册 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> <em>类</em>是完全没问题的。Spring 随后将为每次编辑尝试创建这些类的实例：",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Custom property editors registered with this configurer do\n<i>not</i> apply to data binding. Custom editors for data binding need to\nbe registered on the <a href=\"../../../validation/DataBinder.html\" title=\"class in org.springframework.validation\"><code>DataBinder</code></a>:\nUse a common base class or delegate to common PropertyEditorRegistrar\nimplementations to reuse editor registration there.",
+      "translation": "<b>注意：</b>使用此配置器注册的自定义属性编辑器不适用于数据绑定。用于数据绑定的自定义编辑器需要在 <a href=\"../../../validation/DataBinder.html\" title=\"class in org.springframework.validation\"><code>DataBinder</code></a> 上进行注册：请使用公共基类或委托给通用的 PropertyEditorRegistrar 实现，以便在那里重用编辑器注册。",
+      "count": 2
+    },
+    {
+      "source": "This allows for sharing <code>PropertyEditorRegistrars</code> with\n<a href=\"../../../validation/DataBinder.html\" title=\"class in org.springframework.validation\"><code>DataBinders</code></a>, etc.\nFurthermore, it avoids the need for synchronization on custom editors:\nA <code>PropertyEditorRegistrar</code> will always create fresh editor\ninstances for each bean creation attempt.",
+      "translation": "这允许与<a href=\"../../../validation/DataBinder.html\" title=\"class in org.springframework.validation\"><code>DataBinders</code></a>等共享<code>PropertyEditorRegistrars</code>。此外，它避免了在自定义编辑器上进行同步的需要：<code>PropertyEditorRegistrar</code>将为每次 bean 创建尝试创建新的编辑器实例。",
+      "count": 2
+    },
+    {
+      "source": "Also supports \"java.lang.String[]\"-style array class names and primitive\nclass names (for example, \"boolean\"). Delegates to <a href=\"../../../util/ClassUtils.html\" title=\"class in org.springframework.util\"><code>ClassUtils</code></a> for actual\nclass name resolution.",
+      "translation": "同时也支持类似\"java.lang.String[]\"的数组类名和原始类名（例如，\"boolean\"）。实际类名解析委托给 <a href=\"../../../util/ClassUtils.html\" title=\"class in org.springframework.util\"><code>ClassUtils</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify the custom editors to register via a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>, using the\nclass name of the required type as the key and the class name of the\nassociated <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> as value.",
+      "translation": "通过 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>` 注册自定义编辑器，使用所需类型的类名作为键，关联的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>` 的类名作为值。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"BeanFactoryPostProcessor.html#postProcessBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory)\">BeanFactoryPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"BeanFactoryPostProcessor.html#postProcessBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory)\">BeanFactoryPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Specify the <a href=\"../../PropertyEditorRegistrar.html\" title=\"interface in org.springframework.beans\"><code>PropertyEditorRegistrars</code></a>\nto apply to beans defined within the current application context.",
+      "translation": "指定要应用于当前应用程序上下文中定义的 bean 的<a href=\"../../PropertyEditorRegistrar.html\" title=\"interface in org.springframework.beans\"><code>PropertyEditorRegistrars</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"BeanFactoryPostProcessor.html#postProcessBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory)\">postProcessBeanFactory</a></code> in interface <code><a href=\"BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">BeanFactoryPostProcessor</a></code>",
+      "translation": "`<code><a href=\"BeanFactoryPostProcessor.html#postProcessBeanFactory(org.springframework.beans.factory.config.ConfigurableListableBeanFactory)\">postProcessBeanFactory</a></code>` 接口 `<code><a href=\"BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">BeanFactoryPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "Modify the application context's internal bean factory after its standard\ninitialization.",
+      "translation": "在标准初始化之后修改应用程序上下文的内部 BeanFactory。",
+      "count": 1
+    },
+    {
+      "source": "Modify the application context's internal bean factory after its standard\ninitialization. All bean definitions will have been loaded, but no beans\nwill have been instantiated yet. This allows for overriding or adding\nproperties even to eager-initializing beans.",
+      "translation": "在标准初始化之后修改应用程序上下文内部的 Bean 工厂。此时所有 Bean 定义都已被加载，但尚未实例化任何 Bean。这允许您甚至对急切初始化的 Bean 进行属性覆盖或添加。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - in case of errors",
+      "translation": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 在发生错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - the bean factory used by the application context",
+      "translation": "<code>beanFactory</code> - 由应用程序上下文使用的 Bean 工厂",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

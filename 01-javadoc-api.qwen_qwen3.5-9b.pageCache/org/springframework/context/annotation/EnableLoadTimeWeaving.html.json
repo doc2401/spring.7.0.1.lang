@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-04-14 12:09:55",
+  "updated_at": "2026-04-14 12:09:55",
+  "stats": {
+    "total_entries": 13,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 22,
+    "entries_with_hits": 13,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6923076923076923,
+    "usage_percentage": 0.0013
+  },
+  "items": [
+    {
+      "source": "The example above can be compared to the following Spring XML configuration:",
+      "translation": "上面的示例可以与以下 Spring XML 配置进行比较：",
+      "count": 3
+    },
+    {
+      "source": "To customize the weaver used, the <code>@Configuration</code> class annotated with\n<code>@EnableLoadTimeWeaving</code> may also implement the <a href=\"LoadTimeWeavingConfigurer.html\" title=\"interface in org.springframework.context.annotation\"><code>LoadTimeWeavingConfigurer</code></a>\ninterface and return a custom <code>LoadTimeWeaver</code> instance through the\n<code>#getLoadTimeWeaver</code> method:",
+      "translation": "要自定义使用的织入器，可以添加 `<code>@EnableLoadTimeWeaving</code>` 注解的 `<code>@Configuration</code>` 类实现 <a href=\"LoadTimeWeavingConfigurer.html\" title=\"interface in org.springframework.context.annotation\"><code>LoadTimeWeavingConfigurer</code></a> 接口，并通过 <code>#getLoadTimeWeaver</code> 方法返回自定义的 <code>LoadTimeWeaver</code> 实例：",
+      "count": 2
+    },
+    {
+      "source": "The two examples are equivalent with one significant exception: in the XML case,\nthe functionality of <code>&lt;context:spring-configured&gt;</code> is implicitly enabled when\n<code>aspectj-weaving</code> is \"on\".  This does not occur when using\n<code>@EnableLoadTimeWeaving(aspectjWeaving=ENABLED)</code>. Instead you must explicitly add\n<code>@EnableSpringConfigured</code> (included in the <code>spring-aspects</code> module)",
+      "translation": "这两个示例在功能上是等效的，但有一个显著例外：在 XML 配置中，当 `aspectj-weaving` 设置为 \"on\" 时，`<code>&lt;context:spring-configured&gt;</code>` 的功能会隐式启用。而在使用 `<code>@EnableLoadTimeWeaving(aspectjWeaving=ENABLED)</code>` 时则不会发生这种情况。相反，您必须显式添加 `<code>@EnableSpringConfigured</code>`（包含在 `<code>spring-aspects</code>` 模块中）。",
+      "count": 2
+    },
+    {
+      "source": "To be used on @<a href=\"Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Configuration</code></a> classes;\nthe simplest possible example of which follows:",
+      "translation": "用于在 `@<a href=\"Configuration.html\" title=\"org.springframework.context.annotation 中的注解接口\"><code>Configuration</code></a>` 类上；最简单的示例如下：",
+      "count": 2
+    },
+    {
+      "source": "The code example differs from the XML example in that it actually instantiates the\n<code>MyLoadTimeWeaver</code> type, meaning that it can also configure the instance, for example,\ncalling the <code>#addClassTransformer</code> method. This demonstrates how the code-based\nconfiguration approach is more flexible through direct programmatic access.",
+      "translation": "该代码示例与 XML 示例不同之处在于，它实际上实例化了<code>MyLoadTimeWeaver</code>类型，这意味着还可以配置该实例，例如调用<code>#addClassTransformer</code>方法。这展示了基于代码的配置方法如何通过直接的程序访问而更加灵活。",
+      "count": 2
+    },
+    {
+      "source": "Whether AspectJ weaving should be enabled.",
+      "translation": "是否启用 AspectJ 织入。",
+      "count": 2
+    },
+    {
+      "source": "Customizing the <code>LoadTimeWeaver</code>",
+      "translation": "自定义<code>LoadTimeWeaver</code>",
+      "count": 2
+    },
+    {
+      "source": "Enabling AspectJ-based weaving",
+      "translation": "启用基于 AspectJ 的织入",
+      "count": 2
+    },
+    {
+      "source": "AspectJ weaving enablement options.",
+      "translation": "AspectJ 织入启用选项。",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams",
+      "translation": "Chris Beams",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

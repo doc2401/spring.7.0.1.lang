@@ -1,0 +1,506 @@
+{
+  "created_at": "2026-04-14 16:32:20",
+  "updated_at": "2026-04-14 16:32:20",
+  "stats": {
+    "total_entries": 98,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 151,
+    "entries_with_hits": 98,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5408163265306123,
+    "usage_percentage": 0.0098
+  },
+  "items": [
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 3
+    },
+    {
+      "source": "<code>scriptFactoryBeanName</code> - the name of the internal ScriptFactory bean",
+      "translation": "<code>scriptFactoryBeanName</code> - 内部 ScriptFactory Bean 的名称",
+      "count": 3
+    },
+    {
+      "source": "<code>bd</code> - the full script bean definition",
+      "translation": "<code>bd</code> - 完整的脚本 Bean 定义",
+      "count": 3
+    },
+    {
+      "source": "<code>beanName</code> - the name of the scripted bean",
+      "translation": "<code>beanName</code> - 脚本化 Bean 的名称",
+      "count": 3
+    },
+    {
+      "source": "the extracted ScriptFactory bean definition",
+      "translation": "提取的 ScriptFactory Bean 定义",
+      "count": 3
+    },
+    {
+      "source": "<b>NOTE:</b> Please note that the above excerpt from a Spring\nXML bean definition file uses just the &lt;bean/&gt;-style syntax\n(in an effort to illustrate using the <a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a> itself).\nIn reality, you would never create a &lt;bean/&gt; definition for a\n<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a> explicitly; rather you would import the\ntags from the <code>'lang'</code> namespace and simply create scripted\nbeans using the tags in that namespace... as part of doing so, a\n<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a> will implicitly be created for you.",
+      "translation": "<b>注意：</b>请注意，上述来自 Spring XML  bean 定义文件的摘录仅使用了`<bean/>`风格的语法（旨在说明如何使用<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a>本身）。实际上，您永远不会显式地为<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a>创建`<bean/>`定义；相反，您将导入来自`'lang'`命名空间的标签，并简单地使用该命名空间中的标签来创建脚本 bean……在此过程中，将隐式为您创建一个<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The following <a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a> will automatically\nbe applied to the two\n<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a> definitions below.\nAt runtime, the actual scripted objects will be exposed for\n\"bshMessenger\" and \"groovyMessenger\", rather than the\n<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a> instances. Both of\nthose are supposed to be castable to the example's <code>Messenger</code>\ninterfaces here.",
+      "translation": "以下 `<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a>` 将自动应用于下面的两个`<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a>`定义。在运行时，实际的脚本对象将针对 \"bshMessenger\" 和 \"groovyMessenger\" 进行暴露，而不是`<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a>`实例。这两个都应当能够转换为示例中的 `<code>Messenger</code>`接口。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> The most important characteristic of this post-processor\nis that constructor arguments are applied to the\n<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a> instance\nwhile bean property values are applied to the generated scripted object.\nTypically, constructor arguments include a script source locator and\npotentially script interfaces, while bean property values include\nreferences and config values to inject into the scripted object itself.",
+      "translation": "<b>注意：</b>此后置处理程序最重要的特性是，构造函数参数应用于<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a>实例，而 Bean 属性值则应用于生成的脚本对象。通常，构造函数参数包括脚本源定位器以及可能的脚本接口，而 Bean 属性值则包括要注入到脚本对象本身的引用和配置值。",
+      "count": 2
+    },
+    {
+      "source": "This is similar to the\n<a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> mechanism, but is\nspecifically tailored for scripts and not built into Spring's core\ncontainer itself but rather implemented as an extension.",
+      "translation": "这与<a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>机制类似，但专门针对脚本进行了定制，并非内置于 Spring 的核心容器中，而是作为扩展实现。",
+      "count": 2
+    },
+    {
+      "source": "The Spring reference documentation contains numerous examples of using\ntags in the <code>'lang'</code> namespace; by way of an example, find below\na Groovy-backed bean defined using the <code>'lang:groovy'</code> tag.",
+      "translation": "Spring 参考文档包含大量使用 `<code>'lang'</code>` 命名空间中标签的示例；举例如下，下面是一个使用 `<code>'lang:groovy'</code>` 标签定义的基于 Groovy 的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Note that an actual refresh will only happen when\nthe <a href=\"../ScriptSource.html\" title=\"interface in org.springframework.scripting\"><code>ScriptSource</code></a> indicates\nthat it has been modified.",
+      "translation": "请注意，实际的刷新仅在 `<a href=\"../ScriptSource.html\" title=\"interface in org.springframework.scripting\"><code>ScriptSource</code></a>` 指示其已被修改时才会发生。",
+      "count": 2
+    },
+    {
+      "source": "An inline script is a script that is defined right there in the (typically XML)\nconfiguration, as opposed to being defined in an external file.",
+      "translation": "内联脚本是指直接在（通常是 XML）配置中定义的脚本，而不是在外部文件中定义。",
+      "count": 2
+    },
+    {
+      "source": "By default, supported locators are Spring resource locations\n(such as \"file:C:/myScript.bsh\" or \"classpath:myPackage/myScript.bsh\")\nand inline scripts (\"inline:myScriptText...\").",
+      "translation": "默认情况下，支持的定位器是 Spring 资源位置（例如 \"file:C:/myScript.bsh\" 或 \"classpath:myPackage/myScript.bsh\"）和行内脚本（\"inline:myScriptText...\"）。",
+      "count": 2
+    },
+    {
+      "source": "This implementation creates the interface via CGLIB's InterfaceMaker,\ndetermining the property types from the given interfaces (as far as possible).",
+      "translation": "此实现通过 CGLIB 的 `InterfaceMaker` 创建接口，并根据给定的接口尽可能确定属性类型。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation builds a JDK proxy class\nfor the given interfaces.",
+      "translation": "默认实现会为给定的接口构建一个 JDK 代理类。",
+      "count": 2
+    },
+    {
+      "source": "Get the refresh check delay for the given <a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a> <a href=\"../../beans/factory/config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>.\nIf the <a href=\"../../beans/factory/config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> has a\n<a href=\"../../core/AttributeAccessor.html\" title=\"interface in org.springframework.core\"><code>metadata attribute</code></a>\nunder the key <a href=\"#REFRESH_CHECK_DELAY_ATTRIBUTE\"><code>REFRESH_CHECK_DELAY_ATTRIBUTE</code></a> which is a valid <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\"><code>Number</code></a>\ntype, then this value is used. Otherwise, the <code>defaultRefreshCheckDelay</code>\nvalue is used.",
+      "translation": "获取给定 `<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a>` 的刷新检查延迟 `<a href=\"../../beans/factory/config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>`。如果该 `<a href=\"../../beans/factory/config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>` 在键为 `<a href=\"#REFRESH_CHECK_DELAY_ATTRIBUTE\"><code>REFRESH_CHECK_DELAY_ATTRIBUTE</code></a>` 下具有一个有效的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\"><code>Number</code></a>` 类型的 `<a href=\"../../core/AttributeAccessor.html\" title=\"interface in org.springframework.core\"><code>metadata attribute</code></a>`，则使用此值；否则，使用 `<code>defaultRefreshCheckDelay</code>` 值。",
+      "count": 2
+    },
+    {
+      "source": "Get the refresh check delay for the given <a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a> <a href=\"../../beans/factory/config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>.",
+      "translation": "获取给定<a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\"><code>ScriptFactory</code></a><a href=\"../../beans/factory/config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>的刷新检查延迟。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>-style prefix that denotes\nan inline script.",
+      "translation": "表示内联脚本的 `<a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>` 风格前缀。",
+      "count": 2
+    },
+    {
+      "source": "Predict the type of the bean to be eventually returned from this\nprocessor's <a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a> callback.",
+      "translation": "预测该处理器从 <a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a> 回调方法最终返回的 bean 类型。",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses.",
+      "translation": "可供子类使用的 Logger。",
+      "count": 2
+    },
+    {
+      "source": "Create a refreshable proxy for the given AOP TargetSource.",
+      "translation": "为给定的 AOP TargetSource 创建一个可刷新的代理。",
+      "count": 2
+    },
+    {
+      "source": "Create a bean definition for the scripted object, based on the given script\ndefinition, extracting the definition data that is relevant for the scripted\nobject (that is, everything but bean class and constructor arguments).",
+      "translation": "根据给定的脚本定义，为脚本对象创建一个 Bean 定义，提取与脚本对象相关的定义数据（即除了 Bean 类和构造函数参数之外的所有内容）。",
+      "count": 2
+    },
+    {
+      "source": "Create a ScriptFactory bean definition based on the given script definition,\nextracting only the definition data that is relevant for the ScriptFactory\n(that is, only bean class and constructor arguments).",
+      "translation": "根据给定的脚本定义创建 ScriptFactory  Bean 定义，仅提取与 ScriptFactory 相关的定义数据（即仅包含 Bean 类和构造函数参数）。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the inner bean factory (used for scripts) on shutdown.",
+      "translation": "关闭时销毁用于脚本的内部 Bean 工厂。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a ScriptSource for the given bean, lazily creating it\nif not cached already.",
+      "translation": "获取给定 Bean 的 ScriptSource，如果尚未缓存则懒式创建。",
+      "count": 2
+    },
+    {
+      "source": "Flag to signal that refreshable proxies should be created to proxy the target class not its interfaces.",
+      "translation": "用于标记是否应创建可刷新代理以代理目标类而非其接口的标志。",
+      "count": 2
+    },
+    {
+      "source": "Prepare the script beans in the internal BeanFactory that this\npost-processor uses. Each original bean definition will be split\ninto a ScriptFactory definition and a scripted object definition.",
+      "translation": "准备此后置处理器使用的内部 BeanFactory 中的脚本 Bean。每个原始 Bean 定义将被拆分为一个 ScriptFactory 定义和一个脚本对象定义。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">predictBeanType</a></code> in interface <code><a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">predictBeanType</a></code>` 接口 `<code><a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>interfaces</code> - the proxy interfaces (may be <code>null</code> to\nindicate proxying of all interfaces implemented by the target class)",
+      "translation": "<code>interfaces</code> - 代理接口（可为 <code>null</code>，表示代理目标类实现的所有接口）",
+      "count": 2
+    },
+    {
+      "source": "<code>defaultProxyTargetClass</code> - the flag value to set",
+      "translation": "<code>defaultProxyTargetClass</code> - 要设置的标志值",
+      "count": 2
+    },
+    {
+      "source": "<code>bd</code> - the original bean definition in the main BeanFactory",
+      "translation": "<code>bd</code> - 主 BeanFactory 中的原始 Bean 定义",
+      "count": 2
+    },
+    {
+      "source": "<code>scriptedObjectBeanName</code> - the name of the internal scripted object bean",
+      "translation": "<code>scriptedObjectBeanName</code> - 内部脚本对象 Bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>beanDefinition</code> - the BeanDefinition to check",
+      "translation": "<code>beanDefinition</code> - 要检查的 BeanDefinition",
+      "count": 2
+    },
+    {
+      "source": "<code>scriptSourceLocator</code> - the script source locator associated with the bean",
+      "translation": "<code>scriptSourceLocator</code> - 与 Bean 关联的脚本源定位器",
+      "count": 2
+    },
+    {
+      "source": "<code>scriptSourceLocator</code> - the script source locator",
+      "translation": "<code>scriptSourceLocator</code> - 脚本源定位器",
+      "count": 2
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader to use (if necessary)",
+      "translation": "<code>resourceLoader</code> - 要使用的资源加载器（如需要）",
+      "count": 2
+    },
+    {
+      "source": "<code>bd</code> - the bean definition (property values etc) to create a\nconfig interface for",
+      "translation": "<code>bd</code> - 用于创建配置接口的 Bean 定义（属性值等）",
+      "count": 2
+    },
+    {
+      "source": "<code>interfaces</code> - the interfaces to check against (might define\ngetters corresponding to the setters we're supposed to generate)",
+      "translation": "<code>interfaces</code> - 要检查的接口（可能定义了与我们打算生成的 setter 相对应的 getter）",
+      "count": 2
+    },
+    {
+      "source": "<code>scriptSource</code> - the ScriptSource for the scripted bean",
+      "translation": "<code>scriptSource</code> - 脚本化 Bean 的 ScriptSource",
+      "count": 2
+    },
+    {
+      "source": "<code>interfaces</code> - the interfaces that the scripted bean is supposed to implement",
+      "translation": "<code>interfaces</code> - 脚本化 Bean 应该实现的接口",
+      "count": 2
+    },
+    {
+      "source": "<code>ts</code> - the refreshable TargetSource",
+      "translation": "<code>ts</code> - 可刷新的 TargetSource",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Rob Harrop, Rick Evans, Mark Fisher, Sam Brannen",
+      "translation": "Juergen Hoeller, Rob Harrop, Rick Evans, Mark Fisher, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "the refresh check delay",
+      "translation": "刷新检查延迟",
+      "count": 2
+    },
+    {
+      "source": "the corresponding ScriptSource instance",
+      "translation": "对应的 ScriptSource 实例",
+      "count": 2
+    },
+    {
+      "source": "the ScriptSource instance",
+      "translation": "ScriptSource 实例",
+      "count": 2
+    },
+    {
+      "source": "the config interface",
+      "translation": "配置接口",
+      "count": 2
+    },
+    {
+      "source": "the generated proxy",
+      "translation": "生成的代理",
+      "count": 2
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "If a non-null object is returned by this method, the bean creation process\nwill be short-circuited. The only further processing applied is the\n<a href=\"../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessAfterInitialization(Object, String)</code></a> callback from the configured\n<a href=\"../../beans/factory/config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessors</code></a>.",
+      "translation": "如果此方法返回一个非空对象，则将短路 Bean 创建过程。唯一应用的进一步处理是配置的<a href=\"../../beans/factory/config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessors</code></a>中的<a href=\"../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessAfterInitialization(Object, String)</code></a>回调。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "This might be a ResourcePatternResolver, which can be checked\nthrough <code>instanceof ResourcePatternResolver</code>. See also the\n<code>ResourcePatternUtils.getResourcePatternResolver</code> method.",
+      "translation": "这可能是一个 `ResourcePatternResolver`，可以通过 `<code>instanceof ResourcePatternResolver</code>` 进行检查。另请参阅 `<code>ResourcePatternUtils.getResourcePatternResolver</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback\nlike InitializingBean's <code>afterPropertiesSet</code> or a custom init-method.\nInvoked before ApplicationContextAware's <code>setApplicationContext</code>.",
+      "translation": "在普通 Bean 属性填充之后、但早于初始化回调（如 `InitializingBean` 的 `<code>afterPropertiesSet</code>` 或自定义的 init-method）之前被调用。在 `ApplicationContextAware` 的 `<code>setApplicationContext</code>` 之前被调用。",
+      "count": 1
+    },
+    {
+      "source": "Post-processors may implement the extended\n<a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>SmartInstantiationAwareBeanPostProcessor</code></a> interface in order\nto predict the type of the bean object that they are going to return here.",
+      "translation": "后处理器可以实现扩展的<a href=\"../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>SmartInstantiationAwareBeanPostProcessor</code></a>接口，以便预测它们在此处将要返回的 bean 对象的类型。",
+      "count": 1
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>null</code>.\nSpecific implementations should try to predict the bean type as\nfar as known/cached already, without extra processing steps.",
+      "translation": "默认实现返回 `<code>null</code>`。具体实现应尽可能利用已知的/缓存的信息来预测 Bean 类型，而无需额外的处理步骤。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given <code>pvs</code> as-is.",
+      "translation": "默认实现原样返回给定的<code>pvs</code>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>null</code>.",
+      "translation": "默认实现返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "This callback will be applied to bean definitions with their bean class,\nas well as to factory-method definitions in which case the returned bean type\nwill be passed in here.",
+      "translation": "此回调将应用于具有其 Bean 类的 Bean 定义，以及工厂方法定义（在这种情况下，返回的 Bean 类型将在此处传入）。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">ResourceLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">ResourceLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Apply this BeanPostProcessor <i>before the target bean gets instantiated</i>.",
+      "translation": "在目标 Bean 实例化之前应用此 BeanPostProcessor。",
+      "count": 1
+    },
+    {
+      "source": "Convert the given script source locator to a ScriptSource instance.",
+      "translation": "将给定的脚本源定位器转换为 ScriptSource 实例。",
+      "count": 1
+    },
+    {
+      "source": "Create a composite interface Class for the given interfaces,\nimplementing the given interfaces in one single Class.",
+      "translation": "为给定的接口创建一个组合接口类，在单个类中实现这些接口。",
+      "count": 1
+    },
+    {
+      "source": "Create a config interface for the given bean definition, defining setter\nmethods for the defined property values as well as an init method and\na destroy method (if defined).",
+      "translation": "为给定的 Bean 定义创建一个配置接口，该接口需为定义的属性值定义 Setter 方法，以及一个初始化方法和一个销毁方法（如果已定义）。",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "Post-process the given property values before the factory applies them\nto the given bean.",
+      "translation": "在工厂将属性值应用到给定 Bean 之前，对给定的属性值进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "Prepare the script beans in the internal BeanFactory that this\npost-processor uses.",
+      "translation": "准备此后置处理器使用的内部 BeanFactory 中的脚本 Bean。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Set the delay between refresh checks, in milliseconds.",
+      "translation": "设置刷新检查之间的延迟（以毫秒为单位）。",
+      "count": 1
+    },
+    {
+      "source": "Set the ResourceLoader that this object runs in.",
+      "translation": "设置该对象运行的资源加载器。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code> in interface <code><a href=\"../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code>` 接口 `<code><a href=\"../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code> in interface <code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code>` 接口 `<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">postProcessBeforeInstantiation</a></code> in interface <code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">postProcessBeforeInstantiation</a></code>` 接口 `<code><a href=\"../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>pvs</code> - the property values that the factory is about to apply (never <code>null</code>)",
+      "translation": "<code>pvs</code> - 工厂即将应用的属性值（永远不为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader object to be used by this object",
+      "translation": "<code>resourceLoader</code> - 此对象将使用的 ResourceLoader 对象",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the raw class of the bean",
+      "translation": "<code>beanClass</code> - 该 Bean 的原始类",
+      "count": 1
+    },
+    {
+      "source": "the type of the bean, or <code>null</code> if not predictable",
+      "translation": "bean 的类型，或者如果无法预测则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance created, but whose properties have not yet been set",
+      "translation": "<code>bean</code> - 已创建但属性尚未设置的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "the actual property values to apply to the given bean (can be the passed-in\nPropertyValues instance), or <code>null</code> to skip property population",
+      "translation": "要应用于给定 Bean 的实际属性值（可以是传入的 `PropertyValues` 实例），或 `<code>null</code>` 以跳过属性填充。",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the class of the bean to be instantiated",
+      "translation": "<code>beanClass</code> - 要实例化的 Bean 的类",
+      "count": 1
+    },
+    {
+      "source": "the bean object to expose instead of a default instance of the target bean,\nor <code>null</code> to proceed with default instantiation",
+      "translation": "要暴露的 Bean 对象，而不是目标 Bean 的默认实例，或 `<code>null</code>` 以使用默认实例化。",
+      "count": 1
+    },
+    {
+      "source": "<code>interfaces</code> - the interfaces to merge",
+      "translation": "<code>interfaces</code> - 要合并的接口",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "the merged interface as Class",
+      "translation": "合并后的接口作为类",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

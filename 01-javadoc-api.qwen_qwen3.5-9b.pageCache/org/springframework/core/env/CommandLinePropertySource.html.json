@@ -1,0 +1,176 @@
+{
+  "created_at": "2026-04-14 13:02:16",
+  "updated_at": "2026-04-14 13:02:16",
+  "stats": {
+    "total_entries": 32,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 59,
+    "entries_with_hits": 32,
+    "entries_without_hits": 0,
+    "hit_rate": 1.84375,
+    "usage_percentage": 0.0031999999999999997
+  },
+  "items": [
+    {
+      "source": "Create a new <code>CommandLinePropertySource</code> having the default name\n<a href=\"#COMMAND_LINE_PROPERTY_SOURCE_NAME\">\"commandLineArgs\"</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt; and backed by the given source object.",
+      "translation": "创建一个新的名为 <code>CommandLinePropertySource</code> 的默认名称\n<a href=\"#COMMAND_LINE_PROPERTY_SOURCE_NAME\">\"commandLineArgs\"</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;，并由给定的源对象支持。",
+      "count": 3
+    },
+    {
+      "source": "The default name given to <a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\"><code>CommandLinePropertySource</code></a> instances: \"commandLineArgs\".",
+      "translation": "默认分配给 `<a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\"><code>CommandLinePropertySource</code></a>` 实例的名称：\"commandLineArgs\"。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\"><code>CommandLinePropertySource</code></a> having the given name\nand backed by the given source object.",
+      "translation": "创建一个名为给定名称的新的<a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\"><code>CommandLinePropertySource</code></a>，并由给定的源对象支持。",
+      "count": 3
+    },
+    {
+      "source": "As an alternative to injecting the <code>Environment</code>, Spring's <code>@Value</code>\nannotation may be used to inject these properties, given that a <a href=\"PropertySourcesPropertyResolver.html\" title=\"class in org.springframework.core.env\"><code>PropertySourcesPropertyResolver</code></a> bean has been registered, either directly or through\nusing the <code>&lt;context:property-placeholder&gt;</code> element. For example:",
+      "translation": "作为注入 `<code>Environment`` 的替代方案，可以使用 Spring 的 `<code>@Value</code>` 注解来注入这些属性，前提是已注册了一个 `<a href=\"PropertySourcesPropertyResolver.html\" title=\"class in org.springframework.core.env\"><code>PropertySourcesPropertyResolver</code></a>` Bean（无论是直接注册还是通过使用 `<code>&lt;context:property-placeholder&gt;</code>` 元素）。例如：",
+      "count": 2
+    },
+    {
+      "source": "Non-option arguments are also supported through this abstraction. Any arguments\nsupplied without an option-style prefix such as \"-\" or \"--\" are considered \"non-option\narguments\" and available through the special <a href=\"#DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME\">\"nonOptionArgs\"</a> property.  If multiple\nnon-option arguments are specified, the value of this property will be a\ncomma-delimited string containing all the arguments. This approach ensures a simple\nand consistent return type (String) for all properties from a <code>\nCommandLinePropertySource</code> and at the same time lends itself to conversion when used\nin conjunction with the Spring <a href=\"Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> and its built-in <code>\nConversionService</code>. Consider the following example:",
+      "translation": "非选项参数也通过此抽象得到支持。任何未提供类似 \"-\" 或 \"--\" 的选项风格前缀的参数均被视为“非选项参数”，并通过特殊的<a href=\"#DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME\">\"nonOptionArgs\"</a>属性可用。如果指定了多个非选项参数，该属性的值将是一个包含所有参数的逗号分隔字符串。这种方法确保了来自<code>CommandLinePropertySource</code>的所有属性具有简单且一致的返回类型（String），并且当与 Spring 的<a href=\"Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>及其内置的<code>ConversionService</code>结合使用时，也便于进行转换。考虑以下示例：",
+      "count": 2
+    },
+    {
+      "source": "Individual command line arguments are represented as properties through the usual\n<a href=\"PropertySource.html#getProperty(java.lang.String)\"><code>PropertySource.getProperty(String)</code></a> and\n<a href=\"PropertySource.html#containsProperty(java.lang.String)\"><code>PropertySource.containsProperty(String)</code></a> methods. For example, given the\nfollowing command line:",
+      "translation": "单个命令行参数通过通常的 <a href=\"PropertySource.html#getProperty(java.lang.String)\"><code>PropertySource.getProperty(String)</code></a> 和 <a href=\"PropertySource.html#containsProperty(java.lang.String)\"><code>PropertySource.containsProperty(String)</code></a> 方法表示为属性。例如，给定以下命令行：",
+      "count": 2
+    },
+    {
+      "source": "The name of the special \"non-option arguments\" property may be customized through\nthe <a href=\"#setNonOptionArgsPropertyName(java.lang.String)\"><code>setNonOptionArgsPropertyName(String)</code></a> method. Doing so is recommended as\nit gives proper semantic value to non-option arguments. For example, if filesystem\npaths are being specified as non-option arguments, it is likely preferable to refer to\nthese as something like \"file.locations\" than the default of \"nonOptionArgs\":",
+      "translation": "特殊“非选项参数”属性的名称可以通过 `<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\"><code>setNonOptionArgsPropertyName(String)</code></a>` 方法进行自定义。这样做是推荐的，因为它赋予了非选项参数正确的语义值。例如，如果指定的是文件系统路径作为非选项参数，那么将其称为类似\"file.locations\"的名称可能比默认的\"nonOptionArgs\"更合适：",
+      "count": 2
+    },
+    {
+      "source": "As mentioned above, when used in conjunction with the Spring <code>Environment</code>\nabstraction, this comma-delimited string may easily be converted to a String array or\nlist:",
+      "translation": "如上所述，当与 Spring `<code>Environment`》抽象结合使用时，该逗号分隔字符串可轻松转换为 `String` 数组或列表：",
+      "count": 2
+    },
+    {
+      "source": "Note also that while \"--\" was used in the examples above to denote an option\nargument, this syntax may vary across individual command line argument libraries. For\nexample, a JOpt- or Commons CLI-based implementation may allow for single dash (\"-\")\n\"short\" option arguments, etc.",
+      "translation": "此外，请注意虽然上述示例中使用\"--\"来表示选项参数，但这种语法可能因各个命令行参数库而异。例如，基于 JOpt 或 Commons CLI 的实现可能允许使用单个破折号（\"-\"）作为“短”选项参数等。",
+      "count": 2
+    },
+    {
+      "source": "Return the collection of values associated with the command line option having the\ngiven name.\n<ul>\n<li>if the option is present and has no argument (for example: \"--foo\"), return an empty\ncollection (<code>[]</code>)</li>\n<li>if the option is present and has a single value (for example, \"--foo=bar\"), return a\ncollection having one element (<code>[\"bar\"]</code>)</li>\n<li>if the option is present and the underlying command line parsing library\nsupports multiple arguments (for example, \"--foo=bar --foo=baz\"), return a collection\nhaving elements for each value (<code>[\"bar\", \"baz\"]</code>)</li>\n<li>if the option is not present, return <code>null</code></li>\n</ul>",
+      "translation": "返回与给定名称的命令行选项关联的值集合。\n<ul>\n<li>如果该选项存在且没有参数（例如：\"--foo\"），则返回一个空集合 (<code>[]</code>)</li>\n<li>如果该选项存在且具有单个值（例如，\"--foo=bar\"），则返回包含一个元素的集合 (<code>[\"bar\"]</code>)</li>\n<li>如果该选项存在且底层的命令行解析库支持多个参数（例如，\"--foo=bar --foo=baz\"），则返回包含每个值的元素的集合 (<code>[\"bar\", \"baz\"]</code>)</li>\n<li>如果该选项不存在，则返回 <code>null</code></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "This implementation first checks to see if the name specified is the special\n<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">\"non-option arguments\" property</a>,\nand if so delegates to the abstract <a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a> method. If so\nand the collection of non-option arguments is empty, this method returns\n<code>null</code>. If not empty, it returns a comma-separated String of all non-option\narguments. Otherwise, this method delegates to and returns a comma-separated String\nof the results of the abstract <a href=\"#getOptionValues(java.lang.String)\"><code>getOptionValues(String)</code></a> method or\n<code>null</code> if there are no such option values.",
+      "translation": "此实现首先检查指定的名称是否为特殊<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">“非选项参数”属性</a>，如果是，则委托给抽象的<a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a> 方法。如果该非选项参数集合为空，则此方法返回<code>null</code>；如果不为空，则返回所有非选项参数的逗号分隔字符串。否则，此方法委托给并返回抽象的<a href=\"#getOptionValues(java.lang.String)\"><code>getOptionValues(String)</code></a> 方法的逗号分隔字符串结果，或者如果没有此类选项值，则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "This implementation first checks to see if the name specified is the special\n<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">\"non-option arguments\" property</a>,\nand if so delegates to the abstract <a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a> method\nchecking to see whether it returns an empty collection. Otherwise, delegates to and\nreturns the value of the abstract <a href=\"#containsOption(java.lang.String)\"><code>containsOption(String)</code></a> method.",
+      "translation": "此实现首先检查指定的名称是否为特殊<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">“非选项参数”属性</a>，如果是，则委托给抽象的<a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a>方法，以检查其是否返回空集合。否则，委托给并返回抽象的<a href=\"#containsOption(java.lang.String)\"><code>containsOption(String)</code></a>方法的值。",
+      "count": 2
+    },
+    {
+      "source": "This implementation first checks to see if the name specified is the special\n<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">\"non-option arguments\" property</a>,\nand if so delegates to the abstract <a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a> method\nchecking to see whether it returns an empty collection.",
+      "translation": "此实现首先检查指定的名称是否为特殊<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">\"非选项参数\"属性</a>，如果是，则委托给抽象的<a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a>方法，以检查其是否返回空集合。",
+      "count": 2
+    },
+    {
+      "source": "This implementation first checks to see if the name specified is the special\n<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">\"non-option arguments\" property</a>,\nand if so delegates to the abstract <a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a> method.",
+      "translation": "此实现首先检查指定的名称是否为特殊<a href=\"#setNonOptionArgsPropertyName(java.lang.String)\">“非选项参数”属性</a>，如果是，则委托给抽象的<a href=\"#getNonOptionArgs()\"><code>getNonOptionArgs()</code></a> 方法。",
+      "count": 2
+    },
+    {
+      "source": "Specify the name of the special \"non-option arguments\" property.\nThe default is <a href=\"#DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME\">\"nonOptionArgs\"</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;.",
+      "translation": "指定特殊“非选项参数”属性的名称。默认值为 `<a href=\"#DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME\">\"nonOptionArgs\"</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;`。",
+      "count": 2
+    },
+    {
+      "source": "Return the collection of non-option arguments parsed from the command line.\nNever <code>null</code>.",
+      "translation": "返回从命令行解析出的非选项参数集合。永远不会为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "The default name of the property representing non-option arguments: \"nonOptionArgs\".",
+      "translation": "代表非选项参数的属性的默认名称：\"nonOptionArgs\"。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the set of option arguments parsed from the command line contains\nan option with the given name.",
+      "translation": "返回从命令行解析的选项参数集合中是否包含具有给定名称的选项。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"EnumerablePropertySource.html#containsProperty(java.lang.String)\">containsProperty</a></code> in class <code><a href=\"EnumerablePropertySource.html\" title=\"class in org.springframework.core.env\">EnumerablePropertySource</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;</code>",
+      "translation": "`containsProperty` 在类 `<a href=\"EnumerablePropertySource.html\" title=\"class in org.springframework.core.env\">EnumerablePropertySource</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;</code> 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PropertySource.html#getProperty(java.lang.String)\">getProperty</a></code> in class <code><a href=\"PropertySource.html\" title=\"class in org.springframework.core.env\">PropertySource</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;</code>",
+      "translation": "`getProperty` 在类 `<a href=\"PropertySource.html\" title=\"class in org.springframework.core.env\">PropertySource</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CommandLinePropertySource\">T</a>&gt;` 中。",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the source type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 源类型</span>",
+      "count": 2
+    },
+    {
+      "source": "Purpose and General Usage",
+      "translation": "目的和一般用法",
+      "count": 2
+    },
+    {
+      "source": "Working with option arguments",
+      "translation": "与选项参数一起工作",
+      "count": 2
+    },
+    {
+      "source": "Working with non-option arguments",
+      "translation": "与非选项参数一起工作",
+      "count": 2
+    },
+    {
+      "source": "Return the collection of non-option arguments parsed from the command line.",
+      "translation": "返回从命令行解析出的非选项参数集合。",
+      "count": 1
+    },
+    {
+      "source": "Return the collection of values associated with the command line option having the\ngiven name.",
+      "translation": "返回与给定名称的命令行选项关联的值集合。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the special \"non-option arguments\" property.",
+      "translation": "指定特殊“非选项参数”属性的名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the property to find",
+      "translation": "<code>name</code> - 要查找的属性的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the property to find",
+      "translation": "<code>name</code> - 要查找的属性",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams",
+      "translation": "Chris Beams",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

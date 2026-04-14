@@ -1,0 +1,366 @@
+{
+  "created_at": "2026-04-14 12:32:54",
+  "updated_at": "2026-04-14 12:32:54",
+  "stats": {
+    "total_entries": 70,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 126,
+    "entries_with_hits": 70,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8,
+    "usage_percentage": 0.006999999999999999
+  },
+  "items": [
+    {
+      "source": "<code>locale</code> - the locale",
+      "translation": "<code>locale</code> - 区域设置",
+      "count": 4
+    },
+    {
+      "source": "<code>filename</code> - the bundle filename (basename + Locale)",
+      "translation": "<code>filename</code> - 资源包文件名（基本名称 + 区域设置）",
+      "count": 4
+    },
+    {
+      "source": "<code>basename</code> - the basename of the bundle",
+      "translation": "<code>basename</code> - 包的基名",
+      "count": 3
+    },
+    {
+      "source": "the List of filenames to check",
+      "translation": "要检查的文件名列表",
+      "count": 3
+    },
+    {
+      "source": "In contrast to the JDK-based <a href=\"ResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ResourceBundleMessageSource</code></a>, this class uses\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> instances as its custom data structure for messages,\nloading them via a <a href=\"../../util/PropertiesPersister.html\" title=\"interface in org.springframework.util\"><code>PropertiesPersister</code></a> strategy\nfrom Spring <a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> handles. This strategy is not only capable of\nreloading files based on timestamp changes, but also of loading properties files\nwith a specific character encoding. It will detect XML property files as well.",
+      "translation": "与基于 JDK 的 <a href=\"ResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ResourceBundleMessageSource</code></a> 不同，该类使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> 实例作为其消息的自定义数据结构，并通过 Spring <a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> 句柄加载来自 <a href=\"../../util/PropertiesPersister.html\" title=\"interface in org.springframework.util\"><code>PropertiesPersister</code></a> 策略的消息。该策略不仅能够根据时间戳变化重新加载文件，还能够加载具有特定字符编码的属性文件。它也能检测 XML 属性文件。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to the configured\n<a href=\"#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoader</code></a> to resolve\nresources, checking in order for existing <code>Resource</code> with extensions defined\nby <a href=\"#setFileExtensions(java.util.List)\"><code>setFileExtensions(List)</code></a> (<code>.properties</code> and <code>.xml</code>\nby default).",
+      "translation": "默认实现会委托给已配置的<a href=\"#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoader</code></a> 来解析资源，并依次检查是否存在由<a href=\"#setFileExtensions(java.util.List)\"><code>setFileExtensions(List)</code></a>定义的扩展名（默认为<code>.properties</code>和<code>.xml</code>）的现有<code>Resource</code>。",
+      "count": 2
+    },
+    {
+      "source": "As an alternative to overriding this method, you can configure a\n<a href=\"#setPropertiesPersister(org.springframework.util.PropertiesPersister)\"><code>PropertiesPersister</code></a>\nthat is capable of dealing with all resources returned by this method.\nPlease note, however, that the default <code>loadProperties()</code> implementation\nuses <a href=\"../../util/PropertiesPersister.html#loadFromXml(java.util.Properties,java.io.InputStream)\"><code>loadFromXml</code></a>\nfor XML resources and otherwise uses the two\n<a href=\"../../util/PropertiesPersister.html#load(java.util.Properties,java.io.InputStream)\"><code>load</code></a> methods\nfor other types of resources.",
+      "translation": "作为覆盖此方法的替代方案，您可以配置一个能够处理此方法返回的所有资源的 `<code>PropertiesPersister</code>`。请注意，默认的 `loadProperties()` 实现对于 XML 资源使用 `<a href=\"../../util/PropertiesPersister.html#loadFromXml(java.util.Properties,java.io.InputStream)\"><code>loadFromXml</code></a>`，而对于其他类型的资源则使用两个 `<a href=\"../../util/PropertiesPersister.html#load(java.util.Properties,java.io.InputStream)\"><code>load</code></a>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "If no suitable concrete <code>Resource</code> can be resolved, this method\nreturns a <code>Resource</code> for which <a href=\"../../core/io/Resource.html#exists()\"><code>Resource.exists()</code></a> returns\n<code>false</code>, which gets subsequently ignored.",
+      "translation": "如果无法解析到合适的具体`Resource`，此方法将返回一个使<a href=\"../../core/io/Resource.html#exists()\"><code>Resource.exists()</code></a>返回<code>false</code>的`Resource`，该资源随后将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "When overriding this method, <a href=\"#loadProperties(org.springframework.core.io.Resource,java.lang.String)\"><code>loadProperties(Resource, String)</code></a>\n<strong>must</strong> be capable of loading properties from any type of\n<code>Resource</code> returned by this method. As a consequence, implementors\nare strongly encouraged to also override <code>loadProperties()</code>.",
+      "translation": "当重写此方法时，<a href=\"#loadProperties(org.springframework.core.io.Resource,java.lang.String)\"><code>loadProperties(Resource, String)</code></a><strong>必须</strong>能够加载由本方法返回的任何类型<code>Resource</code>的属性。因此，实现者强烈建议同时重写<code>loadProperties()</code>。",
+      "count": 2
+    },
+    {
+      "source": "Note that the basenames set as <a href=\"AbstractResourceBasedMessageSource.html#setBasenames(java.lang.String...)\"><code>\"basenames\"</code></a> property\nare treated in a slightly different fashion than the \"basenames\" property of\n<a href=\"ResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ResourceBundleMessageSource</code></a>. It follows the basic ResourceBundle rule of not\nspecifying file extension or language codes, but can refer to any Spring resource\nlocation (instead of being restricted to classpath resources). With a \"classpath:\"\nprefix, resources can still be loaded from the classpath, but \"cacheSeconds\" values\nother than \"-1\" (caching forever) might not work reliably in this case.",
+      "translation": "请注意，设置为 <a href=\"AbstractResourceBasedMessageSource.html#setBasenames(java.lang.String...)\"><code>\"basenames\"</code></a> 属性的基名与 <a href=\"ResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ResourceBundleMessageSource</code></a> 的 \"basenames\" 属性处理方式略有不同。它遵循基本的 ResourceBundle 规则，即不指定文件扩展名或语言代码，但可以引用任何 Spring 资源位置（而不是仅限于类路径资源）。使用 \"classpath:\" 前缀时，资源仍可从类路径加载，但在这种情况下，除了 \"-1\"（永久缓存）之外的其他 \"cacheSeconds\" 值可能无法可靠工作。",
+      "count": 2
+    },
+    {
+      "source": "This MessageSource can easily be used outside an\n<a href=\"../ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>: it will use a\n<a href=\"../../core/io/DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a> as default,\nsimply getting overridden with the ApplicationContext's resource loader\nif running in a context. It does not have any other specific dependencies.",
+      "translation": "此 MessageSource 可轻松在 <a href=\"../ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> 之外使用：它将默认使用 <a href=\"../../core/io/DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>，如果在上下文中运行，则会被 ApplicationContext 的资源加载器简单覆盖。它没有其他特定依赖项。",
+      "count": 2
+    },
+    {
+      "source": "Allows for returning a custom <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> extension in subclasses.\nOverriding methods should just instantiate a custom <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> subclass,\nwith no further initialization or population to be performed at that point.",
+      "translation": "允许在子类中返回自定义的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> 扩展。\n重写方法只需实例化一个自定义的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> 子类，\n此时无需进行进一步的初始化或填充。",
+      "count": 2
+    },
+    {
+      "source": "For a typical web application, message files could be placed in <code>WEB-INF</code>:\nfor example, a \"WEB-INF/messages\" basename would find a \"WEB-INF/messages.properties\",\n\"WEB-INF/messages_en.properties\" etc arrangement as well as \"WEB-INF/messages.xml\",\n\"WEB-INF/messages_en.xml\" etc. Note that message definitions in a <i>previous</i>\nresource bundle will override ones in a later bundle, due to sequential lookup.",
+      "translation": "对于典型的 Web 应用程序，消息文件可以放置在 `<code>WEB-INF</code>` 中：例如，以 \"WEB-INF/messages\" 为基本名称可以找到 \"WEB-INF/messages.properties\"、\"WEB-INF/messages_en.properties\" 等排列方式，以及 \"WEB-INF/messages.xml\"、\"WEB-INF/messages_en.xml\" 等。请注意，由于顺序查找，<i>之前</i> 资源包中的消息定义将覆盖后续资源包中的定义。",
+      "count": 2
+    },
+    {
+      "source": "The default is a list containing <code>.properties</code> and <code>.xml</code>.",
+      "translation": "默认值是一个包含<code>.properties</code>和<code>.xml</code>的列表。",
+      "count": 2
+    },
+    {
+      "source": "Follows the rules defined by <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html#toString()\" title=\"class or interface in java.util\"><code>Locale.toString()</code></a>.",
+      "translation": "遵循由<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html#toString()\" title=\"class or interface in java.util\"><code>Locale.toString()</code></a>定义的规则。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>DefaultPropertiesPersister</code>.",
+      "translation": "默认值为<code>DefaultPropertiesPersister</code>。",
+      "count": 2
+    },
+    {
+      "source": "The holder can be <code>null</code> if not cached before, or a timed-out cache entry\n(potentially getting re-validated against the current last-modified timestamp).",
+      "translation": "如果之前未缓存，则持有者可以为`null`，或者是一个已过期的缓存条目（可能需要根据当前的最后修改时间戳重新验证）。",
+      "count": 2
+    },
+    {
+      "source": "Thanks to Thomas Achleitner for providing the initial implementation of\nthis message source!",
+      "translation": "感谢 Thomas Achleitner 提供了此消息源的初始实现！",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\", minimizing contention between threads. If you prefer\nthe old behavior, i.e. to fully block on refresh, switch this flag to \"false\".",
+      "translation": "默认为\"true\"，以最小化线程间的竞争。如果您更喜欢旧的行为，即在刷新时完全阻塞，请将此标志切换为\"false\"。",
+      "count": 2
+    },
+    {
+      "source": "The default is a DefaultResourceLoader. Will get overridden by the\nApplicationContext if running in a context, as it implements the\nResourceLoaderAware interface. Can be manually overridden when\nrunning outside an ApplicationContext.",
+      "translation": "默认值为 DefaultResourceLoader。如果在上下文中运行，它将被 ApplicationContext 覆盖，因为它实现了 ResourceLoaderAware 接口。在 ApplicationContext 外部运行时，可以手动覆盖它。",
+      "count": 2
+    },
+    {
+      "source": "Only used when caching resource bundle contents forever, i.e.\nwith cacheSeconds &lt; 0. Therefore, merged properties are always\ncached forever.",
+      "translation": "仅在永久缓存资源包内容时（即 `cacheSeconds` < 0）使用。因此，合并的属性始终被永久缓存。",
+      "count": 2
+    },
+    {
+      "source": "For example, basename \"messages\", Locale \"de_AT_oo\" → \"messages_de_AT_OO\",\n\"messages_de_AT\", \"messages_de\".",
+      "translation": "例如，basename \"messages\"，Locale \"de_AT_oo\" → \"messages_de_AT_OO\"、\"messages_de_AT\"、\"messages_de\"。",
+      "count": 2
+    },
+    {
+      "source": "This can be leveraged to check the last modification timestamp or to load\nproperties from alternative sources — for example, from an XML BLOB\nin a database, or from properties serialized using a custom format such as\nJSON.",
+      "translation": "这可用于检查最后修改时间戳，或从替代源加载属性——例如，从数据库中的 XML BLOB 中加载，或从使用自定义格式（如 JSON）序列化的属性中加载。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the specified bundle <code>filename</code> into a concrete <a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>,\npotentially checking multiple sources or file extensions.",
+      "translation": "解析指定的资源包<code>filename</code>为具体的<a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>，可能需要检查多个源或文件扩展名。",
+      "count": 2
+    },
+    {
+      "source": "Clear the resource bundle caches of this MessageSource and all its ancestors.",
+      "translation": "清除此 MessageSource 及其所有祖先的资源包缓存。",
+      "count": 2
+    },
+    {
+      "source": "Determine the properties to merge based on the specified basenames.",
+      "translation": "根据指定的基名确定要合并的属性。",
+      "count": 2
+    },
+    {
+      "source": "Get a PropertiesHolder for the given filename, either from the\ncache or freshly loaded.",
+      "translation": "获取给定文件名的 PropertiesHolder，从缓存中或新加载。",
+      "count": 2
+    },
+    {
+      "source": "Load the properties from the given resource.",
+      "translation": "从给定的资源加载属性。",
+      "count": 2
+    },
+    {
+      "source": "Merge the given properties holders into a single holder.",
+      "translation": "合并给定的属性持有器为单个持有器。",
+      "count": 2
+    },
+    {
+      "source": "Resolves the given message code as key in the retrieved bundle files,\nusing a cached MessageFormat instance per message code.",
+      "translation": "使用按消息代码缓存的 MessageFormat 实例，将给定的消息代码作为键在检索到的资源包文件中解析。",
+      "count": 2
+    },
+    {
+      "source": "Resolves the given message code as key in the retrieved bundle files,\nreturning the value found in the bundle as-is (without MessageFormat parsing).",
+      "translation": "将给定的消息代码作为键在检索到的资源包文件中解析，并原样返回资源包中找到的值（不进行 MessageFormat 解析）。",
+      "count": 2
+    },
+    {
+      "source": "Calculate all filenames for the given bundle basename and Locale.\nWill calculate filenames for the given Locale, the system Locale\n(if applicable), and the default file.",
+      "translation": "计算给定包基本名称和区域设置的所有文件名。将为给定的区域设置、系统区域设置（如适用）以及默认文件计算文件名。",
+      "count": 2
+    },
+    {
+      "source": "Clear the resource bundle cache.\nSubsequent resolve calls will lead to reloading of the properties files.",
+      "translation": "清除资源包缓存。随后的解析调用将导致属性文件重新加载。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageSource.html#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\">resolveCodeWithoutArguments</a></code> in class <code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageSource.html#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\">resolveCodeWithoutArguments</a></code>` 类中的 `<code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageSource.html#resolveCode(java.lang.String,java.util.Locale)\">resolveCode</a></code> in class <code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageSource.html#resolveCode(java.lang.String,java.util.Locale)\">resolveCode</a></code>` 类中的 `<code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "the <code>Resource</code> to use, or <code>null</code> if none found",
+      "translation": "使用的<code>Resource</code>，如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - if properties loading failed",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 如果属性加载失败",
+      "count": 2
+    },
+    {
+      "source": "<code>fileExtensions</code> - the file extensions (starts with a dot)",
+      "translation": "<code>fileExtensions</code> - 文件扩展名（以点开头）",
+      "count": 2
+    },
+    {
+      "source": "<code>fileEncodings</code> - a Properties with filenames as keys and charset\nnames as values. Filenames have to match the basename syntax,\nwith optional locale-specific components: for example, \"WEB-INF/messages\"\nor \"WEB-INF/messages_en\".",
+      "translation": "`fileEncodings` - 一个以文件名为键、字符集名称为值的 Properties。文件名必须匹配基本名称语法，并可选包含特定于区域设置的组件：例如，\"WEB-INF/messages\"或\"WEB-INF/messages_en\"。",
+      "count": 2
+    },
+    {
+      "source": "<code>code</code> - the code of the message to resolve",
+      "translation": "<code>code</code> - 要解析的消息的代码",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the locale to resolve the code for\n(subclasses are encouraged to support internationalization)",
+      "translation": "<code>locale</code> - 用于解析代码的区域设置（鼓励子类支持国际化）",
+      "count": 2
+    },
+    {
+      "source": "<code>holders</code> - the list of properties holders",
+      "translation": "<code>holders</code> - 属性持有者列表",
+      "count": 2
+    },
+    {
+      "source": "<code>propHolder</code> - the current PropertiesHolder for the bundle",
+      "translation": "<code>propHolder</code> - 当前 Bundle 的 PropertiesHolder",
+      "count": 2
+    },
+    {
+      "source": "<code>resource</code> - the resource to load from",
+      "translation": "<code>resource</code> - 要加载的资源",
+      "count": 2
+    },
+    {
+      "source": "<code>filename</code> - the original bundle filename (basename + Locale)",
+      "translation": "<code>filename</code> - 原始资源包文件名（基本名称 + 区域设置）",
+      "count": 2
+    },
+    {
+      "source": "the list of properties holders",
+      "translation": "属性持有者列表",
+      "count": 2
+    },
+    {
+      "source": "a single merged properties holder",
+      "translation": "单个合并的属性持有器",
+      "count": 2
+    },
+    {
+      "source": "the current PropertiesHolder for the bundle",
+      "translation": "该资源包的当前 PropertiesHolder",
+      "count": 2
+    },
+    {
+      "source": "the populated Properties instance",
+      "translation": "已填充的 Properties 实例",
+      "count": 2
+    },
+    {
+      "source": "a plain Properties instance",
+      "translation": "一个普通的 Properties 实例",
+      "count": 2
+    },
+    {
+      "source": "Only applies to classic properties files, not to XML files.",
+      "translation": "仅适用于经典属性文件，不适用于 XML 文件。",
+      "count": 1
+    },
+    {
+      "source": "Template method for creating a plain new <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a> instance.",
+      "translation": "用于创建普通新<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a>实例的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "PropertiesHolder for caching.",
+      "translation": "用于缓存的 PropertiesHolder。",
+      "count": 1
+    },
+    {
+      "source": "Calculate all filenames for the given bundle basename and Locale.",
+      "translation": "计算给定资源包基本名称和区域设置的所有文件名。",
+      "count": 1
+    },
+    {
+      "source": "Calculate the filenames for the given bundle basename and Locale,\nappending language code, country code, and variant code.",
+      "translation": "计算给定资源包基本名称和本地的文件名，并附加语言代码、国家代码和变体代码。",
+      "count": 1
+    },
+    {
+      "source": "Clear the resource bundle cache.",
+      "translation": "清除资源包缓存。",
+      "count": 1
+    },
+    {
+      "source": "Get a PropertiesHolder that contains the actually visible properties\nfor a Locale, after merging all specified resource bundles.",
+      "translation": "获取一个包含特定区域设置（Locale）中所有指定资源包合并后的实际可见属性的 PropertiesHolder。",
+      "count": 1
+    },
+    {
+      "source": "Refresh the PropertiesHolder for the given bundle filename.",
+      "translation": "刷新给定 bundle 文件名的 PropertiesHolder。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to allow for concurrent refresh behavior, i.e.",
+      "translation": "指定是否允许并发刷新行为，即",
+      "count": 1
+    },
+    {
+      "source": "Set per-file charsets to use for parsing properties files.",
+      "translation": "设置用于解析属性文件的每文件字符集。",
+      "count": 1
+    },
+    {
+      "source": "Set the list of supported file extensions.",
+      "translation": "设置支持的文件扩展名列表。",
+      "count": 1
+    },
+    {
+      "source": "Set the PropertiesPersister to use for parsing properties files.",
+      "translation": "设置用于解析属性文件的 PropertiesPersister。",
+      "count": 1
+    },
+    {
+      "source": "Set the ResourceLoader to use for loading bundle properties files.",
+      "translation": "设置用于加载资源包属性文件的 ResourceLoader。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code> in interface <code><a href=\"../ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code>` 接口 `<code><a href=\"../ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader object to be used by this object",
+      "translation": "<code>resourceLoader</code> - 此对象将使用的 ResourceLoader 对象",
+      "count": 1
+    },
+    {
+      "source": "the message String, or <code>null</code> if not found",
+      "translation": "消息字符串，如果未找到则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the MessageFormat for the message, or <code>null</code> if not found",
+      "translation": "消息的 MessageFormat，如果未找到则为<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sebastien Deleuze",
+      "translation": "Juergen Hoeller，Sebastien Deleuze",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

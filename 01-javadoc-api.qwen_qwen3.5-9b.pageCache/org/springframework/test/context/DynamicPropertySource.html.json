@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-04-14 16:36:51",
+  "updated_at": "2026-04-14 16:36:51",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 16,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7777777777777777,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "<code>@DynamicPropertySource</code> methods use a <a href=\"DynamicPropertyRegistry.html\" title=\"interface in org.springframework.test.context\"><code>DynamicPropertyRegistry</code></a>\nto add <em>name-value</em> pairs to the <code>Environment</code>'s set of\n<code>PropertySources</code>. Values are dynamic and provided via a\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a> which is only invoked when the property is\nresolved. Typically, method references are used to supply values, as in the\nexample below.",
+      "translation": "<code>@DynamicPropertySource</code> 方法使用 <a href=\"DynamicPropertyRegistry.html\" title=\"interface in org.springframework.test.context\"><code>DynamicPropertyRegistry</code></a> 向 <code>Environment</code> 的 <code>PropertySources</code> 集合中添加 <em>名称 - 值</em> 对。值是动态的，并通过仅在解析属性时调用的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a> 提供。通常使用方法引用来提供值，如下面的示例所示。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong>: if you use <code>@DynamicPropertySource</code> in a base\nclass and discover that tests in subclasses fail because the dynamic properties\nchange between subclasses, you may need to annotate your base class with\n<a href=\"../annotation/DirtiesContext.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@DirtiesContext</code></a> to\nensure that each subclass gets its own <code>ApplicationContext</code> with the\ncorrect dynamic properties.",
+      "translation": "<strong>注意</strong>：如果您在基类中使用 <code>@DynamicPropertySource</code>，并发现由于动态属性在不同子类之间发生变化而导致子类中的测试失败，您可能需要在基类上添加 <a href=\"../annotation/DirtiesContext.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@DirtiesContext</code></a> 注解，以确保每个子类都拥有包含正确动态属性的独立 <code>ApplicationContext</code>。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, dynamic properties can be added to the <code>Environment</code>\nby special beans in the test's <code>ApplicationContext</code>. See\n<a href=\"DynamicPropertyRegistrar.html\" title=\"interface in org.springframework.test.context\"><code>DynamicPropertyRegistrar</code></a> for details.",
+      "translation": "或者，可以通过测试的 `<code>ApplicationContext</code>` 中的特殊 bean 向 `<code>Environment</code>` 添加动态属性。有关详细信息，请参阅 <a href=\"DynamicPropertyRegistrar.html\" title=\"interface in org.springframework.test.context\"><code>DynamicPropertyRegistrar</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Dynamic properties from methods annotated with <code>@DynamicPropertySource</code>\nwill be <em>inherited</em> from enclosing test classes, analogous to inheritance\nfrom superclasses and interfaces. See\n<a href=\"NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a> for details.",
+      "translation": "由带有 `<code>@DynamicPropertySource</code>` 注解的方法提供的动态属性将从其封闭的测试类中<em>继承</em>，类似于从超类和接口继承。有关详细信息，请参阅<a href=\"NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The following example demonstrates how to use <code>@DynamicPropertySource</code>\nin an integration test class. Beans in the <code>ApplicationContext</code> can\naccess the <code>redis.host</code> and <code>redis.port</code> properties which are\ndynamically retrieved from the Redis container.",
+      "translation": "以下示例演示如何在集成测试类中使用 `<code>@DynamicPropertySource</code>`。<code>ApplicationContext</code> 中的 Bean 可以访问从 Redis 容器中动态获取的 `redis.host` 和 `redis.port` 属性。",
+      "count": 2
+    },
+    {
+      "source": "Methods in integration test classes that are annotated with\n<code>@DynamicPropertySource</code> must be <code>static</code> and must accept a single\n<code>DynamicPropertyRegistry</code> argument.",
+      "translation": "`@DynamicPropertySource` 注解的集成测试类中的方法必须是 `static` 的，并且必须接受单个 `DynamicPropertyRegistry` 参数。",
+      "count": 2
+    },
+    {
+      "source": "This annotation and its supporting infrastructure were originally designed\nto allow properties from\n<a href=\"https://www.testcontainers.org/\">Testcontainers</a> based tests to be\nexposed easily to Spring integration tests. However, this feature may be used\nwith any form of external resource whose lifecycle is managed outside the\ntest's <code>ApplicationContext</code>.",
+      "translation": "该注解及其支持的基础设施最初设计用于方便地将基于<a href=\"https://www.testcontainers.org/\">Testcontainers</a>的测试中的属性暴露给 Spring 集成测试。然而，此功能也可用于任何生命周期在测试的<code>ApplicationContext</code>之外管理的外部资源形式。",
+      "count": 2
+    },
+    {
+      "source": "Dynamic properties have higher precedence than those loaded from\n<a href=\"TestPropertySource.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestPropertySource</code></a>, the operating system's\nenvironment, Java system properties, or property sources added by the\napplication declaratively by using\n<a href=\"../../context/annotation/PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a>\nor programmatically. Thus, dynamic properties can be used to selectively\noverride properties loaded via <code>@TestPropertySource</code>, system property\nsources, and application property sources.",
+      "translation": "动态属性的优先级高于从<a href=\"TestPropertySource.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestPropertySource</code></a>加载的属性、操作系统的环境变量、Java 系统属性，或通过应用使用<a href=\"../../context/annotation/PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a>声明式添加或程序化添加的属性源。因此，可以使用动态属性选择性地覆盖通过<code>@TestPropertySource</code>、系统属性源和应用属性源加载的属性。",
+      "count": 1
+    },
+    {
+      "source": "Phillip Webb, Sam Brannen",
+      "translation": "Phillip Webb，Sam Brannen",
+      "count": 1
+    }
+  ]
+}

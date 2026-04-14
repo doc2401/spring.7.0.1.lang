@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-04-14 17:35:03",
+  "updated_at": "2026-04-14 17:35:03",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 29,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0714285714285716,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "as of 6.0.12 since JTA 1.1+ requires implicit rollback-only setting\nin case of an exception thrown in <code>beforeCompletion</code>, so the regular\n<a href=\"#%3Cinit%3E(org.springframework.transaction.support.TransactionSynchronization)\"><code>SpringJtaSynchronizationAdapter(TransactionSynchronization)</code></a> constructor\nis sufficient for all scenarios",
+      "translation": "自 6.0.12 版本起，由于 JTA 1.1+ 要求在 `<code>beforeCompletion</code>` 中抛出异常时设置隐式的 rollback-only，因此常规的<a href=\"#%3Cinit%3E(org.springframework.transaction.support.TransactionSynchronization)\"><code>SpringJtaSynchronizationAdapter(TransactionSynchronization)</code></a>构造函数已足以应对所有场景。",
+      "count": 5
+    },
+    {
+      "source": "Create a new SpringJtaSynchronizationAdapter for the given Spring\nTransactionSynchronization and JTA TransactionManager.",
+      "translation": "为给定的 Spring `TransactionSynchronization` 和 JTA `TransactionManager` 创建一个新的 `SpringJtaSynchronizationAdapter`。",
+      "count": 4
+    },
+    {
+      "source": "<code>springSynchronization</code> - the Spring TransactionSynchronization to delegate to",
+      "translation": "<code>springSynchronization</code> - 要委托的 Spring TransactionSynchronization",
+      "count": 4
+    },
+    {
+      "source": "Needs to invoke the Spring synchronization's <code>beforeCompletion</code>\nat this late stage in case of a rollback, since there is no corresponding\ncallback with JTA.",
+      "translation": "需要在回滚时在此较晚的阶段调用 Spring 同步的 `<code>beforeCompletion</code>`，因为 JTA 没有相应的回调。",
+      "count": 2
+    },
+    {
+      "source": "Useful for synchronizing Spring resource management code with plain\nJTA / EJB CMT transactions, despite the original code being built for\nSpring transaction synchronization.",
+      "translation": "适用于将构建于 Spring 事务同步的原生代码与纯 JTA/EJB CMT 事务进行同步，尽管原始代码是专为 Spring 事务同步而构建的。",
+      "count": 2
+    },
+    {
+      "source": "In case of an exception, the JTA transaction will be marked as rollback-only.",
+      "translation": "如果出现异常，JTA 事务将被标记为仅回滚。",
+      "count": 2
+    },
+    {
+      "source": "<code>jtaUserTransaction</code> - the JTA UserTransaction to use for rollback-only\nsetting in case of an exception thrown in <code>beforeCompletion</code>",
+      "translation": "<code>jtaUserTransaction</code> - 在 <code>beforeCompletion</code> 中抛出异常时，用于设置回滚仅模式的 JTA UserTransaction。",
+      "count": 2
+    },
+    {
+      "source": "<code>jtaTransactionManager</code> - the JTA TransactionManager to use for rollback-only\nsetting in case of an exception thrown in <code>beforeCompletion</code>",
+      "translation": "<code>jtaTransactionManager</code> - 在 <code>beforeCompletion</code> 中抛出异常时，用于设置回滚仅模式的 JTA TransactionManager。",
+      "count": 2
+    },
+    {
+      "source": "JTA <code>afterCompletion</code> callback: invoked after commit/rollback.",
+      "translation": "JTA <code>afterCompletion</code> 回调：在提交/回滚后调用。",
+      "count": 1
+    },
+    {
+      "source": "JTA <code>beforeCompletion</code> callback: just invoked before commit.",
+      "translation": "JTA <code>beforeCompletion</code> 回调：仅在提交前调用。",
+      "count": 1
+    },
+    {
+      "source": "<code>beforeCompletion</code> in interface <code>jakarta.transaction.Synchronization</code>",
+      "translation": "<code>beforeCompletion</code> 在接口 <code>jakarta.transaction.Synchronization</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>afterCompletion</code> in interface <code>jakarta.transaction.Synchronization</code>",
+      "translation": "<code>afterCompletion</code> 在接口 <code>jakarta.transaction.Synchronization</code> 中",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

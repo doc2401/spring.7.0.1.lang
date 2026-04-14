@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-04-14 11:41:29",
+  "updated_at": "2026-04-14 11:41:29",
+  "stats": {
+    "total_entries": 8,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 15,
+    "entries_with_hits": 8,
+    "entries_without_hits": 0,
+    "hit_rate": 1.875,
+    "usage_percentage": 0.0007999999999999999
+  },
+  "items": [
+    {
+      "source": "<a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorators</code></a> should be aware that\nthey may be part of a chain. In particular, a <a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a> should\nbe aware that a previous <a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a> may have replaced the\noriginal <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> with a\n<a href=\"../../../aop/framework/ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a> definition allowing for\ncustom <a href=\"../../../../aopalliance/intercept/MethodInterceptor.html\" title=\"interface in org.aopalliance.intercept\"><code>interceptors</code></a> to be added.",
+      "translation": "<a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorators</code></a> 应意识到它们可能处于链中。特别是，<a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a> 应意识到之前的 <a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a> 可能已将原始的 <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> 替换为 <a href=\"../../../aop/framework/ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a> 定义，从而允许添加自定义的 <a href=\"../../../../aopalliance/intercept/MethodInterceptor.html\" title=\"interface in org.aopalliance.intercept\"><code>interceptors</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Decoration may also occur based on custom attributes applied to the\n<code>&lt;bean&gt;</code> tag. Implementations are free to turn the metadata in the\ncustom tag into as many\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> as\nrequired and to transform the\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> of the enclosing\n<code>&lt;bean&gt;</code> tag, potentially even returning a completely different\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> to replace the\noriginal.",
+      "translation": "装饰也可能基于应用于<code>&lt;bean&gt;</code>标签的自定义属性而发生。实现可以自由选择将自定义标签中的元数据转换为所需的任意数量的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>，并转换包围的<code>&lt;bean&gt;</code>标签的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>，甚至可能返回一个完全不同的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>来替换原始定义。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorators</code></a> that wish to add an\ninterceptor to the enclosing bean should extend\n<a href=\"../../../aop/config/AbstractInterceptorDrivenBeanDefinitionDecorator.html\" title=\"class in org.springframework.aop.config\"><code>AbstractInterceptorDrivenBeanDefinitionDecorator</code></a>\nwhich handles the chaining ensuring that only one proxy is created and that it\ncontains all interceptors from the chain.",
+      "translation": "<a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorators</code></a> 希望向包围的 Bean 添加拦截器的，应扩展 <a href=\"../../../aop/config/AbstractInterceptorDrivenBeanDefinitionDecorator.html\" title=\"class in org.springframework.aop.config\"><code>AbstractInterceptorDrivenBeanDefinitionDecorator</code></a>，该接口负责处理链式调用，确保仅创建一个代理，且该代理包含链中的所有拦截器。",
+      "count": 2
+    },
+    {
+      "source": "The parser locates a <a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a> from the\n<a href=\"NamespaceHandler.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>NamespaceHandler</code></a> for the namespace in which the custom tag resides.",
+      "translation": "解析器从自定义标签所在的命名空间对应的 <a href=\"NamespaceHandler.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>NamespaceHandler</code></a> 中定位到 <a href=\"BeanDefinitionDecorator.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionDecorator</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Implementations may choose to return a completely new definition, which will\nreplace the original definition in the resulting\n<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.",
+      "translation": "实现可以选择返回一个全新的定义，该定义将替换结果中\n<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 的原始定义。",
+      "count": 2
+    },
+    {
+      "source": "The supplied <a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a> can be used to register any additional\nbeans needed to support the main definition.",
+      "translation": "提供的 `<a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a>` 可用于注册支持主定义所需的任何附加 bean。",
+      "count": 2
+    },
+    {
+      "source": "Parse the specified <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a> (either an element or an attribute) and decorate\nthe supplied <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>,\nreturning the decorated definition.",
+      "translation": "解析指定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a>（元素或属性），并装饰提供的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>，返回装饰后的定义。",
+      "count": 2
+    },
+    {
+      "source": "Rob Harrop",
+      "translation": "Rob Harrop",
+      "count": 1
+    }
+  ]
+}

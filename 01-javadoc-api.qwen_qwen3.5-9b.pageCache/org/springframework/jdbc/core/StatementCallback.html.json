@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-04-14 14:35:46",
+  "updated_at": "2026-04-14 14:35:46",
+  "stats": {
+    "total_entries": 12,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 14,
+    "entries_with_hits": 12,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1666666666666667,
+    "usage_percentage": 0.0012000000000000001
+  },
+  "items": [
+    {
+      "source": "Used internally by JdbcTemplate, but also useful for application code.",
+      "translation": "由 JdbcTemplate 内部使用，但也可用于应用程序代码。",
+      "count": 2
+    },
+    {
+      "source": "<code>stmt</code> - active JDBC Statement",
+      "translation": "<code>stmt</code> - 活动的 JDBC Statement",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Any ResultSets opened should be closed in finally blocks\nwithin the callback implementation. Spring will close the Statement\nobject after the callback returned, but this does not necessarily imply\nthat the ResultSet resources will be closed: the Statement objects might\nget pooled by the connection pool, with <code>close</code> calls only\nreturning the object to the pool but not physically closing the resources.",
+      "translation": "<b>注意：</b> 在回调实现中的 finally 块内关闭任何打开的 ResultSet。Spring 会在回调返回后关闭 Statement 对象，但这并不一定意味着 ResultSet 资源会被关闭：Statement 对象可能会被连接池复用，<code>close</code> 调用仅将对象返回到池中，而不会物理关闭资源。",
+      "count": 1
+    },
+    {
+      "source": "If called without a thread-bound JDBC transaction (initiated by\nDataSourceTransactionManager), the code will simply get executed on the\nJDBC connection with its transactional semantics. If JdbcTemplate is\nconfigured to use a JTA-aware DataSource, the JDBC connection and thus\nthe callback code will be transactional if a JTA transaction is active.",
+      "translation": "如果未在线程绑定的 JDBC 事务（由 `DataSourceTransactionManager` 发起）中调用，代码将直接在具有其事务语义的 JDBC 连接上执行。如果 `JdbcTemplate` 配置为使用支持 JTA 的 `DataSource`，则在存在活动的 JTA 事务时，JDBC 连接以及回调代码将是事务性的。",
+      "count": 1
+    },
+    {
+      "source": "Allows for returning a result object created within the callback, i.e.\na domain object or a collection of domain objects. Note that there's\nspecial support for single step actions: see JdbcTemplate.queryForObject etc.\nA thrown RuntimeException is treated as application exception, it gets\npropagated to the caller of the template.",
+      "translation": "允许返回在回调中创建的结果对象，即领域对象或领域对象的集合。请注意，单步操作具有特殊支持：请参阅 JdbcTemplate.queryForObject 等。抛出的 RuntimeException 被视为应用程序异常，它将传播到模板的调用者。",
+      "count": 1
+    },
+    {
+      "source": "Gets called by <code>JdbcTemplate.execute</code> with an active JDBC\nStatement.",
+      "translation": "由带有活动 JDBC 语句的<code>JdbcTemplate.execute</code>调用。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the result type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 结果类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by a JDBC method, to be auto-converted\nto a DataAccessException by an SQLExceptionTranslator",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果由 JDBC 方法抛出，将由 SQLExceptionTranslator 自动转换为 DataAccessException",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../dao/DataAccessException.html\" title=\"class in org.springframework.dao\">DataAccessException</a></code> - in case of custom exceptions",
+      "translation": "<code><a href=\"../../dao/DataAccessException.html\" title=\"class in org.springframework.dao\">DataAccessException</a></code> - 针对自定义异常的情况",
+      "count": 1
+    },
+    {
+      "source": "a result object, or <code>null</code> if none",
+      "translation": "结果对象，或若无则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个功能接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

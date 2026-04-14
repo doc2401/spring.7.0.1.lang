@@ -1,0 +1,216 @@
+{
+  "created_at": "2026-04-14 11:40:51",
+  "updated_at": "2026-04-14 11:40:51",
+  "stats": {
+    "total_entries": 40,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 76,
+    "entries_with_hits": 40,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9,
+    "usage_percentage": 0.004
+  },
+  "items": [
+    {
+      "source": "<code>parserContext</code> - the object encapsulating the current state of the parsing process;\nprovides access to a <a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>",
+      "translation": "<code>parserContext</code> - 封装当前解析过程状态的对象；提供对<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>的访问",
+      "count": 4
+    },
+    {
+      "source": "Central template method to actually parse the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>\ninto one or more <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>.",
+      "translation": "中央模板方法用于实际解析提供的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>，将其转换为一个或多个<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>element</code> - the element that is to be parsed into one or more <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>",
+      "translation": "<code>element</code> - 要解析为一个或多个<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>的元素",
+      "count": 3
+    },
+    {
+      "source": "Use this <a href=\"BeanDefinitionParser.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionParser</code></a> implementation when you want\nto parse some arbitrarily complex XML into one or more\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>. If you just want to parse some\nXML into a single <code>BeanDefinition</code>, you may wish to consider\nthe simpler convenience extensions of this class, namely\n<a href=\"AbstractSingleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractSingleBeanDefinitionParser</code></a> and\n<a href=\"AbstractSimpleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractSimpleBeanDefinitionParser</code></a>.",
+      "translation": "使用此 <a href=\"BeanDefinitionParser.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>BeanDefinitionParser</code></a> 实现，当您希望将任意复杂的 XML 解析为一个或多个 <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> 时。如果您只想将 XML 解析为单个 <code>BeanDefinition</code>，则可以考虑使用此类的更简单的便捷扩展类，即 <a href=\"AbstractSingleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractSingleBeanDefinitionParser</code></a> 和 <a href=\"AbstractSimpleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractSimpleBeanDefinitionParser</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation registers the supplied <a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>bean</code></a>\nwith the supplied <a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>registry</code></a> only if the <code>isNested</code>\nparameter is <code>false</code>, because one typically does not want inner beans\nto be registered as top level beans.",
+      "translation": "默认实现仅在 `isNested` 参数为 `false` 时，将提供的 `<a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>bean</code></a>` 注册到提供的 `<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>registry</code></a>`，因为通常不希望将内部 bean 注册为顶层 bean。",
+      "count": 2
+    },
+    {
+      "source": "Implementations must return the primary <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> that results\nfrom the parse if they will ever be used in a nested fashion (for example as\nan inner tag in a <code>&lt;property/&gt;</code> tag). Implementations may return\n<code>null</code> if they will <strong>not</strong> be used in a nested fashion.",
+      "translation": "实现必须返回解析后生成的主<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>，如果它们将在嵌套方式中使用（例如作为<code>&lt;property/&gt;</code>标签中的内部标签）。如果实现不会以嵌套方式使用，则可以返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "When using <a href=\"#shouldGenerateId()\"><code>generation</code></a>, a name is generated automatically.\nOtherwise, the ID is extracted from the \"id\" attribute, potentially with a\n<a href=\"#shouldGenerateIdAsFallback()\"><code>fallback</code></a> to a generated id.",
+      "translation": "使用 <a href=\"#shouldGenerateId()\"><code>generation</code></a> 时，会自动生成名称。否则，ID 将从 \"id\" 属性中提取，并可能回退到生成的 ID（通过<a href=\"#shouldGenerateIdAsFallback()\"><code>fallback</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can override this method to control whether the supplied\n<a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>bean</code></a> is actually even registered, or to\nregister even more beans.",
+      "translation": "子类可以重写此方法来控制是否实际注册提供的 <a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>bean</code></a>，或者注册更多 bean。",
+      "count": 2
+    },
+    {
+      "source": "This implementation returns <code>true</code> by default; that is,\nan event will be fired when a bean definition has been completely parsed.\nOverride this to return <code>false</code> in order to suppress the event.",
+      "translation": "此实现默认返回 `<code>true</code>`；也就是说，当 Bean 定义被完全解析时，将触发事件。若要抑制该事件，请重写此方法以返回 `<code>false</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Disabled by default; subclasses can override this to enable ID generation.\nNote that this flag is about <i>always</i> generating an ID; the parser\nwon't even check for an \"id\" attribute in this case.",
+      "translation": "默认禁用；子类可以重写此设置以启用 ID 生成。请注意，此标志是关于<i>始终</i>生成 ID；在这种情况下，解析器甚至不会检查\"id\"属性。",
+      "count": 2
+    },
+    {
+      "source": "Disabled by default; subclasses can override this to enable ID generation\nas fallback: The parser will first check for an \"id\" attribute in this case,\nonly falling back to a generated ID if no value was specified.",
+      "translation": "默认禁用；子类可以覆盖此设置以启用 ID 生成作为后备方案：在这种情况下，解析器将首先检查是否存在\"id\"属性，仅在未指定值时才回退到生成的 ID。",
+      "count": 2
+    },
+    {
+      "source": "Derived classes can override this method to supply any custom logic that\nis to be executed after all the parsing is finished.",
+      "translation": "派生类可以重写此方法，以提供在解析完成后执行的任何自定义逻辑。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation is a no-op.",
+      "translation": "默认实现是一个空操作。",
+      "count": 2
+    },
+    {
+      "source": "Parse the specified <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> and register the resulting\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition(s)</code></a> with the\n<a href=\"ParserContext.html#getRegistry()\"><code>BeanDefinitionRegistry</code></a>\nembedded in the supplied <a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a>.",
+      "translation": "解析指定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>，并将生成的\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition(s)</code></a> 注册到\n<a href=\"ParserContext.html#getRegistry()\"><code>BeanDefinitionRegistry</code></a>\n中，该 <a href=\"ParserContext.html\" title=\"class in org.springframework.beans.factory.xml\"><code>ParserContext</code></a> 已嵌入其中。",
+      "count": 2
+    },
+    {
+      "source": "Hook method called after the primary parsing of a\n<a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a> but before the\n<a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a> has been registered with a\n<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>.",
+      "translation": "在主要解析 `<a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a>` 之后、但在该 `<a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a>` 注册到 `<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>` 之前调用的钩子方法。",
+      "count": 2
+    },
+    {
+      "source": "Register the supplied <a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>bean</code></a> with the supplied\n<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>registry</code></a>.",
+      "translation": "将提供的 <a href=\"../config/BeanDefinitionHolder.html\" title=\"class in org.springframework.beans.factory.config\"><code>bean</code></a> 注册到提供的 <a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>registry</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"BeanDefinitionParser.html#parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)\">BeanDefinitionParser</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"BeanDefinitionParser.html#parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)\">BeanDefinitionParser</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Determine whether this parser is supposed to fire a\n<a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a>\nevent after parsing the bean definition.",
+      "translation": "确定此解析器在解析完 Bean 定义后是否应该触发一个 <a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a> 事件。",
+      "count": 2
+    },
+    {
+      "source": "Constant for the \"id\" attribute.",
+      "translation": "\"id\" 属性的常量。",
+      "count": 2
+    },
+    {
+      "source": "Constant for the \"name\" attribute.",
+      "translation": "\"name\" 属性的常量。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"BeanDefinitionParser.html#parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)\">parse</a></code> in interface <code><a href=\"BeanDefinitionParser.html\" title=\"interface in org.springframework.beans.factory.xml\">BeanDefinitionParser</a></code>",
+      "translation": "`<code><a href=\"BeanDefinitionParser.html#parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)\">parse</a></code>` 接口 `<code><a href=\"BeanDefinitionParser.html\" title=\"interface in org.springframework.beans.factory.xml\">BeanDefinitionParser</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "the primary <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> resulting from the parsing of the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>",
+      "translation": "由提供的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> 解析生成的主要 <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>componentDefinition</code> - the <a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a> that is to be processed",
+      "translation": "`componentDefinition` - 待处理的 `<a href=\"../parsing/BeanComponentDefinition.html\" title=\"class in org.springframework.beans.factory.parsing\"><code>BeanComponentDefinition</code></a>`",
+      "count": 2
+    },
+    {
+      "source": "the primary <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>",
+      "translation": "主要 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../BeanDefinitionStoreException.html\" title=\"class in org.springframework.beans.factory\">BeanDefinitionStoreException</a></code> - if no unique name could be generated\nfor the given bean definition",
+      "translation": "<code><a href=\"../BeanDefinitionStoreException.html\" title=\"class in org.springframework.beans.factory\">BeanDefinitionStoreException</a></code> - 如果无法为给定的 Bean 定义生成唯一名称",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> in order to fire a component registration event\nafter parsing the bean definition; <code>false</code> to suppress the event",
+      "translation": "在解析 Bean 定义后触发组件注册事件时设置为`true`；设置为`false`则抑制该事件。",
+      "count": 2
+    },
+    {
+      "source": "<code>definition</code> - the bean definition to be registered",
+      "translation": "<code>definition</code> - 要注册的 Bean 定义",
+      "count": 2
+    },
+    {
+      "source": "<code>registry</code> - the registry that the bean is to be registered with",
+      "translation": "<code>registry</code> - 要注册该 Bean 的注册表",
+      "count": 2
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller, Rick Evans, Dave Syer",
+      "translation": "Rob Harrop, Juergen Hoeller, Rick Evans, Dave Syer",
+      "count": 2
+    },
+    {
+      "source": "whether the parser should always generate an id",
+      "translation": "解析器是否应始终生成 ID",
+      "count": 2
+    },
+    {
+      "source": "whether the parser should generate an id if no id was specified",
+      "translation": "解析器是否应在未指定 ID 时生成一个 ID。",
+      "count": 2
+    },
+    {
+      "source": "whether the parser should evaluate the \"name\" attribute as aliases",
+      "translation": "解析器是否应将\"name\"属性作为别名进行评估。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>true</code>.",
+      "translation": "默认实现返回<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the ID for the supplied <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>.",
+      "translation": "解析提供的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>的 ID。",
+      "count": 1
+    },
+    {
+      "source": "Should an ID be generated instead of read from the passed in <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a>?",
+      "translation": "应该生成 ID 而不是从传入的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> 中读取吗？",
+      "count": 1
+    },
+    {
+      "source": "Should an ID be generated instead if the passed in <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> does not\nspecify an \"id\" attribute explicitly?",
+      "translation": "如果传入的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> 未显式指定\"id\"属性，是否应生成一个 ID？",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the element's \"name\" attribute should get parsed as\nbean definition aliases, i.e.",
+      "translation": "确定是否应将元素的\"name\"属性解析为 Bean 定义别名，即",
+      "count": 1
+    },
+    {
+      "source": "<code>element</code> - the element that the bean definition has been built from",
+      "translation": "<code>element</code> - 构建该 Bean 定义所基于的元素",
+      "count": 1
+    },
+    {
+      "source": "the resolved id",
+      "translation": "已解析的 ID",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

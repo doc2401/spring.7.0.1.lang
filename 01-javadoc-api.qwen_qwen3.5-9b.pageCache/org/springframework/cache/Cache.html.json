@@ -1,0 +1,261 @@
+{
+  "created_at": "2026-04-14 11:46:49",
+  "updated_at": "2026-04-14 11:46:49",
+  "stats": {
+    "total_entries": 49,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 82,
+    "entries_with_hits": 49,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6734693877551021,
+    "usage_percentage": 0.0049
+  },
+  "items": [
+    {
+      "source": "<code>key</code> - the key whose associated value is to be returned",
+      "translation": "<code>key</code> - 要返回其关联值的键",
+      "count": 5
+    },
+    {
+      "source": "Can return <code>null</code> if the cache can immediately determine that\nit contains no mapping for this key (for example, through an in-memory key map).\nOtherwise, the cached value will be returned in the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>,\nwith <code>null</code> indicating a late-determined cache miss. A nested\n<a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a> potentially indicates a nullable cached value;\nthe cached value may also be represented as a plain element if null\nvalues are not supported. Calling code needs to be prepared to handle\nall those variants of the result returned by this method.",
+      "translation": "如果缓存可以立即确定该键没有映射（例如，通过内存中的键映射），则可能返回 `<code>null</code>`。否则，缓存的值将在 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> 中返回，其中 `<code>null</code>` 表示稍后确定的缓存未命中。嵌套的 <a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a> 可能表示可空的缓存值；如果缓存不支持空值，缓存值也可能以普通元素形式表示。调用代码需要准备好处理此方法返回的所有这些结果变体。",
+      "count": 2
+    },
+    {
+      "source": "If the cache is supposed to be compatible with <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>\nand reactive interactions, the put operation needs to be effectively\nnon-blocking, with any backend write-through happening asynchronously.\nThis goes along with a cache implemented and configured to support\n<a href=\"#retrieve(java.lang.Object)\"><code>retrieve(Object)</code></a> and <a href=\"#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>retrieve(Object, Supplier)</code></a>.",
+      "translation": "如果缓存需要与 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>` 和响应式交互兼容，则 `put` 操作必须是有效的非阻塞操作，任何后端写回都必须异步进行。这还需要缓存实现并配置为支持 `<a href=\"#retrieve(java.lang.Object)\"><code>retrieve(Object)</code></a>` 和 `<a href=\"#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>retrieve(Object, Supplier)</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "If the cache is supposed to be compatible with <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>\nand reactive interactions, the evict operation needs to be effectively\nnon-blocking, with any backend write-through happening asynchronously.\nThis goes along with a cache implemented and configured to support\n<a href=\"#retrieve(java.lang.Object)\"><code>retrieve(Object)</code></a> and <a href=\"#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>retrieve(Object, Supplier)</code></a>.",
+      "translation": "如果缓存需要与 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>` 和响应式交互兼容，则驱逐操作必须是有效的非阻塞操作，任何后端写回都必须异步进行。这与实现并配置为支持 `<a href=\"#retrieve(java.lang.Object)\"><code>retrieve(Object)</code></a>` 和 `<a href=\"#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>retrieve(Object, Supplier)</code></a>` 的缓存相一致。",
+      "count": 2
+    },
+    {
+      "source": "If the cache is supposed to be compatible with <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>\nand reactive interactions, the clear operation needs to be effectively\nnon-blocking, with any backend write-through happening asynchronously.\nThis goes along with a cache implemented and configured to support\n<a href=\"#retrieve(java.lang.Object)\"><code>retrieve(Object)</code></a> and <a href=\"#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>retrieve(Object, Supplier)</code></a>.",
+      "translation": "如果缓存需要与 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>` 和响应式交互兼容，则清除操作必须是有效的非阻塞操作，任何后端写透操作都需异步执行。这还需要缓存实现并配置为支持 `<a href=\"#retrieve(java.lang.Object)\"><code>retrieve(Object)</code></a>` 和 `<a href=\"#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>retrieve(Object, Supplier)</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Returns <code>null</code> if the cache contains no mapping for this key;\notherwise, the cached value (which may be <code>null</code> itself) will\nbe returned in a <a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a>.",
+      "translation": "如果缓存中不包含此键的映射，则返回<code>null</code>；否则，将返回缓存的值（该值本身可能为<code>null</code>），其类型为<a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note: This variant of <code>get</code> does not allow for differentiating\nbetween a cached <code>null</code> value and no cache entry found at all.\nUse the standard <a href=\"#get(java.lang.Object)\"><code>get(Object)</code></a> variant for that purpose instead.",
+      "translation": "注意：此 `<code>get</code>` 变体无法区分缓存的 `<code>null</code>` 值与完全未找到缓存条目。请使用标准 <a href=\"#get(java.lang.Object)\"><code>get(Object)</code></a> 变体来实现该目的。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"#get(java.lang.Object)\"><code>get(Object)</code></a> and\n<a href=\"#put(java.lang.Object,java.lang.Object)\"><code>put(Object, Object)</code></a> along the lines of the code snippet above.",
+      "translation": "默认实现委托给 <a href=\"#get(java.lang.Object)\"><code>get(Object)</code></a> 和 <a href=\"#put(java.lang.Object,java.lang.Object)\"><code>put(Object, Object)</code></a>，方式如上代码片段所示。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note:</b> Due to the generic use of caching, it is recommended\nthat implementations allow storage of <code>null</code> values\n(for example to cache methods that return <code>null</code>).",
+      "translation": "<b>注意：</b> 由于缓存的通用性，建议实现允许存储 `<code>null</code>` 值（例如用于缓存返回 `<code>null</code>` 的方法）。",
+      "count": 2
+    },
+    {
+      "source": "If the <code>valueLoader</code> throws an exception, it is wrapped in\na <a href=\"Cache.ValueRetrievalException.html\" title=\"class in org.springframework.cache\"><code>Cache.ValueRetrievalException</code></a>",
+      "translation": "如果 `<code>valueLoader</code>` 抛出异常，它将被包装在 `<a href=\"Cache.ValueRetrievalException.html\" title=\"class in org.springframework.cache\"><code>Cache.ValueRetrievalException</code></a>` 中。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"#evict(java.lang.Object)\"><code>evict(Object)</code></a>,\nreturning <code>false</code> for not-determined prior presence of the key.\nCache providers and in particular cache decorators are encouraged\nto perform immediate eviction if possible (for example, in case of generally\ndeferred cache operations within a transaction) and to reliably\ndetermine prior presence of the given key.",
+      "translation": "默认实现委托给 <a href=\"#evict(java.lang.Object)\"><code>evict(Object)</code></a>，对于未确定键的先前存在性返回 <code>false</code>。鼓励缓存提供程序（尤其是缓存装饰器）在可能的情况下执行即时驱逐（例如，在事务中通常延迟的缓存操作的情况下），并可靠地确定给定键的先前存在性。",
+      "count": 2
+    },
+    {
+      "source": "Serves primarily as an SPI for Spring's annotation-based caching\nmodel (<a href=\"annotation/Cacheable.html\" title=\"annotation interface in org.springframework.cache.annotation\"><code>Cacheable</code></a> and co)\nand secondarily as an API for direct usage in applications.",
+      "translation": "主要作为 Spring 基于注解的缓存模型（<a href=\"annotation/Cacheable.html\" title=\"annotation interface in org.springframework.cache.annotation\"><code>Cacheable</code></a> 等）的 SPI，其次作为应用程序直接使用的 API。",
+      "count": 2
+    },
+    {
+      "source": "Actual registration may be performed in an asynchronous or deferred\nfashion, with subsequent lookups possibly not seeing the entry yet.\nThis may for example be the case with transactional cache decorators.\nUse <a href=\"#putIfAbsent(java.lang.Object,java.lang.Object)\"><code>putIfAbsent(Object, Object)</code></a> for guaranteed immediate registration.",
+      "translation": "实际的注册可能是异步或延迟执行的，随后的查找可能尚未看到该条目。例如，事务性缓存装饰器可能会出现这种情况。请使用 <a href=\"#putIfAbsent(java.lang.Object,java.lang.Object)\"><code>putIfAbsent(Object, Object)</code></a> 以确保立即注册。",
+      "count": 2
+    },
+    {
+      "source": "Actual eviction may be performed in an asynchronous or deferred\nfashion, with subsequent lookups possibly still seeing the entry.\nThis may for example be the case with transactional cache decorators.\nUse <a href=\"#evictIfPresent(java.lang.Object)\"><code>evictIfPresent(Object)</code></a> for guaranteed immediate removal.",
+      "translation": "实际驱逐可能是异步或延迟执行的，随后的查找仍可能看到该条目。例如，事务性缓存装饰器可能就是这种情况。请使用<a href=\"#evictIfPresent(java.lang.Object)\"><code>evictIfPresent(Object)</code></a>以确保立即移除。",
+      "count": 2
+    },
+    {
+      "source": "Actual clearing may be performed in an asynchronous or deferred\nfashion, with subsequent lookups possibly still seeing the entries.\nThis may for example be the case with transactional cache decorators.\nUse <a href=\"#invalidate()\"><code>invalidate()</code></a> for guaranteed immediate removal of entries.",
+      "translation": "实际的清除可能是异步或延迟执行的，随后的查找仍可能看到这些条目。例如，事务性缓存装饰器就可能存在这种情况。请使用<a href=\"#invalidate()\"><code>invalidate()</code></a>来确保立即移除条目。",
+      "count": 2
+    },
+    {
+      "source": "If possible, implementations should ensure that the loading operation\nis synchronized so that the specified <code>valueLoader</code> is only called\nonce in case of concurrent access on the same key.",
+      "translation": "如果可能，实现应确保加载操作是同步的，以便在并发访问同一键的情况下，指定的 `<code>valueLoader</code>` 仅被调用一次。",
+      "count": 2
+    },
+    {
+      "source": "Wrapper exception to be thrown from <a href=\"#get(java.lang.Object,java.util.concurrent.Callable)\"><code>get(Object, Callable)</code></a>\nin case of the value loader callback failing with an exception.",
+      "translation": "用于在值加载器回调因异常而失败时，从<a href=\"#get(java.lang.Object,java.util.concurrent.Callable)\"><code>get(Object, Callable)</code></a>抛出的包装异常。",
+      "count": 2
+    },
+    {
+      "source": "Return the value to which this cache maps the specified key, obtaining\nthat value from <code>valueLoader</code> if necessary.",
+      "translation": "返回此缓存映射到指定键的值，必要时从 `<code>valueLoader</code>` 获取该值。",
+      "count": 2
+    },
+    {
+      "source": "Return the cache name.",
+      "translation": "返回缓存名称。",
+      "count": 2
+    },
+    {
+      "source": "Return the underlying native cache provider.",
+      "translation": "返回底层原生缓存提供者。",
+      "count": 2
+    },
+    {
+      "source": "Invalidate the cache through removing all mappings, expecting all\nentries to be immediately invisible for subsequent lookups.",
+      "translation": "通过移除所有映射来使缓存失效，期望所有条目在随后的查找中立即不可见。",
+      "count": 2
+    },
+    {
+      "source": "the value to which this cache maps the specified key, contained\nwithin a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> which may also be empty when a cache\nmiss has been late-determined. A straight <code>null</code> being returned\nmeans that the cache immediately determined that it contains no mapping\nfor this key. A <a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a> contained within the\n<code>CompletableFuture</code> indicates a cached value that is potentially\n<code>null</code>; this is sensible in a late-determined scenario where a regular\nCompletableFuture-contained <code>null</code> indicates a cache miss. However,\na cache may also return a plain value if it does not support the actual\ncaching of <code>null</code> values, avoiding the extra level of value wrapping.\nSpring's cache processing can deal with all such implementation strategies.",
+      "translation": "此缓存将指定键映射到的值，包含在一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>中，该值在缓存未命中被延迟确定时也可能为空。直接返回<code>null</code>意味着缓存立即确定不包含此键的映射。包含在<code>CompletableFuture</code>中的<a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a>表示一个可能为<code>null</code>的缓存值；这在延迟确定的场景中是合理的，因为普通的包含在<code>CompletableFuture</code>中的<code>null</code>表示缓存未命中。然而，如果缓存不支持实际缓存<code>null</code>值，它也可以返回一个普通值，从而避免额外的值包装层。Spring 的缓存处理可以应对所有这些实现策略。",
+      "count": 2
+    },
+    {
+      "source": "the value to which this cache maps the specified key,\ncontained within a <a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a> which may also hold\na cached <code>null</code> value. A straight <code>null</code> being\nreturned means that the cache contains no mapping for this key.",
+      "translation": "此缓存将指定键映射到的值，包含在 `<a href=\"Cache.ValueWrapper.html\" title=\"interface in org.springframework.cache\"><code>Cache.ValueWrapper</code></a>` 中，该包装器也可能持有缓存的 `<code>null</code>` 值。直接返回一个 `<code>null</code>` 意味着此键在缓存中没有映射。",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the required type of the returned value (may be\n<code>null</code> to bypass a type check; in case of a <code>null</code>\nvalue found in the cache, the specified type is irrelevant)",
+      "translation": "`type` - 返回值的必需类型（可为 `<code>null</code>` 以绕过类型检查；如果在缓存中找到 `<code>null</code>` 值，则指定的类型无关紧要）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"Cache.ValueRetrievalException.html\" title=\"class in org.springframework.cache\">Cache.ValueRetrievalException</a></code> - if the <code>valueLoader</code> throws an exception",
+      "translation": "`<a href=\"Cache.ValueRetrievalException.html\" title=\"class in org.springframework.cache\">Cache.ValueRetrievalException</a>` - 如果 `valueLoader` 抛出异常",
+      "count": 2
+    },
+    {
+      "source": "the value to which this cache maps the specified key\n(which may be <code>null</code> itself), or also <code>null</code> if\nthe cache contains no mapping for this key",
+      "translation": "此缓存将指定键（可能本身就是 `<code>null</code>`）映射到的值，或者如果该缓存不包含此键的映射，则为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if a cache entry has been found\nbut failed to match the specified type",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果已找到缓存条目但未能匹配指定的类型",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key with which the specified value is to be associated",
+      "translation": "<code>key</code> - 用于关联指定值的键",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the value to be associated with the specified key",
+      "translation": "<code>value</code> - 要与指定键关联的值",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key whose mapping is to be removed from the cache",
+      "translation": "<code>key</code> - 要从缓存中移除其映射的键",
+      "count": 2
+    },
+    {
+      "source": "Null values always indicate a user-level <code>null</code> value with this\nmethod. The provided <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> handle produces a value\nor raises an exception. If the <code>valueLoader</code> raises an exception,\nit will be propagated to the returned <code>CompletableFuture</code> handle.",
+      "translation": "空值始终表示此方法中的用户级 `<code>null</code>` 值。提供的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> 处理程序会生成一个值或抛出异常。如果 `<code>valueLoader</code>` 抛出异常，该异常将传播到返回的 `<code>CompletableFuture</code>` 处理程序中。",
+      "count": 1
+    },
+    {
+      "source": "If the cache previously contained a mapping for this key, the old\nvalue is replaced by the specified value.",
+      "translation": "如果缓存之前包含此键的映射，则旧值将被指定值替换。",
+      "count": 1
+    },
+    {
+      "source": "This is equivalent to:",
+      "translation": "这等同于：",
+      "count": 1
+    },
+    {
+      "source": "Return the value to which this cache maps the specified key,\nwrapped in a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>.",
+      "translation": "返回此缓存将指定键映射到的值，并将其包装在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>中。",
+      "count": 1
+    },
+    {
+      "source": "A (wrapper) object representing a cache value.",
+      "translation": "代表缓存值的包装对象。",
+      "count": 1
+    },
+    {
+      "source": "Clear the cache through removing all mappings.",
+      "translation": "通过删除所有映射来清除缓存。",
+      "count": 1
+    },
+    {
+      "source": "Evict the mapping for this key from this cache if it is present.",
+      "translation": "如果该键存在，则从当前缓存中移除其映射。",
+      "count": 1
+    },
+    {
+      "source": "Evict the mapping for this key from this cache if it is present,\nexpecting the key to be immediately invisible for subsequent lookups.",
+      "translation": "如果该键存在，则从当前缓存中移除此键的映射，并期望在随后的查找中该键立即不可见。",
+      "count": 1
+    },
+    {
+      "source": "Return the value to which this cache maps the specified key.",
+      "translation": "返回该缓存映射到指定键的值。",
+      "count": 1
+    },
+    {
+      "source": "Return the value to which this cache maps the specified key,\ngenerically specifying a type that return value will be cast to.",
+      "translation": "返回此缓存映射到指定键的值，泛型地指定返回值将被转换到的类型。",
+      "count": 1
+    },
+    {
+      "source": "Associate the specified value with the specified key in this cache.",
+      "translation": "在此缓存中将指定的值与指定的键关联。",
+      "count": 1
+    },
+    {
+      "source": "Atomically associate the specified value with the specified key in this cache\nif it is not set already.",
+      "translation": "如果该缓存中尚未设置，则原子地将指定值与指定键关联。",
+      "count": 1
+    },
+    {
+      "source": "the value to which this cache maps the specified key (which may be\n<code>null</code> itself), or also <code>null</code> if the cache did not contain any\nmapping for that key prior to this call. Returning <code>null</code> is therefore\nan indicator that the given <code>value</code> has been associated with the key.",
+      "translation": "此缓存将指定键（其本身可能为<code>null</code>）映射到的值，或者如果在此调用之前该缓存不包含针对该键的任何映射，则也返回<code>null</code>。因此，返回<code>null</code>表示给定的<code>value</code>已与键关联。",
+      "count": 1
+    },
+    {
+      "source": "the value to which this cache maps the specified key, contained\nwithin a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> which will never be <code>null</code>.\nThe provided future is expected to produce a value or raise an exception.",
+      "translation": "此缓存将指定键映射到的值，该值包含在一个 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a>` 中，该值永远不会为 `null`。提供的 Future 预期将产生一个值或抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if the cache was known to have a mapping for\nthis key before, <code>false</code> if it did not (or if prior presence\ncould not be determined)",
+      "translation": "如果缓存之前已知对此键有映射，则返回`true`；否则（或无法确定先前是否存在）返回`false`。",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if the cache was known to have mappings before,\n<code>false</code> if it did not (or if prior presence of entries could\nnot be determined)",
+      "translation": "<code>true</code> 如果缓存之前已知存在映射，\n<code>false</code> 如果不存在（或无法确定条目之前的存在性）",
+      "count": 1
+    },
+    {
+      "source": "Costin Leau, Juergen Hoeller, Stephane Nicoll",
+      "translation": "Costin Leau, Juergen Hoeller, Stephane Nicoll",
+      "count": 1
+    },
+    {
+      "source": "the value to which this cache maps the specified key",
+      "translation": "该缓存将指定键映射到的值",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

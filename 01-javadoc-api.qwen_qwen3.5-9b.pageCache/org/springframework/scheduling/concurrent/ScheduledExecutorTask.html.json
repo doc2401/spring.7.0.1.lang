@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 16:24:05",
+  "updated_at": "2026-04-14 16:24:05",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 56,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9310344827586208,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "<code>executorTask</code> - the Runnable to schedule",
+      "translation": "<code>executorTask</code> - 要调度的 Runnable",
+      "count": 4
+    },
+    {
+      "source": "<code>delay</code> - the delay before starting the task for the first time (ms)",
+      "translation": "<code>delay</code> - 首次启动任务前的延迟时间（毫秒）",
+      "count": 3
+    },
+    {
+      "source": "The <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> does not offer\nmore sophisticated scheduling options such as cron expressions.\nConsider using <a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a> for such needs.",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>` 不提供诸如 cron 表达式等更高级的调度选项。如需满足此类需求，请考虑使用 `<a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Note that the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> mechanism\nuses a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> instance that is shared between repeated executions,\nin contrast to Quartz which creates a new Job instance for each execution.",
+      "translation": "请注意，<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> 机制使用一个在重复执行之间共享的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> 实例，而 Quartz 则为每次执行创建一个新的 Job 实例。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note:</b> A period of 0 (for example as fixed delay) is <i>not</i> supported,\nsimply because <code>java.util.concurrent.ScheduledExecutorService</code> itself\ndoes not support it. Hence a value of 0 will be treated as one-time execution;\nhowever, that value should never be specified explicitly in the first place!",
+      "translation": "<b>注意：</b>不支持周期为 0（例如作为固定延迟），因为 <code>java.util.concurrent.ScheduledExecutorService</code> 本身就不支持它。因此，值为 0 将被视为一次性执行；然而，该值从一开始就不应显式指定！",
+      "count": 2
+    },
+    {
+      "source": "Default is -1, leading to one-time execution. In case of a positive value,\nthe task will be executed repeatedly, with the given interval in-between executions.",
+      "translation": "默认为 -1，导致任务仅执行一次。如果为正数，则任务将重复执行，每次执行之间的间隔为给定值。",
+      "count": 2
+    },
+    {
+      "source": "Note that the semantics of the period value vary between fixed-rate and\nfixed-delay execution.",
+      "translation": "注意，周期值的语义在固定速率和固定延迟执行之间有所不同。",
+      "count": 2
+    },
+    {
+      "source": "See ScheduledExecutorService javadoc for details on those execution modes.",
+      "translation": "有关这些执行模式的详细信息，请参阅 ScheduledExecutorService 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "Specify the time unit for the delay and period values.\nDefault is milliseconds (<code>TimeUnit.MILLISECONDS</code>).",
+      "translation": "指定延迟和周期值的时间单位。默认为毫秒（<code>TimeUnit.MILLISECONDS</code>）。",
+      "count": 2
+    },
+    {
+      "source": "Create a new ScheduledExecutorTask,\nto be populated via bean properties.",
+      "translation": "创建一个新的 ScheduledExecutorTask，并通过 Bean 属性进行填充。",
+      "count": 2
+    },
+    {
+      "source": "Create a new ScheduledExecutorTask, with default\none-time execution without delay.",
+      "translation": "创建一个新的 ScheduledExecutorTask，默认设置为无延迟的一次性执行。",
+      "count": 2
+    },
+    {
+      "source": "Create a new ScheduledExecutorTask, with default\none-time execution with the given delay.",
+      "translation": "创建一个新的 `ScheduledExecutorTask`，使用给定的延迟进行默认的一次性执行。",
+      "count": 2
+    },
+    {
+      "source": "Create a new ScheduledExecutorTask.",
+      "translation": "创建一个新的 ScheduledExecutorTask。",
+      "count": 2
+    },
+    {
+      "source": "Return the delay before starting the job for the first time.",
+      "translation": "返回首次启动作业之前的延迟时间。",
+      "count": 2
+    },
+    {
+      "source": "Return the period between repeated task executions.",
+      "translation": "返回重复任务执行之间的间隔时间。",
+      "count": 2
+    },
+    {
+      "source": "Return the Runnable to schedule as executor task.",
+      "translation": "返回 `Runnable` 以作为执行器任务进行调度。",
+      "count": 2
+    },
+    {
+      "source": "Return the time unit for the delay and period values.",
+      "translation": "返回延迟和周期值的时间单位。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to schedule as fixed-rate execution.",
+      "translation": "返回是否调度为固定速率执行。",
+      "count": 2
+    },
+    {
+      "source": "Is this task only ever going to execute once?",
+      "translation": "此任务是否仅执行一次？",
+      "count": 2
+    },
+    {
+      "source": "Set the Runnable to schedule as executor task.",
+      "translation": "将 Runnable 设置为调度器任务执行器。",
+      "count": 2
+    },
+    {
+      "source": "Set the delay before starting the task for the first time,\nin milliseconds. Default is 0, immediately starting the\ntask after successful scheduling.",
+      "translation": "设置首次启动任务前的延迟时间（以毫秒为单位）。默认值为 0，即在成功调度后立即启动任务。",
+      "count": 2
+    },
+    {
+      "source": "<code>period</code> - the period between repeated task executions (ms)",
+      "translation": "<code>period</code> - 重复任务执行之间的间隔（毫秒）",
+      "count": 2
+    },
+    {
+      "source": "<code>fixedRate</code> - whether to schedule as fixed-rate execution",
+      "translation": "<code>fixedRate</code> - 是否按固定速率执行调度",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if this task is only ever going to execute once",
+      "translation": "<code>true</code> 如果此任务仅执行一次",
+      "count": 2
+    },
+    {
+      "source": "Set the delay before starting the task for the first time,\nin milliseconds.",
+      "translation": "设置首次启动任务前的延迟时间，单位为毫秒。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to schedule as fixed-rate execution, rather than\nfixed-delay execution.",
+      "translation": "设置是否按固定速率执行，而不是按固定延迟执行。",
+      "count": 1
+    },
+    {
+      "source": "Set the period between repeated task executions, in milliseconds.",
+      "translation": "设置重复任务执行之间的间隔，单位为毫秒。",
+      "count": 1
+    },
+    {
+      "source": "Specify the time unit for the delay and period values.",
+      "translation": "指定延迟和周期值的时间单位。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

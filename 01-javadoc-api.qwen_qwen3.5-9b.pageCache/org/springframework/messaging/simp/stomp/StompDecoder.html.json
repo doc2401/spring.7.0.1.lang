@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-04-14 15:46:09",
+  "updated_at": "2026-04-14 15:46:09",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 2.125,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "Configure a <a href=\"../../support/MessageHeaderInitializer.html\" title=\"interface in org.springframework.messaging.support\"><code>MessageHeaderInitializer</code></a> to apply to the headers of\n<a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a> from decoded STOMP frames.",
+      "translation": "配置一个 <a href=\"../../support/MessageHeaderInitializer.html\" title=\"interface in org.springframework.messaging.support\"><code>MessageHeaderInitializer</code></a> 以应用于解码后的 STOMP 帧的 <a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a> 的标头。",
+      "count": 3
+    },
+    {
+      "source": "<code><a href=\"StompConversionException.html\" title=\"class in org.springframework.messaging.simp.stomp\">StompConversionException</a></code> - in case of decoding issues",
+      "translation": "<code><a href=\"StompConversionException.html\" title=\"class in org.springframework.messaging.simp.stomp\">StompConversionException</a></code> - 在解码出现问题时",
+      "count": 3
+    },
+    {
+      "source": "<code>byteBuffer</code> - the buffer to decode the STOMP frame from",
+      "translation": "<code>byteBuffer</code> - 用于解码 STOMP 帧的缓冲区",
+      "count": 3
+    },
+    {
+      "source": "the decoded messages, or an empty list if none",
+      "translation": "解码后的消息，如果没有则为空列表",
+      "count": 3
+    },
+    {
+      "source": "The <code>partialMessageHeaders</code> map is used to store successfully parsed\nheaders in case of partial content. The caller can then check if a\n\"content-length\" header was read, which helps to determine how much more\ncontent is needed before the next attempt to decode.",
+      "translation": "`partialMessageHeaders` 映射用于在部分内容的情况下存储已成功解析的标头。调用方可以检查是否已读取 \"content-length\" 标头，这有助于确定在下一次解码尝试之前还需要多少内容。",
+      "count": 2
+    },
+    {
+      "source": "An attempt is made to read all complete STOMP frames from the buffer, which\ncould be zero, one, or more. If there is any left-over content, i.e. an incomplete\nSTOMP frame, at the end the buffer is reset to point to the beginning of the\npartial content. The caller is then responsible for dealing with that\nincomplete content by buffering until there is more input available.",
+      "translation": "尝试从缓冲区读取所有完整的 STOMP 帧，数量可能为零、一或多。如果存在剩余内容（即不完整的 STOMP 帧），则在末尾将缓冲区重置以指向部分内容的开头。随后，调用方负责处理该不完整内容，通过缓冲直到有更多输入可用。",
+      "count": 2
+    },
+    {
+      "source": "If the given ByteBuffer contains only partial STOMP frame content and no\ncomplete STOMP frames, an empty list is returned, and the buffer is reset\nto where it was.",
+      "translation": "如果给定的 ByteBuffer 仅包含部分 STOMP 帧内容且没有完整的 STOMP 帧，则返回一个空列表，并将缓冲区重置到之前的位置。",
+      "count": 2
+    },
+    {
+      "source": "If the buffer contains one or more STOMP frames, those are returned, and\nthe buffer is reset to point to the beginning of the unused partial content.",
+      "translation": "如果缓冲区包含一个或多个 STOMP 帧，则返回这些帧，并将缓冲区重置为指向未使用的部分内容的开头。",
+      "count": 2
+    },
+    {
+      "source": "Decodes one or more STOMP frames from the given <code>buffer</code> and returns\na list of <a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a>.",
+      "translation": "从给定的<code>buffer</code>解码一个或多个 STOMP 帧，并返回<code>Messages</code><a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\">接口</a>的列表。",
+      "count": 2
+    },
+    {
+      "source": "Decodes one or more STOMP frames from the given <code>ByteBuffer</code> into a\nlist of <a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a>. If the input buffer contains partial STOMP frame\ncontent, or additional content with a partial STOMP frame, the buffer is\nreset, and an empty list is returned.",
+      "translation": "将给定的 <code>ByteBuffer</code> 中的一个或多个 STOMP 帧解码为 <a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a> 列表。如果输入缓冲区包含不完整的 STOMP 帧内容，或包含带有不完整 STOMP 帧的额外内容，则重置缓冲区并返回空列表。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured <code>MessageHeaderInitializer</code>, if any.",
+      "translation": "返回配置的 `<code>MessageHeaderInitializer</code>`（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Skip one ore more EOL characters at the start of the given ByteBuffer.\nSTOMP, section 2.1 says: \"The NULL octet can be optionally followed by\nmultiple EOLs.\"",
+      "translation": "跳过给定 ByteBuffer 开头的一个或多个换行符 (EOL)。\nSTOMP 第 2.1 节指出：“NULL 字节后可选地跟随多个 EOL。”",
+      "count": 2
+    },
+    {
+      "source": "<code>partialMessageHeaders</code> - an empty output map that will store the last\nsuccessfully parsed partial message headers in case of partial message content\nin cases where the partial buffer ended with a partial STOMP frame",
+      "translation": "`partialMessageHeaders` - 一个空的输出映射，用于在部分消息内容且部分缓冲区以部分 STOMP 帧结束时，存储最后成功解析的部分消息标头。",
+      "count": 2
+    },
+    {
+      "source": "Andy Wilkinson, Rossen Stoyanchev",
+      "translation": "Andy Wilkinson, Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "Decodes one or more STOMP frames from the given <code>ByteBuffer</code> into a\nlist of <a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a>.",
+      "translation": "将给定<code>ByteBuffer</code>中的一个或多个 STOMP 帧解码为<a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a>列表。",
+      "count": 1
+    },
+    {
+      "source": "Skip one ore more EOL characters at the start of the given ByteBuffer.",
+      "translation": "跳过给定 ByteBuffer 开头的一个或多个换行符。",
+      "count": 1
+    }
+  ]
+}

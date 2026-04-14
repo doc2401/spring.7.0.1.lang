@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-04-14 16:42:02",
+  "updated_at": "2026-04-14 16:42:02",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 36,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 2.25,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "<code><a href=\"../ContextLoadException.html\" title=\"class in org.springframework.test.context\">ContextLoadException</a></code> - if context loading failed",
+      "translation": "<code><a href=\"../ContextLoadException.html\" title=\"class in org.springframework.test.context\">ContextLoadException</a></code> - 如果上下文加载失败",
+      "count": 4
+    },
+    {
+      "source": "a new <code>GenericApplicationContext</code>",
+      "translation": "一个新的<code>GenericApplicationContext</code>",
+      "count": 4
+    },
+    {
+      "source": "Any exception thrown while attempting to load an <code>ApplicationContext</code>\nshould be wrapped in a <a href=\"../ContextLoadException.html\" title=\"class in org.springframework.test.context\"><code>ContextLoadException</code></a>. Concrete implementations\nshould therefore contain a try-catch block similar to the following.",
+      "translation": "尝试加载 `<code>ApplicationContext`</code> 时抛出的任何异常都应包装在 <a href=\"../ContextLoadException.html\" title=\"class in org.springframework.test.context\"><code>ContextLoadException</code></a> 中。因此，具体实现应包含如下所示的 try-catch 块。",
+      "count": 3
+    },
+    {
+      "source": "<code>mergedConfig</code> - the merged context configuration to use to load the\napplication context",
+      "translation": "<code>mergedConfig</code> - 用于加载应用上下文的合并上下文配置",
+      "count": 3
+    },
+    {
+      "source": "In contrast to <a href=\"../SmartContextLoader.html#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>SmartContextLoader.loadContext(MergedContextConfiguration)</code></a>, this\nmethod must <strong>not</strong>\n<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\">refresh</a> the <code>ApplicationContext</code> or\n<a href=\"../../../context/ConfigurableApplicationContext.html#registerShutdownHook()\">register a JVM shutdown hook</a> for it. Otherwise, this method should implement\nbehavior identical to <code>loadContext(MergedContextConfiguration)</code>.",
+      "translation": "与<a href=\"../SmartContextLoader.html#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>SmartContextLoader.loadContext(MergedContextConfiguration)</code></a>相反，此方法必须<strong>不</strong><a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\">刷新</a><code>ApplicationContext</code>或为其<a href=\"../../../context/ConfigurableApplicationContext.html#registerShutdownHook()\">注册 JVM 关闭钩子</a>。否则，此方法应实现与<code>loadContext(MergedContextConfiguration)</code>相同的行为。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method throws an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\"><code>UnsupportedOperationException</code></a>. Note, however, that the framework\ninvokes <a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\"><code>loadContextForAotProcessing(MergedContextConfiguration, RuntimeHints)</code></a>\nas of Spring Framework 6.2.4.",
+      "translation": "此方法的默认实现会抛出<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\"><code>UnsupportedOperationException</code></a>。但请注意，从 Spring Framework 6.2.4 开始，框架会调用<a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\"><code>loadContextForAotProcessing(MergedContextConfiguration, RuntimeHints)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>AotContextLoader</code> is an extension of the <a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>\nSPI that allows a context loader to optionally provide ahead-of-time (AOT)\nsupport.",
+      "translation": "<code>AotContextLoader</code> 是 <a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI 的扩展，允许上下文加载器可选地提供提前编译（AOT）支持。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.0, AOT infrastructure requires that an <code>AotContextLoader</code>\ncreate a <a href=\"../../../context/support/GenericApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>GenericApplicationContext</code></a> for both build-time processing and run-time execution.",
+      "translation": "自 Spring Framework 6.0 起，AOT 基础设施要求 `<code>AotContextLoader</code>` 为构建时处理和运行时执行都创建一个 <a href=\"../../../context/support/GenericApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>GenericApplicationContext</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "For backward compatibility, the default implementation of this method\ndelegates to <a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContextForAotProcessing(MergedContextConfiguration)</code></a>.\nNote, however, that the framework only invokes this method as of Spring\nFramework 6.2.4.",
+      "translation": "为了向后兼容，此方法的默认实现委托给 <a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContextForAotProcessing(MergedContextConfiguration)</code></a>。然而请注意，该框架仅在 Spring Framework 6.2.4 及更高版本中调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "This method must instantiate, initialize, and\n<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\">refresh</a> the <code>ApplicationContext</code>.",
+      "translation": "此方法必须实例化、初始化并<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\">刷新</a> `ApplicationContext`。",
+      "count": 2
+    },
+    {
+      "source": "Load a new <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> for AOT run-time execution based on\nthe supplied <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> and\n<a href=\"../../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextInitializer</code></a>.",
+      "translation": "基于提供的 <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> 和 <a href=\"../../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextInitializer</code></a>，为 AOT 运行时加载一个新的 <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Load a new <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> for AOT build-time processing based\non the supplied <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>, configure the context,\nand return the context.",
+      "translation": "基于提供的<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>加载一个新的用于 AOT 构建时处理的<a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>，配置上下文并返回该上下文。",
+      "count": 2
+    },
+    {
+      "source": "as of Spring Framework 6.2.4, in favor of\n<a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\"><code>loadContextForAotProcessing(MergedContextConfiguration, RuntimeHints)</code></a>;\nto be removed in Spring Framework 8.0",
+      "translation": "自 Spring Framework 6.2.4 起，推荐使用\n<a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\"><code>loadContextForAotProcessing(MergedContextConfiguration, RuntimeHints)</code></a>；\n将在 Spring Framework 8.0 中移除。",
+      "count": 2
+    },
+    {
+      "source": "<code>initializer</code> - the <code>ApplicationContextInitializer</code> that should\nbe applied to the context in order to recreate bean definitions",
+      "translation": "<code>initializer</code> - 应应用于上下文以重新创建 Bean 定义的 <code>ApplicationContextInitializer</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>runtimeHints</code> - the runtime hints",
+      "translation": "<code>runtimeHints</code> - 运行时提示",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    }
+  ]
+}

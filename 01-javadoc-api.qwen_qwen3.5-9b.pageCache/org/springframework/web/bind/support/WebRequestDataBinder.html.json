@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 18:22:00",
+  "updated_at": "2026-04-14 18:22:00",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 30,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.25,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "Can also used for manual data binding in custom web controllers or interceptors\nthat build on Spring's <a href=\"../../context/request/WebRequest.html\" title=\"interface in org.springframework.web.context.request\"><code>WebRequest</code></a>\nabstraction: for example, in a <a href=\"../../context/request/WebRequestInterceptor.html\" title=\"interface in org.springframework.web.context.request\"><code>WebRequestInterceptor</code></a>\nimplementation. Simply instantiate a WebRequestDataBinder for each binding\nprocess, and invoke <code>bind</code> with the current WebRequest as argument:",
+      "translation": "也可用于在基于 Spring 的<a href=\"../../context/request/WebRequest.html\" title=\"interface in org.springframework.web.context.request\"><code>WebRequest</code></a>抽象构建的自定义 Web 控制器或拦截器中进行手动数据绑定：例如，在<a href=\"../../context/request/WebRequestInterceptor.html\" title=\"interface in org.springframework.web.context.request\"><code>WebRequestInterceptor</code></a>实现中。只需为每个绑定过程实例化一个 WebRequestDataBinder，并调用<code>bind</code>方法，将当前的 WebRequest 作为参数传入：",
+      "count": 2
+    },
+    {
+      "source": "After the call, use <a href=\"../../../validation/DataBinder.html#getBindingResult()\"><code>DataBinder.getBindingResult()</code></a> to check for bind errors.\nIf there are none, the target is set, and <a href=\"#bind(org.springframework.web.context.request.WebRequest)\"><code>bind(WebRequest)</code></a>\ncan be called for further initialization via setters.",
+      "translation": "调用后，使用<a href=\"../../../validation/DataBinder.html#getBindingResult()\"><code>DataBinder.getBindingResult()</code></a>检查绑定错误。如果没有错误，则目标对象已设置，可以调用<a href=\"#bind(org.springframework.web.context.request.WebRequest)\"><code>bind(WebRequest)</code></a>通过 setter 进行进一步初始化。",
+      "count": 2
+    },
+    {
+      "source": "Create a new WebRequestDataBinder instance, with default object name.",
+      "translation": "创建一个新的 WebRequestDataBinder 实例，使用默认对象名称。",
+      "count": 2
+    },
+    {
+      "source": "Create a new WebRequestDataBinder instance.",
+      "translation": "创建一个新的 WebRequestDataBinder 实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - the target object to bind onto (or <code>null</code>\nif the binder is just used to convert a plain parameter value)",
+      "translation": "<code>target</code> - 要绑定的目标对象（或者如果绑定器仅用于转换普通参数值，则为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../validation/BindException.html\" title=\"class in org.springframework.validation\">BindException</a></code> - if binding errors have been encountered",
+      "translation": "<code><a href=\"../../../validation/BindException.html\" title=\"class in org.springframework.validation\">BindException</a></code> - 如果遇到了绑定错误",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: Data binding can lead to security issues by exposing\nparts of the object graph that are not meant to be accessed or modified by\nexternal clients. Therefore the design and use of data binding should be considered\ncarefully with regard to security. For more details, please refer to the dedicated\nsections on data binding for\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder-model-design\">Spring Web MVC</a> and\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-ann-initbinder-model-design\">Spring WebFlux</a>\nin the reference manual.",
+      "translation": "<strong>警告：</strong> 数据绑定可能导致安全问题，因为它会暴露外部客户端不应访问或修改的对象图部分。因此，在设计和使用数据绑定时应仔细考虑安全性问题。有关详细信息，请参阅参考手册中关于 Spring Web MVC 和 Spring WebFlux 的数据绑定专用章节：\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder-model-design\">Spring Web MVC</a> 和\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-ann-initbinder-model-design\">Spring WebFlux</a>。",
+      "count": 1
+    },
+    {
+      "source": "See the DataBinder/WebDataBinder superclasses for customization options,\nwhich include specifying allowed/required fields, and registering custom\nproperty editors.",
+      "translation": "参见 DataBinder/WebDataBinder 超类以获取自定义选项，其中包括指定允许/必需的字段以及注册自定义属性编辑器。",
+      "count": 1
+    },
+    {
+      "source": "By default, simple value types, maps, collections, and arrays are\nexcluded from nested constructor binding initialization.",
+      "translation": "默认情况下，简单值类型、映射、集合和数组被排除在嵌套构造函数绑定初始化之外。",
+      "count": 1
+    },
+    {
+      "source": "This call can create field errors, representing basic binding\nerrors like a required field (code \"required\"), or type mismatch\nbetween value and bean property (code \"typeMismatch\").",
+      "translation": "此调用可创建字段错误，表示基本绑定错误，例如必填字段（代码\"required\"），或值与 Bean 属性之间的类型不匹配（代码\"typeMismatch\"）。",
+      "count": 1
+    },
+    {
+      "source": "Multipart files are bound via their parameter name, just like normal\nHTTP parameters: i.e. \"uploadedFile\" to an \"uploadedFile\" bean property,\ninvoking a \"setUploadedFile\" setter method.",
+      "translation": "多部分文件通过其参数名进行绑定，就像普通的 HTTP 参数一样：即“uploadedFile”绑定到“uploadedFile”bean 属性上，调用一个“setUploadedFile”setter 方法。",
+      "count": 1
+    },
+    {
+      "source": "The type of the target property for a multipart file can be MultipartFile,\nbyte[], or String. Servlet Part binding is also supported when the\nrequest has not been parsed to MultipartRequest via MultipartResolver.",
+      "translation": "多部分文件的目标属性类型可以是 `MultipartFile`、`byte[]` 或 `String`。当请求尚未通过 `MultipartResolver` 解析为 `MultipartRequest` 时，也支持 Servlet Part 绑定。",
+      "count": 1
+    },
+    {
+      "source": "Use this method only if it's an error if the input isn't valid.\nThis might be appropriate if all input is from dropdowns, for example.",
+      "translation": "仅在输入无效时作为错误处理使用此方法。例如，如果所有输入均来自下拉列表，这可能很合适。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../../validation/DataBinder.html#shouldConstructArgument(org.springframework.core.MethodParameter)\">DataBinder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../../validation/DataBinder.html#shouldConstructArgument(org.springframework.core.MethodParameter)\">DataBinder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Bind the parameters of the given request to this binder's target,\nalso binding multipart files in case of a multipart request.",
+      "translation": "将给定请求的参数绑定到此绑定器的目标，如果是多部分请求，也同时绑定多部分文件。",
+      "count": 1
+    },
+    {
+      "source": "Treats errors as fatal.",
+      "translation": "将错误视为致命错误。",
+      "count": 1
+    },
+    {
+      "source": "Use a default or single data constructor to create the target by\nbinding request parameters, multipart files, or parts to constructor args.",
+      "translation": "使用默认或单个数据构造函数，通过将请求参数、多部分文件或部分绑定到构造函数参数来创建目标。",
+      "count": 1
+    },
+    {
+      "source": "Whether to instantiate the constructor argument of the given type,\nmatching its own constructor arguments to bind values.",
+      "translation": "是否实例化给定类型的构造函数参数，通过匹配其自身的构造函数参数来绑定值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../validation/DataBinder.html#shouldConstructArgument(org.springframework.core.MethodParameter)\">shouldConstructArgument</a></code> in class <code><a href=\"../../../validation/DataBinder.html\" title=\"class in org.springframework.validation\">DataBinder</a></code>",
+      "translation": "`<code><a href=\"../../../validation/DataBinder.html#shouldConstructArgument(org.springframework.core.MethodParameter)\">shouldConstructArgument</a></code>` 类中的 `<code><a href=\"../../../validation/DataBinder.html\" title=\"class in org.springframework.validation\">DataBinder</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>objectName</code> - the name of the target object",
+      "translation": "<code>objectName</code> - 目标对象的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the request to bind",
+      "translation": "<code>request</code> - 绑定请求",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the request with parameters to bind (can be multipart)",
+      "translation": "<code>request</code> - 包含要绑定的参数的请求（可以是 multipart）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Brian Clozel",
+      "translation": "Juergen Hoeller, Brian Clozel",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

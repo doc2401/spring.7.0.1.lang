@@ -1,0 +1,246 @@
+{
+  "created_at": "2026-04-14 14:56:07",
+  "updated_at": "2026-04-14 14:56:07",
+  "stats": {
+    "total_entries": 46,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 79,
+    "entries_with_hits": 46,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7173913043478262,
+    "usage_percentage": 0.0046
+  },
+  "items": [
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by JDBC methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 如果由 JDBC 方法抛出",
+      "count": 5
+    },
+    {
+      "source": "<code>rs</code> - the ResultSet to retrieve the content from",
+      "translation": "<code>rs</code> - 用于检索内容的 ResultSet",
+      "count": 5
+    },
+    {
+      "source": "<code>columnIndex</code> - the column index to use",
+      "translation": "<code>columnIndex</code> - 要使用的列索引",
+      "count": 5
+    },
+    {
+      "source": "This setting affects stream arguments as well as byte array / String\narguments, requiring JDBC 4.0 support. For supporting LOB content against\nJDBC 3.0, check out the <a href=\"#setWrapAsLob(boolean)\"><code>\"wrapAsLob\"</code></a> setting.",
+      "translation": "此设置也会影响流参数以及字节数组/String参数，需要 JDBC 4.0 支持。若要针对 JDBC 3.0 支持 LOB 内容，请查看<a href=\"#setWrapAsLob(boolean)\"><code>\"wrapAsLob\"</code></a>设置。",
+      "count": 3
+    },
+    {
+      "source": "Some JDBC drivers require values with a BLOB/CLOB target column to be\nexplicitly set through the JDBC <code>setBlob</code> / <code>setClob</code> API:\nfor example, PostgreSQL's driver. Switch the <a href=\"#setWrapAsLob(boolean)\"><code>\"wrapAsLob\"</code></a>\nproperty to \"true\" when operating against such a driver.",
+      "translation": "某些 JDBC 驱动程序要求通过 JDBC `<code>setBlob</code>` / `<code>setClob</code>` API 显式设置具有 BLOB/CLOB 目标列的值：例如，PostgreSQL 的驱动程序。在与此类驱动程序交互时，请将 `<a href=\"#setWrapAsLob(boolean)\"><code>\"wrapAsLob\"</code></a>` 属性切换为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "On JDBC 4.0, this LobHandler also supports streaming the BLOB/CLOB content\nvia the <code>setBlob</code> / <code>setClob</code> variants that take a stream\nargument directly. Consider switching the <a href=\"#setStreamAsLob(boolean)\"><code>\"streamAsLob\"</code></a>\nproperty to \"true\" when operating against a fully compliant JDBC 4.0 driver.",
+      "translation": "在 JDBC 4.0 中，此 LobHandler 还支持通过接受流参数的 <code>setBlob</code> / <code>setClob</code> 变体来流式传输 BLOB/CLOB 内容。当针对完全符合规范的 JDBC 4.0 驱动程序进行操作时，请考虑将 <a href=\"#setStreamAsLob(boolean)\"><code>\"streamAsLob\"</code></a> 属性切换为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "By default, incoming streams are going to be passed to the appropriate\n<code>setBinary/Ascii/CharacterStream</code> method on the JDBC driver's\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html\" title=\"class or interface in java.sql\"><code>PreparedStatement</code></a>. If the specified content length is negative,\nthis handler will use the JDBC 4.0 variants of the set-stream methods\nwithout a length parameter; otherwise, it will pass the specified length\non to the driver.",
+      "translation": "默认情况下，传入的流将传递给 JDBC 驱动程序上适当的<code>setBinary/Ascii/CharacterStream</code>方法<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html\" title=\"class or interface in java.sql\"><code>PreparedStatement</code></a>。如果指定的内容长度为负数，此处理器将使用不带长度参数的 JDBC 4.0 版本的流设置方法；否则，它将把指定的长度传递给驱动程序。",
+      "count": 2
+    },
+    {
+      "source": "This LobHandler should work for any JDBC driver that is JDBC compliant\nin terms of the spec's suggestions regarding simple BLOB and CLOB handling.\nThis does not apply to Oracle 9i's drivers at all; as of Oracle 10g,\nit does work but may still come with LOB size limitations. Consider using\nrecent Oracle drivers even when working against an older database server.\nSee the <a href=\"LobHandler.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobHandler</code></a> javadoc for the full set of recommendations.",
+      "translation": "此 LobHandler 应适用于任何符合 JDBC 规范的简单 BLOB 和 CLOB 处理建议的 JDBC 驱动程序。这完全不适用于 Oracle 9i 的驱动程序；从 Oracle 10g 开始，它可以使用，但仍可能存在 LOB 大小限制。即使针对较旧的数据库服务器工作，也请考虑使用最新的 Oracle 驱动程序。有关完整的建议，请参阅 <a href=\"LobHandler.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobHandler</code></a> 的 javadoc。",
+      "count": 2
+    },
+    {
+      "source": "Finally, this LobHandler also supports the creation of temporary BLOB/CLOB\nobjects. Consider switching the <a href=\"#setCreateTemporaryLob(boolean)\"><code>\"createTemporaryLob\"</code></a>\nproperty to \"true\" when \"streamAsLob\" happens to run into LOB size limitations.",
+      "translation": "最后，此 LobHandler 还支持创建临时 BLOB/CLOB 对象。当“streamAsLob”遇到 LOB 大小限制时，请考虑将<a href=\"#setCreateTemporaryLob(boolean)\"><code>\"createTemporaryLob\"</code></a>属性切换为\"true\"。",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"LobHandler.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobHandler</code></a> interface javadoc for a summary of recommendations.",
+      "translation": "请参阅<a href=\"LobHandler.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobHandler</code></a>接口 Javadoc 中的推荐摘要。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", using the common JDBC 2.0 <code>setBinaryStream</code>\n/ <code>setCharacterStream</code> method for setting the content. Switch this\nto \"true\" for explicit Blob / Clob wrapping against JDBC drivers that\nare known to require such wrapping (for example, PostgreSQL's for access to OID\ncolumns, whereas BYTEA columns need to be accessed the standard way).",
+      "translation": "默认为 \"false\"，使用常见的 JDBC 2.0 <code>setBinaryStream</code> / <code>setCharacterStream</code> 方法来设置内容。将此选项切换为 \"true\"，以便针对已知需要显式 Blob/Clob 包装的 JDBC 驱动程序（例如 PostgreSQL 用于访问 OID 列的情况；而 BYTEA 列则需以标准方式访问）进行显式的 Blob/Clob 包装。",
+      "count": 2
+    },
+    {
+      "source": "This setting affects byte array / String arguments as well as stream\narguments, unless <a href=\"#setStreamAsLob(boolean)\"><code>\"streamAsLob\"</code></a> overrides this\nhandling to use JDBC 4.0's new explicit streaming support (if available).",
+      "translation": "此设置也会影响字节数组/String 参数以及流参数，除非<a href=\"#setStreamAsLob(boolean)\"><code>\"streamAsLob\"</code></a>覆盖此处理逻辑以使用 JDBC 4.0 的新显式流支持（如果可用）。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", using the common JDBC 2.0 <code>setBinaryStream</code>\n/ <code>setCharacterStream</code> method for setting the content.\nSwitch this to \"true\" for explicit JDBC 4.0 streaming, provided that your\nJDBC driver actually supports those JDBC 4.0 operations (for example, Derby's).",
+      "translation": "默认为 \"false\"，使用常见的 JDBC 2.0 <code>setBinaryStream</code> / <code>setCharacterStream</code> 方法来设置内容。如果要将此选项切换为 \"true\" 以启用显式的 JDBC 4.0 流式传输，请确保您的 JDBC 驱动程序确实支持这些 JDBC 4.0 操作（例如 Derby 的驱动程序）。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", using the common JDBC 2.0 <code>setBinaryStream</code>\n/ <code>setCharacterStream</code> method for setting the content. Switch this\nto \"true\" for explicit Blob / Clob creation using JDBC 4.0.",
+      "translation": "默认值为 \"false\"，使用常见的 JDBC 2.0 `<code>setBinaryStream</code>` / `<code>setCharacterStream</code>` 方法设置内容。若要使用 JDBC 4.0 显式创建 Blob/Clob，请将其切换为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LobHandler.html#getBlobAsBytes(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LobHandler.html#getBlobAsBytes(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LobHandler.html#getBlobAsBinaryStream(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LobHandler.html#getBlobAsBinaryStream(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LobHandler.html#getClobAsString(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LobHandler.html#getClobAsString(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LobHandler.html#getClobAsAsciiStream(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LobHandler.html#getClobAsAsciiStream(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LobHandler.html#getClobAsCharacterStream(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LobHandler.html#getClobAsCharacterStream(java.sql.ResultSet,int)\">LobHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LobHandler.html#getLobCreator()\">LobHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LobHandler.html#getLobCreator()\">LobHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a> instance, i.e.",
+      "translation": "创建一个新的<a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a>实例，即",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a> instance, i.e. a session for creating BLOBs\nand CLOBs. Needs to be closed after the created LOBs are not needed anymore -\ntypically after statement execution or transaction completion.",
+      "translation": "创建一个新的 <a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a> 实例，即用于创建 BLOB 和 CLOB 的会话。在不再需要创建的 LOB 后必须关闭它——通常在语句执行或事务完成后。",
+      "count": 2
+    },
+    {
+      "source": "the new LobCreator instance",
+      "translation": "新的 LobCreator 实例",
+      "count": 2
+    },
+    {
+      "source": "as of 6.2, in favor of <a href=\"../../core/support/SqlBinaryValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlBinaryValue</code></a>\nand <a href=\"../../core/support/SqlCharacterValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlCharacterValue</code></a>",
+      "translation": "自 6.2 版本起，推荐使用<a href=\"../../core/support/SqlBinaryValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlBinaryValue</code></a>和<a href=\"../../core/support/SqlCharacterValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlCharacterValue</code></a>",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to copy a byte array / String into a temporary JDBC\nBlob / Clob object created through the JDBC 4.0 <code>createBlob</code> /\n<code>createClob</code> methods.",
+      "translation": "指定是否将字节数组/String复制到通过 JDBC 4.0 `<code>createBlob</code>` / `<code>createClob</code>` 方法创建的临时 JDBC Blob/Clob 对象中。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to submit a binary stream / character stream to the JDBC\ndriver as explicit LOB content, using the JDBC 4.0 <code>setBlob</code> /\n<code>setClob</code> method with a stream argument.",
+      "translation": "指定是否使用 JDBC 4.0 `<code>setBlob</code>` /`<code>setClob</code>` 方法（带流参数）将二进制流/字符流作为显式 LOB 内容提交给 JDBC 驱动程序。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to submit a byte array / String to the JDBC driver\nwrapped in a JDBC Blob / Clob object, using the JDBC <code>setBlob</code> /\n<code>setClob</code> method with a Blob / Clob argument.",
+      "translation": "指定是否使用 JDBC `<code>setBlob</code>` /`<code>setClob</code>` 方法，将用 JDBC Blob / Clob 对象包装的字节数组/String提交给 JDBC 驱动程序。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as bytes from the given ResultSet.\nMight simply invoke <code>ResultSet.getBytes</code> or work with\n<code>ResultSet.getBlob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中作为字节检索该列。\n可能只需调用 `<code>ResultSet.getBytes</code>`，或者根据数据库和驱动程序使用 `<code>ResultSet.getBlob</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as binary stream from the given ResultSet.\nMight simply invoke <code>ResultSet.getBinaryStream</code> or work with\n<code>ResultSet.getBlob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中检索该列作为二进制流。根据数据库和驱动程序，可能只需调用 `<code>ResultSet.getBinaryStream</code>` 或处理 `<code>ResultSet.getBlob</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as String from the given ResultSet.\nMight simply invoke <code>ResultSet.getString</code> or work with\n<code>ResultSet.getClob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中检索该列作为 String。根据数据库和驱动程序，可能只需调用 `<code>ResultSet.getString</code>`，或使用 `<code>ResultSet.getClob</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as ASCII stream from the given ResultSet.\nMight simply invoke <code>ResultSet.getAsciiStream</code> or work with\n<code>ResultSet.getClob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中检索指定的列作为 ASCII 流。\n具体是调用 `<code>ResultSet.getAsciiStream</code>` 还是使用 `<code>ResultSet.getClob</code>`，取决于数据库和驱动程序。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as character stream from the given ResultSet.\nMight simply invoke <code>ResultSet.getCharacterStream</code> or work with\n<code>ResultSet.getClob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中获取给定列作为字符流。\n根据数据库和驱动程序，可能只需调用 `<code>ResultSet.getCharacterStream</code>` 或使用 `<code>ResultSet.getClob</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Default LobCreator implementation as an inner class.",
+      "translation": "默认 LobCreator 实现作为内部类。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as binary stream from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中检索指定列作为二进制流。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as bytes from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中获取该列的字节。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as ASCII stream from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中检索指定的列作为 ASCII 流。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as character stream from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中获取给定列作为字符流。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the given column as String from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中检索该列作为 String。",
+      "count": 1
+    },
+    {
+      "source": "the content as byte array, or <code>null</code> in case of SQL NULL",
+      "translation": "将内容作为字节数组，或在 SQL NULL 的情况下为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the content as binary stream, or <code>null</code> in case of SQL NULL",
+      "translation": "以二进制流形式返回内容，或者在 SQL NULL 的情况下返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "the content as String, or <code>null</code> in case of SQL NULL",
+      "translation": "将内容作为 String，或者在 SQL NULL 的情况下为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the content as ASCII stream, or <code>null</code> in case of SQL NULL",
+      "translation": "以 ASCII 流形式，或在 SQL NULL 的情况下为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the content as character stream",
+      "translation": "作为字符流的内容。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

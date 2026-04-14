@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-04-14 18:44:26",
+  "updated_at": "2026-04-14 18:44:26",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 41,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4642857142857142,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "A filter may be invoked as part of a\n<code>REQUEST</code> or\n<code>ASYNC</code> dispatches that occur in\nseparate threads. A filter can be configured in <code>web.xml</code> whether it\nshould be involved in async dispatches. However, in some cases servlet\ncontainers assume different default configuration. Therefore, subclasses can\noverride the method <a href=\"#shouldNotFilterAsyncDispatch()\"><code>shouldNotFilterAsyncDispatch()</code></a> to declare\nstatically if they should indeed be invoked, <em>once</em>, during both types\nof dispatches in order to provide thread initialization, logging, security,\nand so on. This mechanism complements and does not replace the need to\nconfigure a filter in <code>web.xml</code> with dispatcher types.",
+      "translation": "过滤器可以作为在独立线程中发生的<code>REQUEST</code>或<code>ASYNC</code>分派的一部分被调用。可以在<code>web.xml</code>中配置过滤器，以决定是否应将其纳入异步分派。然而，在某些情况下，Servlet 容器会采用不同的默认配置。因此，子类可以重写<a href=\"#shouldNotFilterAsyncDispatch()\"><code>shouldNotFilterAsyncDispatch()</code></a>方法，静态声明是否确实应在两种类型的分派中各被调用一次（即仅调用一次），以便提供线程初始化、日志记录、安全等功能。此机制是对在<code>web.xml</code>中使用分派器类型配置过滤器的补充，而非替代。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses may use <a href=\"#isAsyncDispatch(jakarta.servlet.http.HttpServletRequest)\"><code>isAsyncDispatch(HttpServletRequest)</code></a> to\ndetermine when a filter is invoked as part of an async dispatch, and use\n<a href=\"#isAsyncStarted(jakarta.servlet.http.HttpServletRequest)\"><code>isAsyncStarted(HttpServletRequest)</code></a> to determine when the request\nhas been placed in async mode and therefore the current dispatch won't be\nthe last one for the given request.",
+      "translation": "子类可以使用 <a href=\"#isAsyncDispatch(jakarta.servlet.http.HttpServletRequest)\"><code>isAsyncDispatch(HttpServletRequest)</code></a> 来确定过滤器何时作为异步分发的一部分被调用，并使用 <a href=\"#isAsyncStarted(jakarta.servlet.http.HttpServletRequest)\"><code>isAsyncStarted(HttpServletRequest)</code></a> 来确定请求何时已置于异步模式，因此当前分发不会是给定请求的最后一次分发。",
+      "count": 2
+    },
+    {
+      "source": "Yet another dispatch type that also occurs in its own thread is\n<code>ERROR</code>. Subclasses can override\n<a href=\"#shouldNotFilterErrorDispatch()\"><code>shouldNotFilterErrorDispatch()</code></a> if they wish to declare statically\nif they should be invoked <em>once</em> during error dispatches.",
+      "translation": "另一种也会在其自身线程中发生的分发类型是<code>ERROR</code>。如果子类希望静态声明在错误分发期间是否应被调用一次，可以重写<a href=\"#shouldNotFilterErrorDispatch()\"><code>shouldNotFilterErrorDispatch()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#getAlreadyFilteredAttributeName()\"><code>getAlreadyFilteredAttributeName()</code></a> method determines how to\nidentify that a request is already filtered. The default implementation is\nbased on the configured name of the concrete filter instance.",
+      "translation": "`<a href=\"#getAlreadyFilteredAttributeName()\"><code>getAlreadyFilteredAttributeName()</code></a>` 方法用于确定如何识别请求是否已过滤。默认实现基于具体过滤器实例的配置名称。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation takes the configured name of the concrete filter\ninstance and appends \".FILTERED\". If the filter is not fully initialized,\nit falls back to its class name.",
+      "translation": "默认实现会采用具体过滤器实例的配置名称并追加\".FILTERED\"。如果过滤器尚未完全初始化，则回退到其类名。",
+      "count": 2
+    },
+    {
+      "source": "The dispatcher type <code>jakarta.servlet.DispatcherType.ASYNC</code> means a\nfilter can be invoked in more than one thread over the course of a single\nrequest. This method returns <code>true</code> if the filter is currently\nexecuting within an asynchronous dispatch.",
+      "translation": "`jakarta.servlet.DispatcherType.ASYNC` 类型的分发器意味着在单个请求期间，过滤器可以在多个线程中被调用。如果过滤器当前正在异步分发中执行，则此方法返回 `<code>true</code>`。",
+      "count": 2
+    },
+    {
+      "source": "This <code>doFilter</code> implementation stores a request attribute for\n\"already filtered\", proceeding without filtering again if the\nattribute is already there.",
+      "translation": "此 `<code>doFilter</code>` 实现会存储一个请求属性“已过滤”，如果该属性已存在，则不再进行再次过滤。",
+      "count": 2
+    },
+    {
+      "source": "The dispatcher type <code>jakarta.servlet.DispatcherType.ASYNC</code> means a\nfilter can be invoked in more than one thread over the course of a single\nrequest.",
+      "translation": "<code>jakarta.servlet.DispatcherType.ASYNC</code> 类型的分发器意味着在单个请求期间，过滤器可以在多个线程中被调用。",
+      "count": 2
+    },
+    {
+      "source": "Suffix that gets appended to the filter name for the\n\"already filtered\" request attribute.",
+      "translation": "附加到“已过滤”请求属性的过滤器名称的后缀。",
+      "count": 2
+    },
+    {
+      "source": "Whether request processing is in asynchronous mode meaning that the\nresponse will not be committed after the current thread is exited.",
+      "translation": "无论请求处理是否处于异步模式，即当前线程退出后响应不会被提交。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#getAlreadyFilteredAttributeName()\"><code>getAlreadyFilteredAttributeName()</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.web.filter.OncePerRequestFilter.ALREADY_FILTERED_SUFFIX\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#getAlreadyFilteredAttributeName()\"><code>getAlreadyFilteredAttributeName()</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.web.filter.OncePerRequestFilter.ALREADY_FILTERED_SUFFIX\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.servlet.ServletException</code> - in case of errors",
+      "translation": "<code>jakarta.servlet.ServletException</code> - 在发生错误时",
+      "count": 2
+    },
+    {
+      "source": "Note that although a filter can be mapped to handle specific dispatcher\ntypes via <code>web.xml</code> or in Java through the <code>ServletContext</code>,\nservlet containers may enforce different defaults with respect to\ndispatcher types. This flag enforces the design intent of the filter.",
+      "translation": "注意，尽管可以通过 `<code>web.xml` 将过滤器映射到处理特定分发器类型，或通过 Java 中的 <code>ServletContext</code> 进行配置，但 servlet 容器可能会针对分发器类型强制执行不同的默认设置。此标志强制实施过滤器的设计意图。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation always returns <code>false</code>.",
+      "translation": "默认实现始终返回<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "Sub-classes may use this method to filter such nested ERROR dispatches\nand re-apply wrapping on the request or response. <code>ThreadLocal</code>\ncontext, if any, should still be active as we are still nested within\nthe filter chain.",
+      "translation": "子类可以使用此方法过滤此类嵌套的 ERROR 分发，并在请求或响应上重新应用包装。`ThreadLocal`上下文（如果有）仍然应该处于活动状态，因为我们仍处于过滤器链的嵌套中。",
+      "count": 1
+    },
+    {
+      "source": "The default return value is \"true\", which means the filter will not be\ninvoked during subsequent async dispatches. If \"false\", the filter will\nbe invoked during async dispatches with the same guarantees of being\ninvoked only once during a request within a single thread.",
+      "translation": "默认返回值为\"true\"，这意味着在随后的异步分发中不会调用该过滤器。如果为\"false\"，则会在异步分发中调用该过滤器，并保证在单个线程的请求中仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "Provides HttpServletRequest and HttpServletResponse arguments instead of the\ndefault ServletRequest and ServletResponse ones.",
+      "translation": "提供 HttpServletRequest 和 HttpServletResponse 参数，而不是默认的 ServletRequest 和 ServletResponse。",
+      "count": 1
+    },
+    {
+      "source": "Same contract as for <code>doFilter</code>, but guaranteed to be\njust invoked once per request within a single request thread.",
+      "translation": "与<code>doFilter</code>相同的合同，但保证在单个请求线程中每个请求仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "Can be overridden in subclasses for custom filtering control,\nreturning <code>true</code> to avoid filtering of the given request.",
+      "translation": "可在子类中重写以进行自定义过滤控制，返回 `<code>true</code>` 以避免过滤给定的请求。",
+      "count": 1
+    },
+    {
+      "source": "Whether to filter error dispatches such as when the servlet container\nprocesses and error mapped in <code>web.xml</code>.",
+      "translation": "是否过滤错误分发，例如当 Servlet 容器处理 `<web.xml>` 中映射的错误时。",
+      "count": 1
+    },
+    {
+      "source": "Whether to filter error dispatches such as when the servlet container\nprocesses and error mapped in <code>web.xml</code>. The default return value\nis \"true\", which means the filter will not be invoked in case of an error\ndispatch.",
+      "translation": "是否过滤错误分发（例如当 Servlet 容器处理 `<web.xml>` 中映射的错误时）。默认返回值为\"true\"，这意味着在错误分发的情况下不会调用该过滤器。",
+      "count": 1
+    },
+    {
+      "source": "Typically an ERROR dispatch happens after the REQUEST dispatch completes,\nand the filter chain starts anew.",
+      "translation": "通常，ERROR 分发会在 REQUEST 分发完成后发生，并且过滤器链会重新开始。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the request attribute that identifies that a request\nis already filtered.",
+      "translation": "返回标识请求已过滤的请求属性名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 1
+    },
+    {
+      "source": "whether the given request should <i>not</i> be filtered",
+      "translation": "是否不应过滤给定的请求",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rossen Stoyanchev, Sam Brannen",
+      "translation": "Juergen Hoeller, Rossen Stoyanchev, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

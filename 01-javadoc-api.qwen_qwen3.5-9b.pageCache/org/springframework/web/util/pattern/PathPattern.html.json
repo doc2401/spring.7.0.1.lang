@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-04-14 20:38:21",
+  "updated_at": "2026-04-14 20:38:21",
+  "stats": {
+    "total_entries": 48,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 85,
+    "entries_with_hits": 48,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7708333333333333,
+    "usage_percentage": 0.0048000000000000004
+  },
+  "items": [
+    {
+      "source": "<code>pathContainer</code> - the candidate path to attempt to match against",
+      "translation": "<code>pathContainer</code> - 要尝试匹配的候选路径",
+      "count": 4
+    },
+    {
+      "source": "Whether the pattern string contains pattern syntax that would require\nuse of <a href=\"#matches(org.springframework.http.server.PathContainer)\"><code>matches(PathContainer)</code></a>, or if it is a regular String that\ncould be compared directly to others.",
+      "translation": "模式字符串是否包含需要用到<a href=\"#matches(org.springframework.http.server.PathContainer)\"><code>matches(PathContainer)</code></a>的模式语法，还是可以直接与其他内容进行比较的普通 String。",
+      "count": 3
+    },
+    {
+      "source": "<strong>Note:</strong> In contrast to\n<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>, <code>**</code> is supported only\nat the end of a pattern. For example <code>/pages/{**}</code> is valid but\n<code>/pages/{**}/details</code> is not. The same applies also to the capturing\nvariant <code>{*spring}</code>. The aim is to eliminate ambiguity when\ncomparing patterns for specificity.",
+      "translation": "<strong>注意：</strong> 与<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>相比，<code>**</code>仅支持出现在模式的末尾。例如 <code>/pages/{**}</code> 是有效的，但 <code>/pages/{**}/details</code> 则无效。捕获变体 <code>{*spring}</code> 也适用同样的规则。其目的是在比较模式的特定性时消除歧义。",
+      "count": 2
+    },
+    {
+      "source": "<code>PathPattern</code> matches URL paths using the following rules:<br/>",
+      "translation": "<code>PathPattern</code> 使用以下规则匹配 URL 路径：<br/>",
+      "count": 2
+    },
+    {
+      "source": "Combining two \"fixed\" patterns effectively concatenates them:",
+      "translation": "组合两个“固定”模式有效地将它们连接起来：",
+      "count": 2
+    },
+    {
+      "source": "Comparator that sorts patterns by specificity as follows:\n<ol>\n<li>Null instances are last.\n</li><li>Catch-all patterns are last.\n</li><li>If both patterns are catch-all, consider the length (longer wins).\n</li><li>Compare wildcard and captured variable count (lower wins).\n</li><li>Consider length (longer wins)\n</li></ol>",
+      "translation": "按以下规则按具体性对模式进行排序的 Comparator：\n<ol>\n<li>空实例排在最后。\n</li><li>通配模式排在最后。\n</li><li>如果两个模式都是通配模式，则考虑长度（较长的优先）。\n</li><li>比较通配符和捕获变量的数量（较少的优先）。\n</li><li>考虑长度（较长的优先）\n</li></ol>",
+      "count": 2
+    },
+    {
+      "source": "Return the original String that was parsed to create this PathPattern.",
+      "translation": "返回用于创建此 PathPattern 的原始 String。",
+      "count": 2
+    },
+    {
+      "source": "Match this pattern to the given URI path and return extracted URI template\nvariables as well as path parameters (matrix variables).",
+      "translation": "将此模式与给定的 URI 路径匹配，并返回提取的 URI 模板变量以及路径参数（矩阵变量）。",
+      "count": 2
+    },
+    {
+      "source": "Whether this pattern matches the given path.",
+      "translation": "该模式是否匹配给定路径。",
+      "count": 2
+    },
+    {
+      "source": "Match the beginning of the given path and return the remaining portion\nnot covered by this pattern. This is useful for matching nested routes\nwhere the path is matched incrementally at each level.",
+      "translation": "匹配给定路径的开头并返回该模式未覆盖的剩余部分。这对于在每一层逐级匹配嵌套路由的路径非常有用。",
+      "count": 2
+    },
+    {
+      "source": "Compare this pattern with a supplied pattern: return -1,0,+1 if this pattern\nis more specific, the same or less specific than the supplied pattern.\nThe aim is to sort more specific patterns first.",
+      "translation": "将此模式与提供的模式进行比较：如果此模式比提供的模式更具体、相同或更不具体，则分别返回 -1、0 或 +1。目标是使更具体的模式排在前面。",
+      "count": 2
+    },
+    {
+      "source": "<code>/resources/{*path}</code> — matches all files\nunderneath the <code>/resources/</code>, as well as <code>/resources</code>, and captures\ntheir relative path in a variable named \"path\"; <code>/resources/image.png</code>\nwill match with \"path\" → \"/image.png\", and <code>/resources/css/spring.css</code>\nwill match with \"path\" → \"/css/spring.css\"",
+      "translation": "<code>/resources/{*path}</code> — 匹配 <code>/resources/</code> 下方的所有文件，以及 <code>/resources</code> 本身，并将它们的相对路径捕获到名为 \"path\" 的变量中；<code>/resources/image.png</code> 将匹配为 \"path\" → \"/image.png\"，而 <code>/resources/css/spring.css</code> 将匹配为 \"path\" → \"/css/spring.css\"。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html#compareTo(T)\" title=\"class or interface in java.lang\">compareTo</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"PathPattern.html\" title=\"class in org.springframework.web.util.pattern\">PathPattern</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html#compareTo(T)\" title=\"class or interface in java.lang\">compareTo</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"PathPattern.html\" title=\"class in org.springframework.web.util.pattern\">PathPattern</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>/pages/t?st.html</code> — matches <code>/pages/test.html</code> as well as\n<code>/pages/tXst.html</code> but not <code>/pages/toast.html</code>",
+      "translation": "`/pages/t?st.html` 匹配 `/pages/test.html` 以及 `/pages/tXst.html`，但不匹配 `/pages/toast.html`。",
+      "count": 2
+    },
+    {
+      "source": "<code>/resources/**</code> — matches all files\nunderneath the <code>/resources/</code> path, including <code>/resources/image.png</code>\nand <code>/resources/css/spring.css</code>",
+      "translation": "`/resources/**` — 匹配 `/resources/` 路径下的所有文件，包括 `/resources/image.png` 和 `/resources/css/spring.css`。",
+      "count": 2
+    },
+    {
+      "source": "<code>/resources/{filename:\\\\w+}.dat</code> will match <code>/resources/spring.dat</code>\nand assign the value <code>\"spring\"</code> to the <code>filename</code> variable",
+      "translation": "`/resources/{filename:\\w+}.dat` 将匹配 `/resources/spring.dat`，并将值 `\"spring\"` 分配给 `filename` 变量。",
+      "count": 2
+    },
+    {
+      "source": "Assumes that <a href=\"#matches(org.springframework.http.server.PathContainer)\"><code>matches(PathContainer)</code></a> returns <code>true</code> for\nthe same path but does <strong>not</strong> enforce this.",
+      "translation": "假定<a href=\"#matches(org.springframework.http.server.PathContainer)\"><code>matches(PathContainer)</code></a>对相同路径返回<code>true</code>，但<strong>不</strong>强制执行此规则。",
+      "count": 2
+    },
+    {
+      "source": "<code>/resources/*.png</code> — matches all <code>.png</code> files in the\n<code>resources</code> directory",
+      "translation": "`/resources/*.png` — 匹配 `resources` 目录中的所有 `.png` 文件",
+      "count": 2
+    },
+    {
+      "source": "<code>**</code> matches zero or more <em>path segments</em> until the end of the path",
+      "translation": "<code>**</code> 匹配零个或多个路径段，直到路径结束。",
+      "count": 2
+    },
+    {
+      "source": "<code>{spring}</code> matches a <em>path segment</em> and captures it as a variable named \"spring\"",
+      "translation": "`{spring}` 匹配一个路径段，并将其捕获为名为 \"spring\" 的变量。",
+      "count": 2
+    },
+    {
+      "source": "<code>{spring:[a-z]+}</code> matches the regexp <code>[a-z]+</code> against a path segment\nand captures it as a path variable named \"spring\"",
+      "translation": "`{spring:[a-z]+}` 匹配正则表达式 `<code>[a-z]+</code>` 并捕获为名为 \"spring\" 的路径变量。",
+      "count": 2
+    },
+    {
+      "source": "<code>{*spring}</code> matches zero or more <em>path segments</em> until the end of the path\nand captures it as a variable named \"spring\"",
+      "translation": "<code>{*spring}</code> 匹配零个或多个路径段，直到路径结束，并将其捕获为名为 \"spring\" 的变量。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the combination is not allowed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果组合不被允许",
+      "count": 2
+    },
+    {
+      "source": "<code>*</code> matches zero or more characters within a path segment",
+      "translation": "<code>*</code> 匹配路径段中的零个或多个字符。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the path matches this pattern",
+      "translation": "<code>true</code> 如果路径与此模式匹配",
+      "count": 2
+    },
+    {
+      "source": "info object with the extracted variables, or <code>null</code> for no match",
+      "translation": "包含提取变量的信息对象，或无匹配时为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "info object with the match result or <code>null</code> for no match",
+      "translation": "包含匹配结果的 info 对象，或者无匹配时为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - a path that matches this pattern",
+      "translation": "<code>path</code> - 匹配此模式的路径",
+      "count": 2
+    },
+    {
+      "source": "<code>otherPattern</code> - the pattern to be combined with the current one",
+      "translation": "<code>otherPattern</code> - 要与当前模式组合的模式",
+      "count": 2
+    },
+    {
+      "source": "the new <code>PathPattern</code> that combines both patterns",
+      "translation": "新的结合了两种模式的<code>PathPattern</code>",
+      "count": 2
+    },
+    {
+      "source": "Duplicate occurrences of separators within the returned result are removed",
+      "translation": "返回结果中重复出现的分隔符会被移除",
+      "count": 2
+    },
+    {
+      "source": "Leading and trailing separators are removed from the returned result",
+      "translation": "返回结果中的前导和尾随分隔符会被移除。",
+      "count": 2
+    },
+    {
+      "source": "Andy Clement, Rossen Stoyanchev",
+      "translation": "Andy Clement，Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "the subset of the path that is matched by pattern or \"\" if none\nof it is matched by pattern elements",
+      "translation": "由模式匹配的路径子集，或者如果没有任何部分被模式元素匹配则为\"\"。",
+      "count": 2
+    },
+    {
+      "source": "For example:",
+      "translation": "例如：",
+      "count": 1
+    },
+    {
+      "source": "Combine this pattern with the one given as parameter, returning a new\n<code>PathPattern</code> instance that concatenates or merges both.",
+      "translation": "将此模式与作为参数给出的模式结合，返回一个新的 `<code>PathPattern` 实例，该实例拼接或合并了这两个模式。",
+      "count": 1
+    },
+    {
+      "source": "Holder for URI variables and path parameters (matrix variables) extracted\nbased on the pattern for a given matched path.",
+      "translation": "用于存储根据给定匹配路径的模式提取的 URI 变量和路径参数（矩阵变量）的持有者。",
+      "count": 1
+    },
+    {
+      "source": "Holder for the result of a match on the start of a pattern.",
+      "translation": "匹配模式开头匹配结果的持有者。",
+      "count": 1
+    },
+    {
+      "source": "Comparator that sorts patterns by specificity as follows:\n\nNull instances are last.",
+      "translation": "按以下规则按具体性对模式进行排序的 Comparator：\n\n空实例排在最后。",
+      "count": 1
+    },
+    {
+      "source": "Compare this pattern with a supplied pattern: return -1,0,+1 if this pattern\nis more specific, the same or less specific than the supplied pattern.",
+      "translation": "将此模式与提供的模式进行比较：如果此模式比提供的模式更具体、相同或更不具体，则分别返回 -1、0 或 +1。",
+      "count": 1
+    },
+    {
+      "source": "Determine the pattern-mapped part for the given path.",
+      "translation": "确定给定路径的映射模式部分。",
+      "count": 1
+    },
+    {
+      "source": "Match the beginning of the given path and return the remaining portion\nnot covered by this pattern.",
+      "translation": "匹配给定路径的开头，并返回该模式未覆盖的剩余部分。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>?</code> matches one character",
+      "translation": "<code>?</code> 匹配单个字符",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 16:27:39",
+  "updated_at": "2026-04-14 16:27:39",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 25,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6666666666666667,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "Supports both transactional and non-transactional DataSource access.\nWith a non-XA DataSource and local Spring transactions, a single DataSource\nargument is sufficient. In case of an XA DataSource and global JTA transactions,\nSchedulerFactoryBean's \"nonTransactionalDataSource\" property should be set,\npassing in a non-XA DataSource that will not participate in global transactions.",
+      "translation": "支持事务性和非事务性 DataSource 访问。使用非 XA DataSource 和本地 Spring 事务时，单个 DataSource 参数已足够。对于 XA DataSource 和全局 JTA 事务，应设置 SchedulerFactoryBean 的\"nonTransactionalDataSource\"属性，传入一个不会参与全局事务的非 XA DataSource。",
+      "count": 2
+    },
+    {
+      "source": "Operations performed by this JobStore will properly participate in any\nkind of Spring-managed transaction, as it uses Spring's DataSourceUtils\nconnection handling methods that are aware of a current transaction.",
+      "translation": "此 JobStore 执行的操作将正确参与任何类型的 Spring 管理事务，因为它使用了能够感知当前事务的 Spring 的 `DataSourceUtils` 连接处理方法。",
+      "count": 2
+    },
+    {
+      "source": "Note that all Quartz Scheduler operations that affect the persistent\njob store should usually be performed within active transactions,\nas they assume to get proper locks etc.",
+      "translation": "请注意，所有影响持久化作业存储的 Quartz 调度器操作通常应在活动事务中执行，因为它们假定能获得适当的锁等机制。",
+      "count": 2
+    },
+    {
+      "source": "Name used for the transactional ConnectionProvider for Quartz.\nThis provider will delegate to the local Spring-managed DataSource.",
+      "translation": "用于 Quartz 的事务性 ConnectionProvider 的名称。该提供者将委托给本地由 Spring 管理的 DataSource。",
+      "count": 2
+    },
+    {
+      "source": "Name used for the non-transactional ConnectionProvider for Quartz.\nThis provider will delegate to the local Spring-managed DataSource.",
+      "translation": "用于 Quartz 的非事务性 ConnectionProvider 的名称。该提供者将委托给本地的 Spring 管理的 DataSource。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/utils/DBConnectionManager.html#addConnectionProvider-java.lang.String-org.quartz.utils.ConnectionProvider-\" title=\"class or interface in org.quartz.utils\"><code>DBConnectionManager.addConnectionProvider(String, ConnectionProvider)</code></a></li>\n<li><a href=\"SchedulerFactoryBean.html#setDataSource(javax.sql.DataSource)\"><code>SchedulerFactoryBean.setDataSource(DataSource)</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.quartz.LocalDataSourceJobStore.TX_DATA_SOURCE_PREFIX\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/utils/DBConnectionManager.html#addConnectionProvider-java.lang.String-org.quartz.utils.ConnectionProvider-\" title=\"class or interface in org.quartz.utils\"><code>DBConnectionManager.addConnectionProvider(String, ConnectionProvider)</code></a></li>\n<li><a href=\"SchedulerFactoryBean.html#setDataSource(javax.sql.DataSource)\"><code>SchedulerFactoryBean.setDataSource(DataSource)</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.quartz.LocalDataSourceJobStore.TX_DATA_SOURCE_PREFIX\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/utils/DBConnectionManager.html#addConnectionProvider-java.lang.String-org.quartz.utils.ConnectionProvider-\" title=\"class or interface in org.quartz.utils\"><code>DBConnectionManager.addConnectionProvider(String, ConnectionProvider)</code></a></li>\n<li><a href=\"SchedulerFactoryBean.html#setDataSource(javax.sql.DataSource)\"><code>SchedulerFactoryBean.setDataSource(DataSource)</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.quartz.LocalDataSourceJobStore.NON_TX_DATA_SOURCE_PREFIX\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/utils/DBConnectionManager.html#addConnectionProvider-java.lang.String-org.quartz.utils.ConnectionProvider-\" title=\"class or interface in org.quartz.utils\"><code>DBConnectionManager.addConnectionProvider(String, ConnectionProvider)</code></a></li>\n<li><a href=\"SchedulerFactoryBean.html#setDataSource(javax.sql.DataSource)\"><code>SchedulerFactoryBean.setDataSource(DataSource)</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.quartz.LocalDataSourceJobStore.NON_TX_DATA_SOURCE_PREFIX\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/spi/JobStore.html#initialize-org.quartz.spi.ClassLoadHelper-org.quartz.spi.SchedulerSignaler-\" title=\"class or interface in org.quartz.spi\">initialize</a></code> in interface <code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/spi/JobStore.html\" title=\"class or interface in org.quartz.spi\">JobStore</a></code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/spi/JobStore.html#initialize-org.quartz.spi.ClassLoadHelper-org.quartz.spi.SchedulerSignaler-\" title=\"class or interface in org.quartz.spi\">initialize</a>` 接口 `<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/spi/JobStore.html\" title=\"class or interface in org.quartz.spi\">JobStore</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreCMT.html#initialize-org.quartz.spi.ClassLoadHelper-org.quartz.spi.SchedulerSignaler-\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">initialize</a></code> in class <code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreCMT.html\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">JobStoreCMT</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreCMT.html#initialize-org.quartz.spi.ClassLoadHelper-org.quartz.spi.SchedulerSignaler-\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">initialize</a></code> 方法在类 <code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreCMT.html\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">JobStoreCMT</a></code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreSupport.html#closeConnection-java.sql.Connection-\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">closeConnection</a></code> in class <code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreSupport.html\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">JobStoreSupport</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreSupport.html#closeConnection-java.sql.Connection-\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">closeConnection</a></code> 类中的 <code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/jdbcjobstore/JobStoreSupport.html\" title=\"class or interface in org.quartz.impl.jdbcjobstore\">JobStoreSupport</a></code>",
+      "count": 2
+    },
+    {
+      "source": "Name used for the non-transactional ConnectionProvider for Quartz.",
+      "translation": "用于 Quartz 的非事务性 ConnectionProvider 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Name used for the transactional ConnectionProvider for Quartz.",
+      "translation": "用于 Quartz 的事务性 ConnectionProvider 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

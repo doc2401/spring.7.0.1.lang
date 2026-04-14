@@ -1,0 +1,286 @@
+{
+  "created_at": "2026-04-14 15:09:43",
+  "updated_at": "2026-04-14 15:09:43",
+  "stats": {
+    "total_entries": 54,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 81,
+    "entries_with_hits": 54,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.005399999999999999
+  },
+  "items": [
+    {
+      "source": "This property is primarily supported for configuration compatibility with\n<a href=\"DefaultMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>DefaultMessageListenerContainer</code></a>. For this local listener container,\ngenerally use <a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a> instead.",
+      "translation": "此属性主要用于与<a href=\"DefaultMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>DefaultMessageListenerContainer</code></a>的配置兼容性。对于此本地监听器容器，通常应使用<a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: Concurrent listener execution via a TaskExecutor will lead\nto concurrent processing of messages that have been received by the same\nunderlying Session.</b> As a consequence, it is not recommended to use\nthis setting with a <a href=\"SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a>, at least not\nif the latter performs actual work on the given Session. A standard\n<code>MessageListener</code> will work fine, in general.",
+      "translation": "<b>注意：通过 TaskExecutor 并发执行监听器将导致由同一底层 Session 接收的消息被并发处理。</b> 因此，不建议将此设置与 <a href=\"SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> 一起使用，尤其是当后者对给定的 Session 执行实际工作时。通常情况下，标准的 <code>MessageListener</code> 可以正常工作。",
+      "count": 2
+    },
+    {
+      "source": "For a different style of MessageListener handling, through looped\n<code>MessageConsumer.receive()</code> calls that also allow for\ntransactional receipt of messages (registering them with XA transactions),\nsee <a href=\"DefaultMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>DefaultMessageListenerContainer</code></a>.",
+      "translation": "对于另一种消息监听器处理风格，通过循环调用<code>MessageConsumer.receive()</code>（同时也允许事务性接收消息（将其注册到 XA 事务中）），请参阅<a href=\"DefaultMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>DefaultMessageListenerContainer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractMessageListenerContainer</code></a> javadoc for details\non acknowledge modes and transaction options. Note that this container\nexposes standard JMS behavior for the default \"AUTO_ACKNOWLEDGE\" mode:\nthat is, automatic message acknowledgment after listener execution,\nwith no redelivery in case of a user exception thrown but potential\nredelivery in case of the JVM dying during listener execution.",
+      "translation": "有关确认模式和事务选项的详细信息，请参阅 <a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractMessageListenerContainer</code></a> 的 JavaDoc。请注意，此容器针对默认的\"AUTO_ACKNOWLEDGE\"模式暴露了标准的 JMS 行为：即在监听器执行后自动确认消息；如果用户抛出异常则不会重新投递，但如果 JVM 在监听器执行期间崩溃则可能会重新投递。",
+      "count": 2
+    },
+    {
+      "source": "This listener container will always hold on to the maximum number of\nconsumers <a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a> since it is unable to scale.",
+      "translation": "此监听器容器由于无法扩展，将始终持有最大数量的消费者 <a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>Do not raise the number of concurrent consumers for a topic.</b>\nThis would lead to concurrent consumption of the same message,\nwhich is hardly ever desirable.",
+      "translation": "<b>请勿增加主题的并发消费者数量。</b>\n这会导致同一消息被并发消费，而这几乎总是不合意的。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: Specifying a TaskExecutor for listener execution affects\nacknowledgement semantics.</b> Messages will then always get acknowledged\nbefore listener execution, with the underlying Session immediately reused\nfor receiving the next message. Using this in combination with a transacted\nsession or with client acknowledgement will lead to unspecified results!",
+      "translation": "<b>注意：为监听器执行指定 TaskExecutor 会影响确认语义。</b> 消息将总是在监听器执行之前得到确认，底层的 Session 会立即被重用用于接收下一条消息。将此与事务性会话或客户端确认结合使用会导致未定义的结果！",
+      "count": 2
+    },
+    {
+      "source": "This is the simplest form of a message listener container.\nIt creates a fixed number of JMS Sessions to invoke the listener,\nnot allowing for dynamic adaptation to runtime demands. Its main\nadvantage is its low level of complexity and the minimum requirements\non the JMS provider: Not even the ServerSessionPool facility is required.",
+      "translation": "这是消息监听器容器的最简单形式。它创建固定数量的 JMS Session 来调用监听器，无法根据运行时需求进行动态调整。其主要优势在于复杂度低以及对 JMS 提供者的要求最小：甚至不需要 ServerSessionPool 设施。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\": connecting early, i.e. during the bean initialization phase.\nSet this flag to \"true\" in order to switch to lazy connecting if your target broker\nis likely to not have started up yet and you prefer to not even try a connection.",
+      "translation": "默认为 \"false\"：即提前连接，也就是在 Bean 初始化阶段进行连接。如果目标 Broker 可能尚未启动，且您希望完全不尝试建立连接，请将此标志设置为 \"true\" 以切换到延迟连接模式。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\": refreshing the shared connection and re-initializing the\nconsumers whenever the connection propagates an exception to its listener.\nSet this flag to \"false\" in order to rely on automatic recovery within the\nprovider, holding on to the existing connection and consumer handles.",
+      "translation": "默认为\"true\"：当连接向其监听器传播异常时，刷新共享连接并重新初始化消费者。将此标志设置为\"false\"以依赖提供程序内的自动恢复，保留现有的连接和消费者句柄。",
+      "count": 2
+    },
+    {
+      "source": "Default is none, that is, to run in the JMS provider's own receive thread,\nblocking the provider's receive endpoint while executing the listener.",
+      "translation": "默认值为 none，即在 JMS 提供程序自身的接收线程中运行，在执行监听器时阻塞提供程序的接收端点。",
+      "count": 2
+    },
+    {
+      "source": "Specify a TaskExecutor for executing the listener in a different thread,\nrather than blocking the JMS provider, usually integrating with an existing\nthread pool. This allows to keep the number of concurrent consumers low (1)\nwhile still processing messages concurrently (decoupled from receiving!).",
+      "translation": "为在不同线程中执行监听器指定一个 TaskExecutor，而不是阻塞 JMS 提供者，通常通过集成现有的线程池来实现。这允许将并发消费者的数量保持在较低水平（1），同时仍能并发处理消息（与接收解耦！）。",
+      "count": 2
+    },
+    {
+      "source": "Executes the listener, exposing the current JMS Session as\nthread-bound resource (if \"exposeListenerSession\" is \"true\").",
+      "translation": "执行监听器，将当前的 JMS Session 暴露为线程绑定资源（如果\"exposeListenerSession\"为\"true\"）。",
+      "count": 2
+    },
+    {
+      "source": "Create a MessageConsumer for the given JMS Session,\nregistering a MessageListener for the specified listener.",
+      "translation": "为给定的 JMS Session 创建一个 MessageConsumer，并为指定的监听器注册一个 MessageListener。",
+      "count": 2
+    },
+    {
+      "source": "Creates the specified number of concurrent consumers,\nin the form of a JMS Session plus associated MessageConsumer.",
+      "translation": "创建指定数量的并发消费者，形式为 JMS 会话及其关联的 MessageConsumer。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the registered JMS Sessions and associated MessageConsumers.",
+      "translation": "销毁已注册的 JMS 会话及相关消息消费者。",
+      "count": 2
+    },
+    {
+      "source": "Re-initializes this container's JMS message consumers,\nif not initialized already.",
+      "translation": "如果尚未初始化，则重新初始化此容器的 JMS 消息消费者。",
+      "count": 2
+    },
+    {
+      "source": "Initialize the JMS Sessions and MessageConsumers for this container.",
+      "translation": "为此容器初始化 JMS 会话和消息消费者。",
+      "count": 2
+    },
+    {
+      "source": "Registers this listener container as JMS ExceptionListener on the shared connection.",
+      "translation": "将此监听器容器注册为共享连接上的 JMS 异常监听器。",
+      "count": 2
+    },
+    {
+      "source": "Always use a shared JMS Connection.",
+      "translation": "始终使用共享的 JMS 连接。",
+      "count": 2
+    },
+    {
+      "source": "JMS ExceptionListener implementation, invoked by the JMS provider in\ncase of connection failures. Re-initializes this listener container's\nshared connection and its sessions and consumers, if necessary.",
+      "translation": "JMS 异常监听器实现，在发生连接故障时由 JMS 提供者调用。如有必要，将重新初始化此监听容器的共享连接及其会话和消费者。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageListenerContainer.html#validateConfiguration()\">validateConfiguration</a></code> in class <code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageListenerContainer.html#validateConfiguration()\">validateConfiguration</a></code>` 类中的 `<code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#doStart()\">doStart</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#doStart()\">doStart</a></code>` 在类 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#prepareSharedConnection(jakarta.jms.Connection)\">prepareSharedConnection</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#prepareSharedConnection(jakarta.jms.Connection)\">prepareSharedConnection</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - the reported connection exception",
+      "translation": "<code>ex</code> - 报告的连接异常",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - in case of setup failure",
+      "translation": "<code>jakarta.jms.JMSException</code> - 在设置失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>message</code> - the received JMS Message",
+      "translation": "<code>message</code> - 接收到的 JMS 消息",
+      "count": 2
+    },
+    {
+      "source": "Raising the number of concurrent consumers is recommendable in order\nto scale the consumption of messages coming in from a queue. However,\nnote that any ordering guarantees are lost once multiple consumers are\nregistered. In general, stick with 1 consumer for low-volume queues.",
+      "translation": "为了提高从队列中消费消息的吞吐量，建议增加并发消费者的数量。但请注意，一旦注册多个消费者，任何顺序保证都将丢失。通常情况下，对于低流量队列，请坚持使用单个消费者。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty. To be overridden in subclasses.",
+      "translation": "默认实现为空，应在子类中重写。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractJmsListeningContainer.html#validateConfiguration()\">AbstractJmsListeningContainer</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractJmsListeningContainer.html#validateConfiguration()\">AbstractJmsListeningContainer</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "JMS ExceptionListener implementation, invoked by the JMS provider in\ncase of connection failures.",
+      "translation": "JMS 异常监听器实现，在连接失败时由 JMS 提供者调用。",
+      "count": 1
+    },
+    {
+      "source": "Process a message received from the provider.",
+      "translation": "处理从提供者接收的消息。",
+      "count": 1
+    },
+    {
+      "source": "Specify concurrency limits via a \"lower-upper\" String, for example, \"5-10\", or a simple\nupper limit String, for example, \"10\".",
+      "translation": "通过“下界 - 上界”形式的字符串指定并发限制，例如\"5-10\"，或通过简单的上界字符串指定，例如\"10\"。",
+      "count": 1
+    },
+    {
+      "source": "Specify the number of concurrent consumers to create.",
+      "translation": "指定要创建的并发消费者数量。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to connect lazily, i.e.",
+      "translation": "指定是否懒加载连接，即",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to explicitly recover the shared JMS Connection and the\nassociated Sessions and MessageConsumers whenever a JMSException is reported.",
+      "translation": "指定是否在报告 JMSException 时显式恢复共享的 JMS 连接以及相关的 Session 和 MessageConsumer。",
+      "count": 1
+    },
+    {
+      "source": "Set the Spring TaskExecutor to use for executing the listener once\na message has been received by the provider.",
+      "translation": "设置 Spring TaskExecutor 以在提供者接收到消息后执行一次监听器。",
+      "count": 1
+    },
+    {
+      "source": "Validate the configuration of this container.",
+      "translation": "验证此容器的配置。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageListenerContainer.html#setConcurrency(java.lang.String)\">setConcurrency</a></code> in class <code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageListenerContainer.html#setConcurrency(java.lang.String)\">setConcurrency</a></code>` 类中的 `<code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#sharedConnectionEnabled()\">sharedConnectionEnabled</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#sharedConnectionEnabled()\">sharedConnectionEnabled</a></code>` 在类 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#doInitialize()\">doInitialize</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#doInitialize()\">doInitialize</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#doShutdown()\">doShutdown</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#doShutdown()\">doShutdown</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>onException</code> in interface <code>jakarta.jms.ExceptionListener</code>",
+      "translation": "<code>onException</code> 在接口 <code>jakarta.jms.ExceptionListener</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if registration failed",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果注册失败",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS API methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS API 方法抛出",
+      "count": 1
+    },
+    {
+      "source": "<code>connection</code> - the Connection to prepare",
+      "translation": "<code>connection</code> - 要准备的连接",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if the preparation efforts failed",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果准备工作失败",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - the JMS Session to work on",
+      "translation": "<code>session</code> - 要操作的 JMS Session",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS 方法抛出",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - the JMS Session to operate on",
+      "translation": "<code>session</code> - 要操作的 JMS Session",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if shutdown failed",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果关闭失败",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the MessageConsumer",
+      "translation": "MessageConsumer",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

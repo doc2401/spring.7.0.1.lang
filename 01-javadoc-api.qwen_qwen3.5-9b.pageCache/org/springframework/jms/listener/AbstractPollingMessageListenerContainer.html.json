@@ -1,0 +1,326 @@
+{
+  "created_at": "2026-04-14 15:08:13",
+  "updated_at": "2026-04-14 15:08:13",
+  "stats": {
+    "total_entries": 62,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 112,
+    "entries_with_hits": 62,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8064516129032258,
+    "usage_percentage": 0.006200000000000001
+  },
+  "items": [
+    {
+      "source": "<code>session</code> - the JMS Session to work on",
+      "translation": "<code>session</code> - 要操作的 JMS Session",
+      "count": 4
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS 方法抛出",
+      "count": 4
+    },
+    {
+      "source": "<code>consumer</code> - the MessageConsumer to work on",
+      "translation": "<code>consumer</code> - 要操作的 MessageConsumer",
+      "count": 3
+    },
+    {
+      "source": "<code>invoker</code> - the invoker object (passed through)",
+      "translation": "<code>invoker</code> - 调用对象（透传）",
+      "count": 3
+    },
+    {
+      "source": "<code>session</code> - the receiving JMS Session",
+      "translation": "<code>session</code> - 接收的 JMS Session",
+      "count": 3
+    },
+    {
+      "source": "whether a message has been received",
+      "translation": "消息是否已收到",
+      "count": 3
+    },
+    {
+      "source": "<b>Note: Consider the use of local JMS transactions instead.</b>\nSimply switch the <a href=\"#setSessionTransacted(boolean)\"><code>\"sessionTransacted\"</code></a> flag\nto \"true\" in order to use a locally transacted JMS Session for the entire\nreceive processing, including any Session operations performed by a\n<a href=\"SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> (for example, sending a response message). This\nallows for fully synchronized Spring transactions based on local JMS\ntransactions, similar to what\n<a href=\"../connection/JmsTransactionManager.html\" title=\"class in org.springframework.jms.connection\"><code>JmsTransactionManager</code></a> provides. Check\n<a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractMessageListenerContainer</code></a>'s javadoc for\na discussion of transaction choices and message redelivery scenarios.",
+      "translation": "<b>注意：请考虑使用本地 JMS 事务。</b>只需将 <a href=\"#setSessionTransacted(boolean)\"><code>\"sessionTransacted\"</code></a> 标志切换为 \"true\"，即可对整个接收处理过程（包括由 <a href=\"SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> 执行的任何 Session 操作，例如发送响应消息）使用本地事务 JMS Session。这使得基于本地 JMS 事务的 Spring 事务能够完全同步，类似于 <a href=\"../connection/JmsTransactionManager.html\" title=\"class in org.springframework.jms.connection\"><code>JmsTransactionManager</code></a> 所提供的功能。有关事务选择和消息重新投递场景的讨论，请查阅 <a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractMessageListenerContainer</code></a> 的 javadoc。",
+      "count": 2
+    },
+    {
+      "source": "Message receipt and listener execution can automatically be wrapped\nin transactions through passing a Spring\n<a href=\"../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> into the\n<a href=\"#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>\"transactionManager\"</code></a> property. This will usually\nbe a <a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> in a\nJakarta EE environment, in combination with a JTA-aware JMS ConnectionFactory\nobtained from JNDI (check your application server's documentation).",
+      "translation": "消息接收和监听器执行可以通过将 Spring `<a href=\"../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 传入`<a href=\"#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>\"transactionManager\"</code></a>` 属性而自动包装在事务中。通常情况下，在 Jakarta EE 环境中，这将是 `<a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>`，并结合从 JNDI 获取的 JTA 感知 JMS ConnectionFactory（请查阅您的应用服务器文档）。",
+      "count": 2
+    },
+    {
+      "source": "Creates a JMS Connection, starts the <code>Connection</code>\n(if <a href=\"AbstractJmsListeningContainer.html#setAutoStartup(boolean)\"><code>\"autoStartup\"</code></a> hasn't been turned off),\nand calls <a href=\"AbstractJmsListeningContainer.html#doInitialize()\"><code>AbstractJmsListeningContainer.doInitialize()</code></a>.",
+      "translation": "创建 JMS 连接，启动 `<code>Connection</code>`（如果未关闭<a href=\"AbstractJmsListeningContainer.html#setAutoStartup(boolean)\"><code>\"autoStartup\"</code></a>），并调用 <a href=\"AbstractJmsListeningContainer.html#doInitialize()\"><code>AbstractJmsListeningContainer.doInitialize()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This listener container variant is built for repeated polling attempts,\neach invoking the <a href=\"#receiveAndExecute(java.lang.Object,jakarta.jms.Session,jakarta.jms.MessageConsumer)\"><code>receiveAndExecute(Object, Session, MessageConsumer)</code></a> method. The MessageConsumer used\nmay be reobtained for each attempt or cached in between attempts; this is up\nto the concrete implementation. The receive timeout for each attempt can be\nconfigured through the <a href=\"#setReceiveTimeout(long)\"><code>\"receiveTimeout\"</code></a> property.",
+      "translation": "该监听器容器变体专为重复轮询尝试而构建，每次尝试都会调用<a href=\"#receiveAndExecute(java.lang.Object,jakarta.jms.Session,jakarta.jms.MessageConsumer)\"><code>receiveAndExecute(Object, Session, MessageConsumer)</code></a> 方法。所使用的 MessageConsumer 可在每次尝试之间重新获取或缓存；具体由具体实现决定。每次尝试的接收超时时间可通过<a href=\"#setReceiveTimeout(long)\"><code>\"receiveTimeout\"</code></a> 属性进行配置。",
+      "count": 2
+    },
+    {
+      "source": "This base class does not assume any specific mechanism for asynchronous\nexecution of polling invokers. Check out <a href=\"DefaultMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>DefaultMessageListenerContainer</code></a>\nfor a concrete implementation which is based on Spring's\n<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> abstraction,\nincluding dynamic scaling of concurrent consumers and automatic self recovery.",
+      "translation": "此基类不对轮询调用器的异步执行机制做出任何特定假设。请查看 <a href=\"DefaultMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>DefaultMessageListenerContainer</code></a>，它基于 Spring 的<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>抽象提供了具体实现，包括并发消费者的动态扩展和自动自我恢复。",
+      "count": 2
+    },
+    {
+      "source": "Default is none, not performing any transactional wrapping.\nIf specified, this will usually be a Spring\n<a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> or one\nof its subclasses, in combination with a JTA-aware ConnectionFactory that\nthis message listener container obtains its Connections from.",
+      "translation": "默认值为 none，不执行任何事务包装。如果指定了该值，通常这将是 Spring <a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> 或其子类之一，并结合一个 JTA 感知的 ConnectionFactory，该消息监听器容器从其获取连接。",
+      "count": 2
+    },
+    {
+      "source": "The underlying mechanism is based on standard JMS MessageConsumer handling,\nwhich is perfectly compatible with both native JMS and JMS in a Jakarta EE environment.\nNeither the JMS <code>MessageConsumer.setMessageListener</code> facility  nor the JMS\nServerSessionPool facility is required. A further advantage of this approach is\nfull control over the listening process, allowing for custom scaling and throttling\nand of concurrent message processing (which is up to concrete subclasses).",
+      "translation": "底层机制基于标准的 JMS MessageConsumer 处理，与原生 JMS 以及 Jakarta EE 环境中的 JMS 完全兼容。既不需要 JMS <code>MessageConsumer.setMessageListener</code> 设施，也不需要 JMS ServerSessionPool 设施。这种方法的一个进一步优势是对监听过程拥有完全控制，允许进行自定义扩展和节流，以及对并发消息处理（由具体子类决定）。",
+      "count": 2
+    },
+    {
+      "source": "Note that within a JTA transaction, the parameters passed to\n<code>create(Queue/Topic)Session(boolean transacted, int acknowledgeMode)</code>\nmethod are not taken into account. Depending on the Jakarta EE transaction context,\nthe container makes its own decisions on these values. Analogously, these\nparameters are not taken into account within a locally managed transaction\neither, since the accessor operates on an existing JMS Session in this case.",
+      "translation": "请注意，在 JTA 事务中，传递给 `<code>create(Queue/Topic)Session(boolean transacted, int acknowledgeMode)</code>` 方法的参数不会被考虑。根据 Jakarta EE 事务上下文，容器会自行决定这些值。同样地，在本地管理的事务中也不会考虑这些参数，因为在此情况下访问器操作的是已存在的 JMS Session。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This value needs to be smaller than the transaction\ntimeout used by the transaction manager (in the appropriate unit,\nof course). 0 indicates no timeout at all; however, this is only\nfeasible if not running within a transaction manager and generally\ndiscouraged since such a listener container cannot cleanly shut down.\nA negative value such as -1 indicates a no-wait receive operation.",
+      "translation": "<b>注意：</b> 此值必须小于事务管理器使用的事务超时时间（当然，需使用相应的单位）。0 表示完全没有超时；然而，这仅在不在事务管理器中运行时才可行，且通常不被推荐，因为此类监听器容器无法干净地关闭。负值（如 -1）表示非阻塞接收操作。",
+      "count": 2
+    },
+    {
+      "source": "Setting this flag to \"true\" will use a short local JMS transaction\nwhen running outside a managed transaction, and a synchronized local\nJMS transaction in case of a managed transaction (other than an XA\ntransaction) being present. This has the effect of a local JMS\ntransaction being managed alongside the main transaction (which might\nbe a native JDBC transaction), with the JMS transaction committing\nright after the main transaction.",
+      "translation": "将此标志设置为 \"true\" 将在非托管事务环境中运行时使用短本地 JMS 事务，而在存在受管事务（非 XA 事务）的情况下使用同步的本地 JMS 事务。其效果是使本地 JMS 事务与主事务（可能是原生 JDBC 事务）一起进行管理，且 JMS 事务会在主事务提交后立即提交。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../support/JmsAccessor.html#setSessionTransacted(boolean)\">JmsAccessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../support/JmsAccessor.html#setSessionTransacted(boolean)\">JmsAccessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractJmsListeningContainer.html#initialize()\">AbstractJmsListeningContainer</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractJmsListeningContainer.html#initialize()\">AbstractJmsListeningContainer</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Specify the Spring <a href=\"../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>\nto use for transactional wrapping of message receipt plus listener execution.",
+      "translation": "指定用于消息接收及监听器执行的事务包装的 Spring <a href=\"../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify the transaction timeout to use for transactional wrapping, in <b>seconds</b>.\nDefault is none, using the transaction manager's default timeout.",
+      "translation": "指定用于事务包装的事务超时时间，单位为<b>秒</b>。默认值为无，使用事务管理器的默认超时时间。",
+      "count": 2
+    },
+    {
+      "source": "Template method that gets called when <i>no</i> message has been received,\nbefore returning to the receive loop again. Allows subclasses to react to\nthe event of no incoming message, for example marking the invoker as idle.",
+      "translation": "当<i>没有</i>收到消息时调用的模板方法，在返回到接收循环之前。允许子类对无传入消息的事件做出反应，例如将调用者标记为空闲。",
+      "count": 2
+    },
+    {
+      "source": "The default receive timeout: 1000 ms = 1 second.",
+      "translation": "默认接收超时时间：1000 ms = 1 秒。",
+      "count": 2
+    },
+    {
+      "source": "Create a MessageConsumer for the given JMS Session,\nregistering a MessageListener for the specified listener.",
+      "translation": "为给定的 JMS Session 创建一个 MessageConsumer，并为指定的监听器注册一个 MessageListener。",
+      "count": 2
+    },
+    {
+      "source": "Actually execute the listener for a message received from the given consumer,\nfetching all requires resources and invoking the listener.",
+      "translation": "实际上执行从给定消费者接收到的消息的监听器，获取所有必需资源并调用该监听器。",
+      "count": 2
+    },
+    {
+      "source": "Return the receive timeout (ms) configured for this listener container.",
+      "translation": "返回为此监听器容器配置的接收超时时间（毫秒）。",
+      "count": 2
+    },
+    {
+      "source": "Return the Spring PlatformTransactionManager to use for transactional\nwrapping of message receipt plus listener execution.",
+      "translation": "返回用于消息接收及监听器执行的事务性包装的 Spring PlatformTransactionManager。",
+      "count": 2
+    },
+    {
+      "source": "Execute the listener for a message received from the given consumer,\nwrapping the entire operation in an external transaction if demanded.",
+      "translation": "执行从给定消费者接收到的消息的监听器，如果要求则将整个操作包装在外部事务中。",
+      "count": 2
+    },
+    {
+      "source": "Receive a message from the given consumer.",
+      "translation": "从给定的消费者接收消息。",
+      "count": 2
+    },
+    {
+      "source": "Specify the transaction name to use for transactional wrapping.\nDefault is the bean name of this listener container, if any.",
+      "translation": "指定用于事务包装的事务名称。默认值为该监听器容器的 Bean 名称（如果有的话）。",
+      "count": 2
+    },
+    {
+      "source": "This implementation checks whether the Session is externally synchronized.\nIn this case, the Session is not locally transacted, despite the listener\ncontainer's \"sessionTransacted\" flag being set to \"true\".",
+      "translation": "此实现会检查 Session 是否处于外部同步状态。在这种情况下，尽管监听器容器的\"sessionTransacted\"标志已设置为\"true\"，Session 仍不是本地事务性的。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether to trigger a commit after no message has been received.\nThis is a good idea on any modern-day JMS provider.",
+      "translation": "确定在收到无消息后是否触发提交。在任何现代 JMS 提供程序中，这都是一个好主意。",
+      "count": 2
+    },
+    {
+      "source": "Template method that gets called right when a new message has been received,\nbefore attempting to process it. Allows subclasses to react to the event\nof an actual incoming message, for example adapting their consumer count.",
+      "translation": "在尝试处理新消息之前，当收到新消息时立即调用的模板方法。允许子类对实际传入消息的事件做出反应，例如调整其消费者数量。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/JmsAccessor.html#setSessionTransacted(boolean)\">setSessionTransacted</a></code> in class <code><a href=\"../support/JmsAccessor.html\" title=\"class in org.springframework.jms.support\">JmsAccessor</a></code>",
+      "translation": "`<code><a href=\"../support/JmsAccessor.html#setSessionTransacted(boolean)\">setSessionTransacted</a></code>` 在类 `<code><a href=\"../support/JmsAccessor.html\" title=\"class in org.springframework.jms.support\">JmsAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#initialize()\">initialize</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#initialize()\">initialize</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageListenerContainer.html#isSessionLocallyTransacted(jakarta.jms.Session)\">isSessionLocallyTransacted</a></code> in class <code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageListenerContainer.html#isSessionLocallyTransacted(jakarta.jms.Session)\">isSessionLocallyTransacted</a></code>` 在类 `<code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>status</code> - the TransactionStatus (may be <code>null</code>)",
+      "translation": "<code>status</code> - 事务状态（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "whether to call <a href=\"AbstractMessageListenerContainer.html#commitIfNecessary(jakarta.jms.Session,jakarta.jms.Message)\"><code>AbstractMessageListenerContainer.commitIfNecessary(Session, Message)</code></a> on the given Session",
+      "translation": "是否要在给定的 Session 上调用<a href=\"AbstractMessageListenerContainer.html#commitIfNecessary(jakarta.jms.Session,jakarta.jms.Message)\"><code>AbstractMessageListenerContainer.commitIfNecessary(Session, Message)</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>session</code> - the current JMS Session which received no message",
+      "translation": "<code>session</code> - 当前未收到任何消息的 JMS Session。",
+      "count": 2
+    },
+    {
+      "source": "<code>consumer</code> - the MessageConsumer to use",
+      "translation": "<code>consumer</code> - 要使用的 MessageConsumer",
+      "count": 2
+    },
+    {
+      "source": "the Message, or <code>null</code> if none",
+      "translation": "Message，或若无则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>holder</code> - the JmsResourceHolder",
+      "translation": "<code>holder</code> - JmsResourceHolder",
+      "count": 2
+    },
+    {
+      "source": "the MessageConsumer",
+      "translation": "MessageConsumer",
+      "count": 2
+    },
+    {
+      "source": "This implementation accepts any JMS 1.1 Connection.",
+      "translation": "此实现接受任何 JMS 1.1 连接。",
+      "count": 1
+    },
+    {
+      "source": "This implementation accepts any JMS 1.1 Session.",
+      "translation": "该实现接受任何 JMS 1.1 Session。",
+      "count": 1
+    },
+    {
+      "source": "Template method that gets called when <i>no</i> message has been received,\nbefore returning to the receive loop again.",
+      "translation": "当<i>没有</i>收到消息时调用的模板方法，在返回到接收循环之前。",
+      "count": 1
+    },
+    {
+      "source": "Set the timeout to use for receive calls, in <b>milliseconds</b>.",
+      "translation": "将用于接收调用的超时时间设置为<b>毫秒</b>。",
+      "count": 1
+    },
+    {
+      "source": "Set the transaction mode that is used when creating a JMS <code>Session</code>.",
+      "translation": "设置创建 JMS <code>Session</code> 时使用的事务模式。",
+      "count": 1
+    },
+    {
+      "source": "Specify the transaction timeout to use for transactional wrapping, in <b>seconds</b>.",
+      "translation": "指定用于事务包装的事务超时时间，单位为<b>秒</b>。",
+      "count": 1
+    },
+    {
+      "source": "Fetch an appropriate Connection from the given JmsResourceHolder.",
+      "translation": "从给定的 JmsResourceHolder 获取一个合适的 Connection。",
+      "count": 1
+    },
+    {
+      "source": "Fetch an appropriate Session from the given JmsResourceHolder.",
+      "translation": "从给定的 JmsResourceHolder 获取适当的 Session。",
+      "count": 1
+    },
+    {
+      "source": "Initialize this container.",
+      "translation": "初始化此容器。",
+      "count": 1
+    },
+    {
+      "source": "This implementation checks whether the Session is externally synchronized.",
+      "translation": "该实现检查会话是否已外部同步。",
+      "count": 1
+    },
+    {
+      "source": "Template method that gets called right when a new message has been received,\nbefore attempting to process it.",
+      "translation": "在尝试处理新消息之前，当收到新消息时立即调用的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Specify the transaction name to use for transactional wrapping.",
+      "translation": "指定用于事务包装的事务名称。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether to trigger a commit after no message has been received.",
+      "translation": "确定在收到无消息后是否触发提交。",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - the Session to check",
+      "translation": "<code>session</code> - 要检查的会话",
+      "count": 1
+    },
+    {
+      "source": "an appropriate Connection fetched from the holder,\nor <code>null</code> if none found",
+      "translation": "从持有者中获取一个合适的 Connection，如果未找到则返回<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "an appropriate Session fetched from the holder,\nor <code>null</code> if none found",
+      "translation": "从持有者获取一个合适的 Session，或者如果未找到则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the given Session is locally transacted",
+      "translation": "给定的 Session 是否为本地事务的",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-04-14 19:30:53",
+  "updated_at": "2026-04-14 19:30:53",
+  "stats": {
+    "total_entries": 37,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 67,
+    "entries_with_hits": 37,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8108108108108107,
+    "usage_percentage": 0.0036999999999999997
+  },
+  "items": [
+    {
+      "source": "Note that this does nothing more than create a new instance.\nThe session can later be started explicitly via <a href=\"../WebSession.html#start()\"><code>WebSession.start()</code></a>\nor implicitly by adding attributes -- and then persisted via\n<a href=\"../WebSession.html#save()\"><code>WebSession.save()</code></a>.",
+      "translation": "请注意，这仅用于创建新实例。会话稍后可通过 <a href=\"../WebSession.html#start()\"><code>WebSession.start()</code></a> 显式启动，或通过添加属性隐式启动，然后使用 <a href=\"../WebSession.html#save()\"><code>WebSession.save()</code></a> 进行持久化。",
+      "count": 2
+    },
+    {
+      "source": "Typically such checks are kicked off lazily during calls to\n<a href=\"#createWebSession()\"><code>createWebSession()</code></a> or <a href=\"#retrieveSession(java.lang.String)\"><code>retrieveSession(String)</code></a>, no less than 60\nseconds apart.",
+      "translation": "通常，此类检查会在调用<a href=\"#createWebSession()\"><code>createWebSession()</code></a>或<a href=\"#retrieveSession(java.lang.String)\"><code>retrieveSession(String)</code></a>时懒加载启动，且两次调用间隔不少于 60 秒。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> This method should perform an expiration check,\nand if it has expired remove the session and return empty. This method\nshould also update the <code>lastAccessTime</code> of retrieved sessions.",
+      "translation": "<strong>注意：</strong> 此方法应执行过期检查，如果已过期则移除会话并返回空。此方法还应更新检索到的会话的<code>lastAccessTime</code>。",
+      "count": 2
+    },
+    {
+      "source": "This may be useful to align to different time zones or to set the clock\nback in a test, for example, <code>Clock.offset(clock, Duration.ofMinutes(-31))</code>\nin order to simulate session expiration.",
+      "translation": "这可用于对齐不同的时区，或在测试中将时钟回拨，例如使用 `<code>Clock.offset(clock, Duration.ofMinutes(-31))</code>` 来模拟会话过期。",
+      "count": 2
+    },
+    {
+      "source": "By default this is <code>Clock.system(ZoneId.of(\"GMT\"))</code>.",
+      "translation": "默认情况下，这是<code>Clock.system(ZoneId.of(\"GMT\"))</code>。",
+      "count": 2
+    },
+    {
+      "source": "By default set to 10000.",
+      "translation": "默认设置为 10000。",
+      "count": 2
+    },
+    {
+      "source": "This could be used for management purposes, to list active sessions,\nto invalidate expired sessions, etc.",
+      "translation": "这可用于管理目的，例如列出活动会话、使过期的会话失效等。",
+      "count": 2
+    },
+    {
+      "source": "This method can be called to force a check at a specific time.",
+      "translation": "此方法可被调用以在特定时间强制进行检查。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"WebSessionStore.html#createWebSession()\">WebSessionStore</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"WebSessionStore.html#createWebSession()\">WebSessionStore</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"WebSessionStore.html#retrieveSession(java.lang.String)\">WebSessionStore</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"WebSessionStore.html#retrieveSession(java.lang.String)\">WebSessionStore</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"WebSessionStore.html#removeSession(java.lang.String)\">WebSessionStore</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"WebSessionStore.html#removeSession(java.lang.String)\">WebSessionStore</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"WebSessionStore.html#updateLastAccessTime(org.springframework.web.server.WebSession)\">WebSessionStore</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"WebSessionStore.html#updateLastAccessTime(org.springframework.web.server.WebSession)\">WebSessionStore</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Simple Map-based storage for <a href=\"../WebSession.html\" title=\"interface in org.springframework.web.server\"><code>WebSession</code></a> instances.",
+      "translation": "基于简单 Map 的 `<a href=\"../WebSession.html\" title=\"interface in org.springframework.web.server\"><code>WebSession</code></a>` 实例存储。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured clock for session <code>lastAccessTime</code> calculations.",
+      "translation": "返回用于计算会话<code>lastAccessTime</code>的已配置时钟。",
+      "count": 2
+    },
+    {
+      "source": "Return the maximum number of sessions that can be stored.",
+      "translation": "返回可存储的最大会话数。",
+      "count": 2
+    },
+    {
+      "source": "Remove the WebSession for the specified id.",
+      "translation": "删除指定 ID 的 WebSession。",
+      "count": 2
+    },
+    {
+      "source": "Update the last accessed timestamp to \"now\".",
+      "translation": "将上次访问时间戳更新为“现在”。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"WebSessionStore.html#createWebSession()\">createWebSession</a></code> in interface <code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>",
+      "translation": "`<code><a href=\"WebSessionStore.html#createWebSession()\">createWebSession</a></code>` 接口 `<code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"WebSessionStore.html#retrieveSession(java.lang.String)\">retrieveSession</a></code> in interface <code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>",
+      "translation": "`<code><a href=\"WebSessionStore.html#retrieveSession(java.lang.String)\">retrieveSession</a></code>` 接口 `<code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"WebSessionStore.html#removeSession(java.lang.String)\">removeSession</a></code> in interface <code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>",
+      "translation": "`<code><a href=\"WebSessionStore.html#removeSession(java.lang.String)\">removeSession</a></code>` 接口 `<code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"WebSessionStore.html#updateLastAccessTime(org.springframework.web.server.WebSession)\">updateLastAccessTime</a></code> in interface <code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>",
+      "translation": "`<code><a href=\"WebSessionStore.html#updateLastAccessTime(org.springframework.web.server.WebSession)\">updateLastAccessTime</a></code>` 接口 `<code><a href=\"WebSessionStore.html\" title=\"interface in org.springframework.web.server.session\">WebSessionStore</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>maxSessions</code> - the maximum number of sessions",
+      "translation": "<code>maxSessions</code> - 会话的最大数量",
+      "count": 2
+    },
+    {
+      "source": "<code>clock</code> - the clock to use",
+      "translation": "<code>clock</code> - 要使用的时钟",
+      "count": 2
+    },
+    {
+      "source": "<code>id</code> - the session to load",
+      "translation": "<code>id</code> - 要加载的会话",
+      "count": 2
+    },
+    {
+      "source": "the session, or an empty <code>Mono</code>",
+      "translation": "会话，或一个空的<code>Mono</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>id</code> - the id of the session to remove",
+      "translation": "<code>id</code> - 要删除的会话的 id",
+      "count": 2
+    },
+    {
+      "source": "<code>session</code> - the session to update",
+      "translation": "<code>session</code> - 要更新的会话",
+      "count": 2
+    },
+    {
+      "source": "the created session instance",
+      "translation": "创建的会话实例",
+      "count": 2
+    },
+    {
+      "source": "a completion notification (success or error)",
+      "translation": "完成通知（成功或错误）",
+      "count": 2
+    },
+    {
+      "source": "the session with the updated last access time",
+      "translation": "带有更新后的最后访问时间与会话",
+      "count": 2
+    },
+    {
+      "source": "Configure the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Clock.html\" title=\"class or interface in java.time\"><code>Clock</code></a> to use to set the <code>lastAccessTime</code> on\nevery created session and to calculate if the session has expired.",
+      "translation": "配置要用于在每次创建的会话上设置<code>lastAccessTime</code>并计算会话是否过期的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Clock.html\" title=\"class or interface in java.time\"><code>Clock</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Return an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html#unmodifiableMap(java.util.Map)\" title=\"class or interface in java.util\">unmodifiable</a> copy of the\nmap of sessions.",
+      "translation": "返回会话映射的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html#unmodifiableMap(java.util.Map)\" title=\"class or interface in java.util\">不可变</a>副本。",
+      "count": 1
+    },
+    {
+      "source": "Create a new WebSession.",
+      "translation": "创建一个新的 WebSession。",
+      "count": 1
+    },
+    {
+      "source": "Check for expired sessions and remove them.",
+      "translation": "检查过期的会话并将其移除。",
+      "count": 1
+    },
+    {
+      "source": "Return the WebSession for the given id.",
+      "translation": "返回给定 ID 的 WebSession。",
+      "count": 1
+    },
+    {
+      "source": "Set the maximum number of sessions that can be stored.",
+      "translation": "设置可存储的最大会话数。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Rob Winch",
+      "translation": "Rossen Stoyanchev，Rob Winch",
+      "count": 1
+    }
+  ]
+}

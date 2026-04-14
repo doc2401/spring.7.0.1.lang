@@ -1,0 +1,241 @@
+{
+  "created_at": "2026-04-14 16:52:40",
+  "updated_at": "2026-04-14 16:52:40",
+  "stats": {
+    "total_entries": 45,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 76,
+    "entries_with_hits": 45,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6888888888888889,
+    "usage_percentage": 0.0045000000000000005
+  },
+  "items": [
+    {
+      "source": "Defaults to an empty string, requiring that one of the following is\ntrue:",
+      "translation": "默认为空字符串，要求以下条件之一为真：",
+      "count": 3
+    },
+    {
+      "source": "An explicit bean name is defined in a global declaration of\n<code>@SqlConfig</code>.",
+      "translation": "在 <code>@SqlConfig</code> 的全局声明中定义了显式的 Bean 名称。",
+      "count": 3
+    },
+    {
+      "source": "Every attribute in <code>@SqlConfig</code> has an <em>implicit</em> default value\nwhich is documented in the javadocs of the corresponding attribute. Due to the\nrules defined for annotation attributes in the Java Language Specification, it\nis unfortunately not possible to assign a value of <code>null</code> to an annotation\nattribute. Thus, in order to support overrides of <em>inherited</em> global\nconfiguration, <code>@SqlConfig</code> attributes have an <em>explicit</em>\n<code>default</code> value of either <code>\"\"</code> for Strings, <code>{}</code> for\narrays, or <code>DEFAULT</code> for Enums. This approach allows local declarations\nof <code>@SqlConfig</code> to selectively override individual attributes from global\ndeclarations of <code>@SqlConfig</code> by providing a value other than <code>\"\"</code>,\n<code>{}</code>, or <code>DEFAULT</code>.",
+      "translation": "`@SqlConfig` 中的每个属性都有一个在相应属性的 javadoc 中记录的**隐式**默认值。由于 Java 语言规范中定义的注解属性规则，不幸的是无法将 `<code>null</code>` 赋值给注解属性。因此，为了支持对**继承的**全局配置的覆盖，`@SqlConfig` 属性具有一个**显式**的 `<code>default</code>` 值：对于 String 为 `<code>\"\"</code>`，对于数组为 `<code>{}</code>`，对于枚举为 `<code>DEFAULT</code>`。这种方法允许通过提供不同于 `<code>\"\"</code>`、`<code>{}</code>` 或 `<code>DEFAULT</code>` 的值，使 `@SqlConfig` 的本地声明能够选择性地覆盖全局 `@SqlConfig` 声明中的各个属性。",
+      "count": 2
+    },
+    {
+      "source": "When declared as a class-level annotation on an integration test class,\n<code>@SqlConfig</code> serves as <strong><em>global</em></strong> configuration\nfor all SQL scripts within the test class hierarchy. When declared directly\nvia the <a href=\"Sql.html#config()\"><code>config</code></a> attribute of the <code>@Sql</code> annotation,\n<code>@SqlConfig</code> serves as <strong><em>local</em></strong> configuration\nfor the SQL scripts declared within the enclosing <code>@Sql</code> annotation.",
+      "translation": "当在集成测试类上声明为类级注解时，`@SqlConfig` 充当该测试类层次结构中所有 SQL 脚本的<strong><em>全局</em></strong>配置。当通过 `<a href=\"Sql.html#config()\"><code>config</code></a>` 属性直接在 `<code>@Sql</code>` 注解上声明时，`@SqlConfig` 充当包含在外部 `<code>@Sql</code>` 注解中声明的 SQL 脚本的<strong><em>局部</em></strong>配置。",
+      "count": 2
+    },
+    {
+      "source": "Global <code>@SqlConfig</code> attributes are <em>inherited</em> whenever local\n<code>@SqlConfig</code> attributes do not supply an explicit value other than\n<code>\"\"</code>, <code>{}</code>, or <code>DEFAULT</code>. Explicit local configuration\ntherefore <em>overrides</em> global configuration.",
+      "translation": "全局 `<code>@SqlConfig</code>` 属性在本地 `<code>@SqlConfig</code>` 属性未提供除 `\"\"`、`{}` 或 `DEFAULT` 之外的显式值时会被<em>继承</em>。因此，显式的本地配置会<em>覆盖</em>全局配置。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#commentPrefixes()\"><code>commentPrefixes</code></a>, but it may be used instead of\n<a href=\"#commentPrefixes()\"><code>commentPrefixes</code></a>.",
+      "translation": "此属性不能与<a href=\"#commentPrefixes()\"><code>commentPrefixes</code></a>一起使用，但可以作为<a href=\"#commentPrefixes()\"><code>commentPrefixes</code></a>的替代方案。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#commentPrefix()\"><code>commentPrefix</code></a>, but it may be used instead of\n<a href=\"#commentPrefix()\"><code>commentPrefix</code></a>.",
+      "translation": "此属性不能与<a href=\"#commentPrefix()\"><code>commentPrefix</code></a>一起使用，但可以作为<a href=\"#commentPrefix()\"><code>commentPrefix</code></a>的替代方案。",
+      "count": 2
+    },
+    {
+      "source": "The name is only required if there is more than one bean of type\n<code>DataSource</code> in the test's <code>ApplicationContext</code>. If there\nis only one such bean, it is not necessary to specify a bean name.",
+      "translation": "如果测试的 `<code>ApplicationContext</code>` 中存在多个类型为 `<code>DataSource</code>` 的 Bean，则必须指定名称。如果只有一个此类 Bean，则无需指定 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "The name is only used if there is more than one bean of type\n<code>PlatformTransactionManager</code> in the test's <code>ApplicationContext</code>.\nIf there is only one such bean, it is not necessary to specify a bean name.",
+      "translation": "如果测试的 `ApplicationContext` 中存在多个类型为 `<code>PlatformTransactionManager</code>` 的 Bean，则仅在使用名称时才会生效。如果只有一个此类 Bean，则无需指定 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <a href=\"SqlConfig.TransactionMode.html#DEFAULT\"><code>DEFAULT</code></a>.",
+      "translation": "默认为<a href=\"SqlConfig.TransactionMode.html#DEFAULT\"><code>DEFAULT</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Can be set to <a href=\"SqlConfig.TransactionMode.html#ISOLATED\"><code>SqlConfig.TransactionMode.ISOLATED</code></a> to ensure that the SQL\nscripts are executed in a new, isolated transaction that will be immediately\ncommitted.",
+      "translation": "可设置为<a href=\"SqlConfig.TransactionMode.html#ISOLATED\"><code>SqlConfig.TransactionMode.ISOLATED</code></a>，以确保 SQL 脚本在新隔离事务中执行并立即提交。",
+      "count": 2
+    },
+    {
+      "source": "Implicitly defaults to <code>\";\"</code> if not specified and falls back to\n<code>\"\\n\"</code> as a last resort.",
+      "translation": "默认隐式使用 `<code>\";\"</code>，如果未指定则回退到作为最后手段的 `<code>\"\\n\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "May be set to\n<a href=\"../../../jdbc/datasource/init/ScriptUtils.html#EOF_STATEMENT_SEPARATOR\"><code>ScriptUtils.EOF_STATEMENT_SEPARATOR</code></a>\nto signal that each script contains a single statement without a\nseparator.",
+      "translation": "可设置为 <a href=\"../../../jdbc/datasource/init/ScriptUtils.html#EOF_STATEMENT_SEPARATOR\"><code>ScriptUtils.EOF_STATEMENT_SEPARATOR</code></a>，以表示每个脚本仅包含一个不带分隔符的语句。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <a href=\"SqlConfig.ErrorMode.html#DEFAULT\"><code>DEFAULT</code></a>.",
+      "translation": "默认为<a href=\"SqlConfig.ErrorMode.html#DEFAULT\"><code>DEFAULT</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Implicitly defaults to <code>\"--\"</code>.",
+      "translation": "隐式默认为 `<code>\"--\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "Implicitly defaults to <code>[\"--\"]</code>.",
+      "translation": "隐式默认为<code>[\"--\"]</code>。",
+      "count": 2
+    },
+    {
+      "source": "Implicitly defaults to <code>\"/*\"</code>.",
+      "translation": "隐式默认为 `<code>\"/*\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "Implicitly defaults to <code>\"*/\"</code>.",
+      "translation": "隐式默认为<code>\"*/\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "An empty string denotes that the platform encoding should be used.",
+      "translation": "空字符串表示应使用平台编码。",
+      "count": 2
+    },
+    {
+      "source": "The bean name of the <a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> that should be used to drive transactions.",
+      "translation": "应使用来驱动事务的 `<a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 的 bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../../../transaction/annotation/TransactionManagementConfigurer.html\" title=\"interface in org.springframework.transaction.annotation\"><code>TransactionManagementConfigurer</code></a> has been implemented to specify which\n<code>PlatformTransactionManager</code> bean should be used for annotation-driven\ntransaction management.",
+      "translation": "<a href=\"../../../transaction/annotation/TransactionManagementConfigurer.html\" title=\"interface in org.springframework.transaction.annotation\"><code>TransactionManagementConfigurer</code></a> 已实现，用于指定应使用哪个<code>PlatformTransactionManager</code> Bean 来处理基于注解的事务管理。",
+      "count": 2
+    },
+    {
+      "source": "There is only one bean of type <code>DataSource</code> in the test's\n<code>ApplicationContext</code>.",
+      "translation": "测试的 <code>ApplicationContext</code> 中只有一个类型为 <code>DataSource</code> 的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "The <code>DataSource</code> to use is named <code>\"dataSource\"</code>.",
+      "translation": "要使用的 <code>DataSource</code> 名为 <code>\"dataSource\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "There is only one bean of type <code>PlatformTransactionManager</code> in\nthe test's <code>ApplicationContext</code>.",
+      "translation": "测试的<code>ApplicationContext</code>中只有一个类型为<code>PlatformTransactionManager</code>的bean。",
+      "count": 2
+    },
+    {
+      "source": "The <code>PlatformTransactionManager</code> to use is named\n<code>\"transactionManager\"</code>.",
+      "translation": "要使用的 <code>PlatformTransactionManager</code> 名称为 <code>\"transactionManager\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "The data source can be retrieved from the transaction manager\nby using reflection to invoke a public method named\n<code>getDataSource()</code> on the transaction manager.",
+      "translation": "可以通过反射调用事务管理器上名为 <code>getDataSource()</code> 的公共方法来检索数据源。",
+      "count": 2
+    },
+    {
+      "source": "Configuration Scope",
+      "translation": "配置范围",
+      "count": 2
+    },
+    {
+      "source": "Default Values",
+      "translation": "默认值",
+      "count": 2
+    },
+    {
+      "source": "Inheritance and Overrides",
+      "translation": "继承与重写",
+      "count": 2
+    },
+    {
+      "source": "This annotation will be inherited from an enclosing test class by default. See\n<a href=\"../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>\nfor details.",
+      "translation": "默认情况下，此注解将从外部测试类继承。有关详细信息，请参阅 <a href=\"../NestedTestConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The bean name of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a> against which the\nscripts should be executed.",
+      "translation": "要执行脚本的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a> 的 bean 名称。",
+      "count": 1
+    },
+    {
+      "source": "Enumeration of <em>modes</em> that dictate how errors are handled while\nexecuting SQL statements.",
+      "translation": "枚举<em>模式</em>，这些模式规定了在执行 SQL 语句时如何处理错误。",
+      "count": 1
+    },
+    {
+      "source": "Enumeration of <em>modes</em> that dictate whether SQL scripts should be\nexecuted within a transaction and what the transaction propagation behavior\nshould be.",
+      "translation": "枚举<em>模式</em>，用于规定是否应在事务内执行 SQL 脚本以及事务传播行为应为何种方式。",
+      "count": 1
+    },
+    {
+      "source": "The <em>mode</em> to use when an error is encountered while executing an\nSQL statement.",
+      "translation": "执行 SQL 语句时遇到错误所使用的<em>mode</em>。",
+      "count": 1
+    },
+    {
+      "source": "The <em>mode</em> to use when determining whether SQL scripts should be\nexecuted within a transaction.",
+      "translation": "用于确定是否应在事务内执行 SQL 脚本的<em>mode</em>。",
+      "count": 1
+    },
+    {
+      "source": "The end delimiter that identifies block comments within the SQL scripts.",
+      "translation": "标识 SQL 脚本中块注释的结束分隔符。",
+      "count": 1
+    },
+    {
+      "source": "The start delimiter that identifies block comments within the SQL scripts.",
+      "translation": "标识 SQL 脚本中块注释的起始分隔符。",
+      "count": 1
+    },
+    {
+      "source": "The prefix that identifies single-line comments within the SQL scripts.",
+      "translation": "标识 SQL 脚本中单行注释前缀。",
+      "count": 1
+    },
+    {
+      "source": "The prefixes that identify single-line comments within the SQL scripts.",
+      "translation": "用于标识 SQL 脚本中单行注释的前缀。",
+      "count": 1
+    },
+    {
+      "source": "The encoding for the supplied SQL scripts, if different from the platform\nencoding.",
+      "translation": "如果提供的 SQL 脚本的编码与平台编码不同，则使用以下编码。",
+      "count": 1
+    },
+    {
+      "source": "The character string used to separate individual statements within the\nSQL scripts.",
+      "translation": "用于在 SQL 脚本中分隔各个语句的字符串。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Tadaya Tsuyukubo",
+      "translation": "Sam Brannen，Tsuyukubo Tadaya",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

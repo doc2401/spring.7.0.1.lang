@@ -1,0 +1,186 @@
+{
+  "created_at": "2026-04-14 14:35:18",
+  "updated_at": "2026-04-14 14:35:18",
+  "stats": {
+    "total_entries": 34,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 63,
+    "entries_with_hits": 34,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8529411764705883,
+    "usage_percentage": 0.0034
+  },
+  "items": [
+    {
+      "source": "Create a new <code>SingleColumnRowMapper</code>.",
+      "translation": "创建一个新的<code>SingleColumnRowMapper</code>。",
+      "count": 4
+    },
+    {
+      "source": "Static factory method to create a new <code>SingleColumnRowMapper</code>.",
+      "translation": "用于创建新 <code>SingleColumnRowMapper</code> 的静态工厂方法。",
+      "count": 4
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型",
+      "count": 4
+    },
+    {
+      "source": "The default implementation calls\n<a href=\"../support/JdbcUtils.html#getResultSetValue(java.sql.ResultSet,int,java.lang.Class)\"><code>JdbcUtils.getResultSetValue(java.sql.ResultSet, int, Class)</code></a>.\nIf no required type has been specified, this method delegates to\n<code>getColumnValue(rs, index)</code>, which basically calls\n<code>ResultSet.getObject(index)</code> but applies some additional\ndefault conversion to appropriate value types.",
+      "translation": "默认实现调用<a href=\"../support/JdbcUtils.html#getResultSetValue(java.sql.ResultSet,int,java.lang.Class)\"><code>JdbcUtils.getResultSetValue(java.sql.ResultSet, int, Class)</code></a>。如果未指定所需类型，此方法会委托给<code>getColumnValue(rs, index)</code>，该方法基本上调用<code>ResultSet.getObject(index)</code>，但会对适当的值类型应用一些额外的默认转换。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <code>JdbcUtils.getResultSetValue()</code>,\nwhich uses the <code>ResultSet.getObject(index)</code> method. Additionally,\nit includes a \"hack\" to get around Oracle returning a non-standard object for\ntheir TIMESTAMP datatype. See the <code>JdbcUtils#getResultSetValue()</code>\njavadoc for details.",
+      "translation": "默认实现委托给 `<code>JdbcUtils.getResultSetValue()</code>`，该方法使用 `<code>ResultSet.getObject(index)</code>`。此外，它包含一个“变通方法”，以解决 Oracle 为其 TIMESTAMP 数据类型返回非标准对象的问题。有关详细信息，请参阅 `<code>JdbcUtils#getResultSetValue()</code>` 的 javadoc。",
+      "count": 2
+    },
+    {
+      "source": "If the required type is String, the value will simply get stringified\nvia <code>toString()</code>. In case of a Number, the value will be\nconverted into a Number, either through number conversion or through\nString parsing (depending on the value type). Otherwise, the value will\nbe converted to a required type using the <a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>.",
+      "translation": "如果所需类型为 String，该值将通过<code>toString()</code>直接转换为字符串。如果是 Number 类型，该值将通过数值转换或字符串解析（取决于值的类型）转换为 Number。否则，将使用<a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>将该值转换为所需类型。",
+      "count": 2
+    },
+    {
+      "source": "Default is the <a href=\"../../core/convert/support/DefaultConversionService.html\" title=\"class in org.springframework.core.convert.support\"><code>DefaultConversionService</code></a>.",
+      "translation": "默认值为<a href=\"../../core/convert/support/DefaultConversionService.html\" title=\"class in org.springframework.core.convert.support\"><code>DefaultConversionService</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Validates that there is only one column selected,\nthen delegates to <code>getColumnValue()</code> and also\n<code>convertValueToRequiredType</code>, if necessary.",
+      "translation": "验证仅有一列被选中，然后委托给 `<code>getColumnValue()</code>` 以及必要时调用 `<code>convertValueToRequiredType</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The type of the result value for each row can be specified. The value\nfor the single column will be extracted from the <code>ResultSet</code>\nand converted into the specified target type.",
+      "translation": "每行结果值的类型可以指定。单列的值将从 `<code>ResultSet</code>` 中提取并转换为指定的目标类型。",
+      "count": 2
+    },
+    {
+      "source": "If not specified, the column value will be exposed as\nreturned by the JDBC driver.",
+      "translation": "如果未指定，列值将按 JDBC 驱动程序返回的方式暴露。",
+      "count": 2
+    },
+    {
+      "source": "Set a <a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> for converting a fetched value.",
+      "translation": "设置一个<a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>用于转换获取的值。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>SingleColumnRowMapper</code> for bean-style configuration.",
+      "translation": "为基于 Bean 的配置创建一个新的<code>SingleColumnRowMapper</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">mapRow</a></code> in interface <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.jdbc.core\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in SingleColumnRowMapper\">T</a>&gt;</code>",
+      "translation": "`<a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">mapRow</a>` 接口 `<code><a href=\"RowMapper.html\" title=\"interface in org.springframework.jdbc.core\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in SingleColumnRowMapper\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>conversionService</code> - the <a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> for converting a\nfetched value, or <code>null</code> for none",
+      "translation": "<code>conversionService</code> - 用于转换已获取值的<a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>，或为无时设为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>conversionService</code> - a <a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> for converting a fetched value",
+      "translation": "`conversionService` - 用于转换获取值的<a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the column value as extracted from <code>getColumnValue()</code>\n(never <code>null</code>)",
+      "translation": "<code>value</code> - 从 <code>getColumnValue()</code> 提取的列值（永远不会为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match\n(or <code>null</code> if none specified)",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型（如果未指定则为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - in case of extraction failure",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 提取失败时",
+      "count": 2
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match\n(never <code>null</code>)",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型（绝不 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>rs</code> - is the ResultSet holding the data",
+      "translation": "<code>rs</code> 是存储数据的 ResultSet。",
+      "count": 2
+    },
+    {
+      "source": "<code>index</code> - is the column index",
+      "translation": "<code>index</code> - 是列索引",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Kazuki Shimizu",
+      "translation": "Jürgen Hoeller，清水和之",
+      "count": 2
+    },
+    {
+      "source": "the Object value",
+      "translation": "Object 值",
+      "count": 2
+    },
+    {
+      "source": "Convert the given column value to the specified required type.",
+      "translation": "将给定的列值转换为指定的必需类型。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a JDBC object value for the specified column, using the most\nappropriate value type.",
+      "translation": "获取指定列的 JDBC 对象值，使用最合适的值类型。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a JDBC object value for the specified column.",
+      "translation": "检索指定列的 JDBC 对象值。",
+      "count": 1
+    },
+    {
+      "source": "Extract a value for the single column in the current row.",
+      "translation": "提取当前行中单列的值。",
+      "count": 1
+    },
+    {
+      "source": "Set the type that each result object is expected to match.",
+      "translation": "设置每个结果对象预期匹配的类型。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the result type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 结果类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>rs</code> - the <code>ResultSet</code> to map (pre-initialized for the current row)",
+      "translation": "<code>rs</code> - 要映射的 <code>ResultSet</code>（已针对当前行预初始化）",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if an SQLException is encountered while getting\ncolumn values (that is, there's no need to catch SQLException)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果在获取列值时遇到 SQLException（即无需捕获 SQLException）。",
+      "count": 1
+    },
+    {
+      "source": "<code>rowNum</code> - the number of the current row",
+      "translation": "<code>rowNum</code> - 当前行的行号",
+      "count": 1
+    },
+    {
+      "source": "the result object for the current row (may be <code>null</code>)",
+      "translation": "当前行的结果对象（可能为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the converted value",
+      "translation": "转换后的值",
+      "count": 1
+    }
+  ]
+}

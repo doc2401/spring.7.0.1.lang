@@ -1,0 +1,206 @@
+{
+  "created_at": "2026-04-14 17:56:03",
+  "updated_at": "2026-04-14 17:56:03",
+  "stats": {
+    "total_entries": 38,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 77,
+    "entries_with_hits": 38,
+    "entries_without_hits": 0,
+    "hit_rate": 2.026315789473684,
+    "usage_percentage": 0.0038000000000000004
+  },
+  "items": [
+    {
+      "source": "Return the maximum number of attempts after which a call to\n<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a> returns <a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>.",
+      "translation": "返回调用 `<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a>` 后返回 `<a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>` 的最大尝试次数。",
+      "count": 3
+    },
+    {
+      "source": "Return the maximum elapsed time in milliseconds after which a call to\n<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a> returns <a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>.",
+      "translation": "返回调用 `<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a>` 后返回 `<a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>` 的最大经过时间（毫秒）。",
+      "count": 3
+    },
+    {
+      "source": "The maximum number of attempts after which a call to\n<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a> returns <a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>.",
+      "translation": "调用 `<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a>` 返回 `<a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>` 后的最大尝试次数。",
+      "count": 3
+    },
+    {
+      "source": "Set the maximum elapsed time in milliseconds after which a call to\n<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a> returns <a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>.",
+      "translation": "设置最大经过时间（毫秒），在此时间之后，对<a href=\"BackOffExecution.html#nextBackOff()\"><code>BackOffExecution.nextBackOff()</code></a>的调用将返回<a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>initialInterval</code> - the initial interval in milliseconds",
+      "translation": "<code>initialInterval</code> - 初始间隔（毫秒）",
+      "count": 3
+    },
+    {
+      "source": "<code>multiplier</code> - the multiplier (must be greater than or equal to 1)",
+      "translation": "<code>multiplier</code> - 乘数（必须大于或等于 1）",
+      "count": 3
+    },
+    {
+      "source": "Note that the default max elapsed time is <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html#MAX_VALUE\" title=\"class or interface in java.lang\"><code>Long.MAX_VALUE</code></a>, and the\ndefault maximum number of attempts is <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html#MAX_VALUE\" title=\"class or interface in java.lang\"><code>Integer.MAX_VALUE</code></a>.\nUse <a href=\"#setMaxElapsedTime(long)\"><code>setMaxElapsedTime(long)</code></a> to limit the length of time that an instance\nshould accumulate before returning <a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>. Alternatively,\nuse <a href=\"#setMaxAttempts(long)\"><code>setMaxAttempts(long)</code></a> to limit the number of attempts. The execution\nstops when either of those two limits is reached.",
+      "translation": "请注意，默认的最大经过时间为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html#MAX_VALUE\" title=\"class or interface in java.lang\"><code>Long.MAX_VALUE</code></a>，默认的最大尝试次数为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html#MAX_VALUE\" title=\"class or interface in java.lang\"><code>Integer.MAX_VALUE</code></a>。使用<a href=\"#setMaxElapsedTime(long)\"><code>setMaxElapsedTime(long)</code></a>来限制实例在返回<a href=\"BackOffExecution.html#STOP\"><code>BackOffExecution.STOP</code></a>之前累积的时间长度。或者，使用<a href=\"#setMaxAttempts(long)\"><code>setMaxAttempts(long)</code></a>来限制尝试次数。当达到这两个限制中的任何一个时，执行将停止。",
+      "count": 2
+    },
+    {
+      "source": "Example: The default interval is <a href=\"#DEFAULT_INITIAL_INTERVAL\">2000L</a> ms;\nthe default multiplier is <a href=\"#DEFAULT_MULTIPLIER\">1.5</a>; and the default max\ninterval is <a href=\"#DEFAULT_MAX_INTERVAL\">30000L</a>. For 10 attempts the sequence will be\nas follows:",
+      "translation": "默认间隔为<a href=\"#DEFAULT_INITIAL_INTERVAL\">2000L</a> ms；默认倍数为<a href=\"#DEFAULT_MULTIPLIER\">1.5</a>；默认最大间隔为<a href=\"#DEFAULT_MAX_INTERVAL\">30000L</a>。对于 10 次尝试，序列如下：",
+      "count": 2
+    },
+    {
+      "source": "This applies to the <a href=\"#setInitialInterval(long)\">initial interval</a>\nas well as the <a href=\"#setJitter(long)\">jitter range</a>.",
+      "translation": "这也适用于<a href=\"#setInitialInterval(long)\">初始间隔</a>以及<a href=\"#setJitter(long)\">抖动范围</a>。",
+      "count": 2
+    },
+    {
+      "source": "If a <code>multiplier</code> is specified, it is applied to the jitter value\nas well.",
+      "translation": "如果指定了 `<code>multiplier</code>`，它也会应用于抖动值。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"BackOff.html#start()\">BackOff</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"BackOff.html#start()\">BackOff</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "The default initial interval: 2000L ms.",
+      "translation": "默认初始间隔：2000L ms。",
+      "count": 2
+    },
+    {
+      "source": "The default jitter value for each interval: 0L ms.",
+      "translation": "每个间隔的默认抖动值：0L ms。",
+      "count": 2
+    },
+    {
+      "source": "The default maximum attempts: unlimited.",
+      "translation": "默认最大尝试次数：无限制。",
+      "count": 2
+    },
+    {
+      "source": "The default maximum elapsed time: unlimited.",
+      "translation": "默认最大经过时间：无限制。",
+      "count": 2
+    },
+    {
+      "source": "The default maximum back-off time: 30000L ms.",
+      "translation": "默认最大退避时间：30000L ms。",
+      "count": 2
+    },
+    {
+      "source": "The default multiplier (increases the interval by 50%): 1.5.",
+      "translation": "默认乘数（将间隔增加 50%）：1.5。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance with the default settings.",
+      "translation": "使用默认设置创建实例。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance with the supplied settings.",
+      "translation": "使用提供的设置创建实例。",
+      "count": 2
+    },
+    {
+      "source": "Return the initial interval in milliseconds.",
+      "translation": "返回初始间隔（毫秒）。",
+      "count": 2
+    },
+    {
+      "source": "Return the jitter value to apply for each interval in milliseconds.",
+      "translation": "返回每个间隔要应用的抖动值，单位为毫秒。",
+      "count": 2
+    },
+    {
+      "source": "Return the maximum back-off time in milliseconds.",
+      "translation": "返回最大退避时间（毫秒）。",
+      "count": 2
+    },
+    {
+      "source": "Return the value to multiply the current interval by for each attempt.",
+      "translation": "返回每次尝试时用于将当前区间相乘的倍数。",
+      "count": 2
+    },
+    {
+      "source": "Set the initial interval.",
+      "translation": "设置初始间隔。",
+      "count": 2
+    },
+    {
+      "source": "Set the maximum back-off time in milliseconds.",
+      "translation": "设置最大退避时间（毫秒）。",
+      "count": 2
+    },
+    {
+      "source": "Start a new back off execution.",
+      "translation": "启动新的退避执行。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"BackOff.html#start()\">start</a></code> in interface <code><a href=\"BackOff.html\" title=\"interface in org.springframework.util.backoff\">BackOff</a></code>",
+      "translation": "`<code><a href=\"BackOff.html#start()\">start</a></code>` 接口 `<code><a href=\"BackOff.html\" title=\"interface in org.springframework.util.backoff\">BackOff</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>jitter</code> - the jitter value in milliseconds",
+      "translation": "<code>jitter</code> - 毫秒级的抖动值",
+      "count": 2
+    },
+    {
+      "source": "<code>maxElapsedTime</code> - the maximum elapsed time",
+      "translation": "<code>maxElapsedTime</code> - 最大经过时间",
+      "count": 2
+    },
+    {
+      "source": "<code>maxAttempts</code> - the maximum number of attempts",
+      "translation": "<code>maxAttempts</code> - 最大尝试次数",
+      "count": 2
+    },
+    {
+      "source": "Stephane Nicoll, Gary Russell, Juergen Hoeller",
+      "translation": "Stephane Nicoll, Gary Russell, Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "the maximum elapsed time",
+      "translation": "最大经过时间",
+      "count": 2
+    },
+    {
+      "source": "the maximum number of attempts",
+      "translation": "最大尝试次数",
+      "count": 2
+    },
+    {
+      "source": "Set the jitter value to apply for each interval, leading to random\nmilliseconds to be subtracted or added and resulting in a value between\n<code>interval - jitter</code> and <code>interval + jitter</code> but never below\n<code>initialInterval</code> or above <code>maxInterval</code>.",
+      "translation": "设置每个间隔要应用的抖动值，导致随机毫秒被减去或加上，从而产生介于 `<code>interval - jitter</code>` 和 `<code>interval + jitter</code>` 之间的值，但永远不会低于 `<code>initialInterval</code>` 或高于 `<code>maxInterval</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Set the value to multiply the current interval by for each attempt.",
+      "translation": "将值设置为每次尝试时乘以当前区间的倍数。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "a fresh <a href=\"BackOffExecution.html\" title=\"interface in org.springframework.util.backoff\"><code>BackOffExecution</code></a> ready to be used",
+      "translation": "一个全新的、准备就绪的<a href=\"BackOffExecution.html\" title=\"interface in org.springframework.util.backoff\"><code>BackOffExecution</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

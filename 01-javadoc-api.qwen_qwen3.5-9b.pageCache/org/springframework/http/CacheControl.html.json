@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-04-14 13:46:32",
+  "updated_at": "2026-04-14 13:46:32",
+  "stats": {
+    "total_entries": 48,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 110,
+    "entries_with_hits": 48,
+    "entries_without_hits": 0,
+    "hit_rate": 2.2916666666666665,
+    "usage_percentage": 0.0048000000000000004
+  },
+  "items": [
+    {
+      "source": "<code>this</code>, to facilitate method chaining",
+      "translation": "`this`，以支持方法链式调用",
+      "count": 17
+    },
+    {
+      "source": "This directive is well suited for publicly caching resources, knowing that\nthey won't change within the configured amount of time. Additional directives\ncan be also used, in case resources shouldn't be cached (<a href=\"#cachePrivate()\"><code>cachePrivate()</code></a>)\nor transformed (<a href=\"#noTransform()\"><code>noTransform()</code></a>) by shared caches.",
+      "translation": "该指令非常适合用于公开缓存资源，因为已知这些资源在配置的时段内不会发生变化。如果资源不应被共享缓存缓存（<a href=\"#cachePrivate()\"><code>cachePrivate()</code></a>）或转换（<a href=\"#noTransform()\"><code>noTransform()</code></a>），也可以使用其他指令。",
+      "count": 3
+    },
+    {
+      "source": "In order to prevent caches to reuse the cached response even when it has\nbecome stale (i.e. the \"max-age\" delay is passed), the \"must-revalidate\"\ndirective should be set (<a href=\"#mustRevalidate()\"><code>mustRevalidate()</code></a>",
+      "translation": "为了防止缓存即使响应已过期（即超过\"max-age\"延迟）也重复使用缓存的响应，应设置\"must-revalidate\"指令（<a href=\"#mustRevalidate()\"><code>mustRevalidate()</code></a>）。",
+      "count": 3
+    },
+    {
+      "source": "This directive indicates that, in shared caches, the maximum age specified\nby this directive overrides the maximum age specified by other directives.",
+      "translation": "该指令指示，在共享缓存中，此指令指定的最大生存时间会覆盖其他指令指定的最大生存时间。",
+      "count": 3
+    },
+    {
+      "source": "This directive indicates that caches MAY serve the response in which it\nappears after it becomes stale, up to the indicated number of seconds.\nIf a cached response is served stale due to the presence of this extension,\nthe cache SHOULD attempt to revalidate it while still serving stale responses\n(i.e. without blocking).",
+      "translation": "该指令表示，在缓存项过期后，缓存可以将其服务最多指示的秒数。如果由于存在此扩展而将过期的缓存响应进行服务，则缓存应当尝试在继续服务过期响应的同时对其进行重新验证（即不阻塞）。",
+      "count": 3
+    },
+    {
+      "source": "This directive indicates that when an error is encountered, a cached stale response\nMAY be used to satisfy the request, regardless of other freshness information.",
+      "translation": "该指令表示，当遇到错误时，无论其他新鲜度信息如何，都**可能**使用缓存的过期响应来满足请求。",
+      "count": 3
+    },
+    {
+      "source": "<code>maxAge</code> - the maximum time the response should be cached",
+      "translation": "<code>maxAge</code> - 响应应缓存的最大时间",
+      "count": 3
+    },
+    {
+      "source": "<code>sMaxAge</code> - the maximum time the response should be cached",
+      "translation": "<code>sMaxAge</code> - 响应应缓存的最大时间",
+      "count": 3
+    },
+    {
+      "source": "<code>staleWhileRevalidate</code> - the maximum time the response should be used while being revalidated",
+      "translation": "<code>staleWhileRevalidate</code> - 在重新验证期间，响应可使用的最大时间。",
+      "count": 3
+    },
+    {
+      "source": "<code>staleIfError</code> - the maximum time the response should be used when errors are encountered",
+      "translation": "<code>staleIfError</code> - 在遇到错误时，响应应使用的最大时间。",
+      "count": 3
+    },
+    {
+      "source": "In order to disable caching and minimize requests/responses exchanges,\nthe <a href=\"#noStore()\"><code>noStore()</code></a> directive should be used instead of <code>#noCache()</code>.",
+      "translation": "为了禁用缓存并最小化请求/响应交换，应使用 `<a href=\"#noStore()\"><code>noStore()</code></a>` 指令而不是`<code>#noCache()</code>`。",
+      "count": 2
+    },
+    {
+      "source": "This directive indicates that the origin server will not update the\nrepresentation of that resource during the freshness lifetime of the response.\nAdding a <a href=\"#maxAge(java.time.Duration)\"><code>max-age</code></a> directive is strongly advised\nto enforce the actual freshness lifetime.",
+      "translation": "该指令表示源服务器在响应的生存期内不会更新该资源的表示形式。强烈建议添加 `<a href=\"#maxAge(java.time.Duration)\"><code>max-age</code></a>` 指令以强制实施实际的生存期。",
+      "count": 2
+    },
+    {
+      "source": "Adding Cache-Control directives to HTTP responses can significantly improve the client\nexperience when interacting with a web application. This builder creates opinionated\n\"Cache-Control\" headers with response directives only, with several use cases in mind.",
+      "translation": "向 HTTP 响应添加 Cache-Control 指令可以显著提高与 Web 应用程序交互时的客户端体验。此构建器会创建具有明确观点的“Cache-Control”标头，仅包含响应指令，并针对多种使用场景进行了设计。",
+      "count": 2
+    },
+    {
+      "source": "Note that to be efficient, Cache-Control headers should be written along HTTP validators\nsuch as \"Last-Modified\" or \"ETag\" headers.",
+      "translation": "注意，为了提高效率，应沿与“Last-Modified”或\"ETag\"等 HTTP 验证器一起编写 Cache-Control 标头。",
+      "count": 2
+    },
+    {
+      "source": "This is well suited for using other optional directives without \"max-age\",\n\"no-cache\" or \"no-store\".",
+      "translation": "这非常适合用于不使用\"max-age\"、\"no-cache\"或\"no-store\"的其他可选指令。",
+      "count": 2
+    },
+    {
+      "source": "This directive is well suited for telling caches that the response\ncan be reused only if the client revalidates it with the server.\nThis directive won't disable cache altogether and may result with clients\nsending conditional requests (with \"ETag\", \"If-Modified-Since\" headers)\nand the server responding with \"304 - Not Modified\" status.",
+      "translation": "该指令非常适合告知缓存，只有在客户端与服务器重新验证后，响应才能被重用。该指令不会完全禁用缓存，可能会导致客户端发送条件请求（包含\"ETag\"、\"If-Modified-Since\"标头），而服务器则返回\"304 - Not Modified\"状态。",
+      "count": 2
+    },
+    {
+      "source": "This directive is well suited for preventing caches (browsers and proxies)\nto cache the content of responses.",
+      "translation": "此指令非常适合防止浏览器和代理缓存响应内容。",
+      "count": 2
+    },
+    {
+      "source": "This directive indicates that once it has become stale, a cache MUST NOT\nuse the response to satisfy subsequent requests without successful validation\non the origin server.",
+      "translation": "该指令表示，一旦缓存项失效，则绝对禁止在不经过源服务器成功验证的情况下使用响应来满足后续请求。",
+      "count": 2
+    },
+    {
+      "source": "This directive indicates that intermediaries (caches and others) should\nnot transform the response content. This can be useful to force caches and\nCDNs not to automatically gzip or optimize the response content.",
+      "translation": "该指令指示中间件（缓存等）不应转换响应内容。这可用于强制缓存和 CDN 不要自动对响应内容进行 gzip 压缩或优化。",
+      "count": 2
+    },
+    {
+      "source": "This directive indicates that any cache MAY store the response,\neven if the response would normally be non-cacheable or cacheable\nonly within a private cache.",
+      "translation": "该指令表示任何缓存都<em>可能</em>存储响应，即使该响应通常不可缓存或仅可在私有缓存中缓存。",
+      "count": 2
+    },
+    {
+      "source": "This directive indicates that the response message is intended\nfor a single user and MUST NOT be stored by a shared cache.",
+      "translation": "该指令表明响应消息是专为单个用户准备的，且共享缓存不得对其进行存储。",
+      "count": 2
+    },
+    {
+      "source": "This directive has the same meaning as the \"must-revalidate\" directive,\nexcept that it does not apply to private caches (i.e. browsers, HTTP clients).",
+      "translation": "该指令与\"must-revalidate\"指令具有相同的含义，但不适用于私有缓存（即浏览器、HTTP 客户端）。",
+      "count": 2
+    },
+    {
+      "source": "Create an empty CacheControl instance.",
+      "translation": "创建一个空的 CacheControl 实例。",
+      "count": 2
+    },
+    {
+      "source": "Return the \"Cache-Control\" header value, if any.",
+      "translation": "返回“Cache-Control”标头值（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Add a \"max-age=\" directive.",
+      "translation": "添加一个\"max-age=\"指令。",
+      "count": 2
+    },
+    {
+      "source": "Add an \"s-maxage\" directive.",
+      "translation": "添加一个\"s-maxage\"指令。",
+      "count": 2
+    },
+    {
+      "source": "Add a \"stale-if-error\" directive.",
+      "translation": "添加一个“stale-if-error”指令。",
+      "count": 2
+    },
+    {
+      "source": "Add a \"stale-while-revalidate\" directive.",
+      "translation": "添加一个“stale-while-revalidate”指令。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7234#section-5.2.2\">rfc7234 section 5.2.2</a></li>\n<li><a href=\"https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching\">\nHTTP caching - Google developers reference</a></li>\n<li><a href=\"https://www.mnot.net/cache_docs/\">Mark Nottingham's cache documentation</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7234#section-5.2.2\">RFC 7234 第 5.2.2 节</a></li>\n<li><a href=\"https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching\">\nHTTP 缓存 - Google 开发者参考</a></li>\n<li><a href=\"https://www.mnot.net/cache_docs/\">Mark Nottingham 的缓存文档</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "Caching HTTP responses with <code>CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS)</code>\nwill result in <code>Cache-Control: \"max-age=3600\"</code>",
+      "translation": "使用 `<code>CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS)</code>` 缓存 HTTP 响应将导致生成 `<code>Cache-Control: \"max-age=3600\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Preventing cache with <code>CacheControl cc = CacheControl.noStore()</code>\nwill result in <code>Cache-Control: \"no-store\"</code>",
+      "translation": "使用 `<code>CacheControl cc = CacheControl.noStore()</code>` 防止缓存将导致 `<code>Cache-Control: \"no-store\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Advanced cases like <code>CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS).noTransform().cachePublic()</code>\nwill result in <code>Cache-Control: \"max-age=3600, no-transform, public\"</code>",
+      "translation": "高级用例，如 `<code>CacheControl cc = CacheControl.maxAge(1, TimeUnit.HOURS).noTransform().cachePublic()</code>`，将生成 `<code>Cache-Control: \"max-age=3600, no-transform, public\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>unit</code> - the time unit of the <code>maxAge</code> argument",
+      "translation": "<code>unit</code> - <code>maxAge</code> 参数的时间单位",
+      "count": 2
+    },
+    {
+      "source": "<code>unit</code> - the time unit of the <code>sMaxAge</code> argument",
+      "translation": "<code>unit</code> - <code>sMaxAge</code> 参数的时间单位",
+      "count": 2
+    },
+    {
+      "source": "<code>unit</code> - the time unit of the <code>staleWhileRevalidate</code> argument",
+      "translation": "<code>unit</code> - <code>staleWhileRevalidate</code> 参数的时间单位",
+      "count": 2
+    },
+    {
+      "source": "<code>unit</code> - the time unit of the <code>staleIfError</code> argument",
+      "translation": "<code>unit</code> - <code>staleIfError</code> 参数的时间单位",
+      "count": 2
+    },
+    {
+      "source": "the header value, or <code>null</code> if no directive was added",
+      "translation": "标头值，或者如果未添加任何指令则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Brian Clozel, Juergen Hoeller",
+      "translation": "Brian Clozel，Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "Add a \"private\" directive.",
+      "translation": "添加一个\"private\"指令。",
+      "count": 1
+    },
+    {
+      "source": "Add a \"public\" directive.",
+      "translation": "添加一个\"public\"指令。",
+      "count": 1
+    },
+    {
+      "source": "Return an empty directive.",
+      "translation": "返回空指令。",
+      "count": 1
+    },
+    {
+      "source": "Add an \"immutable\" directive.",
+      "translation": "添加一个“不可变”指令。",
+      "count": 1
+    },
+    {
+      "source": "Add a \"must-revalidate\" directive.",
+      "translation": "添加一个“必须重新验证”指令。",
+      "count": 1
+    },
+    {
+      "source": "Add a \"no-cache\" directive.",
+      "translation": "添加“no-cache”指令。",
+      "count": 1
+    },
+    {
+      "source": "Add a \"no-store\" directive.",
+      "translation": "添加一个“no-store”指令。",
+      "count": 1
+    },
+    {
+      "source": "Add a \"no-transform\" directive.",
+      "translation": "添加一个“no-transform”指令。",
+      "count": 1
+    },
+    {
+      "source": "Add a \"proxy-revalidate\" directive.",
+      "translation": "添加一个 \"proxy-revalidate\" 指令。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    }
+  ]
+}

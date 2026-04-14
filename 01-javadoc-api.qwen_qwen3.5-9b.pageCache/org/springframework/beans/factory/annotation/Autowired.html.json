@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-04-14 11:00:20",
+  "updated_at": "2026-04-14 11:00:20",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7894736842105263,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "In case of an array, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>, or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>\ndependency type, the container autowires all beans matching the declared value\ntype. For such purposes, the map keys must be declared as type <code>String</code>\nwhich will be resolved to the corresponding bean names. Such a container-provided\ncollection will be ordered, taking into account\n<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> and\n<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> values of the target\ncomponents, otherwise following their registration order in the container.\nAlternatively, a single matching target bean may also be a generally typed\n<code>Collection</code> or <code>Map</code> itself, getting injected as such.",
+      "translation": "对于数组、`Collection` 或 `Map` 依赖类型，容器会自动注入所有匹配声明类型的 Bean。为此，Map 的键必须声明为 `String` 类型，该类型将被解析为相应的 Bean 名称。此类由容器提供的集合将按顺序排列，同时考虑目标组件的 `<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>` 和 `<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a>` 值；否则，将遵循它们在容器中的注册顺序。或者，单个匹配的目标 Bean 本身也可以是一个通用类型的 `Collection` 或 `Map`，并以此形式被注入。",
+      "count": 2
+    },
+    {
+      "source": "Note that actual injection is performed through a\n<a href=\"../config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a> which in turn means that you <em>cannot</em>\nuse <code>@Autowired</code> to inject references into\n<a href=\"../config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a> or\n<a href=\"../config/BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanFactoryPostProcessor</code></a>\ntypes. Please consult the javadoc for the <a href=\"AutowiredAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.beans.factory.annotation\"><code>AutowiredAnnotationBeanPostProcessor</code></a>\nclass (which, by default, checks for the presence of this annotation).",
+      "translation": "请注意，实际的注入是通过一个 `<a href=\"../config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a>` 接口执行的，这意味着您 <em>不能</em> 使用 `<code>@Autowired</code>` 将引用注入到 `<a href=\"../config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a>` 或 `<a href=\"../config/BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanFactoryPostProcessor</code></a>` 类型的对象中。请查阅 `<a href=\"AutowiredAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.beans.factory.annotation\"><code>AutowiredAnnotationBeanPostProcessor</code></a>` 类的 javadoc（该处理器默认会检查此注解是否存在）。",
+      "count": 2
+    },
+    {
+      "source": "Only one constructor of any given bean class may declare this annotation with the\n<a href=\"#required()\"><code>required()</code></a> attribute set to <code>true</code>, indicating <i>the</i> constructor\nto be autowired when used as a Spring bean. Furthermore, if the <code>required</code>\nattribute is set to <code>true</code>, only a single constructor may be annotated\nwith <code>@Autowired</code>. If multiple <i>non-required</i> constructors declare the\nannotation, they will be considered as candidates for autowiring. The constructor\nwith the greatest number of dependencies that can be satisfied by matching beans\nin the Spring container will be chosen. If none of the candidates can be satisfied,\nthen a primary/default constructor (if present) will be used. Similarly, if a\nclass declares multiple constructors but none of them is annotated with\n<code>@Autowired</code>, then a primary/default constructor (if present) will be used.\nIf a class only declares a single constructor to begin with, it will always be used,\neven if not annotated. An annotated constructor does not have to be public.",
+      "translation": "任何给定的 Bean 类中，最多只能有一个构造函数声明此注解并将 <a href=\"#required()\"><code>required()</code></a> 属性设置为 <code>true</code>，以指示在作为 Spring Bean 使用时进行自动装配的<i>该</i>构造函数。此外，如果 <code>required</code> 属性设置为 <code>true</code>，则只能有一个构造函数被标注为 <code>@Autowired</code>。如果有多个<i>非必需的</i>构造函数声明了此注解，它们将被视为自动装配的候选项。将选择依赖项数量最多且能够通过匹配 Spring 容器中的 Bean 来满足的构造函数。如果没有任何候选项可以满足，则将使用主/默认构造函数（如果存在）。同样，如果一个类声明了多个构造函数但均未标注 <code>@Autowired</code>，则将使用主/默认构造函数（如果存在）。如果一个类最初只声明了一个构造函数，即使未加注解，也将始终使用该构造函数。已标注的构造函数不必是 public 的。",
+      "count": 2
+    },
+    {
+      "source": "In the case of a multi-arg constructor or method, the <a href=\"#required()\"><code>required()</code></a> attribute\nis applicable to all arguments. Individual parameters may be declared as Java-8 style\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a> as well as <code>@Nullable</code> or a not-null parameter\ntype in Kotlin, overriding the base 'required' semantics.",
+      "translation": "对于多参数构造函数或方法，<a href=\"#required()\"><code>required()</code></a> 属性适用于所有参数。可以单独将参数声明为 Java-8 风格的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a>以及 Kotlin 中的<code>@Nullable</code>或不可空参数类型，从而覆盖基础的“必需”语义。",
+      "count": 2
+    },
+    {
+      "source": "Although <code>@Autowired</code> can technically be declared on individual method\nor constructor parameters, most parts of the framework ignore such declarations.\nThe only part of the core Spring Framework that actively supports autowired\nparameters is the JUnit Jupiter support in the <code>spring-test</code> module (see the\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#testcontext-junit-jupiter-di\">TestContext framework</a>\nreference documentation for details).",
+      "translation": "尽管 `<code>@Autowired</code>` 在技术上可以声明在单个方法或构造函数参数上，但框架的大部分组件会忽略此类声明。核心 Spring Framework 中唯一主动支持自动注入参数的部分是 `<code>spring-test</code>` 模块中的 JUnit Jupiter 支持（有关详细信息，请参阅 <a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#testcontext-junit-jupiter-di\">TestContext 框架</a> 参考文档）。",
+      "count": 2
+    },
+    {
+      "source": "Fields are injected right after construction of a bean, before any config methods\nare invoked. Such a config field does not have to be public.",
+      "translation": "字段在 Bean 构建之后、任何配置方法调用之前注入。此类配置字段不必是公开的。",
+      "count": 2
+    },
+    {
+      "source": "Config methods may have an arbitrary name and any number of arguments; each of\nthose arguments will be autowired with a matching bean in the Spring container.\nBean property setter methods are effectively just a special case of such a general\nconfig method. Such config methods do not have to be public.",
+      "translation": "配置方法可以具有任意名称和任意数量的参数；这些参数中的每一个都将通过 Spring 容器自动注入匹配的 Bean。Bean 属性 setter 方法实际上只是此类通用配置方法的特例。此类配置方法不必是公开的。",
+      "count": 2
+    },
+    {
+      "source": "Not supported in <code>BeanPostProcessor</code> or <code>BeanFactoryPostProcessor</code>",
+      "translation": "在<code>BeanPostProcessor</code>或<code>BeanFactoryPostProcessor</code>中不支持。",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Mark Fisher, Sam Brannen",
+      "translation": "Jürgen Hoeller, Mark Fisher, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "Autowired Constructors",
+      "translation": "@Autowired 构造函数",
+      "count": 2
+    },
+    {
+      "source": "Autowired Fields",
+      "translation": "@Autowired 字段",
+      "count": 2
+    },
+    {
+      "source": "Autowired Methods",
+      "translation": "@Autowired 方法",
+      "count": 2
+    },
+    {
+      "source": "Autowired Parameters",
+      "translation": "@Autowired 参数",
+      "count": 2
+    },
+    {
+      "source": "Multiple Arguments and 'required' Semantics",
+      "translation": "多个参数和“必需”语义",
+      "count": 2
+    },
+    {
+      "source": "Autowiring Arrays, Collections, and Maps",
+      "translation": "自动注入数组、集合和 Map",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <code>true</code>.",
+      "translation": "默认为<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Declares whether the annotated dependency is required.",
+      "translation": "声明已标注的依赖项是否为必需项。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

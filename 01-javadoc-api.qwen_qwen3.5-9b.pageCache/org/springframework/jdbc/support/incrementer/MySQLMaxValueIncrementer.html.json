@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 14:54:47",
+  "updated_at": "2026-04-14 14:54:47",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 25,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4705882352941178,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "<code>true</code> is necessary to support transactional storage engines,\nusing an isolated separate transaction for the increment operation.\n<code>false</code> is sufficient if the storage engine of the sequence table\nis non-transactional (like MYISAM), avoiding the effort of acquiring an\nextra <code>Connection</code> for the increment operation.",
+      "translation": "`true` 对于支持事务性存储引擎是必要的，因为它为增量操作使用隔离的独立事务。如果序列表的存储引擎是非事务性的（例如 MYISAM），则 `false` 已足够，从而避免了为增量操作获取额外 `<code>Connection</code>` 的努力。",
+      "count": 2
+    },
+    {
+      "source": "Note that <code>MySQLMaxValueIncrementer</code> is compatible with\n<a href=\"https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates\">MySQL safe updates mode</a>.",
+      "translation": "注意，<code>MySQLMaxValueIncrementer</code> 与 <a href=\"https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates\">MySQL 安全更新模式</a> 兼容。",
+      "count": 2
+    },
+    {
+      "source": "It is possible to avoid acquiring a new connection for the incrementer by setting the\n\"useNewConnection\" property to false. In this case you <i>MUST</i> use a non-transactional\nstorage engine like MYISAM when defining the incrementer table.",
+      "translation": "通过将`useNewConnection`属性设置为false，可以避免为自增器获取新连接。在这种情况下，定义自增器表时<i>必须</i>使用非事务性存储引擎（如MYISAM）。",
+      "count": 2
+    },
+    {
+      "source": "The sequence is kept in a table; there should be one sequence table per\ntable that needs an auto-generated key. The storage engine used by the sequence table\ncan be MYISAM or INNODB since the sequences are allocated using a separate connection\nwithout being affected by any other transactions that might be in progress.",
+      "translation": "序列保存在表中；每个需要自动生成键的表应有一个对应的序列表。由于序列是使用独立连接分配的，且不受其他可能正在进行的交易影响，因此序列表所使用的存储引擎可以是 MYISAM 或 INNODB。",
+      "count": 2
+    },
+    {
+      "source": "Default constructor for bean property style usage.",
+      "translation": "用于 Bean 属性样式的默认构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Convenience constructor.",
+      "translation": "便利构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Determine the next key to use, as a long.",
+      "translation": "确定下一个要使用的密钥，并将其作为长整型（long）。",
+      "count": 2
+    },
+    {
+      "source": "Jean-Pierre Pawlak, Thomas Risberg, Juergen Hoeller, Sam Brannen",
+      "translation": "Jean-Pierre Pawlak，Thomas Risberg，Juergen Hoeller，Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "If <code>cacheSize</code> is set, the intermediate values are served without querying the\ndatabase. If the server or your application is stopped or crashes or a transaction\nis rolled back, the unused values will never be served. The maximum hole size in\nnumbering is consequently the value of <code>cacheSize</code>.",
+      "translation": "如果设置了 `<code>cacheSize</code>`，中间值将无需查询数据库即可提供。如果服务器或您的应用程序停止、崩溃或事务回滚，未使用的值将永远不会被提供。因此，编号中的最大空洞大小即为 `<code>cacheSize</code>` 的值。",
+      "count": 1
+    },
+    {
+      "source": "Default is <code>true</code>.",
+      "translation": "默认值为<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractDataFieldMaxValueIncrementer.html#getNextKey()\">AbstractDataFieldMaxValueIncrementer</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractDataFieldMaxValueIncrementer.html#getNextKey()\">AbstractDataFieldMaxValueIncrementer</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Set whether to use a new connection for the incrementer.",
+      "translation": "设置是否为自增器使用新连接。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractDataFieldMaxValueIncrementer.html#getNextKey()\">getNextKey</a></code> in class <code><a href=\"AbstractDataFieldMaxValueIncrementer.html\" title=\"class in org.springframework.jdbc.support.incrementer\">AbstractDataFieldMaxValueIncrementer</a></code>",
+      "translation": "`<code><a href=\"AbstractDataFieldMaxValueIncrementer.html#getNextKey()\">getNextKey</a></code>` 类中的 `<code><a href=\"AbstractDataFieldMaxValueIncrementer.html\" title=\"class in org.springframework.jdbc.support.incrementer\">AbstractDataFieldMaxValueIncrementer</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>dataSource</code> - the DataSource to use",
+      "translation": "<code>dataSource</code> - 要使用的 DataSource",
+      "count": 1
+    },
+    {
+      "source": "<code>incrementerName</code> - the name of the sequence table to use",
+      "translation": "<code>incrementerName</code> - 要使用的序列表名称",
+      "count": 1
+    },
+    {
+      "source": "<code>columnName</code> - the name of the column in the sequence table to use",
+      "translation": "<code>columnName</code> - 要在序列表中使用的列名",
+      "count": 1
+    },
+    {
+      "source": "the key to use as a long. It will eventually be converted later\nin another format by the public concrete methods of this class.",
+      "translation": "用作长整型键的密钥。它最终将由本类的公共具体方法在另一种格式中进行转换。",
+      "count": 1
+    }
+  ]
+}

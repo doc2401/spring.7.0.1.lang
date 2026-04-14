@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-04-14 11:01:29",
+  "updated_at": "2026-04-14 11:01:29",
+  "stats": {
+    "total_entries": 8,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 12,
+    "entries_with_hits": 8,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0007999999999999999
+  },
+  "items": [
+    {
+      "source": "The resolution of the target bean can either be based on the return type\n(<code>getBean(Class)</code>) or on a suggested bean name (<code>getBean(String)</code>),\nin both cases passing the method's arguments to the <code>getBean</code> call\nfor applying them as target factory method arguments or constructor arguments.",
+      "translation": "目标 Bean 的解析可以基于返回类型（`getBean(Class)`）或建议的 Bean 名称（`getBean(String)`），在这两种情况下，都将方法的参数传递给 `getBean` 调用，以将其作为目标工厂方法参数或构造函数参数应用。",
+      "count": 2
+    },
+    {
+      "source": "<b>Recommendations for typical Spring configuration scenarios:</b>\nWhen a concrete class may be needed in certain scenarios, consider providing stub\nimplementations of your lookup methods. And please remember that lookup methods\nwon't work on beans returned from <code>@Bean</code> methods in configuration classes;\nyou'll have to resort to <code>@Inject Provider&lt;TargetBean&gt;</code> or the like instead.",
+      "translation": "<b>典型 Spring 配置场景的建议：</b>\n当某些场景可能需要具体类时，请考虑为查找方法提供存根实现。请记住，查找方法无法作用于配置类中 <code>@Bean</code> 方法返回的 Bean；您必须转而使用 <code>@Inject Provider&lt;TargetBean&gt;</code> 之类的机制。",
+      "count": 2
+    },
+    {
+      "source": "Such lookup methods can have default (stub) implementations that will simply\nget replaced by the container, or they can be declared as abstract - for the\ncontainer to fill them in at runtime. In both cases, the container will generate\nruntime subclasses of the method's containing class via CGLIB, which is why such\nlookup methods can only work on beans that the container instantiates through\nregular constructors: i.e. lookup methods cannot get replaced on beans returned\nfrom factory methods where we cannot dynamically provide a subclass for them.",
+      "translation": "此类查找方法可以具有默认（存根）实现，这些实现将被容器替换；或者它们可以被声明为抽象的——以便由容器在运行时填充。在这两种情况下，容器都会通过 CGLIB 生成包含该类方法的运行时子类，这就是为什么此类查找方法仅适用于容器通过常规构造函数实例化的 Bean：即，无法从工厂方法返回的 Bean 上的查找方法不能被替换，因为我们无法为其动态提供子类。",
+      "count": 2
+    },
+    {
+      "source": "This annotation attribute may suggest a target bean name to look up.\nIf not specified, the target bean will be resolved based on the\nannotated method's return type declaration.",
+      "translation": "此注解属性可能建议要查找的目标 Bean 名称。如果未指定，则将根据被注解方法的返回类型声明解析目标 Bean。",
+      "count": 2
+    },
+    {
+      "source": "This annotation attribute may suggest a target bean name to look up.",
+      "translation": "该注解属性可能建议要查找的目标 Bean 名称。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

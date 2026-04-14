@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-04-14 15:02:40",
+  "updated_at": "2026-04-14 15:02:40",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 41,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9523809523809523,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "Create a new TransactionAwareConnectionFactoryProxy.",
+      "translation": "创建一个新的 TransactionAwareConnectionFactoryProxy。",
+      "count": 4
+    },
+    {
+      "source": "<code>createContext</code> in interface <code>jakarta.jms.ConnectionFactory</code>",
+      "translation": "<code>createContext</code> 在接口 <code>jakarta.jms.ConnectionFactory</code> 中",
+      "count": 4
+    },
+    {
+      "source": "Delegates to <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.jms.connection\"><code>ConnectionFactoryUtils</code></a> for automatically participating\nin thread-bound transactions, for example managed by <a href=\"JmsTransactionManager.html\" title=\"class in org.springframework.jms.connection\"><code>JmsTransactionManager</code></a>.\n<code>createSession</code> calls and <code>close</code> calls on returned Sessions\nwill behave properly within a transaction, that is, always work on the transactional\nSession. If not within a transaction, normal ConnectionFactory behavior applies.",
+      "translation": "委托给<a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.jms.connection\"><code>ConnectionFactoryUtils</code></a>以自动参与线程绑定的事务，例如由<a href=\"JmsTransactionManager.html\" title=\"class in org.springframework.jms.connection\"><code>JmsTransactionManager</code></a>管理的事务。对返回的 Session 调用<code>createSession</code>和<code>close</code>将在事务内正确执行，即始终在事务性 Session 上操作。如果不在事务内，则应用正常的 ConnectionFactory 行为。",
+      "count": 2
+    },
+    {
+      "source": "Messaging code which should remain unaware of Spring's JMS support can work with\nthis proxy to seamlessly participate in Spring-managed transactions. Note that the\ntransaction manager, for example <a href=\"JmsTransactionManager.html\" title=\"class in org.springframework.jms.connection\"><code>JmsTransactionManager</code></a>, still needs to work\nwith the underlying ConnectionFactory, <i>not</i> with this proxy.",
+      "translation": "与 Spring 的 JMS 支持无关的消息代码可以使用此代理无缝参与由 Spring 管理的事务。请注意，事务管理器（例如 <a href=\"JmsTransactionManager.html\" title=\"class in org.springframework.jms.connection\"><code>JmsTransactionManager</code></a>）仍需与底层的 ConnectionFactory 配合工作，<i>而非</i>与此代理配合。",
+      "count": 2
+    },
+    {
+      "source": "<b>Make sure that TransactionAwareConnectionFactoryProxy is the outermost\nConnectionFactory of a chain of ConnectionFactory proxies/adapters.</b>\nTransactionAwareConnectionFactoryProxy can delegate either directly to the\ntarget factory or to some intermediary adapter like\n<a href=\"UserCredentialsConnectionFactoryAdapter.html\" title=\"class in org.springframework.jms.connection\"><code>UserCredentialsConnectionFactoryAdapter</code></a>.",
+      "translation": "<b>确保 TransactionAwareConnectionFactoryProxy 是连接工厂代理/适配器链中最外层的 ConnectionFactory。</b>TransactionAwareConnectionFactoryProxy 可以直接委托给目标工厂，也可以委托给某些中间适配器，例如 <a href=\"UserCredentialsConnectionFactoryAdapter.html\" title=\"class in org.springframework.jms.connection\"><code>UserCredentialsConnectionFactoryAdapter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note that transactional JMS Sessions will be registered on a per-Connection\nbasis. To share the same JMS Session across a transaction, make sure that you\noperate on the same JMS Connection handle - either through reusing the handle\nor through configuring a <a href=\"SingleConnectionFactory.html\" title=\"class in org.springframework.jms.connection\"><code>SingleConnectionFactory</code></a> underneath.",
+      "translation": "请注意，事务性 JMS 会话将按每个连接进行注册。若要跨事务共享同一个 JMS 会话，请确保操作的是同一个 JMS 连接句柄——这可以通过重用该句柄或在下方配置一个<a href=\"SingleConnectionFactory.html\" title=\"class in org.springframework.jms.connection\"><code>SingleConnectionFactory</code></a>来实现。",
+      "count": 2
+    },
+    {
+      "source": "Returned transactional Session proxies will implement the <a href=\"SessionProxy.html\" title=\"interface in org.springframework.jms.connection\"><code>SessionProxy</code></a>\ninterface to allow for access to the underlying target Session. This is only\nintended for accessing vendor-specific Session API or for testing purposes\n(for example, to perform manual transaction control). For typical application purposes,\nsimply use the standard JMS Session interface.",
+      "translation": "返回的事务性 Session 代理将实现 <a href=\"SessionProxy.html\" title=\"interface in org.springframework.jms.connection\"><code>SessionProxy</code></a> 接口，以便访问底层的目标 Session。此功能仅用于访问特定于供应商的 Session API 或测试目的（例如执行手动事务控制）。对于典型的应用程序用途，只需使用标准的 JMS Session 接口即可。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 5, this class delegates JMS 2.0 <code>JMSContext</code>\ncalls and therefore requires the JMS 2.0 API to be present at runtime.\nIt may nevertheless run against a JMS 1.1 driver (bound to the JMS 2.0 API)\nas long as no actual JMS 2.0 calls are triggered by the application's setup.",
+      "translation": "自 Spring Framework 5 起，该类委托了 JMS 2.0 `<code>JMSContext</code>` 调用，因此需要在运行时存在 JMS 2.0 API。尽管如此，只要应用程序的配置不会触发实际的 JMS 2.0 调用，它仍可与绑定到 JMS 2.0 API 的 JMS 1.1 驱动程序一起运行。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\": If not within a managed transaction that encompasses\nthe underlying JMS ConnectionFactory, standard Sessions will be returned.\nTurn this flag on to allow participation in any Spring-managed transaction,\nwith a local JMS transaction synchronized with the main transaction.",
+      "translation": "默认为\"false\"：如果不在包含底层 JMS ConnectionFactory 的管理事务中，将返回标准 Session。将此标志设置为 true 以允许参与任何 Spring 管理的事务，并使本地 JMS 事务与主事务同步。",
+      "count": 2
+    },
+    {
+      "source": "Return the target ConnectionFactory that this ConnectionFactory should delegate to.",
+      "translation": "返回此 ConnectionFactory 应委托的目标 ConnectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given Connection with a proxy that delegates every method call to it\nbut handles Session lookup in a transaction-aware fashion.",
+      "translation": "将给定的 `Connection` 包装在一个代理中，该代理将所有方法调用委托给它，但以事务感知的方式处理会话查找。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to allow for a local JMS transaction that is synchronized\nwith a Spring-managed transaction.",
+      "translation": "返回是否允许同步本地 JMS 事务与 Spring 管理的事务。",
+      "count": 2
+    },
+    {
+      "source": "Set the target ConnectionFactory that this ConnectionFactory should delegate to.",
+      "translation": "设置此 ConnectionFactory 应委托的目标 ConnectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "<code>createConnection</code> in interface <code>jakarta.jms.ConnectionFactory</code>",
+      "translation": "<code>createConnection</code> 在接口 <code>jakarta.jms.ConnectionFactory</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>createQueueConnection</code> in interface <code>jakarta.jms.QueueConnectionFactory</code>",
+      "translation": "<code>createQueueConnection</code> 在接口 <code>jakarta.jms.QueueConnectionFactory</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>createTopicConnection</code> in interface <code>jakarta.jms.TopicConnectionFactory</code>",
+      "translation": "<code>createTopicConnection</code> 在接口 <code>jakarta.jms.TopicConnectionFactory</code> 中",
+      "count": 2
+    },
+    {
+      "source": "Set whether to allow for a local JMS transaction that is synchronized with a\nSpring-managed transaction (where the main transaction might be a JDBC-based\none for a specific DataSource, for example), with the JMS transaction committing\nright after the main transaction.",
+      "translation": "设置是否允许本地 JMS 事务与 Spring 管理的事务同步（例如，主事务可能是针对特定 DataSource 的基于 JDBC 的事务），并在主事务提交后立即提交 JMS 事务。",
+      "count": 1
+    },
+    {
+      "source": "<code>targetConnectionFactory</code> - the target ConnectionFactory",
+      "translation": "<code>targetConnectionFactory</code> - 目标 ConnectionFactory",
+      "count": 1
+    },
+    {
+      "source": "<code>target</code> - the original Connection to wrap",
+      "translation": "<code>target</code> - 要包装的原始 Connection",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the wrapped Connection",
+      "translation": "被包装的 Connection",
+      "count": 1
+    }
+  ]
+}

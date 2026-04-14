@@ -1,0 +1,236 @@
+{
+  "created_at": "2026-04-14 13:50:45",
+  "updated_at": "2026-04-14 13:50:45",
+  "stats": {
+    "total_entries": 44,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 90,
+    "entries_with_hits": 44,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0454545454545454,
+    "usage_percentage": 0.0044
+  },
+  "items": [
+    {
+      "source": "Setter for the <a href=\"#getStatus()\"><code>problem status</code></a>.",
+      "translation": "用于设置<a href=\"#getStatus()\"><code>问题状态</code></a>的 Setter。",
+      "count": 5
+    },
+    {
+      "source": "When Jackson JSON is present on the classpath, any properties set here\nare rendered as top level key-value pairs in the output JSON. Otherwise,\nthey are rendered as a <code>\"properties\"</code> sub-map.",
+      "translation": "当类路径上存在 Jackson JSON 时，此处设置的任何属性都将作为输出 JSON 中的顶层键值对呈现。否则，它们将作为 `<code>\"properties\"</code>` 子映射呈现。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"#setDetail(java.lang.String)\"><code>problem detail</code></a>.",
+      "translation": "返回配置的<a href=\"#setDetail(java.lang.String)\"><code>问题详情</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"#setInstance(java.net.URI)\"><code>problem instance</code></a>.",
+      "translation": "返回配置的<a href=\"#setInstance(java.net.URI)\"><code>问题实例</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Return the status associated with the problem, provided either to the\nconstructor or configured via <a href=\"#setStatus(int)\"><code>setStatus(int)</code></a>.",
+      "translation": "返回与问题关联的状态，该状态由构造函数提供或通过<a href=\"#setStatus(int)\"><code>setStatus(int)</code></a>配置。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"#setTitle(java.lang.String)\"><code>problem title</code></a>.",
+      "translation": "返回配置的<a href=\"#setTitle(java.lang.String)\"><code>problem title</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"#setType(java.net.URI)\"><code>problem type</code></a>.",
+      "translation": "返回配置的<a href=\"#setType(java.net.URI)\"><code>问题类型</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "For an extended response, an application can also create a subclass with\nadditional properties. Subclasses can use the protected copy constructor to\nre-create an existing <code>ProblemDetail</code> instance as the subclass, for example,\nfrom an <code>@ControllerAdvice</code> such as\n<a href=\"../web/servlet/mvc/method/annotation/ResponseEntityExceptionHandler.html\" title=\"class in org.springframework.web.servlet.mvc.method.annotation\"><code>ResponseEntityExceptionHandler</code></a> or\n<a href=\"../web/reactive/result/method/annotation/ResponseEntityExceptionHandler.html\" title=\"class in org.springframework.web.reactive.result.method.annotation\"><code>ResponseEntityExceptionHandler</code></a>.",
+      "translation": "对于扩展响应，应用程序还可以创建一个具有额外属性的子类。子类可以使用受保护的复制构造函数来重新创建现有的 `<code>ProblemDetail` 实例作为子类，例如从 `<code>@ControllerAdvice</code>`（如 <a href=\"../web/servlet/mvc/method/annotation/ResponseEntityExceptionHandler.html\" title=\"class in org.springframework.web.servlet.mvc.method.annotation\"><code>ResponseEntityExceptionHandler</code></a> 或 <a href=\"../web/reactive/result/method/annotation/ResponseEntityExceptionHandler.html\" title=\"class in org.springframework.web.reactive.result.method.annotation\"><code>ResponseEntityExceptionHandler</code></a>）中。",
+      "count": 2
+    },
+    {
+      "source": "To create a <a href=\"ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a> instance, use static factory methods,\n<a href=\"#forStatus(org.springframework.http.HttpStatusCode)\"><code>forStatus(HttpStatusCode)</code></a> or <a href=\"#forStatus(int)\"><code>forStatus(int)</code></a>.",
+      "translation": "要创建 `<a href=\"ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a>` 实例，请使用静态工厂方法`<a href=\"#forStatus(org.springframework.http.HttpStatusCode)\"><code>forStatus(HttpStatusCode)</code></a>`或`<a href=\"#forStatus(int)\"><code>forStatus(int)</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "For an extended response, an application can add to the\n<a href=\"#getProperties()\"><code>properties</code></a> map. When using the Jackson library, the\n<code>properties</code> map is expanded as top level JSON properties through the\n<a href=\"converter/json/ProblemDetailJacksonMixin.html\" title=\"interface in org.springframework.http.converter.json\"><code>ProblemDetailJacksonMixin</code></a>.",
+      "translation": "对于扩展响应，应用程序可以向 <a href=\"#getProperties()\"><code>properties</code></a> 映射添加内容。在使用 Jackson 库时，<code>properties</code> 映射会通过 <a href=\"converter/json/ProblemDetailJacksonMixin.html\" title=\"interface in org.springframework.http.converter.json\"><code>ProblemDetailJacksonMixin</code></a> 扩展为顶层 JSON 属性。",
+      "count": 2
+    },
+    {
+      "source": "By default, if not explicitly set and the status is well-known, this\nis sourced from the <a href=\"HttpStatus.html#getReasonPhrase()\"><code>HttpStatus.getReasonPhrase()</code></a>.",
+      "translation": "默认情况下，如果未显式设置且状态是众所周知的，则从<a href=\"HttpStatus.html#getReasonPhrase()\"><code>HttpStatus.getReasonPhrase()</code></a>获取。",
+      "count": 2
+    },
+    {
+      "source": "By default, when <code>ProblemDetail</code> is returned from an\n<code>@ExceptionHandler</code> method, this is initialized to the request path.",
+      "translation": "默认情况下，当从 `@ExceptionHandler` 方法返回 `<code>ProblemDetail</code>` 时，它会被初始化为请求路径。",
+      "count": 2
+    },
+    {
+      "source": "When Jackson JSON is present on the classpath, the content of this map\nis unwrapped and rendered as top level key-value pairs in the output JSON.\nOtherwise, they are rendered as a <code>\"properties\"</code> sub-map.",
+      "translation": "当类路径中存在 Jackson JSON 时，此 Map 的内容会被解包并在输出 JSON 中作为顶层键值对呈现。否则，它们将被渲染为 `<code>\"properties\"</code>` 子 Map。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is not set. According to the spec, when not present,\nthe type is assumed to be \"about:blank\"",
+      "translation": "默认情况下，此属性未设置。根据规范，当该属性不存在时，类型默认为\"about:blank\"。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is not set.",
+      "translation": "默认情况下，此项未设置。",
+      "count": 2
+    },
+    {
+      "source": "Setter for the <a href=\"#getDetail()\"><code>problem detail</code></a>.",
+      "translation": "用于设置<a href=\"#getDetail()\"><code>problem detail</code></a>的 Setter。",
+      "count": 2
+    },
+    {
+      "source": "Setter for the <a href=\"#getInstance()\"><code>problem instance</code></a>.",
+      "translation": "用于设置<a href=\"#getInstance()\"><code>问题实例</code></a>的 Setter。",
+      "count": 2
+    },
+    {
+      "source": "Setter for the <a href=\"#getProperties()\"><code>properties map</code></a>.",
+      "translation": "用于设置<a href=\"#getProperties()\"><code>properties map</code></a>的 Setter。",
+      "count": 2
+    },
+    {
+      "source": "Set a \"dynamic\" property to be added to a generic <a href=\"#getProperties()\"><code>properties map</code></a>.",
+      "translation": "将“动态”属性添加到通用<a href=\"#getProperties()\"><code>properties map</code></a>中。",
+      "count": 2
+    },
+    {
+      "source": "Setter for the <a href=\"#getTitle()\"><code>problem title</code></a>.",
+      "translation": "用于设置<a href=\"#getTitle()\"><code>问题标题</code></a>的 Setter。",
+      "count": 2
+    },
+    {
+      "source": "Setter for the <a href=\"#getType()\"><code>problem type</code></a>.",
+      "translation": "用于设置<a href=\"#getType()\"><code>问题类型</code></a>的 Setter。",
+      "count": 2
+    },
+    {
+      "source": "Copy constructor that a subclass can use to re-create and extend a\n<code>ProblemDetail</code> with additional properties.",
+      "translation": "子类可用于重新创建并扩展带有额外属性的 <code>ProblemDetail</code> 的复制构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>ProblemDetail</code> instance with the given status value.",
+      "translation": "创建具有给定状态值的<code>ProblemDetail</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>ProblemDetail</code> instance with the given status code.",
+      "translation": "使用给定的状态码创建一个<code>ProblemDetail</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>ProblemDetail</code> instance with the given status and detail.",
+      "translation": "创建具有给定状态和详情的<code>ProblemDetail</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "Return a String representation of the <code>ProblemDetail</code> fields.\nSubclasses can override this to append additional fields.",
+      "translation": "返回 `<code>ProblemDetail</code>` 字段的字符串表示形式。子类可以重写此方法以附加其他字段。",
+      "count": 2
+    },
+    {
+      "source": "No-arg constructor, for deserialization.",
+      "translation": "无参构造函数，用于反序列化。",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the property value, possibly <code>null</code> if the intent is\nto include a property with its value set to \"null\"",
+      "translation": "<code>value</code> - 属性值，如果意图是包含一个值为 \"null\" 的属性，则可能为 <code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>rawStatusCode</code> - the response status to use",
+      "translation": "<code>rawStatusCode</code> - 要使用的响应状态",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the problem type",
+      "translation": "<code>type</code> - 问题类型",
+      "count": 2
+    },
+    {
+      "source": "<code>title</code> - the problem title",
+      "translation": "<code>title</code> - 问题标题",
+      "count": 2
+    },
+    {
+      "source": "<code>httpStatus</code> - the problem status",
+      "translation": "<code>httpStatus</code> - 问题状态",
+      "count": 2
+    },
+    {
+      "source": "<code>status</code> - the problem status",
+      "translation": "<code>status</code> - 问题状态",
+      "count": 2
+    },
+    {
+      "source": "<code>detail</code> - the problem detail",
+      "translation": "<code>detail</code> - 问题详情",
+      "count": 2
+    },
+    {
+      "source": "<code>instance</code> - the problem instance",
+      "translation": "<code>instance</code> - 问题实例",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the property name",
+      "translation": "<code>name</code> - 属性名称",
+      "count": 2
+    },
+    {
+      "source": "<code>properties</code> - the properties map",
+      "translation": "<code>properties</code> - 属性映射",
+      "count": 2
+    },
+    {
+      "source": "Return a generic map of properties that are not known ahead of time,\npossibly <code>null</code> if no properties have been added.",
+      "translation": "返回一个属性通用映射，这些属性无法提前知晓；如果尚未添加任何属性，则可能为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return a String representation of the <code>ProblemDetail</code> fields.",
+      "translation": "返回 `<code>ProblemDetail</code>` 字段的字符串表示。",
+      "count": 1
+    },
+    {
+      "source": "Protected constructor for subclasses.",
+      "translation": "用于子类的受保护构造函数。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Juergen Hoeller",
+      "translation": "Rossen Stoyanchev，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

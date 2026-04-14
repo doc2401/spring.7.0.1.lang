@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-04-14 18:32:29",
+  "updated_at": "2026-04-14 18:32:29",
+  "stats": {
+    "total_entries": 5,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 8,
+    "entries_with_hits": 5,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6,
+    "usage_percentage": 0.0005
+  },
+  "items": [
+    {
+      "source": "When a handler starts asynchronous request handling, the DispatcherServlet\nexits without invoking <code>postHandle</code> and <code>afterCompletion</code>, as it\nnormally does, since the results of request handling (for example, ModelAndView) are\nnot available in the current thread and handling is not yet complete.\nIn such scenarios, the <a href=\"#afterConcurrentHandlingStarted(org.springframework.web.context.request.WebRequest)\"><code>afterConcurrentHandlingStarted(WebRequest)</code></a>\nmethod is invoked instead allowing implementations to perform tasks such as\ncleaning up thread bound attributes.",
+      "translation": "当处理器启动异步请求处理时，DispatcherServlet 会退出，而不会像通常那样调用 <code>postHandle</code> 和 <code>afterCompletion</code>，因为当前线程中不可用请求处理的结果（例如 ModelAndView），且处理尚未完成。在此类场景中，将调用 <a href=\"#afterConcurrentHandlingStarted(org.springframework.web.context.request.WebRequest)\"><code>afterConcurrentHandlingStarted(WebRequest)</code></a> 方法，允许实现执行诸如清理线程绑定属性之类的任务。",
+      "count": 2
+    },
+    {
+      "source": "When asynchronous handling completes, the request is dispatched to the\ncontainer for further processing. At this stage the DispatcherServlet invokes\n<code>preHandle</code>, <code>postHandle</code> and <code>afterCompletion</code> as usual.",
+      "translation": "当异步处理完成后，请求被分派到容器以进行进一步处理。在此阶段，DispatcherServlet 照常调用 `<code>preHandle</code>`、`<code>postHandle</code>` 和 `<code>afterCompletion</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Called instead of <code>postHandle</code> and <code>afterCompletion</code>, when the\nhandler started handling the request concurrently.",
+      "translation": "在处理器并发处理请求时，会调用此方法而不是`postHandle`和`afterCompletion`。",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

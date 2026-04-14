@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-04-14 11:16:47",
+  "updated_at": "2026-04-14 11:16:47",
+  "stats": {
+    "total_entries": 10,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 14,
+    "entries_with_hits": 10,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4,
+    "usage_percentage": 0.001
+  },
+  "items": [
+    {
+      "source": "<code>BeanFactoryPostProcessor</code> beans that are autodetected in an\n<code>ApplicationContext</code> will be ordered according to\n<a href=\"../../../core/PriorityOrdered.html\" title=\"interface in org.springframework.core\"><code>PriorityOrdered</code></a> and\n<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> semantics. In contrast,\n<code>BeanFactoryPostProcessor</code> beans that are registered programmatically\nwith a <code>ConfigurableApplicationContext</code> will be applied in the order of\nregistration; any ordering semantics expressed through implementing the\n<code>PriorityOrdered</code> or <code>Ordered</code> interface will be ignored for\nprogrammatically registered post-processors. Furthermore, the\n<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> annotation is not\ntaken into account for <code>BeanFactoryPostProcessor</code> beans.",
+      "translation": "在 `ApplicationContext` 中自动检测到的 `<code>BeanFactoryPostProcessor` 将根据<a href=\"../../../core/PriorityOrdered.html\" title=\"interface in org.springframework.core\"><code>PriorityOrdered</code></a>和<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>的语义进行排序。相比之下，通过编程方式向 `<code>ConfigurableApplicationContext` 注册的 `<code>BeanFactoryPostProcessor` 将按注册顺序应用；对于通过编程方式注册的处理器，任何通过实现 `<code>PriorityOrdered</code>` 或 `<code>Ordered</code>` 接口所表达的排序语义都将被忽略。此外，`<code>@Order</code>` 注解（<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\">org.springframework.core.annotation</a>）也不适用于 `<code>BeanFactoryPostProcessor` 类型的 bean。",
+      "count": 2
+    },
+    {
+      "source": "An <code>ApplicationContext</code> auto-detects <code>BeanFactoryPostProcessor</code>\nbeans in its bean definitions and applies them before any other beans get created.\nA <code>BeanFactoryPostProcessor</code> may also be registered programmatically\nwith a <code>ConfigurableApplicationContext</code>.",
+      "translation": "`ApplicationContext` 会自动检测其 bean 定义中的 `BeanFactoryPostProcessor` bean，并在创建任何其他 bean 之前应用它们。此外，还可以将 `BeanFactoryPostProcessor` 以编程方式注册到 `ConfigurableApplicationContext` 中。",
+      "count": 2
+    },
+    {
+      "source": "A <code>BeanFactoryPostProcessor</code> may interact with and modify bean\ndefinitions, but never bean instances. Doing so may cause premature bean\ninstantiation, violating the container and causing unintended side effects.\nIf bean instance interaction is required, consider implementing\n<a href=\"BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a> instead.",
+      "translation": "`BeanFactoryPostProcessor` 可以与 Bean 定义进行交互并对其进行修改，但绝不能与 Bean 实例进行交互。这样做可能导致过早的 Bean 实例化，从而违反容器约定并引发意外的副作用。如果需要与 Bean 实例进行交互，请考虑实现<a href=\"BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Useful for custom config files targeted at system administrators that\noverride bean properties configured in the application context. See\n<a href=\"PropertyResourceConfigurer.html\" title=\"class in org.springframework.beans.factory.config\"><code>PropertyResourceConfigurer</code></a> and its concrete implementations for\nout-of-the-box solutions that address such configuration needs.",
+      "translation": "适用于针对系统管理员的自定义配置文件，这些文件会覆盖在应用程序上下文中配置的 Bean 属性。有关解决此类配置需求的开箱即用方案，请参阅 <a href=\"PropertyResourceConfigurer.html\" title=\"class in org.springframework.beans.factory.config\"><code>PropertyResourceConfigurer</code></a> 及其具体实现。",
+      "count": 2
+    },
+    {
+      "source": "Modify the application context's internal bean factory after its standard\ninitialization.",
+      "translation": "在标准初始化之后修改应用程序上下文的内部 BeanFactory。",
+      "count": 1
+    },
+    {
+      "source": "Modify the application context's internal bean factory after its standard\ninitialization. All bean definitions will have been loaded, but no beans\nwill have been instantiated yet. This allows for overriding or adding\nproperties even to eager-initializing beans.",
+      "translation": "在标准初始化之后修改应用程序上下文内部的 Bean 工厂。此时所有 Bean 定义都已被加载，但尚未实例化任何 Bean。这允许您甚至对急切初始化的 Bean 进行属性覆盖或添加。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - in case of errors",
+      "translation": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 在发生错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - the bean factory used by the application context",
+      "translation": "<code>beanFactory</code> - 由应用程序上下文使用的 Bean 工厂",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个功能接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen",
+      "translation": "Juergen Hoeller, Sam Brannen",
+      "count": 1
+    }
+  ]
+}

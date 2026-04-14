@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-04-14 17:39:03",
+  "updated_at": "2026-04-14 17:39:03",
+  "stats": {
+    "total_entries": 37,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 50,
+    "entries_with_hits": 37,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3513513513513513,
+    "usage_percentage": 0.0036999999999999997
+  },
+  "items": [
+    {
+      "source": "<code>savepoint</code> - the associated savepoint object (primarily as a key for\nidentifying the savepoint but also castable to the resource savepoint type)",
+      "translation": "<code>savepoint</code> - 关联的保存点对象（主要用作标识保存点的键，也可转换为资源保存点类型）",
+      "count": 3
+    },
+    {
+      "source": "Implements the <a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> interface to enable the execution order of\nsynchronizations to be controlled declaratively. The default <a href=\"#getOrder()\"><code>order</code></a> is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>, indicating late execution; return\na lower value for earlier execution.",
+      "translation": "实现<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>接口，以支持通过声明方式控制同步的执行顺序。默认的<a href=\"#getOrder()\"><code>order</code></a>为<a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>，表示延迟执行；返回较小的值以表示更早执行。",
+      "count": 2
+    },
+    {
+      "source": "This synchronization callback is invoked right <i>after</i> the creation\nof the resource savepoint, with the given savepoint object already active.",
+      "translation": "此同步回调在资源保存点创建后<i>立即</i>被调用，此时给定的保存点对象已处于活动状态。",
+      "count": 2
+    },
+    {
+      "source": "This synchronization callback is invoked right <i>before</i> the rollback\nof the resource savepoint, with the given savepoint object still active.",
+      "translation": "此同步回调在回滚资源保存点之前立即被调用，此时给定的保存点对象仍处于活动状态。",
+      "count": 2
+    },
+    {
+      "source": "TransactionSynchronization implementations can implement the Ordered interface\nto influence their execution order. A synchronization that does not implement the\nOrdered interface is appended to the end of the synchronization chain.",
+      "translation": "事务同步实现类可以实现 `Ordered` 接口以影响其执行顺序。未实现 `Ordered` 接口的同步会被追加到同步链的末尾。",
+      "count": 2
+    },
+    {
+      "source": "Invoked on creation of a new savepoint, either when a nested transaction\nis started against an existing transaction or on a programmatic savepoint\nvia <a href=\"../TransactionStatus.html\" title=\"interface in org.springframework.transaction\"><code>TransactionStatus</code></a>.",
+      "translation": "在创建新保存点时调用，无论是针对现有事务启动嵌套事务，还是通过<a href=\"../TransactionStatus.html\" title=\"interface in org.springframework.transaction\"><code>TransactionStatus</code></a>进行程序化保存点。",
+      "count": 2
+    },
+    {
+      "source": "Completion status in case of proper commit.",
+      "translation": "正确提交情况下的完成状态。",
+      "count": 2
+    },
+    {
+      "source": "Completion status in case of proper rollback.",
+      "translation": "正常回滚情况下的完成状态。",
+      "count": 2
+    },
+    {
+      "source": "Completion status in case of heuristic mixed completion or system errors.",
+      "translation": "在启发式混合完成或系统错误情况下的完成状态。",
+      "count": 2
+    },
+    {
+      "source": "Flush the underlying session to the datastore, if applicable:\nfor example, a Hibernate/JPA session.",
+      "translation": "刷新底层会话到数据存储区（如果适用）：例如，Hibernate/JPA 会话。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - in case of errors; will be <b>propagated to the caller</b>\n(note: do not throw TransactionException subclasses here!)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - 在发生错误时；将<b>传播给调用者</b>(注意：此处不要抛出 TransactionException 的子类！)",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - in case of errors; will be <b>logged but not propagated</b>\n(note: do not throw TransactionException subclasses here!)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - 在发生错误时；将<b>记录日志但不传播</b>\n（注意：此处不要抛出 TransactionException 的子类！）",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> The transaction will have been committed already, but the\ntransactional resources might still be active and accessible. As a consequence,\nany data access code triggered at this point will still \"participate\" in the\noriginal transaction, allowing to perform some cleanup (with no commit following\nanymore!), unless it explicitly declares that it needs to run in a separate\ntransaction. Hence: <b>Use <code>PROPAGATION_REQUIRES_NEW</code> for any\ntransactional operation that is called from here.</b>",
+      "translation": "<b>注意：</b> 事务可能已经提交，但事务性资源可能仍然处于活动状态并可访问。因此，在此时触发的任何数据访问代码仍会“参与”原始事务，从而允许执行一些清理操作（而不再进行提交！），除非它明确声明需要在独立的事务中运行。因此：<b>对于从此处调用的任何事务性操作，请使用 <code>PROPAGATION_REQUIRES_NEW</code>。</b>",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> The transaction will have been committed or rolled back already,\nbut the transactional resources might still be active and accessible. As a\nconsequence, any data access code triggered at this point will still \"participate\"\nin the original transaction, allowing to perform some cleanup (with no commit\nfollowing anymore!), unless it explicitly declares that it needs to run in a\nseparate transaction. Hence: <b>Use <code>PROPAGATION_REQUIRES_NEW</code>\nfor any transactional operation that is called from here.</b>",
+      "translation": "<b>注意：</b>此时事务可能已经提交或回滚，但事务性资源可能仍然处于活动状态并可访问。因此，在此时触发的任何数据访问代码仍会“参与”原始事务，从而允许执行一些清理操作（而不再进行后续提交！），除非它明确声明需要在独立的事务中运行。因此：<b>对于从此处调用的任何事务性操作，请使用 <code>PROPAGATION_REQUIRES_NEW</code>。</b>",
+      "count": 1
+    },
+    {
+      "source": "Default is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>.",
+      "translation": "默认值为 `<a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "This method will be invoked after <code>beforeCommit</code>, even when\n<code>beforeCommit</code> threw an exception. This callback allows for\nclosing resources before transaction completion, for any outcome.",
+      "translation": "此方法将在 `<code>beforeCommit</code>` 之后被调用，即使 `<code>beforeCommit</code>` 抛出了异常。此回调允许在事务完成前的任何结果下关闭资源。",
+      "count": 1
+    },
+    {
+      "source": "This callback does <i>not</i> mean that the transaction will actually be committed.\nA rollback decision can still occur after this method has been called. This callback\nis rather meant to perform work that's only relevant if a commit still has a chance\nto happen, such as flushing SQL statements to the database.",
+      "translation": "此回调并不意味着事务实际上会被提交。在此方法调用之后仍可能发生回滚决策。此回调主要用于执行仅在提交仍有发生机会时才相关的工作，例如将 SQL 语句刷新到数据库。",
+      "count": 1
+    },
+    {
+      "source": "System synchronizations performed by Spring itself use specific order values,\nallowing for fine-grained interaction with their execution order (if necessary).",
+      "translation": "Spring 自身执行的系统同步使用特定的顺序值，以便在必要时对其执行顺序进行细粒度交互。",
+      "count": 1
+    },
+    {
+      "source": "Note that exceptions will get propagated to the commit caller and cause a\nrollback of the transaction.",
+      "translation": "注意，异常将传播到提交调用者并导致事务回滚。",
+      "count": 1
+    },
+    {
+      "source": "Can, for example, commit further operations that are supposed to follow on a successful\ncommit of the main transaction, like confirmation messages or emails.",
+      "translation": "例如，可以提交应在主事务成功提交后执行的进一步操作，如确认消息或电子邮件。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after transaction commit.",
+      "translation": "事务提交后调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after transaction commit/rollback.",
+      "translation": "在事务提交/回滚后调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked before transaction commit (before \"beforeCompletion\").",
+      "translation": "在事务提交之前调用（在\"beforeCompletion\"之前）。",
+      "count": 1
+    },
+    {
+      "source": "Invoked before transaction commit/rollback.",
+      "translation": "事务提交/回滚前调用。",
+      "count": 1
+    },
+    {
+      "source": "Return the execution order for this transaction synchronization.",
+      "translation": "返回此事务同步的执行顺序。",
+      "count": 1
+    },
+    {
+      "source": "Resume this synchronization.",
+      "translation": "恢复此同步。",
+      "count": 1
+    },
+    {
+      "source": "Invoked in case of a rollback to the previously created savepoint.",
+      "translation": "在回滚到先前创建的保存点时调用。",
+      "count": 1
+    },
+    {
+      "source": "Suspend this synchronization.",
+      "translation": "挂起此同步。",
+      "count": 1
+    },
+    {
+      "source": "Suspend this synchronization.\nSupposed to unbind resources from TransactionSynchronizationManager if managing any.",
+      "translation": "挂起此同步。如果管理任何资源，则应从 TransactionSynchronizationManager 解绑这些资源。",
+      "count": 1
+    },
+    {
+      "source": "Resume this synchronization.\nSupposed to rebind resources to TransactionSynchronizationManager if managing any.",
+      "translation": "恢复此同步。如果管理任何资源，应重新绑定到 TransactionSynchronizationManager。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html#flush()\" title=\"class or interface in java.io\">flush</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html\" title=\"class or interface in java.io\">Flushable</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html#flush()\" title=\"class or interface in java.io\">flush</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html\" title=\"class or interface in java.io\">Flushable</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>status</code> - completion status according to the <code>STATUS_*</code> constants",
+      "translation": "<code>status</code> - 根据 <code>STATUS_*</code> 常量确定的完成状态",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the transaction is defined as read-only transaction",
+      "translation": "<code>readOnly</code> - 事务是否定义为只读事务",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

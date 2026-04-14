@@ -1,0 +1,321 @@
+{
+  "created_at": "2026-04-14 16:45:41",
+  "updated_at": "2026-04-14 16:45:41",
+  "stats": {
+    "total_entries": 61,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 118,
+    "entries_with_hits": 61,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9344262295081966,
+    "usage_percentage": 0.0060999999999999995
+  },
+  "items": [
+    {
+      "source": "<code>key</code> - the context key; never <code>null</code>",
+      "translation": "<code>key</code> - 上下文键；永远不为 <code>null</code>",
+      "count": 9
+    },
+    {
+      "source": "since Spring Framework 7.0 in favor of\n<a href=\"#put(org.springframework.test.context.MergedContextConfiguration,org.springframework.test.context.cache.ContextCache.LoadFunction)\"><code>put(MergedContextConfiguration, LoadFunction)</code></a>",
+      "translation": "自 Spring Framework 7.0 起，推荐使用\n<a href=\"#put(org.springframework.test.context.MergedContextConfiguration,org.springframework.test.context.cache.ContextCache.LoadFunction)\"><code>put(MergedContextConfiguration, LoadFunction)</code></a>",
+      "count": 3
+    },
+    {
+      "source": "Clear <a href=\"#getHitCount()\">hit count</a> and <a href=\"#getMissCount()\">miss count</a> statistics for the cache (i.e., reset counters to zero).",
+      "translation": "清除缓存的<a href=\"#getHitCount()\">命中计数</a>和<a href=\"#getMissCount()\">未命中计数</a>统计信息（即，将计数器重置为零）。",
+      "count": 3
+    },
+    {
+      "source": "The default implementation of this method always returns <code>0</code>.\nConcrete implementations are therefore highly encouraged to override this\nmethod, <a href=\"#registerContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>registerContextUsage(MergedContextConfiguration, Class)</code></a>,\nand <a href=\"#unregisterContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>unregisterContextUsage(MergedContextConfiguration, Class)</code></a> with\nappropriate behavior. Note that the standard <code>ContextContext</code>\nimplementation in Spring overrides these methods appropriately.",
+      "translation": "此方法的默认实现始终返回 `<code>0</code>`。因此，强烈建议具体实现类重写此方法，并配合适当的行为实现 <a href=\"#registerContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>registerContextUsage(MergedContextConfiguration, Class)</code></a> 和 <a href=\"#unregisterContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>unregisterContextUsage(MergedContextConfiguration, Class)</code></a>。请注意，Spring 中的标准 `<code>ContextContext</code>` 实现已适当重写了这些方法。",
+      "count": 2
+    },
+    {
+      "source": "A <code>ContextCache</code> maintains a cache of <code>ApplicationContexts</code>\nkeyed by <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> instances, potentially configured\nwith a <a href=\"ContextCacheUtils.html#retrieveMaxCacheSize()\">maximum size</a> and\na custom eviction policy.",
+      "translation": "<code>ContextCache</code> 维护一个由 <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> 实例作为键的 <code>ApplicationContexts</code> 缓存，该缓存可能配置了<a href=\"ContextCacheUtils.html#retrieveMaxCacheSize()\">最大大小</a>和自定义驱逐策略。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method does nothing. Concrete\nimplementations are therefore highly encouraged to override this\nmethod, <a href=\"#unregisterContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>unregisterContextUsage(MergedContextConfiguration, Class)</code></a>,\nand <a href=\"#getContextUsageCount()\"><code>getContextUsageCount()</code></a> with appropriate behavior. Note that\nthe standard <code>ContextContext</code> implementation in Spring overrides\nthese methods appropriately.",
+      "translation": "此方法的默认实现什么都不做。因此，强烈建议具体实现覆盖此方法、<a href=\"#unregisterContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>unregisterContextUsage(MergedContextConfiguration, Class)</code></a> 和 <a href=\"#getContextUsageCount()\"><code>getContextUsageCount()</code></a>，以提供适当的行为。请注意，Spring 中的标准 <code>ContextContext</code> 实现已适当地覆盖了这些方法。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method does nothing. Concrete\nimplementations are therefore highly encouraged to override this\nmethod, <a href=\"#registerContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>registerContextUsage(MergedContextConfiguration, Class)</code></a>,\nand <a href=\"#getContextUsageCount()\"><code>getContextUsageCount()</code></a> with appropriate behavior. Note that\nthe standard <code>ContextContext</code> implementation in Spring overrides\nthese methods appropriately.",
+      "translation": "此方法的默认实现什么都不做。因此，强烈建议具体实现覆盖此方法、<a href=\"#registerContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\"><code>registerContextUsage(MergedContextConfiguration, Class)</code></a> 和 <a href=\"#getContextUsageCount()\"><code>getContextUsageCount()</code></a>，并采用适当的行为。请注意，Spring 中的标准 <code>ContextContext</code> 实现已适当地覆盖了这些方法。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.1, this SPI includes optional support for\n<a href=\"#getFailureCount(org.springframework.test.context.MergedContextConfiguration)\">tracking</a> and\n<a href=\"#incrementFailureCount(org.springframework.test.context.MergedContextConfiguration)\">incrementing</a>\nfailure counts. As of Spring Framework 7.0, this SPI includes optional support for\n<a href=\"#registerContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\">registering</a> and\n<a href=\"#unregisterContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\">unregistering</a>\ncontext usage.",
+      "translation": "自 Spring Framework 6.1 起，此 SPI 包含用于<a href=\"#getFailureCount(org.springframework.test.context.MergedContextConfiguration)\">跟踪</a>和<a href=\"#incrementFailureCount(org.springframework.test.context.MergedContextConfiguration)\">增加</a>失败计数的可选支持。自 Spring Framework 7.0 起，此 SPI 包含用于<a href=\"#registerContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\">注册</a>和<a href=\"#unregisterContextUsage(org.springframework.test.context.MergedContextConfiguration,java.lang.Class)\">注销</a>上下文使用的可选支持。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method always returns <code>0</code>.\nConcrete implementations are therefore highly encouraged to override this\nmethod and <a href=\"#incrementFailureCount(org.springframework.test.context.MergedContextConfiguration)\"><code>incrementFailureCount(MergedContextConfiguration)</code></a> with\nappropriate behavior. Note that the standard <code>ContextContext</code>\nimplementation in Spring overrides these methods appropriately.",
+      "translation": "此方法的默认实现始终返回 `<code>0</code>`。因此，强烈建议具体实现覆盖此方法，并使用适当的行为调用 <a href=\"#incrementFailureCount(org.springframework.test.context.MergedContextConfiguration)\"><code>incrementFailureCount(MergedContextConfiguration)</code></a>。请注意，Spring 中的标准 `<code>ContextContext</code>` 实现已适当地覆盖了这些方法。",
+      "count": 2
+    },
+    {
+      "source": "The supplied <a href=\"ContextCache.LoadFunction.html\" title=\"interface in org.springframework.test.context.cache\"><code>ContextCache.LoadFunction</code></a> will be invoked to load the\n<code>ApplicationContext</code>.",
+      "translation": "提供的 `<a href=\"ContextCache.LoadFunction.html\" title=\"interface in org.springframework.test.context.cache\"><code>ContextCache.LoadFunction</code></a>` 将被调用以加载`ApplicationContext`。",
+      "count": 2
+    },
+    {
+      "source": "In addition, the semantics of the supplied <code>HierarchyMode</code> must\nbe honored. See the Javadoc for <a href=\"../../annotation/DirtiesContext.HierarchyMode.html\" title=\"enum class in org.springframework.test.annotation\"><code>DirtiesContext.HierarchyMode</code></a> for details.",
+      "translation": "此外，必须遵守所提供的 `<code>HierarchyMode</code>` 的语义。有关详细信息，请参阅 <a href=\"../../annotation/DirtiesContext.HierarchyMode.html\" title=\"enum class in org.springframework.test.annotation\"><code>DirtiesContext.HierarchyMode</code></a> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "A <em>failure</em> is any attempt to load the <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>\nfor the given key that results in an exception.",
+      "translation": "<em>失败</em>是指尝试加载给定键的<a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>并导致异常的任何操作。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method does nothing. Concrete\nimplementations are therefore highly encouraged to override this\nmethod and <a href=\"#getFailureCount(org.springframework.test.context.MergedContextConfiguration)\"><code>getFailureCount(MergedContextConfiguration)</code></a> with\nappropriate behavior. Note that the standard <code>ContextContext</code>\nimplementation in Spring overrides these methods appropriately.",
+      "translation": "此方法的默认实现什么都不做。因此，强烈建议具体实现覆盖此方法，并使用适当的行为<a href=\"#getFailureCount(org.springframework.test.context.MergedContextConfiguration)\"><code>getFailureCount(MergedContextConfiguration)</code></a>。请注意，Spring 中的标准 <code>ContextContext</code> 实现已适当地覆盖了这些方法。",
+      "count": 2
+    },
+    {
+      "source": "May alternatively be configured via the\n<a href=\"../../../core/SpringProperties.html\" title=\"class in org.springframework.core\"><code>SpringProperties</code></a> mechanism.",
+      "translation": "也可以通过 <a href=\"../../../core/SpringProperties.html\" title=\"class in org.springframework.core\"><code>SpringProperties</code></a> 机制进行配置。",
+      "count": 2
+    },
+    {
+      "source": "If the cached application context was previously\n<a href=\"../../../context/ConfigurableApplicationContext.html#pause()\">paused</a>,\nit must be\n<a href=\"../../../context/support/AbstractApplicationContext.html#restart()\">restarted</a>. This applies to parent contexts as well.",
+      "translation": "如果缓存的应用程序上下文之前处于<a href=\"../../../context/ConfigurableApplicationContext.html#pause()\">暂停</a>状态，则必须对其进行<a href=\"../../../context/support/AbstractApplicationContext.html#restart()\">重启</a>。此规则同样适用于父上下文。",
+      "count": 2
+    },
+    {
+      "source": "In addition, the <a href=\"#getHitCount()\">hit</a> and\n<a href=\"#getMissCount()\">miss</a> counts must be updated accordingly.",
+      "translation": "此外，还必须相应地更新<a href=\"#getHitCount()\">命中</a>和<a href=\"#getMissCount()\">未命中</a>计数。",
+      "count": 2
+    },
+    {
+      "source": "If the cache contains more than <code>Integer.MAX_VALUE</code> elements,\nthis method must return <code>Integer.MAX_VALUE</code>.",
+      "translation": "如果缓存包含的元素数量超过 `<code>Integer.MAX_VALUE</code>`，此方法必须返回 `<code>Integer.MAX_VALUE</code>`。",
+      "count": 2
+    },
+    {
+      "source": "A <em>miss</em> is any access to the cache that returns a <code>null</code>\ncontext for the queried key.",
+      "translation": "<em>未命中</em>（miss）是指对缓存的任何访问，该访问为查询的键返回了 `<code>null</code>` 上下文。",
+      "count": 2
+    },
+    {
+      "source": "Context caching can have significant performance benefits if context\ninitialization is complex. Although the initialization of a Spring context\nitself is typically very quick, some beans in a context — for example,\nan embedded database or a <code>LocalContainerEntityManagerFactoryBean</code> for\nworking with JPA — may take several seconds to initialize. Hence, it\noften makes sense to perform that initialization only once per test suite or\nJVM process.",
+      "translation": "如果上下文初始化过程复杂，上下文缓存可以带来显著的性能提升。虽然 Spring 上下文的初始化本身通常非常快，但上下文中的某些 Bean——例如嵌入式数据库或用于处理 JPA 的 `<code>LocalContainerEntityManagerFactoryBean`——可能需要数秒才能完成初始化。因此，通常建议仅在测试套件或 JVM 进程中执行一次该初始化。",
+      "count": 2
+    },
+    {
+      "source": "Note that implementations of <code>ContextCache</code> are not required to\nactually support a maximum cache size. Consult the documentation of the\ncorresponding implementation for details.",
+      "translation": "注意，<code>ContextCache</code> 的实现并不一定需要实际支持最大缓存大小。请查阅相应实现的文档以获取详细信息。",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations which honor a custom eviction policy must\noverride this method to ensure that an evicted context is removed from the\ncache and closed before a new context is loaded via the supplied\n<code>LoadFunction</code>.",
+      "translation": "实现自定义驱逐策略的具体实现必须重写此方法，以确保在通过提供的`LoadFunction`加载新上下文之前，从缓存中移除并关闭被驱逐的上下文。",
+      "count": 2
+    },
+    {
+      "source": "If no other test classes are actively using the same application\ncontext(s), the application context(s) should be\n<a href=\"../../../context/ConfigurableApplicationContext.html#pause()\">paused</a>.",
+      "translation": "如果没有其他测试类正在使用相同的应用程序上下文，则应用程序上下文应处于<a href=\"../../../context/ConfigurableApplicationContext.html#pause()\">暂停</a>状态。",
+      "count": 2
+    },
+    {
+      "source": "A <em>hit</em> is any access to the cache that returns a non-null\ncontext for the queried key.",
+      "translation": "<em>命中</em>是指对缓存的任何访问，该访问为查询的键返回非空上下文。",
+      "count": 2
+    },
+    {
+      "source": "Generally speaking, this method should be called to properly evict\na context from the cache (for example, due to a custom eviction policy) or if\nthe state of a singleton bean has been modified, potentially affecting\nfuture interaction with the context.",
+      "translation": "一般来说，应调用此方法以正确从缓存中驱逐上下文（例如，由于自定义驱逐策略），或者如果单例 Bean 的状态已修改并可能影响与上下文的未来交互。",
+      "count": 2
+    },
+    {
+      "source": "The following information should be logged.",
+      "translation": "应记录以下信息。",
+      "count": 2
+    },
+    {
+      "source": "Register usage of the <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> for the supplied\n<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> and any of its parents.",
+      "translation": "注册为提供的 <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> 及其任何父级使用的 <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Unregister usage of the <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> for the supplied\n<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> and any of its parents.",
+      "translation": "取消注册为提供的 <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> 及其任何父级注册的 <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> 的使用。",
+      "count": 2
+    },
+    {
+      "source": "Log the statistics for this <code>ContextCache</code> at <code>DEBUG</code> level\nusing the <a href=\"#CONTEXT_CACHE_LOGGING_CATEGORY\">\"org.springframework.test.context.cache\"</a> logging category.",
+      "translation": "在此级别记录此<code>ContextCache</code>的统计信息，使用<a href=\"#CONTEXT_CACHE_LOGGING_CATEGORY\">\"org.springframework.test.context.cache\"</a>日志类别。",
+      "count": 2
+    },
+    {
+      "source": "Represents a function that loads an <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>.",
+      "translation": "表示一个用于加载 `<a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>` 的函数。",
+      "count": 2
+    },
+    {
+      "source": "System property used to configure the maximum size of the <a href=\"ContextCache.html\" title=\"interface in org.springframework.test.context.cache\"><code>ContextCache</code></a>\nas a positive integer: \"spring.test.context.cache.maxSize\".",
+      "translation": "用于配置<a href=\"ContextCache.html\" title=\"interface in org.springframework.test.context.cache\"><code>ContextCache</code></a>最大大小的系统属性，需为正整数：\"spring.test.context.cache.maxSize\"。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a cached <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> for the given key.",
+      "translation": "获取给定键的缓存的<a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Explicitly add an <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> to the cache under the given\nkey, potentially honoring a custom eviction policy.",
+      "translation": "在给定键下的缓存中显式添加一个<a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>，可能会遵守自定义的驱逐策略。",
+      "count": 2
+    },
+    {
+      "source": "The name of the logging category used for reporting <code>ContextCache</code>\nstatistics.",
+      "translation": "用于报告 `<code>ContextCache</code>` 统计信息的日志分类名称。",
+      "count": 2
+    },
+    {
+      "source": "The default maximum size of the context cache: 32.",
+      "translation": "上下文缓存的默认最大大小：32。",
+      "count": 2
+    },
+    {
+      "source": "Clear all contexts from the cache, clearing context hierarchy information as well.",
+      "translation": "清除缓存中的所有上下文，同时清除上下文层次结构信息。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether there is a cached context for the given key.",
+      "translation": "确定给定键是否存在缓存上下文。",
+      "count": 2
+    },
+    {
+      "source": "Determine the number of parent contexts currently tracked within the cache.",
+      "translation": "确定当前在缓存中跟踪的父上下文数量。",
+      "count": 2
+    },
+    {
+      "source": "Reset all state maintained by this cache including statistics.",
+      "translation": "重置此缓存维护的所有状态，包括统计信息。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#MAX_CONTEXT_CACHE_SIZE_PROPERTY_NAME\"><code>MAX_CONTEXT_CACHE_SIZE_PROPERTY_NAME</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.test.context.cache.ContextCache.DEFAULT_MAX_CONTEXT_CACHE_SIZE\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#MAX_CONTEXT_CACHE_SIZE_PROPERTY_NAME\"><code>MAX_CONTEXT_CACHE_SIZE_PROPERTY_NAME</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.test.context.cache.ContextCache.DEFAULT_MAX_CONTEXT_CACHE_SIZE\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "the corresponding <code>ApplicationContext</code> instance, or <code>null</code>\nif not found in the cache",
+      "translation": "对应的<code>ApplicationContext</code>实例，如果未在缓存中找到则返回<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>loadFunction</code> - a function which loads the context for the supplied key;\nnever <code>null</code>",
+      "translation": "<code>loadFunction</code> - 一个用于加载指定键上下文的函数；永远不会为 <code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "name of the concrete <code>ContextCache</code> implementation",
+      "translation": "具体<code>ContextCache</code>实现的名称",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#getContextUsageCount()\">context usage count</a>",
+      "translation": "<a href=\"#getContextUsageCount()\">上下文使用次数</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#getParentContextCount()\">parent context count</a>",
+      "translation": "<a href=\"#getParentContextCount()\">父上下文计数</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#getHitCount()\">hit count</a>",
+      "translation": "<a href=\"#getHitCount()\">命中计数</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#getMissCount()\">miss count</a>",
+      "translation": "<a href=\"#getMissCount()\">miss count</a>",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the cache contains a context with the given key",
+      "translation": "<code>true</code> 如果缓存包含具有给定键的上下文。",
+      "count": 2
+    },
+    {
+      "source": "any other information useful for monitoring the state of this cache",
+      "translation": "任何其他有助于监控此缓存状态的信息。",
+      "count": 2
+    },
+    {
+      "source": "Remove the context with the given key from the cache and explicitly\n<a href=\"../../../context/ConfigurableApplicationContext.html#close()\">close</a>\nit if it is an instance of <code>ConfigurableApplicationContext</code>.",
+      "translation": "从缓存中移除具有给定键的上下文，如果它是 `<code>ConfigurableApplicationContext`</code> 的实例，则显式<a href=\"../../../context/ConfigurableApplicationContext.html#close()\">关闭</a>它。",
+      "count": 1
+    },
+    {
+      "source": "Determine the number of contexts within the cache that are currently in use.",
+      "translation": "确定缓存中当前正在使用的上下文数量。",
+      "count": 1
+    },
+    {
+      "source": "Get the failure count for the given key.",
+      "translation": "获取给定键的失败次数。",
+      "count": 1
+    },
+    {
+      "source": "Get the overall hit count for this cache.",
+      "translation": "获取此缓存的总体命中次数。",
+      "count": 1
+    },
+    {
+      "source": "Get the overall miss count for this cache.",
+      "translation": "获取此缓存的整体缺失计数。",
+      "count": 1
+    },
+    {
+      "source": "Increment the failure count for the given key.",
+      "translation": "递增给定键的失败计数。",
+      "count": 1
+    },
+    {
+      "source": "Determine the number of contexts currently stored in the cache.",
+      "translation": "确定当前缓存中存储的上下文数量。",
+      "count": 1
+    },
+    {
+      "source": "<code>hierarchyMode</code> - the hierarchy mode; may be <code>null</code> if the context\nis not part of a hierarchy",
+      "translation": "<code>hierarchyMode</code> - 层次模式；如果上下文不属于层次结构，则可能为 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>testClass</code> - the test class that is using the application context(s)",
+      "translation": "<code>testClass</code> - 使用应用程序上下文（contexts）的测试类",
+      "count": 1
+    },
+    {
+      "source": "<code>testClass</code> - the test class that is no longer using the application context(s)",
+      "translation": "<code>testClass</code> - 不再使用应用程序上下文的测试类",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Juergen Hoeller",
+      "translation": "Sam Brannen，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

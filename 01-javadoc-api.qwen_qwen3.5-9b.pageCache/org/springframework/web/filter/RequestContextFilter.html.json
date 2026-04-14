@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-04-14 18:44:37",
+  "updated_at": "2026-04-14 18:44:37",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "Alternatively, Spring's <a href=\"../context/request/RequestContextListener.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextListener</code></a>\nand Spring's <a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> also expose\nthe same request context to the current thread.",
+      "translation": "或者，Spring 的<a href=\"../context/request/RequestContextListener.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextListener</code></a>和 Spring 的<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>也会向当前线程暴露相同的请求上下文。",
+      "count": 2
+    },
+    {
+      "source": "<b>WARNING:</b> Do not use inheritance for child threads if you are\naccessing a thread pool which is configured to potentially add new threads\non demand (for example, a JDK <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>),\nsince this will expose the inherited context to such a pooled thread.",
+      "translation": "<b>警告：</b> 如果您正在访问一个可能按需添加新线程的线程池（例如 JDK <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>），请勿对子线程使用继承，因为这会将继承的上下文暴露给此类池化线程。",
+      "count": 2
+    },
+    {
+      "source": "This filter is mainly for use with third-party servlets, for example, the JSF FacesServlet.\nWithin Spring's own web support, DispatcherServlet's processing is perfectly sufficient.",
+      "translation": "此过滤器主要用于与第三方 Servlet 配合使用，例如 JSF 的 FacesServlet。在 Spring 自身的 Web 支持中，DispatcherServlet 的处理已完全足够。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", to avoid side effects on spawned background threads.\nSwitch this to \"true\" to enable inheritance for custom child threads which\nare spawned during request processing and only used for this request\n(that is, ending after their initial task, without reuse of the thread).",
+      "translation": "默认为 \"false\"，以避免对生成的后台线程产生副作用。将此选项切换为 \"true\" 可为在请求处理期间生成且仅用于该请求的自定义子线程启用继承（即，线程在完成其初始任务后结束，而不会被重用）。",
+      "count": 2
+    },
+    {
+      "source": "Returns \"false\" so that the filter may set up the request context in each\nasynchronously dispatched thread.",
+      "translation": "返回 \"false\"，以便过滤器可以在每个异步调度的线程中设置请求上下文。",
+      "count": 2
+    },
+    {
+      "source": "Returns \"false\" so that the filter may set up the request context in an\nerror dispatch.",
+      "translation": "返回 \"false\"，以便过滤器可以在错误分发中设置请求上下文。",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson, Rossen Stoyanchev",
+      "translation": "Juergen Hoeller, Rod Johnson, Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "Provides HttpServletRequest and HttpServletResponse arguments instead of the\ndefault ServletRequest and ServletResponse ones.",
+      "translation": "提供 HttpServletRequest 和 HttpServletResponse 参数，而不是默认的 ServletRequest 和 ServletResponse。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Set whether to expose the LocaleContext and RequestAttributes as inheritable\nfor child threads (using an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InheritableThreadLocal.html\" title=\"class or interface in java.lang\"><code>InheritableThreadLocal</code></a>).",
+      "translation": "设置是否将 LocaleContext 和 RequestAttributes 作为可继承项暴露给子线程（使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InheritableThreadLocal.html\" title=\"class or interface in java.lang\"><code>InheritableThreadLocal</code></a>）。",
+      "count": 1
+    },
+    {
+      "source": "Same contract as for <code>doFilter</code>, but guaranteed to be\njust invoked once per request within a single request thread.",
+      "translation": "与<code>doFilter</code>相同的合同，但保证在单个请求线程中每个请求仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code>` 在类 `<code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">shouldNotFilterErrorDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`OncePerRequestFilter` 类中的 `<a href=\"OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">shouldNotFilterErrorDispatch</a>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterInternal</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`doFilterInternal` 在类 `<a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a>` 中。",
+      "count": 1
+    }
+  ]
+}

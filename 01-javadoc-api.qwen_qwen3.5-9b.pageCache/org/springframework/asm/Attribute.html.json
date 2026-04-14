@@ -1,0 +1,236 @@
+{
+  "created_at": "2026-04-14 10:43:53",
+  "updated_at": "2026-04-14 10:43:53",
+  "stats": {
+    "total_entries": 44,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 93,
+    "entries_with_hits": 44,
+    "entries_without_hits": 0,
+    "hit_rate": 2.1136363636363638,
+    "usage_percentage": 0.0044
+  },
+  "items": [
+    {
+      "source": "<code>offset</code> - index of the first byte of the attribute's content in <a href=\"ClassReader.html\" title=\"class in org.springframework.asm\"><code>ClassReader</code></a>. The 6\n    attribute header bytes (attribute_name_index and attribute_length) are not taken into\n    account here.",
+      "translation": "<code>offset</code> - 属性内容在<a href=\"ClassReader.html\" title=\"class in org.springframework.asm\"><code>ClassReader</code></a>中的第一个字节的索引。此处未考虑 6 个属性头字节（attribute_name_index 和 attribute_length）。",
+      "count": 3
+    },
+    {
+      "source": "<code>codeAttributeOffset</code> - index of the first byte of content of the enclosing Code attribute\n    in <a href=\"ClassReader.html\" title=\"class in org.springframework.asm\"><code>ClassReader</code></a>, or -1 if the attribute to be read is not a Code attribute. The 6\n    attribute header bytes (attribute_name_index and attribute_length) are not taken into\n    account here.",
+      "translation": "<code>codeAttributeOffset</code> - 在 <a href=\"ClassReader.html\" title=\"class in org.springframework.asm\"><code>ClassReader</code></a> 中，包围的 Code 属性内容的第一个字节的索引；如果读取的属性不是 Code 属性，则为 -1。此处不考虑 6 个属性头字节（attribute_name_index 和 attribute_length）。",
+      "count": 3
+    },
+    {
+      "source": "<code>classReader</code> - the class that contains the attribute to be read.",
+      "translation": "<code>classReader</code> - 包含要读取的属性的类。",
+      "count": 3
+    },
+    {
+      "source": "<code>length</code> - the length of the attribute's content (excluding the 6 attribute header bytes).",
+      "translation": "<code>length</code> - 属性的内容长度（不包括 6 个属性头字节）。",
+      "count": 3
+    },
+    {
+      "source": "<code>charBuffer</code> - the buffer to be used to call the ClassReader methods requiring a\n    'charBuffer' parameter.",
+      "translation": "<code>charBuffer</code> - 用于调用需要 'charBuffer' 参数的 ClassReader 方法的缓冲区。",
+      "count": 3
+    },
+    {
+      "source": "<code>classWriter</code> - the class to which this attribute must be added. This parameter can be used\n    to add the items that corresponds to this attribute to the constant pool of this class.",
+      "translation": "`classWriter` - 必须添加此属性的类。此参数可用于将与此属性对应的项添加到该类的常量池中。",
+      "count": 3
+    },
+    {
+      "source": "<code>code</code> - the bytecode of the method corresponding to this Code attribute, or null\n    if this attribute is not a Code attribute. Corresponds to the 'code' field of the Code\n    attribute.",
+      "translation": "`<code>code</code>` - 对应此 Code 属性的方法字节码，如果此属性不是 Code 属性则为 null。对应 Code 属性的'code'字段。",
+      "count": 3
+    },
+    {
+      "source": "<code>codeLength</code> - the length of the bytecode of the method corresponding to this code\n    attribute, or 0 if this attribute is not a Code attribute. Corresponds to the 'code_length'\n    field of the Code attribute.",
+      "translation": "`codeLength` - 对应此代码的字节码长度，如果此属性不是 Code 属性则为 0。对应 Code 属性的 'code_length' 字段。",
+      "count": 3
+    },
+    {
+      "source": "<code>maxStack</code> - the maximum stack size of the method corresponding to this Code attribute, or\n    -1 if this attribute is not a Code attribute.",
+      "translation": "<code>maxStack</code> - 此 Code 属性对应方法的最大栈大小，或者如果此属性不是 Code 属性则为 -1。",
+      "count": 3
+    },
+    {
+      "source": "<code>maxLocals</code> - the maximum number of local variables of the method corresponding to this code\n    attribute, or -1 if this attribute is not a Code attribute.",
+      "translation": "<code>maxLocals</code> - 对应此代码属性的方法的局部变量最大数量，或者如果此属性不是 Code 属性则为 -1。",
+      "count": 3
+    },
+    {
+      "source": "the byte array form of this attribute.",
+      "translation": "该属性的字节数组形式。",
+      "count": 3
+    },
+    {
+      "source": "This method is only invoked once to compute the binary form of this attribute. Subsequent\nchanges to the attribute after it was written for the first time will not be considered.",
+      "translation": "此方法仅被调用一次以计算该属性的二进制形式。在首次写入属性后，对该属性的后续更改将不予考虑。",
+      "count": 2
+    },
+    {
+      "source": "Returns the label corresponding to the given bytecode offset by calling <a href=\"ClassReader.html#readLabel(int,org.springframework.asm.Label%5B%5D)\"><code>ClassReader.readLabel(int, Label[])</code></a>. This creates and adds the label to the given array if it is not already\npresent. Note that this created label may be a <a href=\"Label.html\" title=\"class in org.springframework.asm\"><code>Label</code></a> subclass instance, if the given\nClassReader overrides <a href=\"ClassReader.html#readLabel(int,org.springframework.asm.Label%5B%5D)\"><code>ClassReader.readLabel(int, Label[])</code></a>. Hence <a href=\"#read(org.springframework.asm.ClassReader,int,int,char%5B%5D,int,org.springframework.asm.Label%5B%5D)\"><code>read(ClassReader, int, int, char[], int, Label[])</code></a> must not manually create <a href=\"Label.html\" title=\"class in org.springframework.asm\"><code>Label</code></a> instances.",
+      "translation": "通过调用 <a href=\"ClassReader.html#readLabel(int,org.springframework.asm.Label%5B%5D)\"><code>ClassReader.readLabel(int, Label[])</code></a> 返回给定字节码偏移量对应的标签。如果该标签尚未存在，则创建并将其添加到给定数组中。请注意，如果给定的 <a href=\"ClassReader.html#readLabel(int,org.springframework.asm.Label%5B%5D)\"><code>ClassReader.readLabel(int, Label[])</code></a> 被 <a href=\"ClassReader.html\" title=\"class in org.springframework.asm\">ClassReader</a> 覆盖，则创建的标签可能是 <a href=\"Label.html\" title=\"class in org.springframework.asm\"><code>Label</code></a> 的子类实例。因此，<a href=\"#read(org.springframework.asm.ClassReader,int,int,char%5B%5D,int,org.springframework.asm.Label%5B%5D)\"><code>read(ClassReader, int, int, char[], int, Label[])</code></a> 不得手动创建 <a href=\"Label.html\" title=\"class in org.springframework.asm\"><code>Label</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Reads a <a href=\"#type\"><code>type</code></a> attribute. This method must return a <i>new</i> <a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a> object,\nof type <a href=\"#type\"><code>type</code></a>, corresponding to the 'length' bytes starting at 'offset', in the given\nClassReader.",
+      "translation": "读取一个 `<a href=\"#type\"><code>type</code></a>` 属性。此方法必须返回一个新的 <i><a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a></i> 对象，其类型为 `<a href=\"#type\"><code>type</code></a>`，对应于给定 ClassReader 中从 'offset' 开始的 'length' 字节。",
+      "count": 2
+    },
+    {
+      "source": "Reads an attribute with the same <a href=\"#type\"><code>type</code></a> as the given attribute. This method returns a\nnew <a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a> object, corresponding to the 'length' bytes starting at 'offset', in the\ngiven ClassReader.",
+      "translation": "读取与给定属性具有相同<a href=\"#type\"><code>type</code></a>的属性。此方法返回一个新的<a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a>对象，该对象对应于在给定 ClassReader 中从'offset'开始的'length'字节。",
+      "count": 2
+    },
+    {
+      "source": "Reads an attribute with the same <a href=\"#type\"><code>type</code></a> as the given attribute.",
+      "translation": "读取与给定属性具有相同<a href=\"#type\"><code>type</code></a>的属性。",
+      "count": 2
+    },
+    {
+      "source": "Reads a <a href=\"#type\"><code>type</code></a> attribute.",
+      "translation": "读取一个<code>type</code>属性。",
+      "count": 2
+    },
+    {
+      "source": "Returns the label corresponding to the given bytecode offset by calling <a href=\"ClassReader.html#readLabel(int,org.springframework.asm.Label%5B%5D)\"><code>ClassReader.readLabel(int, Label[])</code></a>.",
+      "translation": "通过调用<a href=\"ClassReader.html#readLabel(int,org.springframework.asm.Label%5B%5D)\"><code>ClassReader.readLabel(int, Label[])</code></a>返回给定字节码偏移量对应的标签。",
+      "count": 2
+    },
+    {
+      "source": "Returns the byte array form of the content of the given attribute. The 6 header bytes\n(attribute_name_index and attribute_length) are <i>not</i> added in the returned byte array.",
+      "translation": "返回给定属性内容的字节数组形式。返回的字节数组中不包含 6 个头部字节（attribute_name_index 和 attribute_length）。",
+      "count": 2
+    },
+    {
+      "source": "no longer used by ASM.",
+      "translation": "不再被 ASM 使用。",
+      "count": 2
+    },
+    {
+      "source": "The type of this attribute, also called its name in the JVMS.",
+      "translation": "该属性的类型，在 JVMS 中也称为其名称。",
+      "count": 2
+    },
+    {
+      "source": "Constructs a new empty attribute.",
+      "translation": "构造一个新的空属性。",
+      "count": 2
+    },
+    {
+      "source": "Returns true if this type of attribute is a Code attribute.",
+      "translation": "如果该属性类型为代码属性，则返回 true。",
+      "count": 2
+    },
+    {
+      "source": "Returns true if this type of attribute is unknown. This means that the attribute\ncontent can't be parsed to extract constant pool references, labels, etc. Instead, the\nattribute content is read as an opaque byte array, and written back as is. This can lead to\ninvalid attributes, if the content actually contains constant pool references, labels, or other\nsymbolic references that need to be updated when there are changes to the constant pool, the\nmethod bytecode, etc. The default implementation of this method always returns true.",
+      "translation": "如果此类型的属性未知，则返回 true。这意味着无法解析属性内容以提取常量池引用、标签等。相反，属性内容将被读取为不透明的字节数组，并按原样写回。如果内容实际上包含常量池引用、标签或其他符号引用，而这些引用在常量池、方法字节码等发生变化时需要更新，这可能会导致无效的属性。此方法的默认实现始终返回 true。",
+      "count": 2
+    },
+    {
+      "source": "Returns the labels corresponding to this attribute.",
+      "translation": "返回与此属性对应的标签。",
+      "count": 2
+    },
+    {
+      "source": "<code>labels</code> - the labels of the method's code, or null if the attribute to be read\n    is not a Code attribute. Labels defined in the attribute must be created and added to this\n    array, if not already present, by calling the <a href=\"#readLabel(org.springframework.asm.ClassReader,int,org.springframework.asm.Label%5B%5D)\"><code>readLabel(ClassReader, int, Label[])</code></a> method (do not create\n    <a href=\"Label.html\" title=\"class in org.springframework.asm\"><code>Label</code></a> instances directly).",
+      "translation": "<code>labels</code> - 方法的代码标签，或者如果读取的属性不是 Code 属性则为 null。属性中定义的标签必须通过调用 <a href=\"#readLabel(org.springframework.asm.ClassReader,int,org.springframework.asm.Label%5B%5D)\"><code>readLabel(ClassReader, int, Label[])</code></a> 方法创建并添加到该数组中（如果尚未存在）；不要直接创建 <a href=\"Label.html\" title=\"class in org.springframework.asm\"><code>Label</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "a <i>new</i> <a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a> object corresponding to the specified bytes.",
+      "translation": "一个对应于指定字节的<i>新</i><a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a> 对象。",
+      "count": 2
+    },
+    {
+      "source": "a new <a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a> object corresponding to the specified bytes.",
+      "translation": "对应于指定字节的新<a href=\"Attribute.html\" title=\"class in org.springframework.asm\"><code>Attribute</code></a>对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the type of the attribute.",
+      "translation": "<code>type</code> - 属性的类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>attribute</code> - The attribute prototype that is used for reading.",
+      "translation": "<code>attribute</code> - 用于读取的属性原型。",
+      "count": 2
+    },
+    {
+      "source": "<code>labels</code> - the labels of the method's code, or null if the attribute to be read\n    is not a Code attribute. Labels defined in the attribute are added to this array, if not\n    already present.",
+      "translation": "`labels` - 方法的代码标签，或者如果读取的属性不是 Code 属性则为 null。如果尚未存在，则在属性中定义的标签将添加到该数组中。",
+      "count": 2
+    },
+    {
+      "source": "<code>bytecodeOffset</code> - a bytecode offset in a method.",
+      "translation": "<code>bytecodeOffset</code> - 方法中的字节码偏移量。",
+      "count": 2
+    },
+    {
+      "source": "<code>labels</code> - the already created labels, indexed by their offset. If a label already exists\n    for bytecodeOffset this method does not create a new one. Otherwise it stores the new label\n    in this array.",
+      "translation": "`labels` - 已创建的标签，按偏移量索引。如果字节码偏移处已存在标签，则此方法不会创建新标签；否则，它将新标签存储在此数组中。",
+      "count": 2
+    },
+    {
+      "source": "<code>attribute</code> - The attribute that should be written.",
+      "translation": "<code>attribute</code> - 要写入的属性。",
+      "count": 2
+    },
+    {
+      "source": "true if this type of attribute is unknown.",
+      "translation": "如果该属性类型未知，则为 true。",
+      "count": 2
+    },
+    {
+      "source": "true if this type of attribute is a Code attribute.",
+      "translation": "如果此属性是代码属性，则为 true。",
+      "count": 2
+    },
+    {
+      "source": "the labels corresponding to this attribute, or null if this attribute is not\n    a Code attribute that contains labels.",
+      "translation": "与该属性对应的标签，或者如果该属性不是包含标签的 Code 属性，则为 null。",
+      "count": 2
+    },
+    {
+      "source": "a label for the given bytecode offset.",
+      "translation": "给定字节码偏移量的标签。",
+      "count": 2
+    },
+    {
+      "source": "A non standard class, field, method or Code attribute, as defined in the Java Virtual Machine\nSpecification (JVMS).",
+      "translation": "Java 虚拟机规范（JVMS）中定义的非标准类、字段、方法或代码属性。",
+      "count": 1
+    },
+    {
+      "source": "Returns true if this type of attribute is unknown.",
+      "translation": "如果此类型的属性未知，则返回 true。",
+      "count": 1
+    },
+    {
+      "source": "Returns the byte array form of the content of the given attribute.",
+      "translation": "返回给定属性内容的字节数组形式。",
+      "count": 1
+    },
+    {
+      "source": "Returns the byte array form of the content of this attribute.",
+      "translation": "返回此属性的内容的字节数组形式。",
+      "count": 1
+    },
+    {
+      "source": "Eric Bruneton, Eugene Kuleshov",
+      "translation": "Eric Bruneton, Eugene Kuleshov",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-04-14 12:07:56",
+  "updated_at": "2026-04-14 12:07:56",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 62,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7714285714285714,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "The <a href=\"ScopeMetadataResolver.html\" title=\"interface in org.springframework.context.annotation\"><code>ScopeMetadataResolver</code></a> to be used for resolving the scope of detected components.",
+      "translation": "用于解析检测到的组件范围的<code>ScopeMetadataResolver</code><a href=\"ScopeMetadataResolver.html\" title=\"interface in org.springframework.context.annotation\">接口</a>。",
+      "count": 3
+    },
+    {
+      "source": "Note that the <code>&lt;context:component-scan&gt;</code> element has an\n<code>annotation-config</code> attribute; however, this annotation does not. This is because\nin almost all cases when using <code>@ComponentScan</code>, default annotation config\nprocessing (for example, processing <code>@Autowired</code> and friends) is assumed. Furthermore,\nwhen using <a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a>, annotation config processors are\nalways registered, meaning that any attempt to disable them at the\n<code>@ComponentScan</code> level would be ignored.",
+      "translation": "请注意，`<context:component-scan>` 元素具有 `annotation-config` 属性，但此注解没有。这是因为在几乎所有使用 `<code>@ComponentScan</code>` 的情况下，都假定会进行默认的注解配置处理（例如处理 `<code>@Autowired</code>` 等）。此外，当使用 <a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a> 时，注解配置处理器始终会被注册，这意味着任何试图在 `<code>@ComponentScan</code>` 级别禁用它们的尝试都会被忽略。",
+      "count": 2
+    },
+    {
+      "source": "Either <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> or <a href=\"#basePackages()\"><code>basePackages()</code></a> (or its alias\n<a href=\"#value()\"><code>value()</code></a>) may be specified to define specific packages to scan. If specific\npackages are not defined, scanning will occur recursively beginning with the\npackage of the class that declares this annotation.",
+      "translation": "可以指定 `<a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a>` 或 `<a href=\"#basePackages()\"><code>basePackages()</code></a>`（或其别名 `<a href=\"#value()\"><code>value()</code></a>`）来定义要扫描的特定包。如果未定义特定包，则将从声明此注解的类的包开始递归进行扫描。",
+      "count": 2
+    },
+    {
+      "source": "<code>@ComponentScan</code> can be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em>\nannotation. <code>@ComponentScan</code> may also be used as a <em>meta-annotation</em>\nto create custom <em>composed annotations</em> with attribute overrides.",
+      "translation": "<code>@ComponentScan</code> 可用作一个 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em>\n注解。<code>@ComponentScan</code> 也可用作 <em>元注解</em>，以创建具有属性覆盖的自定义 <em>组合注解</em>。",
+      "count": 2
+    },
+    {
+      "source": "Locally declared <code>@ComponentScan</code> annotations always take precedence\nover and effectively <em>hide</em> <code>@ComponentScan</code> meta-annotations,\nwhich allows explicit local configuration to override configuration that is\n<em>meta-present</em> (including composed annotations meta-annotated with\n<code>@ComponentScan</code>).",
+      "translation": "本地声明的 `<code>@ComponentScan</code>` 注解始终优先于并实际上 <em>隐藏</em> `<code>@ComponentScan</code>` 元注解，这允许显式的本地配置覆盖以 <em>元方式存在</em> 的配置（包括由带有 `<code>@ComponentScan</code>` 元注解的复合注解所存在的配置）。",
+      "count": 2
+    },
+    {
+      "source": "The default value of the <a href=\"../../beans/factory/support/BeanNameGenerator.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> interface itself indicates\nthat the scanner used to process this <code>@ComponentScan</code> annotation should\nuse its inherited bean name generator, for example, the default\n<a href=\"AnnotationBeanNameGenerator.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationBeanNameGenerator</code></a> or any custom instance supplied to the\napplication context at bootstrap time.",
+      "translation": "`<a href=\"../../beans/factory/support/BeanNameGenerator.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a>` 接口本身的默认值表明，用于处理此 `<code>@ComponentScan</code>` 注解的扫描器应使用其继承的 Bean 名称生成器，例如默认的 `<a href=\"AnnotationBeanNameGenerator.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationBeanNameGenerator</code></a>` 或在启动时向应用程序上下文提供的任何自定义实例。",
+      "count": 2
+    },
+    {
+      "source": "Supports <code>${...}</code> placeholders which are resolved against the\n<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> as well as\nAnt-style package patterns — for example, <code>\"org.example.**\"</code>.",
+      "translation": "支持针对<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>解析的<code>${...}</code>占位符，以及 Ant 风格的包模式——例如<code>\"org.example.**\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "Consider use of <a href=\"#includeFilters()\"><code>includeFilters()</code></a> and <a href=\"#excludeFilters()\"><code>excludeFilters()</code></a>\nfor a more flexible approach.",
+      "translation": "考虑使用<a href=\"#includeFilters()\"><code>includeFilters()</code></a>和<a href=\"#excludeFilters()\"><code>excludeFilters()</code></a>来实现更灵活的方法。",
+      "count": 2
+    },
+    {
+      "source": "Multiple packages or patterns may be specified, either separately or\nwithin a single <code>String</code> — for example,\n<code>{\"org.example.config\", \"org.example.service.**\"}</code> or\n<code>\"org.example.config, org.example.service.**\"</code>.",
+      "translation": "可以指定多个包或模式，可以是分开的，也可以包含在单个 `<code>String</code>` 中——例如，`<code>{\"org.example.config\", \"org.example.service.**\"}</code>` 或 `<code>\"org.example.config, org.example.service.**\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "See <a href=\"Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a>'s Javadoc for usage examples.",
+      "translation": "参见 `<a href=\"Configuration.html\" title=\"org.springframework.context.annotation 中的注解接口\"><code>@Configuration</code></a>` 的 Javadoc，其中包含使用示例。",
+      "count": 2
+    },
+    {
+      "source": "Allows for more concise annotation declarations if no other attributes\nare needed — for example, <code>@ComponentScan(\"org.example\")</code>\ninstead of <code>@ComponentScan(basePackages = \"org.example\")</code>.",
+      "translation": "如果不需要其他属性，则允许使用更简洁的注解声明——例如，使用 `<code>@ComponentScan(\"org.example\")</code>` 而不是 `<code>@ComponentScan(basePackages = \"org.example\")</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#value()\"><code>value()</code></a> is an alias for (and mutually exclusive with) this\nattribute.",
+      "translation": "<a href=\"#value()\"><code>value()</code></a> 是该属性的别名（且与之互斥）。",
+      "count": 2
+    },
+    {
+      "source": "Use <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> for a type-safe alternative to\nString-based package names.",
+      "translation": "使用<a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a>作为基于字符串的包名的类型安全替代方案。",
+      "count": 2
+    },
+    {
+      "source": "Note that setting this attribute overrides any value set for <a href=\"#scopeResolver()\"><code>scopeResolver()</code></a>.",
+      "translation": "注意，设置此属性会覆盖为<a href=\"#scopeResolver()\"><code>scopeResolver()</code></a>设置的任何值。",
+      "count": 2
+    },
+    {
+      "source": "Further narrows the set of candidate components from everything in <a href=\"#basePackages()\"><code>basePackages()</code></a>\nto everything in the base packages that matches the given filter or filters.",
+      "translation": "进一步缩小候选组件的范围，从 `<a href=\"#basePackages()\"><code>basePackages()</code></a>` 中的所有组件，缩小到与给定过滤器或过滤器匹配的基础包中的所有内容。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>false</code>; switch this to <code>true</code> when desired.",
+      "translation": "默认值为<code>false</code>；需要时将其切换为<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "Provides support comparable to Spring's <code>&lt;context:component-scan&gt;</code>\nXML namespace element.",
+      "translation": "提供与 Spring 的 `<code>&lt;context:component-scan&gt;</code>` XML 命名空间元素相当的支持。",
+      "count": 2
+    },
+    {
+      "source": "Note that these filters will be applied in addition to the default filters, if specified.\nAny type under the specified base packages which matches a given filter will be included,\neven if it does not match the default filters (i.e. is not annotated with <code>@Component</code>).",
+      "translation": "注意，这些过滤器将在指定默认过滤器的基础上额外应用。\n任何位于指定基础包下且匹配给定过滤器的类型都将被包含在内，即使它不匹配默认过滤器（即未使用 `<code>@Component</code>` 注解）。",
+      "count": 2
+    },
+    {
+      "source": "Consider creating a special no-op marker class or interface in each package\nthat serves no purpose other than being referenced by this attribute.",
+      "translation": "在每个包中创建一个特殊的无操作标记类或接口，其唯一用途是被此属性引用。",
+      "count": 2
+    },
+    {
+      "source": "The default is defer to the default behavior of the component scanner used to\nexecute the actual scan.",
+      "translation": "默认值为 defer，即委托给用于执行实际扫描的组件扫描器的默认行为。",
+      "count": 2
+    },
+    {
+      "source": "Indicates whether automatic detection of classes annotated with <code>@Component</code>\n<code>@Repository</code>, <code>@Service</code>, or <code>@Controller</code> should be enabled.",
+      "translation": "指示是否应启用带有 `<code>@Component`</code>`、`<code>@Repository`</code>、`<code>@Service`</code> 或 `<code>@Controller`</code> 注解的类的自动检测。",
+      "count": 2
+    },
+    {
+      "source": "Declares the type filter to be used as an <a href=\"#includeFilters()\">include filter</a> or <a href=\"#excludeFilters()\">exclude filter</a>.",
+      "translation": "声明要用作<a href=\"#includeFilters()\">包含过滤器</a>或<a href=\"#excludeFilters()\">排除过滤器</a>的类型过滤器。",
+      "count": 2
+    },
+    {
+      "source": "Type-safe alternative to <a href=\"#basePackages()\"><code>basePackages()</code></a> for specifying the packages\nto scan for annotated components.",
+      "translation": "用于指定要扫描以查找已注解组件的包的 `<a href=\"#basePackages()\"><code>basePackages()</code></a>` 的类型安全替代方案。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"../../beans/factory/support/BeanNameGenerator.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> class to be used for naming detected components\nwithin the Spring container.",
+      "translation": "用于在 Spring 容器中对检测到的组件进行命名的 <a href=\"../../beans/factory/support/BeanNameGenerator.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> 类。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#basePackages()\"><code>basePackages()</code></a>.",
+      "translation": "`<a href=\"#basePackages()\">`<code>basePackages()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "Specifies which types are not eligible for component scanning.",
+      "translation": "指定不适用于组件扫描的类型。",
+      "count": 2
+    },
+    {
+      "source": "Base packages to scan for annotated components.",
+      "translation": "要扫描已注解组件的基础包。",
+      "count": 1
+    },
+    {
+      "source": "Specifies which types are eligible for component scanning.",
+      "translation": "指定组件扫描适用的类型。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether scanned beans should be registered for lazy initialization.",
+      "translation": "指定是否应注册已扫描的 Bean 以进行延迟初始化。",
+      "count": 1
+    },
+    {
+      "source": "Controls the class files eligible for component detection.",
+      "translation": "控制可用于组件检测的类文件。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether proxies should be generated for detected components, which may be\nnecessary when using scopes in a proxy-style fashion.",
+      "translation": "指示是否应为检测到的组件生成代理，这在以代理方式使用范围时可能是必要的。",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller, Sam Brannen",
+      "translation": "Chris Beams, Juergen Hoeller, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

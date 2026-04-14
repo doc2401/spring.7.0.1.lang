@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-04-14 11:03:48",
+  "updated_at": "2026-04-14 11:03:48",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "The name of an attribute that can be\n<a href=\"../../../core/AttributeAccessor.html#setAttribute(java.lang.String,java.lang.Object)\"><code>set</code></a> on a\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> to signal\nthat its registration should not be processed.",
+      "translation": "属性名称，该属性可以设置到 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>` 上（使用 <a href=\"../../../core/AttributeAccessor.html#setAttribute(java.lang.String,java.lang.Object)\"><code>set</code></a>），以指示不应处理其注册。",
+      "count": 3
+    },
+    {
+      "source": "Using this interface on a registered bean will cause the bean <em>and</em>\nall of its dependencies to be initialized during AOT processing. We generally\nrecommend that this interface is only used with infrastructure beans such as\n<a href=\"../config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a> which have limited dependencies and are already\ninitialized early in the bean factory lifecycle. If such a bean is registered\nusing a factory method, make sure to make it <code>static</code> so that its\nenclosing class does not have to be initialized.",
+      "translation": "在此接口上使用该接口的已注册 Bean 会导致该 Bean<em>以及</em>其所有依赖项在 AOT 处理期间被初始化。我们通常建议仅将此接口用于基础设施 Bean，例如<a href=\"../config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessor</code></a>，这些 Bean 的依赖项有限且已在 Bean 工厂生命周期早期初始化。如果此类 Bean 是使用工厂方法注册的，请确保将其声明为<code>static</code>，以便无需初始化其外部类。",
+      "count": 2
+    },
+    {
+      "source": "<code>BeanRegistrationAotProcessor</code> implementations may be registered in\na <a href=\"AotServices.html#FACTORIES_RESOURCE_LOCATION\">\"META-INF/spring/aot.factories\"</a>&lt;<a href=\"AotServices.html#type-param-T\" title=\"type parameter in AotServices\">T</a>&gt; resource or as a bean.",
+      "translation": "`BeanRegistrationAotProcessor` 实现可以注册在 `<a href=\"AotServices.html#FACTORIES_RESOURCE_LOCATION\">\"META-INF/spring/aot.factories\"</a>&lt;<a href=\"AotServices.html#type-param-T\" title=\"type parameter in AotServices\">T</a>&gt;` 资源中，或作为 Bean。",
+      "count": 2
+    },
+    {
+      "source": "An AOT processor replaces its usual runtime behavior by an optimized\narrangement, usually in generated code. For that reason, a component that\nimplements this interface is not contributed by default. If a component that\nimplements this interface still needs to be invoked at runtime,\n<a href=\"#isBeanExcludedFromAotProcessing()\"><code>isBeanExcludedFromAotProcessing()</code></a> can be overridden.",
+      "translation": "AOT 处理器通过优化配置（通常在生成的代码中）替换其常规的运行时行为。因此，实现此接口的组件默认不会提供。如果仍需调用实现此接口的组件，可以重写<a href=\"#isBeanExcludedFromAotProcessing()\"><code>isBeanExcludedFromAotProcessing()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return if the bean instance associated with this processor should be\nexcluded from AOT processing itself. By default, this method returns\n<code>true</code> to automatically exclude the bean, if the definition should\nbe written then this method may be overridden to return <code>true</code>.",
+      "translation": "返回此处理器关联的 Bean 实例是否应排除在 AOT 处理之外。默认情况下，此方法返回<code>true</code>以自动排除该 Bean；如果应该写入定义，则可以重写此方法以返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "if the bean should be excluded from AOT processing",
+      "translation": "如果该 Bean 应排除在 AOT 处理之外。",
+      "count": 2
+    },
+    {
+      "source": "If the given instance isn't relevant to the processor, it should return a\n<code>null</code> contribution.",
+      "translation": "如果给定的实例与处理器不相关，则应返回一个 `<code>null</code>` 贡献。",
+      "count": 1
+    },
+    {
+      "source": "Processors are free to use any techniques they like to analyze the given\ninstance. Most typically use reflection to find fields or methods to use\nin the contribution. Contributions typically generate source code or\nresource files that can be used when the AOT optimized application runs.",
+      "translation": "处理器可以自由使用任何技术来分析给定的实例。大多数情况下，它们使用反射来查找用于贡献的字段或方法。贡献通常会生成源代码或资源文件，这些文件可在 AOT 优化后的应用程序运行时使用。",
+      "count": 1
+    },
+    {
+      "source": "Process the given <a href=\"../support/RegisteredBean.html\" title=\"class in org.springframework.beans.factory.support\"><code>RegisteredBean</code></a> instance ahead-of-time and\nreturn a contribution or <code>null</code>.",
+      "translation": "提前处理给定的<a href=\"../support/RegisteredBean.html\" title=\"class in org.springframework.beans.factory.support\"><code>RegisteredBean</code></a>实例并返回贡献或<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return if the bean instance associated with this processor should be\nexcluded from AOT processing itself.",
+      "translation": "返回此处理器关联的 Bean 实例是否应排除在 AOT 处理之外。",
+      "count": 1
+    },
+    {
+      "source": "<code>registeredBean</code> - the registered bean to process",
+      "translation": "<code>registeredBean</code> - 要处理的已注册 Bean",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个功能接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Phillip Webb, Stephane Nicoll",
+      "translation": "Phillip Webb，Stephane Nicoll",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-04-14 10:53:03",
+  "updated_at": "2026-04-14 10:53:03",
+  "stats": {
+    "total_entries": 12,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 22,
+    "entries_with_hits": 12,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8333333333333333,
+    "usage_percentage": 0.0012000000000000001
+  },
+  "items": [
+    {
+      "source": "Necessary for Spring's own caching of bean descriptors within the application\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>, rather than relying on the JDK's system-wide <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/BeanInfo.html\" title=\"class or interface in java.beans\"><code>BeanInfo</code></a>\ncache (in order to avoid leaks on individual application shutdown in a shared JVM).",
+      "translation": "Spring 自身需要在应用程序内缓存 bean 描述符，因此需要使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>，而不是依赖 JDK 的全局 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/BeanInfo.html\" title=\"class or interface in java.beans\"><code>BeanInfo</code></a> 缓存（以避免在共享 JVM 中单个应用程序关闭时发生内存泄漏）。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.0, Spring's default introspection discovers basic JavaBeans properties\nthrough an efficient method reflection pass. For full JavaBeans introspection\nincluding indexed properties and all JDK-supported customizers, configure a\n<code>META-INF/spring.factories</code> file with the following content:\n<code>org.springframework.beans.BeanInfoFactory=org.springframework.beans.StandardBeanInfoFactory</code>\nFor Spring 5.3 compatible extended introspection including non-void setter methods:\n<code>org.springframework.beans.BeanInfoFactory=org.springframework.beans.ExtendedBeanInfoFactory</code>",
+      "translation": "从 6.0 版本开始，Spring 的默认内省通过高效的反射遍历发现基本的 JavaBeans 属性。若要实现完整的 JavaBeans 内省（包括索引属性和所有 JDK 支持的自定义器），请配置包含以下内容的 `<code>META-INF/spring.factories</code>` 文件：\n<code>org.springframework.beans.BeanInfoFactory=org.springframework.beans.StandardBeanInfoFactory</code>\n对于支持非 void setter 方法的 Spring 5.3 兼容扩展内省，请配置：\n<code>org.springframework.beans.BeanInfoFactory=org.springframework.beans.ExtendedBeanInfoFactory</code>",
+      "count": 2
+    },
+    {
+      "source": "Any <code>acceptClassLoader</code> call at application startup should\nbe paired with a <a href=\"#clearClassLoader(java.lang.ClassLoader)\"><code>clearClassLoader(ClassLoader)</code></a> call at application shutdown.",
+      "translation": "任何在应用程序启动时调用的 `<code>acceptClassLoader</code>` 都应在应用程序关闭时与一个 `<a href=\"#clearClassLoader(java.lang.ClassLoader)\"><code>clearClassLoader(ClassLoader)</code></a>` 调用配对。",
+      "count": 2
+    },
+    {
+      "source": "Information is cached statically, so we don't need to create new\nobjects of this class for every JavaBean we manipulate. Hence, this class\nimplements the factory design pattern, using a private constructor and\na static <code>forClass(Class)</code> factory method to obtain instances.",
+      "translation": "信息被静态缓存，因此我们无需为每个要操作的 JavaBean 创建此类的对象。因此，该类实现了工厂设计模式，使用私有构造函数和静态 `<code>forClass(Class)</code>` 工厂方法来获取实例。",
+      "count": 2
+    },
+    {
+      "source": "Note that for caching to work effectively, some preconditions need to be met:\nPrefer an arrangement where the Spring jars live in the same ClassLoader as the\napplication classes, which allows for clean caching along with the application's\nlifecycle in any case.",
+      "translation": "请注意，要使缓存有效工作，需要满足一些先决条件：\n最好采用一种配置方式，使 Spring jar 与应用程序类位于同一个 ClassLoader 中，这样无论如何都能实现与应用生命周期同步的干净缓存。",
+      "count": 2
+    },
+    {
+      "source": "This configuration method is only relevant in scenarios where the Spring\nclasses reside in a 'common' ClassLoader (for example, the system ClassLoader)\nwhose lifecycle is not coupled to the application. In such a scenario,\nCachedIntrospectionResults would by default not cache any of the application's\nclasses, since they would create a leak in the common ClassLoader.",
+      "translation": "此配置方法仅适用于 Spring 类位于“公共”ClassLoader（例如系统 ClassLoader）且其生命周期不与应用程序耦合的场景。在此类场景中，由于会在公共 ClassLoader 中造成内存泄漏，CachedIntrospectionResults 默认不会缓存任何应用程序的类。",
+      "count": 2
+    },
+    {
+      "source": "Clear the introspection cache for the given ClassLoader, removing the\nintrospection results for all classes underneath that ClassLoader, and\nremoving the ClassLoader (and its children) from the acceptance list.",
+      "translation": "清除给定 ClassLoader 的自省缓存，移除该 ClassLoader 下所有类的自省结果，并从接受列表中移除该 ClassLoader（及其子节点）。",
+      "count": 2
+    },
+    {
+      "source": "<code>classLoader</code> - the ClassLoader to accept",
+      "translation": "<code>classLoader</code> - 要接受的 ClassLoader",
+      "count": 2
+    },
+    {
+      "source": "<code>classLoader</code> - the ClassLoader to clear the cache for",
+      "translation": "<code>classLoader</code> - 要清除缓存的 ClassLoader。",
+      "count": 2
+    },
+    {
+      "source": "05 May 2001",
+      "translation": "05 年 5 月 2001",
+      "count": 2
+    },
+    {
+      "source": "Accept the given ClassLoader as cache-safe, even if its classes would\nnot qualify as cache-safe in this CachedIntrospectionResults class.",
+      "translation": "接受给定的 ClassLoader 作为缓存安全的，即使其类在此 CachedIntrospectionResults 类中不符合缓存安全条件。",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller",
+      "translation": "Rod Johnson，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

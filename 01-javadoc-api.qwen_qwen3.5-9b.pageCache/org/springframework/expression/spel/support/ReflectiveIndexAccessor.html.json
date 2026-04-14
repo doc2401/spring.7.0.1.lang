@@ -1,0 +1,261 @@
+{
+  "created_at": "2026-04-14 13:39:53",
+  "updated_at": "2026-04-14 13:39:53",
+  "stats": {
+    "total_entries": 49,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 92,
+    "entries_with_hits": 49,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8775510204081634,
+    "usage_percentage": 0.0049
+  },
+  "items": [
+    {
+      "source": "<code>context</code> - the evaluation context in which the access is being attempted",
+      "translation": "<code>context</code> - 尝试访问时的评估上下文",
+      "count": 4
+    },
+    {
+      "source": "<code>target</code> - the target object upon which the index is being accessed",
+      "translation": "<code>target</code> - 正在访问索引的目标对象",
+      "count": 4
+    },
+    {
+      "source": "<code>index</code> - the index being accessed",
+      "translation": "<code>index</code> - 正在访问的索引",
+      "count": 4
+    },
+    {
+      "source": "See <a href=\"ReflectiveIndexAccessor.html\" title=\"class in org.springframework.expression.spel.support\">class-level documentation</a> for\nfurther details and an example.",
+      "translation": "有关更多详细信息和示例，请参阅<a href=\"ReflectiveIndexAccessor.html\" title=\"class in org.springframework.expression.spel.support\">类级别文档</a>。",
+      "count": 3
+    },
+    {
+      "source": "Return <code>true</code> if a write-method has been configured and\n<a href=\"#canRead(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\"><code>canRead(EvaluationContext, Object, Object)</code></a> returns <code>true</code> for the same arguments.",
+      "translation": "如果已配置写入方法，并且对于相同的参数，<a href=\"#canRead(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\"><code>canRead(EvaluationContext, Object, Object)</code></a> 返回 <code>true</code>，则返回 <code>true</code>。",
+      "count": 3
+    },
+    {
+      "source": "Invoke the configured read-method via reflection and return the result\nwrapped in a <a href=\"../../TypedValue.html\" title=\"class in org.springframework.expression\"><code>TypedValue</code></a>.",
+      "translation": "通过反射调用配置的读取方法，并返回包装在<a href=\"../../TypedValue.html\" title=\"class in org.springframework.expression\"><code>TypedValue</code></a>中的结果。",
+      "count": 3
+    },
+    {
+      "source": "<code>targetType</code> - the type of indexed structure which serves as the target\nof index operations",
+      "translation": "<code>targetType</code> - 作为索引操作目标的索引结构的类型",
+      "count": 3
+    },
+    {
+      "source": "<code>readMethodName</code> - the name of the method used to read from the indexed\nstructure",
+      "translation": "<code>readMethodName</code> - 用于从索引结构读取数据的方",
+      "count": 3
+    },
+    {
+      "source": "The <code>FruitMap</code> class (the <code>targetType</code>) represents a structure\nthat is indexed via the <code>Color</code> enum (the <code>indexType</code>). The name\nof the read-method is <code>\"getFruit\"</code>, and that method returns a\n<code>String</code> (the <code>indexedValueType</code>). The name of the write-method\nis <code>\"setFruit\"</code>, and that method accepts a <code>Color</code> enum (the\n<code>indexType</code>) and a <code>String</code> (the <code>indexedValueType</code> which\nmust match the return type of the read-method).",
+      "translation": "`FruitMap` 类（即 `targetType`）表示一个通过 `Color` 枚举（即 `indexType`）进行索引的结构。读取方法的名称为 `\"getFruit\"`，该方法返回一个 `<code>String</code>`（即 `indexedValueType`）。写入方法的名称为 `\"setFruit\"`，该方法接受一个 `Color` 枚举（即 `indexType`）和一个 `<code>String</code>`（即 `indexedValueType`，必须与读取方法的返回类型匹配）。",
+      "count": 2
+    },
+    {
+      "source": "A read-write <code>IndexAccessor</code> for <code>FruitMap</code> can be created via\n<code>new ReflectiveIndexAccessor(FruitMap.class, Color.class, \"getFruit\", \"setFruit\")</code>.\nWith that accessor registered and a <code>FruitMap</code> registered as a variable\nnamed <code>#fruitMap</code>, the SpEL expression\n<code>#fruitMap[T(example.Color).RED] = 'strawberry'</code> can be used to change\nthe fruit mapping for the color red from <code>\"cherry\"</code> to <code>\"strawberry\"</code>.",
+      "translation": "用于 `FruitMap` 的读写 `<code>IndexAccessor</code>` 可通过 `<code>new ReflectiveIndexAccessor(FruitMap.class, Color.class, \"getFruit\", \"setFruit\")</code>` 创建。将该访问器注册并将一个 `<code>FruitMap</code>` 注册为名为 `<code>#fruitMap</code>` 的变量后，可以使用 SpEL 表达式 `<code>#fruitMap[T(example.Color).RED] = 'strawberry'</code>` 将红色对应的水果映射从 `<code>\"cherry\"</code>` 更改为 `<code>\"strawberry\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "A read-only <code>IndexAccessor</code> for <code>FruitMap</code> can be created via\n<code>new ReflectiveIndexAccessor(FruitMap.class, Color.class, \"getFruit\")</code>.\nWith that accessor registered and a <code>FruitMap</code> registered as a variable\nnamed <code>#fruitMap</code>, the SpEL expression <code>#fruitMap[T(example.Color).RED]</code>\nwill evaluate to <code>\"cherry\"</code>.",
+      "translation": "可以创建一个针对 `FruitMap` 的只读 `<code>IndexAccessor</code>`，方式为 `<code>new ReflectiveIndexAccessor(FruitMap.class, Color.class, \"getFruit\")</code>`。将该访问器注册后，并将一个 `<code>FruitMap</code>` 注册为名为 `<code>#fruitMap</code>` 的变量，SpEL 表达式 `<code>#fruitMap[T(example.Color).RED]</code>` 将求值为 `<code>\"cherry\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Bytecode should be generated into the supplied <a href=\"../../../asm/MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a>\nusing context information from the <a href=\"../CodeFlow.html\" title=\"class in org.springframework.expression.spel\"><code>CodeFlow</code></a> where necessary.",
+      "translation": "字节码应生成到提供的<a href=\"../../../asm/MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a>中，并在必要时使用来自<a href=\"../CodeFlow.html\" title=\"class in org.springframework.expression.spel\"><code>CodeFlow</code></a>的上下文信息。",
+      "count": 2
+    },
+    {
+      "source": "<code>ReflectiveIndexAccessor</code> also implements <a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\"><code>CompilableIndexAccessor</code></a>\nin order to support compilation to bytecode for read access. Note, however,\nthat the configured read-method must be invokable via a public class or public\ninterface for compilation to succeed.",
+      "translation": "<code>ReflectiveIndexAccessor</code> 还实现了<a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\"><code>CompilableIndexAccessor</code></a>，以支持将读取访问编译为字节码。然而请注意，配置的读取方法必须能够通过公共类或公共接口调用，否则编译将无法成功。",
+      "count": 2
+    },
+    {
+      "source": "Will only be invoked if <a href=\"../CompilableIndexAccessor.html#isCompilable()\"><code>CompilableIndexAccessor.isCompilable()</code></a> returns <code>true</code>.",
+      "translation": "仅在 `<a href=\"../CompilableIndexAccessor.html#isCompilable()\"><code>CompilableIndexAccessor.isCompilable()</code></a>` 返回 `<code>true</code>` 时才会被调用。",
+      "count": 2
+    },
+    {
+      "source": "The indexed structure can be accessed through a public read-method (when\nbeing read) or a public write-method (when being written). The relationship\nbetween the read-method and write-method is based on a convention that is\napplicable for typical implementations of indexed structures. See the example\nbelow for details.",
+      "translation": "索引结构可以通过公共读取方法（在读取时）或公共写入方法（在写入时）进行访问。读取方法与写入方法之间的关系基于一种适用于典型索引结构实现的约定。有关详细信息，请参阅下面的示例。",
+      "count": 2
+    },
+    {
+      "source": "Considers primitive wrapper classes as assignable to the corresponding\nprimitive types.",
+      "translation": "将原始包装类视为可赋值给对应的原始类型。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../CompilableIndexAccessor.html#isCompilable()\">CompilableIndexAccessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../CompilableIndexAccessor.html#isCompilable()\">CompilableIndexAccessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../CompilableIndexAccessor.html#generateCode(org.springframework.expression.spel.SpelNode,org.springframework.asm.MethodVisitor,org.springframework.expression.spel.CodeFlow)\">CompilableIndexAccessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../CompilableIndexAccessor.html#generateCode(org.springframework.expression.spel.SpelNode,org.springframework.asm.MethodVisitor,org.springframework.expression.spel.CodeFlow)\">CompilableIndexAccessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return an array containing the <code>targetType</code> configured via the constructor.",
+      "translation": "返回一个包含通过构造函数配置的<code>targetType</code>的数组。",
+      "count": 2
+    },
+    {
+      "source": "Get the return type of the configured read-method.",
+      "translation": "获取配置的读取方法的返回类型。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../IndexAccessor.html#canRead(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\">canRead</a></code> in interface <code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../../IndexAccessor.html#canRead(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\">canRead</a></code>` 接口 `<code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../IndexAccessor.html#read(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\">read</a></code> in interface <code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../../IndexAccessor.html#read(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\">read</a></code>` 接口 `<code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../IndexAccessor.html#canWrite(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\">canWrite</a></code> in interface <code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../../IndexAccessor.html#canWrite(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\">canWrite</a></code>` 接口 `<code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../IndexAccessor.html#write(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object,java.lang.Object)\">write</a></code> in interface <code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../../IndexAccessor.html#write(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object,java.lang.Object)\">write</a></code>` 接口 `<code><a href=\"../../IndexAccessor.html\" title=\"interface in org.springframework.expression\">IndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../CompilableIndexAccessor.html#isCompilable()\">isCompilable</a></code> in interface <code><a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\">CompilableIndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../CompilableIndexAccessor.html#isCompilable()\">isCompilable</a></code>` 接口 `<code><a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\">CompilableIndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../CompilableIndexAccessor.html#getIndexedValueType()\">getIndexedValueType</a></code> in interface <code><a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\">CompilableIndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../CompilableIndexAccessor.html#getIndexedValueType()\">getIndexedValueType</a></code>` 接口 `<code><a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\">CompilableIndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../CompilableIndexAccessor.html#generateCode(org.springframework.expression.spel.SpelNode,org.springframework.asm.MethodVisitor,org.springframework.expression.spel.CodeFlow)\">generateCode</a></code> in interface <code><a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\">CompilableIndexAccessor</a></code>",
+      "translation": "`<code><a href=\"../CompilableIndexAccessor.html#generateCode(org.springframework.expression.spel.SpelNode,org.springframework.asm.MethodVisitor,org.springframework.expression.spel.CodeFlow)\">generateCode</a></code>` 接口 `<code><a href=\"../CompilableIndexAccessor.html\" title=\"interface in org.springframework.expression.spel\">CompilableIndexAccessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>index</code> - the <a href=\"../SpelNode.html\" title=\"interface in org.springframework.expression.spel\"><code>SpelNode</code></a> that represents the index being\naccessed",
+      "translation": "<code>index</code> - 表示正在访问的索引的<a href=\"../SpelNode.html\" title=\"interface in org.springframework.expression.spel\"><code>SpelNode</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>mv</code> - the ASM <a href=\"../../../asm/MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a> into which code should\nbe generated",
+      "translation": "`mv` - 应生成代码的 ASM `<a href=\"../../../asm/MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a>`",
+      "count": 2
+    },
+    {
+      "source": "<code>writeMethodName</code> - the name of the method used to write to the indexed\nstructure, or <code>null</code> if writing is not supported",
+      "translation": "<code>writeMethodName</code> - 用于向索引结构写入数据的方法名称，或者如果不支持写入则为 <code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>indexType</code> - the type of index used to read from the indexed structure",
+      "translation": "<code>indexType</code> - 用于从索引结构中读取数据的索引类型",
+      "count": 2
+    },
+    {
+      "source": "<code>indexType</code> - the type of index used to read from or write to the indexed\nstructure",
+      "translation": "<code>indexType</code> - 用于从索引结构读取或写入的索引类型",
+      "count": 2
+    },
+    {
+      "source": "The supplied <code>indexNode</code> should be used to generate the\nappropriate bytecode to load the index onto the stack. For example, given\nthe expression <code>book.authors[0]</code>, invoking\n<code>codeFlow.generateCodeForArgument(methodVisitor, indexNode, int.class)</code>\nwill ensure that the index (<code>0</code>) is available on the stack as a\nprimitive <code>int</code>.",
+      "translation": "提供的 `<code>indexNode` 应被用于生成适当的字节码，以便将索引加载到栈上。例如，对于表达式 `<code>book.authors[0]</code>`，调用 `<code>codeFlow.generateCodeForArgument(methodVisitor, indexNode, int.class)</code>` 将确保索引（即 `<code>0</code>`）作为原始类型 `<code>int` 存在于栈上。",
+      "count": 1
+    },
+    {
+      "source": "Should only be invoked if <a href=\"#canWrite(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\"><code>canWrite(EvaluationContext, Object, Object)</code></a> returns <code>true</code> for the\nsame arguments.",
+      "translation": "仅在 `<a href=\"#canWrite(org.springframework.expression.EvaluationContext,java.lang.Object,java.lang.Object)\"><code>canWrite(EvaluationContext, Object, Object)</code></a>` 对相同参数返回 <code>true</code> 时调用。",
+      "count": 1
+    },
+    {
+      "source": "May only be known once the index has been read.",
+      "translation": "只有在读取索引后才能得知。",
+      "count": 1
+    },
+    {
+      "source": "Return <code>true</code> if the supplied <code>target</code> and <code>index</code> can\nbe assigned to the <code>targetType</code> and <code>indexType</code> configured\nvia the constructor.",
+      "translation": "如果提供的<code>target</code>和<code>index</code>可以分配给通过构造函数配置的<code>targetType</code>和<code>indexType</code>，则返回<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Construct a new <code>ReflectiveIndexAccessor</code> for read-only access.",
+      "translation": "构建一个新的只读访问的<code>ReflectiveIndexAccessor</code>。",
+      "count": 1
+    },
+    {
+      "source": "Construct a new <code>ReflectiveIndexAccessor</code> for read-write access.",
+      "translation": "构建一个新的用于读写访问的<code>ReflectiveIndexAccessor</code>。",
+      "count": 1
+    },
+    {
+      "source": "Determine if this <code>IndexAccessor</code> is currently suitable for compilation.",
+      "translation": "确定此 `<code>IndexAccessor</code>` 当前是否适合编译。",
+      "count": 1
+    },
+    {
+      "source": "Generate bytecode that performs the operation for reading the index.",
+      "translation": "生成用于执行读取索引操作的字节码。",
+      "count": 1
+    },
+    {
+      "source": "Invoke the configured write-method via reflection.",
+      "translation": "通过反射调用配置的写入方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../TargetedAccessor.html#getSpecificTargetClasses()\">getSpecificTargetClasses</a></code> in interface <code><a href=\"../../TargetedAccessor.html\" title=\"interface in org.springframework.expression\">TargetedAccessor</a></code>",
+      "translation": "`<code><a href=\"../../TargetedAccessor.html#getSpecificTargetClasses()\">getSpecificTargetClasses</a></code>` 接口 `<code><a href=\"../../TargetedAccessor.html\" title=\"interface in org.springframework.expression\">TargetedAccessor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "an array of classes that this accessor is suitable for\n(or <code>null</code> or an empty array if a generic accessor)",
+      "translation": "一个此访问器适用的类数组（或如果是通用访问器则为 `<code>null</code>` 或空数组）",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if this index accessor is able to read the index",
+      "translation": "<code>true</code> 如果此索引访问器能够读取索引。",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if this index accessor is able to write to the index",
+      "translation": "<code>true</code> 如果此索引访问器能够写入索引。",
+      "count": 1
+    },
+    {
+      "source": "<code>newValue</code> - the new value for the index",
+      "translation": "<code>newValue</code> - 索引的新值",
+      "count": 1
+    },
+    {
+      "source": "<code>cf</code> - the current state of the expression compiler",
+      "translation": "<code>cf</code> - 表达式编译器的当前状态",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "a TypedValue object wrapping the index value read and a type\ndescriptor for the value",
+      "translation": "一个包装了读取的索引值的 TypedValue 对象以及该值的类型描述符",
+      "count": 1
+    }
+  ]
+}

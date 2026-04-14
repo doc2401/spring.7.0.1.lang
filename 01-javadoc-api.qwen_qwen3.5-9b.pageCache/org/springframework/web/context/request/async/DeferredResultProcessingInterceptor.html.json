@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 18:34:44",
+  "updated_at": "2026-04-14 18:34:44",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 52,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 2.1666666666666665,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在发生错误时",
+      "count": 6
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 6
+    },
+    {
+      "source": "<code>deferredResult</code> - the DeferredResult for the current request",
+      "translation": "<code>deferredResult</code> - 当前请求的 DeferredResult",
+      "count": 5
+    },
+    {
+      "source": "<code>deferredResult</code> - the DeferredResult for the current request; if the\n<code>DeferredResult</code> is set, then concurrent processing is resumed and\nsubsequent interceptors are not invoked",
+      "translation": "`deferredResult` - 当前请求的 DeferredResult；如果设置了 `DeferredResult`，则恢复并发处理，且不会调用后续的拦截器。",
+      "count": 3
+    },
+    {
+      "source": "The <a href=\"#handleTimeout(org.springframework.web.context.request.NativeWebRequest,org.springframework.web.context.request.async.DeferredResult)\"><code>handleTimeout</code></a>\nmethod can set the <code>DeferredResult</code> in order to resume processing.",
+      "translation": "`<a href=\"#handleTimeout(org.springframework.web.context.request.NativeWebRequest,org.springframework.web.context.request.async.DeferredResult)\">`<code>handleTimeout</code>`</a> 方法可以设置 `<code>DeferredResult</code>` 以恢复处理。",
+      "count": 2
+    },
+    {
+      "source": "A <code>DeferredResultProcessingInterceptor</code> is invoked before the start\nof async processing, after the <code>DeferredResult</code> is set as well as on\ntimeout/error, or after completing for any reason including a timeout or network\nerror.",
+      "translation": "`DeferredResultProcessingInterceptor` 在异步处理开始之前被调用，此时 `DeferredResult` 已被设置；此外，在超时或出错时也会被调用，或在任何原因（包括超时或网络错误）导致完成之后被调用。",
+      "count": 2
+    },
+    {
+      "source": "The <code>DeferredResult</code> may have already been set, for example at\nthe time of its creation or by another thread.",
+      "translation": "<code>DeferredResult</code> 可能已经被设置，例如在其创建时或由另一个线程设置。",
+      "count": 2
+    },
+    {
+      "source": "This method may also be invoked after a timeout when the\n<code>DeferredResult</code> was created with a constructor accepting a default\ntimeout result.",
+      "translation": "此方法在创建带有接受默认超时结果的构造器的`DeferredResult` 后，也可能在超时时被调用。",
+      "count": 2
+    },
+    {
+      "source": "Invoked after a <code>DeferredResult</code> has been set, via\n<a href=\"DeferredResult.html#setResult(T)\"><code>DeferredResult.setResult(Object)</code></a> or\n<a href=\"DeferredResult.html#setErrorResult(java.lang.Object)\"><code>DeferredResult.setErrorResult(Object)</code></a>, and is also ready to\nhandle the concurrent result.",
+      "translation": "在通过 <a href=\"DeferredResult.html#setResult(T)\"><code>DeferredResult.setResult(Object)</code></a> 或 <a href=\"DeferredResult.html#setErrorResult(java.lang.Object)\"><code>DeferredResult.setErrorResult(Object)</code></a> 设置 <code>DeferredResult</code> 后调用，并且也已准备好处理并发结果。",
+      "count": 2
+    },
+    {
+      "source": "Invoked from a container thread when an async request times out before\nthe <code>DeferredResult</code> has been set. Implementations may invoke\n<a href=\"DeferredResult.html#setResult(T)\"><code>setResult</code></a> or\n<a href=\"DeferredResult.html#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> to resume processing.",
+      "translation": "当异步请求在 `<code>DeferredResult</code>` 被设置之前超时，且由容器线程调用时。实现可调用 <a href=\"DeferredResult.html#setResult(T)\"><code>setResult</code></a> 或 <a href=\"DeferredResult.html#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> 来恢复处理。",
+      "count": 2
+    },
+    {
+      "source": "Invoked from a container thread when an error occurred while processing an async request\nbefore the <code>DeferredResult</code> has been set. Implementations may invoke\n<a href=\"DeferredResult.html#setResult(T)\"><code>setResult</code></a> or\n<a href=\"DeferredResult.html#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> to resume processing.",
+      "translation": "在异步请求处理期间，若 `<code>DeferredResult</code>` 尚未设置而发生了错误，则会在容器线程中调用此方法。实现可调用 <a href=\"DeferredResult.html#setResult(T)\"><code>setResult</code></a> 或 <a href=\"DeferredResult.html#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> 来恢复处理。",
+      "count": 2
+    },
+    {
+      "source": "Invoked immediately before the start of concurrent handling, in the same\nthread that started it. This method may be used to capture state just prior\nto the start of concurrent processing with the given <code>DeferredResult</code>.",
+      "translation": "在并发处理的同一线程中，立即于其启动之前被调用。此方法可用于在给定 `<code>DeferredResult</code>` 的并发处理开始之前捕获状态。",
+      "count": 2
+    },
+    {
+      "source": "Invoked from a container thread when an async request completed for any\nreason including timeout and network error. This method is useful for\ndetecting that a <code>DeferredResult</code> instance is no longer usable.",
+      "translation": "当异步请求因任何原因（包括超时和网络错误）完成时，由容器线程调用。此方法可用于检测 `<code>DeferredResult</code>` 实例是否不再可用。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if processing should continue, or <code>false</code> if\nother interceptors should not be invoked",
+      "translation": "如果应继续处理，则为 `<code>true</code>`；否则不应调用其他拦截器，则为 `<code>false</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if error handling should continue, or <code>false</code> if\nother interceptors should be bypassed and not be invoked",
+      "translation": "如果错误处理应继续，则为 <code>true</code>；否则为 <code>false</code>，将跳过其他拦截器且不对其进行调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>concurrentResult</code> - the concurrent result",
+      "translation": "<code>concurrentResult</code> - 并发结果",
+      "count": 2
+    },
+    {
+      "source": "As a general rule exceptions raised by interceptor methods will cause\nasync processing to resume by dispatching back to the container and using\nthe Exception instance as the concurrent result. Such exceptions will then\nbe processed through the <code>HandlerExceptionResolver</code> mechanism.",
+      "translation": "作为一般规则，拦截器方法抛出的异常将导致异步处理通过返回容器并使用该异常实例作为并发结果来恢复。随后，这些异常将通过 `<code>HandlerExceptionResolver`》机制进行处理。",
+      "count": 1
+    },
+    {
+      "source": "Invoked from a container thread when an error occurred while processing an async request\nbefore the <code>DeferredResult</code> has been set.",
+      "translation": "在设置 `<code>DeferredResult</code>` 之前，如果在处理异步请求时发生错误，则会在容器线程中调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked from a container thread when an async request times out before\nthe <code>DeferredResult</code> has been set.",
+      "translation": "在异步请求超时且尚未设置 `<code>DeferredResult</code>` 时，由容器线程调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked from a container thread when an async request completed for any\nreason including timeout and network error.",
+      "translation": "由容器线程调用，当异步请求因任何原因（包括超时和网络错误）完成时。",
+      "count": 1
+    },
+    {
+      "source": "Invoked immediately before the start of concurrent handling, in the same\nthread that started it.",
+      "translation": "在并发处理开始之前立即被调用，且在与启动该处理的同一线程中执行。",
+      "count": 1
+    },
+    {
+      "source": "Invoked immediately after the start of concurrent handling, in the same\nthread that started it.",
+      "translation": "在并发处理的开始阶段立即被调用，且在与启动该处理相同的线程中执行。",
+      "count": 1
+    },
+    {
+      "source": "<code>t</code> - the error that occurred while request processing",
+      "translation": "<code>t</code> - 请求处理过程中发生的错误",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Rob Winch",
+      "translation": "Rossen Stoyanchev，Rob Winch",
+      "count": 1
+    }
+  ]
+}

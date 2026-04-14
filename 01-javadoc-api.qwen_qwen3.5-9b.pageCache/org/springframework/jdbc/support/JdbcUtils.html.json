@@ -1,0 +1,341 @@
+{
+  "created_at": "2026-04-14 14:52:57",
+  "updated_at": "2026-04-14 14:52:57",
+  "stats": {
+    "total_entries": 65,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 120,
+    "entries_with_hits": 65,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8461538461538463,
+    "usage_percentage": 0.0065
+  },
+  "items": [
+    {
+      "source": "in favor of\n<a href=\"#extractDatabaseMetaData(javax.sql.DataSource,org.springframework.jdbc.support.DatabaseMetaDataCallback)\"><code>extractDatabaseMetaData(DataSource, DatabaseMetaDataCallback)</code></a>\nwith a lambda expression or method reference and a generically typed result",
+      "translation": "支持使用 lambda 表达式或方法引用以及泛型类型结果来调用 <a href=\"#extractDatabaseMetaData(javax.sql.DataSource,org.springframework.jdbc.support.DatabaseMetaDataCallback)\"><code>extractDatabaseMetaData(DataSource, DatabaseMetaDataCallback)</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by the JDBC API",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 如果由 JDBC API 抛出",
+      "count": 3
+    },
+    {
+      "source": "<code>dataSource</code> - the DataSource to extract meta-data for",
+      "translation": "<code>dataSource</code> - 用于提取元数据的 DataSource",
+      "count": 3
+    },
+    {
+      "source": "Uses the <code>getObject(index)</code> method, but includes additional \"hacks\"\nto get around Oracle 10g returning a non-standard object for its TIMESTAMP\ndatatype and a <code>java.sql.Date</code> for DATE columns leaving out the\ntime portion: These columns will explicitly be extracted as standard\n<code>java.sql.Timestamp</code> object.",
+      "translation": "使用 `getObject(index)` 方法，但包含额外的“变通”处理，以绕过 Oracle 10g 为其 TIMESTAMP 数据类型返回非标准对象以及为 DATE 列返回缺少时间部分的 `java.sql.Date` 的问题：这些列将明确提取为标准 `java.sql.Timestamp` 对象。",
+      "count": 2
+    },
+    {
+      "source": "Uses the specifically typed ResultSet accessor methods, falling back to\n<a href=\"#getResultSetValue(java.sql.ResultSet,int)\"><code>getResultSetValue(java.sql.ResultSet, int)</code></a> for unknown types.",
+      "translation": "使用特定类型的 ResultSet 访问器方法，对于未知类型则回退到 <a href=\"#getResultSetValue(java.sql.ResultSet,int)\"><code>getResultSetValue(java.sql.ResultSet, int)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Logs a warning if the \"supportsBatchUpdates\" methods throws an exception\nand simply returns <code>false</code> in that case.",
+      "translation": "如果 \"supportsBatchUpdates\" 方法抛出异常并简单地返回 `<code>false</code>`，则记录一条警告信息。",
+      "count": 2
+    },
+    {
+      "source": "<i>columnLabel - the label for the column specified with the SQL AS clause.\nIf the SQL AS clause was not specified, then the label is the name of the column</i>.",
+      "translation": "<i>columnLabel - 由 SQL AS 子句指定的列的标签。如果未指定 SQL AS 子句，则标签为列名。</i>",
+      "count": 2
+    },
+    {
+      "source": "Note that the returned value may not be assignable to the specified\nrequired type, in case of an unknown type. Calling code needs to deal\nwith this case appropriately, for example, throwing a corresponding exception.",
+      "translation": "注意，在类型未知的情况下，返回的值可能无法赋值给指定的必需类型。调用代码需要适当处理这种情况，例如抛出相应的异常。",
+      "count": 2
+    },
+    {
+      "source": "This method will open a connection to the database and retrieve its meta-data.\nSince this method is called before the exception translation feature is configured\nfor a DataSource, this method can not rely on SQLException translation itself.",
+      "translation": "此方法将打开与数据库的连接并检索其元数据。由于在配置 DataSource 的异常翻译功能之前会调用此方法，因此该方法无法依赖 SQLException 自身的翻译机制。",
+      "count": 2
+    },
+    {
+      "source": "Any exceptions will be wrapped in a MetaDataAccessException. This is a checked\nexception and any calling code should catch and handle this exception. You can just\nlog the error and hope for the best, but there is probably a more serious error that\nwill reappear when you try to access the database again.",
+      "translation": "任何异常都将被包装在 MetaDataAccessException 中。这是一个受检异常，调用代码应捕获并处理此异常。您可以简单地记录错误并希望最好，但很可能当您再次尝试访问数据库时会出现更严重的错误。",
+      "count": 2
+    },
+    {
+      "source": "Typically invoked right before execution of a given set of statements:\nto decide whether the set of SQL statements should be executed through\nthe JDBC batch mechanism or simply in a traditional one-by-one fashion.",
+      "translation": "通常在给定的一组语句执行之前调用：以决定该组 SQL 语句是通过 JDBC 批处理机制执行，还是以传统的逐条方式执行。",
+      "count": 2
+    },
+    {
+      "source": "This method's implementation takes into account clarifications expressed\nin the JDBC 4.0 specification:",
+      "translation": "此方法的实现考虑了 JDBC 4.0 规范中表达的澄清说明：",
+      "count": 2
+    },
+    {
+      "source": "Generic utility methods for working with JDBC. Mainly for internal use\nwithin the framework, but also useful for custom JDBC access code.",
+      "translation": "用于处理 JDBC 的通用实用方法。主要用于框架内部，但也适用于自定义 JDBC 访问代码。",
+      "count": 2
+    },
+    {
+      "source": "Constant that indicates an unknown (or unspecified) SQL type.",
+      "translation": "指示未知（或未指定）SQL 类型的常量。",
+      "count": 2
+    },
+    {
+      "source": "Extract a common name for the target database in use even if\nvarious drivers/platforms provide varying names at runtime.",
+      "translation": "即使各种驱动程序/平台在运行时提供不同的名称，也要提取目标数据库的通用名称。",
+      "count": 2
+    },
+    {
+      "source": "Check whether the given SQL type is numeric.",
+      "translation": "检查给定的 SQL 类型是否为数值类型。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the standard type name for the given SQL type, if possible.",
+      "translation": "如果可能，解析给定 SQL 类型的标准类型名称。",
+      "count": 2
+    },
+    {
+      "source": "Close the given JDBC Connection and ignore any thrown exception.\nThis is useful for typical finally blocks in manual JDBC code.",
+      "translation": "关闭给定的 JDBC 连接，并忽略任何抛出的异常。这对于手动 JDBC 代码中的典型 `finally` 块非常有用。",
+      "count": 2
+    },
+    {
+      "source": "Close the given JDBC Statement and ignore any thrown exception.\nThis is useful for typical finally blocks in manual JDBC code.",
+      "translation": "关闭给定的 JDBC 语句，并忽略任何抛出的异常。这对于手动 JDBC 代码中的典型 finally 块非常有用。",
+      "count": 2
+    },
+    {
+      "source": "Close the given JDBC ResultSet and ignore any thrown exception.\nThis is useful for typical finally blocks in manual JDBC code.",
+      "translation": "关闭给定的 JDBC ResultSet 并忽略任何抛出的异常。这对于手动 JDBC 代码中的典型 finally 块非常有用。",
+      "count": 2
+    },
+    {
+      "source": "Call the specified method on DatabaseMetaData for the given DataSource,\nand extract the invocation result.",
+      "translation": "对给定的 DataSource 调用指定的 DatabaseMetaData 方法，并提取调用结果。",
+      "count": 2
+    },
+    {
+      "source": "Convert a property name using \"camelCase\" to a corresponding column name with underscores.\nA name like \"customerNumber\" would match a \"customer_number\" column name.",
+      "translation": "使用 \"camelCase\" 将属性名转换为带下划线的对应列名。例如，名称 \"customerNumber\" 将匹配 \"customer_number\" 列名。",
+      "count": 2
+    },
+    {
+      "source": "Convert a column name with underscores to the corresponding property name using \"camelCase\".\nA name like \"customer_number\" would match a \"customerNumber\" property name.",
+      "translation": "将带有下划线的列名转换为对应的 \"camelCase\" 属性名称。例如，名称 \"customer_number\" 将匹配 \"customerNumber\" 属性名称。",
+      "count": 2
+    },
+    {
+      "source": "the corresponding constant name in <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Types.html\" title=\"class or interface in java.sql\"><code>Types</code></a>\n(for example, \"VARCHAR\"/\"NUMERIC\"), or <code>null</code> if not resolvable",
+      "translation": "对应的常量名称在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Types.html\" title=\"class or interface in java.sql\"><code>Types</code></a>中（例如，\"VARCHAR\"/\"NUMERIC\"），或者如果无法解析则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>con</code> - the JDBC Connection to close (may be <code>null</code>)",
+      "translation": "<code>con</code> - 要关闭的 JDBC 连接（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>stmt</code> - the JDBC Statement to close (may be <code>null</code>)",
+      "translation": "<code>stmt</code> - 要关闭的 JDBC Statement（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>rs</code> - the JDBC ResultSet to close (may be <code>null</code>)",
+      "translation": "<code>rs</code> - 要关闭的 JDBC ResultSet（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>requiredType</code> - the required value type (may be <code>null</code>)",
+      "translation": "<code>requiredType</code> - 必需的值类型（可为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MetaDataAccessException.html\" title=\"class in org.springframework.jdbc.support\">MetaDataAccessException</a></code> - if meta-data access failed",
+      "translation": "<code><a href=\"MetaDataAccessException.html\" title=\"class in org.springframework.jdbc.support\">MetaDataAccessException</a></code> - 如果元数据访问失败",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MetaDataAccessException.html\" title=\"class in org.springframework.jdbc.support\">MetaDataAccessException</a></code> - if we couldn't access the DatabaseMetaData\nor failed to invoke the specified method",
+      "translation": "`<a href=\"MetaDataAccessException.html\" title=\"class in org.springframework.jdbc.support\">MetaDataAccessException</a>` - 如果无法访问 DatabaseMetaData 或调用指定的方法失败。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - in case of lookup failure",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 在查找失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>rs</code> - is the ResultSet holding the data",
+      "translation": "<code>rs</code> 是存储数据的 ResultSet。",
+      "count": 2
+    },
+    {
+      "source": "<code>index</code> - is the column index",
+      "translation": "<code>index</code> - 是列索引",
+      "count": 2
+    },
+    {
+      "source": "<code>action</code> - callback that will do the actual work",
+      "translation": "<code>action</code> - 执行实际工作的回调函数",
+      "count": 2
+    },
+    {
+      "source": "object containing the extracted information, as returned by\nthe DatabaseMetaDataCallback's <code>processMetaData</code> method",
+      "translation": "包含提取信息的对象，由 `DatabaseMetaDataCallback` 的 `<code>processMetaData</code>` 方法返回。",
+      "count": 2
+    },
+    {
+      "source": "<code>metaDataMethodName</code> - the name of the DatabaseMetaData method to call",
+      "translation": "<code>metaDataMethodName</code> - 要调用的 DatabaseMetaData 方法的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>source</code> - the name as provided in database meta-data",
+      "translation": "<code>source</code> - 数据库元数据中提供的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>sqlType</code> - the SQL type to be checked",
+      "translation": "<code>sqlType</code> - 要检查的 SQL 类型",
+      "count": 2
+    },
+    {
+      "source": "<code>sqlType</code> - the SQL type to resolve",
+      "translation": "<code>sqlType</code> - 要解析的 SQL 类型",
+      "count": 2
+    },
+    {
+      "source": "<code>resultSetMetaData</code> - the current meta-data to use",
+      "translation": "<code>resultSetMetaData</code> - 当前要使用的元数据",
+      "count": 2
+    },
+    {
+      "source": "<code>columnIndex</code> - the index of the column for the lookup",
+      "translation": "<code>columnIndex</code> - 查找列的索引",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the property name to be converted",
+      "translation": "<code>name</code> - 要转换的属性名",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the potentially underscores-based column name to be converted",
+      "translation": "<code>name</code> - 要转换的基于下划线的列名（可能包含下划线）",
+      "count": 2
+    },
+    {
+      "source": "Thomas Risberg, Juergen Hoeller, Ben Blinebury",
+      "translation": "Thomas Risberg, Juergen Hoeller, Ben Blinebury",
+      "count": 2
+    },
+    {
+      "source": "the value object (possibly not of the specified required type,\nwith further conversion steps necessary)",
+      "translation": "值对象（可能不是指定的必需类型，需要进一步的转换步骤）",
+      "count": 2
+    },
+    {
+      "source": "the object returned by the specified DatabaseMetaData method",
+      "translation": "指定 DatabaseMetaData 方法返回的对象",
+      "count": 2
+    },
+    {
+      "source": "whether JDBC batch updates are supported",
+      "translation": "是否支持 JDBC 批量更新",
+      "count": 2
+    },
+    {
+      "source": "the common name to be used (for example, \"DB2\" or \"Sybase\")",
+      "translation": "要使用的通用名称（例如，\"DB2\"或\"Sybase\"）",
+      "count": 2
+    },
+    {
+      "source": "whether the type is numeric",
+      "translation": "类型是否为数值型",
+      "count": 2
+    },
+    {
+      "source": "the column name to use",
+      "translation": "要使用的列名",
+      "count": 2
+    },
+    {
+      "source": "the column name using underscores",
+      "translation": "使用下划线的列名",
+      "count": 2
+    },
+    {
+      "source": "the name using \"camelCase\"",
+      "translation": "使用\"camelCase\"命名",
+      "count": 2
+    },
+    {
+      "source": "Close the given JDBC Connection and ignore any thrown exception.",
+      "translation": "关闭给定的 JDBC 连接，并忽略任何抛出的异常。",
+      "count": 1
+    },
+    {
+      "source": "Close the given JDBC ResultSet and ignore any thrown exception.",
+      "translation": "关闭给定的 JDBC ResultSet 并忽略任何抛出的异常。",
+      "count": 1
+    },
+    {
+      "source": "Close the given JDBC Statement and ignore any thrown exception.",
+      "translation": "关闭给定的 JDBC Statement 并忽略任何抛出的异常。",
+      "count": 1
+    },
+    {
+      "source": "Convert a property name using \"camelCase\" to a corresponding column name with underscores.",
+      "translation": "使用下划线将 \"camelCase\" 属性名转换为相应的列名。",
+      "count": 1
+    },
+    {
+      "source": "Convert a column name with underscores to the corresponding property name using \"camelCase\".",
+      "translation": "将带有下划线的列名转换为使用\"camelCase\"的相应属性名。",
+      "count": 1
+    },
+    {
+      "source": "Extract database meta-data via the given DatabaseMetaDataCallback.",
+      "translation": "通过给定的 DatabaseMetaDataCallback 提取数据库元数据。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a JDBC column value from a ResultSet, using the most appropriate\nvalue type.",
+      "translation": "从 ResultSet 中检索 JDBC 列值，使用最合适的值类型。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a JDBC column value from a ResultSet, using the specified value type.",
+      "translation": "使用指定的值类型从 ResultSet 中检索 JDBC 列值。",
+      "count": 1
+    },
+    {
+      "source": "Determine the column name to use.",
+      "translation": "确定要使用的列名。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the given JDBC driver supports JDBC batch updates.",
+      "translation": "返回给定的 JDBC 驱动程序是否支持 JDBC 批量更新。",
+      "count": 1
+    },
+    {
+      "source": "<code>con</code> - the Connection to check",
+      "translation": "<code>con</code> - 要检查的连接",
+      "count": 1
+    },
+    {
+      "source": "the value object",
+      "translation": "值对象",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

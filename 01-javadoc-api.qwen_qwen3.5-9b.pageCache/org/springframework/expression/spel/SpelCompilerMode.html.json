@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-04-14 13:35:22",
+  "updated_at": "2026-04-14 13:35:22",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 28,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3333333333333333,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "If the types of various expression elements change over time, consider\nswitching to <a href=\"#MIXED\"><code>MIXED</code></a> mode or turning <a href=\"#OFF\">off</a> the compiler.",
+      "translation": "如果各种表达式元素的类型随时间发生变化，请考虑切换到<a href=\"#MIXED\"><code>MIXED</code></a>模式或关闭编译器。",
+      "count": 2
+    },
+    {
+      "source": "After some number of successful interpreted runs, the expression gets\ncompiled. If evaluation of the compiled expression fails (for example, due\nto a type changing), that failure will be caught internally, and the system\nwill switch back to interpreted mode for the given expression. Basically,\nthe exception that the caller receives in <a href=\"#IMMEDIATE\"><code>IMMEDIATE</code></a> mode is instead\nhandled internally. Sometime later, the compiler may generate another compiled form and switch to it.\nThis cycle of switching between interpreted and compiled mode will continue\nuntil the system determines that it does not make sense to continue trying\n— for example, when a certain failure threshold has been reached —\nat which point the system will permanently switch to interpreted mode for the\ngiven expression.",
+      "translation": "经过若干次成功的解释执行后，表达式会被编译。如果编译后的表达式求值失败（例如由于类型变更），该失败会在内部被捕获，系统会针对该表达式切换回解释模式。基本上，调用者在 `<a href=\"#IMMEDIATE\"><code>IMMEDIATE</code></a>` 模式下接收到的异常实际上是在内部被处理的。稍后，编译器可能会生成另一种编译形式并切换到该形式。这种在解释模式和编译模式之间切换的循环将持续进行，直到系统判定继续尝试已无意义——例如当达到某个失败阈值时——此时系统将针对该表达式永久切换到解释模式。",
+      "count": 2
+    },
+    {
+      "source": "Spring provides a basic compiler for SpEL expressions. Expressions are usually\ninterpreted, which provides a lot of dynamic flexibility during evaluation but does\nnot provide optimum performance. For occasional expression usage, this is fine, but\nwhen used by other components such as Spring Integration, performance can be very\nimportant, and there is no real need for the dynamism.",
+      "translation": "Spring 为 SpEL 表达式提供了一个基本编译器。表达式通常被解释执行，这在评估时提供了大量的动态灵活性，但无法提供最佳性能。对于偶尔使用表达式的场景，这是可以接受的；但当其他组件（如 Spring Integration）使用时，性能可能至关重要，而实际上并不需要这种动态性。",
+      "count": 2
+    },
+    {
+      "source": "The SpEL compiler is intended to address this need. During evaluation, the compiler\ngenerates a Java class that embodies the expression behavior at runtime and uses that\nclass to achieve much faster expression evaluation. Due to the lack of typing around\nexpressions, the compiler uses information gathered during the interpreted evaluations\nof an expression when performing compilation. For example, SpEL does not know the type\nof a property reference purely from the expression, but during the first interpreted\nevaluation, it finds out what it is. Of course, basing compilation on such derived\ninformation can cause trouble later if the types of the various expression elements\nchange over time. For this reason, compilation is best suited to expressions whose\ntype information is not going to change on repeated evaluations.",
+      "translation": "SpEL 编译器旨在满足这一需求。在评估过程中，编译器会生成一个 Java 类来体现运行时表达式的行为，并利用该类实现更快的表达式评估。由于表达式缺乏类型信息，编译器在执行编译时会利用在解释式评估表达式期间收集到的信息。例如，SpEL 无法仅从表达式中得知属性引用的类型，但在第一次解释式评估时，它会确定该类型。当然，如果各种表达式元素的类型随时间发生变化，基于此类派生信息进行编译可能会引发问题。因此，编译最适合那些在重复评估时类型信息不会发生变化的表达式。",
+      "count": 2
+    },
+    {
+      "source": "This is the default.",
+      "translation": "这是默认值。",
+      "count": 2
+    },
+    {
+      "source": "If evaluation of the compiled expression fails (for example, due to a type\nchanging), the caller of the expression evaluation receives an exception.",
+      "translation": "如果编译后的表达式求值失败（例如由于类型更改），表达式求值的调用者将收到一个异常。",
+      "count": 2
+    },
+    {
+      "source": "Returns an array containing the constants of this enum class, in\nthe order they are declared.",
+      "translation": "返回一个包含此枚举类常量的数组，按声明顺序排列。",
+      "count": 2
+    },
+    {
+      "source": "In mixed mode, expression evaluation silently switches between <em>interpreted</em>\nand <em>compiled</em> over time.",
+      "translation": "在混合模式下，表达式评估会随时间在<em>解释</em>和<em>编译</em>之间静默切换。",
+      "count": 1
+    },
+    {
+      "source": "The compiler is turned off, and all expressions will be evaluated in\n<em>interpreted</em> mode.",
+      "translation": "编译器已关闭，所有表达式将在<em>解释</em>模式下求值。",
+      "count": 1
+    },
+    {
+      "source": "Returns the enum constant of this class with the specified name.\nThe string must match <i>exactly</i> an identifier used to declare an\nenum constant in this class.  (Extraneous whitespace characters are \nnot permitted.)",
+      "translation": "返回此类的具有指定名称的枚举常量。该字符串必须与用于在此类中声明枚举常量的标识符<i>完全匹配</i>。（不允许存在多余的空白字符。）",
+      "count": 1
+    },
+    {
+      "source": "In immediate mode, expressions are compiled as soon as possible, typically\nafter the first interpreted evaluation.",
+      "translation": "在即时模式下，表达式会尽快编译，通常是在第一次解释执行之后。",
+      "count": 1
+    },
+    {
+      "source": "Returns the enum constant of this class with the specified name.",
+      "translation": "返回此类的具有指定名称的枚举常量。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if this enum class has no constant with the specified name",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果此枚举类没有指定名称的常量",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html\" title=\"class or interface in java.lang\">NullPointerException</a></code> - if the argument is null",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html\" title=\"java.lang 中的类或接口\">NullPointerException</a></code> - 如果参数为 null",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the enum constant to be returned.",
+      "translation": "<code>name</code> - 要返回的枚举常量的名称。",
+      "count": 1
+    },
+    {
+      "source": "Andy Clement, Sam Brannen",
+      "translation": "安迪·克莱门特，萨姆·布拉南",
+      "count": 1
+    },
+    {
+      "source": "an array containing the constants of this enum class, in the order they are declared",
+      "translation": "一个包含此枚举类常量的数组，按声明顺序排列。",
+      "count": 1
+    },
+    {
+      "source": "the enum constant with the specified name",
+      "translation": "指定名称的枚举常量",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Enum Constant Summary",
+      "translation": "枚举常量摘要",
+      "count": 1
+    },
+    {
+      "source": "Enum Constant Details",
+      "translation": "枚举常量详情",
+      "count": 1
+    }
+  ]
+}

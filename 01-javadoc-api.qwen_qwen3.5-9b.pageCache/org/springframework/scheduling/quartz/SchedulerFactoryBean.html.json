@@ -1,0 +1,671 @@
+{
+  "created_at": "2026-04-14 16:29:13",
+  "updated_at": "2026-04-14 16:29:13",
+  "stats": {
+    "total_entries": 131,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 184,
+    "entries_with_hits": 131,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4045801526717556,
+    "usage_percentage": 0.0131
+  },
+  "items": [
+    {
+      "source": "This instance will be set before initialization of the corresponding Scheduler,\nand reset immediately afterwards. It is thus only available during configuration.",
+      "translation": "该实例将在对应调度器的初始化之前设置，并在随后立即重置。因此，它仅在配置期间可用。",
+      "count": 5
+    },
+    {
+      "source": "Default is an internal <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/StdSchedulerFactory.html\" title=\"class or interface in org.quartz.impl\"><code>StdSchedulerFactory</code></a> instance. If this method is\ncalled, it overrides any class specified through <a href=\"#setSchedulerFactoryClass(java.lang.Class)\"><code>setSchedulerFactoryClass(Class)</code></a>\nas well as any settings specified through <a href=\"#setConfigLocation(org.springframework.core.io.Resource)\"><code>setConfigLocation(Resource)</code></a>,\n<a href=\"#setQuartzProperties(java.util.Properties)\"><code>setQuartzProperties(Properties)</code></a>, <a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>setTaskExecutor(Executor)</code></a> or <a href=\"#setDataSource(javax.sql.DataSource)\"><code>setDataSource(DataSource)</code></a>.",
+      "translation": "默认值是一个内部的<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/StdSchedulerFactory.html\" title=\"class or interface in org.quartz.impl\"><code>StdSchedulerFactory</code></a>实例。如果调用此方法，它将覆盖通过<a href=\"#setSchedulerFactoryClass(java.lang.Class)\"><code>setSchedulerFactoryClass(Class)</code></a>指定的任何类，以及通过<a href=\"#setConfigLocation(org.springframework.core.io.Resource)\"><code>setConfigLocation(Resource)</code></a>、<a href=\"#setQuartzProperties(java.util.Properties)\"><code>setQuartzProperties(Properties)</code></a>、<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>setTaskExecutor(Executor)</code></a>或<a href=\"#setDataSource(javax.sql.DataSource)\"><code>setDataSource(DataSource)</code></a>指定的任何设置。",
+      "count": 2
+    },
+    {
+      "source": "Default is a Spring-internal subclass of the <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/StdSchedulerFactory.html\" title=\"class or interface in org.quartz.impl\"><code>StdSchedulerFactory</code></a>\nclass, reading in the standard <code>quartz.properties</code> from\n<code>quartz.jar</code>. For applying custom Quartz properties,\nspecify <a href=\"#setConfigLocation(org.springframework.core.io.Resource)\"><code>\"configLocation\"</code></a> and/or\n<a href=\"#setQuartzProperties(java.util.Properties)\"><code>\"quartzProperties\"</code></a> etc on this\nlocal <code>SchedulerFactoryBean</code> instance.",
+      "translation": "默认是一个 Spring 内部类，它是 <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/StdSchedulerFactory.html\" title=\"class or interface in org.quartz.impl\"><code>StdSchedulerFactory</code></a> 类的子类，用于读取标准 <code>quartz.properties</code>（位于<code>quartz.jar</code>中）。若要应用自定义 Quartz 属性，请在此本地 <code>SchedulerFactoryBean</code> 实例上指定 <a href=\"#setConfigLocation(org.springframework.core.io.Resource)\"><code>\"configLocation\"</code></a> 和/或 <a href=\"#setQuartzProperties(java.util.Properties)\"><code>\"quartzProperties\"</code></a> 等属性。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> With an externally provided <code>SchedulerFactory</code> instance,\nlocal settings such as <a href=\"#setConfigLocation(org.springframework.core.io.Resource)\"><code>setConfigLocation(Resource)</code></a> or <a href=\"#setQuartzProperties(java.util.Properties)\"><code>setQuartzProperties(Properties)</code></a>\nwill be ignored here in <code>SchedulerFactoryBean</code>, expecting the external\n<code>SchedulerFactory</code> instance to get initialized on its own.",
+      "translation": "<b>注意：</b> 如果提供了外部创建的 `<code>SchedulerFactory`> 实例，则此处 `<code>SchedulerFactoryBean`> 中的本地设置（例如 <a href=\"#setConfigLocation(org.springframework.core.io.Resource)\"><code>setConfigLocation(Resource)</code></a> 或 <a href=\"#setQuartzProperties(java.util.Properties)\"><code>setQuartzProperties(Properties)</code></a>）将被忽略，预期外部创建的 `<code>SchedulerFactory`> 实例能够自行初始化。",
+      "count": 2
+    },
+    {
+      "source": "Default is Spring's <a href=\"AdaptableJobFactory.html\" title=\"class in org.springframework.scheduling.quartz\"><code>AdaptableJobFactory</code></a>, which supports\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> objects as well as standard Quartz\n<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Job.html\" title=\"class or interface in org.quartz\"><code>Job</code></a> instances. Note that this default only applies\nto a <i>local</i> Scheduler, not to a RemoteScheduler (where setting\na custom JobFactory is not supported by Quartz).",
+      "translation": "默认值为 Spring 的<a href=\"AdaptableJobFactory.html\" title=\"class in org.springframework.scheduling.quartz\"><code>AdaptableJobFactory</code></a>，它支持<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>对象以及标准的 Quartz<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Job.html\" title=\"class or interface in org.quartz\"><code>Job</code></a>实例。请注意，此默认值仅适用于<i>本地</i>Scheduler，不适用于 RemoteScheduler（Quartz 不支持在其中设置自定义 JobFactory）。",
+      "count": 2
+    },
+    {
+      "source": "When using persistent jobs, it is strongly recommended to perform all\noperations on the Scheduler within Spring-managed (or plain JTA) transactions.\nElse, database locking will not properly work and might even break.\n(See <a href=\"#setDataSource(javax.sql.DataSource)\"><code>setDataSource</code></a> javadoc for details.)",
+      "translation": "在使用持久化任务时，强烈建议在 Spring 管理的（或纯 JTA）事务内执行对调度器的所有操作。否则，数据库锁机制将无法正常工作，甚至可能导致故障。（有关详细信息，请参阅 <a href=\"#setDataSource(javax.sql.DataSource)\"><code>setDataSource</code></a> 的 JavaDoc。）",
+      "count": 2
+    },
+    {
+      "source": "If not specified, the name will be taken from Quartz properties\n(<code>org.quartz.scheduler.instanceName</code>), or from the declared\n<code>SchedulerFactoryBean</code> bean name as a fallback.",
+      "translation": "如果未指定，名称将从 Quartz 属性（`org.quartz.scheduler.instanceName`）中获取，或者作为后备方案从声明的 `SchedulerFactoryBean` Bean 名称中获取。",
+      "count": 2
+    },
+    {
+      "source": "Note: If this is set, the Quartz settings should not define\na job store \"dataSource\" to avoid meaningless double configuration.\nAlso, do not define a \"org.quartz.jobStore.class\" property at all.\n(You may explicitly define Spring's <a href=\"LocalDataSourceJobStore.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalDataSourceJobStore</code></a>\nbut that's the default when using this method anyway.)",
+      "translation": "注意：如果设置了此项，Quartz 配置不应定义 `dataSource`，以避免无意义的重复配置。此外，不要定义任何 `org.quartz.jobStore.class` 属性。（您可以显式定义 Spring 的 <a href=\"LocalDataSourceJobStore.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalDataSourceJobStore</code></a>，但在使用此方法时这已经是默认行为。）",
+      "count": 2
+    },
+    {
+      "source": "Specify an instance of Spring's <a href=\"SpringBeanJobFactory.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SpringBeanJobFactory</code></a> here\n(typically as an inner bean definition) to automatically populate a job's\nbean properties from the specified job data map and scheduler context.",
+      "translation": "在此指定 Spring 的<a href=\"SpringBeanJobFactory.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SpringBeanJobFactory</code></a>实例（通常作为内部 bean 定义），以便自动从指定的作业数据映射和调度器上下文中填充作业的 Bean 属性。",
+      "count": 2
+    },
+    {
+      "source": "For dynamic registration of jobs at runtime, use a bean reference to\nthis SchedulerFactoryBean to get direct access to the Quartz Scheduler\n(<code>org.quartz.Scheduler</code>). This allows you to create new jobs\nand triggers, and also to control and monitor the entire Scheduler.",
+      "translation": "对于运行时动态注册作业，请使用对此 `SchedulerFactoryBean` 的 Bean 引用以直接访问 Quartz Scheduler（`org.quartz.Scheduler`）。这允许您创建新作业和触发器，并控制和监控整个调度器。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation invokes SchedulerFactory's <code>getScheduler</code>\nmethod. Can be overridden for custom Scheduler creation.",
+      "translation": "默认实现会调用 `SchedulerFactory` 的 `<code>getScheduler</code>` 方法。可以重写此方法以创建自定义的调度器。",
+      "count": 2
+    },
+    {
+      "source": "Allows registration of JobDetails, Calendars and Triggers, automatically\nstarting the scheduler on initialization and shutting it down on destruction.\nIn scenarios that just require static registration of jobs at startup, there\nis no need to access the Scheduler instance itself in application code.",
+      "translation": "允许注册 JobDetails、Calendars 和 Triggers，并在初始化时自动启动调度器，在销毁时自动关闭它。在仅需在启动时静态注册任务的场景中，无需在应用程序代码中访问 Scheduler 实例本身。",
+      "count": 2
+    },
+    {
+      "source": "Note that Quartz instantiates a new Job for each execution, in\ncontrast to Timer which uses a TimerTask instance that is shared\nbetween repeated executions. Just JobDetail descriptors are shared.",
+      "translation": "请注意，Quartz 为每次执行实例化一个新的 Job，而与此相对的是 Timer，它使用在重复执行之间共享的 TimerTask 实例。仅 JobDetail 描述符是共享的。",
+      "count": 2
+    },
+    {
+      "source": "The preferred way to achieve transactional execution is to demarcate\ndeclarative transactions at the business facade level, which will\nautomatically apply to Scheduler operations performed within those scopes.\nAlternatively, you may add transactional advice for the Scheduler itself.",
+      "translation": "实现事务执行的首选方式是在业务外观层界定声明式事务，这将自动适用于这些范围内执行的调度器操作。或者，您也可以为调度器本身添加事务建议。",
+      "count": 2
+    },
+    {
+      "source": "Note: Can be omitted when all necessary properties are specified\nlocally via this bean, or when relying on Quartz' default configuration.",
+      "translation": "注：当所有必要属性均通过此 Bean 本地指定，或依赖 Quartz 的默认配置时，可省略此项。",
+      "count": 2
+    },
+    {
+      "source": "Can be used to override values in a Quartz properties config file,\nor to specify all necessary properties locally.",
+      "translation": "可用于覆盖 Quartz 属性配置文件中的值，或本地指定所有必要的属性。",
+      "count": 2
+    },
+    {
+      "source": "Can be used to assign a local JDK ThreadPoolExecutor or a CommonJ\nWorkManager as Quartz backend, to avoid Quartz's manual thread creation.",
+      "translation": "可用于分配本地 JDK ThreadPoolExecutor 或 CommonJ WorkManager 作为 Quartz 后端，以避免 Quartz 的手动线程创建。",
+      "count": 2
+    },
+    {
+      "source": "By default, a Quartz SimpleThreadPool will be used, configured through\nthe corresponding Quartz properties.",
+      "translation": "默认情况下，将使用通过相应的 Quartz 属性配置的 Quartz SimpleThreadPool。",
+      "count": 2
+    },
+    {
+      "source": "A Spring-specific subclass of Quartz' JobStoreCMT will be used.\nIt is therefore strongly recommended to perform all operations on\nthe Scheduler within Spring-managed (or plain JTA) transactions.\nElse, database locking will not properly work and might even break\n(for example, if trying to obtain a lock on Oracle without a transaction).",
+      "translation": "将使用 Quartz 的 JobStoreCMT 的一个特定于 Spring 的子类。因此，强烈建议所有对调度器的操作都在 Spring 管理的（或普通的 JTA）事务中执行。否则，数据库锁定将无法正常工作，甚至可能导致故障（例如，在没有事务的情况下尝试获取 Oracle 上的锁）。",
+      "count": 2
+    },
+    {
+      "source": "This is only necessary if the default DataSource is an XA DataSource that will\nalways participate in transactions: A non-XA version of that DataSource should\nbe specified as \"nonTransactionalDataSource\" in such a scenario.",
+      "translation": "这仅在默认数据源为始终参与事务的 XA 数据源时是必需的：在此类场景中，应指定该数据源的“非事务版本”作为\"nonTransactionalDataSource\"。",
+      "count": 2
+    },
+    {
+      "source": "This is not relevant with a local DataSource instance and Spring transactions.\nSpecifying a single default DataSource as \"dataSource\" is sufficient there.",
+      "translation": "这与本地 `DataSource` 实例和 Spring 事务无关。在那里，指定一个名为 \"dataSource\" 的默认 `DataSource` 就足够了。",
+      "count": 2
+    },
+    {
+      "source": "Note: When using persistent Jobs whose JobDetail will be kept in the\ndatabase, do not put an ApplicationContext reference into the JobDataMap\nbut rather into the SchedulerContext.",
+      "translation": "注意：在使用持久化作业（其 JobDetail 将保存在数据库中）时，不要将 ApplicationContext 引用放入 JobDataMap，而应将其放入 SchedulerContext。",
+      "count": 2
+    },
+    {
+      "source": "In case of a QuartzJobBean, the reference will be applied to the Job\ninstance as bean property. An \"applicationContext\" attribute will\ncorrespond to a \"setApplicationContext\" method in that scenario.",
+      "translation": "对于 QuartzJobBean，引用将作为 Bean 属性应用到 Job 实例上。在这种情况下，\"applicationContext\" 属性将对应于一个 \"setApplicationContext\" 方法。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\"; set this to \"false\" to allow for manual startup.",
+      "translation": "默认为 \"true\"；将其设置为 \"false\" 以允许手动启动。",
+      "count": 2
+    },
+    {
+      "source": "Setting this to 10 or 20 seconds makes sense if no jobs\nshould be run before the entire application has started up.",
+      "translation": "将此设置为 10 或 20 秒是合理的，如果不应在应用程序完全启动之前运行任何作业。",
+      "count": 2
+    },
+    {
+      "source": "Switch this flag to \"true\" in order to expose the Scheduler globally.\nThis is not recommended unless you have an existing Spring application that\nrelies on this behavior.",
+      "translation": "将此标志切换为 \"true\" 以全局暴露调度器。除非您有依赖此行为的现有 Spring 应用程序，否则不建议这样做。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\". Switch this to \"true\" if you prefer\nfully completed jobs at the expense of a longer shutdown phase.",
+      "translation": "默认为 \"false\"。如果您愿意以延长停机阶段为代价换取完全完成的作业，请将其切换为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a> for the currently configured Quartz Scheduler,\nto be used by <a href=\"LocalDataSourceJobStore.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalDataSourceJobStore</code></a>.",
+      "translation": "返回当前配置的 Quartz Scheduler 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a>，供<a href=\"LocalDataSourceJobStore.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalDataSourceJobStore</code></a>使用。",
+      "count": 2
+    },
+    {
+      "source": "Return the non-transactional <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a> for the currently configured\nQuartz Scheduler, to be used by <a href=\"LocalDataSourceJobStore.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalDataSourceJobStore</code></a>.",
+      "translation": "返回当前配置的 Quartz Scheduler 的非事务性<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a>，供<a href=\"LocalDataSourceJobStore.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalDataSourceJobStore</code></a>使用。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a href=\"../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a> for the currently configured Quartz Scheduler,\nto be used by <a href=\"ResourceLoaderClassLoadHelper.html\" title=\"class in org.springframework.scheduling.quartz\"><code>ResourceLoaderClassLoadHelper</code></a>.",
+      "translation": "返回当前配置的 Quartz Scheduler 的<a href=\"../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>，供<a href=\"ResourceLoaderClassLoadHelper.html\" title=\"class in org.springframework.scheduling.quartz\"><code>ResourceLoaderClassLoadHelper</code></a>使用。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> for the currently configured Quartz Scheduler,\nto be used by <a href=\"LocalTaskExecutorThreadPool.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalTaskExecutorThreadPool</code></a>.",
+      "translation": "返回当前配置的 Quartz Scheduler 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>，供<a href=\"LocalTaskExecutorThreadPool.html\" title=\"class in org.springframework.scheduling.quartz\"><code>LocalTaskExecutorThreadPool</code></a>使用。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"SchedulerAccessor.html#getScheduler()\">SchedulerAccessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"SchedulerAccessor.html#getScheduler()\">SchedulerAccessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Set the key of an <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> reference to expose in the\nSchedulerContext, for example \"applicationContext\".",
+      "translation": "将 `<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>` 引用的键设置为在 `SchedulerContext` 中暴露，例如 \"applicationContext\"。",
+      "count": 2
+    },
+    {
+      "source": "Specify the phase in which this scheduler should be started and stopped.\nThe startup order proceeds from lowest to highest, and the shutdown order\nis the reverse of that. By default this value is <code>Integer.MAX_VALUE</code>\nmeaning that this scheduler starts as late as possible and stops as soon\nas possible.",
+      "translation": "指定此调度器应启动和停止的相位。启动顺序从低到高进行，而关闭顺序则相反。默认情况下，该值为 `<code>Integer.MAX_VALUE</code>`，表示此调度器尽可能晚地启动，并尽可能早地停止。",
+      "count": 2
+    },
+    {
+      "source": "The default thread count.",
+      "translation": "默认线程数。",
+      "count": 2
+    },
+    {
+      "source": "The thread count property.",
+      "translation": "线程计数属性。",
+      "count": 2
+    },
+    {
+      "source": "Shut down the Quartz scheduler on bean factory shutdown,\nstopping all scheduled jobs.",
+      "translation": "在 BeanFactory 关闭时关闭 Quartz 调度器，停止所有已调度的任务。",
+      "count": 2
+    },
+    {
+      "source": "Return the phase in which this scheduler will be started and stopped.",
+      "translation": "返回该调度器将启动和停止的周期。",
+      "count": 2
+    },
+    {
+      "source": "Start the Quartz Scheduler, respecting the \"startupDelay\" setting.",
+      "translation": "启动 Quartz 调度器，并遵循\"startupDelay\"设置。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this scheduler is configured for auto-startup. If \"true\",\nthe scheduler will start after the context is refreshed and after the\nstart delay, if any.",
+      "translation": "返回此调度器是否配置为自动启动。如果为\"true\"，则在上下文刷新后以及经过任何启动延迟（如果有）之后，调度器将启动。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\">Scheduler</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\">Scheduler</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\">Scheduler</a>&gt;</code>",
+      "translation": "<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code> 在接口 <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\">Scheduler</a>&gt;</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\">Scheduler</a>&gt;</code>",
+      "translation": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> 在接口 <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\">Scheduler</a>&gt;</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/SchedulerException.html\" title=\"class or interface in org.quartz\">SchedulerException</a></code> - if thrown by Quartz methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/SchedulerException.html\" title=\"class or interface in org.quartz\">SchedulerException</a></code> - 如果由 Quartz 方法抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>schedulerContextAsMap</code> - a Map with String keys and any objects as\nvalues (for example Spring-managed beans)",
+      "translation": "<code>schedulerContextAsMap</code> - 一个键为 String、值为任意对象（例如 Spring 管理的 Bean）的 Map。",
+      "count": 2
+    },
+    {
+      "source": "<code>schedulerFactory</code> - the factory to create the Scheduler with",
+      "translation": "<code>schedulerFactory</code> - 用于创建调度器的工厂。",
+      "count": 2
+    },
+    {
+      "source": "<code>schedulerName</code> - the name of the scheduler to create",
+      "translation": "<code>schedulerName</code> - 要创建的调度器的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>scheduler</code> - the Scheduler to start",
+      "translation": "<code>scheduler</code> - 要启动的调度器",
+      "count": 2
+    },
+    {
+      "source": "<code>startupDelay</code> - the number of seconds to wait before starting\nthe Scheduler asynchronously",
+      "translation": "<code>startupDelay</code> - 在异步启动调度器之前等待的秒数",
+      "count": 2
+    },
+    {
+      "source": "the Scheduler instance",
+      "translation": "调度器实例",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b> 此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口可以通过其<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a>方法明确指示独立实例。未实现此扩展接口的普通<a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>实现，如果<code>isSingleton()</code>实现返回 <code>false</code>，则假定其始终返回独立实例。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback such\nas <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method. Invoked after <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>,\n<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> and\n<a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>, if applicable.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。在 <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>、<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> 和 <a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>（如果适用）之后调用。",
+      "count": 1
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an\ninit callback such as <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（如<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "As with a <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，这支持单例和原型两种设计模式。",
+      "count": 1
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的 <a href=\"../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will return <code>true</code> only if <i>all</i>\ncomponents that apply are currently running.",
+      "translation": "对于容器而言，仅当所有适用的组件当前都在运行时，此方法才返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "Note that this stop notification is not guaranteed to come before destruction:\nOn regular shutdown, <code>Lifecycle</code> beans will first receive a stop notification\nbefore the general destruction callbacks are being propagated; however, on hot\nrefresh during a context's lifetime or on aborted refresh attempts, a given bean's\ndestroy method will be called without any consideration of stop signals upfront.",
+      "translation": "请注意，此停止通知并不保证在销毁之前发出：\n在常规关闭过程中，<code>Lifecycle</code> 圈会先接收停止通知，然后再传播通用的销毁回调；然而，在上下文生命周期期间的热刷新或中止的刷新尝试中，给定 bean 的销毁方法将在不考虑任何预先停止信号的情况下被调用。",
+      "count": 1
+    },
+    {
+      "source": "Compatible with Quartz 2.1.4 and higher.",
+      "translation": "与 Quartz 2.1.4 及更高版本兼容。",
+      "count": 1
+    },
+    {
+      "source": "Supports both transactional and non-transactional DataSource access.\nWith a non-XA DataSource and local Spring transactions, a single DataSource\nargument is sufficient. In case of an XA DataSource and global JTA transactions,\nSchedulerFactoryBean's \"nonTransactionalDataSource\" property should be set,\npassing in a non-XA DataSource that will not participate in global transactions.",
+      "translation": "支持事务性和非事务性 DataSource 访问。使用非 XA DataSource 和本地 Spring 事务时，单个 DataSource 参数已足够。对于 XA DataSource 和全局 JTA 事务，应设置 SchedulerFactoryBean 的\"nonTransactionalDataSource\"属性，传入一个不会参与全局事务的非 XA DataSource。",
+      "count": 1
+    },
+    {
+      "source": "Note: When using persistent Jobs whose JobDetail will be kept in the\ndatabase, do not put Spring-managed beans or an ApplicationContext\nreference into the JobDataMap but rather into the SchedulerContext.",
+      "translation": "注意：在使用持久化作业（其 JobDetail 将保存在数据库中）时，请勿将 Spring 管理的 Bean 或 ApplicationContext 引用放入 JobDataMap 中，而应将其放入 SchedulerContext 中。",
+      "count": 1
+    },
+    {
+      "source": "Note that BeanFactory callback interfaces like ApplicationContextAware\nare not automatically applied to Quartz Job instances, because Quartz\nitself is responsible for the lifecycle of its Jobs.",
+      "translation": "请注意，像 `ApplicationContextAware` 这样的 BeanFactory 回调接口不会自动应用到 Quartz Job 实例上，因为 Quartz 本身负责其 Job 的生命周期。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is already running.",
+      "translation": "如果组件已经在运行，则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate a hard start signal to all\ncomponents that apply, even to non-auto-startup components.",
+      "translation": "对于容器而言，这将向所有适用的组件传播硬启动信号，即使包括非自动启动的组件。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is not running (not started yet).",
+      "translation": "如果组件尚未运行（尚未启动），则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate the stop signal to all components\nthat apply.",
+      "translation": "对于容器，这将向所有适用的组件传播停止信号。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to expose the Spring-managed <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\"><code>Scheduler</code></a> instance in the\nQuartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/SchedulerRepository.html\" title=\"class or interface in org.quartz.impl\"><code>SchedulerRepository</code></a>.",
+      "translation": "设置是否在 Quartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/impl/SchedulerRepository.html\" title=\"class or interface in org.quartz.impl\"><code>SchedulerRepository</code></a> 中暴露由 Spring 管理的 <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Scheduler.html\" title=\"class or interface in org.quartz\"><code>Scheduler</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Set the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a> to be used <i>for non-transactional access</i>.",
+      "translation": "将 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a>` 设置为用于<i>非事务性访问</i>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">BeanNameAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">BeanNameAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 1
+    },
+    {
+      "source": "Set the default <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a> to be used by the Scheduler.",
+      "translation": "将默认设置为调度器使用的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set the Quartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/spi/JobFactory.html\" title=\"class or interface in org.quartz.spi\"><code>JobFactory</code></a> to use for this Scheduler.",
+      "translation": "设置 Quartz 用于此调度器的 <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/spi/JobFactory.html\" title=\"class or interface in org.quartz.spi\"><code>JobFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set an external Quartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/SchedulerFactory.html\" title=\"class or interface in org.quartz\"><code>SchedulerFactory</code></a> instance to use.",
+      "translation": "设置一个外部 Quartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/SchedulerFactory.html\" title=\"class or interface in org.quartz\"><code>SchedulerFactory</code></a> 实例以供使用。",
+      "count": 1
+    },
+    {
+      "source": "Set the Quartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/SchedulerFactory.html\" title=\"class or interface in org.quartz\"><code>SchedulerFactory</code></a> implementation to use.",
+      "translation": "设置要使用的 Quartz <a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/SchedulerFactory.html\" title=\"class or interface in org.quartz\"><code>SchedulerFactory</code></a> 实现。",
+      "count": 1
+    },
+    {
+      "source": "Set a Spring-managed <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> to use as Quartz backend.",
+      "translation": "设置一个由 Spring 管理的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> 作为 Quartz 后端。",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the Scheduler to create via the SchedulerFactory, as an\nalternative to the <code>org.quartz.scheduler.instanceName</code> property.",
+      "translation": "通过 SchedulerFactory 创建调度器的名称，作为 `<code>org.quartz.scheduler.instanceName</code>` 属性的替代方案。",
+      "count": 1
+    },
+    {
+      "source": "Create the Scheduler instance for the given factory and scheduler name.",
+      "translation": "为给定的工厂和调度器名称创建 Scheduler 实例。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "Template method that determines the Scheduler to operate on.",
+      "translation": "用于确定要操作的调度器的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this scheduler is configured for auto-startup.",
+      "translation": "返回该调度器是否配置为自动启动。",
+      "count": 1
+    },
+    {
+      "source": "Check whether this component is currently running.",
+      "translation": "检查该组件当前是否正在运行。",
+      "count": 1
+    },
+    {
+      "source": "Set the ApplicationContext that this object runs in.",
+      "translation": "设置此对象运行的 ApplicationContext。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to automatically start the scheduler after initialization.",
+      "translation": "设置是否在初始化后自动启动调度器。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the bean in the bean factory that created this bean.",
+      "translation": "在创建此 Bean 的 Bean Factory 中设置该 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Set the location of the Quartz properties config file, for example\nas classpath resource \"classpath:quartz.properties\".",
+      "translation": "设置 Quartz 属性配置文件的位置，例如作为类路径资源\"classpath:quartz.properties\"。",
+      "count": 1
+    },
+    {
+      "source": "Specify the phase in which this scheduler should be started and stopped.",
+      "translation": "指定该调度程序应启动和停止的相位。",
+      "count": 1
+    },
+    {
+      "source": "Set Quartz properties, like \"org.quartz.threadPool.class\".",
+      "translation": "设置 Quartz 属性，例如\"org.quartz.threadPool.class\"。",
+      "count": 1
+    },
+    {
+      "source": "Register objects in the Scheduler context via a given Map.",
+      "translation": "通过给定的 Map 在调度器上下文中注册对象。",
+      "count": 1
+    },
+    {
+      "source": "Set the number of seconds to wait after initialization before\nstarting the scheduler asynchronously.",
+      "translation": "设置初始化后等待的秒数，然后再异步启动调度器。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to wait for running jobs to complete on shutdown.",
+      "translation": "设置是否在关闭时等待正在运行的作业完成。",
+      "count": 1
+    },
+    {
+      "source": "Start this component.",
+      "translation": "启动此组件。",
+      "count": 1
+    },
+    {
+      "source": "Stop this component, typically in a synchronous fashion, such that the component is\nfully stopped upon return of this method.",
+      "translation": "停止此组件，通常以同步方式执行，使得该方法返回时组件已完全停止。",
+      "count": 1
+    },
+    {
+      "source": "Template method that determines the Scheduler to operate on.\nTo be implemented by subclasses.",
+      "translation": "用于确定要操作的调度器的模板方法。由子类实现。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#isAutoStartup()\">isAutoStartup</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#isAutoStartup()\">isAutoStartup</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">setBeanName</a></code> in interface <code><a href=\"../../beans/factory/BeanNameAware.html\" title=\"interface in org.springframework.beans.factory\">BeanNameAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">setBeanName</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanNameAware.html\" title=\"interface in org.springframework.beans.factory\">BeanNameAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code> in interface <code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code>` 接口 `<code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SchedulerAccessor.html#getScheduler()\">getScheduler</a></code> in class <code><a href=\"SchedulerAccessor.html\" title=\"class in org.springframework.scheduling.quartz\">SchedulerAccessor</a></code>",
+      "translation": "`<code><a href=\"SchedulerAccessor.html#getScheduler()\">getScheduler</a></code>` 类中的 `<code><a href=\"SchedulerAccessor.html\" title=\"class in org.springframework.scheduling.quartz\">SchedulerAccessor</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the bean in the factory.\nNote that this name is the actual bean name used in the factory, which may\ndiffer from the originally specified name: in particular for inner bean\nnames, the actual bean name might have been made unique through appending\n\"#...\" suffixes. Use the <a href=\"../../beans/factory/BeanFactoryUtils.html#originalBeanName(java.lang.String)\"><code>BeanFactoryUtils.originalBeanName(String)</code></a>\nmethod to extract the original bean name (without suffix), if desired.",
+      "translation": "<code>name</code> - 工厂中 Bean 的名称。\n请注意，此名称是工厂中实际使用的 Bean 名称，可能与最初指定的名称不同：特别是对于内部 Bean 名称，实际的 Bean 名称可能已通过追加\"#...\"后缀使其唯一化。如需提取原始 Bean 名称（不带后缀），请使用<a href=\"../../beans/factory/BeanFactoryUtils.html#originalBeanName(java.lang.String)\"><code>BeanFactoryUtils.originalBeanName(String)</code></a>方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in the event of misconfiguration (such as failure to set an\nessential property) or if initialization fails for any other reason",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在配置错误（例如未设置必需属性）或因任何其他原因导致初始化失败的情况下",
+      "count": 1
+    },
+    {
+      "source": "<code>applicationContext</code> - the ApplicationContext object to be used by this object",
+      "translation": "<code>applicationContext</code> - 此对象将使用的 ApplicationContext 对象",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

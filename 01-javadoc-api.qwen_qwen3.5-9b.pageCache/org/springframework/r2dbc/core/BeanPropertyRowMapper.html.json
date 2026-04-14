@@ -1,0 +1,186 @@
+{
+  "created_at": "2026-04-14 16:14:44",
+  "updated_at": "2026-04-14 16:14:44",
+  "stats": {
+    "total_entries": 34,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 57,
+    "entries_with_hits": 34,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6764705882352942,
+    "usage_percentage": 0.0034
+  },
+  "items": [
+    {
+      "source": "Create a new <code>BeanPropertyRowMapper</code>.",
+      "translation": "创建一个新的<code>BeanPropertyRowMapper</code>。",
+      "count": 4
+    },
+    {
+      "source": "If you need to map to a target class which has a <em>data class</em> constructor\n— for example, a Java <code>record</code> or a Kotlin <code>data</code> class —\nuse <a href=\"DataClassRowMapper.html\" title=\"class in org.springframework.r2dbc.core\"><code>DataClassRowMapper</code></a> instead.",
+      "translation": "如果需要对具有<em>数据类</em>构造器的目标类进行映射——例如 Java 的<code>record</code>或 Kotlin 的<code>data</code>类——请使用<a href=\"DataClassRowMapper.html\" title=\"class in org.springframework.r2dbc.core\"><code>DataClassRowMapper</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation calls <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html#get-int-java.lang.Class-\" title=\"class or interface in io.r2dbc.spi\"><code>Readable.get(int, Class)</code></a> then\nfalls back to <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html#get-int-\" title=\"class or interface in io.r2dbc.spi\"><code>Readable.get(int)</code></a> in case of an exception.\nSubclasses may override this to check specific value types upfront,\nor to post-process values returned from <code>get</code>.",
+      "translation": "默认实现会调用<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html#get-int-java.lang.Class-\" title=\"class or interface in io.r2dbc.spi\"><code>Readable.get(int, Class)</code></a>，然后在发生异常时回退到<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html#get-int-\" title=\"class or interface in io.r2dbc.spi\"><code>Readable.get(int)</code></a>。子类可以重写此方法以预先检查特定值类型，或对从<code>get</code>返回的值进行后处理。",
+      "count": 2
+    },
+    {
+      "source": "To facilitate mapping between columns and properties that don't have matching\nnames, try using column aliases in the SQL statement like\n<code>\"select fname as first_name from customer\"</code>, where <code>first_name</code>\ncan be mapped to a <code>setFirstName(String)</code> method in the target class.",
+      "translation": "为了解决列名与属性名不匹配时的映射问题，请在 SQL 语句中使用列别名，例如 `<code>\"select fname as first_name from customer\"</code>`，其中 `<code>first_name</code>` 可以映射到目标类中的 `<code>setFirstName(String)</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "<code>Readable</code> component values are mapped based on matching the column\nname (as obtained from R2DBC meta-data) to public setters in the target class\nfor the corresponding properties. The names are matched either directly or by\ntransforming a name separating the parts with underscores to the same name using\n\"camel\" case.",
+      "translation": "`Readable` 组件值根据列名（从 R2DBC 元数据中获取）与目标类中对应属性的公共 setter 进行映射。名称匹配方式有两种：直接匹配，或将使用下划线分隔各部分的名字转换为相同名称的“驼峰”式命名。",
+      "count": 2
+    },
+    {
+      "source": "Please note that this class is designed to provide convenience rather than\nhigh performance. For best performance, consider using a custom mapping function\nimplementation.",
+      "translation": "请注意，该类旨在提供便利性而非高性能。若要获得最佳性能，请考虑使用自定义映射函数实现。",
+      "count": 2
+    },
+    {
+      "source": "Utilizes public setters and derives meta-data from the concrete type.",
+      "translation": "使用公共 setter 并从具体类型派生元数据。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply instantiates the mapped class. Can be\noverridden in subclasses.",
+      "translation": "默认实现只是实例化映射类。可以在子类中重写它。",
+      "count": 2
+    },
+    {
+      "source": "Remove the specified property from the mapped properties.",
+      "translation": "从映射属性中移除指定的属性。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html#apply(T)\" title=\"class or interface in java.util.function\">apply</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\">Function</a>&lt;<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html\" title=\"class or interface in io.r2dbc.spi\">Readable</a>,<wbr/><a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html#apply(T)\" title=\"class or interface in java.util.function\">apply</a></code> 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\">Function</a>&lt;<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html\" title=\"class or interface in io.r2dbc.spi\">Readable</a>,<wbr/><a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - in case the concrete type is neither\n<code>Row</code> nor <code>OutParameters</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果具体类型既不是 <code>Row</code> 也不是 <code>OutParameters</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>readable</code> - the <code>Readable</code> being mapped (a <code>Row</code> or <code>OutParameters</code>)",
+      "translation": "<code>readable</code> - 被映射的 <code>Readable</code>（一个 <code>Row</code> 或 <code>OutParameters</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>itemMetadatas</code> - the list of item <code>ReadableMetadata</code> (either\n<code>ColumnMetadata</code> or <code>OutParameterMetadata</code>)",
+      "translation": "`itemMetadatas` - 项 `ReadableMetadata`（即 `ColumnMetadata` 或 `OutParameterMetadata`）的列表",
+      "count": 2
+    },
+    {
+      "source": "<code>conversionService</code> - a <a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> for binding\nresult values to bean properties",
+      "translation": "<code>conversionService</code> - 一个用于将结果值绑定到 Bean 属性的<a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>readable</code> - is the <code>Row</code> or <code>OutParameters</code> holding the data",
+      "translation": "<code>readable</code> - 表示 <code>Row</code> 或 <code>OutParameters</code> 是否持有数据",
+      "count": 2
+    },
+    {
+      "source": "<code>mappedClass</code> - the class that each row should be mapped to",
+      "translation": "<code>mappedClass</code> - 每行应映射到的类",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the original name",
+      "translation": "<code>name</code> - 原始名称",
+      "count": 2
+    },
+    {
+      "source": "<code>tc</code> - a TypeConverter with this row mapper's conversion service",
+      "translation": "<code>tc</code> - 具有此行映射器转换服务的 TypeConverter",
+      "count": 2
+    },
+    {
+      "source": "<code>itemIndex</code> - is the column index or out-parameter index",
+      "translation": "<code>itemIndex</code> - 是列索引还是输出参数索引",
+      "count": 2
+    },
+    {
+      "source": "Simon Baslé, Juergen Hoeller, Sam Brannen",
+      "translation": "Simon Baslé, Juergen Hoeller, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "the converted name",
+      "translation": "转换后的名称",
+      "count": 2
+    },
+    {
+      "source": "Mapping is provided for properties in the target class for many common types —\nfor example: String, boolean, Boolean, byte, Byte, short, Short, int, Integer,\nlong, Long, float, Float, double, Double, BigDecimal, <code>java.util.Date</code>, etc.",
+      "translation": "对于许多常见类型，为目标类中的属性提供了映射——例如：String、boolean、Boolean、byte、Byte、short、Short、int、Integer、long、Long、float、Float、double、Double、BigDecimal、<code>java.util.Date</code> 等。",
+      "count": 1
+    },
+    {
+      "source": "By default, conversions will happen within the US locale.",
+      "translation": "默认情况下，转换将在美国区域设置中进行。",
+      "count": 1
+    },
+    {
+      "source": "Any upper case letters are converted to lower case with a preceding underscore.",
+      "translation": "任何大写字母都会转换为小写，并在其前面添加一个下划线。",
+      "count": 1
+    },
+    {
+      "source": "Extract the values for the current <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html\" title=\"class or interface in io.r2dbc.spi\"><code>Readable</code></a>: all columns in case\nof a <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Row.html\" title=\"class or interface in io.r2dbc.spi\"><code>Row</code></a> or all parameters in case of an <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/OutParameters.html\" title=\"class or interface in io.r2dbc.spi\"><code>OutParameters</code></a>.",
+      "translation": "提取当前 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Readable.html\" title=\"class or interface in io.r2dbc.spi\"><code>Readable</code></a> 的值：如果是 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Row.html\" title=\"class or interface in io.r2dbc.spi\"><code>Row</code></a>，则为所有列；如果是 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/OutParameters.html\" title=\"class or interface in io.r2dbc.spi\"><code>OutParameters</code></a>，则为所有参数。",
+      "count": 1
+    },
+    {
+      "source": "Construct an instance of the mapped class for the current <code>Readable</code>.",
+      "translation": "为当前的<code>Readable</code>构建映射类的实例。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve an R2DBC object value for the specified item index (a column or\nan out-parameter).",
+      "translation": "检索指定项目索引（列或输出参数）的 R2DBC 对象值。",
+      "count": 1
+    },
+    {
+      "source": "Convert the given name to lower case.",
+      "translation": "将给定名称转换为小写。",
+      "count": 1
+    },
+    {
+      "source": "Convert a name in camelCase to an underscored name in lower case.",
+      "translation": "将驼峰式名称转换为下划线式小写名称。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the result type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 结果类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>propertyName</code> - the property name (as used by property descriptors)",
+      "translation": "<code>propertyName</code> - 属性名称（如属性描述符中所使用的）",
+      "count": 1
+    },
+    {
+      "source": "<code>paramType</code> - the target parameter type",
+      "translation": "<code>paramType</code> - 目标参数类型",
+      "count": 1
+    },
+    {
+      "source": "a corresponding instance of the mapped class",
+      "translation": "映射类的对应实例",
+      "count": 1
+    },
+    {
+      "source": "the Object value",
+      "translation": "Object 值",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-04-14 11:59:38",
+  "updated_at": "2026-04-14 11:59:38",
+  "stats": {
+    "total_entries": 11,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 18,
+    "entries_with_hits": 11,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6363636363636365,
+    "usage_percentage": 0.0011
+  },
+  "items": [
+    {
+      "source": "By themselves, delegates don't do much.  Their true power lies in the fact that\n  they can be treated like objects, and passed to other methods.  In fact that is\n  one of the key building blocks of building Intelligent Agents which in tern are\n  the foundation of artificial intelligence.  In the above program, we could have\n  easily created the delegate to match the static <code>main</code> method by\n  substituting the delegate creation call with this:\n  <code>MethodDelegate.createStatic(getClass(), \"main\", MainDelegate.class)</code>.",
+      "translation": "单独来看，委托本身功能有限。它们的真正力量在于可以像对象一样被处理，并传递给其他方法。事实上，这是构建智能代理的关键基础组件之一，而智能代理又是人工智能的基础。在上述程序中，我们可以轻松创建与静态 `<code>main`</code> 方法匹配的委托，只需将委托创建调用替换为以下内容：\n<code>MethodDelegate.createStatic(getClass(), \"main\", MainDelegate.class)</code>。",
+      "count": 2
+    },
+    {
+      "source": "The interface above is an example of an interface that can become a\n  delegate.  It has only one method, and the interface is public.  In\n  order to create a delegate for that method, all we have to do is\n  call <code>MethodDelegate.create(this, \"alternateMain\", MainDelegate.class)</code>.\n  The following program will show how to use it:",
+      "translation": "上面的接口是一个可以成为委托的接口的示例。它只有一个方法，且该接口是公开的。要为此方法创建一个委托，我们只需调用 `<code>MethodDelegate.create(this, \"alternateMain\", MainDelegate.class)</code>`。下面的程序将展示如何使用它：",
+      "count": 2
+    },
+    {
+      "source": "Delegates are a typesafe pointer to another method.  Since Java does not\nhave language support for such a construct, this utility will construct\na proxy that forwards method calls to any method with the same signature.\nThis utility is inspired in part by the C# delegate mechanism.  We\nimplemented it in a Java-centric manner.",
+      "translation": "委托是另一种方法的类型安全指针。由于 Java 缺乏对此类结构的语言支持，此工具将构建一个代理，将方法调用转发到任何具有相同签名的方法。此工具部分受 C# 委托机制的启发。我们以以 Java 为中心的方式实现了它。",
+      "count": 2
+    },
+    {
+      "source": "Any interface with one method can become the interface for a delegate.\n  Consider the example below:",
+      "translation": "任何包含一个方法的接口都可以成为委托的接口。\n考虑下面的示例：",
+      "count": 2
+    },
+    {
+      "source": "Another key use for Delegates is to register event listeners.  It is much easier\n  to have all the code for your events separated out into methods instead of individual\n  classes.  One of the ways Java gets around that is to create anonymous classes.\n  They are particularly troublesome because many Debuggers do not know what to do\n  with them.  Anonymous classes tend to duplicate alot of code as well.  We can\n  use any interface with one declared method to forward events to any method that\n  matches the signature (although the method name can be different).",
+      "translation": "委托的另一个关键用途是注册事件监听器。将所有事件代码分离到各个方法中，比分散在单独的类中要容易得多。Java 处理这一问题的方式之一是创建匿名内部类。它们特别令人困扰，因为许多调试器不知道如何处理它们。匿名内部类往往会导致大量代码重复。我们可以使用任何只声明了一个方法的接口，将事件转发给任何匹配该签名的方法（尽管方法名可以不同）。",
+      "count": 2
+    },
+    {
+      "source": "They both refer to the same instance.  That is, the <code>instance</code>\n      parameter passed to the newDelegate method was the same for both. The\n      instances are compared with the identity equality operator, <code>==</code>.",
+      "translation": "它们都引用同一个实例。也就是说，传递给 `newDelegate` 方法的 `<code>instance</code>` 参数对两者是相同的。这些实例使用身份相等运算符 `<code>==</code>` 进行比较。",
+      "count": 2
+    },
+    {
+      "source": "They refer to the same method as resolved by <code>Method.equals</code>.",
+      "translation": "它们引用的是由<code>Method.equals</code>解析的同一方法。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-04-14 16:01:37",
+  "updated_at": "2026-04-14 16:01:37",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 1.619047619047619,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "<b>NOTE:</b> This variant will only be invoked in case of Jakarta EE style\ncontainer bootstrapping where a <code>PersistenceUnitInfo</code> is present\n(i.e. <a href=\"LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a>). In case of simple\nJava SE style bootstrapping via <code>Persistence</code>\n(i.e. <a href=\"LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a>), the parameter-less\n<a href=\"#getJpaPropertyMap()\"><code>getJpaPropertyMap()</code></a> variant will be called directly.",
+      "translation": "<b>注意：</b>此变体仅在 Jakarta EE 风格的容器引导过程中被调用，此时存在一个 <code>PersistenceUnitInfo</code>（即 <a href=\"LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a>）。在通过 <code>Persistence</code> 进行简单 Java SE 风格引导的情况下（即 <a href=\"LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a>），将直接调用无参数的 <a href=\"#getJpaPropertyMap()\"><code>getJpaPropertyMap()</code></a> 变体。",
+      "count": 2
+    },
+    {
+      "source": "This implementation delegates to <a href=\"#getJpaPropertyMap()\"><code>getJpaPropertyMap()</code></a> for\nnon-unit-dependent properties. Effectively, this PersistenceUnitInfo-based\nvariant only needs to be implemented if there is an actual need to react\nto unit-specific characteristics such as the transaction type.",
+      "translation": "此实现将非单元依赖属性的处理委托给 <a href=\"#getJpaPropertyMap()\"><code>getJpaPropertyMap()</code></a>。实际上，只有当确实需要响应单元特定特性（如事务类型）时，才需要实现这种基于 PersistenceUnitInfo 的变体。",
+      "count": 2
+    },
+    {
+      "source": "If the provider does not offer any EntityManagerFactory extensions,\nthe adapter should simply return the standard\n<code>EntityManagerFactory</code> class here.",
+      "translation": "如果提供者不提供任何 EntityManagerFactory 扩展，适配器应在此处简单地返回标准的 `<code>EntityManagerFactory`</code> 类。",
+      "count": 2
+    },
+    {
+      "source": "If the provider does not offer any EntityManager extensions,\nthe adapter should simply return the standard\n<code>EntityManager</code> class here.",
+      "translation": "如果提供者不提供任何 EntityManager 扩展，适配器应在此处简单地返回标准的`EntityManager`类。",
+      "count": 2
+    },
+    {
+      "source": "Note that there might be further JPA properties defined on the\nEntityManagerFactory bean, which might potentially override individual\nJPA property values specified here.",
+      "translation": "请注意，可能在 EntityManagerFactory 豆子上定义了进一步的 JPA 属性，这些属性可能会覆盖此处指定的各个 JPA 属性值。",
+      "count": 2
+    },
+    {
+      "source": "This can be used for triggering vendor-specific initialization processes.\nWhile this is not expected to be used for most providers, it is included\nhere as a general extension hook.",
+      "translation": "这可用于触发供应商特定的初始化过程。虽然大多数提供者不会使用此功能，但此处将其包含作为通用扩展钩子。",
+      "count": 2
+    },
+    {
+      "source": "This can be used for setting vendor-specific parameters, for example,\nHibernate filters, on every new EntityManager.",
+      "translation": "这可用于为每个新的 EntityManager 设置特定于供应商的参数，例如 Hibernate 过滤器。",
+      "count": 2
+    },
+    {
+      "source": "Return the vendor-specific JpaDialect implementation for this\nprovider, or <code>null</code> if there is none.",
+      "translation": "返回此提供者的特定于厂商的 JpaDialect 实现，如果没有则返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "SPI interface that allows to plug in vendor-specific behavior\ninto Spring's EntityManagerFactory creators. Serves as single\nconfiguration point for all vendor-specific properties.",
+      "translation": "允许将特定于供应商的行为插入到 Spring 的 EntityManagerFactory 创建器中的 SPI 接口。作为所有特定于供应商属性的单一配置点。",
+      "count": 2
+    },
+    {
+      "source": "Return the vendor-specific persistence provider.",
+      "translation": "返回特定于供应商的持久性提供者。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the persistence provider's root package\n(for example, \"oracle.toplink.essentials\"). Will be used for\nexcluding provider classes from temporary class overriding.",
+      "translation": "返回持久化提供程序根包名称（例如，\"oracle.toplink.essentials\"）。将用于从临时类覆盖中排除提供程序类。",
+      "count": 2
+    },
+    {
+      "source": "<code>pui</code> - the PersistenceUnitInfo for the current persistence unit",
+      "translation": "<pui</p> - 当前持久化单元的 PersistenceUnitInfo",
+      "count": 2
+    },
+    {
+      "source": "a Map of JPA properties, as accepted by the standard JPA bootstrap\nfacilities, or an empty Map if there are no properties to expose",
+      "translation": "一个由标准 JPA 引导设施接受的 JPA 属性 Map，或者如果没有要暴露的属性则为空 Map。",
+      "count": 2
+    },
+    {
+      "source": "Return the vendor-specific EntityManagerFactory interface\nthat the EntityManagerFactory proxy is supposed to implement.",
+      "translation": "返回 EntityManagerFactory 代理应该实现的特定于供应商的 EntityManagerFactory 接口。",
+      "count": 1
+    },
+    {
+      "source": "Return the vendor-specific EntityManager interface\nthat this provider's EntityManagers will implement.",
+      "translation": "返回此提供者中的 EntityManager 将实现的特定于供应商的 EntityManager 接口。",
+      "count": 1
+    },
+    {
+      "source": "Return a Map of vendor-specific JPA properties,\ntypically based on settings in this JpaVendorAdapter instance.",
+      "translation": "返回一个包含特定于供应商的 JPA 属性的 Map，通常基于此 JpaVendorAdapter 实例中的设置。",
+      "count": 1
+    },
+    {
+      "source": "Return a Map of vendor-specific JPA properties for the given persistence\nunit, typically based on settings in this JpaVendorAdapter instance.",
+      "translation": "返回给定持久化单元的供应商特定 JPA 属性的 Map，通常基于此 JpaVendorAdapter 实例中的设置。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the persistence provider's root package\n(for example, \"oracle.toplink.essentials\").",
+      "translation": "返回持久化提供程序的根包名称（例如，\"oracle.toplink.essentials\"）。",
+      "count": 1
+    },
+    {
+      "source": "Optional callback for post-processing the native EntityManager\nbefore active use.",
+      "translation": "用于在主动使用之前对原生 EntityManager 进行后处理的可选回调。",
+      "count": 1
+    },
+    {
+      "source": "Optional callback for post-processing the native EntityManagerFactory\nbefore active use.",
+      "translation": "用于在主动使用之前对原生 EntityManagerFactory 进行后处理的可选回调。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson",
+      "translation": "Juergen Hoeller，Rod Johnson",
+      "count": 1
+    }
+  ]
+}

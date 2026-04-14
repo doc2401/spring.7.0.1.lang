@@ -1,0 +1,316 @@
+{
+  "created_at": "2026-04-14 13:00:00",
+  "updated_at": "2026-04-14 13:00:00",
+  "stats": {
+    "total_entries": 60,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 110,
+    "entries_with_hits": 60,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8333333333333333,
+    "usage_percentage": 0.006
+  },
+  "items": [
+    {
+      "source": "<code>sourceType</code> - the source type to convert from",
+      "translation": "<code>sourceType</code> - 要转换的源类型",
+      "count": 4
+    },
+    {
+      "source": "Special note on collections, arrays, and maps types:\nFor conversion between collection, array, and map types, this method will return <code>true</code>\neven though a convert invocation may still generate a <a href=\"../ConversionException.html\" title=\"class in org.springframework.core.convert\"><code>ConversionException</code></a> if the\nunderlying elements are not convertible. Callers are expected to handle this exceptional case\nwhen working with collections and maps.",
+      "translation": "关于集合、数组和映射类型的特别注意事项：\n对于集合、数组和映射类型之间的转换，即使底层元素不可转换，此方法仍可能返回 <code>true</code>，但转换调用仍可能生成一个 <a href=\"../ConversionException.html\" title=\"class in org.springframework.core.convert\"><code>ConversionException</code></a>。调用者在使用集合和映射时，需要处理这种异常情况。",
+      "count": 3
+    },
+    {
+      "source": "Convert the given <code>source</code> to the specified <code>targetType</code>.",
+      "translation": "将给定的<code>source</code>转换为指定的<code>targetType</code>。",
+      "count": 3
+    },
+    {
+      "source": "<code>sourceType</code> - context about the source type to convert from\n(may be <code>null</code> if source is <code>null</code>)",
+      "translation": "<code>sourceType</code> - 转换来源的类型上下文（如果来源为 <code>null</code>，则可能为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>targetType</code> - context about the target type to convert to (required)",
+      "translation": "<code>targetType</code> - 要转换的目标类型的上下文（必需）",
+      "count": 3
+    },
+    {
+      "source": "<code>targetType</code> - the target type to convert to",
+      "translation": "<code>targetType</code> - 要转换的目标类型",
+      "count": 3
+    },
+    {
+      "source": "If this method returns <code>true</code>, it means <a href=\"../ConversionService.html#convert(java.lang.Object,java.lang.Class)\"><code>ConversionService.convert(Object, Class)</code></a> is capable\nof converting an instance of <code>sourceType</code> to <code>targetType</code>.",
+      "translation": "如果此方法返回 `<code>true</code>`，则意味着<a href=\"../ConversionService.html#convert(java.lang.Object,java.lang.Class)\"><code>ConversionService.convert(Object, Class)</code></a>能够将<code>sourceType</code> 的实例转换为<code>targetType</code>。",
+      "count": 2
+    },
+    {
+      "source": "If this method returns <code>true</code>, it means <a href=\"../ConversionService.html#convert(java.lang.Object,org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\"><code>ConversionService.convert(Object, TypeDescriptor, TypeDescriptor)</code></a>\nis capable of converting an instance of <code>sourceType</code> to <code>targetType</code>.",
+      "translation": "如果此方法返回 `<code>true</code>`，则意味着<a href=\"../ConversionService.html#convert(java.lang.Object,org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\"><code>ConversionService.convert(Object, TypeDescriptor, TypeDescriptor)</code></a>能够将<code>sourceType</code> 的实例转换为<code>targetType</code>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>null</code> or the Java 8\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> instance if the target type is\n<code>java.util.Optional</code>. Subclasses may override this to return\ncustom <code>null</code> objects for specific target types.",
+      "translation": "默认实现返回 `<code>null</code>` 或 Java 8 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>实例，如果目标类型为<code>java.util.Optional</code>。子类可以重写此方法以针对特定目标类型返回自定义的 `<code>null</code>` 对象。",
+      "count": 2
+    },
+    {
+      "source": "Returns a NO_OP Converter if the source type is assignable to the target type.\nReturns <code>null</code> otherwise, indicating no suitable converter could be found.",
+      "translation": "如果源类型可赋值给目标类型，则返回一个 NO_OP 转换器。否则返回<code>null</code>，表示找不到合适的转换器。",
+      "count": 2
+    },
+    {
+      "source": "More precisely, this method will return true if objects of sourceType can be\nconverted to the target type by returning the source object unchanged.",
+      "translation": "更准确地说，如果可以通过返回源对象本身将 `sourceType` 类型的对象转换为目标类型，则此方法将返回 `true`。",
+      "count": 2
+    },
+    {
+      "source": "Base <a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> implementation suitable for use in most environments.\nIndirectly implements <a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\"><code>ConverterRegistry</code></a> as registration API through the\n<a href=\"ConfigurableConversionService.html\" title=\"interface in org.springframework.core.convert.support\"><code>ConfigurableConversionService</code></a> interface.",
+      "translation": "适用于大多数环境的 <a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> 基础实现。通过<a href=\"ConfigurableConversionService.html\" title=\"interface in org.springframework.core.convert.support\"><code>ConfigurableConversionService</code></a>接口间接实现<a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\"><code>ConverterRegistry</code></a>作为注册 API。",
+      "count": 2
+    },
+    {
+      "source": "Return <code>true</code> if objects of <code>sourceType</code> can be converted to the <code>targetType</code>.",
+      "translation": "如果可以将<code>sourceType</code>的对象转换为<code>targetType</code>，则返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.Converter)\">ConverterRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.Converter)\">ConverterRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../converter/ConverterRegistry.html#addConverter(java.lang.Class,java.lang.Class,org.springframework.core.convert.converter.Converter)\">ConverterRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../converter/ConverterRegistry.html#addConverter(java.lang.Class,java.lang.Class,org.springframework.core.convert.converter.Converter)\">ConverterRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.GenericConverter)\">ConverterRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.GenericConverter)\">ConverterRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../converter/ConverterRegistry.html#addConverterFactory(org.springframework.core.convert.converter.ConverterFactory)\">ConverterRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../converter/ConverterRegistry.html#addConverterFactory(org.springframework.core.convert.converter.ConverterFactory)\">ConverterRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../converter/ConverterRegistry.html#removeConvertible(java.lang.Class,java.lang.Class)\">ConverterRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../converter/ConverterRegistry.html#removeConvertible(java.lang.Class,java.lang.Class)\">ConverterRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ConversionService.html#canConvert(java.lang.Class,java.lang.Class)\">ConversionService</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ConversionService.html#canConvert(java.lang.Class,java.lang.Class)\">ConversionService</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ConversionService.html#canConvert(org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">ConversionService</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ConversionService.html#canConvert(org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">ConversionService</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ConversionService.html#convert(java.lang.Object,java.lang.Class)\">ConversionService</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ConversionService.html#convert(java.lang.Object,java.lang.Class)\">ConversionService</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ConversionService.html#convert(java.lang.Object,org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">ConversionService</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ConversionService.html#convert(java.lang.Object,org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">ConversionService</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Remove any converters from <code>sourceType</code> to <code>targetType</code>.",
+      "translation": "从<code>sourceType</code>到<code>targetType</code>移除任何转换器。",
+      "count": 2
+    },
+    {
+      "source": "Add a plain converter to this registry.",
+      "translation": "在此注册表中添加一个普通转换器。",
+      "count": 2
+    },
+    {
+      "source": "Add a generic converter to this registry.",
+      "translation": "向该注册表添加一个通用转换器。",
+      "count": 2
+    },
+    {
+      "source": "Hook method to look up the converter for a given sourceType/targetType pair.\nFirst queries this ConversionService's converter cache.\nOn a cache miss, then performs an exhaustive search for a matching converter.\nIf no converter matches, returns the default converter.",
+      "translation": "钩子方法用于查找给定 sourceType/targetType 对的转换器。首先查询此 ConversionService 的转换器缓存。如果缓存未命中，则执行彻底搜索以查找匹配的转换器。如果没有匹配的转换器，则返回默认转换器。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.Converter)\">addConverter</a></code> in interface <code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>",
+      "translation": "`<code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.Converter)\">addConverter</a></code>` 接口 `<code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../converter/ConverterRegistry.html#addConverter(java.lang.Class,java.lang.Class,org.springframework.core.convert.converter.Converter)\">addConverter</a></code> in interface <code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>",
+      "translation": "`<code><a href=\"../converter/ConverterRegistry.html#addConverter(java.lang.Class,java.lang.Class,org.springframework.core.convert.converter.Converter)\">addConverter</a></code>` 接口中的 `<code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.GenericConverter)\">addConverter</a></code> in interface <code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>",
+      "translation": "`<code><a href=\"../converter/ConverterRegistry.html#addConverter(org.springframework.core.convert.converter.GenericConverter)\">addConverter</a></code>` 接口中的 `<code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../converter/ConverterRegistry.html#addConverterFactory(org.springframework.core.convert.converter.ConverterFactory)\">addConverterFactory</a></code> in interface <code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>",
+      "translation": "`<code><a href=\"../converter/ConverterRegistry.html#addConverterFactory(org.springframework.core.convert.converter.ConverterFactory)\">addConverterFactory</a></code>` 接口中的 `<code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../converter/ConverterRegistry.html#removeConvertible(java.lang.Class,java.lang.Class)\">removeConvertible</a></code> in interface <code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>",
+      "translation": "`<code><a href=\"../converter/ConverterRegistry.html#removeConvertible(java.lang.Class,java.lang.Class)\">removeConvertible</a></code>` 在接口 `<code><a href=\"../converter/ConverterRegistry.html\" title=\"interface in org.springframework.core.convert.converter\">ConverterRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ConversionService.html#canConvert(java.lang.Class,java.lang.Class)\">canConvert</a></code> in interface <code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>",
+      "translation": "`<code><a href=\"../ConversionService.html#canConvert(java.lang.Class,java.lang.Class)\">canConvert</a></code>` 在接口 `<code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ConversionService.html#canConvert(org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">canConvert</a></code> in interface <code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>",
+      "translation": "`<code><a href=\"../ConversionService.html#canConvert(org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">canConvert</a></code>` 接口 `<code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ConversionService.html#convert(java.lang.Object,java.lang.Class)\">convert</a></code> in interface <code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>",
+      "translation": "`<code><a href=\"../ConversionService.html#convert(java.lang.Object,java.lang.Class)\">convert</a></code>` 接口 `<code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ConversionService.html#convert(java.lang.Object,org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">convert</a></code> in interface <code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>",
+      "translation": "`<code><a href=\"../ConversionService.html#convert(java.lang.Object,org.springframework.core.convert.TypeDescriptor,org.springframework.core.convert.TypeDescriptor)\">convert</a></code>` 接口 `<code><a href=\"../ConversionService.html\" title=\"interface in org.springframework.core.convert\">ConversionService</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if conversion can be bypassed; <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示可以绕过转换；否则为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>source</code> - the source object to convert (may be <code>null</code>)",
+      "translation": "<code>source</code> - 要转换的源对象（可为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the converted object, an instance of <a href=\"../TypeDescriptor.html#getObjectType()\"><code>targetType</code></a>",
+      "translation": "转换后的对象，即 `<a href=\"../TypeDescriptor.html#getObjectType()\"><code>targetType</code></a>` 的一个实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetType</code> - the target type to convert to (required)",
+      "translation": "<code>targetType</code> - 要转换的目标类型（必需）",
+      "count": 2
+    },
+    {
+      "source": "the generic converter that will perform the conversion,\nor <code>null</code> if no suitable converter was found",
+      "translation": "执行转换的通用转换器，或者如果找不到合适的转换器则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Keith Donald, Juergen Hoeller, Chris Beams, Phillip Webb, David Haraburda",
+      "translation": "Keith Donald, Juergen Hoeller, Chris Beams, Phillip Webb, David Haraburda",
+      "count": 2
+    },
+    {
+      "source": "the converted null object",
+      "translation": "已转换的空对象",
+      "count": 2
+    },
+    {
+      "source": "the default generic converter that will perform the conversion",
+      "translation": "默认通用转换器将执行该转换。",
+      "count": 2
+    },
+    {
+      "source": "Allows for a Converter to be reused for multiple distinct pairs without\nhaving to create a Converter class for each pair.",
+      "translation": "允许将转换器重用用于多个不同的配对，而无需为每个配对创建单独的转换器类。",
+      "count": 1
+    },
+    {
+      "source": "Convert the given <code>source</code> to the specified <code>targetType</code>.\nThe TypeDescriptors provide additional context about the source and target locations\nwhere conversion will occur, often object fields or property locations.",
+      "translation": "将给定的<code>source</code>转换为指定的<code>targetType</code>。\nTypeDescriptors 提供了有关转换发生位置的源和目标位置的额外上下文，通常是对象字段或属性位置。",
+      "count": 1
+    },
+    {
+      "source": "Template method to convert a <code>null</code> source.",
+      "translation": "用于转换<code>null</code>源的方法模板。",
+      "count": 1
+    },
+    {
+      "source": "Add a ranged converter factory to this registry.",
+      "translation": "向该注册表添加一个范围转换器工厂。",
+      "count": 1
+    },
+    {
+      "source": "Return whether conversion between the source type and the target type can be bypassed.",
+      "translation": "返回是否可以绕过源类型和目标类型之间的转换。",
+      "count": 1
+    },
+    {
+      "source": "Hook method to look up the converter for a given sourceType/targetType pair.",
+      "translation": "钩子方法用于查找给定 sourceType/targetType 对的转换器。",
+      "count": 1
+    },
+    {
+      "source": "Return the default converter if no converter is found for the given sourceType/targetType pair.",
+      "translation": "如果未找到给定 sourceType/targetType 对的转换器，则返回默认转换器。",
+      "count": 1
+    },
+    {
+      "source": "Add a plain converter to this registry.\nThe convertible source/target type pair is derived from the Converter's parameterized types.",
+      "translation": "在此注册表中添加一个普通转换器。可转换的源/目标类型对是从转换器的参数化类型派生的。",
+      "count": 1
+    },
+    {
+      "source": "Add a ranged converter factory to this registry.\nThe convertible source/target type pair is derived from the ConverterFactory's parameterized types.",
+      "translation": "向此注册表添加一个范围转换器工厂。可转换的源/目标类型对是从 ConverterFactory 的参数化类型派生的。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>sourceType</code> - the source type to convert from (may be <code>null</code> if source is <code>null</code>)",
+      "translation": "<code>sourceType</code> - 要转换的源类型（如果源为 <code>null</code>，则可能为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if targetType is <code>null</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果 targetType 为 <code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if a conversion can be performed, <code>false</code> if not",
+      "translation": "<code>true</code> 如果可以执行转换，否则为 <code>false</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if a conversion can be performed between the source and target types,\n<code>false</code> if not",
+      "translation": "<code>true</code> 如果可以在源类型和目标类型之间执行转换，否则为 <code>false</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>sourceType</code> - the source type",
+      "translation": "<code>sourceType</code> - 源类型",
+      "count": 1
+    },
+    {
+      "source": "<code>targetType</code> - the target type",
+      "translation": "<code>targetType</code> - 目标类型",
+      "count": 1
+    },
+    {
+      "source": "the converted object, an instance of targetType",
+      "translation": "转换后的对象，即 targetType 的实例",
+      "count": 1
+    }
+  ]
+}

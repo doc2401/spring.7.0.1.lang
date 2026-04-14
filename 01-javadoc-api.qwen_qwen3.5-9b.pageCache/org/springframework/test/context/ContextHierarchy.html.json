@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-04-14 16:36:23",
+  "updated_at": "2026-04-14 16:36:23",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 37,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7619047619047619,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "The following classes demonstrate the use of <em>named</em> hierarchy levels\nin order to <em>merge</em> the configuration for specific levels in a context\nhierarchy. <code>BaseTests</code> defines two levels in the hierarchy, <code>\"parent\"</code>\nand <code>\"child\"</code>. <code>ExtendedTests</code> extends <code>BaseTests</code> and instructs\nthe Spring TestContext Framework to merge the context configuration for the\n<code>\"child\"</code> hierarchy level, simply by ensuring that the names declared via\n<a href=\"ContextConfiguration.html#name()\"><code>ContextConfiguration.name()</code></a> are both <code>\"child\"</code>. The result is that\nthree application contexts will be loaded: one for <code>\"/app-config.xml\"</code>,\none for <code>\"/user-config.xml\"</code>, and one for <code>{\"/user-config.xml\",\n\"/order-config.xml\"}</code>. As with the previous example, the application\ncontext loaded from <code>\"/app-config.xml\"</code> will be set as the parent context\nfor the contexts loaded from <code>\"/user-config.xml\"</code> and <code>{\"/user-config.xml\",\n\"/order-config.xml\"}</code>.",
+      "translation": "以下类演示了如何使用<em>命名</em>层次级别，以便在上下文层次结构中合并特定级别的配置。<code>BaseTests</code>定义了层次结构中的两个级别，即<code>\"parent\"</code>和<code>\"child\"</code>。<code>ExtendedTests</code>扩展了<code>BaseTests</code>，并通过确保通过<a href=\"ContextConfiguration.html#name()\"><code>ContextConfiguration.name()</code></a>声明的命名均为<code>\"child\"</code>，指示 Spring TestContext Framework 合并<code>\"child\"</code>层次级别的上下文配置。结果是加载三个应用程序上下文：一个用于<code>\"/app-config.xml\"</code>，一个用于<code>\"/user-config.xml\"</code>，另一个用于<code>{\"/user-config.xml\", \"/order-config.xml\"}</code>。与前面的示例一样，从<code>\"/app-config.xml\"</code>加载的应用程序上下文将作为从<code>\"/user-config.xml\"</code>和<code>{\"/user-config.xml\", \"/order-config.xml\"}</code>加载的上下文的父上下文。",
+      "count": 2
+    },
+    {
+      "source": "The following test classes define a context hierarchy within a test class\nhierarchy. <code>AbstractWebTests</code> declares the configuration for a root\n<code>WebApplicationContext</code> in a Spring-powered web application. Note,\nhowever, that <code>AbstractWebTests</code> does not declare <code>@ContextHierarchy</code>;\nconsequently, subclasses of <code>AbstractWebTests</code> can optionally participate\nin a context hierarchy or follow the standard semantics for <code>@ContextConfiguration</code>.\n<code>SoapWebServiceTests</code> and <code>RestWebServiceTests</code> both extend\n<code>AbstractWebTests</code> and define a context hierarchy via <code>@ContextHierarchy</code>.\nThe result is that three application contexts will be loaded (one for each\ndeclaration of <code>@ContextConfiguration</code>), and the application context\nloaded based on the configuration in <code>AbstractWebTests</code> will be set as\nthe parent context for each of the contexts loaded for the concrete subclasses.",
+      "translation": "以下测试类在测试类层次结构中定义了一个上下文层次结构。<code>AbstractWebTests</code> 声明了 Spring 驱动 Web 应用程序中根 <code>WebApplicationContext</code> 的配置。请注意，<code>AbstractWebTests</code> 未声明 <code>@ContextHierarchy</code>；因此，<code>AbstractWebTests</code> 的子类可以可选地参与上下文层次结构，或遵循 <code>@ContextConfiguration</code> 的标准语义。<code>SoapWebServiceTests</code> 和 <code>RestWebServiceTests</code> 均扩展自 <code>AbstractWebTests</code>，并通过 <code>@ContextHierarchy</code> 定义了一个上下文层次结构。结果是，将加载三个应用程序上下文（每个 <code>@ContextConfiguration</code> 声明一个），并且基于 <code>AbstractWebTests</code> 中的配置加载的应用程序上下文将被设置为为具体子类加载的每个上下文的父上下文。",
+      "count": 2
+    },
+    {
+      "source": "The following test class configures the names of the hierarchy levels to be\n<code>\"parent\"</code> and <code>\"child\"</code>. It also declares two <code>PropertyService</code>\nfields that are configured to create or replace <code>PropertyService</code> beans with\nMockito mocks in the respective contexts, named <code>\"parent\"</code> and <code>\"child\"</code>.\nConsequently, the mock from the <code>\"parent\"</code> context will be injected into the\n<code>propertyServiceInParent</code> field, and the mock from the <code>\"child\"</code> context\nwill be injected into the <code>propertyServiceInChild</code> field.",
+      "translation": "该测试类配置了层级名称为 `<code>\"parent\"</code>` 和 `<code>\"child\"</code>`。它还声明了两个 `<code>PropertyService</code>` 字段，这些字段被配置为在各自的上下文中（分别命名为 `<code>\"parent\"</code>` 和 `<code>\"child\"</code>`）创建或替换 `<code>PropertyService</code>` Bean 为 Mockito 模拟对象。因此，来自 `<code>\"parent\"</code>` 上下文的模拟对象将被注入到 `<code>propertyServiceInParent</code>` 字段中，而来自 `<code>\"child\"</code>` 上下文的模拟对象将被注入到 `<code>propertyServiceInChild</code>` 字段中。",
+      "count": 2
+    },
+    {
+      "source": "<code>ControllerIntegrationTests</code> represents a typical integration testing\nscenario for a Spring MVC web application by declaring a context hierarchy\nconsisting of two levels, one for the <em>root</em> <code>WebApplicationContext</code>\n(with <code>TestAppConfig</code>) and one for the <em>dispatcher servlet</em>\n<code>WebApplicationContext</code> (with <code>WebConfig</code>). The <code>\nWebApplicationContext</code> that is <em>autowired</em> into the test instance is\nthe one for the child context (i.e., the lowest context in the hierarchy).",
+      "translation": "<code>ControllerIntegrationTests</code> 通过声明一个包含两个层级的上下文层次结构，代表了 Spring MVC Web 应用程序的典型集成测试场景：一个用于 <em>根</em> <code>WebApplicationContext</code>（配置为 <code>TestAppConfig</code>），另一个用于 <em>分发器 Servlet</em> <code>WebApplicationContext</code>（配置为 <code>WebConfig</code>）。注入到测试实例中的 <code>WebApplicationContext</code> 是子上下文（即层次结构中的最低层级）的那个。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@ContextHierarchy</code> is used in conjunction with bean overrides such as\n<a href=\"bean/override/convention/TestBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.convention\"><code>@TestBean</code></a>,\n<a href=\"bean/override/mockito/MockitoBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\"><code>@MockitoBean</code></a>, or\n<a href=\"bean/override/mockito/MockitoSpyBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\"><code>@MockitoSpyBean</code></a>,\nit may be desirable or necessary to have the override applied to a single level\nin the context hierarchy. To achieve that, the bean override must specify a\ncontext name that matches a name configured via <a href=\"ContextConfiguration.html#name()\"><code>ContextConfiguration.name()</code></a>.",
+      "translation": "当 `<code>@ContextHierarchy</code>` 与 Bean 覆盖（如<a href=\"bean/override/convention/TestBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.convention\"><code>@TestBean</code></a>、<a href=\"bean/override/mockito/MockitoBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\"><code>@MockitoBean</code></a>或<a href=\"bean/override/mockito/MockitoSpyBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\"><code>@MockitoSpyBean</code></a>）结合使用时，可能需要或将覆盖应用至上下文层次结构中的单个层级。为此，Bean 覆盖必须指定一个与通过<a href=\"ContextConfiguration.html#name()\"><code>ContextConfiguration.name()</code></a>配置的上下文名称相匹配的名称。",
+      "count": 2
+    },
+    {
+      "source": "In contrast to the previous example, this example demonstrates how to\n<em>override</em> the configuration for a given named level in a context hierarchy\nby setting the <a href=\"ContextConfiguration.html#inheritLocations()\"><code>ContextConfiguration.inheritLocations()</code></a> flag to <code>false</code>.\nConsequently, the application context for <code>ExtendedTests</code> will be loaded\nonly from <code>\"/test-user-config.xml\"</code> and will have its parent set to the\ncontext loaded from <code>\"/app-config.xml\"</code>.",
+      "translation": "与前面的示例相反，本示例演示如何通过将<a href=\"ContextConfiguration.html#inheritLocations()\"><code>ContextConfiguration.inheritLocations()</code></a>标志设置为<code>false</code>来覆盖上下文中给定命名级别的配置。因此，<code>ExtendedTests</code>的应用上下文仅从<code>\"/test-user-config.xml\"</code>加载，并将其父上下文设置为从<code>\"/app-config.xml\"</code>加载的上下文。",
+      "count": 2
+    },
+    {
+      "source": "The following test class configures the name of the second hierarchy level to be\n<code>\"user-config\"</code> and simultaneously specifies that the <code>UserService</code> should\nbe wrapped in a Mockito spy in the context named <code>\"user-config\"</code>. Consequently,\nSpring will only attempt to create the spy in the <code>\"user-config\"</code> context and will\nnot attempt to create the spy in the parent context.",
+      "translation": "该测试类配置第二层级的名称为 `<code>\"user-config\"</code>`，同时指定在名为 `<code>\"user-config\"</code>` 的上下文中将 `<code>UserService</code>` 包装为 Mockito 间谍（spy）。因此，Spring 将仅在 `<code>\"user-config\"</code>` 上下文中尝试创建该间谍，而不会尝试在父上下文中创建。",
+      "count": 2
+    },
+    {
+      "source": "If you need to merge or override the configuration for a given level\nof the context hierarchy within a test class hierarchy, you must explicitly\nname that level by supplying the same value to the <a href=\"ContextConfiguration.html#name()\"><code>name</code></a> attribute in <code>@ContextConfiguration</code> at each level in the\nclass hierarchy. See the class-level Javadoc for examples.",
+      "translation": "如果您需要在测试类层次结构中合并或覆盖给定层级的上下文配置，您必须显式指定该层级，即在类层次结构中的每一级都向 <a href=\"ContextConfiguration.html#name()\"><code>name</code></a> 属性提供相同的值。有关示例，请参阅类级别的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "When applying bean overrides in different levels of the context hierarchy, you may\nneed to have all of the bean override instances injected into the test class in order\nto interact with them — for example, to configure stubbing for mocks. However,\n<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a> will always\ninject a matching bean found in the lowest level of the context hierarchy. Thus, to\ninject bean override instances from specific levels in the context hierarchy, you need\nto annotate fields with appropriate bean override annotations and configure the name\nof the context level.",
+      "translation": "在应用不同层级的上下文层次结构中的 Bean 覆盖时，您可能需要将所有 Bean 覆盖实例注入到测试类中以便与之交互——例如，为 Mock 配置桩。然而，<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"org.springframework.beans.factory.annotation 中的注解接口\"><code>@Autowired</code></a> 将始终注入在上下文层次结构最低层级中找到的匹配 Bean。因此，要从上下文层次结构的特定层级注入 Bean 覆盖实例，您需要使用适当的 Bean 覆盖注解标注字段，并配置上下文层级的名称。",
+      "count": 2
+    },
+    {
+      "source": "The following JUnit-based examples demonstrate common configuration\nscenarios for integration tests that require the use of context hierarchies.",
+      "translation": "以下基于 JUnit 的示例演示了需要使用时序上下文层次结构的集成测试的常见配置场景。",
+      "count": 2
+    },
+    {
+      "source": "A list of <a href=\"ContextConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextConfiguration</code></a> instances,\neach of which defines a level in the context hierarchy.",
+      "translation": "一个 `<a href=\"ContextConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@ContextConfiguration</code></a>` 实例列表，每个实例都定义了上下文层次结构中的一个级别。",
+      "count": 2
+    },
+    {
+      "source": "Single Test Class with Context Hierarchy",
+      "translation": "单测试类与上下文层次结构",
+      "count": 2
+    },
+    {
+      "source": "Class Hierarchy with Implicit Parent Context",
+      "translation": "带有隐式父级上下文的类层次结构",
+      "count": 2
+    },
+    {
+      "source": "Class Hierarchy with Merged Context Hierarchy Configuration",
+      "translation": "带有合并上下文层次结构配置的类层次结构",
+      "count": 2
+    },
+    {
+      "source": "Class Hierarchy with Overridden Context Hierarchy Configuration",
+      "translation": "带有重写上下文层次结构配置的类层次结构",
+      "count": 2
+    },
+    {
+      "source": "Context Hierarchies with Bean Overrides",
+      "translation": "带有 Bean 覆盖的上下文层次结构",
+      "count": 2
+    },
+    {
+      "source": "This annotation may be used as a <em>meta-annotation</em> to create custom\n<em>composed annotations</em>.",
+      "translation": "此注解可用作 <em>元注解</em> 来创建自定义的 <em>组合注解</em>。",
+      "count": 1
+    },
+    {
+      "source": "This annotation will be inherited from an enclosing test class by default.\nSee <a href=\"NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a> for details.",
+      "translation": "默认情况下，此注解将从外部测试类继承。有关详细信息，请参阅<a href=\"NestedTestConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Required Element Summary",
+      "translation": "必需元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

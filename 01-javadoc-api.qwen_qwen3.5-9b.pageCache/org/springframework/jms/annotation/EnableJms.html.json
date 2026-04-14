@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-04-14 14:59:40",
+  "updated_at": "2026-04-14 14:59:40",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8571428571428572,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "It is also possible to specify a custom <a href=\"../config/JmsListenerEndpointRegistry.html\" title=\"class in org.springframework.jms.config\"><code>JmsListenerEndpointRegistry</code></a> in case you need more control over the way the containers\nare created and managed. The example below also demonstrates how to customize the\n<code>JmsHandlerMethodFactory</code> to use with a custom <a href=\"../../validation/Validator.html\" title=\"interface in org.springframework.validation\"><code>Validator</code></a> so that payloads annotated with <a href=\"../../validation/annotation/Validated.html\" title=\"annotation interface in org.springframework.validation.annotation\"><code>Validated</code></a> are first validated against a custom <code>Validator</code>.",
+      "translation": "此外，如果您需要更灵活地控制容器的创建和管理方式，还可以指定自定义的<a href=\"../config/JmsListenerEndpointRegistry.html\" title=\"class in org.springframework.jms.config\"><code>JmsListenerEndpointRegistry</code></a>。下面的示例还演示了如何自定义<code>JmsHandlerMethodFactory</code>以配合自定义的<a href=\"../../validation/Validator.html\" title=\"interface in org.springframework.validation\"><code>Validator</code></a>使用，从而确保带有<a href=\"../../validation/annotation/Validated.html\" title=\"annotation interface in org.springframework.validation.annotation\"><code>Validated</code></a>注解的有效负载首先针对自定义的<code>Validator</code>进行验证。",
+      "count": 2
+    },
+    {
+      "source": "When more control is desired, a <code>@Configuration</code> class may implement\n<a href=\"JmsListenerConfigurer.html\" title=\"interface in org.springframework.jms.annotation\"><code>JmsListenerConfigurer</code></a>. This allows access to the underlying\n<a href=\"../config/JmsListenerEndpointRegistrar.html\" title=\"class in org.springframework.jms.config\"><code>JmsListenerEndpointRegistrar</code></a>\ninstance. The following example demonstrates how to specify an explicit default\n<code>JmsListenerContainerFactory</code>",
+      "translation": "当需要更多控制时，可以实施一个 `<code>@Configuration</code>` 类来实现 <a href=\"JmsListenerConfigurer.html\" title=\"interface in org.springframework.jms.annotation\"><code>JmsListenerConfigurer</code></a>。这样可以访问底层的 <a href=\"../config/JmsListenerEndpointRegistrar.html\" title=\"class in org.springframework.jms.config\"><code>JmsListenerEndpointRegistrar</code></a> 实例。以下示例演示了如何指定显式的默认 `<code>JmsListenerContainerFactory</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The <code>JmsListenerContainerFactory</code> is responsible for creating the listener\ncontainer responsible for a particular endpoint. Typical implementations, as the\n<a href=\"../config/DefaultJmsListenerContainerFactory.html\" title=\"class in org.springframework.jms.config\"><code>DefaultJmsListenerContainerFactory</code></a>\nused in the sample above, provide the necessary configuration options that are supported by\nthe underlying <a href=\"../listener/MessageListenerContainer.html\" title=\"interface in org.springframework.jms.listener\"><code>MessageListenerContainer</code></a>.",
+      "translation": "`JmsListenerContainerFactory` 负责创建特定端点的监听器容器。典型实现（如上面示例中使用的<a href=\"../config/DefaultJmsListenerContainerFactory.html\" title=\"class in org.springframework.jms.config\"><code>DefaultJmsListenerContainerFactory</code></a>）提供了底层<a href=\"../listener/MessageListenerContainer.html\" title=\"interface in org.springframework.jms.listener\"><code>MessageListenerContainer</code></a>所支持的必要配置选项。",
+      "count": 2
+    },
+    {
+      "source": "The container factory to use is identified by the <a href=\"JmsListener.html#containerFactory()\"><code>containerFactory</code></a>\nattribute defining the name of the <code>JmsListenerContainerFactory</code> bean to use.  When none\nis set a <code>JmsListenerContainerFactory</code> bean with name <code>jmsListenerContainerFactory</code> is\nassumed to be present.",
+      "translation": "要使用的容器工厂由 `<a href=\"JmsListener.html#containerFactory()\"><code>containerFactory</code></a>` 属性定义，该属性指定了要使用的 `<code>JmsListenerContainerFactory</code>` Bean 的名称。如果未设置该属性，则假定存在一个名为 `<code>jmsListenerContainerFactory</code>` 的 `<code>JmsListenerContainerFactory</code>` Bean。",
+      "count": 2
+    },
+    {
+      "source": "<code>@EnableJms</code> enables detection of <a href=\"JmsListener.html\" title=\"annotation interface in org.springframework.jms.annotation\"><code>@JmsListener</code></a> annotations\non any Spring-managed bean in the container. For example, given a class <code>MyService</code>:",
+      "translation": "<code>@EnableJms</code> 启用对容器中任何 Spring 托管 Bean 上的 <a href=\"JmsListener.html\" title=\"annotation interface in org.springframework.jms.annotation\"><code>@JmsListener</code></a> 注解的检测。例如，给定一个类 <code>MyService</code>：",
+      "count": 2
+    },
+    {
+      "source": "Annotated methods can use flexible signature; in particular, it is possible to use\nthe <a href=\"../../messaging/Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a> abstraction and related annotations,\nsee <a href=\"JmsListener.html\" title=\"annotation interface in org.springframework.jms.annotation\"><code>JmsListener</code></a> Javadoc for more details. For instance, the following would\ninject the content of the message and a custom \"myCounter\" JMS header:",
+      "translation": "注解方法可以使用灵活的签名；特别是，可以使用<a href=\"../../messaging/Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a>抽象及相关注解，有关详细信息请参见<a href=\"JmsListener.html\" title=\"annotation interface in org.springframework.jms.annotation\"><code>JmsListener</code></a>的 Javadoc。例如，以下代码将注入消息的内容以及自定义的 \"myCounter\" JMS 标头：",
+      "count": 2
+    },
+    {
+      "source": "These features are abstracted by the <a href=\"../../messaging/handler/annotation/support/MessageHandlerMethodFactory.html\" title=\"interface in org.springframework.messaging.handler.annotation.support\"><code>MessageHandlerMethodFactory</code></a>\nthat is responsible for building the necessary invoker to process the annotated method. By default,\n<a href=\"../../messaging/handler/annotation/support/DefaultMessageHandlerMethodFactory.html\" title=\"class in org.springframework.messaging.handler.annotation.support\"><code>DefaultMessageHandlerMethodFactory</code></a> is used.",
+      "translation": "这些功能由 <a href=\"../../messaging/handler/annotation/support/MessageHandlerMethodFactory.html\" title=\"interface in org.springframework.messaging.handler.annotation.support\"><code>MessageHandlerMethodFactory</code></a> 抽象，该工厂负责构建必要的调用器以处理带注解的方法。默认情况下，使用 <a href=\"../../messaging/handler/annotation/support/DefaultMessageHandlerMethodFactory.html\" title=\"class in org.springframework.messaging.handler.annotation.support\"><code>DefaultMessageHandlerMethodFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The following configuration would ensure that every time a <code>Message</code>\nis received on the <code>Destination</code> named \"myQueue\", <code>MyService.process()</code>\nis invoked with the content of the message:",
+      "translation": "以下配置将确保每次在名为\"myQueue\"的<code>Destination</code>上接收到<code>Message</code>时，都会调用<code>MyService.process()</code>并传入消息内容：",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, if <code>MyService</code> were annotated with <code>@Component</code>, the\nfollowing configuration would ensure that its <code>@JmsListener</code> annotated\nmethod is invoked with a matching incoming message:",
+      "translation": "或者，如果 `<code>MyService</code>` 被标注了 `<code>@Component</code>`，以下配置将确保其带有 `<code>@JmsListener</code>` 注解的方法会被匹配的传入消息调用：",
+      "count": 2
+    },
+    {
+      "source": "Note that the created containers are not registered against the application context\nbut can be easily located for management purposes using the\n<a href=\"../config/JmsListenerEndpointRegistry.html\" title=\"class in org.springframework.jms.config\"><code>JmsListenerEndpointRegistry</code></a>.",
+      "translation": "请注意，创建的容器未注册到应用程序上下文中，但可以使用 <a href=\"../config/JmsListenerEndpointRegistry.html\" title=\"class in org.springframework.jms.config\"><code>JmsListenerEndpointRegistry</code></a> 轻松定位它们以进行管理。",
+      "count": 2
+    },
+    {
+      "source": "Implementing <code>JmsListenerConfigurer</code> also allows for fine-grained\ncontrol over endpoint registration via the <code>JmsListenerEndpointRegistrar</code>.\nFor example, the following configures an extra endpoint:",
+      "translation": "实现 `<code>JmsListenerConfigurer</code>` 还允许通过 `<code>JmsListenerEndpointRegistrar</code>` 对端点注册进行细粒度控制。例如，以下配置会添加一个额外的端点：",
+      "count": 2
+    },
+    {
+      "source": "Note that all beans implementing <code>JmsListenerConfigurer</code> will be detected and\ninvoked in a similar fashion. The example above can be translated into a regular bean\ndefinition registered in the context in case you use the XML configuration.",
+      "translation": "请注意，所有实现 `<code>JmsListenerConfigurer</code>` 的 Bean 都将以类似的方式被检测和调用。如果您使用 XML 配置，上述示例可以转换为在上下文中注册的普通 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "For reference, the example above can be compared to the following Spring XML\nconfiguration:",
+      "translation": "作为参考，上述示例可与以下 Spring XML 配置进行比较：",
+      "count": 1
+    },
+    {
+      "source": "Stephane Nicoll",
+      "translation": "Stephane Nicoll",
+      "count": 1
+    }
+  ]
+}

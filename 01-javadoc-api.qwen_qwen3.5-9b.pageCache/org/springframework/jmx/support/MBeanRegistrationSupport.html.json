@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 15:19:46",
+  "updated_at": "2026-04-14 15:19:46",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 56,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9310344827586208,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "The default implementation is empty. Can be overridden in subclasses.",
+      "translation": "默认实现为空。可在子类中重写。",
+      "count": 3
+    },
+    {
+      "source": "<code>objectName</code> - the actual <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> that the MBean was registered with",
+      "translation": "<code>objectName</code> - 该 MBean 注册时使用的实际 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>",
+      "count": 3
+    },
+    {
+      "source": "<code>objectName</code> - the suggested ObjectName for the MBean",
+      "translation": "<code>objectName</code> - MBean 建议的 ObjectName",
+      "count": 3
+    },
+    {
+      "source": "By setting the <a href=\"#setRegistrationPolicy(org.springframework.jmx.support.RegistrationPolicy)\"><code>registrationPolicy</code></a>\nproperty to <a href=\"RegistrationPolicy.html#IGNORE_EXISTING\"><code>RegistrationPolicy.IGNORE_EXISTING</code></a> the registration process\nwill simply ignore existing MBeans leaving them registered. This is useful in settings\nwhere multiple applications want to share a common MBean in a shared <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>.",
+      "translation": "通过将 `<a href=\"#setRegistrationPolicy(org.springframework.jmx.support.RegistrationPolicy)\"><code>registrationPolicy</code></a>` 属性设置为 `<a href=\"RegistrationPolicy.html#IGNORE_EXISTING\"><code>RegistrationPolicy.IGNORE_EXISTING</code></a>`，注册过程将简单地忽略已存在的 MBean，使其保持注册状态。这在多个应用程序希望共享公共 MBean 的共享 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>` 的设置中非常有用。",
+      "count": 2
+    },
+    {
+      "source": "Setting <a href=\"#setRegistrationPolicy(org.springframework.jmx.support.RegistrationPolicy)\"><code>registrationPolicy</code></a> property\nto <a href=\"RegistrationPolicy.html#REPLACE_EXISTING\"><code>RegistrationPolicy.REPLACE_EXISTING</code></a> will cause existing MBeans to be replaced\nduring registration if necessary. This is useful in situations where you can't guarantee\nthe state of your <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>.",
+      "translation": "设置 `<a href=\"#setRegistrationPolicy(org.springframework.jmx.support.RegistrationPolicy)\"><code>registrationPolicy</code></a>` 属性为 `<a href=\"RegistrationPolicy.html#REPLACE_EXISTING\"><code>RegistrationPolicy.REPLACE_EXISTING</code></a>` 将在必要时在注册期间替换现有的 MBeans。这在您无法保证 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>` 的状态的情况下非常有用。",
+      "count": 2
+    },
+    {
+      "source": "Sub-classes can receive notifications when an MBean is registered or\nunregistered by overriding the <a href=\"#onRegister(javax.management.ObjectName)\"><code>onRegister(ObjectName)</code></a> and\n<a href=\"#onUnregister(javax.management.ObjectName)\"><code>onUnregister(ObjectName)</code></a> methods respectively.",
+      "translation": "子类可以通过分别重写 <a href=\"#onRegister(javax.management.ObjectName)\"><code>onRegister(ObjectName)</code></a> 和 <a href=\"#onUnregister(javax.management.ObjectName)\"><code>onUnregister(ObjectName)</code></a> 方法，在 MBean 注册或注销时接收通知。",
+      "count": 2
+    },
+    {
+      "source": "All registered MBeans are tracked and can be unregistered by calling\nthe #<a href=\"#unregisterBeans()\"><code>unregisterBeans()</code></a> method.",
+      "translation": "所有已注册的 MBean 均会被跟踪，并且可以通过调用#<a href=\"#unregisterBeans()\"><code>unregisterBeans()</code></a>方法进行注销。",
+      "count": 2
+    },
+    {
+      "source": "By default, the registration process will fail if attempting to\nregister an MBean using a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> that is\nalready used.",
+      "translation": "默认情况下，如果尝试使用已使用的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>注册 MBean，注册过程将失败。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"#onRegister(javax.management.ObjectName)\"><code>onRegister(ObjectName)</code></a>.",
+      "translation": "默认实现委托给<a href=\"#onRegister(javax.management.ObjectName)\"><code>onRegister(ObjectName)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify the <code>MBeanServer</code> instance with which all beans should\nbe registered. The <code>MBeanExporter</code> will attempt to locate an\nexisting <code>MBeanServer</code> if none is supplied.",
+      "translation": "指定所有 Bean 应注册到的 `<code>MBeanServer</code>` 实例。如果未提供，`<code>MBeanExporter</code>` 将尝试查找现有的 `<code>MBeanServer</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectNames</code></a> of all registered beans.",
+      "translation": "返回所有已注册 bean 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectNames</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Called when an MBean is registered under the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>.",
+      "translation": "在给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>下注册 MBean 时调用。",
+      "count": 2
+    },
+    {
+      "source": "The policy to use when attempting to register an MBean\nunder an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> that already exists.",
+      "translation": "尝试在已存在的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> 下注册 MBean 时使用的策略。",
+      "count": 2
+    },
+    {
+      "source": "Actually register the MBean with the server. The behavior when encountering\nan existing MBean can be configured using <a href=\"#setRegistrationPolicy(org.springframework.jmx.support.RegistrationPolicy)\"><code>setRegistrationPolicy(RegistrationPolicy)</code></a>.",
+      "translation": "实际上将 MBean 注册到服务器。遇到已存在的 MBean 时的行为可以通过<a href=\"#setRegistrationPolicy(org.springframework.jmx.support.RegistrationPolicy)\"><code>setRegistrationPolicy(RegistrationPolicy)</code></a>进行配置。",
+      "count": 2
+    },
+    {
+      "source": "<code>Log</code> instance for this class.",
+      "translation": "该类对应的 <code>Log</code> 实例。",
+      "count": 2
+    },
+    {
+      "source": "The <code>MBeanServer</code> instance being used to register beans.",
+      "translation": "用于注册 MBean 的 <code>MBeanServer</code> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Return the <code>MBeanServer</code> that the beans will be registered with.",
+      "translation": "返回将注册这些 bean 的<code>MBeanServer</code>。",
+      "count": 2
+    },
+    {
+      "source": "Actually unregister the specified MBean from the server.",
+      "translation": "实际上从服务器中注销指定的 MBean。",
+      "count": 2
+    },
+    {
+      "source": "Unregisters all beans that have been registered by an instance of this class.",
+      "translation": "取消注册由本类实例注册的所有 Bean。",
+      "count": 2
+    },
+    {
+      "source": "<code>objectName</code> - the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> that the MBean was registered with",
+      "translation": "<code>objectName</code> - 该 MBean 注册时使用的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/JMException.html\" title=\"class or interface in javax.management\">JMException</a></code> - if the registration failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/JMException.html\" title=\"class or interface in javax.management\">JMException</a></code> - 如果注册失败",
+      "count": 2
+    },
+    {
+      "source": "<code>registrationPolicy</code> - the policy to use",
+      "translation": "<code>registrationPolicy</code> - 要使用的策略",
+      "count": 2
+    },
+    {
+      "source": "<code>mbean</code> - the MBean instance",
+      "translation": "<code>mbean</code> - MBean 实例",
+      "count": 2
+    },
+    {
+      "source": "<code>mbean</code> - the registered MBean instance",
+      "translation": "<code>mbean</code> - 已注册的 MBean 实例",
+      "count": 2
+    },
+    {
+      "source": "Called when an MBean is unregistered under the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>.",
+      "translation": "在给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>下注销 MBean 时调用。",
+      "count": 1
+    },
+    {
+      "source": "Specify the <code>MBeanServer</code> instance with which all beans should\nbe registered.",
+      "translation": "指定所有 Bean 应注册到的 `<code>MBeanServer</code>` 实例。",
+      "count": 1
+    },
+    {
+      "source": "Actually register the MBean with the server.",
+      "translation": "实际上将 MBean 注册到服务器。",
+      "count": 1
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller, Phillip Webb",
+      "translation": "Rob Harrop, Juergen Hoeller, Phillip Webb",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

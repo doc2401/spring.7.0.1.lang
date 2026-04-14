@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-04-14 20:09:06",
+  "updated_at": "2026-04-14 20:09:06",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 37,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.85,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "Provide a simple template method that calls <a href=\"#createTagWriter()\"><code>createTagWriter()</code></a> and passes\nthe created <a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a> to the <a href=\"#writeTagContent(org.springframework.web.servlet.tags.form.TagWriter)\"><code>writeTagContent(TagWriter)</code></a> method.",
+      "translation": "提供一个简单的模板方法，该方法调用<a href=\"#createTagWriter()\"><code>createTagWriter()</code></a>，并将创建的<a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>传递给<a href=\"#writeTagContent(org.springframework.web.servlet.tags.form.TagWriter)\"><code>writeTagContent(TagWriter)</code></a>方法。",
+      "count": 3
+    },
+    {
+      "source": "Subclasses (or test classes) can override the <a href=\"#createTagWriter()\"><code>createTagWriter()</code></a> method to\nredirect output to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Writer.html\" title=\"class or interface in java.io\"><code>Writer</code></a> other than the <code>JspWriter</code>\nassociated with the current <code>PageContext</code>.",
+      "translation": "子类（或测试类）可以重写<a href=\"#createTagWriter()\"><code>createTagWriter()</code></a>方法，将输出重定向到与当前<code>PageContext</code>关联的<code>JspWriter</code>之外的其他<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Writer.html\" title=\"class or interface in java.io\">Writer</a></code>。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses should implement the <a href=\"#writeTagContent(org.springframework.web.servlet.tags.form.TagWriter)\"><code>writeTagContent(TagWriter)</code></a> to perform\nactual tag rendering.",
+      "translation": "子类应实现<a href=\"#writeTagContent(org.springframework.web.servlet.tags.form.TagWriter)\"><code>writeTagContent(TagWriter)</code></a>以执行实际的标签渲染。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply returns the given value as-is.",
+      "translation": "默认实现直接返回给定的值。",
+      "count": 2
+    },
+    {
+      "source": "Optionally writes the supplied value under the supplied attribute name into the supplied\n<a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>. In this case, the supplied value is <a href=\"#evaluate(java.lang.String,java.lang.Object)\"><code>evaluated</code></a> first\nand then the <a href=\"../../../../util/ObjectUtils.html#getDisplayString(java.lang.Object)\"><code>String representation</code></a> is written as the\nattribute value. If the resultant <code>String</code> representation is <code>null</code>\nor empty, no attribute is written.",
+      "translation": "可选地将提供的值写入到提供的<a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>中指定的属性名下。在这种情况下，首先对提供的值进行<a href=\"#evaluate(java.lang.String,java.lang.Object)\"><code>评估</code></a>，然后将<a href=\"../../../../util/ObjectUtils.html#getDisplayString(java.lang.Object)\"><code>字符串表示形式</code></a>写入为属性值。如果生成的<code>String</code>表示形式为<code>null</code>或为空，则不写入任何属性。",
+      "count": 2
+    },
+    {
+      "source": "Create the <a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a> which all output will be written to. By default,\nthe <a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a> writes its output to the <code>JspWriter</code>\nfor the current <code>PageContext</code>. Subclasses may choose to\nchange the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Writer.html\" title=\"class or interface in java.io\"><code>Writer</code></a> to which output is actually written.",
+      "translation": "创建 <a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>，所有输出都将写入该对象。默认情况下，<a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a> 将其输出写入当前 <code>PageContext</code> 的 <code>JspWriter</code>。子类可以选择更改实际写入输出的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Writer.html\" title=\"class or interface in java.io\"><code>Writer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get the display value of the supplied <code>Object</code>, HTML escaped\nas required. If the supplied value is not a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> and the supplied\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> is not null then the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> is used\nto obtain the display value.",
+      "translation": "获取提供的 `<code>Object</code>` 的显示值，并按需进行 HTML 转义。如果提供的值不是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>，且提供的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> 不为 null，则使用该 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> 来获取显示值。",
+      "count": 2
+    },
+    {
+      "source": "Get the display value of the supplied <code>Object</code>, HTML escaped\nas required. This version is <strong>not</strong> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>-aware.",
+      "translation": "获取提供的 `<code>Object</code>` 的显示值，并按需进行 HTML 转义。此版本 <strong>不</strong> 支持 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create the <a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a> which all output will be written to.",
+      "translation": "创建 `<a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>`，所有输出都将写入其中。",
+      "count": 2
+    },
+    {
+      "source": "Optionally writes the supplied value under the supplied attribute name into the supplied\n<a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>.",
+      "translation": "可选地将提供的值写入到提供的属性名称下，至提供的 <a href=\"TagWriter.html\" title=\"class in org.springframework.web.servlet.tags.form\"><code>TagWriter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get the display value of the supplied <code>Object</code>, HTML escaped\nas required.",
+      "translation": "获取提供的 `<code>Object</code>` 的显示值，并按需进行 HTML 转义。",
+      "count": 2
+    },
+    {
+      "source": "Overridden to default to <code>true</code> in case of no explicit default given.",
+      "translation": "覆盖为在没有显式默认值的情况下默认为 `<code>true</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses should implement this method to perform tag content rendering.",
+      "translation": "子类应实现此方法以执行标签内容渲染。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../RequestContextAwareTag.html#doStartTagInternal()\">doStartTagInternal</a></code> in class <code><a href=\"../RequestContextAwareTag.html\" title=\"class in org.springframework.web.servlet.tags\">RequestContextAwareTag</a></code>",
+      "translation": "`<code><a href=\"../RequestContextAwareTag.html#doStartTagInternal()\">doStartTagInternal</a></code>` 在类 `<code><a href=\"../RequestContextAwareTag.html\" title=\"class in org.springframework.web.servlet.tags\">RequestContextAwareTag</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../HtmlEscapingAwareTag.html#isDefaultHtmlEscape()\">isDefaultHtmlEscape</a></code> in class <code><a href=\"../HtmlEscapingAwareTag.html\" title=\"class in org.springframework.web.servlet.tags\">HtmlEscapingAwareTag</a></code>",
+      "translation": "`<code><a href=\"../HtmlEscapingAwareTag.html#isDefaultHtmlEscape()\">isDefaultHtmlEscape</a></code>` 在类 `<code><a href=\"../HtmlEscapingAwareTag.html\" title=\"class in org.springframework.web.servlet.tags\">HtmlEscapingAwareTag</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "the value returned by <a href=\"#writeTagContent(org.springframework.web.servlet.tags.form.TagWriter)\"><code>writeTagContent(TagWriter)</code></a>",
+      "translation": "由 `<a href=\"#writeTagContent(org.springframework.web.servlet.tags.form.TagWriter)\"><code>writeTagContent(TagWriter)</code></a>` 返回的值",
+      "count": 2
+    },
+    {
+      "source": "Evaluate the supplied value for the supplied attribute name.",
+      "translation": "评估所提供属性名称的给定值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - any exception, any checked one other than\na JspException gets wrapped in a JspException by doStartTag",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code>` - 任何异常，除 JspException 以外的任何受检异常都会由 doStartTag 包装在 JspException 中。",
+      "count": 1
+    },
+    {
+      "source": "valid tag render instruction as per <code>Tag.doStartTag()</code>.",
+      "translation": "按 `<code>Tag.doStartTag()</code>` 中的有效标签渲染指令。",
+      "count": 1
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller",
+      "translation": "Rob Harrop，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

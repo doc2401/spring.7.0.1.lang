@@ -1,0 +1,246 @@
+{
+  "created_at": "2026-04-14 10:29:57",
+  "updated_at": "2026-04-14 10:29:57",
+  "stats": {
+    "total_entries": 46,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 77,
+    "entries_with_hits": 46,
+    "entries_without_hits": 0,
+    "hit_rate": 1.673913043478261,
+    "usage_percentage": 0.0046
+  },
+  "items": [
+    {
+      "source": "<code>invocation</code> - the <code>MethodInvocation</code> being traced",
+      "translation": "<code>invocation</code> - 正在跟踪的 <code>MethodInvocation</code>",
+      "count": 3
+    },
+    {
+      "source": "<code>logger</code> - the <code>Log</code> instance to check",
+      "translation": "<code>logger</code> - 要检查的 <code>Log</code> 实例",
+      "count": 3
+    },
+    {
+      "source": "To be called by <a href=\"#invokeUnderTrace(org.aopalliance.intercept.MethodInvocation,org.apache.commons.logging.Log)\"><code>invokeUnderTrace(MethodInvocation, Log)</code></a> for enter/exit outcomes,\npotentially including an exception. Note that an exception's stack trace\nwon't get logged when <a href=\"#setLogExceptionStackTrace(boolean)\"><code>setLogExceptionStackTrace(boolean)</code></a> is \"false\".",
+      "translation": "由 `<a href=\"#invokeUnderTrace(org.aopalliance.intercept.MethodInvocation,org.apache.commons.logging.Log)\"><code>invokeUnderTrace(MethodInvocation, Log)</code></a>` 调用，用于进入/退出结果，可能包含异常。请注意，当 `<a href=\"#setLogExceptionStackTrace(boolean)\"><code>setLogExceptionStackTrace(boolean)</code></a>` 为 \"false\" 时，异常的堆栈跟踪将不会被记录。",
+      "count": 2
+    },
+    {
+      "source": "By default, log messages are written to the log for the interceptor class,\nnot the class which is being intercepted. Setting the <code>useDynamicLogger</code>\nbean property to <code>true</code> causes all log messages to be written to\nthe <code>Log</code> for the target class being intercepted.",
+      "translation": "默认情况下，日志消息写入拦截器类的日志，而不是被拦截的类的日志。将 `<code>useDynamicLogger</code>`  bean 属性设置为 `<code>true</code>` 会导致所有日志消息写入被拦截的目标类的 `<code>Log</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Used to determine which <code>Log</code> instance should be used to write\nlog messages for a particular method invocation: a dynamic one for the\n<code>Class</code> getting called, or a static one for the <code>Class</code>\nof the trace interceptor.",
+      "translation": "用于确定应使用哪个 `<code>Log`</code> 实例来写入特定方法调用的日志消息：是用于被调用 `<code>Class`</code> 的动态实例，还是用于跟踪拦截器 `<code>Class`</code> 的静态实例。",
+      "count": 2
+    },
+    {
+      "source": "By default messages are written at <code>TRACE</code> level. Subclasses\ncan override this method to control which level the message is written\nat, typically also overriding <a href=\"#isLogEnabled(org.apache.commons.logging.Log)\"><code>isLogEnabled(Log)</code></a> accordingly.",
+      "translation": "默认情况下，消息以 `<code>TRACE</code>` 级别写入。子类可以重写此方法以控制消息的写入级别，通常也会相应地重写 <a href=\"#isLogEnabled(org.apache.commons.logging.Log)\"><code>isLogEnabled(Log)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "By default, the passed-in <code>Log</code> instance will have log level\n\"trace\" enabled. Subclasses do not have to check for this again, unless\nthey overwrite the <code>isInterceptorEnabled</code> method to modify\nthe default behavior, and may delegate to <code>writeToLog</code> for actual\nmessages to be written.",
+      "translation": "默认情况下，传入的 `<code>Log` 实例将启用 \"trace\" 日志级别。子类无需再次检查此设置，除非它们重写 `<code>isInterceptorEnabled</code>` 方法来修改默认行为；否则，可以将实际消息写入委托给 `<code>writeToLog</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses must implement the <code>invokeUnderTrace</code> method, which\nis invoked by this class ONLY when a particular invocation SHOULD be traced.\nSubclasses should write to the <code>Log</code> instance provided.",
+      "translation": "子类必须实现 `invokeUnderTrace` 方法，该方法仅当特定调用应该被追踪时由本类调用。子类应写入提供的 `<code>Log</code>` 实例。",
+      "count": 2
+    },
+    {
+      "source": "To be called by <a href=\"#invokeUnderTrace(org.aopalliance.intercept.MethodInvocation,org.apache.commons.logging.Log)\"><code>invokeUnderTrace(MethodInvocation, Log)</code></a> for enter/exit messages.",
+      "translation": "由 `<a href=\"#invokeUnderTrace(org.aopalliance.intercept.MethodInvocation,org.apache.commons.logging.Log)\"><code>invokeUnderTrace(MethodInvocation, Log)</code></a>` 调用，用于进入/退出消息。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"#writeToLog(org.apache.commons.logging.Log,java.lang.String,java.lang.Throwable)\"><code>writeToLog(Log, String, Throwable)</code></a> as the\nultimate delegate that controls the underlying logger invocation.",
+      "translation": "委托给作为控制底层日志器调用的最终委托的<a href=\"#writeToLog(org.apache.commons.logging.Log,java.lang.String,java.lang.Throwable)\"><code>writeToLog(Log, String, Throwable)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Specify either this property or \"loggerName\", not both.",
+      "translation": "<b>注意：</b> 请指定此属性或\"loggerName\"，但不要同时指定两者。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Specify either this property or \"useDynamicLogger\", not both.",
+      "translation": "<b>注意：</b>请指定此属性或\"useDynamicLogger\"，但不要同时指定两者。",
+      "count": 2
+    },
+    {
+      "source": "Default behavior is to check whether the given <code>Log</code>\ninstance is enabled. Subclasses can override this to apply the\ninterceptor in other cases as well.",
+      "translation": "默认行为是检查给定的<code>Log</code>实例是否已启用。子类可以重写此方法，以便在其他情况下也应用拦截器。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>true</code> when the \"trace\" level is enabled.\nSubclasses can override this to change the level under which 'tracing' occurs.",
+      "translation": "默认情况下，当启用\"trace\"级别时，该值为 `<code>true</code>`。子类可以重写此方法以更改发生“跟踪”的级别。",
+      "count": 2
+    },
+    {
+      "source": "This can be specified to not log into the category of a class\n(whether this interceptor's class or the class getting called)\nbut rather into a specific named category.",
+      "translation": "这可以指定不记录到类的类别（无论是该拦截器的类还是被调用的类），而是记录到特定的命名类别中。",
+      "count": 2
+    },
+    {
+      "source": "Return the appropriate <code>Log</code> instance to use for the given\n<code>MethodInvocation</code>. If the <code>useDynamicLogger</code> flag\nis set, the <code>Log</code> instance will be for the target class of the\n<code>MethodInvocation</code>, otherwise the <code>Log</code> will be the\ndefault static logger.",
+      "translation": "返回用于给定 `<code>MethodInvocation` 的适当 `<code>Log` 实例。如果设置了 `<code>useDynamicLogger` 标志，则 `<code>Log` 实例将针对 `<code>MethodInvocation` 的目标类；否则，`<code>Log` 将是默认静态记录器。",
+      "count": 2
+    },
+    {
+      "source": "Set to \"true\" to have <a href=\"#setUseDynamicLogger(boolean)\"><code>dynamic loggers</code></a> hide\nproxy class names wherever possible.",
+      "translation": "设置为\"<b>true</b>\"以使<a href=\"#setUseDynamicLogger(boolean)\"><code>动态日志记录器</code></a>尽可能隐藏代理类名称。",
+      "count": 2
+    },
+    {
+      "source": "The default <code>Log</code> instance used to write trace messages.\nThis instance is mapped to the implementing <code>Class</code>.",
+      "translation": "用于写入跟踪消息的默认 `<code>Log`</code> 实例。\n该实例映射到实现类 `<code>Class</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Set to \"true\" to have <a href=\"#setUseDynamicLogger(boolean)\"><code>dynamic loggers</code></a> hide\nproxy class names wherever possible. Default is \"false\".",
+      "translation": "设置为\"<b>true</b>\"可使<a href=\"#setUseDynamicLogger(boolean)\"><code>动态日志记录器</code></a>尽可能隐藏代理类名称。默认值为\"<b>false</b>\"。",
+      "count": 2
+    },
+    {
+      "source": "Determines whether logging is enabled for the particular <code>MethodInvocation</code>.\nIf not, the method invocation proceeds as normal, otherwise the method invocation is passed\nto the <code>invokeUnderTrace</code> method for handling.",
+      "translation": "确定是否已为特定的<code>MethodInvocation</code>启用日志记录。如果未启用，则方法调用按正常方式继续；否则，将方法调用传递给<code>invokeUnderTrace</code>方法进行处理。",
+      "count": 2
+    },
+    {
+      "source": "Determine the class to use for logging purposes.",
+      "translation": "确定用于日志记录的类。",
+      "count": 2
+    },
+    {
+      "source": "Set whether to pass an exception to the logger, suggesting inclusion\nof its stack trace into the log. Default is \"true\"; set this to \"false\"\nin order to reduce the log output to just the trace message (which may\ninclude the exception class name and exception message, if applicable).",
+      "translation": "设置是否将异常传递给记录器，建议将其堆栈跟踪包含在日志中。默认值为 \"true\"；将其设置为 \"false\" 可将日志输出减少为仅包含跟踪消息（如果适用，该消息可能包括异常类名和异常消息）。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setUseDynamicLogger(boolean)\"><code>setUseDynamicLogger(boolean)</code></a></li>\n<li><a href=\"#invokeUnderTrace(org.aopalliance.intercept.MethodInvocation,org.apache.commons.logging.Log)\"><code>invokeUnderTrace(org.aopalliance.intercept.MethodInvocation, org.apache.commons.logging.Log)</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.aop.interceptor.AbstractTraceInterceptor\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setUseDynamicLogger(boolean)\"><code>setUseDynamicLogger(boolean)</code></a></li>\n<li><a href=\"#invokeUnderTrace(org.aopalliance.intercept.MethodInvocation,org.apache.commons.logging.Log)\"><code>invokeUnderTrace(org.aopalliance.intercept.MethodInvocation, org.apache.commons.logging.Log)</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.aop.interceptor.AbstractTraceInterceptor\">序列化形式</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\">Throwable</a></code> - if the call to <code>MethodInvocation.proceed()</code>\nencountered any errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\">Throwable</a></code> - 如果调用 <code>MethodInvocation.proceed()</code> 遇到任何错误",
+      "count": 2
+    },
+    {
+      "source": "<code>logger</code> - the <code>Log</code> to write trace messages to",
+      "translation": "<code>logger</code> - 用于写入跟踪消息的 <code>Log</code>",
+      "count": 2
+    },
+    {
+      "source": "the <code>Log</code> instance to use",
+      "translation": "要使用的<code>Log</code>实例",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - the target object to introspect",
+      "translation": "<code>target</code> - 要检查的对象",
+      "count": 2
+    },
+    {
+      "source": "the result of the call to <code>MethodInvocation.proceed()</code>",
+      "translation": "对 `<code>MethodInvocation.proceed()</code>` 调用的结果",
+      "count": 2
+    },
+    {
+      "source": "the target class for the given object",
+      "translation": "给定对象的目标类",
+      "count": 2
+    },
+    {
+      "source": "Write the supplied trace message and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\"><code>Throwable</code></a> to the\nsupplied <code>Log</code> instance.",
+      "translation": "将提供的跟踪消息和<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\"><code>Throwable</code></a>写入提供的<code>Log</code>实例。",
+      "count": 1
+    },
+    {
+      "source": "Return the appropriate <code>Log</code> instance to use for the given\n<code>MethodInvocation</code>.",
+      "translation": "返回用于给定<code>MethodInvocation</code>的适当<code>Log</code>实例。",
+      "count": 1
+    },
+    {
+      "source": "The default <code>Log</code> instance used to write trace messages.",
+      "translation": "用于写入跟踪消息的默认<code>Log</code>实例。",
+      "count": 1
+    },
+    {
+      "source": "Determines whether logging is enabled for the particular <code>MethodInvocation</code>.",
+      "translation": "确定是否已为特定的<code>MethodInvocation</code>启用日志记录。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses must override this method to perform any tracing around the\nsupplied <code>MethodInvocation</code>.",
+      "translation": "子类必须重写此方法，以执行对提供的 `<code>MethodInvocation` 的跟踪。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the interceptor should kick in, that is,\nwhether the <code>invokeUnderTrace</code> method should be called.",
+      "translation": "确定拦截器是否应该介入，即，是否应调用 `<code>invokeUnderTrace</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the given <code>Log</code> instance is enabled.",
+      "translation": "确定给定的<code>Log</code>实例是否已启用。",
+      "count": 1
+    },
+    {
+      "source": "Write the supplied trace message to the supplied <code>Log</code> instance.",
+      "translation": "将提供的跟踪消息写入提供的<code>Log</code>实例。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to pass an exception to the logger, suggesting inclusion\nof its stack trace into the log.",
+      "translation": "设置是否将异常传递给记录器，建议将其堆栈跟踪包含在日志中。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the logger to use.",
+      "translation": "设置要使用的日志记录器名称。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to use a dynamic logger or a static logger.",
+      "translation": "设置是使用动态日志记录器还是静态日志记录器。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../aopalliance/intercept/MethodInterceptor.html#invoke(org.aopalliance.intercept.MethodInvocation)\">invoke</a></code> in interface <code><a href=\"../../../aopalliance/intercept/MethodInterceptor.html\" title=\"interface in org.aopalliance.intercept\">MethodInterceptor</a></code>",
+      "translation": "`<code><a href=\"../../../aopalliance/intercept/MethodInterceptor.html#invoke(org.aopalliance.intercept.MethodInvocation)\">invoke</a></code>` 在接口 `<code><a href=\"../../../aopalliance/intercept/MethodInterceptor.html\" title=\"interface in org.aopalliance.intercept\">MethodInterceptor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "the result of the call to <a href=\"../../../aopalliance/intercept/Joinpoint.html#proceed()\"><code>Joinpoint.proceed()</code></a>;\nmight be intercepted by the interceptor",
+      "translation": "调用<a href=\"../../../aopalliance/intercept/Joinpoint.html#proceed()\"><code>Joinpoint.proceed()</code></a>的结果；可能会被拦截器拦截。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\">Throwable</a></code> - if the interceptors or the target object\nthrows an exception",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\">Throwable</a></code> - 如果拦截器或目标对象抛出异常",
+      "count": 1
+    },
+    {
+      "source": "<code>invocation</code> - the method invocation joinpoint",
+      "translation": "<code>invocation</code> - 方法调用连接点",
+      "count": 1
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller",
+      "translation": "Rob Harrop，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

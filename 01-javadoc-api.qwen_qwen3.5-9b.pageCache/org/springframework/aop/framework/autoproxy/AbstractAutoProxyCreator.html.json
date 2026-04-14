@@ -1,0 +1,571 @@
+{
+  "created_at": "2026-04-14 10:27:44",
+  "updated_at": "2026-04-14 10:27:44",
+  "stats": {
+    "total_entries": 111,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 195,
+    "entries_with_hits": 111,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7567567567567568,
+    "usage_percentage": 0.0111
+  },
+  "items": [
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 14
+    },
+    {
+      "source": "<code>beanClass</code> - the class of the bean",
+      "translation": "<code>beanClass</code> - 该 Bean 的类",
+      "count": 4
+    },
+    {
+      "source": "<code>bean</code> - the raw bean instance",
+      "translation": "<code>bean</code> - 原始 Bean 实例",
+      "count": 3
+    },
+    {
+      "source": "<code>specificInterceptors</code> - the set of interceptors that is\nspecific to this bean (may be empty, but not null)",
+      "translation": "<code>specificInterceptors</code> - 专用于此 Bean 的拦截器集合（可能为空，但不能为 null）",
+      "count": 3
+    },
+    {
+      "source": "Any number of <a href=\"TargetSourceCreator.html\" title=\"interface in org.springframework.aop.framework.autoproxy\"><code>TargetSourceCreator</code></a> implementations can be used to create\na custom target source: for example, to pool prototype objects. Auto-proxying will\noccur even if there is no advice, as long as a TargetSourceCreator specifies a custom\n<a href=\"../../TargetSource.html\" title=\"interface in org.springframework.aop\"><code>TargetSource</code></a>. If there are no TargetSourceCreators set,\nor if none matches, a <a href=\"../../target/SingletonTargetSource.html\" title=\"class in org.springframework.aop.target\"><code>SingletonTargetSource</code></a>\nwill be used by default to wrap the target bean instance.",
+      "translation": "可以使用任意数量的<a href=\"TargetSourceCreator.html\" title=\"interface in org.springframework.aop.framework.autoproxy\"><code>TargetSourceCreator</code></a>实现来创建自定义目标源：例如，用于原型对象的池化。即使没有 Advice，只要 TargetSourceCreator 指定了自定义的<a href=\"../../TargetSource.html\" title=\"interface in org.springframework.aop\"><code>TargetSource</code></a>，也会发生自动代理。如果没有设置 TargetSourceCreator，或者没有一个匹配，默认将使用<a href=\"../../target/SingletonTargetSource.html\" title=\"class in org.springframework.aop.target\"><code>SingletonTargetSource</code></a>来包装目标 Bean 实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>TargetSourceCreators</code> can only be invoked if this post processor is used\nin a <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> and its <a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a> callback is triggered.",
+      "translation": "<code>TargetSourceCreators</code> 仅可在该后置处理器在<a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>中使用且其<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>回调被触发时调用。",
+      "count": 2
+    },
+    {
+      "source": "This class distinguishes between \"common\" interceptors: shared for all proxies it\ncreates, and \"specific\" interceptors: unique per bean instance. There need not be any\ncommon interceptors. If there are, they are set using the interceptorNames property.\nAs with <a href=\"../ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a>, interceptors names\nin the current factory are used rather than bean references to allow correct handling\nof prototype advisors and interceptors: for example, to support stateful mixins.\nAny advice type is supported for <a href=\"#setInterceptorNames(java.lang.String...)\"><code>\"interceptorNames\"</code></a> entries.",
+      "translation": "该类区分“通用”拦截器：为所有其创建的代理共享，以及“特定”拦截器：每个 Bean 实例唯一。不一定需要任何通用拦截器；如果有，则使用 `interceptorNames` 属性设置。与 <a href=\"../ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a> 一样，当前工厂中的拦截器名称（而非 Bean 引用）被使用，以便正确处理原型 Advisor 和拦截器：例如，支持有状态混入。任何 Advice 类型都支持用于 <a href=\"#setInterceptorNames(java.lang.String...)\"><code>\"interceptorNames\"</code></a> 条目。",
+      "count": 2
+    },
+    {
+      "source": "This callback gives post-processors a chance to expose a wrapper\nearly - that is, before the target bean instance is fully initialized.\nThe exposed object should be equivalent to what\n<a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessBeforeInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessBeforeInitialization(Object, String)</code></a> / <a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessAfterInitialization(Object, String)</code></a>\nwould expose otherwise. Note that the object returned by this method will\nbe used as the bean reference unless the post-processor returns a different\nwrapper from said post-process callbacks. In other words, those post-process\ncallbacks may either eventually expose the same reference or alternatively\nreturn the raw bean instance from those subsequent callbacks (if the wrapper\nfor the affected bean has been built for a call to this method already,\nit will be exposed as the final bean reference by default).",
+      "translation": "此回调允许后置处理器尽早暴露包装器——即在目标 Bean 实例完全初始化之前。所暴露的对象应与<a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessBeforeInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessBeforeInitialization(Object, String)</code></a> / <a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessAfterInitialization(Object, String)</code></a> 原本会暴露的对象等效。请注意，此方法返回的对象将用作 Bean 引用，除非后置处理器从所述后置处理回调中返回了不同的包装器。换句话说，这些后置处理回调最终可能会暴露相同的引用，或者替代地返回来自后续回调的原始 Bean 实例（如果针对此方法的调用已经为受影响的 Bean 构建了包装器，则默认情况下它将作为最终的 Bean 引用被暴露）。",
+      "count": 2
+    },
+    {
+      "source": "If a non-null object is returned by this method, the bean creation process\nwill be short-circuited. The only further processing applied is the\n<a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessAfterInitialization(Object, String)</code></a> callback from the configured\n<a href=\"../../../beans/factory/config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessors</code></a>.",
+      "translation": "如果此方法返回一个非空对象，则 Bean 创建过程将被短路。唯一应用的进一步处理是配置的<a href=\"../../../beans/factory/config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanPostProcessors</code></a>中的<a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\"><code>BeanPostProcessor.postProcessAfterInitialization(Object, String)</code></a>回调。",
+      "count": 2
+    },
+    {
+      "source": "Note: As of 4.2.3, this implementation does not return a concatenated\nclass/name String anymore but rather the most efficient cache key possible:\na plain bean name, prepended with <a href=\"../../../beans/factory/BeanFactory.html#FACTORY_BEAN_PREFIX\"><code>BeanFactory.FACTORY_BEAN_PREFIX</code></a>\nin case of a <code>FactoryBean</code>; or if no bean name specified, then the\ngiven bean <code>Class</code> as-is.",
+      "translation": "注意：自 4.2.3 版本起，此实现不再返回拼接的类/名称 String，而是返回最有效的缓存键：对于 `<code>FactoryBean</code>`，以<a href=\"../../../beans/factory/BeanFactory.html#FACTORY_BEAN_PREFIX\"><code>BeanFactory.FACTORY_BEAN_PREFIX</code></a>前缀加上普通的 bean 名称；或者如果未指定 bean 名称，则直接返回给定的 bean <code>Class</code>。",
+      "count": 2
+    },
+    {
+      "source": "Note that TargetSourceCreators will kick in even for target beans\nwhere no advices or advisors have been found. If a <code>TargetSourceCreator</code>\nreturns a <a href=\"../../TargetSource.html\" title=\"interface in org.springframework.aop\"><code>TargetSource</code></a> for a specific bean, that bean will be proxied\nin any case.",
+      "translation": "请注意，即使未找到任何通知（advices）或顾问（advisors），`TargetSourceCreators` 也会针对目标 Bean 生效。如果某个特定的 Bean 的 `<code>TargetSourceCreator</code>` 返回了一个 `<a href=\"../../TargetSource.html\" title=\"interface in org.springframework.aop\"><code>TargetSource</code></a>`，则该 Bean 无论如何都会被代理。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can apply any strategy to decide if a bean is to be proxied, for example, by type,\nby name, by definition details, etc. They can also return additional interceptors that\nshould just be applied to the specific bean instance. A simple concrete implementation is\n<a href=\"BeanNameAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>BeanNameAutoProxyCreator</code></a>, identifying the beans to be proxied via given names.",
+      "translation": "子类可以应用任何策略来决定是否对 Bean 进行代理，例如按类型、名称或定义细节等。它们还可以返回应仅应用于特定 Bean 实例的额外拦截器。一个简单的具体实现是<a href=\"BeanNameAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>BeanNameAutoProxyCreator</code></a>，它通过给定的名称来识别需要代理的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Default is the global <a href=\"../adapter/AdvisorAdapterRegistry.html\" title=\"interface in org.springframework.aop.framework.adapter\"><code>AdvisorAdapterRegistry</code></a>.",
+      "translation": "默认值为全局<a href=\"../adapter/AdvisorAdapterRegistry.html\" title=\"interface in org.springframework.aop.framework.adapter\"><code>AdvisorAdapterRegistry</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Post-processors may implement the extended\n<a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>SmartInstantiationAwareBeanPostProcessor</code></a> interface in order\nto predict the type of the bean object that they are going to return here.",
+      "translation": "后处理器可能实现扩展的<a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>SmartInstantiationAwareBeanPostProcessor</code></a>接口，以便预测它们在此处将要返回的 bean 对象的类型。",
+      "count": 2
+    },
+    {
+      "source": "Checks the <a href=\"AutoProxyUtils.html#PRESERVE_TARGET_CLASS_ATTRIBUTE\"><code>\"preserveTargetClass\" attribute</code></a>\nof the corresponding bean definition.",
+      "translation": "检查对应 Bean 定义中的<a href=\"AutoProxyUtils.html#PRESERVE_TARGET_CLASS_ATTRIBUTE\"><code>\"preserveTargetClass\" 属性</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>null</code>.\nSpecific implementations should try to predict the bean type as\nfar as known/cached already, without extra processing steps.",
+      "translation": "默认实现返回 `<code>null</code>`。具体实现应尽可能利用已知的/缓存的信息来预测 Bean 类型，而无需额外的处理步骤。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>null</code>.",
+      "translation": "默认实现返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>false</code>. Subclasses may override this if they\nwill always return pre-filtered Advisors.",
+      "translation": "默认值为<code>false</code>。如果子类将始终返回预过滤的 Advisor，则可以覆盖此方法。",
+      "count": 2
+    },
+    {
+      "source": "Such auto-proxying is particularly useful if there's a large number of beans that\nneed to be wrapped with similar proxies, i.e. delegating to the same interceptors.\nInstead of x repetitive proxy definitions for x target beans, you can register\none single such post processor with the bean factory to achieve the same effect.",
+      "translation": "这种自动代理功能在需要为大量 Bean 应用相似代理（即委托给相同的拦截器）时特别有用。您无需为 x 个目标 Bean 定义 x 次重复的代理配置，只需向 Bean 工厂注册一个此类后置处理器即可实现相同的效果。",
+      "count": 2
+    },
+    {
+      "source": "If this property isn't set, there will be zero common interceptors.\nThis is perfectly valid, if \"specific\" interceptors such as matching\nAdvisors are all we want.",
+      "translation": "如果未设置此属性，则公共拦截器数量为 0。如果我们仅需要“特定”的拦截器（例如匹配的 Advisor），这是完全有效的。",
+      "count": 2
+    },
+    {
+      "source": "This callback will be applied to bean definitions with their bean class,\nas well as to factory-method definitions in which case the returned bean type\nwill be passed in here.",
+      "translation": "此回调将应用于具有其 Bean 类的 Bean 定义，以及工厂方法定义（在这种情况下，返回的 Bean 类型将在此处传入）。",
+      "count": 2
+    },
+    {
+      "source": "This implementation uses the \"customTargetSourceCreators\" property.\nSubclasses can override this method to use a different mechanism.",
+      "translation": "此实现使用\"customTargetSourceCreators\"属性。子类可以重写此方法以使用不同的机制。",
+      "count": 2
+    },
+    {
+      "source": "Return the owning <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.\nMay be <code>null</code>, as this post-processor doesn't need to belong to a bean factory.",
+      "translation": "返回拥有者<a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>。\n可能为<code>null</code>，因为此后置处理器不必属于一个 BeanFactory。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#getEarlyBeanReference(java.lang.Object,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#getEarlyBeanReference(java.lang.Object,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Determine the type of the bean to be eventually returned from this\nprocessor's <a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a> callback.",
+      "translation": "确定该处理器最终从 <a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a> 回调返回的 bean 的类型。",
+      "count": 2
+    },
+    {
+      "source": "Return the owning <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.",
+      "translation": "返回拥有者<a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Predict the type of the bean to be eventually returned from this\nprocessor's <a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a> callback.",
+      "translation": "预测该处理器从其<a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a>回调方法最终返回的 bean 类型。",
+      "count": 2
+    },
+    {
+      "source": "Specify the <a href=\"../adapter/AdvisorAdapterRegistry.html\" title=\"interface in org.springframework.aop.framework.adapter\"><code>AdvisorAdapterRegistry</code></a> to use.",
+      "translation": "指定要使用的<a href=\"../adapter/AdvisorAdapterRegistry.html\" title=\"interface in org.springframework.aop.framework.adapter\"><code>AdvisorAdapterRegistry</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Convenience constant for subclasses: Return value for \"do not proxy\".",
+      "translation": "子类的便利常量：\"不代理\"的返回值。",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses.",
+      "translation": "可供子类使用的 Logger。",
+      "count": 2
+    },
+    {
+      "source": "Convenience constant for subclasses: Return value for\n\"proxy without additional interceptors, just the common ones\".",
+      "translation": "子类的便利常量：返回“不带额外拦截器，仅包含公共拦截器的代理”的返回值。",
+      "count": 2
+    },
+    {
+      "source": "Determine the advisors for the given bean, including the specific interceptors\nas well as the common interceptor, all adapted to the Advisor interface.",
+      "translation": "确定给定 Bean 的顾问，包括特定的拦截器和公共拦截器，所有这些均已适配到 Advisor 接口。",
+      "count": 2
+    },
+    {
+      "source": "Create an AOP proxy for the given bean.",
+      "translation": "为给定的 Bean 创建一个 AOP 代理。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the given bean is to be proxied, what additional\nadvices (for example, AOP Alliance interceptors) and advisors to apply.",
+      "translation": "返回给定的 Bean 是否需要进行代理，以及要应用哪些额外的 Advice（例如 AOP Alliance 拦截器）和 Advisor。",
+      "count": 2
+    },
+    {
+      "source": "Create a proxy with the configured interceptors if the bean is\nidentified as one to proxy by the subclass.",
+      "translation": "如果子类将该 Bean 标识为需要代理的 Bean，则使用配置的拦截器创建代理。",
+      "count": 2
+    },
+    {
+      "source": "Set whether the common interceptors should be applied before bean-specific ones.\nDefault is \"true\"; else, bean-specific interceptors will get applied first.",
+      "translation": "设置是否应在 Bean 特定的拦截器之前应用通用拦截器。默认值为\"true\"；否则，Bean 特定的拦截器将首先被应用。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given bean if necessary, i.e. if it is eligible for being proxied.",
+      "translation": "如有必要则包装给定的 Bean，即如果它符合代理条件。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setInterceptorNames(java.lang.String...)\"><code>setInterceptorNames(String...)</code></a></li>\n<li><a href=\"#getAdvicesAndAdvisorsForBean(java.lang.Class,java.lang.String,org.springframework.aop.TargetSource)\"><code>getAdvicesAndAdvisorsForBean(Class, String, TargetSource)</code></a></li>\n<li><a href=\"BeanNameAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>BeanNameAutoProxyCreator</code></a></li>\n<li><a href=\"DefaultAdvisorAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>DefaultAdvisorAutoProxyCreator</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setInterceptorNames(java.lang.String...)\"><code>setInterceptorNames(String...)</code></a></li>\n<li><a href=\"#getAdvicesAndAdvisorsForBean(java.lang.Class,java.lang.String,org.springframework.aop.TargetSource)\"><code>getAdvicesAndAdvisorsForBean(Class, String, TargetSource)</code></a></li>\n<li><a href=\"BeanNameAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>BeanNameAutoProxyCreator</code></a></li>\n<li><a href=\"DefaultAdvisorAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>DefaultAdvisorAutoProxyCreator</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code>targetSourceCreators</code> - the list of <code>TargetSourceCreators</code>.\nOrdering is significant: The <code>TargetSource</code> returned from the first matching\n<code>TargetSourceCreator</code> (that is, the first that returns non-null) will be used.",
+      "translation": "`targetSourceCreators` - 目标源创建者列表。排序很重要：将从第一个匹配的目标源创建器（即第一个返回非 null 值的）返回的 `TargetSource` 使用。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">predictBeanType</a></code> in interface <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#predictBeanType(java.lang.Class,java.lang.String)\">predictBeanType</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">determineBeanType</a></code> in interface <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`determineBeanType` 在接口 `<a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">determineCandidateConstructors</a></code> in interface <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`determineCandidateConstructors` 在接口 `<a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#getEarlyBeanReference(java.lang.Object,java.lang.String)\">getEarlyBeanReference</a></code> in interface <code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html#getEarlyBeanReference(java.lang.Object,java.lang.String)\">getEarlyBeanReference</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">postProcessBeforeInstantiation</a></code> in interface <code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\">postProcessBeforeInstantiation</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code> in interface <code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>customTargetSource</code> - the TargetSource returned by the\n<a href=\"#getCustomTargetSource(java.lang.Class,java.lang.String)\"><code>getCustomTargetSource(Class, String)</code></a> method: may be ignored.\nWill be <code>null</code> if no custom target source is in use.",
+      "translation": "<code>customTargetSource</code> - 由<a href=\"#getCustomTargetSource(java.lang.Class,java.lang.String)\"><code>getCustomTargetSource(Class, String)</code></a>方法返回的 TargetSource：可被忽略。如果没有使用自定义目标源，则为 <code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>beanClass</code> - the raw class of the bean (never <code>null</code>)",
+      "translation": "<code>beanClass</code> - 该 bean 的原始类（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>beanClass</code> - the raw class of the bean",
+      "translation": "<code>beanClass</code> - 该 Bean 的原始类",
+      "count": 2
+    },
+    {
+      "source": "the candidate constructors, or <code>null</code> if none specified",
+      "translation": "候选构造函数，或者如果未指定则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "the bean object to expose instead of a default instance of the target bean,\nor <code>null</code> to proceed with default instantiation",
+      "translation": "要暴露的 Bean 对象，而不是目标 Bean 的默认实例，或 `<code>null</code>` 以使用默认实例化。",
+      "count": 2
+    },
+    {
+      "source": "<code>beanClass</code> - the bean class",
+      "translation": "<code>beanClass</code> - 该 Bean 类",
+      "count": 2
+    },
+    {
+      "source": "<code>beanName</code> - the bean name",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>cacheKey</code> - the cache key for metadata access",
+      "translation": "<code>cacheKey</code> - 元数据访问的缓存键",
+      "count": 2
+    },
+    {
+      "source": "<code>targetSource</code> - the TargetSource for the proxy,\nalready pre-configured to access the bean",
+      "translation": "<code>targetSource</code> - 代理的 TargetSource，已预配置用于访问该 Bean。",
+      "count": 2
+    },
+    {
+      "source": "<code>proxyFactory</code> - a ProxyFactory that is already configured with\nTargetSource and interfaces and will be used to create the proxy\nimmediately after this method returns",
+      "translation": "<code>proxyFactory</code> - 一个已配置了 TargetSource 和接口的 ProxyFactory，将在本方法返回后立即用于创建代理。",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson, Rob Harrop, Sam Brannen",
+      "translation": "Juergen Hoeller, Rod Johnson, Rob Harrop, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "the object to expose as the bean reference\n(typically the passed-in bean instance as default)",
+      "translation": "作为 Bean 引用暴露的对象（通常默认为传入的 Bean 实例）",
+      "count": 2
+    },
+    {
+      "source": "the cache key for the given class and name",
+      "translation": "给定类和名称的缓存键",
+      "count": 2
+    },
+    {
+      "source": "a proxy wrapping the bean, or the raw bean instance as-is",
+      "translation": "一个包装该 Bean 的代理，或按原样保留的原始 Bean 实例。",
+      "count": 2
+    },
+    {
+      "source": "a TargetSource for this bean",
+      "translation": "该 Bean 的 TargetSource",
+      "count": 2
+    },
+    {
+      "source": "the AOP proxy for the bean",
+      "translation": "该 Bean 的 AOP 代理",
+      "count": 2
+    },
+    {
+      "source": "whether the given bean should be proxied with its target class",
+      "translation": "给定的 Bean 是否应使用其目标类进行代理",
+      "count": 2
+    },
+    {
+      "source": "the list of Advisors for the given bean",
+      "translation": "给定 Bean 的 Advisor 列表",
+      "count": 2
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "Sometimes we need to be able to avoid this happening, for example, if it will lead to\na circular reference or if the existing target instance needs to be preserved.\nThis implementation returns <code>false</code> unless the bean name indicates an\n\"original instance\" according to <code>AutowireCapableBeanFactory</code> conventions.",
+      "translation": "有时我们需要避免这种情况发生，例如，如果会导致循环引用或需要保留现有的目标实例。此实现除非根据 `<code>AutowireCapableBeanFactory</code>` 约定，bean 名称指示为“原始实例”，否则返回 `<code>false</code>`。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given <code>bean</code> as-is.",
+      "translation": "默认实现原样返回给定的<code>bean</code>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given <code>pvs</code> as-is.",
+      "translation": "默认实现原样返回给定的<code>pvs</code>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given bean class as-is.\nSpecific implementations should fully evaluate their processing steps\nin order to create/initialize a potential proxy class upfront.",
+      "translation": "默认实现原样返回给定的 Bean 类。具体实现应完全评估其处理步骤，以便预先创建/初始化潜在的代理类。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation considers Advices, Advisors and\nAopInfrastructureBeans as infrastructure classes.",
+      "translation": "默认实现将 Advice、Advisor 和 AopInfrastructureBeans 视为基础设施类。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty.",
+      "translation": "默认实现为空。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Apply this BeanPostProcessor <i>before the target bean gets instantiated</i>.",
+      "translation": "在目标 Bean 实例化之前应用此 BeanPostProcessor。",
+      "count": 1
+    },
+    {
+      "source": "Set custom <code>TargetSourceCreators</code> to be applied in this order.",
+      "translation": "设置自定义的<code>TargetSourceCreators</code>，并按此顺序应用。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses should override this method to return <code>true</code> if the\ngiven bean should not be considered for auto-proxying by this post-processor.",
+      "translation": "子类应重写此方法，如果给定的 Bean 不应由该后置处理器进行自动代理，则返回<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the Advisors returned by the subclass are pre-filtered\nto match the bean's target class already, allowing the ClassFilter check\nto be skipped when building advisors chains for AOP invocations.",
+      "translation": "返回子类返回的 Advisor 是否已进行预过滤以匹配 Bean 的目标类，从而在构建 AOP 调用的 Advisor 链时可以跳过 ClassFilter 检查。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses may choose to implement this: for example,\nto change the interfaces exposed.",
+      "translation": "子类可以选择实现此功能：例如，以更改暴露的接口。",
+      "count": 1
+    },
+    {
+      "source": "Determine the candidate constructors to use for the given bean.",
+      "translation": "确定用于给定 Bean 的候选构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Build a cache key for the given bean class and bean name.",
+      "translation": "为给定的 Bean 类和 Bean 名称构建缓存键。",
+      "count": 1
+    },
+    {
+      "source": "Create a target source for bean instances.",
+      "translation": "为 Bean 实例创建目标源。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a reference for early access to the specified bean,\ntypically for the purpose of resolving a circular reference.",
+      "translation": "获取对指定 Bean 的早期访问引用，通常用于解决循环引用问题。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the given bean class represents an infrastructure class\nthat should never be proxied.",
+      "translation": "返回给定的 Bean 类是否表示一个基础设施类，该类绝不应被代理。",
+      "count": 1
+    },
+    {
+      "source": "Post-process the given property values before the factory applies them\nto the given bean.",
+      "translation": "在工厂将属性值应用到给定 Bean 之前，对给定的属性值进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the common interceptors should be applied before bean-specific ones.",
+      "translation": "设置是否在特定 Bean 的拦截器之前应用通用拦截器。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Set the common interceptors.",
+      "translation": "设置公共拦截器。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the given bean should be proxied with its target class rather than its interfaces.",
+      "translation": "确定是否应使用目标类而非接口对给定的 Bean 进行代理。",
+      "count": 1
+    },
+    {
+      "source": "Wrap the given bean if necessary, i.e.",
+      "translation": "必要时包装给定的 Bean，即",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\">postProcessAfterInitialization</a></code> in interface <code><a href=\"../../../beans/factory/config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">BeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/BeanPostProcessor.html#postProcessAfterInitialization(java.lang.Object,java.lang.String)\">postProcessAfterInitialization</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/BeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">BeanPostProcessor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>pvs</code> - the property values that the factory is about to apply (never <code>null</code>)",
+      "translation": "<code>pvs</code> - 工厂即将应用的属性值（永远不为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - in case of errors",
+      "translation": "<code><a href=\"../../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 在发生错误时",
+      "count": 1
+    },
+    {
+      "source": "the type of the bean, or <code>null</code> if not predictable",
+      "translation": "bean 的类型，或者如果无法预测则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the type of the bean (never <code>null</code>)",
+      "translation": "bean 的类型（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the class of the bean to be instantiated",
+      "translation": "<code>beanClass</code> - 要实例化的 Bean 的类",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance created, but whose properties have not yet been set",
+      "translation": "<code>bean</code> - 已创建但属性尚未设置的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "the actual property values to apply to the given bean (can be the passed-in\nPropertyValues instance), or <code>null</code> to skip property population",
+      "translation": "要应用于给定 Bean 的实际属性值（可以是传入的 `PropertyValues` 实例），或 `<code>null</code>` 以跳过属性填充。",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the new bean instance",
+      "translation": "<code>bean</code> - 新的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "the bean instance to use, either the original or a wrapped one;\nif <code>null</code>, no subsequent BeanPostProcessors will be invoked",
+      "translation": "要使用的 Bean 实例，即原始实例或包装后的实例；如果为<code>null</code>，则不会调用后续的 BeanPostProcessor。",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the class of the bean to create a TargetSource for",
+      "translation": "<code>beanClass</code> - 用于创建 TargetSource 的 Bean 的类。",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the class of the bean to advise",
+      "translation": "<code>beanClass</code> - 要建议的 Bean 的类",
+      "count": 1
+    },
+    {
+      "source": "an array of additional interceptors for the particular bean;\nor an empty array if no additional interceptors but just the common ones;\nor <code>null</code> if no proxy at all, not even with the common interceptors.\nSee constants DO_NOT_PROXY and PROXY_WITHOUT_ADDITIONAL_INTERCEPTORS.",
+      "translation": "特定 bean 的额外拦截器数组；若无额外拦截器，仅使用通用拦截器时则为空数组；若完全不需要代理（包括通用拦截器）则为 <code>null</code>。请参阅常量 DO_NOT_PROXY 和 PROXY_WITHOUT_ADDITIONAL_INTERCEPTORS。",
+      "count": 1
+    },
+    {
+      "source": "whether the bean represents an infrastructure class",
+      "translation": "bean 是否表示基础设施类",
+      "count": 1
+    },
+    {
+      "source": "whether to skip the given bean",
+      "translation": "是否跳过给定的 Bean",
+      "count": 1
+    },
+    {
+      "source": "whether the Advisors are pre-filtered",
+      "translation": "顾问是否经过预过滤",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

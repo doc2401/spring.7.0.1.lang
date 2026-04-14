@@ -1,0 +1,266 @@
+{
+  "created_at": "2026-04-14 16:41:49",
+  "updated_at": "2026-04-14 16:41:49",
+  "stats": {
+    "total_entries": 50,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 94,
+    "entries_with_hits": 50,
+    "entries_without_hits": 0,
+    "hit_rate": 1.88,
+    "usage_percentage": 0.005
+  },
+  "items": [
+    {
+      "source": "If <code>@TestPropertySource</code> is used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em> annotation, the following special rules apply.",
+      "translation": "如果将 `<code>@TestPropertySource</code>` 用作 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em> 注解，则适用以下特殊规则。",
+      "count": 3
+    },
+    {
+      "source": "Default Properties File Detection",
+      "translation": "默认属性文件检测",
+      "count": 3
+    },
+    {
+      "source": "Test property sources have higher precedence than those loaded from the\noperating system's environment or Java system properties as well as property\nsources added by the application declaratively via\n<a href=\"../../context/annotation/PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a>\nor programmatically (for example, via an\n<a href=\"../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextInitializer</code></a>\nor some other means). Thus, test property sources can be used to selectively\noverride properties defined in system and application property sources.\nFurthermore, inlined <a href=\"#properties()\"><code>properties()</code></a> have higher precedence than\nproperties loaded from resource <a href=\"#locations()\"><code>locations()</code></a>. Note, however, that\nproperties registered via <a href=\"DynamicPropertySource.html\" title=\"annotation interface in org.springframework.test.context\"><code>@DynamicPropertySource</code></a>\nhave higher precedence than those loaded via <code>@TestPropertySource</code>.",
+      "translation": "测试属性源的优先级高于从操作系统环境或 Java 系统属性加载的属性源，以及通过 `<a href=\"../../context/annotation/PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a>` 注解声明添加的属性源，或通过编程方式（例如，通过 `<a href=\"../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextInitializer</code></a>` 或其他手段）添加的属性源。因此，可以使用测试属性源选择性地覆盖在系统和应用程序属性源中定义的属性。此外，内联的 `<a href=\"#properties()\"><code>properties()</code></a>` 的优先级高于从资源 `<a href=\"#locations()\"><code>locations()</code></a>` 加载的属性。但请注意，通过 `<a href=\"DynamicPropertySource.html\" title=\"annotation interface in org.springframework.test.context\"><code>@DynamicPropertySource</code></a>` 注册的属性具有比通过 `<code>@TestPropertySource</code>` 加载的属性更高的优先级。",
+      "count": 2
+    },
+    {
+      "source": "If <code>@TestPropertySource</code> is declared as an <em>empty</em> annotation\n(i.e., without explicit values for <a href=\"#locations()\"><code>locations()</code></a> or <a href=\"#properties()\"><code>properties()</code></a>),\nan attempt will be made to detect a <em>default</em> properties file relative\nto the class that declared the annotation. For example, if the annotated test\nclass is <code>com.example.MyTest</code>, the corresponding default properties file\nis <code>\"classpath:com/example/MyTest.properties\"</code>. If the default cannot be\ndetected, an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> will be thrown.",
+      "translation": "如果声明了 <code>@TestPropertySource</code> 为 <em>空</em> 注解（即没有显式指定 <a href=\"#locations()\"><code>locations()</code></a> 或 <a href=\"#properties()\"><code>properties()</code></a> 的值），系统将尝试检测相对于声明该注解的类的 <em>默认</em> 属性文件。例如，如果已添加注解的测试类为 <code>com.example.MyTest</code>，则对应的默认属性文件为 <code>\"classpath:com/example/MyTest.properties\"</code>。如果无法检测到默认值，将抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Each path will be interpreted as a Spring\n<a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>. A plain path\n— for example, <code>\"test.properties\"</code> — will be treated as a\nclasspath resource that is <em>relative</em> to the package in which the\ntest class is defined. A path starting with a slash will be treated as an\n<em>absolute</em> classpath resource, for example:\n<code>\"/org/example/test.xml\"</code>. A path which references a\nURL (for example, a path prefixed with\n<a href=\"../../util/ResourceUtils.html#CLASSPATH_URL_PREFIX\"><code>classpath:</code></a>,\n<a href=\"../../util/ResourceUtils.html#FILE_URL_PREFIX\"><code>file:</code></a>,\n<code>http:</code>, etc.) will be loaded using the specified resource protocol.",
+      "translation": "每个路径都将被解释为 Spring <a href=\"../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>。普通路径——例如，<code>\"test.properties\"</code>——将被视为相对于测试类所在包中的 classpath 资源。<em>相对</em>路径。以斜杠开头的路径将被视为 <em>绝对</em> classpath 资源，例如：<code>\"/org/example/test.xml\"</code>。引用 URL 的路径（例如，以 <a href=\"../../util/ResourceUtils.html#CLASSPATH_URL_PREFIX\"><code>classpath:</code></a>、<a href=\"../../util/ResourceUtils.html#FILE_URL_PREFIX\"><code>file:</code></a>、<code>http:</code> 等开头）将使用指定的资源协议加载。",
+      "count": 2
+    },
+    {
+      "source": "<code>@TestPropertySource</code> is enabled if the configured\n<a href=\"ContextConfiguration.html#loader()\">context loader</a> honors it. Every\n<code>SmartContextLoader</code> that is a subclass of either\n<a href=\"support/AbstractGenericContextLoader.html\" title=\"class in org.springframework.test.context.support\"><code>AbstractGenericContextLoader</code></a> or\n<a href=\"web/AbstractGenericWebContextLoader.html\" title=\"class in org.springframework.test.context.web\"><code>AbstractGenericWebContextLoader</code></a>\nprovides automatic support for <code>@TestPropertySource</code>, and this includes\nevery <code>SmartContextLoader</code> provided by the Spring TestContext Framework.",
+      "translation": "<code>@TestPropertySource</code> 在配置的<a href=\"ContextConfiguration.html#loader()\">上下文加载器</a>支持它时才会生效。每个继承自<a href=\"support/AbstractGenericContextLoader.html\" title=\"class in org.springframework.test.context.support\"><code>AbstractGenericContextLoader</code></a>或<a href=\"web/AbstractGenericWebContextLoader.html\" title=\"class in org.springframework.test.context.web\"><code>AbstractGenericWebContextLoader</code></a>的<code>SmartContextLoader</code>都提供对<code>@TestPropertySource</code>的自动支持，这包括 Spring TestContext Framework 提供的每个<code>SmartContextLoader</code>。",
+      "count": 2
+    },
+    {
+      "source": "In the following example, the <code>ApplicationContext</code> for\n<code>BaseTest</code> will be loaded using only the <code>\"base.properties\"</code>\nfile as a test property source. In contrast, the <code>ApplicationContext</code>\nfor <code>ExtendedTest</code> will be loaded using the <code>\"base.properties\"</code>\n<strong>and</strong> <code>\"extended.properties\"</code> files as test property\nsource locations.",
+      "translation": "在以下示例中，<code>BaseTest</code> 的 <code>ApplicationContext</code> 将仅使用 <code>\"base.properties\"</code> 文件作为测试属性源加载。相比之下，<code>ExtendedTest</code> 的 <code>ApplicationContext</code> 将使用 <code>\"base.properties\"</code> <strong>和</strong> <code>\"extended.properties\"</code> 文件作为测试属性源位置进行加载。",
+      "count": 2
+    },
+    {
+      "source": "In the following example, the <code>ApplicationContext</code> for\n<code>BaseTest</code> will be loaded using only the inlined <code>key1</code>\nproperty. In contrast, the <code>ApplicationContext</code> for\n<code>ExtendedTest</code> will be loaded using the inlined <code>key1</code>\n<strong>and</strong> <code>key2</code> properties.",
+      "translation": "在以下示例中，`BaseTest` 的 `<code>ApplicationContext</code>` 将仅使用内联的 `<code>key1</code>` 属性加载。相比之下，`ExtendedTest` 的 `<code>ApplicationContext</code>` 将使用内联的 `<code>key1</code>` <strong>和</strong> `<code>key2</code>` 属性加载。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#locations()\"><code>locations()</code></a>, but it may be used <em>instead</em> of <a href=\"#locations()\"><code>locations()</code></a>.",
+      "translation": "此属性不能与<a href=\"#locations()\"><code>locations()</code></a>一起使用，但它可以替代<a href=\"#locations()\"><code>locations()</code></a>使用。",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: although properties can be defined using any\nof the above syntax variants and any number of spaces between the key and\nthe value, it is recommended that you use one syntax variant and consistent\nspacing within your test suite — for example, consider always using\n<code>\"key = value\"</code> instead of <code>\"key= value\"</code>, <code>\"key=value\"</code>,\netc. Similarly, if you define inlined properties using <em>text blocks</em>\nyou should consistently use text blocks for inlined properties throughout\nyour test suite. The reason is that the exact strings you provide will be\nused to determine the key for the context cache. Consequently, to benefit\nfrom the context cache you must ensure that you define inlined properties\nconsistently.",
+      "translation": "<strong>警告</strong>：虽然属性可以使用上述任何语法变体定义，并且键与值之间可以使用任意数量的空格，但建议在测试套件中使用一种语法变体和一致的间距——例如，考虑始终使用<code>\"key = value\"</code>，而不是<code>\"key= value\"</code>、<code>\"key=value\"</code>等。同样，如果您使用<em>文本块</em>定义内联属性，则应在整个测试套件中一致地使用文本块来定义内联属性。原因是您提供的确切字符串将用于确定上下文缓存的键。因此，为了从上下文缓存中受益，您必须确保一致地定义内联属性。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may be used in conjunction with <a href=\"#value()\"><code>value()</code></a>\n<em>or</em> <a href=\"#locations()\"><code>locations()</code></a>.",
+      "translation": "此属性可与<a href=\"#value()\"><code>value()</code></a><em>或</em><a href=\"#locations()\"><code>locations()</code></a>配合使用。",
+      "count": 2
+    },
+    {
+      "source": "By default, both traditional and XML-based properties file formats are\nsupported — for example, <code>\"classpath:/com/example/test.properties\"</code>\nor <code>\"file:/path/to/file.xml\"</code>. To support a different file format,\nconfigure an appropriate <a href=\"#factory()\"><code>PropertySourceFactory</code></a>.",
+      "translation": "默认情况下，支持传统的和基于 XML 的属性文件格式——例如 `<code>\"classpath:/com/example/test.properties\"</code>` 或 `<code>\"file:/path/to/file.xml\"</code>`。若要支持不同的文件格式，请配置适当的 <a href=\"#factory()\"><code>PropertySourceFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "By default, a factory for standard resource files will be used which\nsupports <code>*.properties</code> and <code>*.xml</code> file formats for\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a>.",
+      "translation": "默认情况下，将使用支持 <code>*.properties</code> 和 <code>*.xml</code> 文件格式的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a>标准资源文件工厂。",
+      "count": 2
+    },
+    {
+      "source": "Property placeholders in paths (i.e., <code>${...}</code>) will be\n<a href=\"../../core/env/PropertyResolver.html#resolveRequiredPlaceholders(java.lang.String)\">resolved</a> against the <code>Environment</code>.",
+      "translation": "路径中的属性占位符（即<code>${...}</code>）将针对<code>Environment</code>进行<a href=\"../../core/env/PropertyResolver.html#resolveRequiredPlaceholders(java.lang.String)\">解析</a>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: a pattern such as <code>\"classpath*:/config/*.properties\"</code>\nmay be effectively equivalent to an explicit enumeration of resource locations such as\n<code>{\"classpath:/config/mail.properties\", classpath:/config/order.properties\"}</code>;\nhowever, the two declarations will result in different keys for the context\ncache since the pattern cannot be eagerly resolved to concrete locations.\nConsequently, to benefit from the context cache you must ensure that you\nconsistently use either patterns or explicit enumerations of resource\nlocations within your test suite.",
+      "translation": "<strong>警告</strong>：诸如 <code>\"classpath*:/config/*.properties\"</code> 这样的模式可能与显式枚举资源位置（例如 <code>{\"classpath:/config/mail.properties\", classpath:/config/order.properties\"}</code>）在效果上等效；然而，这两种声明会导致上下文缓存中的键不同，因为模式无法急切解析为具体位置。因此，为了充分利用上下文缓存，您必须确保在测试套件中始终一致地使用模式或显式枚举资源位置。",
+      "count": 2
+    },
+    {
+      "source": "The default value is <code>true</code>, which means that a test class will\n<em>inherit</em> property source locations defined by a superclass or\nenclosing class. Specifically, the property source locations for a test\nclass will be appended to the list of property source locations defined\nby a superclass or enclosing class. Thus, subclasses and nested classes\nhave the option of <em>extending</em> the list of test property source\nlocations.",
+      "translation": "默认值为 `<code>true</code>`，这意味着测试类将<em>继承</em>由父类或外部类定义的属性源位置。具体而言，测试类的属性源位置将被追加到由父类或外部类定义的属性源位置列表中。因此，子类及内部类有选项可以<em>扩展</em>测试属性源位置列表。",
+      "count": 2
+    },
+    {
+      "source": "If <code>inheritLocations</code> is set to <code>false</code>, the property\nsource locations for the test class will <em>shadow</em> and effectively\nreplace any property source locations defined by a superclass or\nenclosing class.",
+      "translation": "如果将 `<code>inheritLocations</code>` 设置为 `<code>false</code>，则测试类的属性源位置将 <em>覆盖</em> 并实际上替换由超类或包含类定义的任何属性源位置。",
+      "count": 2
+    },
+    {
+      "source": "The default value is <code>true</code>, which means that a test class will\n<em>inherit</em> inlined properties defined by a superclass or enclosing\nclass. Specifically, the inlined properties for a test class will be\nappended to the list of inlined properties defined by a superclass or\nenclosing class. Thus, subclasses and nested classes have the option of\n<em>extending</em> the list of inlined test properties.",
+      "translation": "默认值为 `<code>true</code>`，这意味着测试类将 <em>继承</em> 由父类或外部类定义的嵌入式属性。具体而言，测试类的嵌入式属性将被追加到由父类或外部类定义的嵌入式属性列表中。因此，子类及内部类可以选择 <em>扩展</em> 嵌入式测试属性列表。",
+      "count": 2
+    },
+    {
+      "source": "If <code>inheritProperties</code> is set to <code>false</code>, the inlined\nproperties for the test class will <em>shadow</em> and effectively\nreplace any inlined properties defined by a superclass or enclosing class.",
+      "translation": "如果将 `<code>inheritProperties</code>` 设置为 `<code>false</code>，测试类的内联属性将 <em>遮蔽</em> 并实际上替换由超类或外部类定义的任何内联属性。",
+      "count": 2
+    },
+    {
+      "source": "Properties loaded from resource locations have lower precedence than\ninlined <a href=\"#properties()\"><code>properties()</code></a>.",
+      "translation": "从资源位置加载的属性优先级低于内联的 `<a href=\"#properties()\"><code>properties()</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Properties declared via this attribute have higher precedence than\nproperties loaded from resource <a href=\"#locations()\"><code>locations()</code></a>.",
+      "translation": "通过此属性声明的属性优先级高于从资源 `<a href=\"#locations()\"><code>locations()</code></a>` 加载的属性。",
+      "count": 2
+    },
+    {
+      "source": "Each location will be added to the enclosing <code>Environment</code> as its\nown property source, in the order declared (or in the order in which resource\nlocations are resolved when location wildcards are used).",
+      "translation": "每个位置将作为其自身的属性源添加到包围的 `<code>Environment</code>` 中，顺序为声明的顺序（或者在使用位置通配符时解析资源位置的顺序）。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.1, resource location patterns are also\nsupported — for example, <code>\"classpath*:/config/*.properties\"</code>.",
+      "translation": "自 Spring Framework 6.1 起，也支持资源位置模式——例如 `<code>\"classpath*:/config/*.properties\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The supported syntax for key-value pairs is the same as the\nsyntax defined for entries in a Java\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html#load(java.io.Reader)\" title=\"class or interface in java.util\">properties file</a>:",
+      "translation": "键值对支持的语法与 Java 中定义的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html#load(java.io.Reader)\" title=\"class or interface in java.util\">属性文件</a>条目语法相同：",
+      "count": 2
+    },
+    {
+      "source": "See the class-level Javadoc for a discussion on detection of defaults.",
+      "translation": "查看类级别的 Javadoc 以了解默认值的检测讨论。",
+      "count": 2
+    },
+    {
+      "source": "If not specified, the default character encoding of the JVM will be used.",
+      "translation": "如果未指定，将使用 JVM 的默认字符编码。",
+      "count": 2
+    },
+    {
+      "source": "<em>Inlined properties</em> in the form of <em>key-value</em> pairs that\nshould be added to the Spring\n<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> before the\n<code>ApplicationContext</code> is loaded for the test.",
+      "translation": "以 <em>键值对</em> 形式存在的 <em>内联属性</em>，应在加载测试的 <code>ApplicationContext</code> 之前添加到 Spring\n<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Whether test property source <a href=\"#locations()\"><code>locations()</code></a> from superclasses\nand enclosing classes should be <em>inherited</em>.",
+      "translation": "是否应该继承来自父类和包含类的测试属性源<a href=\"#locations()\"><code>locations()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Whether inlined test <a href=\"#properties()\"><code>properties()</code></a> from superclasses and\nenclosing classes should be <em>inherited</em>.",
+      "translation": "是否应继承超类和外部类中的内联测试 `<a href=\"#properties()\"><code>properties()</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Specify the character encoding for the given <a href=\"#locations()\">resources</a>\n— for example, \"UTF-8\".",
+      "translation": "为给定的<a href=\"#locations()\">资源</a>指定字符编码——例如，\"UTF-8\"。",
+      "count": 2
+    },
+    {
+      "source": "This annotation may be used as a <em>meta-annotation</em> to create\ncustom <em>composed annotations</em>, but caution should be taken if\nthis annotation and <code>@ContextConfiguration</code> are combined on a composed\nannotation since the <code>locations</code> and <code>inheritLocations</code> attributes\nof both annotations can lead to ambiguity during the attribute resolution\nprocess. Note, however, that ambiguity can be avoided via explicit annotation\nattribute overrides using <a href=\"../../core/annotation/AliasFor.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@AliasFor</code></a>.",
+      "translation": "此注解可用作<em>元注解</em>来创建自定义的<em>组合注解</em>，但如果将此注解与<code>@ContextConfiguration</code>组合在组合注解上使用时需谨慎，因为这两个注解的<code>locations</code>和<code>inheritLocations</code>属性都可能导致属性解析过程中的歧义。不过请注意，可以通过使用<a href=\"../../core/annotation/AliasFor.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@AliasFor</code></a>显式覆盖注解属性来避免歧义。",
+      "count": 2
+    },
+    {
+      "source": "Typically, <code>@TestPropertySource</code> will be used in conjunction with\n<a href=\"ContextConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextConfiguration</code></a>.",
+      "translation": "通常，<code>@TestPropertySource</code> 会与\n<a href=\"ContextConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextConfiguration</code></a> 一起使用。",
+      "count": 2
+    },
+    {
+      "source": "<code>@TestPropertySource</code> can be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em> annotation.",
+      "translation": "<code>@TestPropertySource</code> 可以用作一个 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em> 注解。",
+      "count": 2
+    },
+    {
+      "source": "All <code>@TestPropertySource</code> annotations at a given level in the\ntest class hierarchy (i.e., directly present or meta-present on a test\nclass) are considered to be <em>local</em> annotations, in contrast to\n<code>@TestPropertySource</code> annotations that are inherited from a\nsuperclass.",
+      "translation": "给定测试类层次结构中的每个级别，所有 `<code>@TestPropertySource</code>` 注解（即直接存在或元存在于测试类上）均被视为 <em>本地</em> 注解，这与从父类继承的 `<code>@TestPropertySource</code>` 注解形成对比。",
+      "count": 2
+    },
+    {
+      "source": "All <code>@TestPropertySource</code> annotations at a given level in the\ntest class hierarchy (i.e., directly present or meta-present on a test\nclass) are considered to be <em>local</em> annotations, in contrast to\n<code>@TestPropertySource</code> annotations that are inherited from a\nsuperclass or enclosing class.",
+      "translation": "给定测试类层级中所有 `<code>@TestPropertySource</code>` 注解（即直接存在或元存在于测试类上）均被视为 <em>本地</em> 注解，这与从父类或包含类继承的 `<code>@TestPropertySource</code>` 注解形成对比。",
+      "count": 2
+    },
+    {
+      "source": "All local <code>@TestPropertySource</code> annotations must declare the\nsame value for the <code>inheritLocations</code> flag.",
+      "translation": "所有本地的 `<code>@TestPropertySource</code>` 注解必须对 `<code>inheritLocations</code>` 标志声明相同的值。",
+      "count": 2
+    },
+    {
+      "source": "The <code>inheritLocations</code> flag is not taken into account between\nlocal <code>@TestPropertySource</code> annotations. Specifically, the property\nsource locations for one local annotation will be appended to the list of\nproperty source locations defined by previous local annotations. This\nallows a local annotation to extend the list of test property source\nlocations, potentially overriding individual properties.",
+      "translation": "`inheritLocations` 标志在本地 `<code>@TestPropertySource</code>` 注解之间不会被考虑。具体而言，一个本地注解的属性源位置将被追加到先前本地注解定义的属性源位置列表中。这使得本地注解能够扩展测试属性源位置列表，从而可能覆盖单个属性。",
+      "count": 2
+    },
+    {
+      "source": "All local <code>@TestPropertySource</code> annotations must declare the\nsame value for the <code>inheritProperties</code> flag.",
+      "translation": "所有本地的 `<code>@TestPropertySource</code>` 注解必须为 `<code>inheritProperties</code>` 标志声明相同的值。",
+      "count": 2
+    },
+    {
+      "source": "The <code>inheritProperties</code> flag is not taken into account between\nlocal <code>@TestPropertySource</code> annotations. Specifically, inlined\nproperties for one local annotation will be appended to the list of\ninlined properties defined by previous local annotations. This allows a\nlocal annotation to extend the list of inlined properties, potentially\noverriding individual properties.",
+      "translation": "`inheritProperties` 标志在本地 `<code>@TestPropertySource</code>` 注解之间不会被考虑。具体而言，一个本地注解的内联属性将追加到先前本地注解定义的内联属性列表中。这使得本地注解能够扩展内联属性列表，并可能覆盖单个属性。",
+      "count": 2
+    },
+    {
+      "source": "Supported File Formats",
+      "translation": "支持的文件格式",
+      "count": 2
+    },
+    {
+      "source": "Path Resource Semantics",
+      "translation": "路径资源语义",
+      "count": 2
+    },
+    {
+      "source": "Supported Syntax",
+      "translation": "支持的语法",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#value()\"><code>value()</code></a>, but it may be used <em>instead</em> of <a href=\"#value()\"><code>value()</code></a>.",
+      "translation": "此属性不能与<a href=\"#value()\"><code>value()</code></a>一起使用，但它可以替代<a href=\"#value()\"><code>value()</code></a>使用。",
+      "count": 1
+    },
+    {
+      "source": "Specify a custom <a href=\"../../core/io/support/PropertySourceFactory.html\" title=\"interface in org.springframework.core.io.support\"><code>PropertySourceFactory</code></a>, if any.",
+      "translation": "指定自定义的<a href=\"../../core/io/support/PropertySourceFactory.html\" title=\"interface in org.springframework.core.io.support\"><code>PropertySourceFactory</code></a>（如果有）。",
+      "count": 1
+    },
+    {
+      "source": "The resource locations of properties files to be loaded into the\n<code>Environment</code>'s set of <code>PropertySources</code>.",
+      "translation": "要加载到 `<code>Environment</code>` 的 `<code>PropertySources</code>` 集合中的属性文件资源位置。",
+      "count": 1
+    },
+    {
+      "source": "Alias for <a href=\"#locations()\"><code>locations()</code></a>.",
+      "translation": "`<a href=\"#locations()\"><code>locations()</code></a>` 的别名。",
+      "count": 1
+    },
+    {
+      "source": "This annotation will be inherited from an enclosing test class by default.\nSee <a href=\"NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a> for details.",
+      "translation": "默认情况下，此注解将从外部测试类继承。有关详细信息，请参阅<a href=\"NestedTestConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

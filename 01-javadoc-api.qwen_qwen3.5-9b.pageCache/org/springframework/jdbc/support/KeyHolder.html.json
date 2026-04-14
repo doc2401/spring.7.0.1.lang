@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 14:52:59",
+  "updated_at": "2026-04-14 14:52:59",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2352941176470589,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Most applications only use one key per row and process only one row at a\ntime in an insert statement. In these cases, just call <a href=\"#getKey()\"><code>getKey</code></a>\nor <a href=\"#getKeyAs(java.lang.Class)\"><code>getKeyAs</code></a> to retrieve the key. The value returned\nby <code>getKey</code> is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\"><code>Number</code></a>, which is the usual type for auto-generated\nkeys. For any other auto-generated key type, use <code>getKeyAs</code> instead.",
+      "translation": "大多数应用程序每行仅使用一个键，并在插入语句中一次只处理一行。在这些情况下，只需调用<a href=\"#getKey()\"><code>getKey</code></a>或<a href=\"#getKeyAs(java.lang.Class)\"><code>getKeyAs</code></a>来获取键。<code>getKey</code>返回的值是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\"><code>Number</code></a>，这是自动生成的键的常用类型。对于任何其他类型的自动生成键，请使用<code>getKeyAs</code>。",
+      "count": 2
+    },
+    {
+      "source": "Implementations of this interface can hold any number of keys.\nIn the general case, the keys are returned as a List containing one Map\nfor each row of keys.",
+      "translation": "该接口的实现可以包含任意数量的键。在一般情况下，键作为包含每个键行一个 Map 的 List 返回。",
+      "count": 2
+    },
+    {
+      "source": "Keys are held in a List of Maps, where each item in the list represents\nthe keys for each row. If there are multiple columns, then the Map will have\nmultiple entries as well. If this method encounters multiple entries in\neither the map or the list meaning that multiple keys were returned,\nthen an InvalidDataAccessApiUsageException is thrown.",
+      "translation": "键被保存在一个 Map 列表中，列表中的每个项代表每一行的键。如果存在多个列，则 Map 也将包含多个条目。如果此方法在 map 或 list 中遇到多个条目（意味着返回了多个键），则会抛出 InvalidDataAccessApiUsageException。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../dao/InvalidDataAccessApiUsageException.html\" title=\"class in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - if multiple keys are encountered",
+      "translation": "<code><a href=\"../../dao/InvalidDataAccessApiUsageException.html\" title=\"class in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - 如果遇到多个键",
+      "count": 2
+    },
+    {
+      "source": "If there are multiple entries in the list (meaning that multiple rows\nhad keys returned), then an InvalidDataAccessApiUsageException is thrown.",
+      "translation": "如果列表中有多个条目（意味着多行返回了键），则抛出 `InvalidDataAccessApiUsageException`。",
+      "count": 1
+    },
+    {
+      "source": "Can be used for extracting keys for multiple rows (an unusual case),\nand also for adding new maps of keys.",
+      "translation": "可用于提取多行的键（一种不常见的情况），以及添加新的键映射。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the first item from the first map, assuming that there is just\none item and just one map, and that the item is a number.",
+      "translation": "从第一个 Map 中获取第一项，假设只有一个项且只有一个 Map，并且该项是一个数字。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the first item from the first map, assuming that there is just\none item and just one map, and that the item is an instance of specified type.",
+      "translation": "从第一个 Map 中获取第一项，假设只有一个项且只有一个 Map，并且该项是指定类型的实例。",
+      "count": 1
+    },
+    {
+      "source": "Return a reference to the List that contains the keys.",
+      "translation": "返回包含键的 List 的引用。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the first map of keys.",
+      "translation": "获取第一个键的映射。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../dao/InvalidDataAccessApiUsageException.html\" title=\"class in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - if keys for multiple rows are encountered",
+      "translation": "<code><a href=\"../../dao/InvalidDataAccessApiUsageException.html\" title=\"class in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - 如果遇到多行的键",
+      "count": 1
+    },
+    {
+      "source": "<code>keyType</code> - the type of the auto-generated key",
+      "translation": "<code>keyType</code> - 自动生成的键的类型",
+      "count": 1
+    },
+    {
+      "source": "Thomas Risberg, Juergen Hoeller, Slawomir Dymitrow",
+      "translation": "Thomas Risberg, Juergen Hoeller, Slawomir Dymitrow",
+      "count": 1
+    },
+    {
+      "source": "the generated key as a number",
+      "translation": "将生成的密钥作为数字",
+      "count": 1
+    },
+    {
+      "source": "the generated key as an instance of specified type",
+      "translation": "生成的密钥作为指定类型的实例",
+      "count": 1
+    },
+    {
+      "source": "the Map of generated keys for a single row",
+      "translation": "单行生成的键的 Map",
+      "count": 1
+    },
+    {
+      "source": "the List for the generated keys, with each entry representing\nan individual row through a Map of column names and key values",
+      "translation": "用于生成键的列表，其中每个条目通过列名和键值的映射表示单独的一行。",
+      "count": 1
+    }
+  ]
+}

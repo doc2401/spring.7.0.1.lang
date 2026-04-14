@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-04-14 17:38:59",
+  "updated_at": "2026-04-14 17:38:59",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 25,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5625,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "For a <a href=\"TransactionOperations.html\" title=\"interface in org.springframework.transaction.support\"><code>TransactionOperations</code></a> implementation with actual\ntransaction processing, use <a href=\"TransactionTemplate.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionTemplate</code></a> with an appropriate\n<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>.",
+      "translation": "对于具有实际事务处理的 `<a href=\"TransactionOperations.html\" title=\"interface in org.springframework.transaction.support\"><code>TransactionOperations</code></a>` 实现，请使用带有适当 `<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 的 `<a href=\"TransactionTemplate.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionTemplate</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "If you need to return an object from the callback or access the\n<a href=\"../TransactionStatus.html\" title=\"interface in org.springframework.transaction\"><code>TransactionStatus</code></a> from within the callback,\nuse <a href=\"#execute(org.springframework.transaction.support.TransactionCallback)\"><code>execute(TransactionCallback)</code></a> instead.",
+      "translation": "如果您需要从回调中返回对象，或需要在回调内部访问<a href=\"../TransactionStatus.html\" title=\"interface in org.springframework.transaction\"><code>TransactionStatus</code></a>，请使用<a href=\"#execute(org.springframework.transaction.support.TransactionCallback)\"><code>execute(TransactionCallback)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This variant is analogous to using a <a href=\"TransactionCallbackWithoutResult.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionCallbackWithoutResult</code></a>\nbut with a simplified signature for common cases - and conveniently usable with\nJava 8 lambda expressions.",
+      "translation": "此变体类似于使用 <a href=\"TransactionCallbackWithoutResult.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionCallbackWithoutResult</code></a>，但针对常见情况提供了简化的签名——并且方便地与 Java 8 Lambda 表达式一起使用。",
+      "count": 2
+    },
+    {
+      "source": "Useful for testing: The behavior is equivalent to running with a\ntransaction manager with no actual transaction (PROPAGATION_SUPPORTS)\nand no synchronization (SYNCHRONIZATION_NEVER).",
+      "translation": "适用于测试：其行为等同于使用没有实际事务的事务管理器（PROPAGATION_SUPPORTS）且没有同步（SYNCHRONIZATION_NEVER）运行。",
+      "count": 2
+    },
+    {
+      "source": "Return an implementation of the <code>TransactionOperations</code> interface which\nexecutes a given <a href=\"TransactionCallback.html\" title=\"interface in org.springframework.transaction.support\"><code>TransactionCallback</code></a> without an actual transaction.",
+      "translation": "返回一个实现 `<code>TransactionOperations</code>` 接口的实例，该实例在不进行实际事务的情况下执行给定的 <a href=\"TransactionCallback.html\" title=\"interface in org.springframework.transaction.support\"><code>TransactionCallback</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Interface specifying basic transaction execution operations.\nImplemented by <a href=\"TransactionTemplate.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionTemplate</code></a>. Not often used directly,\nbut a useful option to enhance testability, as it can easily be\nmocked or stubbed.",
+      "translation": "指定基本事务执行操作的接口。由 <a href=\"TransactionTemplate.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionTemplate</code></a> 实现。不常直接使用，但作为增强可测试性的有用选项，因为它可以轻松地进行模拟或存根处理。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of initialization, rollback, or system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在初始化、回滚或系统错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - if thrown by the Runnable",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\">RuntimeException</a></code> - 如果由 Runnable 抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>action</code> - the Runnable that specifies the transactional action",
+      "translation": "<code>action</code> - 指定事务操作的 Runnable",
+      "count": 2
+    },
+    {
+      "source": "Allows for returning a result object created within the transaction, that is,\na domain object or a collection of domain objects. A RuntimeException thrown\nby the callback is treated as a fatal exception that enforces a rollback.\nSuch an exception gets propagated to the caller of the template.",
+      "translation": "允许返回在事务内创建的结果对象，即领域对象或领域对象的集合。由回调抛出的 `RuntimeException` 被视为致命异常，强制回滚。此类异常会传播到模板的调用者。",
+      "count": 1
+    },
+    {
+      "source": "Execute the action specified by the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> within a transaction.",
+      "translation": "在事务中执行由给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>指定的操作。",
+      "count": 1
+    },
+    {
+      "source": "Execute the action specified by the given callback object within a transaction.",
+      "translation": "在给定的事务中执行由给定的回调对象指定的操作。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - if thrown by the TransactionCallback",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\">RuntimeException</a></code> - 如果由 TransactionCallback 抛出",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - the callback object that specifies the transactional action",
+      "translation": "<code>action</code> - 指定事务操作的回调对象",
+      "count": 1
+    },
+    {
+      "source": "a result object returned by the callback, or <code>null</code> if none",
+      "translation": "回调返回的结果对象，或者如果没有则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

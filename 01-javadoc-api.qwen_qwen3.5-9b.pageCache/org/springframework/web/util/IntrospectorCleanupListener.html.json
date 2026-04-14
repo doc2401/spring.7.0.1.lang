@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-04-14 20:33:37",
+  "updated_at": "2026-04-14 20:33:37",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 15,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6666666666666667,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "Note that this listener is <i>not</i> necessary when using Spring's beans\ninfrastructure within the application, as Spring's own introspection results\ncache will immediately flush an analyzed class from the JavaBeans Introspector\ncache and only hold a cache within the application's own ClassLoader.\n\n<b>Although Spring itself does not create JDK Introspector leaks, note that this\nlistener should nevertheless be used in scenarios where the Spring framework classes\nthemselves reside in a 'common' ClassLoader (such as the system ClassLoader).</b>\nIn such a scenario, this listener will properly clean up Spring's introspection cache.",
+      "translation": "请注意，当在应用程序中使用 Spring 的 beans 基础设施时，此监听器并非必需，因为 Spring 自身的内省结果缓存会立即从 JavaBeans Introspector 缓存中清除已分析类，并仅在应用程序自己的 ClassLoader 中保留缓存。\n\n<b>虽然 Spring 本身不会导致 JDK Introspector 泄漏，但请注意，在 Spring 框架类自身位于“公共”ClassLoader（例如系统 ClassLoader）的场景中，仍应使用此监听器。</b>\n在此类场景中，此监听器将正确清理 Spring 的内省缓存。",
+      "count": 2
+    },
+    {
+      "source": "<b>This listener should be registered as the first one in <code>web.xml</code>,\nbefore any application listeners such as Spring's ContextLoaderListener.</b>\nThis allows the listener to take full effect at the right time of the lifecycle.",
+      "translation": "<b>此监听器应在 <code>web.xml</code> 中注册为第一个，位于任何应用程序监听器（如 Spring 的 ContextLoaderListener）之前。</b>这样可以让该监听器在生命周期的正确时机完全生效。",
+      "count": 2
+    },
+    {
+      "source": "<b>If the JavaBeans Introspector has been used to analyze application classes,\nthe system-level Introspector cache will hold a hard reference to those classes.\nConsequently, those classes and the web application class loader will not be\ngarbage-collected on web app shutdown!</b> This listener performs proper cleanup,\nto allow for garbage collection to take effect.",
+      "translation": "<b>如果已使用 JavaBeans 内省器分析应用程序类，系统级内省器缓存将持有对这些类的硬引用。因此，在 Web 应用程序关闭时，这些类和 Web 应用程序类加载器将无法被垃圾回收！</b>此监听器执行适当的清理操作，以允许垃圾回收生效。",
+      "count": 2
+    },
+    {
+      "source": "Unfortunately, the only way to clean up the Introspector is to flush\nthe entire cache, as there is no way to specifically determine the\napplication's classes referenced there. This will remove cached\nintrospection results for all other applications in the server too.",
+      "translation": "不幸的是，清理 Introspector 的唯一方法是刷新整个缓存，因为无法专门确定应用程序中引用的类。这将同时移除服务器上所有其他应用程序的缓存反引思结果。",
+      "count": 2
+    },
+    {
+      "source": "Application classes hardly ever need to use the JavaBeans Introspector\ndirectly, so are normally not the cause of Introspector resource leaks.\nRather, many libraries and frameworks do not clean up the Introspector:\nfor example, Struts and Quartz.",
+      "translation": "应用程序类几乎从不需要直接使用 JavaBeans 内省器，因此通常不是内省器资源泄漏的原因。相反，许多库和框架没有清理内省器：例如 Struts 和 Quartz。",
+      "count": 2
+    },
+    {
+      "source": "Note that a single such Introspector leak will cause the entire web\napp class loader to not get garbage collected! This has the consequence that\nyou will see all the application's static class resources (like singletons)\naround after web app shutdown, which is not the fault of those classes!",
+      "translation": "注意，单个此类 Introspector 泄漏会导致整个 Web 应用程序类加载器无法被垃圾回收！其后果是，在 Web 应用程序关闭后，您仍会看到该应用程序的所有静态类资源（例如单例），但这并非这些类的错！",
+      "count": 2
+    },
+    {
+      "source": "<code>contextInitialized</code> in interface <code>jakarta.servlet.ServletContextListener</code>",
+      "translation": "<code>contextInitialized</code> 在接口 <code>jakarta.servlet.ServletContextListener</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>contextDestroyed</code> in interface <code>jakarta.servlet.ServletContextListener</code>",
+      "translation": "<code>contextDestroyed</code> 在接口 <code>jakarta.servlet.ServletContextListener</code> 中",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

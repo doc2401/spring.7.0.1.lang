@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-04-14 16:30:02",
+  "updated_at": "2026-04-14 16:30:02",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 54,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 2.076923076923077,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "<code>expression</code> - a space-separated list of time fields, following cron\nexpression conventions",
+      "translation": "<code>expression</code> - 遵循 cron 表达式约定的空格分隔时间字段列表。",
+      "count": 7
+    },
+    {
+      "source": "Note that such explicit time zone customization is usually not necessary,\nusing <a href=\"../TaskScheduler.html#getClock()\"><code>TaskScheduler.getClock()</code></a> instead.",
+      "translation": "请注意，通常不需要进行这种显式的时间区域自定义，而是可以使用<a href=\"../TaskScheduler.html#getClock()\"><code>TaskScheduler.getClock()</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "This variant does not make up for missed trigger firings if the\nassociated task has taken too long. As a consequence, original trigger\nfirings may be skipped if the previous task is still running.",
+      "translation": "如果关联任务耗时过长，此变体无法弥补错过的触发器执行。因此，如果前一个任务仍在运行，可能会跳过原始的触发器执行。",
+      "count": 3
+    },
+    {
+      "source": "This variant makes up for missed trigger firings if the associated task\nhas taken too long, scheduling a task for every original trigger firing.\nSuch follow-up tasks may execute late but will never be skipped.",
+      "translation": "此变体通过为每个原始触发器执行安排任务，来弥补因关联任务耗时过长而错过的触发器执行。此类后续任务可能会延迟执行，但绝不会跳过。",
+      "count": 3
+    },
+    {
+      "source": "Build a <code>CronTrigger</code> from the pattern provided in the given time zone,\nwith the same lenient execution as <a href=\"#%3Cinit%3E(java.lang.String)\"><code>CronTrigger(String)</code></a>.",
+      "translation": "根据给定时间区中的模式构建一个 `<code>CronTrigger</code>`，其宽松执行方式与 `<a href=\"#%3Cinit%3E(java.lang.String)\"><code>CronTrigger(String)</code></a>` 相同。",
+      "count": 3
+    },
+    {
+      "source": "Create a <a href=\"CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a> for fixed execution, to be rescheduled\nafter every task based on the last scheduled time.",
+      "translation": "创建用于固定执行的<a href=\"CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a>，以便根据上次调度时间在每个任务后重新调度。",
+      "count": 3
+    },
+    {
+      "source": "Create a <a href=\"CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a> for lenient execution, to be rescheduled\nafter every task based on the completion time.",
+      "translation": "创建用于宽松执行的<a href=\"CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a>，以便根据任务的完成时间重新调度。",
+      "count": 3
+    },
+    {
+      "source": "This is equivalent to the <a href=\"#forLenientExecution(java.lang.String)\"><code>forLenientExecution(String)</code></a> factory\nmethod. Original trigger firings may be skipped if the previous task is still\nrunning; if this is not desirable, consider <a href=\"#forFixedExecution(java.lang.String)\"><code>forFixedExecution(String)</code></a>.",
+      "translation": "这与<a href=\"#forLenientExecution(java.lang.String)\"><code>forLenientExecution(String)</code></a>工厂方法等效。如果前一个任务仍在运行，可能会跳过原始触发器的执行；如果不希望这样，请考虑使用<a href=\"#forFixedExecution(java.lang.String)\"><code>forFixedExecution(String)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This is equivalent to the regular <a href=\"CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a> constructor.\nNote that lenient execution is scheduler-dependent: it may skip trigger\nfirings with long-running tasks on a thread pool while executing at\n<a href=\"#forFixedExecution(java.lang.String)\"><code>forFixedExecution(String)</code></a>-like precision with new threads per task.",
+      "translation": "这与常规的 <a href=\"CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a> 构造函数等效。请注意，宽松执行取决于调度器：在线程池中，它可能会跳过具有长时间运行任务的触发器执行，但会以类似于 <a href=\"#forFixedExecution(java.lang.String)\"><code>forFixedExecution(String)</code></a> 的精度为每个任务使用新线程进行执行。",
+      "count": 2
+    },
+    {
+      "source": "Next execution times are calculated based on the\n<a href=\"../TriggerContext.html#lastCompletion()\">completion time</a> of the\nprevious execution; therefore, overlapping executions won't occur.",
+      "translation": "下一次执行时间是根据上一次执行的<a href=\"../TriggerContext.html#lastCompletion()\">完成时间</a>计算的；因此，不会出现重叠的执行。",
+      "count": 2
+    },
+    {
+      "source": "Immediate versus late execution in case of long-running tasks may\nbe scheduler-dependent but the guarantee to never skip a task is portable.",
+      "translation": "对于长时间运行的任务，立即执行与延迟执行可能取决于调度器，但从不跳过任务的保证是可移植的。",
+      "count": 2
+    },
+    {
+      "source": "Return the cron pattern that this trigger has been built with.",
+      "translation": "返回该触发器所基于的 Cron 模式。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../Trigger.html#nextExecution(org.springframework.scheduling.TriggerContext)\">nextExecution</a></code> in interface <code><a href=\"../Trigger.html\" title=\"interface in org.springframework.scheduling\">Trigger</a></code>",
+      "translation": "`<code><a href=\"../Trigger.html#nextExecution(org.springframework.scheduling.TriggerContext)\">nextExecution</a></code>` 接口 `<code><a href=\"../Trigger.html\" title=\"interface in org.springframework.scheduling\">Trigger</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>timeZone</code> - a time zone in which the trigger times will be generated",
+      "translation": "<code>timeZone</code> - 将在此时区中生成触发时间",
+      "count": 2
+    },
+    {
+      "source": "<code>zoneId</code> - a time zone in which the trigger times will be generated",
+      "translation": "<code>zoneId</code> - 将在此时区中生成触发时间",
+      "count": 2
+    },
+    {
+      "source": "<code>resumptionTimestamp</code> - the timestamp to resume from (the last-known\ncompletion timestamp), with the new trigger calculated from there and\npossibly immediately firing (but only once, every subsequent calculation\nwill start from the completion time of that first resumed trigger)",
+      "translation": "<code>resumptionTimestamp</code> - 用于从中恢复的时间戳（即最后已知的完成时间戳），新的触发器将从该时间戳计算得出，并可能立即触发（但仅触发一次；此后每次计算均从第一次恢复的触发器的完成时间开始）。",
+      "count": 2
+    },
+    {
+      "source": "<code>resumptionTimestamp</code> - the timestamp to resume from (the last-known\nscheduled timestamp), with every trigger in-between immediately firing\nto make up for every execution that would have happened in the meantime",
+      "translation": "<code>resumptionTimestamp</code> - 恢复时间戳（即最后已知的调度时间戳），在此期间的每个触发器都会立即执行，以弥补在此期间本应发生的所有执行。",
+      "count": 2
+    },
+    {
+      "source": "Supports a Quartz day-of-month/week field with an L/# expression. Follows\ncommon cron conventions in every other respect, including 0-6 for SUN-SAT\n(plus 7 for SUN as well). Note that Quartz deviates from the day-of-week\nconvention in cron through 1-7 for SUN-SAT whereas Spring strictly follows\ncron even in combination with the optional Quartz-specific L/# expressions.",
+      "translation": "支持带有 L/# 表达式的 Quartz 日/周字段。除遵循常见的 cron 约定外（包括 0-6 表示周日到周六，外加 7 也表示周日），请注意 Quartz 在日/周字段的约定上与 cron 不同，采用 1-7 表示周日到周六；而 Spring 即使在结合可选的 Quartz 专用 L/# 表达式时，也严格遵循 cron 约定。",
+      "count": 1
+    },
+    {
+      "source": "Build a <code>CronTrigger</code> from the pattern provided in the default time zone.",
+      "translation": "从默认时区提供的模式构建一个<code>CronTrigger</code>。",
+      "count": 1
+    },
+    {
+      "source": "Determine the next execution time according to the given trigger context.",
+      "translation": "根据给定的触发器上下文确定下一次执行时间。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>triggerContext</code> - context object encapsulating last execution times\nand last completion time",
+      "translation": "<code>triggerContext</code> - 封装上次执行时间和上次完成时间的上下文对象",
+      "count": 1
+    },
+    {
+      "source": "the next execution time as defined by the trigger,\nor <code>null</code> if the trigger won't fire anymore",
+      "translation": "由触发器定义的下一个执行时间，或如果触发器不再触发则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Arjen Poutsma",
+      "translation": "Juergen Hoeller，Arjen Poutsma",
+      "count": 1
+    }
+  ]
+}

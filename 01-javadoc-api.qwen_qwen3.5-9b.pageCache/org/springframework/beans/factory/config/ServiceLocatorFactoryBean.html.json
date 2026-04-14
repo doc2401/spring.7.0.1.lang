@@ -1,0 +1,311 @@
+{
+  "created_at": "2026-04-14 11:20:46",
+  "updated_at": "2026-04-14 11:20:46",
+  "stats": {
+    "total_entries": 59,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 81,
+    "entries_with_hits": 59,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3728813559322033,
+    "usage_percentage": 0.0059
+  },
+  "items": [
+    {
+      "source": "The attendant <code>MyClientBean</code> class implementation might then\n look something like this:",
+      "translation": "`MyClientBean` 助手类实现可能如下所示：",
+      "count": 3
+    },
+    {
+      "source": "Such service locators permit the decoupling of calling code from\n the <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> API, by using an\n appropriate custom locator interface. They will typically be used for\n <b>prototype beans</b>, i.e. for factory methods that are supposed to\n return a new instance for each call. The client receives a reference to the\n service locator via setter or constructor injection, to be able to invoke\n the locator's factory methods on demand. <b>For singleton beans, direct\n setter or constructor injection of the target bean is preferable.</b>",
+      "translation": "此类服务定位器通过使用适当的自定义定位器接口，实现了调用代码与<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> API 的解耦。它们通常用于<b>原型 Bean</b>，即那些旨在为每次调用返回新实例的工厂方法。客户端通过 setter 或构造函数注入接收服务定位器的引用，以便按需调用定位器的工厂方法。<b>对于单例 Bean，直接进行目标 Bean 的 setter 或构造函数注入更可取。</b>",
+      "count": 2
+    },
+    {
+      "source": "On invocation of the no-arg factory method, or the single-arg factory\n method with a String id of <code>null</code> or empty String, if exactly\n <b>one</b> bean in the factory matches the return type of the factory\n method, that bean is returned, otherwise a\n <a href=\"../NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\"><code>NoSuchBeanDefinitionException</code></a>\n is thrown.",
+      "translation": "在调用无参工厂方法，或带有 `<code>null</code>` 或空 String id 的单参工厂方法时，如果工厂中恰好有<b>一个</b>bean 与工厂方法的返回类型匹配，则返回该 bean；否则抛出<a href=\"../NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\"><code>NoSuchBeanDefinitionException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation looks for a constructor with one of the\nfollowing parameter types: <code>(String, Throwable)</code>\nor <code>(Throwable)</code> or <code>(String)</code>.",
+      "translation": "默认实现会查找具有以下参数类型之一的构造函数：<code>(String, Throwable)</code> 或 <code>(Throwable)</code> 或 <code>(String)</code>。",
+      "count": 2
+    },
+    {
+      "source": "On invocation of the single-arg factory method with a non-null (and\n non-empty) argument, the proxy returns the result of a\n <a href=\"../BeanFactory.html#getBean(java.lang.String)\"><code>BeanFactory.getBean(String)</code></a> call,\n using a stringified version of the passed-in id as bean name.",
+      "translation": "在调用带有非空（且非空）参数的单参数工厂方法时，代理会返回 `<a href=\"../BeanFactory.html#getBean(java.lang.String)\"><code>BeanFactory.getBean(String)</code></a>` 调用的结果，使用传入 id 的字符串版本作为 bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "A factory method argument will usually be a String, but can also be an\n int or a custom enumeration type, for example, stringified via\n <code>toString</code>. The resulting String can be used as bean name as-is,\n provided that corresponding beans are defined in the bean factory.\n Alternatively, <a href=\"#setServiceMappings(java.util.Properties)\">a custom\n mapping</a> between service IDs and bean names can be defined.",
+      "translation": "工厂方法参数通常为 String，但也可能是 int 或自定义枚举类型（例如通过 `<code>toString</code>` 转换为字符串）。生成的 String 可以直接用作 Bean 名称，前提是 Bean 工厂中已定义了相应的 Bean。或者，可以定义服务 ID 与 Bean 名称之间的<a href=\"#setServiceMappings(java.util.Properties)\">自定义映射</a>。",
+      "count": 2
+    },
+    {
+      "source": "A sample config in an XML-based\n <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> might look as follows:",
+      "translation": "基于 XML 的 `<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>` 示例配置可能如下所示：",
+      "count": 2
+    },
+    {
+      "source": "See <a href=\"ObjectFactoryCreatingFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ObjectFactoryCreatingFactoryBean</code></a> for an alternate approach.",
+      "translation": "参见 <a href=\"ObjectFactoryCreatingFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ObjectFactoryCreatingFactoryBean</code></a> 以了解另一种方法。",
+      "count": 2
+    },
+    {
+      "source": "By way of an example that looks up a bean <b>by name</b>, consider\n the following service locator interface. Again, note that this\n interface is not dependent on any Spring APIs.",
+      "translation": "以通过名称查找 Bean 为例，考虑以下服务定位器接口。同样请注意，此接口不依赖于任何 Spring API。",
+      "count": 2
+    },
+    {
+      "source": "The empty string as service id key defines the mapping for <code>null</code> and\nempty string, and for factory methods without parameter. If not defined,\na single matching bean will be retrieved from the bean factory.",
+      "translation": "空字符串作为服务 ID 键定义了 `<code>null</code>` 和空字符串的映射，以及无参数的工厂方法。如果未定义，则从 Bean 工厂中检索单个匹配的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "By way of an example, consider the following service locator interface.\n Note that this interface is not dependent on any Spring APIs.",
+      "translation": "例如，考虑以下服务定位器接口。请注意，该接口不依赖于任何 Spring API。",
+      "count": 2
+    },
+    {
+      "source": "If not specified, subclasses of Spring's BeansException will be thrown,\nfor example NoSuchBeanDefinitionException. As those are unchecked, the\ncaller does not need to handle them, so it might be acceptable that\nSpring exceptions get thrown as long as they are just handled generically.",
+      "translation": "如果未指定，将抛出 Spring 的 BeansException 的子类，例如 NoSuchBeanDefinitionException。由于这些是 unchecked（非检查）异常，调用者无需处理它们，因此只要 Spring 异常被泛化处理，其抛出也是可以接受的。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation can handle all variations of\nmessage and exception arguments.",
+      "translation": "默认实现可以处理所有消息和异常参数的变体。",
+      "count": 2
+    },
+    {
+      "source": "Set the service locator interface to use, which must have one or more methods with\nthe signatures <code>MyType xxx()</code> or <code>MyType xxx(MyIdType id)</code>\n(typically, <code>MyService getService()</code> or <code>MyService getService(String id)</code>).\nSee the <a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>class-level Javadoc</code></a> for\ninformation on the semantics of such methods.",
+      "translation": "设置要使用的服务定位器接口，该接口必须包含一个或多个签名为 `<code>MyType xxx()</code>` 或 `<code>MyType xxx(MyIdType id)</code>` 的方法（通常为 `<code>MyService getService()</code>` 或 `<code>MyService getService(String id)</code>`）。有关此类方法的语义信息，请参阅 <a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>类级别 Javadoc</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - in case of initialization errors",
+      "translation": "<code><a href=\"../../BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 在初始化错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>serviceMappings</code> - mappings between service ids and bean names,\nwith service ids as keys as bean names as values",
+      "translation": "<code>serviceMappings</code> - 服务 ID 与 Bean 名称之间的映射，以服务 ID 为键，Bean 名称为值。",
+      "count": 2
+    },
+    {
+      "source": "<code>exceptionClass</code> - the exception class",
+      "translation": "<code>exceptionClass</code> - 异常类",
+      "count": 2
+    },
+    {
+      "source": "<code>exceptionConstructor</code> - the constructor to use",
+      "translation": "<code>exceptionConstructor</code> - 要使用的构造函数",
+      "count": 2
+    },
+    {
+      "source": "<code>cause</code> - the cause of the service lookup failure",
+      "translation": "<code>cause</code> - 服务查找失败的起因",
+      "count": 2
+    },
+    {
+      "source": "the constructor to use",
+      "translation": "要使用的构造函数",
+      "count": 2
+    },
+    {
+      "source": "the service locator exception to throw",
+      "translation": "要抛出的服务定位器异常",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"../SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"../SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b>此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"../SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口的实现可以通过其\n<a href=\"../SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> 方法明确指示独立实例。未实现此扩展接口的普通 <a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\n实现，如果其<code>isSingleton()</code> 实现返回 <code>false</code>，则假定总是返回独立实例。",
+      "count": 1
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "As with a <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，它支持单例和原型这两种设计模式。",
+      "count": 1
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"../FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的<a href=\"../FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "Set the service locator interface to use, which must have one or more methods with\nthe signatures <code>MyType xxx()</code> or <code>MyType xxx(MyIdType id)</code>\n(typically, <code>MyService getService()</code> or <code>MyService getService(String id)</code>).",
+      "translation": "设置要使用的服务定位器接口，该接口必须包含一个或多个签名如下所示的方法：<code>MyType xxx()</code> 或 <code>MyType xxx(MyIdType id)</code>（通常为 <code>MyService getService()</code> 或 <code>MyService getService(String id)</code>）。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"../FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"../FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Create a service locator exception for the given cause.",
+      "translation": "为给定原因创建一个服务定位器异常。",
+      "count": 1
+    },
+    {
+      "source": "Determine the constructor to use for the given service locator exception\nclass.",
+      "translation": "确定用于给定服务定位器异常类的构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Set the exception class that the service locator should throw if service\nlookup failed.",
+      "translation": "设置服务定位器在服务查找失败时应抛出的异常类。",
+      "count": 1
+    },
+    {
+      "source": "Set mappings between service ids (passed into the service locator)\nand bean names (in the bean factory).",
+      "translation": "在服务定位器中传入的服务 ID 与 Bean 工厂中的 Bean 名称之间设置映射关系。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<code><a href=\"../FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "<code><a href=\"../FactoryBean.html#isSingleton()\">isSingleton</a></code> 接口 <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Colin Sampaleanu, Juergen Hoeller",
+      "translation": "Colin Sampaleanu，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    }
+  ]
+}

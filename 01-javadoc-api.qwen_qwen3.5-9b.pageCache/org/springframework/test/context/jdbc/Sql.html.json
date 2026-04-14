@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-04-14 16:52:21",
+  "updated_at": "2026-04-14 16:52:21",
+  "stats": {
+    "total_entries": 31,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 52,
+    "entries_with_hits": 31,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6774193548387097,
+    "usage_percentage": 0.0031000000000000003
+  },
+  "items": [
+    {
+      "source": "Each path will be interpreted as a Spring\n<a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>. A plain path\n— for example, <code>\"schema.sql\"</code> — will be treated as a\nclasspath resource that is <em>relative</em> to the package in which the\ntest class is defined. A path starting with a slash will be treated as an\n<em>absolute</em> classpath resource, for example:\n<code>\"/org/example/schema.sql\"</code>. A path which references a\nURL (for example, a path prefixed with\n<a href=\"../../../util/ResourceUtils.html#CLASSPATH_URL_PREFIX\"><code>classpath:</code></a>,\n<a href=\"../../../util/ResourceUtils.html#FILE_URL_PREFIX\"><code>file:</code></a>,\n<code>http:</code>, etc.) will be loaded using the specified resource protocol.",
+      "translation": "每个路径都将被解释为 Spring <a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>。普通路径——例如，<code>\"schema.sql\"</code>——将被视为相对于测试类所在包中的 classpath 资源。以斜杠开头的路径将被视为绝对 classpath 资源，例如：<code>\"/org/example/schema.sql\"</code>。引用 URL 的路径（例如，以前缀为 <a href=\"../../../util/ResourceUtils.html#CLASSPATH_URL_PREFIX\"><code>classpath:</code></a>、<a href=\"../../../util/ResourceUtils.html#FILE_URL_PREFIX\"><code>file:</code></a>、<code>http:</code> 等开头的路径）将使用指定的资源协议加载。",
+      "count": 2
+    },
+    {
+      "source": "The configuration options provided by this annotation and\n<a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlConfig</code></a> are equivalent to those supported by\n<a href=\"../../../jdbc/datasource/init/ScriptUtils.html\" title=\"class in org.springframework.jdbc.datasource.init\"><code>ScriptUtils</code></a> and\n<a href=\"../../../jdbc/datasource/init/ResourceDatabasePopulator.html\" title=\"class in org.springframework.jdbc.datasource.init\"><code>ResourceDatabasePopulator</code></a>\nbut are a superset of those provided by the <code>&lt;jdbc:initialize-database/&gt;</code>\nXML namespace element. Consult the javadocs of individual attributes in this\nannotation and <a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlConfig</code></a> for details.",
+      "translation": "此注解提供的配置选项与<a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlConfig</code></a>支持的选项等效，且是<code>&lt;jdbc:initialize-database/&gt;</code>XML 命名空间元素所提供选项的超集。这些选项与<a href=\"../../../jdbc/datasource/init/ScriptUtils.html\" title=\"class in org.springframework.jdbc.datasource.init\"><code>ScriptUtils</code></a>和<a href=\"../../../jdbc/datasource/init/ResourceDatabasePopulator.html\" title=\"class in org.springframework.jdbc.datasource.init\"><code>ResourceDatabasePopulator</code></a>支持的选项等效。有关详细信息，请参阅此注解及<a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlConfig</code></a>中各个属性的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#value()\"><code>value()</code></a>, but it may be used instead of <a href=\"#value()\"><code>value()</code></a>. Similarly,\nthis attribute may be used in conjunction with or instead of\n<a href=\"#statements()\"><code>statements()</code></a>.",
+      "translation": "此属性不能与<a href=\"#value()\"><code>value()</code></a>一起使用，但可以作为<a href=\"#value()\"><code>value()</code></a>的替代方案。同样，此属性也可以与<a href=\"#statements()\"><code>statements()</code></a>一起使用或作为其替代方案。",
+      "count": 2
+    },
+    {
+      "source": "Method-level declarations override class-level declarations by default,\nbut this behavior can be configured via <a href=\"SqlMergeMode.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlMergeMode</code></a>.\nHowever, this does not apply to class-level declarations configured for the\n<a href=\"Sql.ExecutionPhase.html#BEFORE_TEST_CLASS\"><code>BEFORE_TEST_CLASS</code></a> or\n<a href=\"Sql.ExecutionPhase.html#AFTER_TEST_CLASS\"><code>AFTER_TEST_CLASS</code></a> execution phase. Such\ndeclarations cannot be overridden, and the corresponding scripts and statements\nwill be executed once per class in addition to any method-level scripts and\nstatements.",
+      "translation": "方法级别的声明默认会覆盖类级别的声明，但此行为可以通过 <a href=\"SqlMergeMode.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlMergeMode</code></a> 进行配置。然而，这不适用于为 <a href=\"Sql.ExecutionPhase.html#BEFORE_TEST_CLASS\"><code>BEFORE_TEST_CLASS</code></a> 或 <a href=\"Sql.ExecutionPhase.html#AFTER_TEST_CLASS\"><code>AFTER_TEST_CLASS</code></a> 执行阶段配置的类级别声明。此类声明无法被覆盖，相应的脚本和语句将在每个类中执行一次，此外还会执行任何方法级别的脚本和语句。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Sql</code> can be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em>\nannotation. Otherwise, <a href=\"SqlGroup.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlGroup</code></a> can be used as an explicit\ncontainer for declaring multiple instances of <code>@Sql</code>.",
+      "translation": "<code>@Sql</code> 可以作为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"java.lang.annotation 中的类或接口\">可重复</a>注解使用。否则，可以使用<a href=\"SqlGroup.html\" title=\"org.springframework.test.context.jdbc 中的注解接口\"><code>@SqlGroup</code></a>作为显式容器来声明多个<code>@Sql</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#scripts()\"><code>scripts()</code></a>, but it may be used instead of <a href=\"#scripts()\"><code>scripts()</code></a>.",
+      "translation": "此属性不能与<a href=\"#scripts()\"><code>scripts()</code></a>一起使用，但可以作为<a href=\"#scripts()\"><code>scripts()</code></a>的替代方案。",
+      "count": 2
+    },
+    {
+      "source": "If no SQL scripts or <a href=\"#statements()\"><code>statements()</code></a> are specified, an attempt will\nbe made to detect a <em>default</em> script depending on where this\nannotation is declared. If a default cannot be detected, an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> will be thrown.",
+      "translation": "如果未指定 SQL 脚本或 `<a href=\"#statements()\"><code>statements()</code></a>`，将尝试根据此注解的声明位置检测一个<em>默认</em>脚本。如果无法检测到默认脚本，将抛出<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This annotation will be inherited from an enclosing test class by default. See\n<a href=\"../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>\nfor details. This annotation may also be used as a <em>meta-annotation</em> to\ncreate custom <em>composed annotations</em> with attribute overrides.",
+      "translation": "默认情况下，此注解将从外部测试类继承。有关详细信息，请参阅<a href=\"../NestedTestConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@NestedTestConfiguration</code></a>。此注解还可用作<em>元注解</em>，以创建具有属性覆盖的自定义<em>组合注解</em>。",
+      "count": 2
+    },
+    {
+      "source": "If you want to see which SQL scripts are being executed, set the\n<code>org.springframework.test.context.jdbc</code> logging category to <code>DEBUG</code>.\nIf you want to see which SQL statements are being executed, set the\n<code>org.springframework.jdbc.datasource.init</code> logging category to <code>DEBUG</code>.",
+      "translation": "如果您想查看正在执行的 SQL 脚本，请将`org.springframework.test.context.jdbc`日志类别设置为`DEBUG`。如果您想查看正在执行的 SQL 语句，请将`org.springframework.jdbc.datasource.init`日志类别设置为`DEBUG`。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.2, paths may contain property placeholders\n(<code>${...}</code>) that will be replaced by properties stored in the\n<a href=\"../../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> of the test's\n<code>ApplicationContext</code>.",
+      "translation": "自 Spring Framework 6.2 起，路径可以包含属性占位符（<code>${...}</code>），这些占位符将被测试的 <code>ApplicationContext</code> 中的 <a href=\"../../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> 存储的属性替换。",
+      "count": 2
+    },
+    {
+      "source": "Statements declared via this attribute will be executed after\nstatements loaded from resource <a href=\"#scripts()\"><code>scripts()</code></a>. If you wish to have\ninlined statements executed before scripts, simply declare multiple\ninstances of <code>@Sql</code> on the same class or method.",
+      "translation": "通过此属性声明的语句将在从资源加载的<a href=\"#scripts()\"><code>scripts()</code></a>语句之后执行。如果您希望内联语句在脚本之前执行，只需在同一类或方法上声明多个<code>@Sql</code>实例即可。",
+      "count": 2
+    },
+    {
+      "source": "Script execution is performed by the <a href=\"SqlScriptsTestExecutionListener.html\" title=\"class in org.springframework.test.context.jdbc\"><code>SqlScriptsTestExecutionListener</code></a>,\nwhich is enabled by default.",
+      "translation": "脚本执行由<a href=\"SqlScriptsTestExecutionListener.html\" title=\"class in org.springframework.test.context.jdbc\"><code>SqlScriptsTestExecutionListener</code></a>完成，该组件默认已启用。",
+      "count": 2
+    },
+    {
+      "source": "Use of this annotation requires the <code>spring-jdbc</code> and <code>spring-tx</code>\nmodules as well as their transitive dependencies to be present on the classpath.",
+      "translation": "使用此注解需要 `spring-jdbc` 和 `spring-tx` 模块及其传递依赖存在于类路径中。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may be used in conjunction with or instead of\n<a href=\"#scripts()\"><code>scripts()</code></a>.",
+      "translation": "此属性可与 <a href=\"#scripts()\"><code>scripts()</code></a> 配合使用，或替代其使用。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <a href=\"Sql.ExecutionPhase.html#BEFORE_TEST_METHOD\"><code>BEFORE_TEST_METHOD</code></a>.",
+      "translation": "默认为<a href=\"Sql.ExecutionPhase.html#BEFORE_TEST_METHOD\"><code>BEFORE_TEST_METHOD</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "See the class-level javadocs for <a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>SqlConfig</code></a> for explanations of\nlocal vs. global configuration, inheritance, overrides, etc.",
+      "translation": "有关本地与全局配置、继承、覆盖等的说明，请参阅 <a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>SqlConfig</code></a> 的类级别 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to an empty <a href=\"SqlConfig.html\" title=\"annotation interface in org.springframework.test.context.jdbc\"><code>@SqlConfig</code></a> instance.",
+      "translation": "默认为一个空的<a href=\"SqlConfig.html\" title=\"org.springframework.test.context.jdbc 中的注解接口\"><code>@SqlConfig</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#scripts()\"><code>scripts()</code></a>.",
+      "translation": "`<a href=\"#scripts()\">`<code>scripts()</code></a> 的别名。",
+      "count": 2
+    },
+    {
+      "source": "<strong>method-level declaration</strong>: if the annotated test\nmethod is named <code>testMethod()</code> and is defined in the class\n<code>com.example.MyTest</code>, the corresponding default script is\n<code>\"classpath:com/example/MyTest.testMethod.sql\"</code>.",
+      "translation": "<strong>方法级声明</strong>：如果标注的测试方法名为 <code>testMethod()</code> 且定义在类 <code>com.example.MyTest</code> 中，则对应的默认脚本为 <code>\"classpath:com/example/MyTest.testMethod.sql\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>class-level declaration</strong>: if the annotated test class\nis <code>com.example.MyTest</code>, the corresponding default script is\n<code>\"classpath:com/example/MyTest.sql\"</code>.",
+      "translation": "<strong>类级别声明</strong>：如果标注的测试类是 <code>com.example.MyTest</code>，则对应的默认脚本为 <code>\"classpath:com/example/MyTest.sql\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "Default Script Detection",
+      "translation": "默认脚本检测",
+      "count": 2
+    },
+    {
+      "source": "Enumeration of <em>phases</em> that dictate when SQL scripts are executed.",
+      "translation": "枚举<em>阶段</em>，这些阶段决定了何时执行 SQL 脚本。",
+      "count": 1
+    },
+    {
+      "source": "Local configuration for the SQL scripts and statements declared within\nthis <code>@Sql</code> annotation.",
+      "translation": "此<code>@Sql</code>注解中声明的SQL脚本和语句的本地配置。",
+      "count": 1
+    },
+    {
+      "source": "<em>Inlined SQL statements</em> to execute.",
+      "translation": "<em>内联的 SQL 语句</em> 用于执行。",
+      "count": 1
+    },
+    {
+      "source": "When the SQL scripts and statements should be executed.",
+      "translation": "何时应执行 SQL 脚本和语句。",
+      "count": 1
+    },
+    {
+      "source": "The paths to the SQL scripts to execute.",
+      "translation": "要执行的 SQL 脚本路径。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Andreas Ahlenstorf",
+      "translation": "Sam Brannen，Andreas Ahlenstorf",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "Path Resource Semantics",
+      "translation": "路径资源语义",
+      "count": 1
+    }
+  ]
+}

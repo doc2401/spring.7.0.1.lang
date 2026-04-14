@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-14 14:28:11",
+  "updated_at": "2026-04-14 14:28:11",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 35,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5217391304347827,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Should <i>not</i> return the same instance of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>\nreturned from an invocation of <a href=\"LoadTimeWeaver.html#getInstrumentableClassLoader()\"><code>LoadTimeWeaver.getInstrumentableClassLoader()</code></a>.",
+      "translation": "不应返回从<a href=\"LoadTimeWeaver.html#getInstrumentableClassLoader()\"><code>LoadTimeWeaver.getInstrumentableClassLoader()</code></a>调用中返回的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>的同一实例。",
+      "count": 2
+    },
+    {
+      "source": "Please note that the above methods <i>must</i> reside in a class that is\npublicly accessible, although the class itself does not have to be visible\nto the application's class loader.",
+      "translation": "请注意，上述方法<i>必须</i>位于一个公开可访问的类中，尽管该类本身不必对应用程序的类加载器可见。",
+      "count": 2
+    },
+    {
+      "source": "The reflective nature of this LoadTimeWeaver is particularly useful when the\nunderlying ClassLoader implementation is loaded in a different class loader itself\n(such as the application server's class loader which is not visible to the\nweb application). There is no direct API dependency between this LoadTimeWeaver\nadapter and the underlying ClassLoader, just a 'loose' method contract.",
+      "translation": "这种 LoadTimeWeaver 的反射特性在底层 ClassLoader 实现本身由不同的类加载器加载时（例如应用程序服务器的类加载器，该加载器对 Web 应用程序不可见）特别有用。此 LoadTimeWeaver 适配器与底层 ClassLoader 之间没有直接的 API 依赖关系，仅存在一个“松散”的方法契约。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LoadTimeWeaver.html#getInstrumentableClassLoader()\">LoadTimeWeaver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LoadTimeWeaver.html#getInstrumentableClassLoader()\">LoadTimeWeaver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LoadTimeWeaver.html#getThrowawayClassLoader()\">LoadTimeWeaver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LoadTimeWeaver.html#getThrowawayClassLoader()\">LoadTimeWeaver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Add a <code>ClassFileTransformer</code> to be applied by this\n<code>LoadTimeWeaver</code>.",
+      "translation": "添加一个由本<code>LoadTimeWeaver</code>应用的<code>ClassFileTransformer</code>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new ReflectiveLoadTimeWeaver for the current context class\nloader, <i>which needs to support the required weaving methods</i>.",
+      "translation": "为当前上下文类加载器创建一个新的 `ReflectiveLoadTimeWeaver`，<i>它需要支持所需的织入方法</i>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SimpleLoadTimeWeaver for the given class loader.",
+      "translation": "为给定的类加载器创建一个新的 SimpleLoadTimeWeaver。",
+      "count": 2
+    },
+    {
+      "source": "<code>classLoader</code> - the <code>ClassLoader</code> to delegate to for\nweaving (<i>must</i> support the required weaving methods).",
+      "translation": "<code>classLoader</code> - 用于织入的委托 <code>ClassLoader</code>（<i>必须</i>支持所需的织入方法）。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the supplied <code>ClassLoader</code>\ndoes not support the required weaving methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果提供的 <code>ClassLoader</code> 不支持所需的织入方法",
+      "count": 2
+    },
+    {
+      "source": "<code>public void addTransformer(java.lang.instrument.ClassFileTransformer)</code>:\nfor registering the given ClassFileTransformer on this ClassLoader",
+      "translation": "<code>public void addTransformer(java.lang.instrument.ClassFileTransformer)</code>：用于在此类加载器上注册给定的 ClassFileTransformer。",
+      "count": 2
+    },
+    {
+      "source": "<code>public ClassLoader getThrowawayClassLoader()</code>:\nfor obtaining a throwaway class loader for this ClassLoader (optional;\nReflectiveLoadTimeWeaver will fall back to a SimpleThrowawayClassLoader if\nthat method isn't available)",
+      "translation": "`public ClassLoader getThrowawayClassLoader()`：用于获取此 ClassLoader 的丢弃类加载器（可选；如果该方法不可用，ReflectiveLoadTimeWeaver 将回退到 SimpleThrowawayClassLoader）。",
+      "count": 2
+    },
+    {
+      "source": "May be the current <code>ClassLoader</code>, or a <code>ClassLoader</code>\ncreated by this <a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\"><code>LoadTimeWeaver</code></a> instance.",
+      "translation": "可能是当前的 `<code>ClassLoader</code>`，或由该 `<a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\"><code>LoadTimeWeaver</code></a>` 实例创建的 `<code>ClassLoader</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return a <code>ClassLoader</code> that supports instrumentation\nthrough AspectJ-style load-time weaving based on user-defined\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.instrument/java/lang/instrument/ClassFileTransformer.html\" title=\"class or interface in java.lang.instrument\"><code>ClassFileTransformers</code></a>.",
+      "translation": "返回一个支持基于用户定义的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.instrument/java/lang/instrument/ClassFileTransformer.html\" title=\"class or interface in java.lang.instrument\"><code>ClassFileTransformers</code></a>进行 AspectJ 风格加载时织入的<code>ClassLoader</code>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"LoadTimeWeaver.html#addTransformer(java.lang.instrument.ClassFileTransformer)\">LoadTimeWeaver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"LoadTimeWeaver.html#addTransformer(java.lang.instrument.ClassFileTransformer)\">LoadTimeWeaver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return a throwaway <code>ClassLoader</code>, enabling classes to be\nloaded and inspected without affecting the parent <code>ClassLoader</code>.",
+      "translation": "返回一个临时的 <code>ClassLoader</code>，使类能够在不影响父级 <code>ClassLoader</code> 的情况下被加载和检查。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"LoadTimeWeaver.html#addTransformer(java.lang.instrument.ClassFileTransformer)\">addTransformer</a></code> in interface <code><a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\">LoadTimeWeaver</a></code>",
+      "translation": "`<code><a href=\"LoadTimeWeaver.html#addTransformer(java.lang.instrument.ClassFileTransformer)\">addTransformer</a></code>` 接口 `<code><a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\">LoadTimeWeaver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"LoadTimeWeaver.html#getInstrumentableClassLoader()\">getInstrumentableClassLoader</a></code> in interface <code><a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\">LoadTimeWeaver</a></code>",
+      "translation": "`<code><a href=\"LoadTimeWeaver.html#getInstrumentableClassLoader()\">getInstrumentableClassLoader</a></code>` 接口 `<code><a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\">LoadTimeWeaver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"LoadTimeWeaver.html#getThrowawayClassLoader()\">getThrowawayClassLoader</a></code> in interface <code><a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\">LoadTimeWeaver</a></code>",
+      "translation": "`<code><a href=\"LoadTimeWeaver.html#getThrowawayClassLoader()\">getThrowawayClassLoader</a></code>` 接口 `<code><a href=\"LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\">LoadTimeWeaver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>transformer</code> - the <code>ClassFileTransformer</code> to add",
+      "translation": "<code>transformer</code> - 要添加的 <code>ClassFileTransformer</code>",
+      "count": 1
+    },
+    {
+      "source": "the <code>ClassLoader</code> which will expose\ninstrumented classes according to the registered transformers",
+      "translation": "将按注册的转换器暴露已增强类的<code>ClassLoader</code>",
+      "count": 1
+    },
+    {
+      "source": "a temporary throwaway <code>ClassLoader</code>; should return\na new instance for each call, with no existing state",
+      "translation": "一个临时的、一次性使用的 <code>ClassLoader</code>；每次调用都应返回一个新实例，且不带有任何现有状态。",
+      "count": 1
+    },
+    {
+      "source": "Costin Leau, Juergen Hoeller",
+      "translation": "Costin Leau，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

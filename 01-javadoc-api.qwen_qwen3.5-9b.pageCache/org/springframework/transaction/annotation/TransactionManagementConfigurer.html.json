@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-04-14 17:28:42",
+  "updated_at": "2026-04-14 17:28:42",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 16,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7777777777777777,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "Typically implemented by @<a href=\"../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Configuration</code></a> classes annotated with @<a href=\"EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>EnableTransactionManagement</code></a>.\nSee @<a href=\"EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>EnableTransactionManagement</code></a> for general examples and context;\nsee <a href=\"#annotationDrivenTransactionManager()\"><code>annotationDrivenTransactionManager()</code></a> for detailed instructions.",
+      "translation": "通常由带有@<a href=\"EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>EnableTransactionManagement</code></a>注解的@<a href=\"../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Configuration</code></a>类实现。\n有关通用示例和上下文，请参见@<a href=\"EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>EnableTransactionManagement</code></a>；\n有关详细操作说明，请参见<a href=\"#annotationDrivenTransactionManager()\"><code>annotationDrivenTransactionManager()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note that in by-type lookup disambiguation cases, an alternative approach to\nimplementing this interface is to simply mark one of the offending\n<code>PlatformTransactionManager</code> <code>@Bean</code> methods (or\n<code>ReactiveTransactionManager</code> <code>@Bean</code> methods) as\n<a href=\"../../context/annotation/Primary.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Primary</code></a>.\nThis is even generally preferred since it doesn't lead to early initialization\nof the <code>TransactionManager</code> bean.",
+      "translation": "请注意，在按类型查找的消歧情况下，实现此接口的一种替代方法是简单地将其中一个有问题的 `<code>PlatformTransactionManager</code>` `<code>@Bean</code>` 方法（或 `<code>ReactiveTransactionManager</code>` `<code>@Bean</code>` 方法）标记为 <a href=\"../../context/annotation/Primary.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Primary</code></a>。这通常更受青睐，因为它不会导致 `<code>TransactionManager</code>` Bean 的早期初始化。",
+      "count": 2
+    },
+    {
+      "source": "In either scenario #1 or #2, it is important that the\n<code>PlatformTransactionManager</code> instance is managed as a Spring bean within the\ncontainer since most <code>PlatformTransactionManager</code> implementations take advantage\nof Spring lifecycle callbacks such as <code>InitializingBean</code> and\n<code>BeanFactoryAware</code>. Note that the same guidelines apply to\n<code>ReactiveTransactionManager</code> beans.",
+      "translation": "在场景 #1 或 #2 中，重要的是将 `<code>PlatformTransactionManager</code>` 实例作为 Spring 容器中的 Spring Bean 进行管理，因为大多数 `<code>PlatformTransactionManager</code>` 实现利用了 Spring 生命周期回调（如 `<code>InitializingBean</code>` 和 `<code>BeanFactoryAware</code>`）。请注意，相同的指南也适用于 `<code>ReactiveTransactionManager</code>` Bean。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: A <code>TransactionManagementConfigurer</code> will get initialized early.</b>\nDo not inject common dependencies into autowired fields directly; instead, consider\ndeclaring a lazy <a href=\"../../beans/factory/ObjectProvider.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectProvider</code></a> for those.",
+      "translation": "<b>注意：<code>TransactionManagementConfigurer</code> 会较早初始化。</b>\n不要直接将公共依赖注入到自动装配字段中；相反，考虑为这些依赖声明一个懒加载的<a href=\"../../beans/factory/ObjectProvider.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectProvider</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "There are two basic approaches to implementing this method:",
+      "translation": "实现此方法有两种基本方法：",
+      "count": 2
+    },
+    {
+      "source": "2. Implement the method without <code>@Bean</code> and delegate to another existing\n<code>@Bean</code> method",
+      "translation": "2. 实现不带 `<code>@Bean</code>` 的方法，并委托给另一个现有的 `<code>@Bean</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "1. Implement the method and annotate it with <code>@Bean</code>",
+      "translation": "1. 实现该方法并用<code>@Bean</code>进行注解。",
+      "count": 2
+    },
+    {
+      "source": "Return the default transaction manager bean to use for annotation-driven database\ntransaction management, i.e.",
+      "translation": "返回用于注解驱动数据库事务管理的默认事务管理器 Bean，即",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams",
+      "translation": "Chris Beams",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-04-14 10:54:48",
+  "updated_at": "2026-04-14 10:54:48",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 27,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.35,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "The default is \"false\", considering all <code>BeanInfo</code> metadata classes, like for\nstandard <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html#getBeanInfo(java.lang.Class)\" title=\"class or interface in java.beans\"><code>Introspector.getBeanInfo(Class)</code></a> calls. Consider switching this flag to\n\"true\" if you experience repeated ClassLoader access for non-existing <code>BeanInfo</code>\nclasses, in case such access is expensive on startup or on lazy loading.",
+      "translation": "默认值为 \"false\"，会考虑所有 `<code>BeanInfo`</code> 元数据类，就像对标准的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html#getBeanInfo(java.lang.Class)\" title=\"class or interface in java.beans\"><code>Introspector.getBeanInfo(Class)</code></a> 调用一样。如果您在启动或懒加载时，发现对不存在的 `<code>BeanInfo`</code> 类存在重复的 ClassLoader 访问且该访问代价昂贵，请考虑将此标志切换为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "Note that such an effect may also indicate a scenario where caching doesn't work\neffectively: Prefer an arrangement where the Spring jars live in the same ClassLoader\nas the application classes, which allows for clean caching along with the application's\nlifecycle in any case. For a web application, consider declaring a local\n<a href=\"../web/util/IntrospectorCleanupListener.html\" title=\"class in org.springframework.web.util\"><code>IntrospectorCleanupListener</code></a> in <code>web.xml</code>\nin case of a multi-ClassLoader layout, which will allow for effective caching as well.",
+      "translation": "请注意，此类效果也可能表明缓存无法有效工作：请采用一种 Spring jar 与应用类位于同一 ClassLoader 中的配置，这样无论如何都能实现与应用生命周期同步的干净缓存。对于 Web 应用程序，如果在多 ClassLoader 布局下，请在 <code>web.xml</code> 中声明一个本地的<a href=\"../web/util/IntrospectorCleanupListener.html\" title=\"class in org.springframework.web.util\"><code>IntrospectorCleanupListener</code></a>，以便同样实现有效的缓存。",
+      "count": 2
+    },
+    {
+      "source": "To be configured via a <code>META-INF/spring.factories</code> file with the following content:\n<code>org.springframework.beans.BeanInfoFactory=org.springframework.beans.StandardBeanInfoFactory</code>",
+      "translation": "需通过包含以下内容的 `<code>META-INF/spring.factories</code>` 文件进行配置：\n`<code>org.springframework.beans.BeanInfoFactory=org.springframework.beans.StandardBeanInfoFactory</code>`",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return the bean info for the given class, if supported.",
+      "translation": "如果支持，则返回给定类的 Bean 信息。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html#getBeanInfo(java.lang.Class,int)\" title=\"class or interface in java.beans\"><code>Introspector.getBeanInfo(Class, int)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.beans.StandardBeanInfoFactory.IGNORE_BEANINFO_PROPERTY_NAME\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html#getBeanInfo(java.lang.Class,int)\" title=\"class or interface in java.beans\"><code>Introspector.getBeanInfo(Class, int)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.beans.StandardBeanInfoFactory.IGNORE_BEANINFO_PROPERTY_NAME\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "Ordered at <a href=\"../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a> to allow other user-defined\n<a href=\"BeanInfoFactory.html\" title=\"interface in org.springframework.beans\"><code>BeanInfoFactory</code></a> types to take precedence.",
+      "translation": "在 <a href=\"../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a> 处排序，以允许其他用户定义的<a href=\"BeanInfoFactory.html\" title=\"interface in org.springframework.beans\"><code>BeanInfoFactory</code></a>类型具有优先权。",
+      "count": 1
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "System property that instructs Spring to use the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html#IGNORE_ALL_BEANINFO\" title=\"class or interface in java.beans\"><code>Introspector.IGNORE_ALL_BEANINFO</code></a>\nmode when calling the JavaBeans <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html\" title=\"class or interface in java.beans\"><code>Introspector</code></a>: \"spring.beaninfo.ignore\", with a\nvalue of \"true\" skipping the search for <code>BeanInfo</code> classes (typically for scenarios\nwhere no such classes are being defined for beans in the application in the first place).",
+      "translation": "指示 Spring 在调用 JavaBeans <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html\" title=\"class or interface in java.beans\"><code>Introspector</code></a> 时使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/Introspector.html#IGNORE_ALL_BEANINFO\" title=\"class or interface in java.beans\"><code>Introspector.IGNORE_ALL_BEANINFO</code></a> 模式的系统属性：\"spring.beaninfo.ignore\"，其值为 \"true\" 时会跳过对 <code>BeanInfo</code> 类的搜索（通常用于应用程序中根本未为 Bean 定义此类类的场景）。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"BeanInfoFactory.html#getBeanInfo(java.lang.Class)\">BeanInfoFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"BeanInfoFactory.html#getBeanInfo(java.lang.Class)\">BeanInfoFactory</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"BeanInfoFactory.html#getBeanInfo(java.lang.Class)\">getBeanInfo</a></code> in interface <code><a href=\"BeanInfoFactory.html\" title=\"interface in org.springframework.beans\">BeanInfoFactory</a></code>",
+      "translation": "`<code><a href=\"BeanInfoFactory.html#getBeanInfo(java.lang.Class)\">getBeanInfo</a></code>` 接口 `<code><a href=\"BeanInfoFactory.html\" title=\"interface in org.springframework.beans\">BeanInfoFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/IntrospectionException.html\" title=\"class or interface in java.beans\">IntrospectionException</a></code> - in case of exceptions",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/IntrospectionException.html\" title=\"class or interface in java.beans\">IntrospectionException</a></code> - 在发生异常的情况下",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the bean class",
+      "translation": "<code>beanClass</code> - 该 Bean 类",
+      "count": 1
+    },
+    {
+      "source": "the BeanInfo, or <code>null</code> if the given class is not supported",
+      "translation": "BeanInfo，或者如果给定的类不受支持则为<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "created_at": "2026-04-14 11:50:27",
+  "updated_at": "2026-04-14 11:50:27",
+  "stats": {
+    "total_entries": 38,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 54,
+    "entries_with_hits": 38,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4210526315789473,
+    "usage_percentage": 0.0038000000000000004
+  },
+  "items": [
+    {
+      "source": "Supports the asynchronous <a href=\"../Cache.html#retrieve(java.lang.Object)\"><code>Cache.retrieve(Object)</code></a> and\n<a href=\"../Cache.html#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>Cache.retrieve(Object, Supplier)</code></a> operations through basic\n<code>CompletableFuture</code> adaptation, with early-determined cache misses.",
+      "translation": "支持通过基本的 `<code>CompletableFuture</code>` 适配异步执行 <a href=\"../Cache.html#retrieve(java.lang.Object)\"><code>Cache.retrieve(Object)</code></a> 和\n<a href=\"../Cache.html#retrieve(java.lang.Object,java.util.function.Supplier)\"><code>Cache.retrieve(Object, Supplier)</code></a> 操作，并支持提前确定的缓存未命中。",
+      "count": 2
+    },
+    {
+      "source": "Note: This is by no means a sophisticated CacheManager; it comes with no\ncache configuration options. However, it may be useful for testing or simple\ncaching scenarios. For advanced local caching needs, consider\n<a href=\"../caffeine/CaffeineCacheManager.html\" title=\"class in org.springframework.cache.caffeine\"><code>CaffeineCacheManager</code></a> or\n<a href=\"../jcache/JCacheCacheManager.html\" title=\"class in org.springframework.cache.jcache\"><code>JCacheCacheManager</code></a>.",
+      "translation": "注意：这绝不是一个功能完善的 CacheManager；它不提供任何缓存配置选项。不过，它可能适用于测试或简单的缓存场景。对于高级本地缓存需求，请考虑使用<a href=\"../caffeine/CaffeineCacheManager.html\" title=\"class in org.springframework.cache.caffeine\"><code>CaffeineCacheManager</code></a> 或 <a href=\"../jcache/JCacheCacheManager.html\" title=\"class in org.springframework.cache.jcache\"><code>JCacheCacheManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\", despite ConcurrentHashMap itself not supporting <code>null</code>\nvalues. An internal holder object will be used to store user-level <code>null</code>s.",
+      "translation": "默认值为\"true\"，尽管 ConcurrentHashMap 本身不支持<code>null</code>值。将使用一个内部持有对象来存储用户级别的<code>null</code>值。",
+      "count": 2
+    },
+    {
+      "source": "Note: A change of the null-value setting will reset all existing caches,\nif any, to reconfigure them with the new null-value requirement.",
+      "translation": "注意：更改空值设置将重置所有现有缓存（如有），以便根据新的空值要求进行重新配置。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\" so that the value itself is stored and no serializable\ncontract is required on cached values.",
+      "translation": "默认值为 \"false\"，以便存储值本身，而无需在缓存值上定义可序列化契约。",
+      "count": 2
+    },
+    {
+      "source": "Note: A change of the store-by-value setting will reset all existing caches,\nif any, to reconfigure them with the new store-by-value requirement.",
+      "translation": "注意：更改按值存储设置将重置所有现有缓存（如果有），以便使用新的按值存储要求进行重新配置。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this cache manager accepts and converts <code>null</code> values\nfor all of its caches.",
+      "translation": "返回此缓存管理器是否接受并转换其所有缓存中的 `<code>null</code>` 值。",
+      "count": 2
+    },
+    {
+      "source": "Construct a dynamic ConcurrentMapCacheManager,\nlazily creating cache instances as they are being requested.",
+      "translation": "构建一个动态的 ConcurrentMapCacheManager，在请求时懒加载创建缓存实例。",
+      "count": 2
+    },
+    {
+      "source": "Construct a static ConcurrentMapCacheManager,\nmanaging caches for the specified cache names only.",
+      "translation": "构建一个静态的 ConcurrentMapCacheManager，仅管理指定缓存名称的缓存。",
+      "count": 2
+    },
+    {
+      "source": "Create a new ConcurrentMapCache instance for the specified cache name.",
+      "translation": "为指定的缓存名称创建一个新的 ConcurrentMapCache 实例。",
+      "count": 2
+    },
+    {
+      "source": "Get a collection of the cache names known by this manager.",
+      "translation": "获取此管理器已知的缓存名称集合。",
+      "count": 2
+    },
+    {
+      "source": "Remove the specified cache from this cache manager.",
+      "translation": "从此缓存管理器中删除指定的缓存。",
+      "count": 2
+    },
+    {
+      "source": "Reset this cache manager's caches, removing them completely for on-demand\nre-creation in 'dynamic' mode, or simply clearing their entries otherwise.",
+      "translation": "重置此缓存管理器的缓存，在“动态”模式下将其完全移除以便按需重新创建，否则则仅清除其条目。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this cache manager stores a copy of each entry or\na reference for all its caches. If store by value is enabled, any\ncache entry must be serializable.",
+      "translation": "返回此缓存管理器是为所有缓存存储每个条目的副本还是引用。如果启用了按值存储，则任何缓存条目必须是可序列化的。",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the name of the cache",
+      "translation": "<code>name</code> - 缓存的名称",
+      "count": 2
+    },
+    {
+      "source": "the ConcurrentMapCache (or a decorator thereof)",
+      "translation": "ConcurrentMapCache（或其装饰器）",
+      "count": 2
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "Note that this method replaces existing caches of the given names\nand prevents the creation of further cache regions from here on - but\ndoes <i>not</i> remove unrelated existing caches. For a full reset,\nconsider calling <a href=\"#resetCaches()\"><code>resetCaches()</code></a> before calling this method.",
+      "translation": "注意，此方法会替换给定名称的现有缓存，并从此阻止创建进一步的缓存区域，但<i>不会</i>删除不相关的现有缓存。若要完全重置，请在调用此方法之前考虑调用 <a href=\"#resetCaches()\"><code>resetCaches()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Calling this method with a <code>null</code> collection argument resets\nthe mode to 'dynamic', allowing for further creation of caches again.",
+      "translation": "调用此方法并传入一个<code>null</code>集合参数会将模式重置为'dynamic'，从而允许再次创建缓存。",
+      "count": 1
+    },
+    {
+      "source": "The number of caches and their names will be fixed after a call\nto this method, with no creation of further cache regions at runtime.",
+      "translation": "调用此方法后，缓存的数量及其名称将固定，运行时不会再创建新的缓存区域。",
+      "count": 1
+    },
+    {
+      "source": "Note that the cache may be lazily created at runtime if the\nnative provider supports it.",
+      "translation": "请注意，如果原生提供者支持，缓存可能会在运行时懒加载创建。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../CacheManager.html#getCache(java.lang.String)\">CacheManager</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../CacheManager.html#getCache(java.lang.String)\">CacheManager</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../CacheManager.html#getCacheNames()\">CacheManager</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../CacheManager.html#getCacheNames()\">CacheManager</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether this cache manager stores a copy of each entry (<code>true</code>\nor the reference (<code>false</code> for all of its caches.",
+      "translation": "指定此缓存管理器是否为每个条目存储副本（<code>true</code>）还是引用（其所有缓存均为 <code>false</code>）。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to accept and convert <code>null</code> values for all caches\nin this cache manager.",
+      "translation": "指定是否接受并转换此缓存管理器中所有缓存的 `<code>null</code>` 值。",
+      "count": 1
+    },
+    {
+      "source": "Get the cache associated with the given name.",
+      "translation": "获取与给定名称关联的缓存。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this cache manager stores a copy of each entry or\na reference for all its caches.",
+      "translation": "返回此缓存管理器是否为所有缓存存储每个条目的副本还是引用。",
+      "count": 1
+    },
+    {
+      "source": "Specify the set of cache names for this CacheManager's 'static' mode.",
+      "translation": "指定此 CacheManager 的“静态”模式的缓存名称集。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../CacheManager.html#getCache(java.lang.String)\">getCache</a></code> in interface <code><a href=\"../CacheManager.html\" title=\"interface in org.springframework.cache\">CacheManager</a></code>",
+      "translation": "`<code><a href=\"../CacheManager.html#getCache(java.lang.String)\">getCache</a></code>` 接口 `<code><a href=\"../CacheManager.html\" title=\"interface in org.springframework.cache\">CacheManager</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../CacheManager.html#getCacheNames()\">getCacheNames</a></code> in interface <code><a href=\"../CacheManager.html\" title=\"interface in org.springframework.cache\">CacheManager</a></code>",
+      "translation": "`<code><a href=\"../CacheManager.html#getCacheNames()\">getCacheNames</a></code>` 接口 `<code><a href=\"../CacheManager.html\" title=\"interface in org.springframework.cache\">CacheManager</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the cache identifier (must not be <code>null</code>)",
+      "translation": "<code>name</code> - 缓存标识符（不能为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "the associated cache, or <code>null</code> if such a cache\ndoes not exist or could be not created",
+      "translation": "关联的缓存，或者如果不存在该缓存或无法创建该缓存，则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the names of all caches known by the cache manager",
+      "translation": "缓存管理器已知的所有缓存的名称",
+      "count": 1
+    }
+  ]
+}

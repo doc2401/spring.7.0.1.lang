@@ -1,0 +1,381 @@
+{
+  "created_at": "2026-04-14 15:10:06",
+  "updated_at": "2026-04-14 15:10:06",
+  "stats": {
+    "total_entries": 73,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 135,
+    "entries_with_hits": 73,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8493150684931507,
+    "usage_percentage": 0.0073
+  },
+  "items": [
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS API methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS API 方法抛出",
+      "count": 5
+    },
+    {
+      "source": "<code>response</code> - the outgoing JMS message about to be sent",
+      "translation": "<code>response</code> - 即将发送的传出 JMS 消息",
+      "count": 4
+    },
+    {
+      "source": "Alternatively, specify a JMS Destination object as \"defaultResponseDestination\".",
+      "translation": "或者，将 JMS 目标对象指定为\"defaultResponseDestination\"。",
+      "count": 3
+    },
+    {
+      "source": "Return the <a href=\"../../support/converter/MessagingMessageConverter.html\" title=\"class in org.springframework.jms.support.converter\"><code>MessagingMessageConverter</code></a> for this listener,\nbeing able to convert <a href=\"../../../messaging/Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a>.",
+      "translation": "返回此监听器的<a href=\"../../support/converter/MessagingMessageConverter.html\" title=\"class in org.springframework.jms.support.converter\"><code>MessagingMessageConverter</code></a>，使其能够转换<a href=\"../../../messaging/Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Return the <a href=\"../../support/QosSettings.html\" title=\"class in org.springframework.jms.support\"><code>QosSettings</code></a> to use when sending a response,\nor <code>null</code> if the defaults should be used.",
+      "translation": "返回用于发送响应的<a href=\"../../support/QosSettings.html\" title=\"class in org.springframework.jms.support\"><code>QosSettings</code></a>，或者如果应使用默认值则返回<code>null</code>。",
+      "count": 3
+    },
+    {
+      "source": "Resolve the default response destination into a JMS <code>Destination</code>, using this\naccessor's <a href=\"../../support/destination/DestinationResolver.html\" title=\"interface in org.springframework.jms.support.destination\"><code>DestinationResolver</code></a> in case of a destination name.",
+      "translation": "将默认响应目的地解析为 JMS `<code>Destination`，如果是一个目的地名称，则使用此访问器的 <a href=\"../../support/destination/DestinationResolver.html\" title=\"interface in org.springframework.jms.support.destination\"><code>DestinationResolver</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>request</code> - the original incoming JMS message",
+      "translation": "<code>request</code> - 原始传入的 JMS 消息",
+      "count": 3
+    },
+    {
+      "source": "The default implementation first checks the JMS Reply-To\n<code>Destination</code> of the supplied request; if that is not <code>null</code>\nit is returned; if it is <code>null</code>, then the configured\n<a href=\"#resolveDefaultResponseDestination(jakarta.jms.Session)\"><code>default response destination</code></a>\nis returned; if this too is <code>null</code>, then an\n<code>InvalidDestinationException</code> is thrown.",
+      "translation": "默认实现首先检查提供的请求的 JMS Reply-To `<code>Destination`；如果该值不为 `<code>null</code>`，则返回它；如果为 `<code>null</code>`，则返回配置的<a href=\"#resolveDefaultResponseDestination(jakarta.jms.Session)\"><code>默认响应目标</code></a>；如果该值也为 `<code>null</code>`，则抛出<code>InvalidDestinationException</code>。",
+      "count": 2
+    },
+    {
+      "source": "The default converter is a <a href=\"../../support/converter/SimpleMessageConverter.html\" title=\"class in org.springframework.jms.support.converter\"><code>SimpleMessageConverter</code></a>, which is able\nto handle <code>BytesMessages</code>,\n<code>TextMessages</code> and\n<code>ObjectMessages</code>.",
+      "translation": "默认转换器是<a href=\"../../support/converter/SimpleMessageConverter.html\" title=\"class in org.springframework.jms.support.converter\"><code>SimpleMessageConverter</code></a>，它能够处理<code>BytesMessages</code>、<code>TextMessages</code>和<code>ObjectMessages</code>。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note:</b> Does not support sending response messages based on\nresult objects returned from listener methods. Use the\n<a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> entry point (typically through a Spring\nmessage listener container) for handling result objects as well.",
+      "translation": "<b>注意：</b>不支持根据从监听器方法返回的结果对象发送响应消息。请使用<a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a>入口点（通常通过 Spring 消息监听器容器）来处理结果对象。",
+      "count": 2
+    },
+    {
+      "source": "This method only applies when used as standard JMS <code>MessageListener</code>.\nIn case of the Spring <a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> mechanism,\nexceptions get handled by the caller instead.",
+      "translation": "此方法仅在作为标准 JMS `<code>MessageListener</code>` 使用时适用。在 Spring `<a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a>` 机制的情况下，异常由调用者处理。",
+      "count": 2
+    },
+    {
+      "source": "Delegates the message to the target listener method, with appropriate\nconversion of the message argument. In case of an exception, the\n<a href=\"#handleListenerException(java.lang.Throwable)\"><code>handleListenerException(Throwable)</code></a> method will be invoked.",
+      "translation": "将消息委派给目标监听器方法，并对消息参数进行适当的转换。如果发生异常，将调用 <a href=\"#handleListenerException(java.lang.Throwable)\"><code>handleListenerException(Throwable)</code></a> 方法。",
+      "count": 2
+    },
+    {
+      "source": "Response destinations are only relevant for listener methods that return\nresult objects, which will be wrapped in a response message and sent to a\nresponse destination.",
+      "translation": "响应目的地仅对返回结果对象的监听器方法有效，这些结果对象将被封装在响应消息中并发送至响应目的地。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, specify a \"defaultResponseQueueName\" or \"defaultResponseTopicName\",\nto be dynamically resolved via the DestinationResolver.",
+      "translation": "或者，指定\"defaultResponseQueueName\"或\"defaultResponseTopicName\"，以便通过 DestinationResolver 动态解析。",
+      "count": 2
+    },
+    {
+      "source": "The default resolver is a SimpleDestinationResolver. Specify a\nJndiDestinationResolver for resolving destination names as JNDI locations.",
+      "translation": "默认解析器为 SimpleDestinationResolver。请指定一个 JndiDestinationResolver 以将目标名称解析为 JNDI 位置。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation sets the response's correlation id\nto the request message's correlation id, if any; otherwise to the\nrequest message id.",
+      "translation": "默认实现会将响应的相关标识符（correlation id）设置为请求消息的相关标识符（如有），否则设置为请求消息标识符。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../support/JmsHeaderMapper.html\" title=\"interface in org.springframework.jms.support\"><code>JmsHeaderMapper</code></a> implementation to use to map the standard\nJMS headers. By default, a <a href=\"../../support/SimpleJmsHeaderMapper.html\" title=\"class in org.springframework.jms.support\"><code>SimpleJmsHeaderMapper</code></a> is used.",
+      "translation": "将 `<a href=\"../../support/JmsHeaderMapper.html\" title=\"interface in org.springframework.jms.support\"><code>JmsHeaderMapper</code></a>` 实现设置为用于映射标准 JMS 标头。默认情况下，使用一个 `<a href=\"../../support/SimpleJmsHeaderMapper.html\" title=\"class in org.springframework.jms.support\"><code>SimpleJmsHeaderMapper</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../support/QosSettings.html\" title=\"class in org.springframework.jms.support\"><code>QosSettings</code></a> to use when sending a response. Can be set to\n<code>null</code> to indicate that the broker's defaults should be used.",
+      "translation": "设置发送响应时使用的<a href=\"../../support/QosSettings.html\" title=\"class in org.springframework.jms.support\"><code>QosSettings</code></a>。可设置为<code>null</code>以表示应使用代理的默认值。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../SessionAwareMessageListener.html#onMessage(M,jakarta.jms.Session)\">SessionAwareMessageListener</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../SessionAwareMessageListener.html#onMessage(M,jakarta.jms.Session)\">SessionAwareMessageListener</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../support/JmsHeaderMapper.html\" title=\"interface in org.springframework.jms.support\"><code>JmsHeaderMapper</code></a> implementation to use to map the standard\nJMS headers.",
+      "translation": "将 `<a href=\"../../support/JmsHeaderMapper.html\" title=\"interface in org.springframework.jms.support\"><code>JmsHeaderMapper</code></a>` 实现设置为用于映射标准 JMS 标头。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../support/QosSettings.html\" title=\"class in org.springframework.jms.support\"><code>QosSettings</code></a> to use when sending a response.",
+      "translation": "设置发送响应时使用的<a href=\"../../support/QosSettings.html\" title=\"class in org.springframework.jms.support\"><code>QosSettings</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Pre-process the given result before it is converted to a <code>Message</code>.",
+      "translation": "在将给定结果转换为 `<code>Message</code>` 之前对其进行预处理。",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses.",
+      "translation": "可供子类使用的 Logger。",
+      "count": 2
+    },
+    {
+      "source": "Build a JMS message to be sent as response based on the given result object.",
+      "translation": "根据给定的结果对象构建要作为响应发送的 JMS 消息。",
+      "count": 2
+    },
+    {
+      "source": "Extract the message body from the given JMS message.",
+      "translation": "从给定的 JMS 消息中提取消息正文。",
+      "count": 2
+    },
+    {
+      "source": "Return the DestinationResolver for this adapter.",
+      "translation": "返回此适配器的 DestinationResolver。",
+      "count": 2
+    },
+    {
+      "source": "Return the converter that will convert incoming JMS messages to\nlistener method arguments, and objects returned from listener\nmethods back to JMS messages.",
+      "translation": "返回将传入的 JMS 消息转换为监听器方法参数的转换器，以及将监听器方法返回的对象转换回 JMS 消息的转换器。",
+      "count": 2
+    },
+    {
+      "source": "Handle the given result object returned from the listener method,\nsending a response message back.",
+      "translation": "处理从监听器方法返回的结果对象，并发送响应消息。",
+      "count": 2
+    },
+    {
+      "source": "Send the given response message to the given destination.",
+      "translation": "将给定的响应消息发送到给定的目的地。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../SessionAwareMessageListener.html#onMessage(M,jakarta.jms.Session)\">onMessage</a></code> in interface <code><a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\">SessionAwareMessageListener</a>&lt;jakarta.jms.Message&gt;</code>",
+      "translation": "`<code><a href=\"../SessionAwareMessageListener.html#onMessage(M,jakarta.jms.Session)\">onMessage</a></code>` 在接口 `<code><a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\">SessionAwareMessageListener</a>&lt;jakarta.jms.Message&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>responseQosSettings</code> - the QoS settings to use when sending a response or\n<code>null</code> to use the default values.",
+      "translation": "<code>responseQosSettings</code> - 发送响应时使用的 QoS 设置，或为 <code>null</code> 以使用默认值。",
+      "count": 2
+    },
+    {
+      "source": "<code>onMessage</code> in interface <code>jakarta.jms.MessageListener</code>",
+      "translation": "<code>onMessage</code> 在接口 <code>jakarta.jms.MessageListener</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>message</code> - the JMS <code>Message</code>",
+      "translation": "<code>message</code> - JMS <code>Message</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../support/converter/MessageConversionException.html\" title=\"class in org.springframework.jms.support.converter\">MessageConversionException</a></code> - if the message could not be extracted",
+      "translation": "<code><a href=\"../../support/converter/MessageConversionException.html\" title=\"class in org.springframework.jms.support.converter\">MessageConversionException</a></code> - 如果无法提取消息",
+      "count": 2
+    },
+    {
+      "source": "<code>result</code> - the result object to handle (never <code>null</code>)",
+      "translation": "<code>result</code> - 要处理的结果对象（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>session</code> - the JMS Session to operate on (may be <code>null</code>)",
+      "translation": "<code>session</code> - 要操作的 JMS Session（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ReplyFailureException.html\" title=\"class in org.springframework.jms.listener.adapter\">ReplyFailureException</a></code> - if the response message could not be sent",
+      "translation": "<code><a href=\"ReplyFailureException.html\" title=\"class in org.springframework.jms.listener.adapter\">ReplyFailureException</a></code> - 如果无法发送响应消息",
+      "count": 2
+    },
+    {
+      "source": "the JMS <code>Message</code> (never <code>null</code>)",
+      "translation": "JMS <code>Message</code>（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.jms.InvalidDestinationException</code> - if no <code>Destination</code> can be determined",
+      "translation": "<code>jakarta.jms.InvalidDestinationException</code> - 如果无法确定任何 <code>Destination</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>message</code> - the incoming JMS message",
+      "translation": "<code>message</code> - 传入的 JMS 消息",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the original request message",
+      "translation": "<code>request</code> - 原始请求消息",
+      "count": 2
+    },
+    {
+      "source": "<code>session</code> - the JMS Session to operate on",
+      "translation": "<code>session</code> - 要操作的 JMS Session",
+      "count": 2
+    },
+    {
+      "source": "<code>result</code> - the content of the message, as returned from the listener method",
+      "translation": "<code>result</code> - 消息内容，由监听器方法返回。",
+      "count": 2
+    },
+    {
+      "source": "<code>result</code> - the result of the invocation",
+      "translation": "<code>result</code> - 调用的结果",
+      "count": 2
+    },
+    {
+      "source": "the payload response to handle, either the <code>result</code> argument\nor any other object (for instance wrapping the result).",
+      "translation": "要处理的负载响应，即 `<code>result`</code> 参数或任何其他对象（例如封装结果的包装器）。",
+      "count": 2
+    },
+    {
+      "source": "the response destination (never <code>null</code>)",
+      "translation": "响应目的地（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the located <code>Destination</code>",
+      "translation": "已定位的<code>Destination</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>session</code> - the JMS session to operate on",
+      "translation": "<code>session</code> - 要操作的 JMS 会话",
+      "count": 2
+    },
+    {
+      "source": "<code>destination</code> - the JMS destination to send to",
+      "translation": "<code>destination</code> - 要发送到的 JMS 目标",
+      "count": 2
+    },
+    {
+      "source": "<code>response</code> - the JMS message to send",
+      "translation": "<code>response</code> - 要发送的 JMS 消息",
+      "count": 2
+    },
+    {
+      "source": "<code>producer</code> - the JMS message producer that will be used to send the message",
+      "translation": "<code>producer</code> - 将用于发送消息的 JMS 消息生产者",
+      "count": 2
+    },
+    {
+      "source": "the content of the message, to be passed into the listener method\nas an argument",
+      "translation": "消息的内容，作为参数传递给监听器方法。",
+      "count": 2
+    },
+    {
+      "source": "Implementors are supposed to process the given Message,\ntypically sending reply messages through the given Session.",
+      "translation": "实现者应处理给定的 Message，通常通过给定的 Session 发送回复消息。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty.",
+      "translation": "默认实现为空。",
+      "count": 1
+    },
+    {
+      "source": "An abstract JMS <code>MessageListener</code> adapter providing the necessary\ninfrastructure to extract the payload of a JMS <code>Message</code>.",
+      "translation": "一个抽象的 JMS `<code>MessageListener</code>` 适配器，提供必要的框架以提取 JMS `<code>Message</code>` 的有效负载。",
+      "count": 1
+    },
+    {
+      "source": "Standard JMS <code>MessageListener</code> entry point.",
+      "translation": "标准 JMS <code>MessageListener</code> 入口点。",
+      "count": 1
+    },
+    {
+      "source": "Determine a response destination for the given message.",
+      "translation": "确定给定消息的响应目的地。",
+      "count": 1
+    },
+    {
+      "source": "Handle the given exception that arose during listener execution.",
+      "translation": "处理监听器执行期间引发的异常。",
+      "count": 1
+    },
+    {
+      "source": "Callback for processing a received JMS message.",
+      "translation": "用于处理接收到的 JMS 消息的回调。",
+      "count": 1
+    },
+    {
+      "source": "Post-process the given message producer before using it to send the response.",
+      "translation": "在发送响应之前，先对给定的消息生产者进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "Post-process the given response message before it will be sent.",
+      "translation": "在发送之前对给定的响应消息进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "Set the default destination to send response messages to.",
+      "translation": "将默认目的地设置为发送响应消息的目标。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the default response queue to send response messages to.",
+      "translation": "将默认响应队列的名称设置为发送响应消息的目标。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the default response topic to send response messages to.",
+      "translation": "将默认响应主题的名称设置为发送响应消息的主题。",
+      "count": 1
+    },
+    {
+      "source": "Set the DestinationResolver that should be used to resolve response\ndestination names for this adapter.",
+      "translation": "设置用于解析此适配器响应目标名称的 DestinationResolver。",
+      "count": 1
+    },
+    {
+      "source": "Set the converter that will convert incoming JMS messages to\nlistener method arguments, and objects returned from listener\nmethods back to JMS messages.",
+      "translation": "设置用于将传入的 JMS 消息转换为监听器方法参数的转换器，以及将监听器方法返回的对象转换回 JMS 消息的转换器。",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the received JMS message (never <code>null</code>)",
+      "translation": "<code>message</code> - 接收到的 JMS 消息（永远不会为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - the underlying JMS Session (never <code>null</code>)",
+      "translation": "<code>session</code> - 底层的 JMS Session（永远不为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS 方法抛出",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the exception to handle",
+      "translation": "<code>ex</code> - 要处理的异常",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if resolution failed",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果解析失败",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Stephane Nicoll",
+      "translation": "Juergen Hoeller, Stephane Nicoll",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

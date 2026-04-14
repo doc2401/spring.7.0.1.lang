@@ -1,0 +1,521 @@
+{
+  "created_at": "2026-04-14 13:17:32",
+  "updated_at": "2026-04-14 13:17:32",
+  "stats": {
+    "total_entries": 101,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 199,
+    "entries_with_hits": 101,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9702970297029703,
+    "usage_percentage": 0.0101
+  },
+  "items": [
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of I/O errors",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 在发生 I/O 错误时",
+      "count": 7
+    },
+    {
+      "source": "a mutable Set of matching Resource instances",
+      "translation": "一个可变的匹配资源实例集合",
+      "count": 4
+    },
+    {
+      "source": "ClassLoader access will happen via the thread context class loader.",
+      "translation": "类加载器访问将通过线程上下文类加载器进行。",
+      "count": 3
+    },
+    {
+      "source": "Create a <code>PathMatchingResourcePatternResolver</code> with a\n<a href=\"../DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a> and the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>.",
+      "translation": "创建一个使用提供的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>和<a href=\"../DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>的<code>PathMatchingResourcePatternResolver</code>。",
+      "count": 3
+    },
+    {
+      "source": "Find all resources in the file system of the supplied root directory that\nmatch the given location sub pattern via the Ant-style <a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>.",
+      "translation": "查找供应的根目录文件系统中所有通过 Ant 风格的<a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>匹配给定位置子模式的资源。",
+      "count": 3
+    },
+    {
+      "source": "Find all resources in jar files that match the given location pattern\nvia the Ant-style <a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>.",
+      "translation": "通过 Ant 风格的<a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>查找与给定位置模式匹配的 jar 文件中的所有资源。",
+      "count": 3
+    },
+    {
+      "source": "Return the <a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a> that this resource pattern resolver uses.",
+      "translation": "返回此资源模式解析器使用的<a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>result</code> - the set of resources to add jar roots to",
+      "translation": "<code>result</code> - 要添加 jar 根目录的资源集",
+      "count": 3
+    },
+    {
+      "source": "<code>subPattern</code> - the sub pattern to match (below the root directory)",
+      "translation": "<code>subPattern</code> - 要匹配的子模式（根目录以下）",
+      "count": 3
+    },
+    {
+      "source": "the result as Resource array",
+      "translation": "结果作为资源数组返回。",
+      "count": 3
+    },
+    {
+      "source": "In the simple case, if the specified location path does not start with the\n<code>\"classpath*:</code>\" prefix and does not contain a <a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a>\npattern, this resolver will simply return a single resource via a\n<code>getResource()</code> call on the underlying <code>ResourceLoader</code>.\nExamples are real URLs such as \"<code>file:C:/context.xml</code>\", pseudo-URLs\nsuch as \"<code>classpath:/context.xml</code>\", and simple unprefixed paths\nsuch as \"<code>/WEB-INF/context.xml</code>\". The latter will resolve in a\nfashion specific to the underlying <code>ResourceLoader</code> (for example,\n<code>ServletContextResource</code> for a <code>WebApplicationContext</code>).",
+      "translation": "在简单情况下，如果指定的位置路径不以 `<code>\"classpath*:\"</code>` 前缀开头且不包含一个 `<a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a>` 模式，该解析器将简单地通过底层 `<code>ResourceLoader</code>` 上的 `<code>getResource()</code>` 调用返回单个资源。示例包括真实 URL（如 `<code>file:C:/context.xml</code>`）、伪 URL（如 `<code>classpath:/context.xml</code>`）以及简单无前缀路径（如 `<code>/WEB-INF/context.xml</code>`）。后者将以底层 `<code>ResourceLoader</code>` 特有的方式解析（例如，对于 `<code>WebApplicationContext</code>` 则为 `<code>ServletContextResource</code>`）。",
+      "count": 2
+    },
+    {
+      "source": "<b>WARNING:</b> Note that \"<code>classpath*:</code>\" when combined with\nAnt-style patterns will only work reliably with at least one root directory\nbefore the pattern starts, unless the actual target files reside in the file\nsystem. This means that a pattern like \"<code>classpath*:*.xml</code>\" will\n<i>not</i> retrieve files from the root of jar files but rather only from the\nroot of expanded directories. This originates from a limitation in the JDK's\n<code>ClassLoader.getResources()</code> method which only returns file system\nlocations for a passed-in empty String (indicating potential roots to search).\nThis <code>ResourcePatternResolver</code> implementation tries to mitigate the\njar root lookup limitation through <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URLClassLoader.html\" title=\"class or interface in java.net\"><code>URLClassLoader</code></a> introspection and\n\"<code>java.class.path</code>\" manifest evaluation; however, without portability\nguarantees.",
+      "translation": "<b>警告：</b> 请注意，当将 \"<code>classpath*:</code>\" 与 Ant 风格模式结合使用时，除非实际目标文件位于文件系统中，否则只有在模式开始前至少有一个根目录的情况下才能可靠工作。这意味着像 \"<code>classpath*:*.xml</code>\" 这样的模式<i>不会</i>从 jar 文件的根目录检索文件，而仅从展开目录的根目录检索。这源于 JDK 的<code>ClassLoader.getResources()</code>方法的限制，该方法仅对传入的空字符串（表示潜在搜索根）返回文件系统位置。此<code>ResourcePatternResolver</code>实现试图通过<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URLClassLoader.html\" title=\"class or interface in java.net\"><code>URLClassLoader</code></a>检查和\"<code>java.class.path</code>\"清单评估来缓解 jar 根目录查找的限制；然而，这并不保证可移植性。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.0, if <a href=\"#getResources(java.lang.String)\"><code>getResources(String)</code></a> is invoked with\na location pattern using the \"<code>classpath*:</code>\" prefix it will first search\nall modules in the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ModuleLayer.html#boot()\" title=\"class or interface in java.lang\">boot layer</a>, excluding\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/module/ModuleFinder.html#ofSystem()\" title=\"class or interface in java.lang.module\">system modules</a>. It will then search the\nclass path using <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> APIs as described previously and return the\ncombined results. Consequently, some of the limitations of class path searches\nmay not apply when applications are deployed as modules.",
+      "translation": "自 Spring Framework 6.0 起，如果以带有\"<code>classpath*:</code>\"前缀的位置模式调用<a href=\"#getResources(java.lang.String)\"><code>getResources(String)</code></a>，它将首先在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ModuleLayer.html#boot()\" title=\"class or interface in java.lang\">引导层</a>中的所有模块中进行搜索，排除<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/module/ModuleFinder.html#ofSystem()\" title=\"class or interface in java.lang.module\">系统模块</a>。然后，它将使用之前描述的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> API 搜索类路径，并返回合并的结果。因此，当应用程序作为模块部署时，类路径搜索的一些限制可能不再适用。",
+      "count": 2
+    },
+    {
+      "source": "The source path may be a simple path which has a one-to-one mapping to a\ntarget <a href=\"../Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>, or alternatively may\ncontain the special \"<code>classpath*:</code>\" prefix and/or internal Ant-style\npath patterns (matched using Spring's <a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a> utility). Both\nof the latter are effectively wildcards.",
+      "translation": "源路径可能是一个与目标<a href=\"../Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>具有一对一映射的简单路径，或者包含特殊的\"<code>classpath*:</code>\"前缀和/或内部 Ant 风格的路径模式（使用 Spring 的<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>实用程序进行匹配）。后两者本质上都是通配符。",
+      "count": 2
+    },
+    {
+      "source": "The \"<code>classpath*:</code>\" prefix can also be combined with a <code>PathMatcher</code>\npattern in the rest of the location path — for example,\n\"<code>classpath*:META-INF/*-beans.xml\"</code>. In this case, the resolution strategy\nis fairly simple: a <code>ClassLoader.getResources()</code> call is used on the last\nnon-wildcard path segment to get all the matching resources in the class loader\nhierarchy, and then off each resource the same <code>PathMatcher</code> resolution\nstrategy described above is used for the wildcard sub pattern.",
+      "translation": "\"<code>classpath*:</code>\" 前缀还可以与位置路径其余部分的 <code>PathMatcher</code> 模式结合使用——例如，\"<code>classpath*:META-INF/*-beans.xml\"</code>。在这种情况下，解析策略相当简单：对最后一个非通配符路径段调用 <code>ClassLoader.getResources()</code> 以获取类加载器层次结构中所有匹配的资源，然后对每个资源应用上述描述的相同 <code>PathMatcher</code> 解析策略来处理通配符子模式。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.0.5, the default implementation creates a <a href=\"../FileSystemResource.html\" title=\"class in org.springframework.core.io\"><code>FileSystemResource</code></a>\nin case of the \"file\" protocol or a <a href=\"../UrlResource.html\" title=\"class in org.springframework.core.io\"><code>UrlResource</code></a> otherwise, matching\nthe outcome of pattern-based class path traversal in the same resource layout,\nas well as matching the outcome of module path searches.",
+      "translation": "自 6.0.5 版本起，默认实现会在\"file\"协议的情况下创建 <a href=\"../FileSystemResource.html\" title=\"class in org.springframework.core.io\"><code>FileSystemResource</code></a>，否则创建 <a href=\"../UrlResource.html\" title=\"class in org.springframework.core.io\"><code>UrlResource</code></a>，这与相同资源布局中的基于模式的类路径遍历结果相匹配，同时也与模块路径搜索的结果相匹配。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#findPathMatchingResources(java.lang.String)\"><code>findPathMatchingResources(String)</code></a> delegates to\n<a href=\"../../../util/ResourceUtils.html#isJarURL(java.net.URL)\"><code>ResourceUtils.isJarURL(URL)</code></a> to determine whether the given URL\npoints to a resource in a jar file, and only invokes this method as a fallback.",
+      "translation": "<a href=\"#findPathMatchingResources(java.lang.String)\"><code>findPathMatchingResources(String)</code></a> 委托给 <a href=\"../../../util/ResourceUtils.html#isJarURL(java.net.URL)\"><code>ResourceUtils.isJarURL(URL)</code></a> 以确定给定 URL 是否指向 jar 文件中的资源，并且仅在此方法作为回退时调用它。",
+      "count": 2
+    },
+    {
+      "source": "The location pattern may be an explicit resource path such as\n<code>\"com/example/config.xml\"</code> or a pattern such as\n<code>\"com/example/**/config-*.xml\"</code> to be matched using the\nconfigured <a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>.",
+      "translation": "位置模式可以是显式资源路径，例如 `<code>\"com/example/config.xml\"</code>`，或是一个使用配置的<a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>进行匹配的模式，例如 `<code>\"com/example/**/config-*.xml\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "There is special support for retrieving multiple class path resources with\nthe same name, via the \"<code>classpath*:</code>\" prefix. For example,\n\"<code>classpath*:META-INF/beans.xml</code>\" will find all \"META-INF/beans.xml\"\nfiles in the class path, be it in \"classes\" directories or in JAR files.\nThis is particularly useful for autodetecting config files of the same name\nat the same location within each jar file. Internally, this happens via a\n<code>ClassLoader.getResources()</code> call, and is completely portable.",
+      "translation": "支持通过\"<code>classpath*:</code>\"前缀检索具有相同名称的多个类路径资源。例如，\"<code>classpath*:META-INF/beans.xml</code>\"将在类路径中找到所有\"META-INF/beans.xml\"文件，无论是在\"classes\"目录中还是在 JAR 文件中。这对于在每个 JAR 文件的相同位置自动检测同名配置文件特别有用。内部通过<code>ClassLoader.getResources()</code>调用实现此功能，且完全可移植。",
+      "count": 2
+    },
+    {
+      "source": "Switch this flag to <code>false</code> in order to avoid any jar caching, at\nthe <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/JarURLConnection.html\" title=\"class or interface in java.net\"><code>JarURLConnection</code></a> level as well as within this resolver instance.",
+      "translation": "将此标志切换为 `<code>false</code>`，以避免在 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/JarURLConnection.html\" title=\"class or interface in java.net\"><code>JarURLConnection</code></a> 级别以及在此解析器实例内执行任何 jar 缓存。",
+      "count": 2
+    },
+    {
+      "source": "Note that <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URLConnection.html#setDefaultUseCaches(boolean)\" title=\"class or interface in java.net\"><code>URLConnection.setDefaultUseCaches(boolean)</code></a> can be turned off\nindependently. This resolver-level setting is designed to only enforce\n<code>JarURLConnection#setUseCaches(true/false)</code> if necessary but otherwise\nleaves the JVM-level default in place (if this setter has not been called).",
+      "translation": "请注意，`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URLConnection.html#setDefaultUseCaches(boolean)\" title=\"class or interface in java.net\"><code>URLConnection.setDefaultUseCaches(boolean)</code></a>` 可以独立关闭。此解析器级别的设置旨在仅在必要时强制执行 `<code>JarURLConnection#setUseCaches(true/false)</code>`，否则保留 JVM 级别的默认设置（如果尚未调用此 setter）。",
+      "count": 2
+    },
+    {
+      "source": "Note that a <code>Resource</code> handle does not imply an existing resource;\nyou need to invoke <a href=\"../Resource.html#exists()\"><code>Resource.exists()</code></a> to check for existence.",
+      "translation": "注意，`Resource` 句柄并不意味着资源已存在；您需要调用<a href=\"../Resource.html#exists()\"><code>Resource.exists()</code></a>来检查其是否存在。",
+      "count": 2
+    },
+    {
+      "source": "If the specified path is a class path location, then the resolver must\nobtain the last non-wildcard path segment URL via a\n<code>Classloader.getResource()</code> call. Since this is just a\nnode of the path (not the file at the end) it is actually undefined\n(in the ClassLoader Javadocs) exactly what sort of URL is returned in\nthis case. In practice, it is usually a <code>java.io.File</code> representing\nthe directory, where the class path resource resolves to a filesystem\nlocation, or a jar URL of some sort, where the class path resource resolves\nto a jar location. Still, there is a portability concern on this operation.",
+      "translation": "如果指定的路径是类路径位置，则解析器必须通过 `<code>Classloader.getResource()</code>` 调用获取最后一个非通配符路径段 URL。由于这仅仅是路径的一个节点（而非末尾的文件），在 ClassLoader Javadocs 中实际上并未明确定义在这种情况下返回的确切 URL 类型。在实践中，它通常是一个代表目录的 `<code>java.io.File</code>`，其中类路径资源解析为文件系统位置，或者是某种 jar URL，其中类路径资源解析为 jar 位置。尽管如此，此操作仍存在可移植性问题。",
+      "count": 2
+    },
+    {
+      "source": "<b>WARNING:</b> Ant-style patterns with \"<code>classpath:</code>\" resources are not\nguaranteed to find matching resources if the base package to search is available\nin multiple class path locations. This is because a resource such as",
+      "translation": "<b>警告：</b> 如果要在多个类路径位置中搜索的基础包可用，则带有 \"<code>classpath:</code>\" 资源的 Ant 风格模式无法保证找到匹配的资源。这是因为像",
+      "count": 2
+    },
+    {
+      "source": "Default is <a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>.",
+      "translation": "默认值为<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.2.10, this setting propagates to <a href=\"../UrlResource.html#setUseCaches(boolean)\"><code>UrlResource.setUseCaches(boolean)</code></a>.",
+      "translation": "自 6.2.10 版本起，此设置会传播到<a href=\"../UrlResource.html#setUseCaches(boolean)\"><code>UrlResource.setUseCaches(boolean)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The handle should always be a reusable resource descriptor,\nallowing for multiple <a href=\"../InputStreamSource.html#getInputStream()\"><code>InputStreamSource.getInputStream()</code></a> calls.",
+      "translation": "句柄应始终是可重用的资源描述符，允许多次调用<a href=\"../InputStreamSource.html#getInputStream()\"><code>InputStreamSource.getInputStream()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"#doFindAllClassPathResources(java.lang.String)\"><code>doFindAllClassPathResources(String)</code></a>.",
+      "translation": "委托给<a href=\"#doFindAllClassPathResources(java.lang.String)\"><code>doFindAllClassPathResources(String)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Called by <a href=\"#findAllClassPathResources(java.lang.String)\"><code>findAllClassPathResources(String)</code></a>.",
+      "translation": "由<a href=\"#findAllClassPathResources(java.lang.String)\"><code>findAllClassPathResources(String)</code></a>调用。",
+      "count": 2
+    },
+    {
+      "source": "Used for determining the starting point for file matching, resolving the\nroot directory location to be passed into <a href=\"#getResources(java.lang.String)\"><code>getResources(String)</code></a>,\nwith the remainder of the location to be used as the sub pattern.",
+      "translation": "用于确定文件匹配的起始点，解析要传递给<a href=\"#getResources(java.lang.String)\"><code>getResources(String)</code></a>的根目录位置，并将剩余部分用作子模式。",
+      "count": 2
+    },
+    {
+      "source": "By default, <a href=\"#findPathMatchingResources(java.lang.String)\"><code>findPathMatchingResources(String)</code></a> resolves Equinox\nOSGi \"bundleresource:\" and \"bundleentry:\" URLs into standard jar file URLs\nthat will be traversed using Spring's standard jar file traversal algorithm.",
+      "translation": "默认情况下，<a href=\"#findPathMatchingResources(java.lang.String)\"><code>findPathMatchingResources(String)</code></a> 会将 Equinox OSGi \"bundleresource:\" 和 \"bundleentry:\" URL 解析为标准 jar 文件 URL，并使用 Spring 的标准 jar 文件遍历算法进行遍历。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation scans all modules in the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ModuleLayer.html#boot()\" title=\"class or interface in java.lang\">boot layer</a>, excluding <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/module/ModuleFinder.html#ofSystem()\" title=\"class or interface in java.lang.module\">system modules</a>.",
+      "translation": "默认实现会扫描 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ModuleLayer.html#boot()\" title=\"class or interface in java.lang\">引导层</a> 中的所有模块，但排除 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/module/ModuleFinder.html#ofSystem()\" title=\"class or interface in java.lang.module\">系统模块</a>。",
+      "count": 2
+    },
+    {
+      "source": "If the specified path is already a file URL (either explicitly, or\nimplicitly because the base <code>ResourceLoader</code> is a filesystem one),\nthen wildcarding is guaranteed to work in a completely portable fashion.",
+      "translation": "如果指定的路径已经是文件 URL（无论是显式指定，还是因为基础 `<code>ResourceLoader` 是文件系统加载器而隐式指定），则通配符匹配保证能以完全可移植的方式工作。",
+      "count": 2
+    },
+    {
+      "source": "If a jar URL is obtained for the last non-wildcard segment, the resolver\nmust be able to get a <code>java.net.JarURLConnection</code> from it, or\nmanually parse the jar URL, to be able to walk the contents of the jar\nand resolve the wildcard. This will work in most environments but will\nfail in others, and it is strongly recommended that the wildcard\nresolution of resources coming from jars be thoroughly tested in your\nspecific environment before you rely on it.",
+      "translation": "如果为最后一个非通配符段获取了 jar URL，解析器必须能够从该 URL 获取一个 `<code>java.net.JarURLConnection</code>`，或者手动解析该 jar URL，以便遍历 jar 的内容并解析通配符。这在大多数环境中可以工作，但在其他环境中可能会失败，因此强烈建议在依赖它之前，在您的特定环境中彻底测试来自 jar 的资源通配符解析。",
+      "count": 2
+    },
+    {
+      "source": "This template method therefore allows for detecting further kinds of\njar-like resources — for example, via <code>instanceof</code> checks on\nthe resource handle type.",
+      "translation": "因此，该模板方法允许检测其他类型的 jar 类资源——例如，通过对资源句柄类型进行 `<code>instanceof</code>` 检查。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method returns <code>false</code>.",
+      "translation": "该方法的默认实现返回<code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "When the path location contains an Ant-style pattern, for example:",
+      "translation": "当路径位置包含 Ant 风格模式时，例如：",
+      "count": 2
+    },
+    {
+      "source": "Supports resources in OSGi bundles, JBoss VFS, jar files, zip files,\nand file systems.",
+      "translation": "支持 OSGi 包、JBoss VFS、jar 文件、zip 文件和文件系统上的资源。",
+      "count": 2
+    },
+    {
+      "source": "Will return \"/WEB-INF/\" for the location \"/WEB-INF/*.xml\", for example.",
+      "translation": "将返回\"/WEB-INF/\"作为位置\"/WEB-INF/*.xml\"的示例。",
+      "count": 2
+    },
+    {
+      "source": "For any custom resolution, override this template method and replace the\nsupplied resource handle accordingly.",
+      "translation": "对于任何自定义分辨率，请覆盖此模板方法并相应地替换提供的资源句柄。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation of this method returns the supplied resource\nunmodified.",
+      "translation": "该方法的默认实现返回未修改的给定资源。",
+      "count": 2
+    },
+    {
+      "source": "Convert the given URL as returned from the configured\n<a href=\"#getClassLoader()\"><code>ClassLoader</code></a> into a <a href=\"../Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>, applying\nto path lookups without a pattern (see <a href=\"#findAllClassPathResources(java.lang.String)\"><code>findAllClassPathResources(String)</code></a>).",
+      "translation": "将配置返回的 URL 转换为<a href=\"../Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>，并应用于不带模式的路径查找（参见<a href=\"#findAllClassPathResources(java.lang.String)\"><code>findAllClassPathResources(String)</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>PathMatchingResourcePatternResolver</code> with a\n<a href=\"../DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>.",
+      "translation": "创建一个使用<a href=\"../DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>的<code>PathMatchingResourcePatternResolver</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ResourceLoader.html#getClassLoader()\">ResourceLoader</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ResourceLoader.html#getClassLoader()\">ResourceLoader</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ResourceLoader.html#getResource(java.lang.String)\">ResourceLoader</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ResourceLoader.html#getResource(java.lang.String)\">ResourceLoader</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ResourcePatternResolver.html#getResources(java.lang.String)\">ResourcePatternResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ResourcePatternResolver.html#getResources(java.lang.String)\">ResourcePatternResolver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Search all <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URLClassLoader.html\" title=\"class or interface in java.net\"><code>URLClassLoader</code></a> URLs for jar file references and add each to the\ngiven set of resources in the form of a pointer to the root of the jar file content.",
+      "translation": "搜索所有 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URLClassLoader.html\" title=\"class or interface in java.net\"><code>URLClassLoader</code></a> URL 中的 jar 文件引用，并将每个引用添加到给定资源集中，形式为指向 jar 文件内容根目录的指针。",
+      "count": 2
+    },
+    {
+      "source": "Determine jar file references from <code>Class-Path</code> manifest entries (which\nare added to the <code>java.class.path</code> JVM system property by the system\nclass loader) and add each to the given set of resources in the form of\na pointer to the root of the jar file content.",
+      "translation": "从 `<code>Class-Path</code>` 清单条目（这些条目由系统类加载器添加到 `<code>java.class.path</code>` JVM 系统属性中）确定 jar 文件引用，并将每个引用以指向 jar 文件内容根部的指针形式添加到给定资源集中。",
+      "count": 2
+    },
+    {
+      "source": "Find all class path resources with the given path via the configured\n<a href=\"#getClassLoader()\"><code>ClassLoader</code></a>.",
+      "translation": "通过配置的 <a href=\"#getClassLoader()\"><code>ClassLoader</code></a> 查找所有给定路径的类路径资源。",
+      "count": 2
+    },
+    {
+      "source": "Find all resources that match the given location pattern via the Ant-style\n<a href=\"#getPathMatcher()\"><code>PathMatcher</code></a>.",
+      "translation": "通过 Ant 风格的 <a href=\"#getPathMatcher()\"><code>PathMatcher</code></a> 查找所有匹配给定位置模式的资源。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a> that this pattern resolver works with.",
+      "translation": "返回此模式解析器所配合使用的<a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Determine if the given resource handle indicates a jar resource that the\n<a href=\"#doFindPathMatchingJarResources(org.springframework.core.io.Resource,java.net.URL,java.lang.String)\"><code>doFindPathMatchingJarResources(Resource, URL, String)</code></a> method can handle.",
+      "translation": "确定给定的资源句柄是否指示一个 jar 资源，<a href=\"#doFindPathMatchingJarResources(org.springframework.core.io.Resource,java.net.URL,java.lang.String)\"><code>doFindPathMatchingJarResources(Resource, URL, String)</code></a> 方法可以处理它。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a> implementation to use for this\nresource pattern resolver.",
+      "translation": "将<a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a>实现设置为用于此资源模式解析器。",
+      "count": 2
+    },
+    {
+      "source": "Clear the local resource cache, removing all cached classpath/jar structures.",
+      "translation": "清除本地资源缓存，删除所有缓存的类路径/JAR 结构。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the given jar file URL into a JarFile object.",
+      "translation": "将给定的 jar 文件 URL 解析为 JarFile 对象。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ResourceLoader.html#getClassLoader()\">getClassLoader</a></code> in interface <code><a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\">ResourceLoader</a></code>",
+      "translation": "`<code><a href=\"../ResourceLoader.html#getClassLoader()\">getClassLoader</a></code>` 接口 `<code><a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\">ResourceLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ResourceLoader.html#getResource(java.lang.String)\">getResource</a></code> in interface <code><a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\">ResourceLoader</a></code>",
+      "translation": "`<code><a href=\"../ResourceLoader.html#getResource(java.lang.String)\">getResource</a></code>` 在接口 `<code><a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\">ResourceLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ResourcePatternResolver.html#getResources(java.lang.String)\">getResources</a></code> in interface <code><a href=\"ResourcePatternResolver.html\" title=\"interface in org.springframework.core.io.support\">ResourcePatternResolver</a></code>",
+      "translation": "`<code><a href=\"ResourcePatternResolver.html#getResources(java.lang.String)\">getResources</a></code>` 在接口 `<code><a href=\"ResourcePatternResolver.html\" title=\"interface in org.springframework.core.io.support\">ResourcePatternResolver</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>resourceLoader</code> - the <code>ResourceLoader</code> to load root directories\nand actual resources with",
+      "translation": "<code>resourceLoader</code> - 用于加载根目录和实际资源的 <code>ResourceLoader</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>classLoader</code> - the ClassLoader to load class path resources with,\nor <code>null</code> for using the thread context class loader\nat the time of actual resource access",
+      "translation": "`classLoader` - 用于加载类路径资源的 ClassLoader，或为在访问资源时使用线程上下文类加载器而设为 `null`",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of resolution failure",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"java.io 中的类或接口\">IOException</a></code> - 在解析失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "a modifiable <code>Set</code> containing the corresponding <code>Resource</code>\nobjects",
+      "translation": "一个包含相应<code>Resource</code>对象的可修改<code>Set</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>locationPattern</code> - the location pattern to resolve",
+      "translation": "<code>locationPattern</code> - 要解析的位置模式",
+      "count": 2
+    },
+    {
+      "source": "<code>location</code> - the absolute path within the class path",
+      "translation": "<code>location</code> - 类路径内的绝对路径",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - the absolute path within the class path (never a leading slash)",
+      "translation": "<code>path</code> - 类路径中的绝对路径（绝不能以斜杠开头）",
+      "count": 2
+    },
+    {
+      "source": "<code>url</code> - a URL as returned from the configured ClassLoader",
+      "translation": "<code>url</code> - 由配置的 ClassLoader 返回的 URL",
+      "count": 2
+    },
+    {
+      "source": "<code>classLoader</code> - the ClassLoader to search (including its ancestors)",
+      "translation": "<code>classLoader</code> - 要搜索的类加载器（包括其祖先）",
+      "count": 2
+    },
+    {
+      "source": "<code>locationPattern</code> - the location pattern to match",
+      "translation": "<code>locationPattern</code> - 要匹配的位点模式",
+      "count": 2
+    },
+    {
+      "source": "<code>location</code> - the location to check",
+      "translation": "<code>location</code> - 要检查的位置",
+      "count": 2
+    },
+    {
+      "source": "<code>original</code> - the resource to resolve",
+      "translation": "<code>original</code> - 要解析的资源",
+      "count": 2
+    },
+    {
+      "source": "<code>resource</code> - the resource handle to check (usually the root directory\nto start path matching from)",
+      "translation": "<code>resource</code> - 要检查的资源句柄（通常是用于开始路径匹配的根目录）",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the given resource handle indicates a jar resource",
+      "translation": "<code>true</code> 如果给定的资源句柄指示了一个 jar 资源。",
+      "count": 2
+    },
+    {
+      "source": "<code>rootDirResource</code> - the root directory as Resource",
+      "translation": "<code>rootDirResource</code> - 作为 Resource 的根目录",
+      "count": 2
+    },
+    {
+      "source": "<code>rootDirUrl</code> - the pre-resolved root directory URL",
+      "translation": "<code>rootDirUrl</code> - 预解析的根目录 URL",
+      "count": 2
+    },
+    {
+      "source": "<code>rootDirResource</code> - the root directory as a Resource",
+      "translation": "<code>rootDirResource</code> - 作为 Resource 的根目录",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Colin Sampaleanu, Marius Bogoevici, Costin Leau, Phillip Webb, Sam Brannen, Sebastien Deleuze, Dave Syer",
+      "translation": "Jürgen Höller, Colin Sampaleanu, Marius Bogoevici, Costin Leau, Phillip Webb, Sam Brannen, Sebastien Deleuze, Dave Syer",
+      "count": 2
+    },
+    {
+      "source": "the corresponding Resource object",
+      "translation": "对应的资源对象",
+      "count": 2
+    },
+    {
+      "source": "the part of the location that denotes the root directory",
+      "translation": "表示根目录的位置部分",
+      "count": 2
+    },
+    {
+      "source": "the resolved resource (may be identical to the supplied resource)",
+      "translation": "已解析的资源（可能与提供的资源相同）",
+      "count": 2
+    },
+    {
+      "source": "No Wildcards",
+      "translation": "无通配符",
+      "count": 2
+    },
+    {
+      "source": "Ant-style Patterns",
+      "translation": "Ant 风格模式",
+      "count": 2
+    },
+    {
+      "source": "Implications on Portability",
+      "translation": "对可移植性的影响",
+      "count": 2
+    },
+    {
+      "source": "Other Notes",
+      "translation": "其他说明",
+      "count": 2
+    },
+    {
+      "source": "Clients which need to access the <code>ClassLoader</code> directly can do so\nin a uniform manner with the <code>ResourceLoader</code>, rather than relying\non the thread context <code>ClassLoader</code>.",
+      "translation": "需要直接访问<code>ClassLoader</code>的客户端可以通过<code>ResourceLoader</code>以统一的方式进行操作，而无需依赖线程上下文<code>ClassLoader</code>。",
+      "count": 1
+    },
+    {
+      "source": "Overlapping resource entries that point to the same physical\nresource should be avoided, as far as possible. The result should\nhave set semantics.",
+      "translation": "应尽可能避免指向同一物理资源的重叠资源条目。结果应具有集合语义。",
+      "count": 1
+    },
+    {
+      "source": "Create a <code>PathMatchingResourcePatternResolver</code> with the supplied\n<a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>.",
+      "translation": "创建带有提供的<a href=\"../ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>的<code>PathMatchingResourcePatternResolver</code>。",
+      "count": 1
+    },
+    {
+      "source": "Expose the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by this <code>ResourceLoader</code>.",
+      "translation": "暴露此 `<code>ResourceLoader</code>` 使用的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the given location pattern into <code>Resource</code> objects for all\nmatching resources found in the module path.",
+      "translation": "将给定的位置模式解析为模块路径中所有匹配资源的 `<code>Resource</code>` 对象。",
+      "count": 1
+    },
+    {
+      "source": "Return a <code>Resource</code> handle for the specified resource location.",
+      "translation": "返回指定资源位置的<code>Resource</code>句柄。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the given location pattern into <code>Resource</code> objects.",
+      "translation": "将给定的位置模式解析为 `<code>Resource</code>` 对象。",
+      "count": 1
+    },
+    {
+      "source": "Determine the root directory for the given location.",
+      "translation": "确定给定位置的根目录。",
+      "count": 1
+    },
+    {
+      "source": "Find all class location resources with the given location via the ClassLoader.",
+      "translation": "通过 ClassLoader 查找给定位置的所有类位置资源。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the supplied root directory resource for path matching.",
+      "translation": "解析提供的根目录资源以进行路径匹配。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether this resolver should use jar caches.",
+      "translation": "指定该解析器是否应使用 JAR 缓存。",
+      "count": 1
+    },
+    {
+      "source": "the <code>ClassLoader</code>\n(only <code>null</code> if even the system <code>ClassLoader</code> isn't accessible)",
+      "translation": "<code>ClassLoader</code>(仅当连系统 <code>ClassLoader</code> 都不可访问时才为 <code>null</code>)",
+      "count": 1
+    },
+    {
+      "source": "a corresponding <code>Resource</code> handle (never <code>null</code>)",
+      "translation": "对应的 `<code>Resource</code>` 句柄（永远不为 `<code>null</code>`）",
+      "count": 1
+    },
+    {
+      "source": "<code>location</code> - the resource location",
+      "translation": "<location> - 资源位置",
+      "count": 1
+    },
+    {
+      "source": "the corresponding <code>Resource</code> objects",
+      "translation": "对应的<code>Resource</code>对象",
+      "count": 1
+    },
+    {
+      "source": "Must support fully qualified URLs, for example, \"file:C:/test.dat\".",
+      "translation": "必须支持完全限定的 URL，例如\"file:C:/test.dat\"。",
+      "count": 1
+    },
+    {
+      "source": "Must support classpath pseudo-URLs, for example, \"classpath:test.dat\".",
+      "translation": "必须支持类路径伪 URL，例如\"classpath:test.dat\"。",
+      "count": 1
+    },
+    {
+      "source": "Should support relative file paths, for example, \"WEB-INF/test.dat\".\n(This will be implementation-specific, typically provided by an\nApplicationContext implementation.)",
+      "translation": "应支持相对文件路径，例如\"WEB-INF/test.dat\"。\n（这取决于具体实现，通常由 ApplicationContext 实现提供。）",
+      "count": 1
+    }
+  ]
+}

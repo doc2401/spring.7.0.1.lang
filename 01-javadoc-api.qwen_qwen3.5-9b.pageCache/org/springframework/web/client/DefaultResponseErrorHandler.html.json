@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 18:23:51",
+  "updated_at": "2026-04-14 18:23:51",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 55,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.896551724137931,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "Delegates to <a href=\"#hasError(org.springframework.http.HttpStatusCode)\"><code>hasError(HttpStatusCode)</code></a> with the response status code.",
+      "translation": "委托给带有响应状态代码的<a href=\"#hasError(org.springframework.http.HttpStatusCode)\"><code>hasError(HttpStatusCode)</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>response</code> - the response to inspect",
+      "translation": "<code>response</code> - 要检查的响应",
+      "count": 3
+    },
+    {
+      "source": "This error handler checks for the status code on the\n<a href=\"../../http/client/ClientHttpResponse.html\" title=\"interface in org.springframework.http.client\"><code>ClientHttpResponse</code></a>. Any code in the 4xx or 5xx series is considered\nto be an error. This behavior can be changed by overriding\n<a href=\"#hasError(org.springframework.http.HttpStatusCode)\"><code>hasError(HttpStatusCode)</code></a>. Unknown status codes will be ignored by\n<a href=\"#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>hasError(ClientHttpResponse)</code></a>.",
+      "translation": "此错误处理器会检查 <a href=\"../../http/client/ClientHttpResponse.html\" title=\"interface in org.springframework.http.client\"><code>ClientHttpResponse</code></a> 上的状态码。任何 4xx 或 5xx 系列的状态码均被视为错误。您可以通过重写 <a href=\"#hasError(org.springframework.http.HttpStatusCode)\"><code>hasError(HttpStatusCode)</code></a> 来更改此行为。<a href=\"#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>hasError(ClientHttpResponse)</code></a> 将忽略未知的状态码。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to\n<a href=\"HttpClientErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpClientErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a> for errors in the 4xx range, to\n<a href=\"HttpServerErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpServerErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a> for errors in the 5xx range,\nor otherwise raises <a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\"><code>UnknownHttpStatusCodeException</code></a>.",
+      "translation": "默认实现会针对 4xx 范围的错误委托给<a href=\"HttpClientErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpClientErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a>，针对 5xx 范围的错误委托给<a href=\"HttpServerErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpServerErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a>，否则抛出<a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\"><code>UnknownHttpStatusCodeException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "See <a href=\"#handleError(java.net.URI,org.springframework.http.HttpMethod,org.springframework.http.client.ClientHttpResponse)\"><code>handleError(URI, HttpMethod, ClientHttpResponse)</code></a>  for more\ndetails on specific exception types.",
+      "translation": "有关特定异常类型的详细信息，请参阅<a href=\"#handleError(java.net.URI,org.springframework.http.HttpMethod,org.springframework.http.client.ClientHttpResponse)\"><code>handleError(URI, HttpMethod, ClientHttpResponse)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation checks <a href=\"../../http/HttpStatusCode.html#isError()\"><code>HttpStatusCode.isError()</code></a>.\nCan be overridden in subclasses.",
+      "translation": "默认实现检查<a href=\"../../http/HttpStatusCode.html#isError()\"><code>HttpStatusCode.isError()</code></a>。可在子类中重写。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation throws:",
+      "translation": "默认实现抛出：",
+      "count": 2
+    },
+    {
+      "source": "Template method called from <a href=\"#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>hasError(ClientHttpResponse)</code></a>.",
+      "translation": "由<a href=\"#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>hasError(ClientHttpResponse)</code></a>调用的模板方法。",
+      "count": 2
+    },
+    {
+      "source": "Return a function for decoding the error content. This can be passed to\n<a href=\"RestClientResponseException.html#setBodyConvertFunction(java.util.function.Function)\"><code>RestClientResponseException.setBodyConvertFunction(Function)</code></a>.",
+      "translation": "返回一个用于解码错误内容的函数。该函数可以传递给 <a href=\"RestClientResponseException.html#setBodyConvertFunction(java.util.function.Function)\"><code>RestClientResponseException.setBodyConvertFunction(Function)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Determine the charset of the response (for inclusion in a status exception).",
+      "translation": "确定响应的字符集（用于包含在状态异常中）。",
+      "count": 2
+    },
+    {
+      "source": "Read the body of the given response (for inclusion in a status exception).",
+      "translation": "读取响应正文（用于包含在状态异常中）。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"HttpClientErrorException.html\" title=\"class in org.springframework.web.client\"><code>HttpClientErrorException</code></a> if the status code is in the 4xx\nseries, or one of its sub-classes such as\n<a href=\"HttpClientErrorException.BadRequest.html\" title=\"class in org.springframework.web.client\"><code>HttpClientErrorException.BadRequest</code></a> and others.",
+      "translation": "如果状态码属于 4xx 系列，则抛出 <a href=\"HttpClientErrorException.html\" title=\"class in org.springframework.web.client\"><code>HttpClientErrorException</code></a>，或其子类之一（如 <a href=\"HttpClientErrorException.BadRequest.html\" title=\"class in org.springframework.web.client\"><code>HttpClientErrorException.BadRequest</code></a> 等）。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"HttpServerErrorException.html\" title=\"class in org.springframework.web.client\"><code>HttpServerErrorException</code></a> if the status code is in the 5xx\nseries, or one of its sub-classes such as\n<a href=\"HttpServerErrorException.InternalServerError.html\" title=\"class in org.springframework.web.client\"><code>HttpServerErrorException.InternalServerError</code></a> and others.",
+      "translation": "如果状态码为 5xx 系列，或其子类（如 <a href=\"HttpServerErrorException.InternalServerError.html\" title=\"class in org.springframework.web.client\"><code>HttpServerErrorException.InternalServerError</code></a>）之一时，则抛出<a href=\"HttpServerErrorException.html\" title=\"class in org.springframework.web.client\"><code>HttpServerErrorException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\"><code>UnknownHttpStatusCodeException</code></a> for error status codes not in the\n<a href=\"../../http/HttpStatus.html\" title=\"enum class in org.springframework.http\"><code>HttpStatus</code></a> enum range.",
+      "translation": "<a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\"><code>UnknownHttpStatusCodeException</code></a> 用于不在 <a href=\"../../http/HttpStatus.html\" title=\"enum class in org.springframework.http\"><code>HttpStatus</code></a> 枚举范围内的错误状态码。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\">hasError</a></code> in interface <code><a href=\"ResponseErrorHandler.html\" title=\"interface in org.springframework.web.client\">ResponseErrorHandler</a></code>",
+      "translation": "`<code><a href=\"ResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\">hasError</a></code>` 在接口 `<code><a href=\"ResponseErrorHandler.html\" title=\"interface in org.springframework.web.client\">ResponseErrorHandler</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ResponseErrorHandler.html#handleError(java.net.URI,org.springframework.http.HttpMethod,org.springframework.http.client.ClientHttpResponse)\">handleError</a></code> in interface <code><a href=\"ResponseErrorHandler.html\" title=\"interface in org.springframework.web.client\">ResponseErrorHandler</a></code>",
+      "translation": "`<code><a href=\"ResponseErrorHandler.html#handleError(java.net.URI,org.springframework.http.HttpMethod,org.springframework.http.client.ClientHttpResponse)\">handleError</a></code>` 接口 `<code><a href=\"ResponseErrorHandler.html\" title=\"interface in org.springframework.web.client\">ResponseErrorHandler</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the response indicates an error; <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示响应指示错误；否则为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of I/O errors",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 在发生 I/O 错误时",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\">UnknownHttpStatusCodeException</a></code> - in case of an unresolvable status code",
+      "translation": "<code><a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\">UnknownHttpStatusCodeException</a></code> - 在无法解析的状态码的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>statusCode</code> - the HTTP status code",
+      "translation": "<code>statusCode</code> - HTTP 状态码",
+      "count": 2
+    },
+    {
+      "source": "<code>url</code> - the request URL",
+      "translation": "<code>url</code> - 请求 URL",
+      "count": 2
+    },
+    {
+      "source": "<code>response</code> - the response with the error",
+      "translation": "<code>response</code> - 包含错误的响应",
+      "count": 2
+    },
+    {
+      "source": "the associated charset, or <code>null</code> if none",
+      "translation": "关联的字符集，或者如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "the response body as a byte array,\nor an empty byte array if the body could not be read",
+      "translation": "作为字节数组返回响应正文，如果无法读取正文则返回空字节数组。",
+      "count": 2
+    },
+    {
+      "source": "Handle the error in the given response with the given resolved status code\nand extra information providing access to the request URL and HTTP method.",
+      "translation": "处理给定响应中的错误，并使用给定的已解决状态码以及提供请求 URL 和 HTTP 方法的额外信息。",
+      "count": 1
+    },
+    {
+      "source": "Handle the error based on the resolved status code.",
+      "translation": "根据解析后的状态码处理错误。",
+      "count": 1
+    },
+    {
+      "source": "Return a function for decoding the error content.",
+      "translation": "返回一个用于解码错误内容的函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - the HTTP method",
+      "translation": "<code>method</code> - HTTP 方法",
+      "count": 1
+    },
+    {
+      "source": "Arjen Poutsma, Rossen Stoyanchev, Juergen Hoeller",
+      "translation": "Arjen Poutsma, Rossen Stoyanchev, Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

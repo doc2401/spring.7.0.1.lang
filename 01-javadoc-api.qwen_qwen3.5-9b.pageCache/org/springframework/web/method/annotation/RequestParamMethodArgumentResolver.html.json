@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-04-14 18:48:35",
+  "updated_at": "2026-04-14 18:48:35",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 72,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6744186046511629,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"RequestParamMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\"><code>RequestParamMethodArgumentResolver</code></a> instance.",
+      "translation": "创建一个新的<a href=\"RequestParamMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\"><code>RequestParamMethodArgumentResolver</code></a>实例。",
+      "count": 5
+    },
+    {
+      "source": "<code>useDefaultResolution</code> - in default resolution mode a method argument\nthat is a simple type, as defined in <a href=\"../../../beans/BeanUtils.html#isSimpleProperty(java.lang.Class)\"><code>BeanUtils.isSimpleProperty(Class)</code></a>,\nis treated as a request parameter even if it isn't annotated, the\nrequest parameter name is derived from the method parameter name.",
+      "translation": "<code>useDefaultResolution</code> - 在默认解析模式下，即使未添加注解，只要方法参数是 <a href=\"../../../beans/BeanUtils.html#isSimpleProperty(java.lang.Class)\"><code>BeanUtils.isSimpleProperty(Class)</code></a> 中定义的简单类型，该参数即被视为请求参数；请求参数的名称由方法参数名称推导得出。",
+      "count": 3
+    },
+    {
+      "source": "<code>parameter</code> - the method parameter",
+      "translation": "<code>parameter</code> - 方法参数",
+      "count": 3
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 3
+    },
+    {
+      "source": "If the method parameter type is <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>, the name specified in the\nannotation is used to resolve the request parameter String value. The value is\nthen converted to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> via type conversion assuming a suitable\n<a href=\"../../../core/convert/converter/Converter.html\" title=\"interface in org.springframework.core.convert.converter\"><code>Converter</code></a> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> has been registered.\nOr if a request parameter name is not specified the\n<a href=\"RequestParamMapMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\"><code>RequestParamMapMethodArgumentResolver</code></a> is used instead to provide\naccess to all request parameters in the form of a map.",
+      "translation": "如果方法参数类型为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，则使用注解中指定的名称来解析请求参数字符串值。该值随后通过类型转换转换为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，前提是已注册了合适的 <a href=\"../../../core/convert/converter/Converter.html\" title=\"interface in org.springframework.core.convert.converter\"><code>Converter</code></a> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>。或者，如果未指定请求参数名称，则使用 <a href=\"RequestParamMapMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\"><code>RequestParamMapMethodArgumentResolver</code></a> 来以映射的形式访问所有请求参数。",
+      "count": 2
+    },
+    {
+      "source": "A <a href=\"../../bind/WebDataBinder.html\" title=\"class in org.springframework.web.bind\"><code>WebDataBinder</code></a> is invoked to apply type conversion to resolved request\nheader values that don't yet match the method parameter type.",
+      "translation": "一个 `<a href=\"../../bind/WebDataBinder.html\" title=\"class in org.springframework.web.bind\"><code>WebDataBinder</code></a>` 被调用，以将类型转换应用于尚未匹配方法参数类型的已解析请求头值。",
+      "count": 2
+    },
+    {
+      "source": "Supports the following:\n<ul>\n<li>@RequestParam-annotated method arguments.\nThis excludes <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> params where the annotation does not specify a name.\nSee <a href=\"RequestParamMapMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\"><code>RequestParamMapMethodArgumentResolver</code></a> instead for such params.\n</li><li>Arguments of type <a href=\"../../multipart/MultipartFile.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartFile</code></a> unless annotated with @<a href=\"../../bind/annotation/RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a>.\n</li><li>Arguments of type <code>Part</code> unless annotated with @<a href=\"../../bind/annotation/RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a>.\n</li><li>In default resolution mode, simple type arguments even if not with @<a href=\"../../bind/annotation/RequestParam.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestParam</code></a>.\n</li></ul>",
+      "translation": "支持以下内容：\n<ul>\n<li>@RequestParam 注解的方法参数。\n这排除了未指定名称的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 参数。\n对于此类参数，请参见 <a href=\"RequestParamMapMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\"><code>RequestParamMapMethodArgumentResolver</code></a>。\n</li><li>类型为 <a href=\"../../multipart/MultipartFile.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartFile</code></a> 的参数，除非带有 @<a href=\"../../bind/annotation/RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a> 注解。\n</li><li>类型为 <code>Part</code> 的参数，除非带有 @<a href=\"../../bind/annotation/RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a> 注解。\n</li><li>在默认解析模式下，即使没有 @<a href=\"../../bind/annotation/RequestParam.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestParam</code></a> 注解的简单类型参数。\n</li></ul>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValue(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValue(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../support/UriComponentsContributor.html#contributeMethodArgument(org.springframework.core.MethodParameter,java.lang.Object,org.springframework.web.util.UriComponentsBuilder,java.util.Map,org.springframework.core.convert.ConversionService)\">UriComponentsContributor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../support/UriComponentsContributor.html#contributeMethodArgument(org.springframework.core.MethodParameter,java.lang.Object,org.springframework.web.util.UriComponentsBuilder,java.util.Map,org.springframework.core.convert.ConversionService)\">UriComponentsContributor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Process the given method argument and either update the\n<a href=\"../../util/UriComponentsBuilder.html\" title=\"class in org.springframework.web.util\"><code>UriComponentsBuilder</code></a> or add to the map with URI variables\nto use to expand the URI after all arguments are processed.",
+      "translation": "处理给定的方法参数，要么更新<a href=\"../../util/UriComponentsBuilder.html\" title=\"class in org.springframework.web.util\"><code>UriComponentsBuilder</code></a>，要么将其添加到用于在全部参数处理后扩展 URI 的 URI 变量映射中。",
+      "count": 2
+    },
+    {
+      "source": "Invoked when a named value is present but becomes <code>null</code> after conversion.",
+      "translation": "当存在命名值但在转换后变为<code>null</code>时触发。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the given parameter type and value name into an argument value.",
+      "translation": "将给定的参数类型和值名解析为参数值。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/UriComponentsContributor.html#supportsParameter(org.springframework.core.MethodParameter)\">supportsParameter</a></code> in interface <code><a href=\"../support/UriComponentsContributor.html\" title=\"interface in org.springframework.web.method.support\">UriComponentsContributor</a></code>",
+      "translation": "`<code><a href=\"../support/UriComponentsContributor.html#supportsParameter(org.springframework.core.MethodParameter)\">supportsParameter</a></code>` 接口 `<code><a href=\"../support/UriComponentsContributor.html\" title=\"interface in org.springframework.web.method.support\">UriComponentsContributor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValue(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">handleMissingValue</a></code> in class <code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>",
+      "translation": "`<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValue(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">handleMissingValue</a></code>` 类中的 `<code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/UriComponentsContributor.html#contributeMethodArgument(org.springframework.core.MethodParameter,java.lang.Object,org.springframework.web.util.UriComponentsBuilder,java.util.Map,org.springframework.core.convert.ConversionService)\">contributeMethodArgument</a></code> in interface <code><a href=\"../support/UriComponentsContributor.html\" title=\"interface in org.springframework.web.method.support\">UriComponentsContributor</a></code>",
+      "translation": "`UriComponentsContributor` 接口中的 <code><a href=\"../support/UriComponentsContributor.html#contributeMethodArgument(org.springframework.core.MethodParameter,java.lang.Object,org.springframework.web.util.UriComponentsBuilder,java.util.Map,org.springframework.core.convert.ConversionService)\">contributeMethodArgument</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code>beanFactory</code> - a bean factory used for resolving  ${...} placeholder\nand #{...} SpEL expressions in default values, or <code>null</code> if default\nvalues are not expected to contain expressions",
+      "translation": "<code>beanFactory</code> - 用于解析默认值中的 ${...} 占位符和 #{...} SpEL 表达式的 BeanFactory，或者如果默认值不包含表达式则为 <code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>parameter</code> - the controller method parameter (never <code>null</code>)",
+      "translation": "<code>parameter</code> - 控制器方法参数（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the argument value (possibly <code>null</code>)",
+      "translation": "<code>value</code> - 参数值（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>builder</code> - the builder to update (never <code>null</code>)",
+      "translation": "<code>builder</code> - 要更新的构建器（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>uriVariables</code> - a map to add URI variables to (never <code>null</code>)",
+      "translation": "<code>uriVariables</code> - 用于添加 URI 变量的映射（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the name for the value",
+      "translation": "<code>name</code> - 该值的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>conversionService</code> - a ConversionService to format values as Strings",
+      "translation": "<code>conversionService</code> - 用于将值格式化为字符串的 ConversionService。",
+      "count": 2
+    },
+    {
+      "source": "Arjen Poutsma, Rossen Stoyanchev, Brian Clozel",
+      "translation": "Arjen Poutsma, Rossen Stoyanchev, Brian Clozel",
+      "count": 2
+    },
+    {
+      "source": "Create the <a href=\"AbstractNamedValueMethodArgumentResolver.NamedValueInfo.html\" title=\"class in org.springframework.web.method.annotation\"><code>AbstractNamedValueMethodArgumentResolver.NamedValueInfo</code></a> object for the given method parameter. Implementations typically\nretrieve the method annotation by means of <a href=\"../../../core/MethodParameter.html#getParameterAnnotation(java.lang.Class)\"><code>MethodParameter.getParameterAnnotation(Class)</code></a>.",
+      "translation": "为给定的方法参数创建<a href=\"AbstractNamedValueMethodArgumentResolver.NamedValueInfo.html\" title=\"class in org.springframework.web.method.annotation\"><code>AbstractNamedValueMethodArgumentResolver.NamedValueInfo</code></a>对象。实现通常通过<a href=\"../../../core/MethodParameter.html#getParameterAnnotation(java.lang.Class)\"><code>MethodParameter.getParameterAnnotation(Class)</code></a>检索方法注解。",
+      "count": 1
+    },
+    {
+      "source": "Invoked when a named value is required, but <a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\"><code>AbstractNamedValueMethodArgumentResolver.resolveName(String, MethodParameter, NativeWebRequest)</code></a>\nreturned <code>null</code> and there is no default value.",
+      "translation": "在需要命名值但<a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\"><code>AbstractNamedValueMethodArgumentResolver.resolveName(String, MethodParameter, NativeWebRequest)</code></a>返回了<code>null</code>且没有默认值时调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractNamedValueMethodArgumentResolver.html#createNamedValueInfo(org.springframework.core.MethodParameter)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#createNamedValueInfo(org.springframework.core.MethodParameter)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Invoked when a named value is required, but <a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\"><code>AbstractNamedValueMethodArgumentResolver.resolveName(String, MethodParameter, NativeWebRequest)</code></a>\nreturned <code>null</code> and there is no default value. Subclasses typically throw an exception in this case.",
+      "translation": "当需要命名值但<a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\"><code>AbstractNamedValueMethodArgumentResolver.resolveName(String, MethodParameter, NativeWebRequest)</code></a>返回了<code>null</code>且没有默认值时调用。子类通常在这种情况下抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValueAfterConversion(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValueAfterConversion(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">AbstractNamedValueMethodArgumentResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create the <a href=\"AbstractNamedValueMethodArgumentResolver.NamedValueInfo.html\" title=\"class in org.springframework.web.method.annotation\"><code>AbstractNamedValueMethodArgumentResolver.NamedValueInfo</code></a> object for the given method parameter.",
+      "translation": "为给定的方法参数创建<a href=\"AbstractNamedValueMethodArgumentResolver.NamedValueInfo.html\" title=\"class in org.springframework.web.method.annotation\"><code>AbstractNamedValueMethodArgumentResolver.NamedValueInfo</code></a>对象。",
+      "count": 1
+    },
+    {
+      "source": "Supports the following:\n\n@RequestParam-annotated method arguments.",
+      "translation": "支持以下内容：\n\n带有 @RequestParam 注解的方法参数。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/HandlerMethodArgumentResolver.html#supportsParameter(org.springframework.core.MethodParameter)\">supportsParameter</a></code> in interface <code><a href=\"../support/HandlerMethodArgumentResolver.html\" title=\"interface in org.springframework.web.method.support\">HandlerMethodArgumentResolver</a></code>",
+      "translation": "`<code><a href=\"../support/HandlerMethodArgumentResolver.html#supportsParameter(org.springframework.core.MethodParameter)\">supportsParameter</a></code>` 接口 `<code><a href=\"../support/HandlerMethodArgumentResolver.html\" title=\"interface in org.springframework.web.method.support\">HandlerMethodArgumentResolver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#createNamedValueInfo(org.springframework.core.MethodParameter)\">createNamedValueInfo</a></code> in class <code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>",
+      "translation": "`<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#createNamedValueInfo(org.springframework.core.MethodParameter)\">createNamedValueInfo</a></code>` 类中的 `<code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">resolveName</a></code> in class <code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>",
+      "translation": "`<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#resolveName(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">resolveName</a></code>` 在类 `<code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValueAfterConversion(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">handleMissingValueAfterConversion</a></code> in class <code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>",
+      "translation": "`<code><a href=\"AbstractNamedValueMethodArgumentResolver.html#handleMissingValueAfterConversion(java.lang.String,org.springframework.core.MethodParameter,org.springframework.web.context.request.NativeWebRequest)\">handleMissingValueAfterConversion</a></code>` 类中的 `<code><a href=\"AbstractNamedValueMethodArgumentResolver.html\" title=\"class in org.springframework.web.method.annotation\">AbstractNamedValueMethodArgumentResolver</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>parameter</code> - the method parameter to resolve to an argument value\n(pre-nested in case of a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a> declaration)",
+      "translation": "<code>parameter</code> - 要解析为参数值的该方法参数（在 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a> 声明的情况下，位于嵌套之前）",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if this resolver supports the supplied parameter;\n<code>false</code> otherwise",
+      "translation": "<code>true</code> 如果此解析器支持提供的参数；否则为 <code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在发生错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>parameter</code> - the method parameter to check",
+      "translation": "<code>parameter</code> - 要检查的方法参数",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the value being resolved",
+      "translation": "<code>name</code> - 正在解析的值的名称",
+      "count": 1
+    },
+    {
+      "source": "the resolved argument (may be <code>null</code>)",
+      "translation": "已解析的参数（可能为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the named value information",
+      "translation": "命名值信息",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

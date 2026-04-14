@@ -1,0 +1,356 @@
+{
+  "created_at": "2026-04-14 16:25:07",
+  "updated_at": "2026-04-14 16:25:07",
+  "stats": {
+    "total_entries": 68,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 98,
+    "entries_with_hits": 68,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4411764705882353,
+    "usage_percentage": 0.0068
+  },
+  "items": [
+    {
+      "source": "<b>This setting can be modified at runtime, for example through JMX.</b>",
+      "translation": "<b>此设置可以在运行时进行修改，例如通过 JMX。</b>",
+      "count": 3
+    },
+    {
+      "source": "<b>NOTE:</b> Exception handling in <code>TaskDecorator</code> implementations\nis limited to plain <code>Runnable</code> execution via <code>execute</code> calls.\nIn case of <code>#submit</code> calls, the exposed <code>Runnable</code> will be a\n<code>FutureTask</code> which does not propagate any exceptions; you might\nhave to cast it and call <code>Future#get</code> to evaluate exceptions.\nSee the <code>ThreadPoolExecutor#afterExecute</code> javadoc for an example\nof how to access exceptions in such a <code>Future</code> case.",
+      "translation": "<b>注意：</b><code>TaskDecorator</code> 实现中的异常处理仅限于通过 <code>execute</code> 调用执行的普通 <code>Runnable</code>。对于 <code>#submit</code> 调用，暴露的 <code>Runnable</code> 将是一个 <code>FutureTask</code>，它不会传播任何异常；您可能需要将其转换为 <code>Future</code> 并调用 <code>Future#get</code> 来评估异常。有关如何在此类 <code>Future</code> 情况下访问异常的示例，请参阅 <code>ThreadPoolExecutor#afterExecute</code> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This class implements Spring's\n<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> interface as well as the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> interface, with the former being the primary\ninterface, the other just serving as secondary convenience. For this reason, the\nexception handling follows the TaskExecutor contract rather than the Executor contract,\nin particular regarding the <a href=\"../../core/task/TaskRejectedException.html\" title=\"class in org.springframework.core.task\"><code>TaskRejectedException</code></a>.",
+      "translation": "<b>注意：</b>该类实现了 Spring 的<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>接口以及<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>接口，其中前者为主要接口，后者仅作为辅助便利。因此，异常处理遵循 TaskExecutor 契约而非 Executor 契约，特别是关于<a href=\"../../core/task/TaskRejectedException.html\" title=\"class in org.springframework.core.task\"><code>TaskRejectedException</code></a>的部分。",
+      "count": 2
+    },
+    {
+      "source": "For an alternative, you may set up a ThreadPoolExecutor instance directly using\nconstructor injection, or use a factory method definition that points to the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html\" title=\"class or interface in java.util.concurrent\"><code>Executors</code></a> class. To expose such a raw Executor as a\nSpring <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>, simply wrap it with a\n<a href=\"ConcurrentTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ConcurrentTaskExecutor</code></a> adapter.",
+      "translation": "作为替代方案，您可以使用构造函数注入直接设置 `ThreadPoolExecutor` 实例，或者使用指向 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html\" title=\"class or interface in java.util.concurrent\"><code>Executors</code></a> 类的工厂方法定义。要将此类原始 `Executor` 暴露为 Spring <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>，只需将其包装在 <a href=\"ConcurrentTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ConcurrentTaskExecutor</code></a> 适配器中。",
+      "count": 2
+    },
+    {
+      "source": "Switch this to \"true\" for a strict early shutdown signal analogous to\nthe 6.1-established default behavior of <a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a>.\nNote that the related flags <a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>ExecutorConfigurationSupport.setAcceptTasksAfterContextClose(boolean)</code></a> and\n<a href=\"ExecutorConfigurationSupport.html#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>ExecutorConfigurationSupport.setWaitForTasksToCompleteOnShutdown(boolean)</code></a> will override this setting,\nleading to a late shutdown without a coordinated lifecycle stop phase.",
+      "translation": "将此项切换为 \"true\"，以发出严格的早期关闭信号，类似于 <a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a> 在 6.1 版本中建立的默认行为。请注意，相关的标志 <a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>ExecutorConfigurationSupport.setAcceptTasksAfterContextClose(boolean)</code></a> 和\n<a href=\"ExecutorConfigurationSupport.html#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>ExecutorConfigurationSupport.setWaitForTasksToCompleteOnShutdown(boolean)</code></a> 将覆盖此设置，导致在没有协调的生命周期停止阶段的情况下进行延迟关闭。",
+      "count": 2
+    },
+    {
+      "source": "By default, existing tasks will be allowed to complete within the\ncoordinated lifecycle stop phase in any case. This setting just controls\nwhether an explicit <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html#shutdown()\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor.shutdown()</code></a> call will be\ntriggered on context close, rejecting task submissions after that point.",
+      "translation": "默认情况下，现有任务将在协调的生命周期停止阶段内被允许完成。此设置仅控制是否在上下文关闭时触发显式的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html#shutdown()\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor.shutdown()</code></a> 调用，从而在该点之后拒绝任务提交。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.1.4, the default is \"false\", leniently allowing for late tasks\nto arrive after context close, still participating in the lifecycle stop\nphase. Note that this differs from <a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>ExecutorConfigurationSupport.setAcceptTasksAfterContextClose(boolean)</code></a>\nwhich completely bypasses the coordinated lifecycle stop phase, with no\nexplicit waiting for the completion of existing tasks at all.",
+      "translation": "自 6.1.4 版本起，默认值为 \"false\"，宽容地允许任务在上下文关闭后到达，但仍参与生命周期停止阶段。请注意，这与 <a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>ExecutorConfigurationSupport.setAcceptTasksAfterContextClose(boolean)</code></a> 不同，后者完全绕过协调的生命周期停止阶段，根本不对现有任务的完成进行显式等待。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.1, this method comes with a default implementation that delegates\nto <a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>.",
+      "translation": "自 6.1 版本起，此方法具有默认实现，该实现委托给 <a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>Integer.MAX_VALUE</code>.",
+      "translation": "默认值为<code>Integer.MAX_VALUE</code>。",
+      "count": 2
+    },
+    {
+      "source": "Default is 60.",
+      "translation": "默认值为 60。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", starting threads and adding them to the pool on demand.",
+      "translation": "默认值为\"false\"，按需启动线程并将其添加到池中。",
+      "count": 2
+    },
+    {
+      "source": "A LinkedBlockingQueue instance will be created for a positive\ncapacity value; a SynchronousQueue otherwise.",
+      "translation": "对于正数容量值，将创建一个 LinkedBlockingQueue 实例；否则，将创建一个 SynchronousQueue。",
+      "count": 2
+    },
+    {
+      "source": "Note: This method exposes an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> to its base class\nbut stores the actual <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a> handle internally.\nDo not override this method for replacing the executor, rather just for\ndecorating its <code>ExecutorService</code> handle or storing custom state.",
+      "translation": "注意：此方法向其基类暴露了一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>，但内部存储了实际的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>句柄。不要覆盖此方法来替换执行器，而应仅用于装饰其<code>ExecutorService</code>句柄或存储自定义状态。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"ExecutorConfigurationSupport.html#cancelRemainingTask(java.lang.Runnable)\">ExecutorConfigurationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"ExecutorConfigurationSupport.html#cancelRemainingTask(java.lang.Runnable)\">ExecutorConfigurationSupport</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Cancel the given remaining task which never commenced execution,\nas returned from <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#shutdownNow()\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService.shutdownNow()</code></a>.",
+      "translation": "取消由 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#shutdownNow()\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService.shutdownNow()</code></a> 返回且从未开始执行的给定剩余任务。",
+      "count": 2
+    },
+    {
+      "source": "Return the number of currently active threads.",
+      "translation": "返回当前活动线程的数量。",
+      "count": 2
+    },
+    {
+      "source": "Return the ThreadPoolExecutor's core pool size.",
+      "translation": "返回 ThreadPoolExecutor 的核心池大小。",
+      "count": 2
+    },
+    {
+      "source": "Return the ThreadPoolExecutor's keep-alive seconds.",
+      "translation": "返回 ThreadPoolExecutor 的存活秒数。",
+      "count": 2
+    },
+    {
+      "source": "Return the ThreadPoolExecutor's maximum pool size.",
+      "translation": "返回 ThreadPoolExecutor 的最大池大小。",
+      "count": 2
+    },
+    {
+      "source": "Return the current pool size.",
+      "translation": "返回当前池大小。",
+      "count": 2
+    },
+    {
+      "source": "Return the capacity for the ThreadPoolExecutor's BlockingQueue.",
+      "translation": "返回 ThreadPoolExecutor 的 BlockingQueue 的容量。",
+      "count": 2
+    },
+    {
+      "source": "Return the current queue size.",
+      "translation": "返回当前队列大小。",
+      "count": 2
+    },
+    {
+      "source": "Return the underlying ThreadPoolExecutor for native access.",
+      "translation": "返回用于原生访问的底层 ThreadPoolExecutor。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ExecutorConfigurationSupport.html#cancelRemainingTask(java.lang.Runnable)\">cancelRemainingTask</a></code> in class <code><a href=\"ExecutorConfigurationSupport.html\" title=\"class in org.springframework.scheduling.concurrent\">ExecutorConfigurationSupport</a></code>",
+      "translation": "`ExecutorConfigurationSupport` 类中的 <code><a href=\"ExecutorConfigurationSupport.html#cancelRemainingTask(java.lang.Runnable)\">cancelRemainingTask</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the <code>Runnable</code> to execute (never <code>null</code>)",
+      "translation": "<code>task</code> - 要执行的 <code>Runnable</code>(永远不为 <code>null</code>)",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the ThreadPoolTaskExecutor hasn't been initialized yet",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果 ThreadPoolTaskExecutor 尚未初始化",
+      "count": 2
+    },
+    {
+      "source": "the underlying ThreadPoolExecutor (never <code>null</code>)",
+      "translation": "底层 ThreadPoolExecutor（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Rémy Guihard, Sam Brannen",
+      "translation": "Juergen Hoeller，Rémy Guihard，Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "a Future representing pending completion of the task",
+      "translation": "代表任务待完成状态的 Future",
+      "count": 2
+    },
+    {
+      "source": "The default configuration is a core pool size of 1, with unlimited max pool size\nand unlimited queue capacity. This is roughly equivalent to\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newSingleThreadExecutor()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newSingleThreadExecutor()</code></a>, sharing a single\nthread for all tasks. Setting <a href=\"#setQueueCapacity(int)\"><code>\"queueCapacity\"</code></a> to 0 mimics\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newCachedThreadPool()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newCachedThreadPool()</code></a>, with immediate scaling\nof threads in the pool to a potentially very high number. Consider also setting a\n<a href=\"#setMaxPoolSize(int)\"><code>\"maxPoolSize\"</code></a> at that point, as well as possibly a higher\n<a href=\"#setCorePoolSize(int)\"><code>\"corePoolSize\"</code></a> (see also the\n<a href=\"#setAllowCoreThreadTimeOut(boolean)\"><code>\"allowCoreThreadTimeOut\"</code></a> mode of scaling).",
+      "translation": "默认配置的核心线程池大小为 1，最大线程池大小和队列容量均为无限。这大致相当于\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newSingleThreadExecutor()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newSingleThreadExecutor()</code></a>，即所有任务共享单个线程。将 <a href=\"#setQueueCapacity(int)\"><code>\"queueCapacity\"</code></a> 设置为 0 可模拟\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newCachedThreadPool()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newCachedThreadPool()</code></a>，线程池中的线程会立即扩展至可能非常高的数量。在此情况下，还应考虑设置 <a href=\"#setMaxPoolSize(int)\"><code>\"maxPoolSize\"</code></a>，以及可能需要更高的 <a href=\"#setCorePoolSize(int)\"><code>\"corePoolSize\"</code></a>（另请参阅\n<a href=\"#setAllowCoreThreadTimeOut(boolean)\"><code>\"allowCoreThreadTimeOut\"</code></a> 扩展模式）。",
+      "count": 1
+    },
+    {
+      "source": "Called from <a href=\"ExecutorConfigurationSupport.html#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>ExecutorConfigurationSupport.onApplicationEvent(ContextClosedEvent)</code></a> if no\nindications for a late shutdown have been determined, that is, if the\n<a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose</code></a> and\n<a href=\"ExecutorConfigurationSupport.html#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>\nflags have not been set.",
+      "translation": "由 <a href=\"ExecutorConfigurationSupport.html#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>ExecutorConfigurationSupport.onApplicationEvent(ContextClosedEvent)</code></a> 调用，前提是未检测到延迟关闭的迹象，即如果尚未设置 <a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose\"</code></a> 和 <a href=\"ExecutorConfigurationSupport.html#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a> 标志。",
+      "count": 1
+    },
+    {
+      "source": "Note that such a decorator is not necessarily being applied to the\nuser-supplied <code>Runnable</code>/<code>Callable</code> but rather to the actual\nexecution callback (which may be a wrapper around the user-supplied task).",
+      "translation": "注意，此类装饰器并非必然应用于用户提供的 `<code>Runnable</code>`/`<code>Callable</code>`，而是应用于实际的执行回调（该回调可能是对用户所提供任务的包装）。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation calls <a href=\"ExecutorConfigurationSupport.html#initiateShutdown()\"><code>ExecutorConfigurationSupport.initiateShutdown()</code></a>.",
+      "translation": "默认实现调用<a href=\"ExecutorConfigurationSupport.html#initiateShutdown()\"><code>ExecutorConfigurationSupport.initiateShutdown()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Any positive value will lead to a LinkedBlockingQueue instance;\nany other value will lead to a SynchronousQueue instance.",
+      "translation": "任何正值将导致创建一个 LinkedBlockingQueue 实例；任何其他值将导致创建一个 SynchronousQueue 实例。",
+      "count": 1
+    },
+    {
+      "source": "Default is \"false\".",
+      "translation": "默认值为\"false\"。",
+      "count": 1
+    },
+    {
+      "source": "The primary use case is to set some execution context around the task's\ninvocation, or to provide some monitoring/statistics for task execution.",
+      "translation": "主要用例是在任务调用周围设置一些执行上下文，或为任务执行提供一些监控/统计信息。",
+      "count": 1
+    },
+    {
+      "source": "The call might return immediately if the implementation uses\nan asynchronous execution strategy, or might block in the case\nof synchronous execution.",
+      "translation": "如果实现采用异步执行策略，该调用可能会立即返回；而在同步执行的情况下，它可能会阻塞。",
+      "count": 1
+    },
+    {
+      "source": "Note: This method exposes an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> to its base class\nbut stores the actual <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a> handle internally.",
+      "translation": "注意：此方法向其基类暴露了一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>，但内部存储了实际的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>句柄。",
+      "count": 1
+    },
+    {
+      "source": "Specify a custom <a href=\"../../core/task/TaskDecorator.html\" title=\"interface in org.springframework.core.task\"><code>TaskDecorator</code></a> to be applied to any <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>\nabout to be executed.",
+      "translation": "指定一个自定义的 <a href=\"../../core/task/TaskDecorator.html\" title=\"interface in org.springframework.core.task\"><code>TaskDecorator</code></a>，以便在即将执行的任何 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> 上应用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\">TaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\">TaskExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">AsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">AsyncTaskExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">AsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">AsyncTaskExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">ExecutorConfigurationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">ExecutorConfigurationSupport</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Early shutdown signal: do not trigger further tasks, let existing tasks complete\nbefore hitting the actual destruction step in the <a href=\"ExecutorConfigurationSupport.html#shutdown()\"><code>ExecutorConfigurationSupport.shutdown()</code></a> method.",
+      "translation": "早期关闭信号：不要触发更多任务，让现有任务在到达<a href=\"ExecutorConfigurationSupport.html#shutdown()\"><code>ExecutorConfigurationSupport.shutdown()</code></a>方法中的实际销毁步骤之前完成。",
+      "count": 1
+    },
+    {
+      "source": "Execute the given <code>task</code>.",
+      "translation": "执行给定的<code>task</code>。",
+      "count": 1
+    },
+    {
+      "source": "Create the BlockingQueue to use for the ThreadPoolExecutor.",
+      "translation": "创建用于 ThreadPoolExecutor 的 BlockingQueue。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to allow core threads to time out.",
+      "translation": "指定是否允许核心线程超时。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's core pool size.",
+      "translation": "设置 ThreadPoolExecutor 的核心池大小。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's keep-alive seconds.",
+      "translation": "设置 ThreadPoolExecutor 的存活时间（秒）。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's maximum pool size.",
+      "translation": "设置 ThreadPoolExecutor 的最大池大小。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to start all core threads, causing them to idly wait for work.",
+      "translation": "指定是否启动所有核心线程，使它们空闲等待工作。",
+      "count": 1
+    },
+    {
+      "source": "Set the capacity for the ThreadPoolExecutor's BlockingQueue.",
+      "translation": "设置 ThreadPoolExecutor 的 BlockingQueue 容量。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to initiate an early shutdown signal on context close,\ndisposing all idle threads and rejecting further task submissions.",
+      "translation": "指定是否在上下文关闭时启动提前关闭信号，从而终止所有空闲线程并拒绝进一步的任务提交。",
+      "count": 1
+    },
+    {
+      "source": "Submit a Runnable task for execution, receiving a Future representing that task.",
+      "translation": "提交一个可运行的任务以执行，并接收代表该任务的 Future。",
+      "count": 1
+    },
+    {
+      "source": "Submit a Callable task for execution, receiving a Future representing that task.",
+      "translation": "提交一个可调用任务以执行，并接收代表该任务的 Future。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">initializeExecutor</a></code> in class <code><a href=\"ExecutorConfigurationSupport.html\" title=\"class in org.springframework.scheduling.concurrent\">ExecutorConfigurationSupport</a></code>",
+      "translation": "`ExecutorConfigurationSupport` 类中的<a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">initializeExecutor</a>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html#execute(java.lang.Runnable)\" title=\"class or interface in java.util.concurrent\">execute</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\">Executor</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html#execute(java.lang.Runnable)\" title=\"class or interface in java.util.concurrent\">execute</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\">Executor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code> in interface <code><a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\">TaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code>` 在接口 `<code><a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\">TaskExecutor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code> in interface <code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code>` 在接口 `<code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code> in interface <code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code>` 在接口 `<code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">initiateEarlyShutdown</a></code> in class <code><a href=\"ExecutorConfigurationSupport.html\" title=\"class in org.springframework.scheduling.concurrent\">ExecutorConfigurationSupport</a></code>",
+      "translation": "`ExecutorConfigurationSupport` 类中的 `<a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">initiateEarlyShutdown</a>`",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the <code>Callable</code> to execute (never <code>null</code>)",
+      "translation": "<code>task</code> - 要执行的 <code>Callable</code>(永远不为 <code>null</code>)",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the task to cancel (typically a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/RunnableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>RunnableFuture</code></a>)",
+      "translation": "<code>task</code> - 要取消的任务（通常是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/RunnableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>RunnableFuture</code></a>）",
+      "count": 1
+    },
+    {
+      "source": "<code>threadFactory</code> - the ThreadFactory to use",
+      "translation": "<code>threadFactory</code> - 要使用的 ThreadFactory",
+      "count": 1
+    },
+    {
+      "source": "<code>rejectedExecutionHandler</code> - the RejectedExecutionHandler to use",
+      "translation": "<code>rejectedExecutionHandler</code> - 要使用的 RejectedExecutionHandler",
+      "count": 1
+    },
+    {
+      "source": "<code>queueCapacity</code> - the specified queue capacity",
+      "translation": "<code>queueCapacity</code> - 指定的队列容量",
+      "count": 1
+    },
+    {
+      "source": "a new ExecutorService instance",
+      "translation": "一个新的 ExecutorService 实例",
+      "count": 1
+    },
+    {
+      "source": "the BlockingQueue instance",
+      "translation": "BlockingQueue 实例",
+      "count": 1
+    }
+  ]
+}

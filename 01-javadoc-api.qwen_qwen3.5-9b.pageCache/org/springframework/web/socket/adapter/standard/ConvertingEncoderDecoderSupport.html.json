@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 20:19:40",
+  "updated_at": "2026-04-14 20:19:40",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 44,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.76,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Subclasses can extend this class and should also implement one or\nboth of <code>Encoder</code> and <code>Decoder</code>.\nFor convenience <a href=\"ConvertingEncoderDecoderSupport.BinaryEncoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.BinaryEncoder</code></a>,\n<a href=\"ConvertingEncoderDecoderSupport.BinaryDecoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.BinaryDecoder</code></a>,\n<a href=\"ConvertingEncoderDecoderSupport.TextEncoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.TextEncoder</code></a> and\n<a href=\"ConvertingEncoderDecoderSupport.TextDecoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.TextDecoder</code></a> subclasses are provided.",
+      "translation": "子类可以扩展此类，并应实现一个或两个 <code>Encoder</code> 和 <code>Decoder</code>。为了方便起见，提供了以下子类的 <a href=\"ConvertingEncoderDecoderSupport.BinaryEncoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.BinaryEncoder</code></a>、<a href=\"ConvertingEncoderDecoderSupport.BinaryDecoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.BinaryDecoder</code></a>、<a href=\"ConvertingEncoderDecoderSupport.TextEncoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.TextEncoder</code></a> 和 <a href=\"ConvertingEncoderDecoderSupport.TextDecoder.html\" title=\"class in org.springframework.web.socket.adapter.standard\"><code>ConvertingEncoderDecoderSupport.TextDecoder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "By default, this class looks up a <a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> registered in the\n<a href=\"#getApplicationContext()\"><code>active ApplicationContext</code></a> under\nthe name <code>'webSocketConversionService'</code>. This works fine for both client\nand server endpoints, in a Servlet container environment. If not running in a\nServlet container, subclasses will need to override the\n<a href=\"#getConversionService()\"><code>getConversionService()</code></a> method to provide an alternative lookup strategy.",
+      "translation": "默认情况下，该类会在 <a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> 下查找在<a href=\"#getApplicationContext()\"><code>active ApplicationContext</code></a>中注册的名为<code>'webSocketConversionService'</code>的转换服务。这在 Servlet 容器环境中的客户端和服务器端点均能正常工作。如果不在 Servlet 容器中运行，子类需要重写<a href=\"#getConversionService()\"><code>getConversionService()</code></a>方法以提供替代的查找策略。",
+      "count": 2
+    },
+    {
+      "source": "Converters to convert between the <a href=\"#getType()\"><code>type</code></a> and <code>String</code> or\n<code>ByteBuffer</code> should be registered.",
+      "translation": "用于在<a href=\"#getType()\"><code>type</code></a>与<code>String</code>或<code>ByteBuffer</code>之间进行转换的转换器应予以注册。",
+      "count": 2
+    },
+    {
+      "source": "Since JSR-356 only allows Encoder/Decoder to be registered by type, instances\nof this class are therefore managed by the WebSocket runtime, and do not need to\nbe registered as Spring Beans. They can, however, by injected with Spring-managed\ndependencies via <a href=\"../../../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowire</code></a>.",
+      "translation": "由于 JSR-356 仅允许按类型注册 Encoder/Decoder，因此该类实例由 WebSocket 运行时管理，无需注册为 Spring Bean。不过，它们可以通过 <a href=\"../../../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowire</code></a> 注入 Spring 管理的依赖项。",
+      "count": 2
+    },
+    {
+      "source": "Returns the active <a href=\"../../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>. By default, this method obtains\nthe context via <a href=\"../../../context/ContextLoader.html#getCurrentWebApplicationContext()\"><code>ContextLoader.getCurrentWebApplicationContext()</code></a>, which\nfinds the ApplicationContext loaded via <a href=\"../../../context/ContextLoader.html\" title=\"class in org.springframework.web.context\"><code>ContextLoader</code></a> typically in a\nServlet container environment. When not running in a Servlet container and\nnot using <a href=\"../../../context/ContextLoader.html\" title=\"class in org.springframework.web.context\"><code>ContextLoader</code></a>, this method should be overridden.",
+      "translation": "返回活动的<a href=\"../../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>。默认情况下，此方法通过<a href=\"../../../context/ContextLoader.html#getCurrentWebApplicationContext()\"><code>ContextLoader.getCurrentWebApplicationContext()</code></a>获取上下文，该方法查找通常由<a href=\"../../../context/ContextLoader.html\" title=\"class in org.springframework.web.context\"><code>ContextLoader</code></a>加载的 ApplicationContext，常见于 Servlet 容器环境中。如果不在 Servlet 容器中运行且未使用<a href=\"../../../context/ContextLoader.html\" title=\"class in org.springframework.web.context\"><code>ContextLoader</code></a>，则应重写此方法。",
+      "count": 2
+    },
+    {
+      "source": "Strategy method used to obtain the <a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>. By default, this\nmethod expects a bean named <code>'webSocketConversionService'</code> in the\n<a href=\"#getApplicationContext()\"><code>active ApplicationContext</code></a>.",
+      "translation": "用于获取<code>ConversionService</code>的<a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\">策略方法</a>。默认情况下，此方法期望在<a href=\"#getApplicationContext()\"><code>active ApplicationContext</code></a>中存在一个名为<code>'webSocketConversionService'</code>的bean。",
+      "count": 2
+    },
+    {
+      "source": "Returns the active <a href=\"../../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>.",
+      "translation": "返回活动的<a href=\"../../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Strategy method used to obtain the <a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>.",
+      "translation": "用于获取<a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>的策略方法。",
+      "count": 2
+    },
+    {
+      "source": "A binary <code>jakarta.websocket.Encoder</code> that delegates\nto Spring's conversion service.",
+      "translation": "一个委托给 Spring 转换服务的二进制<code>jakarta.websocket.Encoder</code>。",
+      "count": 2
+    },
+    {
+      "source": "Decode the message into an object.",
+      "translation": "将消息解码为对象。",
+      "count": 2
+    },
+    {
+      "source": "Called to destroy the encoder/decoder.",
+      "translation": "调用以销毁编码器/解码器。",
+      "count": 2
+    },
+    {
+      "source": "Encode an object to a message.",
+      "translation": "将对象编码为消息。",
+      "count": 2
+    },
+    {
+      "source": "Called to initialize the encoder/decoder.",
+      "translation": "调用以初始化编码器/解码器。",
+      "count": 2
+    },
+    {
+      "source": "Determine if a given message can be decoded.",
+      "translation": "确定给定消息是否可以解码。",
+      "count": 2
+    },
+    {
+      "source": "Returns the type being converted. By default, the type is resolved using\nthe generic arguments of the class.",
+      "translation": "返回正在转换的类型。默认情况下，使用类的泛型参数解析该类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the websocket message type. By default, the type is resolved using\nthe generic arguments of the class.",
+      "translation": "返回 WebSocket 消息类型。默认情况下，使用类的泛型参数解析该类型。",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"type-param-M\"><code>M</code> - the WebSocket message type (<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>ByteBuffer</code></a>)</span>",
+      "translation": "<span id=\"type-param-M\"><code>M</code> - WebSocket 消息类型（<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>ByteBuffer</code></a>）</span>",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the type being converted to (for Encoder) or from (for Decoder)</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 要转换的类型（对于 Encoder）或从该类型转换的类型（对于 Decoder）</span>",
+      "count": 2
+    },
+    {
+      "source": "the <a href=\"../../../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> (never null)",
+      "translation": "<code>ConversionService</code>（永远不为 null）",
+      "count": 2
+    },
+    {
+      "source": "A Text <code>jakarta.websocket.Encoder</code> that delegates\nto Spring's conversion service.",
+      "translation": "一个委托给 Spring 转换服务的文本<code>jakarta.websocket.Encoder</code>。",
+      "count": 1
+    },
+    {
+      "source": "A text <code>jakarta.websocket.Encoder</code> that delegates\nto Spring's conversion service.",
+      "translation": "一个委托给 Spring 转换服务的文本<code>jakarta.websocket.Encoder</code>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the websocket message type.",
+      "translation": "返回 WebSocket 消息类型。",
+      "count": 1
+    },
+    {
+      "source": "Returns the type being converted.",
+      "translation": "返回正在转换的类型。",
+      "count": 1
+    },
+    {
+      "source": "Phillip Webb",
+      "translation": "Phillip Webb",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

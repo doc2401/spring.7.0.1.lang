@@ -1,0 +1,401 @@
+{
+  "created_at": "2026-04-14 11:00:47",
+  "updated_at": "2026-04-14 11:00:47",
+  "stats": {
+    "total_entries": 77,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 120,
+    "entries_with_hits": 77,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5584415584415585,
+    "usage_percentage": 0.0077
+  },
+  "items": [
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 5
+    },
+    {
+      "source": "The default autowired annotation types are the Spring-provided\n<a href=\"Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a> and <a href=\"Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a> annotations as well\nas the common <code>@Inject</code> annotation, if available.",
+      "translation": "默认自动注入注解类型包括 Spring 提供的<a href=\"Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>和<a href=\"Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a>注解，以及如果可用的通用<code>@Inject</code>注解。",
+      "count": 3
+    },
+    {
+      "source": "In addition to regular injection points as discussed above, this post-processor\nalso handles Spring's <a href=\"Lookup.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Lookup</code></a> annotation which identifies lookup\nmethods to be replaced by the container at runtime. This is essentially a type-safe\nversion of <code>getBean(Class, args)</code> and <code>getBean(String, args)</code>.\nSee <a href=\"Lookup.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Lookup's javadoc</code></a> for details.",
+      "translation": "除了上述讨论的常规注入点外，此后置处理器还处理 Spring 的<a href=\"Lookup.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Lookup</code></a>注解，该注解标识需要在运行时由容器替换的查找方法。这本质上是<code>getBean(Class, args)</code>和<code>getBean(String, args)</code>的类型安全版本。有关详细信息，请参阅<a href=\"Lookup.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Lookup 的 javadoc</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Only one constructor of any given bean class may declare this annotation with\nthe 'required' attribute set to <code>true</code>, indicating <i>the</i> constructor\nto autowire when used as a Spring bean. Furthermore, if the 'required' attribute\nis set to <code>true</code>, only a single constructor may be annotated with\n<code>@Autowired</code>. If multiple <i>non-required</i> constructors declare the\nannotation, they will be considered as candidates for autowiring. The constructor\nwith the greatest number of dependencies that can be satisfied by matching beans\nin the Spring container will be chosen. If none of the candidates can be satisfied,\nthen a primary/default constructor (if present) will be used. If a class only\ndeclares a single constructor to begin with, it will always be used, even if not\nannotated. An annotated constructor does not have to be public.",
+      "translation": "任何给定的 Bean 类中，最多只能有一个构造函数声明此注解并将 `required` 属性设置为 `<code>true</code>`，以指示在作为 Spring Bean 使用时进行自动装配的<i>该</i>构造函数。此外，如果 `required` 属性设置为 `<code>true</code>`，则只能有一个构造函数被标注为 `<code>@Autowired</code>`。如果有多个<i>非必需</i>构造函数声明了该注解，它们将被视为自动装配的候选项。将选择依赖项数量最多且能够通过匹配 Spring 容器中的 Bean 来满足的构造函数。如果没有任何候选项可以满足，则将使用主/默认构造函数（如果存在）。如果一个类最初只声明了一个构造函数，即使未标注，也将始终使用该构造函数。标注的构造函数不必是公开的。",
+      "count": 2
+    },
+    {
+      "source": "Also supports the common <code>@Inject</code> annotation,\nif available, as a direct alternative to Spring's own <code>@Autowired</code>.",
+      "translation": "同时也支持常见的 `<code>@Inject</code>` 注解（如果可用），可作为 Spring 自身 `<code>@Autowired</code>` 的直接替代方案。",
+      "count": 2
+    },
+    {
+      "source": "A default <code>AutowiredAnnotationBeanPostProcessor</code> will be registered\nby the \"context:annotation-config\" and \"context:component-scan\" XML tags.\nRemove or turn off the default annotation configuration there if you intend\nto specify a custom <code>AutowiredAnnotationBeanPostProcessor</code> bean definition.",
+      "translation": "默认情况下，`<context:annotation-config>` 和 `<context:component-scan>` XML 标签将注册一个 `AutowiredAnnotationBeanPostProcessor`。如果您打算指定自定义的 `AutowiredAnnotationBeanPostProcessor` Bean 定义，请移除或禁用这些标签中的默认注解配置。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Annotation injection will be performed <i>before</i> XML injection;\nthus the latter configuration will override the former for properties wired through\nboth approaches.",
+      "translation": "<b>注意：</b> 注解注入将在 XML 注入之前执行；因此，对于通过这两种方式连接的属性，后者的配置将覆盖前者。",
+      "count": 2
+    },
+    {
+      "source": "For example if using 'required=true' (the default), this value should be\n<code>true</code>; but if using 'optional=false', this value should be <code>false</code>.",
+      "translation": "例如，如果使用'required=true'（默认值），此值应为`true`；但如果使用'optional=false'，此值应为`false`。",
+      "count": 2
+    },
+    {
+      "source": "Also supports the common <code>@Inject</code> annotation\nif available.",
+      "translation": "同时也支持常见的<code>@Inject</code>注解（如果可用）。",
+      "count": 2
+    },
+    {
+      "source": "Fields are injected right after construction of a bean, before any\nconfig methods are invoked. Such a config field does not have to be public.",
+      "translation": "字段在 Bean 构建之后、任何配置方法调用之前注入。此类配置字段不必是公开的。",
+      "count": 2
+    },
+    {
+      "source": "Config methods may have an arbitrary name and any number of arguments; each of\nthose arguments will be autowired with a matching bean in the Spring container.\nBean property setter methods are effectively just a special case of such a\ngeneral config method. Config methods do not have to be public.",
+      "translation": "配置方法可以具有任意名称和任意数量的参数；这些参数中的每一个都将通过 Spring 容器与匹配的 Bean 进行自动注入。Bean 属性 setter 方法实际上只是此类通用配置方法的特例。配置方法不必是公开的。",
+      "count": 2
+    },
+    {
+      "source": "This setter property exists so that developers can provide their own\n(non-Spring-specific) annotation type to indicate that a member is supposed\nto be autowired.",
+      "translation": "此 Setter 属性存在，以便开发人员提供自己的（非 Spring 特定的）注解类型，以指示某个成员应该进行自动装配。",
+      "count": 2
+    },
+    {
+      "source": "This setter property exists so that developers can provide their own\n(non-Spring-specific) annotation types to indicate that a member is supposed\nto be autowired.",
+      "translation": "此 Setter 属性存在，以便开发人员提供自己的（非 Spring 特定）注解类型，以指示某个成员应进行自动装配。",
+      "count": 2
+    },
+    {
+      "source": "A 'required' dependency means that autowiring should fail when no beans\nare found. Otherwise, the autowiring process will simply bypass the field\nor method when no beans are found.",
+      "translation": "“必需”依赖意味着当找不到任何 Bean 时，自动装配应该失败。否则，当找不到 Bean 时，自动装配过程将简单地跳过该字段或方法。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>AutowiredAnnotationBeanPostProcessor</code> for Spring's\nstandard <a href=\"Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a> and <a href=\"Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a> annotations.",
+      "translation": "为 Spring 的 `<a href=\"Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>` 和 `<a href=\"Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a>` 注解创建一个新的 `<code>AutowiredAnnotationBeanPostProcessor</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Process the given <a href=\"../support/RegisteredBean.html\" title=\"class in org.springframework.beans.factory.support\"><code>RegisteredBean</code></a> instance ahead-of-time and\nreturn a contribution or <code>null</code>.",
+      "translation": "提前处理给定的<a href=\"../support/RegisteredBean.html\" title=\"class in org.springframework.beans.factory.support\"><code>RegisteredBean</code></a>实例并返回贡献或<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">BeanRegistrationAotProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">BeanRegistrationAotProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">SmartInstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Determine the type of the bean to be eventually returned from this\nprocessor's <a href=\"../config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a> callback.",
+      "translation": "确定此处理器从<a href=\"../config/InstantiationAwareBeanPostProcessor.html#postProcessBeforeInstantiation(java.lang.Class,java.lang.String)\"><code>InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation(Class, String)</code></a>回调最终返回的 bean 类型。",
+      "count": 2
+    },
+    {
+      "source": "<em>Native</em> processing method for direct calls with an arbitrary target\ninstance, resolving all of its fields and methods which are annotated with\none of the configured 'autowired' annotation types.",
+      "translation": "<em>原生</em> 处理方法，用于直接调用具有任意目标实例的情况，解析所有使用配置的某个'autowired'注解类型之一进行注解的字段和方法。",
+      "count": 2
+    },
+    {
+      "source": "Post-process the given merged bean definition for the specified bean.",
+      "translation": "对指定 Bean 的合并后的 Bean 定义进行后处理。",
+      "count": 2
+    },
+    {
+      "source": "Set the name of an attribute of the annotation that specifies whether it is required.",
+      "translation": "设置指定该属性是否为必需的注解属性的名称。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">postProcessMergedBeanDefinition</a></code> in interface <code><a href=\"../support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">postProcessMergedBeanDefinition</a></code>` 接口 `<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">resetBeanDefinition</a></code> in interface <code><a href=\"../support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">resetBeanDefinition</a></code>` 接口 `<code><a href=\"../support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">processAheadOfTime</a></code> in interface <code><a href=\"../aot/BeanRegistrationAotProcessor.html\" title=\"interface in org.springframework.beans.factory.aot\">BeanRegistrationAotProcessor</a></code>",
+      "translation": "`<code><a href=\"../aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">processAheadOfTime</a></code>` 接口 `<code><a href=\"../aot/BeanRegistrationAotProcessor.html\" title=\"interface in org.springframework.beans.factory.aot\">BeanRegistrationAotProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">determineBeanType</a></code> in interface <code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineBeanType(java.lang.Class,java.lang.String)\">determineBeanType</a></code>` 接口 `<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">determineCandidateConstructors</a></code> in interface <code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html#determineCandidateConstructors(java.lang.Class,java.lang.String)\">determineCandidateConstructors</a></code>` 接口 `<code><a href=\"../config/SmartInstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">SmartInstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code> in interface <code><a href=\"../config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code>` 接口 `<code><a href=\"../config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../BeanCreationException.html\" title=\"class in org.springframework.beans.factory\">BeanCreationException</a></code> - if autowiring failed",
+      "translation": "<code><a href=\"../BeanCreationException.html\" title=\"class in org.springframework.beans.factory\">BeanCreationException</a></code> - 如果自动装配失败",
+      "count": 2
+    },
+    {
+      "source": "<code>bean</code> - the target instance to process",
+      "translation": "<code>bean</code> - 要处理的目标实例",
+      "count": 2
+    },
+    {
+      "source": "<code>ann</code> - the Autowired annotation",
+      "translation": "<code>ann</code> - 自动注入注解",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Mark Fisher, Stephane Nicoll, Sebastien Deleuze, Sam Brannen, Phillip Webb",
+      "translation": "Juergen Hoeller, Mark Fisher, Stephane Nicoll, Sebastien Deleuze, Sam Brannen, Phillip Webb",
+      "count": 2
+    },
+    {
+      "source": "whether the annotation indicates that a dependency is required",
+      "translation": "该注解是否表示需要依赖项",
+      "count": 2
+    },
+    {
+      "source": "Annotation Config vs. XML Config",
+      "translation": "注解配置与 XML 配置",
+      "count": 2
+    },
+    {
+      "source": "@Lookup Methods",
+      "translation": "@Lookup 方法",
+      "count": 2
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "If the given instance isn't relevant to the processor, it should return a\n<code>null</code> contribution.",
+      "translation": "如果给定的实例与处理器不相关，则应返回一个 `<code>null</code>` 贡献。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>null</code>.",
+      "translation": "默认实现返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given <code>pvs</code> as-is.",
+      "translation": "默认实现原样返回给定的<code>pvs</code>。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty.",
+      "translation": "默认实现为空。",
+      "count": 1
+    },
+    {
+      "source": "Processors are free to use any techniques they like to analyze the given\ninstance. Most typically use reflection to find fields or methods to use\nin the contribution. Contributions typically generate source code or\nresource files that can be used when the AOT optimized application runs.",
+      "translation": "处理器可以自由使用任何技术来分析给定的实例。大多数情况下，它们使用反射来查找用于贡献的字段或方法。贡献通常会生成源代码或资源文件，这些文件可在 AOT 优化后的应用程序运行时使用。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given bean class as-is.\nSpecific implementations should fully evaluate their processing steps\nin order to create/initialize a potential proxy class upfront.",
+      "translation": "默认实现原样返回给定的 Bean 类。具体实现应完全评估其处理步骤，以便预先创建/初始化潜在的代理类。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Determine the candidate constructors to use for the given bean.",
+      "translation": "确定用于给定 Bean 的候选构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Determine if the annotated field or method requires its dependency.",
+      "translation": "确定注释的字段或方法是否需要其依赖项。",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "Post-process the given property values before the factory applies them\nto the given bean.",
+      "translation": "在工厂将属性值应用到给定 Bean 之前，对给定的属性值进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "A notification that the bean definition for the specified name has been reset,\nand that this post-processor should clear any metadata for the affected bean.",
+      "translation": "指定名称的 Bean 定义已被重置的通知，且此后置处理器应清除受影响 Bean 的任何元数据。",
+      "count": 1
+    },
+    {
+      "source": "Set the 'autowired' annotation type, to be used on constructors, fields,\nsetter methods, and arbitrary config methods.",
+      "translation": "设置 'autowired' 注解类型，该注解可用于构造函数、字段、Setter 方法和任意配置方法。",
+      "count": 1
+    },
+    {
+      "source": "Set the 'autowired' annotation types, to be used on constructors, fields,\nsetter methods, and arbitrary config methods.",
+      "translation": "设置用于构造函数、字段、Setter 方法和任意配置方法的 `autowired` 注解类型。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Set the boolean value that marks a dependency as required.",
+      "translation": "设置标记依赖项为必需的布尔值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the raw class of the bean (never <code>null</code>)",
+      "translation": "<code>beanClass</code> - 该 bean 的原始类（永远不为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>pvs</code> - the property values that the factory is about to apply (never <code>null</code>)",
+      "translation": "<code>pvs</code> - 工厂即将应用的属性值（永远不为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code>beanDefinition</code> - the merged bean definition for the bean",
+      "translation": "<code>beanDefinition</code> - 该 Bean 的合并后的 Bean 定义",
+      "count": 1
+    },
+    {
+      "source": "<code>beanType</code> - the actual type of the managed bean instance",
+      "translation": "<code>beanType</code> - 托管 Bean 实例的实际类型",
+      "count": 1
+    },
+    {
+      "source": "<code>registeredBean</code> - the registered bean to process",
+      "translation": "<code>registeredBean</code> - 要处理的已注册 Bean",
+      "count": 1
+    },
+    {
+      "source": "<code>beanClass</code> - the raw class of the bean",
+      "translation": "<code>beanClass</code> - 该 Bean 的原始类",
+      "count": 1
+    },
+    {
+      "source": "the type of the bean (never <code>null</code>)",
+      "translation": "bean 的类型（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the candidate constructors, or <code>null</code> if none specified",
+      "translation": "候选构造函数，或者如果未指定则为<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance created, but whose properties have not yet been set",
+      "translation": "<code>bean</code> - 已创建但属性尚未设置的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "the actual property values to apply to the given bean (can be the passed-in\nPropertyValues instance), or <code>null</code> to skip property population",
+      "translation": "要应用于给定 Bean 的实际属性值（可以是传入的 `PropertyValues` 实例），或 `<code>null</code>` 以跳过属性填充。",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Autowired Constructors",
+      "translation": "@Autowired 构造函数",
+      "count": 1
+    },
+    {
+      "source": "Autowired Fields",
+      "translation": "@Autowired 字段",
+      "count": 1
+    },
+    {
+      "source": "Autowired Methods",
+      "translation": "@Autowired 方法",
+      "count": 1
+    }
+  ]
+}

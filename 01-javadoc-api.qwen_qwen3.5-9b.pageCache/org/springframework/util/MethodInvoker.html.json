@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-04-14 17:49:59",
+  "updated_at": "2026-04-14 17:49:59",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 68,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5813953488372092,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "Usage: Specify \"targetClass\"/\"targetMethod\" or \"targetObject\"/\"targetMethod\",\noptionally specify arguments, prepare the invoker. Afterwards, you may\ninvoke the method any number of times, obtaining the invocation result.",
+      "translation": "用法：指定 \"targetClass\"/\"targetMethod\" 或 \"targetObject\"/\"targetMethod\"，可选地指定参数，准备调用器。之后，您可以多次调用该方法并获取调用结果。",
+      "count": 2
+    },
+    {
+      "source": "Can for example be used to determine the return type.",
+      "translation": "例如，它可以用来确定返回类型。",
+      "count": 2
+    },
+    {
+      "source": "The invoker needs to have been prepared before.",
+      "translation": "调用者必须在此之前已做好准备。",
+      "count": 2
+    },
+    {
+      "source": "Determines a weight that represents the class hierarchy difference between types and\narguments. A direct match, i.e. type Integer → arg of class Integer, does not increase\nthe result - all direct matches means weight 0. A match between type Object and arg of\nclass Integer would increase the weight by 2, due to the superclass 2 steps up in the\nhierarchy (i.e. Object) being the last one that still matches the required type Object.\nType Number and class Integer would increase the weight by 1 accordingly, due to the\nsuperclass 1 step up the hierarchy (i.e. Number) still matching the required type Number.\nTherefore, with an arg of type Integer, a constructor (Integer) would be preferred to a\nconstructor (Number) which would in turn be preferred to a constructor (Object).\nAll argument weights get accumulated.",
+      "translation": "确定一个权重，以表示类型和参数之间的类层次结构差异。直接匹配（即类型为 Integer → 参数为 Integer 类）不会增加结果——所有直接匹配的权重均为 0。类型为 Object 与参数为 Integer 类的匹配会使权重增加 2，因为层次结构中向上 2 步的父类（即 Object）是最后一个仍匹配所需类型 Object 的类。类型为 Number 与类 Integer 的匹配会相应地使权重增加 1，因为层次结构中向上 1 步的父类（即 Number）仍匹配所需的类型 Number。因此，对于类型为 Integer 的参数，构造函数 (Integer) 将优先于构造函数 (Number)，而后者又将优先于构造函数 (Object)。所有参数权重均累加。",
+      "count": 2
+    },
+    {
+      "source": "Note: This is the algorithm used by MethodInvoker itself and also the algorithm\nused for constructor and factory method selection in Spring's bean container (in case\nof lenient constructor resolution which is the default for regular bean definitions).",
+      "translation": "注：这是 `MethodInvoker` 本身使用的算法，也是 Spring 的 Bean 容器用于构造函数和工厂方法选择的算法（在宽松构造函数解析的情况下，这是常规 Bean 定义的默认行为）。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this invoker has been prepared already,\ni.e. whether it allows access to <a href=\"#getPreparedMethod()\"><code>getPreparedMethod()</code></a> already.",
+      "translation": "返回该调用器是否已经准备好，即是否已允许访问<a href=\"#getPreparedMethod()\"><code>getPreparedMethod()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Find a matching method with the specified name for the specified arguments.",
+      "translation": "查找与指定名称和参数匹配的相应方法。",
+      "count": 2
+    },
+    {
+      "source": "Return the arguments for the method invocation.",
+      "translation": "返回方法调用的参数。",
+      "count": 2
+    },
+    {
+      "source": "Return the target class on which to call the target method.",
+      "translation": "返回要调用目标方法的目标类。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the method to be invoked.",
+      "translation": "返回要调用的方法名。",
+      "count": 2
+    },
+    {
+      "source": "Return the target object on which to call the target method.",
+      "translation": "返回要调用目标方法的目标对象。",
+      "count": 2
+    },
+    {
+      "source": "Set the target class on which to call the target method.\nOnly necessary when the target method is static; else,\na target object needs to be specified anyway.",
+      "translation": "设置要调用目标方法的目标类。\n仅当目标方法是静态方法时才需要；否则，无论如何都需要指定目标对象。",
+      "count": 2
+    },
+    {
+      "source": "Set the target object on which to call the target method.\nOnly necessary when the target method is not static;\nelse, a target class is sufficient.",
+      "translation": "设置要调用目标方法的目标对象。\n仅当目标方法不是静态方法时才需要；否则，一个目标类就足够了。",
+      "count": 2
+    },
+    {
+      "source": "Set the name of the method to be invoked.\nRefers to either a static method or a non-static method,\ndepending on a target object being set.",
+      "translation": "设置要调用的方法名称。\n根据是否设置了目标对象，该方法指代静态方法或非静态方法。",
+      "count": 2
+    },
+    {
+      "source": "Set a fully qualified static method name to invoke,\nfor example, \"example.MyExampleClass.myExampleMethod\". This is a\nconvenient alternative to specifying targetClass and targetMethod.",
+      "translation": "设置要调用的完全限定静态方法名，例如\"example.MyExampleClass.myExampleMethod\"。这是指定 targetClass 和 targetMethod 的便捷替代方案。",
+      "count": 2
+    },
+    {
+      "source": "Set arguments for the method invocation. If this property is not set,\nor the Object array is of length 0, a method with no arguments is assumed.",
+      "translation": "设置方法调用的参数。如果未设置此属性，或 Object 数组长度为 0，则假定该方法无参数。",
+      "count": 2
+    },
+    {
+      "source": "Prepare the specified method.\nThe method can be invoked any number of times afterwards.",
+      "translation": "准备指定的方法。\n此后可以多次调用该方法。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the invoker hasn't been prepared yet",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果调用者尚未准备好",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/InvocationTargetException.html\" title=\"class or interface in java.lang.reflect\">InvocationTargetException</a></code> - if the target method threw an exception",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/InvocationTargetException.html\" title=\"class or interface in java.lang.reflect\">InvocationTargetException</a></code> - 如果目标方法抛出了异常",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalAccessException.html\" title=\"class or interface in java.lang\">IllegalAccessException</a></code> - if the target method couldn't be accessed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalAccessException.html\" title=\"class or interface in java.lang\">IllegalAccessException</a></code> - 如果无法访问目标方法",
+      "count": 2
+    },
+    {
+      "source": "the prepared Method object (never <code>null</code>)",
+      "translation": "已准备好的 Method 对象（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the object (possibly null) returned by the method invocation,\nor <code>null</code> if the method has a void return type",
+      "translation": "方法调用返回的对象（可能为 null），或者如果该方法具有 void 返回类型，则返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>paramTypes</code> - the parameter types to match",
+      "translation": "<code>paramTypes</code> - 要匹配的参数类型",
+      "count": 2
+    },
+    {
+      "source": "<code>args</code> - the arguments to match",
+      "translation": "<code>args</code> - 要匹配的参数",
+      "count": 2
+    },
+    {
+      "source": "the accumulated weight for all arguments",
+      "translation": "所有参数的累积权重",
+      "count": 2
+    },
+    {
+      "source": "The default implementations uses <code>ClassUtils.forName</code>,\nusing the thread context class loader.",
+      "translation": "默认实现使用 `<code>ClassUtils.forName</code>`，并采用线程上下文类加载器。",
+      "count": 1
+    },
+    {
+      "source": "Return the prepared Method object that will be invoked.",
+      "translation": "返回将调用的已准备好的 Method 对象。",
+      "count": 1
+    },
+    {
+      "source": "Algorithm that judges the match between the declared parameter types of a candidate method\nand a specific list of arguments that this method is supposed to be invoked with.",
+      "translation": "用于判断候选方法的声明参数类型与该方法预期调用时的特定参数列表之间匹配情况的算法。",
+      "count": 1
+    },
+    {
+      "source": "Invoke the specified method.",
+      "translation": "调用指定的方法。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this invoker has been prepared already,\ni.e.",
+      "translation": "返回该调用器是否已准备好，即",
+      "count": 1
+    },
+    {
+      "source": "Prepare the specified method.",
+      "translation": "准备指定的方法。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the given class name into a Class.",
+      "translation": "将给定的类名解析为 Class。",
+      "count": 1
+    },
+    {
+      "source": "Set arguments for the method invocation.",
+      "translation": "设置方法调用的参数。",
+      "count": 1
+    },
+    {
+      "source": "Set a fully qualified static method name to invoke,\nfor example, \"example.MyExampleClass.myExampleMethod\".",
+      "translation": "设置要调用的完全限定静态方法名，例如\"example.MyExampleClass.myExampleMethod\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the target class on which to call the target method.",
+      "translation": "设置要调用目标方法的目标类。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the method to be invoked.",
+      "translation": "将要调用的方法名设置为。",
+      "count": 1
+    },
+    {
+      "source": "Set the target object on which to call the target method.",
+      "translation": "设置要调用目标方法的目标对象。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassNotFoundException.html\" title=\"class or interface in java.lang\">ClassNotFoundException</a></code> - if the class name was invalid",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassNotFoundException.html\" title=\"java.lang 中的类或接口\">ClassNotFoundException</a></code> - 如果类名无效",
+      "count": 1
+    },
+    {
+      "source": "<code>className</code> - the class name to resolve",
+      "translation": "<code>className</code> - 要解析的类名",
+      "count": 1
+    },
+    {
+      "source": "a matching method, or <code>null</code> if none",
+      "translation": "一个匹配的方法，或者如果没有则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Colin Sampaleanu, Juergen Hoeller",
+      "translation": "Colin Sampaleanu，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the resolved Class",
+      "translation": "已解析的类",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "created_at": "2026-04-14 16:55:52",
+  "updated_at": "2026-04-14 16:55:52",
+  "stats": {
+    "total_entries": 50,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 99,
+    "entries_with_hits": 50,
+    "entries_without_hits": 0,
+    "hit_rate": 1.98,
+    "usage_percentage": 0.005
+  },
+  "items": [
+    {
+      "source": "Can be overridden by subclasses.",
+      "translation": "可被子类重写。",
+      "count": 3
+    },
+    {
+      "source": "Perform the same logic as\n<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#possiblyExpectingExceptions-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\"><code>BlockJUnit4ClassRunner.possiblyExpectingExceptions(FrameworkMethod, Object, Statement)</code></a>\nexcept that the <em>expected exception</em> is retrieved using\n<a href=\"#getExpectedException(org.junit.runners.model.FrameworkMethod)\"><code>getExpectedException(FrameworkMethod)</code></a>.",
+      "translation": "执行与\n<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#possiblyExpectingExceptions-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\"><code>BlockJUnit4ClassRunner.possiblyExpectingExceptions(FrameworkMethod, Object, Statement)</code></a>\n相同的逻辑，但预期异常（<em>expected exception</em>）是使用\n<a href=\"#getExpectedException(org.junit.runners.model.FrameworkMethod)\"><code>getExpectedException(FrameworkMethod)</code></a>\n获取的。",
+      "count": 3
+    },
+    {
+      "source": "Perform the same logic as\n<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#runChild-org.junit.runners.model.FrameworkMethod-org.junit.runner.notification.RunNotifier-\" title=\"class or interface in org.junit.runners\"><code>BlockJUnit4ClassRunner.runChild(FrameworkMethod, RunNotifier)</code></a>,\nexcept that tests are determined to be <em>ignored</em> by\n<a href=\"#isTestMethodIgnored(org.junit.runners.model.FrameworkMethod)\"><code>isTestMethodIgnored(FrameworkMethod)</code></a>.",
+      "translation": "执行与\n<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#runChild-org.junit.runners.model.FrameworkMethod-org.junit.runner.notification.RunNotifier-\" title=\"class or interface in org.junit.runners\"><code>BlockJUnit4ClassRunner.runChild(FrameworkMethod, RunNotifier)</code></a>\n相同的逻辑，但测试由\n<a href=\"#isTestMethodIgnored(org.junit.runners.model.FrameworkMethod)\"><code>isTestMethodIgnored(FrameworkMethod)</code></a>\n判定为<em>忽略</em>。",
+      "count": 3
+    },
+    {
+      "source": "Retrieve the configured Spring-specific <code>timeout</code> from the\n<a href=\"../../annotation/Timed.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Timed</code></a> annotation\non the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">test method</a>.",
+      "translation": "从提供的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"类或接口在 org.junit.runners.model\">测试方法</a>上的<a href=\"../../annotation/Timed.html\" title=\"org.springframework.test.annotation 中的注解接口\"><code>@Timed</code></a>注解中检索配置的 Spring 特定<code>timeout</code>。",
+      "count": 3
+    },
+    {
+      "source": "Construct a new <code>SpringJUnit4ClassRunner</code> and initialize a\n<a href=\"../TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a> to provide Spring testing functionality to\nstandard JUnit tests.",
+      "translation": "构建一个新的 <code>SpringJUnit4ClassRunner</code> 并初始化一个 <a href=\"../TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a>，为标准 JUnit 测试提供 Spring 测试功能。",
+      "count": 3
+    },
+    {
+      "source": "Delegate to the parent implementation for creating the test instance and\nthen allow the <a href=\"#getTestContextManager()\"><code>TestContextManager</code></a> to\nprepare the test instance before returning it.",
+      "translation": "委托给父实现来创建测试实例，然后允许<a href=\"#getTestContextManager()\"><code>TestContextManager</code></a>在返回之前准备该测试实例。",
+      "count": 3
+    },
+    {
+      "source": "the timeout, or <code>0</code> if none was specified",
+      "translation": "超时时间，或者如果未指定则为<code>0</code>。",
+      "count": 3
+    },
+    {
+      "source": "Furthermore, support for timeouts has been moved down the execution\nchain in order to include execution of <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Before.html\" title=\"class or interface in org.junit\"><code>@Before</code></a>\nand <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/After.html\" title=\"class or interface in org.junit\"><code>@After</code></a> methods within the timed execution.\nNote that this differs from the default JUnit behavior of executing\n<code>@Before</code> and <code>@After</code> methods in the main thread while\nexecuting the actual test method in a separate thread. Thus, the net\neffect is that <code>@Before</code> and <code>@After</code> methods will be\nexecuted in the same thread as the test method. As a consequence,\nJUnit-specified timeouts will work fine in combination with Spring\ntransactions. However, JUnit-specific timeouts still differ from\nSpring-specific timeouts in that the former execute in a separate\nthread while the latter execute in the main thread (like regular tests).",
+      "translation": "此外，超时支持已移至执行链的更后位置，以便在定时执行中包含 `<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Before.html\" title=\"class or interface in org.junit\"><code>@Before</code></a>` 和 `<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/After.html\" title=\"class or interface in org.junit\"><code>@After</code></a>` 方法的执行。请注意，这与 JUnit 的默认行为不同，后者在主线程中执行 `<code>@Before</code>` 和 `<code>@After</code>` 方法，而在单独的线程中执行实际的测试方法。因此，净效果是 `<code>@Before</code>` 和 `<code>@After</code>` 方法与测试方法在同一线程中执行。作为结果，JUnit 指定的超时可以与 Spring 事务配合使用。然而，JUnit 特定的超时与 Spring 特定的超时仍存在差异：前者在单独的线程中执行，而后者在主线程中执行（与普通测试相同）。",
+      "count": 2
+    },
+    {
+      "source": "The following list constitutes all annotations currently supported directly\nor indirectly by <code>SpringJUnit4ClassRunner</code>. <em>(Note that additional\nannotations may be supported by various\n<a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a>\nor <a href=\"../TestContextBootstrapper.html\" title=\"interface in org.springframework.test.context\"><code>TestContextBootstrapper</code></a>\nimplementations.)</em>",
+      "translation": "以下列表构成了当前由 `<code>SpringJUnit4ClassRunner</code>` 直接支持或通过间接方式支持的所有注解。<em>(请注意，各种 <a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a> 或 <a href=\"../TestContextBootstrapper.html\" title=\"interface in org.springframework.test.context\"><code>TestContextBootstrapper</code></a> 实现可能支持额外的注解。)</em>",
+      "count": 2
+    },
+    {
+      "source": "If you would like to use the Spring TestContext Framework with a runner\nother than this one, use <a href=\"rules/SpringClassRule.html\" title=\"class in org.springframework.test.context.junit4.rules\"><code>SpringClassRule</code></a> and <a href=\"rules/SpringMethodRule.html\" title=\"class in org.springframework.test.context.junit4.rules\"><code>SpringMethodRule</code></a>.",
+      "translation": "如果您想使用此运行器之外的 Spring TestContext Framework 运行器，请使用<a href=\"rules/SpringClassRule.html\" title=\"class in org.springframework.test.context.junit4.rules\"><code>SpringClassRule</code></a>和<a href=\"rules/SpringMethodRule.html\" title=\"class in org.springframework.test.context.junit4.rules\"><code>SpringMethodRule</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Supports both Spring's <a href=\"../../annotation/Timed.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Timed</code></a>\nand JUnit's <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Test.html#timeout--\" title=\"class or interface in org.junit\"><code>@Test(timeout=...)</code></a> annotations, but not both\nsimultaneously.",
+      "translation": "支持 Spring 的 <a href=\"../../annotation/Timed.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Timed</code></a> 和 JUnit 的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Test.html#timeout--\" title=\"class or interface in org.junit\"><code>@Test(timeout=...)</code></a> 注解，但不能同时使用。",
+      "count": 2
+    },
+    {
+      "source": "This prevents classes with a non-matching <code>@IfProfileValue</code>\nannotation from running altogether, even skipping the execution of\n<code>prepareTestInstance()</code> methods in <code>TestExecutionListeners</code>.",
+      "translation": "这可以防止带有不匹配的 `<code>@IfProfileValue</code>` 注解的类一起运行，甚至跳过 `<code>TestExecutionListeners</code>` 中 `<code>prepareTestInstance()</code>` 方法的执行。",
+      "count": 2
+    },
+    {
+      "source": "To use this class, annotate a JUnit 4 based test class with\n<code>@RunWith(SpringJUnit4ClassRunner.class)</code> or <code>@RunWith(SpringRunner.class)</code>.",
+      "translation": "要使用此类，请使用 `<code>@RunWith(SpringJUnit4ClassRunner.class)</code>` 或 `<code>@RunWith(SpringRunner.class)</code>` 注解一个基于 JUnit 4 的测试类。",
+      "count": 2
+    },
+    {
+      "source": "Supports JUnit's <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Test.html#expected--\" title=\"class or interface in org.junit\"><code>@Test(expected=...)</code></a> annotation.",
+      "translation": "支持 JUnit 的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Test.html#expected--\" title=\"class or interface in org.junit\"><code>@Test(expected=...)</code></a> 注解。",
+      "count": 2
+    },
+    {
+      "source": "Supports Spring's <a href=\"../../annotation/Repeat.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Repeat</code></a>\nannotation.",
+      "translation": "支持 Spring 的<a href=\"../../annotation/Repeat.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Repeat</code></a>注解。",
+      "count": 2
+    },
+    {
+      "source": "Return <code>true</code> if <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Ignore.html\" title=\"class or interface in org.junit\"><code>@Ignore</code></a> is present for the supplied\n<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">test method</a> or if the test method is disabled\nvia <code>@IfProfileValue</code>.",
+      "translation": "如果为提供的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\"><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">测试方法</a></a>存在<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Ignore.html\" title=\"class or interface in org.junit\"><code>@Ignore</code></a>，或者测试方法通过<code>@IfProfileValue</code>禁用时，返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the configured JUnit <code>timeout</code> from the <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Test.html\" title=\"class or interface in org.junit\"><code>@Test</code></a>\nannotation on the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">test method</a>.",
+      "translation": "从提供的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\"><a>测试方法</a></a>上的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/Test.html\" title=\"class or interface in org.junit\"><code>@Test</code></a>注解中检索配置的 JUnit<code>timeout</code>。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> returned by the parent implementation with a\n<code>RunAfterTestClassCallbacks</code> statement, thus preserving the default\nJUnit functionality while adding support for the Spring TestContext Framework.",
+      "translation": "将父实现返回的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> 包装在 <code>RunAfterTestClassCallbacks</code> 语句中，从而在保留默认 JUnit 功能的同时添加对 Spring TestContext Framework 的支持。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> returned by the parent implementation with a\n<code>RunAfterTestMethodCallbacks</code> statement, thus preserving the\ndefault functionality while adding support for the Spring TestContext\nFramework.",
+      "translation": "将父实现返回的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> 包装在 <code>RunAfterTestMethodCallbacks</code> 语句中，从而在保留默认功能的同时添加对 Spring TestContext Framework 的支持。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> with a <code>RunAfterTestExecutionCallbacks</code>\nstatement, thus preserving the default functionality while adding support for the\nSpring TestContext Framework.",
+      "translation": "将提供的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a>用<code>RunAfterTestExecutionCallbacks</code>语句包装，从而在保留默认功能的同时添加对 Spring TestContext Framework 的支持。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> returned by the parent implementation with a\n<code>RunBeforeTestClassCallbacks</code> statement, thus preserving the\ndefault JUnit functionality while adding support for the Spring TestContext\nFramework.",
+      "translation": "将父实现返回的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> 包装一个<code>RunBeforeTestClassCallbacks</code>语句，从而在保留默认 JUnit 功能的同时添加对 Spring TestContext Framework 的支持。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> returned by the parent implementation with a\n<code>RunBeforeTestMethodCallbacks</code> statement, thus preserving the\ndefault functionality while adding support for the Spring TestContext\nFramework.",
+      "translation": "将父实现返回的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> 包装在 <code>RunBeforeTestMethodCallbacks</code> 语句中，从而在保留默认功能的同时支持 Spring TestContext Framework。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> with a <code>RunBeforeTestExecutionCallbacks</code>\nstatement, thus preserving the default functionality while adding support for the\nSpring TestContext Framework.",
+      "translation": "将提供的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a>包装在<code>RunBeforeTestExecutionCallbacks</code>语句中，从而保留默认功能并添加对 Spring TestContext Framework 的支持。",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"../TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a> associated with this runner.",
+      "translation": "获取与此运行器关联的<a href=\"../TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return a description suitable for an ignored test class if the test is\ndisabled via <code>@IfProfileValue</code> at the class-level, and\notherwise delegate to the parent implementation.",
+      "translation": "如果测试是通过类级别的 `<code>@IfProfileValue</code>` 禁用的，则返回适用于被忽略的测试类的描述；否则委托给父级实现。",
+      "count": 2
+    },
+    {
+      "source": "Augment the default JUnit behavior\n<a href=\"#withPotentialRepeat(org.junit.runners.model.FrameworkMethod,java.lang.Object,org.junit.runners.model.Statement)\">with potential repeats</a> of the entire\nexecution chain.",
+      "translation": "增强默认 JUnit 行为，为整个执行链添加<a href=\"#withPotentialRepeat(org.junit.runners.model.FrameworkMethod,java.lang.Object,org.junit.runners.model.Statement)\">潜在重复</a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#getDescription--\" title=\"class or interface in org.junit.runners\">getDescription</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#getDescription--\" title=\"class or interface in org.junit.runners\">getDescription</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#run-org.junit.runner.notification.RunNotifier-\" title=\"class or interface in org.junit.runners\">run</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#run-org.junit.runner.notification.RunNotifier-\" title=\"class or interface in org.junit.runners\">run</a></code> 方法在类 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code> 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#withBeforeClasses-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withBeforeClasses</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#withBeforeClasses-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withBeforeClasses</a></code> 类 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#withAfterClasses-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withAfterClasses</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html#withAfterClasses-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withAfterClasses</a></code>` 类 `<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/ParentRunner.html\" title=\"class or interface in org.junit.runners\">ParentRunner</a>&lt;<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">FrameworkMethod</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "either a <a href=\"statements/SpringFailOnTimeout.html\" title=\"class in org.springframework.test.context.junit4.statements\"><code>SpringFailOnTimeout</code></a>, a <code>FailOnTimeout</code>,\nor the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> as appropriate",
+      "translation": "要么是 `<a href=\"statements/SpringFailOnTimeout.html\" title=\"class in org.springframework.test.context.junit4.statements\"><code>SpringFailOnTimeout</code></a>`，要么是 `<code>FailOnTimeout</code>`，或者是提供的 `<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a>`，视情况而定。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runner/Describable.html#getDescription--\" title=\"class or interface in org.junit.runner\">getDescription</a></code> in interface <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runner/Describable.html\" title=\"class or interface in org.junit.runner\">Describable</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runner/Describable.html#getDescription--\" title=\"class or interface in org.junit.runner\">getDescription</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runner/Describable.html\" title=\"class or interface in org.junit.runner\">Describable</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#createTest--\" title=\"class or interface in org.junit.runners\">createTest</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#createTest--\" title=\"class or interface in org.junit.runners\">createTest</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#runChild-org.junit.runners.model.FrameworkMethod-org.junit.runner.notification.RunNotifier-\" title=\"class or interface in org.junit.runners\">runChild</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#runChild-org.junit.runners.model.FrameworkMethod-org.junit.runner.notification.RunNotifier-\" title=\"class or interface in org.junit.runners\">runChild</a></code>` 类中的 `<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#methodBlock-org.junit.runners.model.FrameworkMethod-\" title=\"class or interface in org.junit.runners\">methodBlock</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#methodBlock-org.junit.runners.model.FrameworkMethod-\" title=\"class or interface in org.junit.runners\">methodBlock</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#possiblyExpectingExceptions-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">possiblyExpectingExceptions</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#possiblyExpectingExceptions-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">possiblyExpectingExceptions</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withPotentialTimeout-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withPotentialTimeout</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withPotentialTimeout-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withPotentialTimeout</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withBefores-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withBefores</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withBefores-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withBefores</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withAfters-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withAfters</a></code> in class <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withAfters-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\">withAfters</a></code> 类中的 <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html\" title=\"class or interface in org.junit.runners\">BlockJUnit4ClassRunner</a></code>",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - the test class to be run",
+      "translation": "<code>clazz</code> - 要运行的测试类",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - the test class to be managed",
+      "translation": "<code>clazz</code> - 要管理的测试类",
+      "count": 2
+    },
+    {
+      "source": "the expected exception, or <code>null</code> if none was specified",
+      "translation": "预期的异常，或者如果未指定则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE:</strong> This class requires JUnit 4.12 or higher.",
+      "translation": "<strong>注意：</strong>此类需要 JUnit 4.12 或更高版本。",
+      "count": 1
+    },
+    {
+      "source": "Wrap the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a> with a <code>SpringRepeat</code> statement.",
+      "translation": "将提供的<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/Statement.html\" title=\"class or interface in org.junit.runners.model\"><code>Statement</code></a>用<code>SpringRepeat</code>语句包装。",
+      "count": 1
+    },
+    {
+      "source": "Perform the same logic as\n<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withPotentialTimeout-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\"><code>BlockJUnit4ClassRunner.withPotentialTimeout(FrameworkMethod, Object, Statement)</code></a>\nbut with additional support for Spring's <code>@Timed</code> annotation.",
+      "translation": "执行与<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/BlockJUnit4ClassRunner.html#withPotentialTimeout-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-\" title=\"class or interface in org.junit.runners\"><code>BlockJUnit4ClassRunner.withPotentialTimeout(FrameworkMethod, Object, Statement)</code></a>相同的逻辑，但额外支持 Spring 的<code>@Timed</code>注解。",
+      "count": 1
+    },
+    {
+      "source": "since Spring Framework 7.0 in favor of the\n<a href=\"../junit/jupiter/SpringExtension.html\" title=\"class in org.springframework.test.context.junit.jupiter\"><code>SpringExtension</code></a>\nand JUnit Jupiter",
+      "translation": "自 Spring Framework 7.0 起，推荐使用 <a href=\"../junit/jupiter/SpringExtension.html\" title=\"class in org.springframework.test.context.junit.jupiter\"><code>SpringExtension</code></a> 和 JUnit Jupiter。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a href=\"../TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a> for the supplied test class.",
+      "translation": "为提供的测试类创建一个新的<code>TestContextManager</code><a href=\"../TestContextManager.html\" title=\"class in org.springframework.test.context\">。</a>",
+      "count": 1
+    },
+    {
+      "source": "Get the <code>exception</code> that the supplied <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">test method</a> is expected to throw.",
+      "translation": "获取提供的 <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runners/model/FrameworkMethod.html\" title=\"class or interface in org.junit.runners.model\">测试方法</a> 预期抛出的 <code>exception</code>。",
+      "count": 1
+    },
+    {
+      "source": "Check whether the test is enabled in the current execution environment.",
+      "translation": "检查当前执行环境中是否启用了测试。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Juergen Hoeller",
+      "translation": "Sam Brannen，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

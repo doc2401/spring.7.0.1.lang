@@ -1,0 +1,346 @@
+{
+  "created_at": "2026-04-14 15:02:32",
+  "updated_at": "2026-04-14 15:02:32",
+  "stats": {
+    "total_entries": 66,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 113,
+    "entries_with_hits": 66,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7121212121212122,
+    "usage_percentage": 0.006600000000000001
+  },
+  "items": [
+    {
+      "source": "<code>createContext</code> in interface <code>jakarta.jms.ConnectionFactory</code>",
+      "translation": "<code>createContext</code> 在接口 <code>jakarta.jms.ConnectionFactory</code> 中",
+      "count": 4
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS API methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS API 方法抛出",
+      "count": 4
+    },
+    {
+      "source": "Note that when using the JMS 1.0.2 API, this ConnectionFactory will switch\ninto queue/topic mode according to the JMS API methods used at runtime:\n<code>createQueueConnection</code> and <code>createTopicConnection</code> will\nlead to queue/topic mode, respectively; generic <code>createConnection</code>\ncalls will lead to a JMS 1.1 connection which is able to serve both modes.",
+      "translation": "请注意，在使用 JMS 1.0.2 API 时，此 ConnectionFactory 将根据运行时使用的 JMS API 方法切换到队列/主题模式：`createQueueConnection`和`createTopicConnection`将分别导致进入队列/主题模式；通用的`createConnection`调用将导致一个能够同时服务两种模式的 JMS 1.1 连接。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation always returns <code>null</code>.\nSubclasses may override this for exposing specific Session handles,\npossibly delegating to <a href=\"#createSession(jakarta.jms.Connection,java.lang.Integer)\"><code>createSession(Connection, Integer)</code></a> for the creation of raw\nSession objects that will then get wrapped and returned from here.",
+      "translation": "默认实现始终返回 `<code>null</code>`。子类可以重写此方法以暴露特定的 Session 句柄，可能通过委托给 <a href=\"#createSession(jakarta.jms.Connection,java.lang.Integer)\"><code>createSession(Connection, Integer)</code></a> 来创建原始的 Session 对象，这些对象随后在此处被包装并返回。",
+      "count": 2
+    },
+    {
+      "source": "Useful for testing and standalone environments in order to keep using the\nsame Connection for multiple <a href=\"../core/JmsTemplate.html\" title=\"class in org.springframework.jms.core\"><code>JmsTemplate</code></a>\ncalls, without having a pooling ConnectionFactory underneath. This may span\nany number of transactions, even concurrently executing transactions.",
+      "translation": "适用于测试和独立环境，以便在没有底层连接池的 ConnectionFactory 的情况下，对多个 <a href=\"../core/JmsTemplate.html\" title=\"class in org.springframework.jms.core\"><code>JmsTemplate</code></a> 调用使用相同的 Connection。这可以跨越任意数量的事务，甚至包括并发执行的事务。",
+      "count": 2
+    },
+    {
+      "source": "Note that Spring's message listener containers support the use of\na shared Connection within each listener container instance. Using\nSingleConnectionFactory in combination only really makes sense for\nsharing a single JMS Connection <i>across multiple listener containers</i>.",
+      "translation": "注意，Spring 的消息监听器容器支持在每个监听器容器实例内使用共享的 `Connection`。仅在多个监听器容器之间共享单个 JMS `Connection` 时，结合使用 `SingleConnectionFactory` 才有意义。",
+      "count": 2
+    },
+    {
+      "source": "You can either pass in a specific JMS Connection directly or let this\nfactory lazily create a Connection via a given target ConnectionFactory.\nThis factory generally works with JMS 1.1 as well as the JMS 1.0.2 API.",
+      "translation": "您可以直接传入特定的 JMS 连接，或者让此工厂通过给定的目标 ConnectionFactory 懒式创建连接。该工厂通常适用于 JMS 1.1 以及 JMS 1.0.2 API。",
+      "count": 2
+    },
+    {
+      "source": "Note that client IDs need to be unique among all active Connections\nof the underlying JMS provider. Furthermore, a client ID can only be\nassigned if the original ConnectionFactory hasn't already assigned one.",
+      "translation": "请注意，客户端 ID 必须在底层 JMS 提供程序的所有活动连接中保持唯一。此外，仅当原始的 ConnectionFactory 尚未分配客户端 ID 时，才能分配客户端 ID。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\". Switch this to \"true\" to automatically trigger\nrecovery based on your JMS provider's exception notifications.",
+      "translation": "默认值为 \"false\"。将其切换为 \"true\" 可基于 JMS 提供程序的异常通知自动触发恢复。",
+      "count": 2
+    },
+    {
+      "source": "Internally, this will lead to a special JMS ExceptionListener\n(this SingleConnectionFactory itself) being registered with the\nunderlying Connection. This can also be combined with a\nuser-specified ExceptionListener, if desired.",
+      "translation": "内部，这将导致一个特殊的 JMS ExceptionListener（即此 SingleConnectionFactory 本身）注册到底层 Connection 上。如果希望，这也可以与用户指定的 ExceptionListener 结合使用。",
+      "count": 2
+    },
+    {
+      "source": "As this bean implements DisposableBean, a bean factory will\nautomatically invoke this on destruction of its cached singletons.",
+      "translation": "由于此 Bean 实现了 DisposableBean，Bean 工厂将在其缓存的单例销毁时自动调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "Closes and reinitializes the Connection if an underlying\nConnection is present already.",
+      "translation": "如果已存在底层连接，则关闭并重新初始化该连接。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation applies ExceptionListener and client id.\nCan be overridden in subclasses.",
+      "translation": "默认实现应用了 ExceptionListener 和客户端 ID。可在子类中重写。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SingleConnectionFactory for bean-style usage.",
+      "translation": "为 Bean 风格用法创建一个新的 SingleConnectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SingleConnectionFactory that always returns the given Connection.",
+      "translation": "创建一个新的 SingleConnectionFactory，使其始终返回给定的 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SingleConnectionFactory that always returns a single Connection\nthat it will lazily create via the given target ConnectionFactory.",
+      "translation": "创建一个新的 SingleConnectionFactory，它将通过给定的目标 ConnectionFactory 懒式地创建单个 Connection，并始终返回该 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Make sure a Connection or ConnectionFactory has been set.",
+      "translation": "确保已设置 Connection 或 ConnectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Close the given Connection.",
+      "translation": "关闭给定的连接。",
+      "count": 2
+    },
+    {
+      "source": "Create a default Session for this ConnectionFactory,\nadapting to JMS 1.0.2 style queue/topic mode if necessary.",
+      "translation": "为此 ConnectionFactory 创建一个默认 Session，如有必要则适配为 JMS 1.0.2 风格的队列/主题模式。",
+      "count": 2
+    },
+    {
+      "source": "Create a JMS Connection via this template's ConnectionFactory.",
+      "translation": "通过此模板的 ConnectionFactory 创建 JMS 连接。",
+      "count": 2
+    },
+    {
+      "source": "Return a JMS client ID for the single Connection created and exposed\nby this ConnectionFactory, if any.",
+      "translation": "返回此 ConnectionFactory 创建并暴露的单个 Connection（如果有）的 JMS 客户端 ID。",
+      "count": 2
+    },
+    {
+      "source": "Obtain an initialized shared Connection.",
+      "translation": "获取已初始化的共享连接。",
+      "count": 2
+    },
+    {
+      "source": "Return the JMS ExceptionListener implementation that should be registered\nwith the single Connection created by this factory, if any.",
+      "translation": "返回应由此工厂创建的单个 Connection 注册的 JMS ExceptionListener 实现（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return the target ConnectionFactory which will be used to lazily\ncreate a single Connection, if any.",
+      "translation": "返回目标 ConnectionFactory，如果有的话，将使用它来懒式创建单个 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the single Connection should be renewed when\na JMSException is reported by the underlying Connection.",
+      "translation": "返回是否应在底层 Connection 报告 JMSException 时更新单个 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Check whether there is currently an underlying connection.",
+      "translation": "检查当前是否存在底层连接。",
+      "count": 2
+    },
+    {
+      "source": "Exception listener callback that renews the underlying single Connection.",
+      "translation": "异常监听器回调，用于续订底层单个连接。",
+      "count": 2
+    },
+    {
+      "source": "Reset the underlying shared Connection, to be reinitialized on next access.",
+      "translation": "重置底层的共享连接，以便在下次访问时重新初始化。",
+      "count": 2
+    },
+    {
+      "source": "Specify an JMS ExceptionListener implementation that should be\nregistered with the single Connection created by this factory.",
+      "translation": "指定一个要与该工厂创建的单个连接注册的 JMS ExceptionListener 实现。",
+      "count": 2
+    },
+    {
+      "source": "Set the target ConnectionFactory which will be used to lazily\ncreate a single Connection.",
+      "translation": "设置目标 ConnectionFactory，该工厂将用于懒式创建单个 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Initialize the underlying shared connection on start.",
+      "translation": "在启动时初始化底层共享连接。",
+      "count": 2
+    },
+    {
+      "source": "Reset the underlying shared connection on stop.",
+      "translation": "在停止时重置底层共享连接。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given Connection with a proxy that delegates every method call to it\nbut suppresses close calls. This is useful for allowing application code to\nhandle a special framework Connection just like an ordinary Connection from a\nJMS ConnectionFactory.",
+      "translation": "将给定的 `Connection` 包装在一个代理中，该代理将所有方法调用委托给它，但会抑制 `close` 调用。这对于允许应用程序代码像处理来自 JMS `ConnectionFactory` 的普通 `Connection` 一样来处理特殊的框架 `Connection` 非常有用。",
+      "count": 2
+    },
+    {
+      "source": "<code>createConnection</code> in interface <code>jakarta.jms.ConnectionFactory</code>",
+      "translation": "<code>createConnection</code> 在接口 <code>jakarta.jms.ConnectionFactory</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>createQueueConnection</code> in interface <code>jakarta.jms.QueueConnectionFactory</code>",
+      "translation": "<code>createQueueConnection</code> 在接口 <code>jakarta.jms.QueueConnectionFactory</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>createTopicConnection</code> in interface <code>jakarta.jms.TopicConnectionFactory</code>",
+      "translation": "<code>createTopicConnection</code> 在接口 <code>jakarta.jms.TopicConnectionFactory</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>mode</code> - the Session acknowledgement mode\n(<code>Session.TRANSACTED</code> or one of the common modes)",
+      "translation": "<code>mode</code> - 会话确认模式（<code>Session.TRANSACTED</code> 或常见模式之一）",
+      "count": 2
+    },
+    {
+      "source": "<code>targetConnection</code> - the single Connection",
+      "translation": "<code>targetConnection</code> - 单个 Connection",
+      "count": 2
+    },
+    {
+      "source": "the Connection (never <code>null</code>)",
+      "translation": "Connection（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>con</code> - the JMS Connection to operate on",
+      "translation": "<code>con</code> - 要操作的 JMS 连接",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by the JMS API",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS API 抛出",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Mark Pollack",
+      "translation": "Juergen Hoeller, Mark Pollack",
+      "count": 2
+    },
+    {
+      "source": "the newly created Session",
+      "translation": "新创建的 Session",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 5, this class supports JMS 2.0 <code>JMSContext</code>\ncalls and therefore requires the JMS 2.0 API to be present at runtime.\nIt may nevertheless run against a JMS 1.1 driver (bound to the JMS 2.0 API)\nas long as no actual JMS 2.0 calls are triggered by the application's setup.",
+      "translation": "自 Spring Framework 5 起，该类支持 JMS 2.0 `<code>JMSContext</code>` 调用，因此需要在运行时提供 JMS 2.0 API。尽管如此，只要应用程序的配置不会触发实际的 JMS 2.0 调用，它仍可与绑定到 JMS 2.0 API 的 JMS 1.1 驱动程序一起运行。",
+      "count": 1
+    },
+    {
+      "source": "Close the underlying shared connection.",
+      "translation": "关闭底层共享连接。",
+      "count": 1
+    },
+    {
+      "source": "Template method for obtaining a (potentially cached) Session.",
+      "translation": "用于获取（可能已缓存的）Session 的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Wrap the given Connection with a proxy that delegates every method call to it\nbut suppresses close calls.",
+      "translation": "用代理包装给定的 Connection，该代理将委托所有方法调用给它，但会抑制 close 调用。",
+      "count": 1
+    },
+    {
+      "source": "Initialize the underlying shared Connection.",
+      "translation": "初始化底层的共享连接。",
+      "count": 1
+    },
+    {
+      "source": "Prepare the given Connection before it is exposed.",
+      "translation": "在暴露该连接之前，请对其进行准备。",
+      "count": 1
+    },
+    {
+      "source": "Specify a JMS client ID for the single Connection created and exposed\nby this ConnectionFactory.",
+      "translation": "为此 ConnectionFactory 创建并暴露的单个 Connection 指定一个 JMS 客户端 ID。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether the single Connection should be reset (to be subsequently renewed)\nwhen a JMSException is reported by the underlying Connection.",
+      "translation": "指定是否应重置单个连接（以便随后更新），当底层 Connection 报告 JMSException 时。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>onException</code> in interface <code>jakarta.jms.ExceptionListener</code>",
+      "translation": "<code>onException</code> 在接口 <code>jakarta.jms.ExceptionListener</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>targetConnectionFactory</code> - the target ConnectionFactory",
+      "translation": "<code>targetConnectionFactory</code> - 目标 ConnectionFactory",
+      "count": 1
+    },
+    {
+      "source": "<code>con</code> - the Connection to prepare",
+      "translation": "<code>con</code> - 待准备的连接",
+      "count": 1
+    },
+    {
+      "source": "the Session to use, or <code>null</code> to indicate\ncreation of a raw standard Session",
+      "translation": "要使用的 Session，或为指示创建原始标准 Session 而指定 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>con</code> - the Connection to close",
+      "translation": "<code>con</code> - 要关闭的连接",
+      "count": 1
+    },
+    {
+      "source": "<code>target</code> - the original Connection to wrap",
+      "translation": "<code>target</code> - 要包装的原始 Connection",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "the new JMS Connection",
+      "translation": "新的 JMS 连接",
+      "count": 1
+    },
+    {
+      "source": "the wrapped Connection",
+      "translation": "被包装的 Connection",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

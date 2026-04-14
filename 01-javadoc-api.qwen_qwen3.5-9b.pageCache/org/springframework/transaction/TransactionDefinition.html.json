@@ -1,0 +1,331 @@
+{
+  "created_at": "2026-04-14 17:26:43",
+  "updated_at": "2026-04-14 17:26:43",
+  "stats": {
+    "total_entries": 63,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 107,
+    "entries_with_hits": 63,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6984126984126984,
+    "usage_percentage": 0.0063
+  },
+  "items": [
+    {
+      "source": "<b>NOTE:</b> Actual transaction suspension will not work out-of-the-box\non all transaction managers. This in particular applies to\n<a href=\"jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>,\nwhich requires the <code>jakarta.transaction.TransactionManager</code> to be\nmade available to it (which is server-specific in standard Jakarta EE).",
+      "translation": "<b>注意：</b> 实际的事务挂起功能并非所有事务管理器都能开箱即用。这尤其适用于<a href=\"jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>，它需要向该管理器提供<code>jakarta.transaction.TransactionManager</code>（在标准的 Jakarta EE 中这是特定于服务器的）。",
+      "count": 3
+    },
+    {
+      "source": "The read-only flag applies to any transaction context, whether backed\nby an actual resource transaction (<a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>/\n<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a>) or operating non-transactionally at\nthe resource level (<a href=\"#PROPAGATION_SUPPORTS\"><code>PROPAGATION_SUPPORTS</code></a>). In the latter case,\nthe flag will only apply to managed resources within the application,\nsuch as a Hibernate <code>Session</code>.",
+      "translation": "只读标志适用于任何事务上下文，无论是由实际资源事务支持（<a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>/<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a>），还是在资源级别以非事务方式运行（<a href=\"#PROPAGATION_SUPPORTS\"><code>PROPAGATION_SUPPORTS</code></a>）。在后一种情况下，该标志仅适用于应用程序内的托管资源，例如 Hibernate <code>Session</code>。",
+      "count": 2
+    },
+    {
+      "source": "Note that isolation level and timeout settings will not get applied unless\nan actual new transaction gets started. As only <a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>,\n<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a>, and <a href=\"#PROPAGATION_NESTED\"><code>PROPAGATION_NESTED</code></a> can cause\nthat, it usually doesn't make sense to specify those settings in other cases.\nFurthermore, be aware that not all transaction managers will support those\nadvanced features and thus might throw corresponding exceptions when given\nnon-default values.",
+      "translation": "请注意，只有在实际启动新事务时，隔离级别和超时设置才会生效。由于只有<a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>、<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a>和<a href=\"#PROPAGATION_NESTED\"><code>PROPAGATION_NESTED</code></a>能够触发此行为，因此在其他情况下指定这些设置通常没有意义。此外，请注意并非所有事务管理器都支持这些高级功能，因此当给定非默认值时，它们可能会抛出相应的异常。",
+      "count": 2
+    },
+    {
+      "source": "In general, use <code>PROPAGATION_SUPPORTS</code> with care. In particular, do\nnot rely on <code>PROPAGATION_REQUIRED</code> or <code>PROPAGATION_REQUIRES_NEW</code>\n<i>within</i> a <code>PROPAGATION_SUPPORTS</code> scope (which may lead to\nsynchronization conflicts at runtime). If such nesting is unavoidable, make sure\nto configure your transaction manager appropriately (typically switching to\n\"synchronization on actual transaction\").",
+      "translation": "通常请谨慎使用<code>PROPAGATION_SUPPORTS</code>。特别是，不要依赖在<code>PROPAGATION_SUPPORTS</code>作用域<i>内部</i>使用<code>PROPAGATION_REQUIRED</code>或<code>PROPAGATION_REQUIRES_NEW</code>（这可能导致运行时同步冲突）。如果这种嵌套不可避免，请确保正确配置事务管理器（通常切换到“实际事务上的同步”）。",
+      "count": 2
+    },
+    {
+      "source": "Must return one of the <code>ISOLATION_XXX</code> constants defined on\n<a href=\"TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>this interface</code></a>. Those constants are designed\nto match the values of the same constants on <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a>.",
+      "translation": "必须返回在<a href=\"TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>此接口</code></a>上定义的<code>ISOLATION_XXX</code>常量之一。这些常量旨在与<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a>上的相同常量的值相匹配。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> For transaction managers with transaction synchronization,\n<code>PROPAGATION_SUPPORTS</code> is slightly different from no transaction\nat all, as it defines a transaction scope that synchronization might apply to.\nAs a consequence, the same resources (a JDBC <code>Connection</code>, a\nHibernate <code>Session</code>, etc) will be shared for the entire specified\nscope. Note that the exact behavior depends on the actual synchronization\nconfiguration of the transaction manager.",
+      "translation": "<b>注意：</b> 对于具有事务同步的事务管理器，<code>PROPAGATION_SUPPORTS</code> 与完全没有事务略有不同，因为它定义了一个同步可能应用的事务范围。因此，相同的资源（如 JDBC <code>Connection</code>、Hibernate <code>Session</code> 等）将在整个指定范围内共享。请注意，具体行为取决于事务管理器的实际同步配置。",
+      "count": 2
+    },
+    {
+      "source": "This level includes the prohibitions in <a href=\"#ISOLATION_REPEATABLE_READ\"><code>ISOLATION_REPEATABLE_READ</code></a>\nand further prohibits the situation where one transaction reads all rows that\nsatisfy a <code>WHERE</code> condition, a second transaction inserts a row\nthat satisfies that <code>WHERE</code> condition, and the first transaction\nre-reads for the same condition, retrieving the additional \"phantom\" row\nin the second read.",
+      "translation": "该级别包含<a href=\"#ISOLATION_REPEATABLE_READ\"><code>ISOLATION_REPEATABLE_READ</code></a>中的禁止项，并进一步禁止以下情况：一个事务读取所有满足某个<code>WHERE</code>条件的行，另一个事务插入一行也满足该<code>WHERE</code>条件，然后第一个事务再次针对相同条件进行读取，从而在第二次读取中获取额外的“幻读”行。",
+      "count": 2
+    },
+    {
+      "source": "Exclusively designed for use with <a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a> or\n<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a> since it only applies to newly started\ntransactions. Consider switching the \"validateExistingTransactions\" flag to\n\"true\" on your transaction manager if you'd like isolation level declarations\nto get rejected when participating in an existing transaction with a different\nisolation level.",
+      "translation": "专为与<a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>或<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a>一起使用而设计，因为它仅适用于新启动的事务。如果您希望在参与具有不同隔离级别的现有事务时拒绝隔离级别声明，请考虑将事务管理器上的\"validateExistingTransactions\"标志切换为\"true\"。",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"#ISOLATION_DEFAULT\"><code>ISOLATION_DEFAULT</code></a>. Note that a transaction manager\nthat does not support custom isolation levels will throw an exception when\ngiven any other level than <a href=\"#ISOLATION_DEFAULT\"><code>ISOLATION_DEFAULT</code></a>.",
+      "translation": "默认值为 `<a href=\"#ISOLATION_DEFAULT\"><code>ISOLATION_DEFAULT</code></a>`。请注意，不支持自定义隔离级别的事务管理器在接收到除 `<a href=\"#ISOLATION_DEFAULT\"><code>ISOLATION_DEFAULT</code></a>` 以外的任何级别时都会抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "Exclusively designed for use with <a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a> or\n<a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a> since it only applies to newly started\ntransactions.",
+      "translation": "专门设计用于与 <a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a> 或 <a href=\"#PROPAGATION_REQUIRES_NEW\"><code>PROPAGATION_REQUIRES_NEW</code></a> 一起使用，因为它仅适用于新启动的事务。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Actual creation of a nested transaction will only work on\nspecific transaction managers. Out of the box, this only applies to the JDBC\n<a href=\"../jdbc/datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>\nwhen working on a JDBC 3.0+ driver. Some JTA providers might support\nnested transactions as well.",
+      "translation": "<b>注意：</b> 实际创建嵌套事务仅在特定的事务管理器中有效。默认情况下，这仅适用于在 JDBC 3.0+ 驱动程序上工作的 JDBC <a href=\"../jdbc/datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>。某些 JTA 提供者也可能支持嵌套事务。",
+      "count": 2
+    },
+    {
+      "source": "Must return one of the <code>PROPAGATION_XXX</code> constants\ndefined on <a href=\"TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>this interface</code></a>.",
+      "translation": "必须返回在<a href=\"TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>此接口</code></a>上定义的<code>PROPAGATION_XXX</code>常量之一。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#isReadOnly()\">read-only flag</a> applies to any transaction context,\nwhether backed by an actual resource transaction or operating non-transactionally\nat the resource level. In the latter case, the flag will only apply to managed\nresources within the application, such as a Hibernate <code>Session</code>.",
+      "translation": "`<a href=\"#isReadOnly()\">read-only flag</a>` 适用于任何事务上下文，无论是由实际资源事务支持还是在资源级别以非事务方式运行。在后一种情况下，该标志仅适用于应用程序内的托管资源，例如 Hibernate `<code>Session</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Note that transaction synchronization is <i>not</i> available within a\n<code>PROPAGATION_NOT_SUPPORTED</code> scope. Existing synchronizations\nwill be suspended and resumed appropriately.",
+      "translation": "注意，事务同步在 `<code>PROPAGATION_NOT_SUPPORTED</code>` 范围内不可用。现有的同步将被挂起并在适当的时候恢复。",
+      "count": 2
+    },
+    {
+      "source": "Note that transaction synchronization is <i>not</i> available within a\n<code>PROPAGATION_NEVER</code> scope.",
+      "translation": "注意，事务同步在 `<code>PROPAGATION_NEVER</code>` 范围内<i>不可用</i>。",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>.",
+      "translation": "默认值为<a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Must return a number of seconds, or <a href=\"#TIMEOUT_DEFAULT\"><code>TIMEOUT_DEFAULT</code></a>.",
+      "translation": "必须返回秒数，或<a href=\"#TIMEOUT_DEFAULT\"><code>TIMEOUT_DEFAULT</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note that a transaction manager that does not support timeouts will throw\nan exception when given any other timeout than <a href=\"#TIMEOUT_DEFAULT\"><code>TIMEOUT_DEFAULT</code></a>.",
+      "translation": "注意，不支持超时的事务管理器在接收到除<a href=\"#TIMEOUT_DEFAULT\"><code>TIMEOUT_DEFAULT</code></a>以外的任何超时设置时都会抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"#TIMEOUT_DEFAULT\"><code>TIMEOUT_DEFAULT</code></a>.",
+      "translation": "默认值为<a href=\"#TIMEOUT_DEFAULT\"><code>TIMEOUT_DEFAULT</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This just serves as a hint for the actual transaction subsystem;\nit will <i>not necessarily</i> cause failure of write access attempts.\nA transaction manager which cannot interpret the read-only hint will\n<i>not</i> throw an exception when asked for a read-only transaction.",
+      "translation": "这仅作为实际事务子系统的提示；它<i>不一定</i>会导致写入访问尝试失败。无法解释只读提示的事务管理器，在请求只读事务时<i>不会</i>抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "For customization purposes, use the modifiable\n<a href=\"support/DefaultTransactionDefinition.html\" title=\"class in org.springframework.transaction.support\"><code>DefaultTransactionDefinition</code></a>\ninstead.",
+      "translation": "出于自定义目的，请使用可修改的\n<a href=\"support/DefaultTransactionDefinition.html\" title=\"class in org.springframework.transaction.support\"><code>DefaultTransactionDefinition</code></a>\n代替。",
+      "count": 2
+    },
+    {
+      "source": "Note that transaction synchronization within a <code>PROPAGATION_MANDATORY</code>\nscope will always be driven by the surrounding transaction.",
+      "translation": "注意，在 `<code>PROPAGATION_MANDATORY</code>` 范围内的事务同步始终由周围的事务驱动。",
+      "count": 2
+    },
+    {
+      "source": "A <code>PROPAGATION_REQUIRES_NEW</code> scope always defines its own\ntransaction synchronizations. Existing synchronizations will be suspended\nand resumed appropriately.",
+      "translation": "<code>PROPAGATION_REQUIRES_NEW</code> 作用域始终定义其自身的事务同步。现有的同步将被挂起并在适当的时候恢复。",
+      "count": 2
+    },
+    {
+      "source": "This is typically the default setting of a transaction definition\nand typically defines a transaction synchronization scope.",
+      "translation": "这通常是事务定义的默认设置，并通常定义事务同步范围。",
+      "count": 2
+    },
+    {
+      "source": "All other levels correspond to the JDBC isolation levels.",
+      "translation": "所有其他级别均对应于 JDBC 隔离级别。",
+      "count": 2
+    },
+    {
+      "source": "This level allows a row changed by one transaction to be read by another\ntransaction before any changes in that row have been committed (a \"dirty read\").\nIf any of the changes are rolled back, the second transaction will have\nretrieved an invalid row.",
+      "translation": "该级别允许一个事务修改的行在提交任何更改之前被另一个事务读取（即“脏读”）。如果其中任何更改被回滚，第二个事务将检索到无效的行。",
+      "count": 2
+    },
+    {
+      "source": "This level only prohibits a transaction from reading a row with uncommitted\nchanges in it.",
+      "translation": "此级别仅禁止事务读取包含未提交更改的行。",
+      "count": 2
+    },
+    {
+      "source": "This level prohibits a transaction from reading a row with uncommitted changes\nin it, and it also prohibits the situation where one transaction reads a row,\na second transaction alters the row, and the first transaction re-reads the row,\ngetting different values the second time (a \"non-repeatable read\").",
+      "translation": "该级别禁止事务读取包含未提交更改的行，同时也禁止以下情况：一个事务读取某行后，第二个事务修改了该行，而第一个事务再次读取该行时得到了不同的值（即“不可重复读”）。",
+      "count": 2
+    },
+    {
+      "source": "This will be used as the transaction name to be shown in a\ntransaction monitor, if applicable.",
+      "translation": "这将用作事务监视器中显示的事务名称（如适用）。",
+      "count": 2
+    },
+    {
+      "source": "Execute within a nested transaction if a current transaction exists,\nbehaving like <a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a> otherwise.",
+      "translation": "如果存在当前事务，则在嵌套事务中执行；否则，其行为类似于<a href=\"#PROPAGATION_REQUIRED\"><code>PROPAGATION_REQUIRED</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Use the default timeout of the underlying transaction system,\nor none if timeouts are not supported.",
+      "translation": "使用底层事务系统的默认超时时间，或者如果该事务系统不支持超时则不使用。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"support/AbstractPlatformTransactionManager.html#setTransactionSynchronization(int)\"><code>AbstractPlatformTransactionManager.setTransactionSynchronization(int)</code></a></li>\n<li><a href=\"support/AbstractPlatformTransactionManager.html#SYNCHRONIZATION_ON_ACTUAL_TRANSACTION\"><code>AbstractPlatformTransactionManager.SYNCHRONIZATION_ON_ACTUAL_TRANSACTION</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.PROPAGATION_SUPPORTS\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"support/AbstractPlatformTransactionManager.html#setTransactionSynchronization(int)\"><code>AbstractPlatformTransactionManager.setTransactionSynchronization(int)</code></a></li>\n<li><a href=\"support/AbstractPlatformTransactionManager.html#SYNCHRONIZATION_ON_ACTUAL_TRANSACTION\"><code>AbstractPlatformTransactionManager.SYNCHRONIZATION_ON_ACTUAL_TRANSACTION</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.PROPAGATION_SUPPORTS\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"jta/JtaTransactionManager.html#setTransactionManager(jakarta.transaction.TransactionManager)\"><code>JtaTransactionManager.setTransactionManager(TransactionManager)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.PROPAGATION_REQUIRES_NEW\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"jta/JtaTransactionManager.html#setTransactionManager(jakarta.transaction.TransactionManager)\"><code>JtaTransactionManager.setTransactionManager(TransactionManager)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.PROPAGATION_REQUIRES_NEW\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"jta/JtaTransactionManager.html#setTransactionManager(jakarta.transaction.TransactionManager)\"><code>JtaTransactionManager.setTransactionManager(TransactionManager)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.PROPAGATION_NOT_SUPPORTED\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"jta/JtaTransactionManager.html#setTransactionManager(jakarta.transaction.TransactionManager)\"><code>JtaTransactionManager.setTransactionManager(TransactionManager)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.PROPAGATION_NOT_SUPPORTED\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_READ_UNCOMMITTED\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_READ_UNCOMMITTED</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_READ_UNCOMMITTED\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_READ_UNCOMMITTED\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_READ_UNCOMMITTED</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_READ_UNCOMMITTED\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_READ_COMMITTED\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_READ_COMMITTED</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_READ_COMMITTED\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_READ_COMMITTED\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_READ_COMMITTED</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_READ_COMMITTED\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_REPEATABLE_READ\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_REPEATABLE_READ</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_REPEATABLE_READ\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_REPEATABLE_READ\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_REPEATABLE_READ</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_REPEATABLE_READ\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_SERIALIZABLE\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_SERIALIZABLE</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_SERIALIZABLE\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#TRANSACTION_SERIALIZABLE\" title=\"class or interface in java.sql\"><code>Connection.TRANSACTION_SERIALIZABLE</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.transaction.TransactionDefinition.ISOLATION_SERIALIZABLE\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the transaction is to be optimized as read-only\n(<code>false</code> by default)",
+      "translation": "<code>true</code> 表示该事务应作为只读进行优化（默认为 <code>false</code>）",
+      "count": 2
+    },
+    {
+      "source": "the name of this transaction (<code>null</code> by default}",
+      "translation": "该事务的名称（默认为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the propagation behavior",
+      "translation": "传播行为",
+      "count": 2
+    },
+    {
+      "source": "the isolation level",
+      "translation": "隔离级别",
+      "count": 2
+    },
+    {
+      "source": "the transaction timeout",
+      "translation": "事务超时",
+      "count": 2
+    },
+    {
+      "source": "In case of Spring's declarative transactions, the exposed name will be\nthe <code>fully-qualified class name + \".\" + method name</code> (by default).",
+      "translation": "在 Spring 声明式事务的情况下，暴露的名称默认为 `<code>完全限定类名 + \".\" + 方法名</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return an unmodifiable <code>TransactionDefinition</code> with defaults.",
+      "translation": "返回带有默认值的不可变<code>TransactionDefinition</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use the default isolation level of the underlying datastore.",
+      "translation": "使用底层数据存储的默认隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that dirty reads are prevented; non-repeatable reads and\nphantom reads can occur.",
+      "translation": "指示防止脏读；可能发生不可重复读和幻读。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that dirty reads, non-repeatable reads, and phantom reads\ncan occur.",
+      "translation": "指示可能发生脏读、不可重复读和幻读。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that dirty reads and non-repeatable reads are prevented;\nphantom reads can occur.",
+      "translation": "指示防止了脏读和不可重复读；可能出现幻读。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that dirty reads, non-repeatable reads, and phantom reads\nare prevented.",
+      "translation": "指示防止脏读、不可重复读和幻读。",
+      "count": 1
+    },
+    {
+      "source": "Support a current transaction; throw an exception if no current transaction\nexists.",
+      "translation": "支持当前事务；如果不存在当前事务，则抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "Do not support a current transaction; throw an exception if a current transaction\nexists.",
+      "translation": "不支持当前事务；如果存在当前事务，则抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "Do not support a current transaction; rather always execute non-transactionally.",
+      "translation": "不支持当前事务；而是始终非事务性地执行。",
+      "count": 1
+    },
+    {
+      "source": "Support a current transaction; create a new one if none exists.",
+      "translation": "支持当前事务；如果不存在，则创建一个新的。",
+      "count": 1
+    },
+    {
+      "source": "Create a new transaction, suspending the current transaction if one exists.",
+      "translation": "创建新事务，如果存在当前事务则将其挂起。",
+      "count": 1
+    },
+    {
+      "source": "Support a current transaction; execute non-transactionally if none exists.",
+      "translation": "支持当前事务；如果不存在，则以非事务方式执行。",
+      "count": 1
+    },
+    {
+      "source": "Return the isolation level.",
+      "translation": "返回隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of this transaction.",
+      "translation": "返回此事务的名称。",
+      "count": 1
+    },
+    {
+      "source": "Return the propagation behavior.",
+      "translation": "返回传播行为。",
+      "count": 1
+    },
+    {
+      "source": "Return the transaction timeout.",
+      "translation": "返回事务超时时间。",
+      "count": 1
+    },
+    {
+      "source": "Return whether to optimize as a read-only transaction.",
+      "translation": "返回是否优化为只读事务。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

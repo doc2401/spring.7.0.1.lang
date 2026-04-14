@@ -1,0 +1,561 @@
+{
+  "created_at": "2026-04-14 16:24:29",
+  "updated_at": "2026-04-14 16:24:29",
+  "stats": {
+    "total_entries": 109,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 155,
+    "entries_with_hits": 109,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4220183486238531,
+    "usage_percentage": 0.0109
+  },
+  "items": [
+    {
+      "source": "Execution will end once the scheduler shuts down or the returned\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a> gets cancelled.",
+      "translation": "执行将在调度器关闭或返回的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a>被取消时结束。",
+      "count": 6
+    },
+    {
+      "source": "<code>task</code> - the Runnable to execute whenever the trigger fires",
+      "translation": "<code>task</code> - 每次触发器触发时执行的 Runnable。",
+      "count": 6
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a> representing pending execution of the task",
+      "translation": "一个代表任务待执行状态的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a>",
+      "count": 5
+    },
+    {
+      "source": "Supports a graceful shutdown through <a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>SimpleAsyncTaskExecutor.setTaskTerminationTimeout(long)</code></a>,\nat the expense of task tracking overhead per execution thread at runtime.\nSupports limiting concurrent threads through <a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setConcurrencyLimit(int)\"><code>SimpleAsyncTaskExecutor.setConcurrencyLimit(int)</code></a>.\nBy default, the number of concurrent task executions is unlimited.\nThis allows for dynamic concurrency of scheduled task executions, in contrast\nto <a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a> which requires a fixed pool size.",
+      "translation": "支持通过<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>SimpleAsyncTaskExecutor.setTaskTerminationTimeout(long)</code></a>实现优雅关闭，但会牺牲运行时每个执行线程的任务跟踪开销。\n支持通过<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setConcurrencyLimit(int)\"><code>SimpleAsyncTaskExecutor.setConcurrencyLimit(int)</code></a>限制并发线程数。\n默认情况下，并发任务执行次数没有限制。\n这使得调度任务执行能够动态调整并发度，与需要固定池大小的<a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a>形成对比。",
+      "count": 2
+    },
+    {
+      "source": "Extends <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> and can serve as a fully capable\nreplacement for it, for example, as a single shared instance serving as a\n<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> as well as a <a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\"><code>TaskScheduler</code></a>.\nThis is generally not the case with other executor/scheduler implementations\nwhich tend to have specific constraints for the scheduler thread pool,\nrequiring a separate thread pool for general executor purposes in practice.",
+      "translation": "扩展了 <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>，并可作为其完全功能的替代方案，例如作为一个单一的共享实例，同时充当 <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> 和 <a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\"><code>TaskScheduler</code></a>。其他执行器/调度器实现通常并非如此，它们往往对调度线程池有特定限制，在实践中需要为通用执行器目的使用单独的线程池。",
+      "count": 2
+    },
+    {
+      "source": "As an alternative to the built-in thread-per-task capability, this scheduler\ncan also be configured with a separate target executor for scheduled task\nexecution through <a href=\"#setTargetTaskExecutor(java.util.concurrent.Executor)\"><code>setTargetTaskExecutor(Executor)</code></a>: for example, pointing to a shared\n<a href=\"ThreadPoolTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskExecutor</code></a> bean. This is still rather different from a\n<a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a> setup since it always uses a single scheduler\nthread while dynamically dispatching to the target thread pool which may have\na dynamic core/max pool size range, participating in a shared concurrency limit.",
+      "translation": "作为内置的每个任务一个线程功能的替代方案，此调度器也可以通过 <a href=\"#setTargetTaskExecutor(java.util.concurrent.Executor)\"><code>setTargetTaskExecutor(Executor)</code></a> 配置为使用单独的目标执行器来执行计划的任务：例如，指向共享的 <a href=\"ThreadPoolTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskExecutor</code></a> Bean。这仍然与 <a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a> 的设置有很大不同，因为它始终使用单个调度器线程，同时动态地将任务分发到目标线程池，该线程池可能具有动态的核心/最大线程池大小范围，并参与共享的并发限制。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This scheduler variant does not track the actual completion of tasks\nbut rather just the hand-off to an execution thread.</b> As a consequence,\na <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a> handle (for example, from <a href=\"#schedule(java.lang.Runnable,java.time.Instant)\"><code>schedule(Runnable, Instant)</code></a>)\nrepresents that hand-off rather than the actual completion of the provided task\n(or series of repeated tasks). Also, this scheduler participates in lifecycle\nmanagement to a limited degree only, stopping trigger firing and fixed-delay\ntask execution but not stopping the execution of handed-off tasks.",
+      "translation": "<b>注意：此调度器变体不跟踪任务的实际完成，而仅跟踪向执行线程的移交。</b> 因此，<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a> 句柄（例如来自 <a href=\"#schedule(java.lang.Runnable,java.time.Instant)\"><code>schedule(Runnable, Instant)</code></a>）代表的是该移交，而非所提供任务（或一系列重复任务）的实际完成。此外，此调度器仅有限地参与生命周期管理，它会停止触发器的触发和固定延迟任务的执行，但不会停止已移交任务的执行。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This implementation does not reuse threads!</b> Consider a\nthread-pooling TaskScheduler implementation instead, in particular for\nscheduling a large number of short-lived tasks. Alternatively, on JDK 21,\nconsider setting <a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setVirtualThreads(boolean)\"><code>SimpleAsyncTaskExecutor.setVirtualThreads(boolean)</code></a> to <code>true</code>.",
+      "translation": "<b>注意：此实现不会重用线程！ </b> 对于调度大量短生命周期任务的情况，请考虑使用线程池的 TaskScheduler 实现。或者，在 JDK 21 上，请将<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setVirtualThreads(boolean)\"><code>SimpleAsyncTaskExecutor.setVirtualThreads(boolean)</code></a>设置为<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "If not set, the regular <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>\narrangements kicks in with a new thread per task.",
+      "translation": "如果未设置，则启用默认的<a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>机制，为每个任务创建新线程。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.1, this method comes with a default implementation that delegates\nto <a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>.",
+      "translation": "自 6.1 版本起，此方法具有默认实现，该实现委托给 <a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: Scheduling with a fixed delay enforces execution on a single\nscheduler thread, in order to provide traditional fixed-delay semantics!</b>\nPrefer the use of fixed rates or cron triggers instead which are a better fit\nwith this thread-per-task scheduler variant.",
+      "translation": "<b>注意：使用固定延迟调度会强制在单个调度器线程上执行，以提供传统的固定延迟语义！</b>\n请改用固定速率或 Cron 触发器，它们更适合这种每个任务一个线程的调度器变体。",
+      "count": 2
+    },
+    {
+      "source": "The default phase for an executor <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>: <code>Integer.MAX_VALUE / 2</code>.",
+      "translation": "执行器 `<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>` 的默认阶段：<code>Integer.MAX_VALUE / 2</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#doExecute(java.lang.Runnable)\">SimpleAsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#doExecute(java.lang.Runnable)\">SimpleAsyncTaskExecutor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#execute(java.lang.Runnable)\">SimpleAsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#execute(java.lang.Runnable)\">SimpleAsyncTaskExecutor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#close()\">SimpleAsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#close()\">SimpleAsyncTaskExecutor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "This close method tracks the termination of active threads if a concrete\n<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>task termination timeout</code></a> has been set.",
+      "translation": "此关闭方法会跟踪活动线程的终止，前提是已设置具体的<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>任务终止超时</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Provide an <a href=\"../../util/ErrorHandler.html\" title=\"interface in org.springframework.util\"><code>ErrorHandler</code></a> strategy.",
+      "translation": "提供一个<a href=\"../../util/ErrorHandler.html\" title=\"interface in org.springframework.util\"><code>ErrorHandler</code></a>策略。",
+      "count": 2
+    },
+    {
+      "source": "Specify the lifecycle phase for pausing and resuming this executor.\nThe default is <a href=\"#DEFAULT_PHASE\"><code>DEFAULT_PHASE</code></a>.",
+      "translation": "指定暂停和恢复此执行器的生命周期阶段。默认值为<a href=\"#DEFAULT_PHASE\"><code>DEFAULT_PHASE</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This close method tracks the termination of active threads if a concrete\n<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>task termination timeout</code></a> has been set.\nOtherwise, it is not necessary to close this executor.",
+      "translation": "此关闭方法会在设置具体的<a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>任务终止超时时间</code></a>时，跟踪活跃线程的终止。否则，无需关闭此执行器。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given task, within a concurrency throttle\nif configured (through the superclass's settings).",
+      "translation": "在配置了（通过父类的设置）并发节流的情况下，执行给定的任务。",
+      "count": 2
+    },
+    {
+      "source": "Return the clock to use for scheduling purposes.",
+      "translation": "返回用于调度目的的时钟。",
+      "count": 2
+    },
+    {
+      "source": "Return the lifecycle phase for pausing and resuming this executor.",
+      "translation": "返回用于暂停和恢复此执行器的生命周期阶段。",
+      "count": 2
+    },
+    {
+      "source": "Handle an application event.",
+      "translation": "处理应用程序事件。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setVirtualThreads(boolean)\"><code>SimpleAsyncTaskExecutor.setVirtualThreads(boolean)</code></a></li>\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>SimpleAsyncTaskExecutor.setTaskTerminationTimeout(long)</code></a></li>\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setConcurrencyLimit(int)\"><code>SimpleAsyncTaskExecutor.setConcurrencyLimit(int)</code></a></li>\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a></li>\n<li><a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.scheduling.concurrent.SimpleAsyncTaskScheduler\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setVirtualThreads(boolean)\"><code>SimpleAsyncTaskExecutor.setVirtualThreads(boolean)</code></a></li>\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setTaskTerminationTimeout(long)\"><code>SimpleAsyncTaskExecutor.setTaskTerminationTimeout(long)</code></a></li>\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#setConcurrencyLimit(int)\"><code>SimpleAsyncTaskExecutor.setConcurrencyLimit(int)</code></a></li>\n<li><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a></li>\n<li><a href=\"ThreadPoolTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskScheduler</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.scheduling.concurrent.SimpleAsyncTaskScheduler\">序列化形式</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#getPhase()\"><code>getPhase()</code></a></li>\n<li><a href=\"ExecutorConfigurationSupport.html#DEFAULT_PHASE\"><code>ExecutorConfigurationSupport.DEFAULT_PHASE</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.concurrent.SimpleAsyncTaskScheduler.DEFAULT_PHASE\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#getPhase()\"><code>getPhase()</code></a></li>\n<li><a href=\"ExecutorConfigurationSupport.html#DEFAULT_PHASE\"><code>ExecutorConfigurationSupport.DEFAULT_PHASE</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.concurrent.SimpleAsyncTaskScheduler.DEFAULT_PHASE\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#doExecute(java.lang.Runnable)\">doExecute</a></code> in class <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#doExecute(java.lang.Runnable)\">doExecute</a></code>` 在类 `<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code> in class <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code>` 在类 `<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code> in class <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code>` 在类 `<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code> in class <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code>` 在类 `<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#close()\">close</a></code> in class <code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html#close()\">close</a></code>` 在类 `<code><a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\">SimpleAsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the <code>Runnable</code> to execute (never <code>null</code>)",
+      "translation": "<code>task</code> - 要执行的 <code>Runnable</code>(永远不为 <code>null</code>)",
+      "count": 2
+    },
+    {
+      "source": "<code>startTime</code> - the desired first execution time for the task\n(if this is in the past, the task will be executed immediately, i.e. as soon as possible)",
+      "translation": "<code>startTime</code> - 任务的期望首次执行时间（如果该时间在当前之前，任务将立即执行，即尽可能早地执行）",
+      "count": 2
+    },
+    {
+      "source": "<code>period</code> - the interval between successive executions of the task",
+      "translation": "<code>period</code> - 任务连续执行之间的间隔",
+      "count": 2
+    },
+    {
+      "source": "<code>delay</code> - the delay between the completion of one execution and the start of the next",
+      "translation": "<code>delay</code> - 一次执行完成与下一次开始之间的延迟时间",
+      "count": 2
+    },
+    {
+      "source": "a Future representing pending completion of the task",
+      "translation": "代表任务待完成状态的 Future",
+      "count": 2
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback such\nas <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method. Invoked after <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>,\n<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> and\n<a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>, if applicable.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。在 <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>、<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> 和 <a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>（如果适用）之后调用。",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> will call <i>only</i> this variant of the\n<code>stop</code> method; i.e. <a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> will not be called for\n<code>SmartLifecycle</code> implementations unless explicitly delegated to within\nthe implementation of this method.",
+      "translation": "`<a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>` 将仅调用此版本的 `<code>stop</code>` 方法；即，除非在该方法的实现中显式委托，否则不会为 `<code>SmartLifecycle</code>` 实现调用 `<a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "The provided callback is used by the <a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> to support\nan ordered, and potentially concurrent, shutdown of all components having a\ncommon shutdown order value. The callback <b>must</b> be executed after\nthe <code>SmartLifecycle</code> component does indeed stop.",
+      "translation": "提供的回调由<a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>使用，以支持具有公共关闭顺序值的所有组件的有序且可能并发的关闭。该回调<b>必须</b>在<code>SmartLifecycle</code> 组件确实停止后执行。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> and immediately\ntriggers the given callback in the calling thread. Note that there is no\nsynchronization between the two, so custom implementations may at least\nwant to put the same steps within their common lifecycle monitor (if any).",
+      "translation": "默认实现会委托给 <a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>，并立即在调用线程中触发给定的回调。请注意，这两者之间没有同步机制，因此自定义实现至少希望将相同的步骤放在其公共生命周期监视器（如果有）内。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will return <code>true</code> only if <i>all</i>\ncomponents that apply are currently running.",
+      "translation": "对于容器而言，仅当所有适用的组件当前都在运行时，此方法才返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Note that this stop notification is not guaranteed to come before destruction:\nOn regular shutdown, <code>Lifecycle</code> beans will first receive a stop notification\nbefore the general destruction callbacks are being propagated; however, on hot\nrefresh during a context's lifetime or on aborted refresh attempts, a given bean's\ndestroy method will be called without any consideration of stop signals upfront.",
+      "translation": "请注意，此停止通知并不保证在销毁之前发出：\n在常规关闭过程中，<code>Lifecycle</code> 圈会先接收停止通知，然后再传播通用的销毁回调；然而，在上下文生命周期期间的热刷新或中止的刷新尝试中，给定 bean 的销毁方法将在不考虑任何预先停止信号的情况下被调用。",
+      "count": 1
+    },
+    {
+      "source": "The default clock is the system clock for the default time zone.",
+      "translation": "默认时钟是默认时区的系统时钟。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation creates a new Thread and starts it.",
+      "translation": "默认实现会创建一个新的线程并启动它。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is already running.",
+      "translation": "如果组件已经在运行，则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate a hard start signal to all\ncomponents that apply, even to non-auto-startup components.",
+      "translation": "对于容器而言，这将向所有适用的组件传播硬启动信号，即使包括非自动启动的组件。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is not running (not started yet).",
+      "translation": "如果组件尚未运行（尚未启动），则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate the stop signal to all components\nthat apply.",
+      "translation": "对于容器，这将向所有适用的组件传播停止信号。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#getClock()\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#getClock()\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">AsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">AsyncTaskExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">AsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">AsyncTaskExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,org.springframework.scheduling.Trigger)\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,org.springframework.scheduling.Trigger)\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,java.time.Instant)\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,java.time.Instant)\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Instant,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Instant,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Instant,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Instant,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Duration)\">TaskScheduler</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">SmartLifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">SmartLifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\">ApplicationListener</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\">ApplicationListener</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Schedule the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>, invoking it at the specified execution time.",
+      "translation": "调度给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>，在指定的执行时间调用它。",
+      "count": 1
+    },
+    {
+      "source": "Schedule the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>, invoking it whenever the trigger\nindicates a next execution time.",
+      "translation": "调度给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>，每当触发器指示下一个执行时间时调用它。",
+      "count": 1
+    },
+    {
+      "source": "Schedule the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>, starting as soon as possible and\ninvoking it with the given period.",
+      "translation": "安排给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>，尽快开始并以其给定周期进行调用。",
+      "count": 1
+    },
+    {
+      "source": "Schedule the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>, invoking it at the specified execution time\nand subsequently with the given period.",
+      "translation": "调度给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>，在指定的执行时间调用它，随后以给定的周期进行调用。",
+      "count": 1
+    },
+    {
+      "source": "Schedule the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>, starting as soon as possible and invoking it with\nthe given delay between the completion of one execution and the start of the next.",
+      "translation": "调度给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>，尽可能早地开始执行，并在每次执行完成与下一次启动之间使用给定的延迟间隔。",
+      "count": 1
+    },
+    {
+      "source": "Schedule the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>, invoking it at the specified execution time\nand subsequently with the given delay between the completion of one execution\nand the start of the next.",
+      "translation": "调度给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>，在指定的执行时间调用它，随后以给定的延迟间隔，在一次执行完成和下一次启动之间重复调用。",
+      "count": 1
+    },
+    {
+      "source": "Specify a custom target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> to delegate to for\nthe individual execution of scheduled tasks.",
+      "translation": "指定一个自定义目标 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>，用于委派执行计划任务的单个任务。",
+      "count": 1
+    },
+    {
+      "source": "Template method for the actual execution of a task.",
+      "translation": "任务实际执行的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Check whether this component is currently running.",
+      "translation": "检查该组件当前是否正在运行。",
+      "count": 1
+    },
+    {
+      "source": "Set the ApplicationContext that this object runs in.",
+      "translation": "设置此对象运行的 ApplicationContext。",
+      "count": 1
+    },
+    {
+      "source": "Set the clock to use for scheduling purposes.",
+      "translation": "设置用于调度目的的时钟。",
+      "count": 1
+    },
+    {
+      "source": "Specify the lifecycle phase for pausing and resuming this executor.",
+      "translation": "指定暂停和恢复此执行器的生命周期阶段。",
+      "count": 1
+    },
+    {
+      "source": "Start this component.",
+      "translation": "启动此组件。",
+      "count": 1
+    },
+    {
+      "source": "Stop this component, typically in a synchronous fashion, such that the component is\nfully stopped upon return of this method.",
+      "translation": "停止此组件，通常以同步方式执行，使得该方法返回时组件已完全停止。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that a Lifecycle component must stop if it is currently running.",
+      "translation": "指示生命周期组件如果当前正在运行，则必须停止。",
+      "count": 1
+    },
+    {
+      "source": "Submit a Runnable task for execution, receiving a Future representing that task.",
+      "translation": "提交一个可运行的任务以执行，并接收代表该任务的 Future。",
+      "count": 1
+    },
+    {
+      "source": "Submit a Callable task for execution, receiving a Future representing that task.",
+      "translation": "提交一个可调用任务以执行，并接收代表该任务的 Future。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a> representing pending execution of the task,\nor <code>null</code> if the given Trigger object never fires (i.e. returns\n<code>null</code> from <a href=\"../Trigger.html#nextExecution(org.springframework.scheduling.TriggerContext)\"><code>Trigger.nextExecution(TriggerContext)</code></a>)",
+      "translation": "一个代表任务待执行状态的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledFuture.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledFuture</code></a>，或者如果给定的 Trigger 对象从未触发（即从<a href=\"../Trigger.html#nextExecution(org.springframework.scheduling.TriggerContext)\"><code>Trigger.nextExecution(TriggerContext)</code></a>返回<code>null</code>），则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>trigger</code> - an implementation of the <a href=\"../Trigger.html\" title=\"interface in org.springframework.scheduling\"><code>Trigger</code></a> interface,\nfor example, a <a href=\"../support/CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a> object\nwrapping a cron expression",
+      "translation": "<code>trigger</code> - 一个实现了<a href=\"../Trigger.html\" title=\"interface in org.springframework.scheduling\"><code>Trigger</code></a>接口的实现，例如一个包装了 cron 表达式的<a href=\"../support/CronTrigger.html\" title=\"class in org.springframework.scheduling.support\"><code>CronTrigger</code></a>对象",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\">onApplicationEvent</a></code> in interface <code><a href=\"../../context/ApplicationListener.html\" title=\"interface in org.springframework.context\">ApplicationListener</a>&lt;<a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\">ContextClosedEvent</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\">onApplicationEvent</a></code>` 在接口 `<code><a href=\"../../context/ApplicationListener.html\" title=\"interface in org.springframework.context\">ApplicationListener</a>&lt;<a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\">ContextClosedEvent</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#getClock()\">getClock</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#getClock()\">getClock</a></code>` 接口 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code> in interface <code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code>` 接口 `<code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html#execute(java.lang.Runnable)\" title=\"class or interface in java.util.concurrent\">execute</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\">Executor</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html#execute(java.lang.Runnable)\" title=\"class or interface in java.util.concurrent\">execute</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\">Executor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code> in interface <code><a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\">TaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/TaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code>` 在接口 `<code><a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\">TaskExecutor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code> in interface <code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code>` 在接口 `<code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code> in interface <code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"../../core/task/AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code>` 在接口 `<code><a href=\"../../core/task/AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,org.springframework.scheduling.Trigger)\">schedule</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,org.springframework.scheduling.Trigger)\">schedule</a></code>` 接口 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,java.time.Instant)\">schedule</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#schedule(java.lang.Runnable,java.time.Instant)\">schedule</a></code>` 接口 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Instant,java.time.Duration)\">scheduleAtFixedRate</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Instant,java.time.Duration)\">scheduleAtFixedRate</a></code>` 接口 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Duration)\">scheduleAtFixedRate</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#scheduleAtFixedRate(java.lang.Runnable,java.time.Duration)\">scheduleAtFixedRate</a></code>` 接口 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Instant,java.time.Duration)\">scheduleWithFixedDelay</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Instant,java.time.Duration)\">scheduleWithFixedDelay</a></code>` 接口 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Duration)\">scheduleWithFixedDelay</a></code> in interface <code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>",
+      "translation": "`<code><a href=\"../TaskScheduler.html#scheduleWithFixedDelay(java.lang.Runnable,java.time.Duration)\">scheduleWithFixedDelay</a></code>` 接口中的 `<code><a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\">TaskScheduler</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the <code>Callable</code> to execute (never <code>null</code>)",
+      "translation": "<code>task</code> - 要执行的 <code>Callable</code>(永远不为 <code>null</code>)",
+      "count": 1
+    },
+    {
+      "source": "<code>applicationContext</code> - the ApplicationContext object to be used by this object",
+      "translation": "<code>applicationContext</code> - 此对象将使用的 ApplicationContext 对象",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the Runnable to execute",
+      "translation": "<code>task</code> - 要执行的 Runnable",
+      "count": 1
+    },
+    {
+      "source": "<code>startTime</code> - the desired execution time for the task\n(if this is in the past, the task will be executed immediately, i.e. as soon as possible)",
+      "translation": "<code>startTime</code> - 任务的期望执行时间（如果该时间在过去，任务将立即执行，即尽快执行）",
+      "count": 1
+    },
+    {
+      "source": "<code>event</code> - the event to respond to",
+      "translation": "<code>event</code> - 要响应的事件",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

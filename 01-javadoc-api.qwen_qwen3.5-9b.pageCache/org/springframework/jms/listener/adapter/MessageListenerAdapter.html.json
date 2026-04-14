@@ -1,0 +1,216 @@
+{
+  "created_at": "2026-04-14 15:10:27",
+  "updated_at": "2026-04-14 15:10:27",
+  "stats": {
+    "total_entries": 40,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 73,
+    "entries_with_hits": 40,
+    "entries_without_hits": 0,
+    "hit_rate": 1.825,
+    "usage_percentage": 0.004
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.jms.listener.adapter\"><code>MessageListenerAdapter</code></a> with default settings.",
+      "translation": "创建一个新的<a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.jms.listener.adapter\"><code>MessageListenerAdapter</code></a>，使用默认设置。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.jms.listener.adapter\"><code>MessageListenerAdapter</code></a> for the given delegate.",
+      "translation": "为给定的委托创建一个新的<a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.jms.listener.adapter\"><code>MessageListenerAdapter</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by JMS API methods",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS API 方法抛出",
+      "count": 3
+    },
+    {
+      "source": "By default, the content of incoming JMS messages gets extracted before\nbeing passed into the target listener method, to let the target method\noperate on message content types such as String or byte array instead of\nthe raw <code>Message</code>. Message type conversion is delegated to a Spring\nJMS <a href=\"../../support/converter/MessageConverter.html\" title=\"interface in org.springframework.jms.support.converter\"><code>MessageConverter</code></a>. By default, a <a href=\"../../support/converter/SimpleMessageConverter.html\" title=\"class in org.springframework.jms.support.converter\"><code>SimpleMessageConverter</code></a>\nwill be used. (If you do not want such automatic message conversion taking\nplace, then be sure to set the <a href=\"AbstractAdaptableMessageListener.html#setMessageConverter(org.springframework.jms.support.converter.MessageConverter)\"><code>MessageConverter</code></a>\nto <code>null</code>.)",
+      "translation": "默认情况下，传入的 JMS 消息内容会在传递给目标监听器方法之前被提取出来，以便让目标方法操作如 String 或字节数组等消息内容类型，而不是原始的 `<code>Message</code>`。消息类型转换委托给 Spring JMS <a href=\"../../support/converter/MessageConverter.html\" title=\"interface in org.springframework.jms.support.converter\"><code>MessageConverter</code></a>。默认情况下，将使用一个 <a href=\"../../support/converter/SimpleMessageConverter.html\" title=\"class in org.springframework.jms.support.converter\"><code>SimpleMessageConverter</code></a>。（如果您不希望发生这种自动消息转换，请确保将 <a href=\"AbstractAdaptableMessageListener.html#setMessageConverter(org.springframework.jms.support.converter.MessageConverter)\"><code>MessageConverter</code></a> 设置为 <code>null</code>。）",
+      "count": 2
+    },
+    {
+      "source": "<b>Note:</b> The sending of response messages is only available when\nusing the <a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> entry point (typically through a\nSpring message listener container). Usage as standard JMS <code>MessageListener</code>\ndoes <i>not</i> support the generation of response messages.",
+      "translation": "<b>注意：</b> 发送响应消息仅在通过 Spring 消息监听器容器等方式使用<a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a>入口点时可用。作为标准 JMS <code>MessageListener</code>使用不支持生成响应消息。",
+      "count": 2
+    },
+    {
+      "source": "If a target listener method returns a non-null object (typically of a\nmessage content type such as <code>String</code> or byte array), it will get\nwrapped in a JMS <code>Message</code> and sent to the response destination\n(either the JMS \"reply-to\" destination or a\n<a href=\"AbstractAdaptableMessageListener.html#setDefaultResponseDestination(jakarta.jms.Destination)\"><code>specified default\ndestination</code></a>).",
+      "translation": "如果目标监听器方法返回一个非空对象（通常为消息内容类型，如 <code>String</code> 或字节数组），该对象将被封装为 JMS <code>Message</code> 并发送到响应目的地（即 JMS“回复”目的地或<a href=\"AbstractAdaptableMessageListener.html#setDefaultResponseDestination(jakarta.jms.Destination)\"><code>指定的默认目的地</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Find below some examples of method signatures compliant with this\nadapter class. This first example handles all <code>Message</code> types\nand gets passed the contents of each <code>Message</code> type as an\nargument. No <code>Message</code> will be sent back as all of these\nmethods return <code>void</code>.",
+      "translation": "下面是一些符合此适配器类的方法签名示例。第一个示例处理所有 `<code>Message</code>` 类型，并将每种 `<code>Message</code>` 类型的内容作为参数传递。不会发送任何 `<code>Message`，因为这些方法都返回 `<code>void</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation builds an array with the given message object\nas sole element. This means that the extracted message will always be passed\ninto a <i>single</i> method argument, even if it is an array, with the target\nmethod having a corresponding single argument of the array's type declared.",
+      "translation": "默认实现会构建一个数组，其中仅包含给定的消息对象。这意味着提取出的消息将始终作为<i>单个</i>方法参数传递，即使它是一个数组，只要目标方法声明了对应数组类型的单个参数即可。",
+      "count": 2
+    },
+    {
+      "source": "If no explicit delegate object has been specified, listener\nmethods are expected to present on this adapter instance, that is,\non a custom subclass of this adapter, defining listener methods.",
+      "translation": "如果未显式指定委托对象，则预期监听器方法定义在此适配器实例上，即定义在此适配器的自定义子类上的监听器方法。",
+      "count": 2
+    },
+    {
+      "source": "Delegates the message to the target listener method, with appropriate\nconversion of the message argument. If the target method returns a\nnon-null object, wrap in a JMS message and send it back.",
+      "translation": "将消息委派给目标监听器方法，并对消息参数进行适当的转换。如果目标方法返回非 null 对象，则将其包装为 JMS 消息并发送回去。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply returns the configured\ndefault listener method, if any.",
+      "translation": "默认实现仅返回配置的默认监听器方法（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "This can be overridden to treat special message content such as arrays\ndifferently, for example passing in each element of the message array\nas distinct method argument.",
+      "translation": "这可以被重写，以特殊处理消息内容（例如数组），例如将消息数组的每个元素作为独立的方法参数传递。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../SubscriptionNameProvider.html#getSubscriptionName()\">SubscriptionNameProvider</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../SubscriptionNameProvider.html#getSubscriptionName()\">SubscriptionNameProvider</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Spring <a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> entry point.",
+      "translation": "Spring <a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\"><code>SessionAwareMessageListener</code></a> 入口点。",
+      "count": 2
+    },
+    {
+      "source": "Specify the name of the default listener method to delegate to,\nfor the case where no specific listener method has been determined.\nOut-of-the-box value is <a href=\"#ORIGINAL_DEFAULT_LISTENER_METHOD\"><code>\"handleMessage\"</code></a>.",
+      "translation": "指定默认监听器方法的名称，以便在尚未确定特定监听器方法时进行委托。开箱即用的值为<a href=\"#ORIGINAL_DEFAULT_LISTENER_METHOD\"><code>\"handleMessage\"</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Out-of-the-box value for the default listener method: \"handleMessage\".",
+      "translation": "默认监听器方法的开箱即用值：\"handleMessage\"。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the default listener method to delegate to.",
+      "translation": "返回默认监听器方法的名称以委托调用。",
+      "count": 2
+    },
+    {
+      "source": "Return the target object to delegate message listening to.",
+      "translation": "将目标对象返回以委托消息监听。",
+      "count": 2
+    },
+    {
+      "source": "Determine the subscription name for this message listener object.",
+      "translation": "确定此消息监听器对象的订阅名称。",
+      "count": 2
+    },
+    {
+      "source": "Invoke the specified listener method.",
+      "translation": "调用指定的监听器方法。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractAdaptableMessageListener.html#onMessage(jakarta.jms.Message,jakarta.jms.Session)\">onMessage</a></code> in class <code><a href=\"AbstractAdaptableMessageListener.html\" title=\"class in org.springframework.jms.listener.adapter\">AbstractAdaptableMessageListener</a></code>",
+      "translation": "`<code><a href=\"AbstractAdaptableMessageListener.html#onMessage(jakarta.jms.Message,jakarta.jms.Session)\">onMessage</a></code>` 类中的 `<code><a href=\"AbstractAdaptableMessageListener.html\" title=\"class in org.springframework.jms.listener.adapter\">AbstractAdaptableMessageListener</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../SubscriptionNameProvider.html#getSubscriptionName()\">getSubscriptionName</a></code> in interface <code><a href=\"../SubscriptionNameProvider.html\" title=\"interface in org.springframework.jms.listener\">SubscriptionNameProvider</a></code>",
+      "translation": "`<code><a href=\"../SubscriptionNameProvider.html#getSubscriptionName()\">getSubscriptionName</a></code>` 接口 `<code><a href=\"../SubscriptionNameProvider.html\" title=\"interface in org.springframework.jms.listener\">SubscriptionNameProvider</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>originalMessage</code> - the JMS request message",
+      "translation": "<code>originalMessage</code> - JMS 请求消息",
+      "count": 2
+    },
+    {
+      "source": "<code>extractedMessage</code> - the converted JMS request message,\nto be passed into the listener method as argument",
+      "translation": "<code>extractedMessage</code> - 转换后的 JMS 请求消息，作为参数传递给监听器方法。",
+      "count": 2
+    },
+    {
+      "source": "the name of the listener method (never <code>null</code>)",
+      "translation": "监听器方法的名称（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>extractedMessage</code> - the content of the message",
+      "translation": "<code>extractedMessage</code> - 消息的内容",
+      "count": 2
+    },
+    {
+      "source": "<code>methodName</code> - the name of the listener method",
+      "translation": "<code>methodName</code> - 监听器方法的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>arguments</code> - the message arguments to be passed in",
+      "translation": "<code>arguments</code> - 要传递的消息参数",
+      "count": 2
+    },
+    {
+      "source": "the array of arguments to be passed into the\nlistener method (each element of the array corresponding\nto a distinct method argument)",
+      "translation": "要传入监听器方法的参数数组（数组的每个元素对应一个不同的方法参数）",
+      "count": 2
+    },
+    {
+      "source": "the result returned from the listener method",
+      "translation": "监听器方法返回的结果",
+      "count": 2
+    },
+    {
+      "source": "Build an array of arguments to be passed into the target listener method.",
+      "translation": "构建一个参数数组，将其传递给目标监听器方法。",
+      "count": 1
+    },
+    {
+      "source": "Determine the name of the listener method that is supposed to\nhandle the given message.",
+      "translation": "确定用于处理给定消息的监听器方法的名称。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the default listener method to delegate to,\nfor the case where no specific listener method has been determined.",
+      "translation": "指定默认监听器方法的名称，以便在尚未确定特定监听器方法时进行委托。",
+      "count": 1
+    },
+    {
+      "source": "Set a target object to delegate message listening to.",
+      "translation": "设置一个目标对象来委派消息监听。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../SessionAwareMessageListener.html#onMessage(M,jakarta.jms.Session)\">onMessage</a></code> in interface <code><a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\">SessionAwareMessageListener</a>&lt;jakarta.jms.Message&gt;</code>",
+      "translation": "`<code><a href=\"../SessionAwareMessageListener.html#onMessage(M,jakarta.jms.Session)\">onMessage</a></code>` 在接口 `<code><a href=\"../SessionAwareMessageListener.html\" title=\"interface in org.springframework.jms.listener\">SessionAwareMessageListener</a>&lt;jakarta.jms.Message&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>delegate</code> - the delegate object",
+      "translation": "<code>delegate</code> - 委托对象",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the incoming JMS message",
+      "translation": "<code>message</code> - 传入的 JMS 消息",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - the JMS session to operate on",
+      "translation": "<code>session</code> - 要操作的 JMS 会话",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

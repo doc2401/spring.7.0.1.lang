@@ -1,0 +1,401 @@
+{
+  "created_at": "2026-04-14 10:45:31",
+  "updated_at": "2026-04-14 10:45:31",
+  "stats": {
+    "total_entries": 77,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 134,
+    "entries_with_hits": 77,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7402597402597402,
+    "usage_percentage": 0.0077
+  },
+  "items": [
+    {
+      "source": "Constructs a new <a href=\"ClassVisitor.html\" title=\"class in org.springframework.asm\"><code>ClassVisitor</code></a>.",
+      "translation": "构造一个新的<a href=\"ClassVisitor.html\" title=\"class in org.springframework.asm\"><code>ClassVisitor</code></a>。",
+      "count": 5
+    },
+    {
+      "source": "The class visitor to which this visitor must delegate method calls. May be null.",
+      "translation": "此访问者必须委托方法调用的类访问者。可为 null。",
+      "count": 3
+    },
+    {
+      "source": "A visitor to visit a Java class. The methods of this class must be called in the following order:\n<code>visit</code> [ <code>visitSource</code> ] [ <code>visitModule</code> ][ <code>visitNestHost</code> ][ <code>\nvisitOuterClass</code> ] ( <code>visitAnnotation</code> | <code>visitTypeAnnotation</code> | <code>\nvisitAttribute</code> )* ( <code>visitNestMember</code> | [ <code>* visitPermittedSubclass</code> ] | <code>\nvisitInnerClass</code> | <code>visitRecordComponent</code> | <code>visitField</code> | <code>visitMethod</code> )*\n<code>visitEnd</code>.",
+      "translation": "访问 Java 类的访客。此类的必须以以下顺序调用方法：\n<code>visit</code> [ <code>visitSource</code> ] [ <code>visitModule</code> ][ <code>visitNestHost</code> ][ <code>visitOuterClass</code> ] ( <code>visitAnnotation</code> | <code>visitTypeAnnotation</code> | <code>visitAttribute</code> )* ( <code>visitNestMember</code> | [ <code>* visitPermittedSubclass</code> ] | <code>visitInnerClass</code> | <code>visitRecordComponent</code> | <code>visitField</code> | <code>visitMethod</code> )*\n<code>visitEnd</code>。",
+      "count": 2
+    },
+    {
+      "source": "Visits a method of the class. This method <i>must</i> return a new <a href=\"MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a>\ninstance (or null) each time it is called, i.e., it should not return a previously\nreturned visitor.",
+      "translation": "访问类的某个方法。此方法<i>必须</i>每次调用时都返回一个新的<a href=\"MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a>实例（或 null），即不应返回之前已返回的 visitor。",
+      "count": 2
+    },
+    {
+      "source": "The class visitor to which this visitor must delegate method calls.",
+      "translation": "必须委托方法调用的类访问者。",
+      "count": 2
+    },
+    {
+      "source": "Visits the header of the class.",
+      "translation": "访问类的头部。",
+      "count": 2
+    },
+    {
+      "source": "Visits an annotation of the class.",
+      "translation": "访问类的注解。",
+      "count": 2
+    },
+    {
+      "source": "Visits a non standard attribute of the class.",
+      "translation": "访问类的非标准属性。",
+      "count": 2
+    },
+    {
+      "source": "Visits a field of the class.",
+      "translation": "访问类的字段。",
+      "count": 2
+    },
+    {
+      "source": "Visit the module corresponding to the class.",
+      "translation": "访问对应于该类的模块。",
+      "count": 2
+    },
+    {
+      "source": "Visits a record component of the class.",
+      "translation": "访问该类的记录组件。",
+      "count": 2
+    },
+    {
+      "source": "Visits the source of the class.",
+      "translation": "访问类的源代码。",
+      "count": 2
+    },
+    {
+      "source": "Visits an annotation on a type in the class signature.",
+      "translation": "访问类签名中类型上的注解。",
+      "count": 2
+    },
+    {
+      "source": "Visits the nest host class of the class. A nest is a set of classes of the same package that\nshare access to their private members. One of these classes, called the host, lists the other\nmembers of the nest, which in turn should link to the host of their nest. This method must be\ncalled only once and only if the visited class is a non-host member of a nest. A class is\nimplicitly its own nest, so it's invalid to call this method with the visited class name as\nargument.",
+      "translation": "访问该类的嵌套宿主类。一个嵌套（nest）是指同一包中的一组类，它们共享对私有成员的访问权限。这些类中的一个被称为宿主（host），它列出了嵌套中的其他成员；而这些成员反过来应该链接到其所属嵌套的宿主。此方法必须且仅在被访问的类是嵌套的非宿主成员时调用一次。一个类隐式地是其自身的嵌套，因此使用被访问的类名作为参数调用此方法是无效的。",
+      "count": 2
+    },
+    {
+      "source": "Visits the enclosing class of the class. This method must be called only if this class is a\nlocal or anonymous class. See the JVMS 4.7.7 section for more details.",
+      "translation": "访问该类的包围类。此方法仅当该类为局部类或匿名类时方可调用。有关更多详细信息，请参阅 JVMS 4.7.7 节。",
+      "count": 2
+    },
+    {
+      "source": "Visits a member of the nest. A nest is a set of classes of the same package that share access\nto their private members. One of these classes, called the host, lists the other members of the\nnest, which in turn should link to the host of their nest. This method must be called only if\nthe visited class is the host of a nest. A nest host is implicitly a member of its own nest, so\nit's invalid to call this method with the visited class name as argument.",
+      "translation": "访问巢中的一个成员。巢是指同一包中共享私有成员访问权限的类集合。这些类中的一个称为宿主，它列出巢中的其他成员，而这些成员反过来应链接到其巢的宿主。此方法仅在访问的类是巢的宿主时调用。巢的宿主隐式地是其自身巢的成员，因此使用访问的类名作为参数调用此方法是无效的。",
+      "count": 2
+    },
+    {
+      "source": "Visits a permitted subclasses. A permitted subclass is one of the allowed subclasses of the\ncurrent class.",
+      "translation": "访问允许的子类。允许的子类是当前类的允许子类之一。",
+      "count": 2
+    },
+    {
+      "source": "Visits information about an inner class. This inner class is not necessarily a member of the\nclass being visited. More precisely, every class or interface C which is referenced by this\nclass and which is not a package member must be visited with this method. This class must\nreference its nested class or interface members, and its enclosing class, if any. See the JVMS\n4.7.6 section for more details.",
+      "translation": "访问关于内部类的信息。该内部类不一定是被访问类的成员。更准确地说，每个由该类引用且不是包成员的类或接口 C 都必须通过此方法访问。如果存在嵌套类或接口成员以及外部类（如有），则该类必须引用它们。有关更多详细信息，请参阅 JVMS 4.7.6 节。",
+      "count": 2
+    },
+    {
+      "source": "<code>typeRef</code> - a reference to the annotated type. The sort of this type reference must be\n    <a href=\"TypeReference.html#CLASS_TYPE_PARAMETER\"><code>TypeReference.CLASS_TYPE_PARAMETER</code></a>, <a href=\"TypeReference.html#CLASS_TYPE_PARAMETER_BOUND\"><code>TypeReference.CLASS_TYPE_PARAMETER_BOUND</code></a> or <a href=\"TypeReference.html#CLASS_EXTENDS\"><code>TypeReference.CLASS_EXTENDS</code></a>. See\n    <a href=\"TypeReference.html\" title=\"class in org.springframework.asm\"><code>TypeReference</code></a>.",
+      "translation": "<code>typeRef</code> - 对已注解类型的引用。此类型引用的类型必须为<a href=\"TypeReference.html#CLASS_TYPE_PARAMETER\"><code>TypeReference.CLASS_TYPE_PARAMETER</code></a>、<a href=\"TypeReference.html#CLASS_TYPE_PARAMETER_BOUND\"><code>TypeReference.CLASS_TYPE_PARAMETER_BOUND</code></a>或<a href=\"TypeReference.html#CLASS_EXTENDS\"><code>TypeReference.CLASS_EXTENDS</code></a>。请参阅<a href=\"TypeReference.html\" title=\"class in org.springframework.asm\"><code>TypeReference</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>access</code> - the class's access flags (see <a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>). This parameter also indicates if\n    the class is deprecated <a href=\"Opcodes.html#ACC_DEPRECATED\"><code>Opcodes.ACC_DEPRECATED</code></a> or a record <a href=\"Opcodes.html#ACC_RECORD\"><code>Opcodes.ACC_RECORD</code></a>.",
+      "translation": "<code>access</code> - 类的访问标志（参见<a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>）。此参数还指示类是否已弃用 <a href=\"Opcodes.html#ACC_DEPRECATED\"><code>Opcodes.ACC_DEPRECATED</code></a> 或为记录 <a href=\"Opcodes.html#ACC_RECORD\"><code>Opcodes.ACC_RECORD</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>superName</code> - the internal of name of the super class (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).\n    For interfaces, the super class is <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a>. May be null, but only for the\n    <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> class.",
+      "translation": "<code>superName</code> - 父类的内部名称（参见 <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。对于接口，父类是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a>。可能为 null，但仅针对 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> 类。",
+      "count": 2
+    },
+    {
+      "source": "<code>api</code> - the ASM API version implemented by this visitor. Must be one of the <code>\n    ASM</code><i>x</i> values in <a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>.",
+      "translation": "<code>api</code> - 此访问者实现的 ASM API 版本。必须是<a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>中的某个<i>x</i>值，例如 <code>ASM</code><i>x</i>。",
+      "count": 2
+    },
+    {
+      "source": "<code>access</code> - the module access flags, among <code>ACC_OPEN</code>, <code>ACC_SYNTHETIC</code> and <code>\n    ACC_MANDATED</code>.",
+      "translation": "`access` - 模块访问标志，包括 `ACC_OPEN`、`ACC_SYNTHETIC` 和 `ACC_MANDATED`。",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the internal name of the class (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).",
+      "translation": "<code>name</code> - 类的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>interfaces</code> - the internal names of the class's interfaces (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>). May be null.",
+      "translation": "`interfaces` - 类的内部接口名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。可能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>nestHost</code> - the internal name of the host class of the nest (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).",
+      "translation": "`nestHost` - 嵌套宿主类的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>owner</code> - internal name of the enclosing class of the class (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).",
+      "translation": "<code>owner</code> - 该类的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>nestMember</code> - the internal name of a nest member (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).",
+      "translation": "<code>nestMember</code> - 嵌套成员的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>permittedSubclass</code> - the internal name of a permitted subclass (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).",
+      "translation": "<code>permittedSubclass</code> - 允许的子类的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the internal name of C (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>).",
+      "translation": "<code>name</code> - C 的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>outerName</code> - the internal name of the class or interface C is a member of (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>). Must be null if C is not the member of a class or\n    interface (for example, for local or anonymous classes).",
+      "translation": "<code>outerName</code> - 类或接口 C 所属的内部名称（参见 <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。如果 C 不是某个类或接口的成员（例如，对于局部类或匿名类），则必须为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the record component descriptor (see <a href=\"Type.html\" title=\"class in org.springframework.asm\"><code>Type</code></a>).",
+      "translation": "<code>descriptor</code> - 记录组件描述符（参见<a href=\"Type.html\" title=\"class in org.springframework.asm\"><code>Type</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>access</code> - the field's access flags (see <a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>). This parameter also indicates if\n    the field is synthetic and/or deprecated.",
+      "translation": "`access` - 字段的访问标志（参见<a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>）。此参数还指示字段是否为合成字段和/或已弃用。",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the field's descriptor (see <a href=\"Type.html\" title=\"class in org.springframework.asm\"><code>Type</code></a>).",
+      "translation": "<code>descriptor</code> - 字段的描述符（参见<a href=\"Type.html\" title=\"class in org.springframework.asm\"><code>Type</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>access</code> - the method's access flags (see <a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>). This parameter also indicates if\n    the method is synthetic and/or deprecated.",
+      "translation": "`access` - 方法的访问标志（参见<a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>）。此参数还指示方法是否为合成方法和/或已过时。",
+      "count": 2
+    },
+    {
+      "source": "<code>exceptions</code> - the internal names of the method's exception classes (see <a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>). May be null.",
+      "translation": "`exceptions` - 方法的异常类的内部名称（参见<a href=\"Type.html#getInternalName()\"><code>Type.getInternalName()</code></a>）。可能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>classVisitor</code> - the class visitor to which this visitor must delegate method calls. May be\n    null.",
+      "translation": "<code>classVisitor</code> - 此访问者必须向其委托方法调用的类访问者。可能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>source</code> - the name of the source file from which the class was compiled. May be \n    null.",
+      "translation": "<code>source</code> - 编译该类的源文件名。可能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>debug</code> - additional debug information to compute the correspondence between source and\n    compiled elements of the class. May be null.",
+      "translation": "<code>debug</code> - 用于计算类中源元素与编译后元素之间对应关系的附加调试信息。可为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the fully qualified name (using dots) of the module.",
+      "translation": "<code>name</code> - 模块的完全限定名称（使用点分隔）。",
+      "count": 2
+    },
+    {
+      "source": "<code>version</code> - the module version, or null.",
+      "translation": "<code>version</code> - 模块版本，或为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the name of the method that contains the class, or null if the class is\n    not enclosed in a method or constructor of its enclosing class (for example, if it is enclosed in\n    an instance initializer, static initializer, instance variable initializer, or class\n    variable initializer).",
+      "translation": "<code>name</code> - 包含该类的构造方法名称，或者如果该类未封闭在外部类的构造方法中（例如，它封闭在实例初始化器、静态初始化器、实例变量初始化器或类变量初始化器中），则为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the descriptor of the method that contains the class, or null if\n    the class is not enclosed in a method or constructor of its enclosing class (for example, if it is\n    enclosed in an instance initializer, static initializer, instance variable initializer, or\n    class variable initializer).",
+      "translation": "<code>descriptor</code> - 包含该类的所属方法的描述符，或者如果该类未包含在其封闭类的方法或构造函数中（例如，如果它包含在实例初始化块、静态初始化块、实例变量初始化器或类变量初始化器中），则为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the class descriptor of the annotation class.",
+      "translation": "<code>descriptor</code> - 注解类的类描述符。",
+      "count": 2
+    },
+    {
+      "source": "<code>visible</code> - true if the annotation is visible at runtime.",
+      "translation": "<code>visible</code> - 如果注解在运行时可见，则为 true。",
+      "count": 2
+    },
+    {
+      "source": "<code>innerName</code> - the (simple) name of C. Must be null for anonymous inner classes.",
+      "translation": "<code>innerName</code> - C 的（简单）名称。对于匿名内部类，必须为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>access</code> - the access flags of C originally declared in the source code from which this\n    class was compiled.",
+      "translation": "<code>access</code> - 此类从编译它的源代码中最初声明的 C 的访问标志。",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the record component name.",
+      "translation": "<code>name</code> - 记录组件名称。",
+      "count": 2
+    },
+    {
+      "source": "<code>signature</code> - the record component signature. May be null if the record component\n    type does not use generic types.",
+      "translation": "<code>signature</code> - 记录组件签名。如果记录组件类型不使用泛型，则可能为 null。",
+      "count": 2
+    },
+    {
+      "source": "the class visitor to which this visitor must delegate method calls, or null.",
+      "translation": "必须委托方法调用的类访问者，或 null。",
+      "count": 2
+    },
+    {
+      "source": "a visitor to visit the module values, or null if this visitor is not\n    interested in visiting this module.",
+      "translation": "访问者用于访问模块值，如果此访问者不感兴趣访问该模块，则为 null。",
+      "count": 2
+    },
+    {
+      "source": "a visitor to visit the annotation values, or null if this visitor is not\n    interested in visiting this annotation.",
+      "translation": "访问该注解值的访客，或者如果此访客对该注解不感兴趣则为 null。",
+      "count": 2
+    },
+    {
+      "source": "a visitor to visit this record component annotations and attributes, or null\n    if this class visitor is not interested in visiting these annotations and attributes.",
+      "translation": "如果该类访问者不感兴趣访问这些注解和属性，则为 null；否则为用于访问此记录组件注解和属性的访问者。",
+      "count": 2
+    },
+    {
+      "source": "The ASM API version implemented by this visitor. The value of this field must be one of the\n<code>ASM</code><i>x</i> values in <a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>.",
+      "translation": "此访问者实现的 ASM API 版本。该字段的值必须是<a href=\"Opcodes.html\" title=\"interface in org.springframework.asm\"><code>Opcodes</code></a>中的<code>ASM</code><i>x</i>值之一。",
+      "count": 1
+    },
+    {
+      "source": "The ASM API version implemented by this visitor.",
+      "translation": "此访问者实现的 ASM API 版本。",
+      "count": 1
+    },
+    {
+      "source": "Visits the end of the class.",
+      "translation": "访问类的末尾。",
+      "count": 1
+    },
+    {
+      "source": "Visits information about an inner class.",
+      "translation": "访问内部类的信息。",
+      "count": 1
+    },
+    {
+      "source": "Visits a method of the class.",
+      "translation": "访问类的某个方法。",
+      "count": 1
+    },
+    {
+      "source": "Visits the nest host class of the class.",
+      "translation": "访问该类的宿主类。",
+      "count": 1
+    },
+    {
+      "source": "Visits a member of the nest.",
+      "translation": "访问巢穴的成员。",
+      "count": 1
+    },
+    {
+      "source": "Visits the enclosing class of the class.",
+      "translation": "访问该类的封装类。",
+      "count": 1
+    },
+    {
+      "source": "Visits a permitted subclasses.",
+      "translation": "访问允许的子类。",
+      "count": 1
+    },
+    {
+      "source": "Visits the end of the class. This method, which is the last one to be called, is used to inform\nthe visitor that all the fields and methods of the class have been visited.",
+      "translation": "访问类的末尾。此方法是最后被调用的方法，用于通知访问者该类的字段和方法均已访问完毕。",
+      "count": 1
+    },
+    {
+      "source": "<code>value</code> - the field's initial value. This parameter, which may be null if the\n    field does not have an initial value, must be an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a>, a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html\" title=\"class or interface in java.lang\"><code>Float</code></a>, a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a>, a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html\" title=\"class or interface in java.lang\"><code>Double</code></a> or a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> (for <code>int</code>, <code>float</code>, <code>long</code>\n    or <code>String</code> fields respectively). <i>This parameter is only used for static\n    fields</i>. Its value is ignored for non static fields, which must be initialized through\n    bytecode instructions in constructors or methods.",
+      "translation": "<code>value</code> - 字段的初始值。如果字段没有初始值，此参数可能为 null，但必须是一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html\" title=\"class or interface in java.lang\"><code>Float</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html\" title=\"class or interface in java.lang\"><code>Double</code></a> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>（分别对应 <code>int</code>、<code>float</code>、<code>long</code> 或 <code>String</code> 字段）。*此参数仅用于静态字段*。对于非静态字段，其值将被忽略，这些字段必须通过构造函数或方法中的字节码指令进行初始化。",
+      "count": 1
+    },
+    {
+      "source": "<code>descriptor</code> - the method's descriptor (see <a href=\"Type.html\" title=\"class in org.springframework.asm\"><code>Type</code></a>).",
+      "translation": "<code>descriptor</code> - 方法的描述符（参见<a href=\"Type.html\" title=\"class in org.springframework.asm\"><code>Type</code></a>）。",
+      "count": 1
+    },
+    {
+      "source": "<code>version</code> - the class version. The minor version is stored in the 16 most significant bits,\n    and the major version in the 16 least significant bits.",
+      "translation": "<code>version</code> - 类版本。小版本号存储在 16 个最高有效位中，大版本号存储在 16 个最低有效位中。",
+      "count": 1
+    },
+    {
+      "source": "<code>signature</code> - the signature of this class. May be null if the class is not a\n    generic one, and does not extend or implement generic classes or interfaces.",
+      "translation": "<code>signature</code> - 此类的签名。如果该类不是泛型类，且不继承或实现泛型类或接口，则可能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>typePath</code> - the path to the annotated type argument, wildcard bound, array element type, or\n    static inner type within 'typeRef'. May be null if the annotation targets\n    'typeRef' as a whole.",
+      "translation": "`typePath` - 在 `typeRef` 内到注解类型参数、通配符边界、数组元素类型或静态内部类型的路径。如果注解针对整个 `typeRef`，则可能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>attribute</code> - an attribute.",
+      "translation": "<code>attribute</code> - 一个属性。",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the field's name.",
+      "translation": "<code>name</code> - 字段的名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>signature</code> - the field's signature. May be null if the field's type does not use\n    generic types.",
+      "translation": "<code>signature</code> - 字段的签名。如果字段类型不使用泛型，该值可能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the method's name.",
+      "translation": "<code>name</code> - 方法名。",
+      "count": 1
+    },
+    {
+      "source": "<code>signature</code> - the method's signature. May be null if the method parameters,\n    return type and exceptions do not use generic types.",
+      "translation": "<code>signature</code> - 方法的签名。如果方法参数、返回类型和异常不使用泛型，则可能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Eric Bruneton",
+      "translation": "Eric Bruneton",
+      "count": 1
+    },
+    {
+      "source": "a visitor to visit field annotations and attributes, or null if this class\n    visitor is not interested in visiting these annotations and attributes.",
+      "translation": "一个用于访问字段注解和属性的访问器，或者如果该类访问器对这些注解和属性不感兴趣，则为 null。",
+      "count": 1
+    },
+    {
+      "source": "an object to visit the byte code of the method, or null if this class\n    visitor is not interested in visiting the code of this method.",
+      "translation": "一个用于访问该方法的字节码的对象，如果该类访问者不感兴趣访问该方法的代码，则为 null。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

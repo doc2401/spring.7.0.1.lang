@@ -1,0 +1,376 @@
+{
+  "created_at": "2026-04-14 15:38:59",
+  "updated_at": "2026-04-14 15:38:59",
+  "stats": {
+    "total_entries": 72,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 127,
+    "entries_with_hits": 72,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7638888888888888,
+    "usage_percentage": 0.0072
+  },
+  "items": [
+    {
+      "source": "Return the configured\n<a href=\"#setDefaultDataMimeType(org.springframework.util.MimeType)\"><code>defaultDataMimeType</code></a>, or <code>null</code>.",
+      "translation": "返回配置的 `<a href=\"#setDefaultDataMimeType(org.springframework.util.MimeType)\"><code>defaultDataMimeType</code></a>`，或 `null`。",
+      "count": 3
+    },
+    {
+      "source": "Return the <a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>configured</code></a> <code>RSocketStrategies</code>.",
+      "translation": "返回<a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>configured</code></a><code>RSocketStrategies</code>。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured\n<a href=\"#setDefaultMetadataMimeType(org.springframework.util.MimeType)\"><code>defaultMetadataMimeType</code></a>.",
+      "translation": "返回配置的 <a href=\"#setDefaultMetadataMimeType(org.springframework.util.MimeType)\"><code>defaultMetadataMimeType</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"#setEncoders(java.util.List)\"><code>encoders</code></a>.",
+      "translation": "返回配置的<a href=\"#setEncoders(java.util.List)\"><code>encoders</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"#setMetadataExtractor(org.springframework.messaging.rsocket.MetadataExtractor)\"><code>MetadataExtractor</code></a>.",
+      "translation": "返回配置的<a href=\"#setMetadataExtractor(org.springframework.messaging.rsocket.MetadataExtractor)\"><code>MetadataExtractor</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>mimeType</code> - the MimeType to use",
+      "translation": "<code>mimeType</code> - 要使用的 MimeType",
+      "count": 3
+    },
+    {
+      "source": "For server scenarios this class can be declared as a bean in Spring\nconfiguration and that would detect <code>@MessageMapping</code> methods in\n<code>@Controller</code> beans. What beans are checked can be changed through a\n<a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setHandlerPredicate(java.util.function.Predicate)\"><code>handlerPredicate</code></a>. Given an instance\nof this class, you can then use <a href=\"#responder()\"><code>responder()</code></a> to obtain a\n<code>SocketAcceptor</code> adapter to register with the\n<code>RSocketServer</code>.",
+      "translation": "对于服务器场景，此类可以在 Spring 配置中声明为 bean，从而检测 `<code>@Controller</code>` bean 中的`<code>@MessageMapping</code>` 方法。可以通过<a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setHandlerPredicate(java.util.function.Predicate)\"><code>handlerPredicate</code></a>来检查哪些 bean。给定此类的实例，您可以使用<a href=\"#responder()\"><code>responder()</code></a>获取一个`<code>SocketAcceptor</code>`适配器，并将其注册到`<code>RSocketServer</code>`中。",
+      "count": 2
+    },
+    {
+      "source": "For a client, possibly in the same process as a server, consider using the\nstatic factory method <a href=\"#responder(org.springframework.messaging.rsocket.RSocketStrategies,java.lang.Object...)\"><code>responder(RSocketStrategies, Object...)</code></a> to\nobtain a client responder to be registered via\n<a href=\"../../RSocketRequester.Builder.html#rsocketConnector(org.springframework.messaging.rsocket.RSocketConnectorConfigurer)\"><code>RSocketRequester.Builder</code></a>.",
+      "translation": "对于客户端（可能位于与服务器相同的进程中），请考虑使用静态工厂方法 <a href=\"#responder(org.springframework.messaging.rsocket.RSocketStrategies,java.lang.Object...)\"><code>responder(RSocketStrategies, Object...)</code></a> 获取客户端响应器，并通过 <a href=\"../../RSocketRequester.Builder.html#rsocketConnector(org.springframework.messaging.rsocket.RSocketConnectorConfigurer)\"><code>RSocketRequester.Builder</code></a> 进行注册。",
+      "count": 2
+    },
+    {
+      "source": "The initial <code>ConnectionSetupPayload</code> is handled through\n<a href=\"../ConnectMapping.html\" title=\"annotation interface in org.springframework.messaging.rsocket.annotation\"><code>@ConnectionMapping</code></a> methods that can be asynchronous\nand return <code>Mono&lt;Void&gt;</code> with an error signal preventing the\nconnection. Such a method can also start requests to the client but that\nmust be done decoupled from handling and from the current thread.",
+      "translation": "初始的 `<code>ConnectionSetupPayload</code>` 通过 `<a href=\"../ConnectMapping.html\" title=\"annotation interface in org.springframework.messaging.rsocket.annotation\"><code>@ConnectionMapping</code></a>` 方法进行处理，这些方法可以是异步的并返回 `<code>Mono&lt;Void&gt;</code>`，同时包含一个错误信号以阻止连接。此类方法还可以向客户端发起请求，但必须与处理逻辑及当前线程解耦。",
+      "count": 2
+    },
+    {
+      "source": "Subsequent requests on the connection can be handled with\n<a href=\"../../../handler/annotation/MessageMapping.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>MessageMapping</code></a>\nand <a href=\"../../service/RSocketExchange.html\" title=\"annotation interface in org.springframework.messaging.rsocket.service\"><code>RSocketExchange</code></a> methods.",
+      "translation": "连接上的后续请求可以使用 `<a href=\"../../../handler/annotation/MessageMapping.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>MessageMapping</code></a>` 和 `<a href=\"../../service/RSocketExchange.html\" title=\"annotation interface in org.springframework.messaging.rsocket.service\"><code>RSocketExchange</code></a>` 方法进行处理。",
+      "count": 2
+    },
+    {
+      "source": "For <code>@MessageMapping</code> and <code>@RSocketExchange</code> methods,\nthis class automatically determines the RSocket interaction type\nbased on the input and output cardinality of the method. See the\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#rsocket-annot-responders\">\n\"Annotated Responders\"</a> section of the Spring Framework reference for more details.",
+      "translation": "对于 `<code>@MessageMapping</code>` 和 `<code>@RSocketExchange</code>` 方法，该类会根据方法的输入和输出基数自动确定 RSocket 交互类型。有关更多详细信息，请参阅 Spring Framework 参考中的 <a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#rsocket-annot-responders\">“注解响应器”</a> 部分。",
+      "count": 2
+    },
+    {
+      "source": "When <a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>\nis set, this property is re-initialized with the encoders in it, and\nlikewise when this property is set the <code>RSocketStrategies</code> are\nmutated to change the encoders in it.",
+      "translation": "当设置 `<a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>` 时，该属性会使用该属性中的编码器重新初始化；同样地，当设置此属性时，`<code>RSocketStrategies</code>` 也会被修改以更改其内部的编码器。",
+      "count": 2
+    },
+    {
+      "source": "When <a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>\nis set, this property is re-initialized with the decoders in it, and\nlikewise when this property is set the <code>RSocketStrategies</code> are\nmutated to change the decoders in them.",
+      "translation": "当设置 `<a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>` 时，该属性会使用该属性中的解码器重新初始化；同样地，当设置此属性时，`<code>RSocketStrategies</code>` 会被修改以更改其中的解码器。",
+      "count": 2
+    },
+    {
+      "source": "When <a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>\nis set, this property is re-initialized with the route matcher in it, and\nlikewise when this property is set the <code>RSocketStrategies</code> are\nmutated to change the matcher in it.",
+      "translation": "当设置 `<a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>` 时，该属性会使用其中的路由匹配器重新初始化；同样地，当设置此属性时，会修改 `<code>RSocketStrategies</code>` 以更改其内部的匹配器。",
+      "count": 2
+    },
+    {
+      "source": "When <a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>\nis set, this property is re-initialized with the registry in it, and\nlikewise when this property is set the <code>RSocketStrategies</code> are\nmutated to change the registry in it.",
+      "translation": "当设置 `<a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>` 时，该属性会使用该注册表重新初始化；同样地，当设置此属性时，`<code>RSocketStrategies</code>` 会被修改以更改其内部的注册表。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to the\n<a href=\"../../RSocketStrategies.Builder.html#reactiveAdapterStrategy(org.springframework.core.ReactiveAdapterRegistry)\"><code>defaults</code></a>\nfrom <code>RSocketStrategies</code>.",
+      "translation": "默认情况下，此值设置为来自<code>RSocketStrategies</code>的<a href=\"../../RSocketStrategies.Builder.html#reactiveAdapterStrategy(org.springframework.core.ReactiveAdapterRegistry)\"><code>defaults</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "When <a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>\nis set, this property is re-initialized with the extractor in it, and\nlikewise when this property is set the <code>RSocketStrategies</code> are\nmutated to change the extractor in it.",
+      "translation": "当设置 `<a href=\"#setRSocketStrategies(org.springframework.messaging.rsocket.RSocketStrategies)\"><code>rsocketStrategies</code></a>` 时，该属性会使用其中的提取器重新初始化；同样地，当设置此属性时，会突变 `<code>RSocketStrategies</code>` 以更改其内部的提取器。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to the\n<a href=\"../../RSocketStrategies.Builder.html#metadataExtractor(org.springframework.messaging.rsocket.MetadataExtractor)\"><code>defaults</code></a>\nfrom <code>RSocketStrategies</code>.",
+      "translation": "默认情况下，此值设置为来自<code>RSocketStrategies</code>的<a href=\"../../RSocketStrategies.Builder.html#metadataExtractor(org.springframework.messaging.rsocket.MetadataExtractor)\"><code>defaults</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to the\n<a href=\"../../RSocketStrategies.Builder.html#encoder(org.springframework.core.codec.Encoder...)\">defaults</a>\nfrom <code>RSocketStrategies</code>.",
+      "translation": "默认情况下，此值设置为来自<code>RSocketStrategies</code>的<a href=\"../../RSocketStrategies.Builder.html#encoder(org.springframework.core.codec.Encoder...)\">默认值</a>。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to the\n<a href=\"../../RSocketStrategies.Builder.html#decoder(org.springframework.core.codec.Decoder...)\">defaults</a>\nfrom <code>RSocketStrategies</code>.",
+      "translation": "默认情况下，此值设置为来自<code>RSocketStrategies</code>的<a href=\"../../RSocketStrategies.Builder.html#decoder(org.springframework.core.codec.Decoder...)\">默认值</a>。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to the\n<a href=\"../../RSocketStrategies.Builder.html#routeMatcher(org.springframework.util.RouteMatcher)\">defaults</a>\nfrom <code>RSocketStrategies</code>.",
+      "translation": "默认情况下，此值设置为来自<code>RSocketStrategies</code>的<a href=\"../../RSocketStrategies.Builder.html#routeMatcher(org.springframework.util.RouteMatcher)\">默认值</a>。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to <a href=\"../../RSocketStrategies.html#create()\"><code>RSocketStrategies.create()</code></a> which in\nturn sets default settings for all related properties.",
+      "translation": "默认情况下，此值设置为 `<a href=\"../../RSocketStrategies.html#create()\"><code>RSocketStrategies.create()</code></a>`，进而为所有相关属性设置默认值。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses should also take into account custom return value types configured\nvia <a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setReturnValueHandlerConfigurer(org.springframework.messaging.handler.invocation.reactive.ReturnValueHandlerConfigurer)\"><code>AbstractMethodMessageHandler.setReturnValueHandlerConfigurer(ReturnValueHandlerConfigurer)</code></a>.",
+      "translation": "子类还应考虑通过 <a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setReturnValueHandlerConfigurer(org.springframework.messaging.handler.invocation.reactive.ReturnValueHandlerConfigurer)\"><code>AbstractMethodMessageHandler.setReturnValueHandlerConfigurer(ReturnValueHandlerConfigurer)</code></a> 配置的自定义返回值类型。",
+      "count": 2
+    },
+    {
+      "source": "Note that the given handlers do not need to have any stereotype\nannotations such as <code>@Controller</code> which helps to avoid overlap with\nserver side handlers that may be used in the same application. However,\nfor more advanced scenarios, for example, discovering handlers through a custom\nstereotype annotation, consider declaring <code>RSocketMessageHandler</code>\nas a bean, and then obtain the responder from it.",
+      "translation": "请注意，给定的处理器不需要具有任何立体注解（例如 `<code>@Controller`），这有助于避免与同一应用程序中可能使用的服务器端处理器发生重叠。然而，对于更高级的场景，例如通过自定义立体注解发现处理器，请考虑将 `<code>RSocketMessageHandler</code>` 声明为 Bean，然后从中获取响应器。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to <code>\"message/x.rsocket.composite-metadata.v0\"</code>",
+      "translation": "默认情况下，此值设置为 `<code>\"message/x.rsocket.composite-metadata.v0\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "When this property is set, in turn it sets the following:",
+      "translation": "当设置此属性时，会依次设置以下内容：",
+      "count": 2
+    },
+    {
+      "source": "This is intended for programmatic creation and registration of a\nclient-side responder. For example:",
+      "translation": "此内容旨在用于程序化创建和注册客户端响应器。例如：",
+      "count": 2
+    },
+    {
+      "source": "Configure this handler through an <a href=\"../../RSocketStrategies.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketStrategies</code></a> instance which\ncan be re-used to initialize a client-side <a href=\"../../RSocketRequester.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketRequester</code></a>.",
+      "translation": "通过一个 `<a href=\"../../RSocketStrategies.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketStrategies</code></a>` 实例配置此处理器，该实例可被重用以初始化客户端侧的 `<a href=\"../../RSocketRequester.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketRequester</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#initReturnValueHandlers()\">AbstractMethodMessageHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#initReturnValueHandlers()\">AbstractMethodMessageHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#getCondition(java.lang.reflect.AnnotatedElement)\">MessageMappingMessageHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#getCondition(java.lang.reflect.AnnotatedElement)\">MessageMappingMessageHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#extendMapping(T,org.springframework.messaging.handler.HandlerMethod)\">AbstractMethodMessageHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#extendMapping(T,org.springframework.messaging.handler.HandlerMethod)\">AbstractMethodMessageHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#handleNoMatch(org.springframework.util.RouteMatcher.Route,org.springframework.messaging.Message)\">AbstractMethodMessageHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#handleNoMatch(org.springframework.util.RouteMatcher.Route,org.springframework.messaging.Message)\">AbstractMethodMessageHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Configure a <a href=\"../../MetadataExtractor.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>MetadataExtractor</code></a> to extract the route along with\nother metadata.",
+      "translation": "配置一个<a href=\"../../MetadataExtractor.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>MetadataExtractor</code></a>以提取路由以及其他元数据。",
+      "count": 2
+    },
+    {
+      "source": "Determine the mapping condition for the given annotated element.",
+      "translation": "确定给定注释元素的映射条件。",
+      "count": 2
+    },
+    {
+      "source": "Invoked when no matching handler is found.",
+      "translation": "在找不到匹配的处理器时调用。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setReactiveAdapterRegistry(org.springframework.core.ReactiveAdapterRegistry)\">setReactiveAdapterRegistry</a></code> in class <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html\" title=\"class in org.springframework.messaging.handler.invocation.reactive\">AbstractMethodMessageHandler</a>&lt;<a href=\"../../../handler/CompositeMessageCondition.html\" title=\"class in org.springframework.messaging.handler\">CompositeMessageCondition</a>&gt;</code>",
+      "translation": "<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setReactiveAdapterRegistry(org.springframework.core.ReactiveAdapterRegistry)\">setReactiveAdapterRegistry</a></code> 类中的 <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html\" title=\"class in org.springframework.messaging.handler.invocation.reactive\">AbstractMethodMessageHandler</a>&lt;<a href=\"../../../handler/CompositeMessageCondition.html\" title=\"class in org.springframework.messaging.handler\">CompositeMessageCondition</a>&gt;</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#extendMapping(T,org.springframework.messaging.handler.HandlerMethod)\">extendMapping</a></code> in class <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html\" title=\"class in org.springframework.messaging.handler.invocation.reactive\">AbstractMethodMessageHandler</a>&lt;<a href=\"../../../handler/CompositeMessageCondition.html\" title=\"class in org.springframework.messaging.handler\">CompositeMessageCondition</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#extendMapping(T,org.springframework.messaging.handler.HandlerMethod)\">extendMapping</a></code>` 在类 `<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html\" title=\"class in org.springframework.messaging.handler.invocation.reactive\">AbstractMethodMessageHandler</a>&lt;<a href=\"../../../handler/CompositeMessageCondition.html\" title=\"class in org.springframework.messaging.handler\">CompositeMessageCondition</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#handleNoMatch(org.springframework.util.RouteMatcher.Route,org.springframework.messaging.Message)\">handleNoMatch</a></code> in class <code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html\" title=\"class in org.springframework.messaging.handler.invocation.reactive\">AbstractMethodMessageHandler</a>&lt;<a href=\"../../../handler/CompositeMessageCondition.html\" title=\"class in org.springframework.messaging.handler\">CompositeMessageCondition</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#handleNoMatch(org.springframework.util.RouteMatcher.Route,org.springframework.messaging.Message)\">handleNoMatch</a></code>` 在类 `<code><a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html\" title=\"class in org.springframework.messaging.handler.invocation.reactive\">AbstractMethodMessageHandler</a>&lt;<a href=\"../../../handler/CompositeMessageCondition.html\" title=\"class in org.springframework.messaging.handler\">CompositeMessageCondition</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#setDecoders(java.util.List)\">setDecoders</a></code> in class <code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>",
+      "translation": "`<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#setDecoders(java.util.List)\">setDecoders</a></code>` 类中的 `<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#setRouteMatcher(org.springframework.util.RouteMatcher)\">setRouteMatcher</a></code> in class <code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>",
+      "translation": "`<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#setRouteMatcher(org.springframework.util.RouteMatcher)\">setRouteMatcher</a></code>` 类中的 `<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in class <code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>",
+      "translation": "`<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 类中的 `<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#initReturnValueHandlers()\">initReturnValueHandlers</a></code> in class <code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>",
+      "translation": "`<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#initReturnValueHandlers()\">initReturnValueHandlers</a></code>` 类中的 `<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#getCondition(java.lang.reflect.AnnotatedElement)\">getCondition</a></code> in class <code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>",
+      "translation": "`<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html#getCondition(java.lang.reflect.AnnotatedElement)\">getCondition</a></code>` 类中的 `<code><a href=\"../../../handler/annotation/reactive/MessageMappingMessageHandler.html\" title=\"class in org.springframework.messaging.handler.annotation.reactive\">MessageMappingMessageHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>candidateHandlers</code> - a list of Objects and/or Classes with annotated\nhandler methods; used to call <a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setHandlers(java.util.List)\"><code>AbstractMethodMessageHandler.setHandlers(List)</code></a> with\non the created <code>RSocketMessageHandler</code>",
+      "translation": "<code>candidateHandlers</code> - 一个包含带有注解的处理器方法的对象和/或类的列表；用于在创建的 <code>RSocketMessageHandler</code> 上调用 <a href=\"../../../handler/invocation/reactive/AbstractMethodMessageHandler.html#setHandlers(java.util.List)\"><code>AbstractMethodMessageHandler.setHandlers(List)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>strategies</code> - the strategies to set on the created\n<code>RSocketMessageHandler</code>",
+      "translation": "<code>strategies</code> - 要在创建的 <code>RSocketMessageHandler</code> 上设置的策略",
+      "count": 2
+    },
+    {
+      "source": "a configurer that may be passed into\n<a href=\"../../RSocketRequester.Builder.html#rsocketConnector(org.springframework.messaging.rsocket.RSocketConnectorConfigurer)\"><code>RSocketRequester.Builder.rsocketConnector(RSocketConnectorConfigurer)</code></a>",
+      "translation": "一个可传入 `<a href=\"../../RSocketRequester.Builder.html#rsocketConnector(org.springframework.messaging.rsocket.RSocketConnectorConfigurer)\"><code>RSocketRequester.Builder.rsocketConnector(RSocketConnectorConfigurer)</code></a>` 的配置器。",
+      "count": 2
+    },
+    {
+      "source": "<code>extractor</code> - the extractor to use",
+      "translation": "<code>extractor</code> - 要使用的提取器",
+      "count": 2
+    },
+    {
+      "source": "<code>composite</code> - the mapping to be added",
+      "translation": "<code>composite</code> - 要添加的映射",
+      "count": 2
+    },
+    {
+      "source": "<code>handler</code> - the target handler for the mapping",
+      "translation": "<code>handler</code> - 映射的目标处理器",
+      "count": 2
+    },
+    {
+      "source": "By default, <a href=\"../../../../util/SimpleRouteMatcher.html\" title=\"class in org.springframework.util\"><code>SimpleRouteMatcher</code></a> is used, backed by\n<a href=\"../../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a> with \".\" as separator. For greater\nefficiency consider using the <code>PathPatternRouteMatcher</code> from\n<code>spring-web</code> instead.",
+      "translation": "默认情况下，使用由带有\".\"作为分隔符的<a href=\"../../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>支持的<a href=\"../../../../util/SimpleRouteMatcher.html\" title=\"class in org.springframework.util\"><code>SimpleRouteMatcher</code></a>。为了提高效率，请考虑改用<code>spring-web</code>中的<code>PathPatternRouteMatcher</code>。",
+      "count": 1
+    },
+    {
+      "source": "By default this is not set.",
+      "translation": "默认情况下，此项未设置。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "By default this method returns the mapping that is passed in.",
+      "translation": "默认情况下，此方法返回传入的映射。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的 `<code>BeanFactory</code>` 在设置所有 bean 属性并满足 `<a href=\"../../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>`、`<code>ApplicationContextAware</code>` 等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "Return an RSocket <code>SocketAcceptor</code> backed by this\n<code>RSocketMessageHandler</code> instance that can be plugged in as a\n<code>client</code> or\n<code>server</code>\nRSocket responder.",
+      "translation": "返回一个由该 `<code>RSocketMessageHandler`</code> 实例支持的 RSocket `<code>SocketAcceptor`</code>，可用作 `<code>client`</code> 或 `<code>server`</code> RSocket 响应器。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Configure the default <code>MimeType</code> for payload data if the\n<code>SETUP</code> frame did not specify one.",
+      "translation": "如果 `<SETUP>` 帧未指定默认 `MimeType`，请为负载数据配置默认的 `<code>MimeType</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Static factory method to create an RSocket <code>SocketAcceptor</code>\nbacked by handlers with annotated methods.",
+      "translation": "用于创建由带有注解方法的处理器支持的 RSocket `<code>SocketAcceptor</code>` 的静态工厂方法。",
+      "count": 1
+    },
+    {
+      "source": "Configure the default content type to use for data payloads if the\n<code>SETUP</code> frame did not specify one.",
+      "translation": "如果 `<code>SETUP</code>` 帧未指定内容类型，则配置用于数据负载的默认内容类型。",
+      "count": 1
+    },
+    {
+      "source": "Set the <code>RouteMatcher</code> to use for mapping messages to handlers\nbased on the route patterns they're configured with.",
+      "translation": "设置用于根据配置的路线模式将消息映射到处理器的<code>RouteMatcher</code>。",
+      "count": 1
+    },
+    {
+      "source": "This method is invoked just before mappings are added.",
+      "translation": "此方法在添加映射之前立即被调用。",
+      "count": 1
+    },
+    {
+      "source": "Return the list of return value handlers to use.",
+      "translation": "返回要使用的返回值处理器列表。",
+      "count": 1
+    },
+    {
+      "source": "Configure the decoders to use for incoming payloads.",
+      "translation": "配置用于处理传入负载的解码器。",
+      "count": 1
+    },
+    {
+      "source": "Configure the encoders to use for encoding handler method return values.",
+      "translation": "配置用于编码处理程序方法返回值的编码器。",
+      "count": 1
+    },
+    {
+      "source": "Configure the registry for adapting various reactive types.",
+      "translation": "配置注册表以适配各种响应式类型。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>element</code> - the element to check",
+      "translation": "<code>element</code> - 要检查的元素",
+      "count": 1
+    },
+    {
+      "source": "the condition, or <code>null</code>",
+      "translation": "条件，或<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>destination</code> - the destination",
+      "translation": "<code>destination</code> - 目的地",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the message",
+      "translation": "<code>message</code> - 消息",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Olga Maciaszek-Sharma",
+      "translation": "Rossen Stoyanchev，Olga Maciaszek-Sharma",
+      "count": 1
+    },
+    {
+      "source": "a new mapping or the same",
+      "translation": "一个新映射或同一个",
+      "count": 1
+    }
+  ]
+}

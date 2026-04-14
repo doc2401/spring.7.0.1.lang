@@ -1,0 +1,181 @@
+{
+  "created_at": "2026-04-14 16:28:31",
+  "updated_at": "2026-04-14 16:28:31",
+  "stats": {
+    "total_entries": 33,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 48,
+    "entries_with_hits": 33,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4545454545454546,
+    "usage_percentage": 0.0033000000000000004
+  },
+  "items": [
+    {
+      "source": "For concrete usage, check out the <a href=\"SchedulerFactoryBean.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SchedulerFactoryBean</code></a> and\n<a href=\"SchedulerAccessorBean.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SchedulerAccessorBean</code></a> classes.",
+      "translation": "对于具体用法，请查看 <a href=\"SchedulerFactoryBean.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SchedulerFactoryBean</code></a> 和 <a href=\"SchedulerAccessorBean.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SchedulerAccessorBean</code></a> 类。",
+      "count": 2
+    },
+    {
+      "source": "This is not necessary when a Trigger determines the JobDetail\nitself: In this case, the JobDetail will be implicitly registered\nin combination with the Trigger.",
+      "translation": "当触发器（Trigger）本身确定作业详情（JobDetail）时，则不需要这样做：在这种情况下，作业详情将与触发器一起被隐式注册。",
+      "count": 2
+    },
+    {
+      "source": "If the Trigger determines the corresponding JobDetail itself,\nthe job will be automatically registered with the Scheduler.\nElse, the respective JobDetail needs to be registered via the\n\"jobDetails\" property of this FactoryBean.",
+      "translation": "如果触发器自行确定对应的 JobDetail，则该任务将自动注册到调度器中。否则，需要通过此 FactoryBean 的 \"jobDetails\" 属性注册相应的 JobDetail。",
+      "count": 2
+    },
+    {
+      "source": "Register jobs and triggers (within a transaction, if possible).",
+      "translation": "注册作业和触发器（如果可能，在事务中）。",
+      "count": 2
+    },
+    {
+      "source": "Register all specified listeners with the Scheduler.",
+      "translation": "将所有指定的监听器注册到调度器中。",
+      "count": 2
+    },
+    {
+      "source": "Register a list of Quartz Calendar objects with the Scheduler\nthat this FactoryBean creates, to be referenced by Triggers.",
+      "translation": "将一组 Quartz 日历对象注册到此 FactoryBean 创建的 Scheduler，以便由 Trigger 引用。",
+      "count": 2
+    },
+    {
+      "source": "Specify Quartz SchedulerListeners to be registered with the Scheduler.",
+      "translation": "指定要注册到调度器的 Quartz 调度器监听器。",
+      "count": 2
+    },
+    {
+      "source": "Set whether any jobs defined on this SchedulerFactoryBean should overwrite\nexisting job definitions. Default is \"false\", to not overwrite already\nregistered jobs that have been read in from a persistent job store.",
+      "translation": "设置是否应覆盖此 `SchedulerFactoryBean` 上定义的任意作业现有的作业定义。默认值为 `\"false\"`，即不覆盖已从持久化作业存储中读取的已注册作业。",
+      "count": 2
+    },
+    {
+      "source": "Set the location of a Quartz job definition XML file that follows the\n\"job_scheduling_data_1_5\" XSD or better. Can be specified to automatically\nregister jobs that are defined in such a file, possibly in addition\nto jobs defined directly on this SchedulerFactoryBean.",
+      "translation": "设置 Quartz 作业定义 XML 文件的位置，该文件需遵循 \"job_scheduling_data_1_5\" XSD 或更高版本。可指定以自动注册此类文件中定义的作业，可能还会补充直接在此 SchedulerFactoryBean 上定义的作业。",
+      "count": 2
+    },
+    {
+      "source": "Set the locations of Quartz job definition XML files that follow the\n\"job_scheduling_data_1_5\" XSD or better. Can be specified to automatically\nregister jobs that are defined in such files, possibly in addition\nto jobs defined directly on this SchedulerFactoryBean.",
+      "translation": "设置遵循 \"job_scheduling_data_1_5\" XSD 或更高版本的 Quartz 作业定义 XML 文件的位置。可以指定以自动注册此类文件中定义的作业，可能还会直接在此 SchedulerFactoryBean 上定义的作业之外进行注册。",
+      "count": 2
+    },
+    {
+      "source": "Specify global Quartz JobListeners to be registered with the Scheduler.\nSuch JobListeners will apply to all Jobs in the Scheduler.",
+      "translation": "指定全局 Quartz JobListeners 以注册到调度器。这些 JobListeners 将适用于调度器中的所有作业。",
+      "count": 2
+    },
+    {
+      "source": "Specify global Quartz TriggerListeners to be registered with the Scheduler.\nSuch TriggerListeners will apply to all Triggers in the Scheduler.",
+      "translation": "指定全局 Quartz 触发器监听器以注册到调度器。此类触发器监听器将适用于调度器中的所有触发器。",
+      "count": 2
+    },
+    {
+      "source": "Set the transaction manager to be used for registering jobs and triggers\nthat are defined by this SchedulerFactoryBean. Default is none; setting\nthis only makes sense when specifying a DataSource for the Scheduler.",
+      "translation": "设置用于注册由该 SchedulerFactoryBean 定义的作业和触发器的事务管理器。默认值为无；仅在为调度器指定了 DataSource 时，设置此属性才有意义。",
+      "count": 2
+    },
+    {
+      "source": "Template method that determines the Scheduler to operate on.\nTo be implemented by subclasses.",
+      "translation": "用于确定要操作的调度器的模板方法。由子类实现。",
+      "count": 2
+    },
+    {
+      "source": "<code>calendars</code> - a Map with calendar names as keys as Calendar\nobjects as values",
+      "translation": "<code>calendars</code> - 一个以日历名称为键、Calendar 对象为值的 Map。",
+      "count": 2
+    },
+    {
+      "source": "This might be a ResourcePatternResolver, which can be checked\nthrough <code>instanceof ResourcePatternResolver</code>. See also the\n<code>ResourcePatternUtils.getResourcePatternResolver</code> method.",
+      "translation": "这可能是一个 `ResourcePatternResolver`，可以通过 `<code>instanceof ResourcePatternResolver</code>` 进行检查。另请参阅 `<code>ResourcePatternUtils.getResourcePatternResolver</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback\nlike InitializingBean's <code>afterPropertiesSet</code> or a custom init-method.\nInvoked before ApplicationContextAware's <code>setApplicationContext</code>.",
+      "translation": "在普通 Bean 属性填充之后、但早于初始化回调（如 `InitializingBean` 的 `<code>afterPropertiesSet</code>` 或自定义的 init-method）之前被调用。在 `ApplicationContextAware` 的 `<code>setApplicationContext</code>` 之前被调用。",
+      "count": 1
+    },
+    {
+      "source": "Compatible with Quartz 2.1.4 and higher.",
+      "translation": "与 Quartz 2.1.4 及更高版本兼容。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">ResourceLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">ResourceLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Template method that determines the Scheduler to operate on.",
+      "translation": "用于确定要操作的调度器的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Specify global Quartz JobListeners to be registered with the Scheduler.",
+      "translation": "指定全局 Quartz JobListeners 以注册到调度器。",
+      "count": 1
+    },
+    {
+      "source": "Specify global Quartz TriggerListeners to be registered with the Scheduler.",
+      "translation": "指定全局 Quartz TriggerListeners 以注册到调度器。",
+      "count": 1
+    },
+    {
+      "source": "Register a list of JobDetail objects with the Scheduler that\nthis FactoryBean creates, to be referenced by Triggers.",
+      "translation": "将一组 JobDetail 对象注册到此 FactoryBean 创建的 Scheduler 中，以便由 Trigger 引用。",
+      "count": 1
+    },
+    {
+      "source": "Set the location of a Quartz job definition XML file that follows the\n\"job_scheduling_data_1_5\" XSD or better.",
+      "translation": "设置 Quartz 作业定义 XML 文件的位置，该文件需遵循 \"job_scheduling_data_1_5\" XSD 或更高版本。",
+      "count": 1
+    },
+    {
+      "source": "Set the locations of Quartz job definition XML files that follow the\n\"job_scheduling_data_1_5\" XSD or better.",
+      "translation": "设置遵循 \"job_scheduling_data_1_5\" XSD 或更高版本的 Quartz 作业定义 XML 文件的位置。",
+      "count": 1
+    },
+    {
+      "source": "Set whether any jobs defined on this SchedulerFactoryBean should overwrite\nexisting job definitions.",
+      "translation": "设置是否应覆盖此 SchedulerFactoryBean 上定义的作业的任何现有作业定义。",
+      "count": 1
+    },
+    {
+      "source": "Set the ResourceLoader that this object runs in.",
+      "translation": "设置该对象运行的资源加载器。",
+      "count": 1
+    },
+    {
+      "source": "Set the transaction manager to be used for registering jobs and triggers\nthat are defined by this SchedulerFactoryBean.",
+      "translation": "设置此 SchedulerFactoryBean 定义的作业和触发器将使用的事务管理器。",
+      "count": 1
+    },
+    {
+      "source": "Register a list of Trigger objects with the Scheduler that\nthis FactoryBean creates.",
+      "translation": "将触发器对象列表注册到此 FactoryBean 创建的调度器中。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code> in interface <code><a href=\"../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code>` 接口 `<code><a href=\"../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader object to be used by this object",
+      "translation": "<code>resourceLoader</code> - 此对象将使用的 ResourceLoader 对象",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Stephane Nicoll",
+      "translation": "Juergen Hoeller, Stephane Nicoll",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

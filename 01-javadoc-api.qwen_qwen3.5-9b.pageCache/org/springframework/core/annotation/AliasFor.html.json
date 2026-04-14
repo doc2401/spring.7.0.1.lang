@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 12:40:29",
+  "updated_at": "2026-04-14 12:40:29",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 54,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8620689655172413,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "In <code>@GroovyOrXmlTestConfig</code>, <code>groovy</code> is an explicit\noverride for the <code>groovyScripts</code> attribute in <code>@MyTestConfig</code>;\nwhereas, <code>xml</code> is an explicit override for the <code>locations</code>\nattribute in <code>@ContextConfiguration</code>. Furthermore, <code>groovy</code>\nand <code>xml</code> are transitive implicit aliases for each other, since they\nboth effectively override the <code>locations</code> attribute in\n<code>@ContextConfiguration</code>.",
+      "translation": "在 `<code>@GroovyOrXmlTestConfig</code>` 中，`<code>groovy</code>` 是 `<code>@MyTestConfig</code>` 中 `<code>groovyScripts</code>` 属性的显式覆盖；而 `<code>xml</code>` 则是 `<code>@ContextConfiguration</code>` 中 `<code>locations</code>` 属性的显式覆盖。此外，`<code>groovy</code>` 和 `<code>xml</code>` 彼此互为传递性隐式别名，因为它们都实际上覆盖了 `<code>@ContextConfiguration</code>` 中的 `<code>locations</code>` 属性。",
+      "count": 2
+    },
+    {
+      "source": "In <code>@XmlTestConfig</code>, <code>xmlFiles</code> is an explicit alias for\n<code>locations</code> in <code>@ContextConfiguration</code>. In other words,\n<code>xmlFiles</code> overrides the <code>locations</code> attribute in\n<code>@ContextConfiguration</code>.",
+      "translation": "在 `<code>@XmlTestConfig</code>` 中，`<code>xmlFiles</code>` 是 `<code>@ContextConfiguration</code>` 中 `<code>locations</code>` 的显式别名。换句话说，`<code>xmlFiles</code>` 会覆盖 `<code>@ContextConfiguration</code>` 中的 `<code>locations</code>` 属性。",
+      "count": 2
+    },
+    {
+      "source": "In <code>@MyTestConfig</code>, <code>value</code>, <code>groovyScripts</code>, and\n<code>xmlFiles</code> are all explicit meta-annotation attribute overrides for\nthe <code>locations</code> attribute in <code>@ContextConfiguration</code>. These\nthree attributes are therefore also implicit aliases for each other.",
+      "translation": "在 `<code>@MyTestConfig</code>` 中，`<code>value</code>`、`<code>groovyScripts</code>` 和 `<code>xmlFiles</code>` 均为 `<code>@ContextConfiguration</code>` 中 `<code>locations</code>` 属性的显式元注解属性覆盖。因此，这三个属性也互为隐式别名。",
+      "count": 2
+    },
+    {
+      "source": "Intended to be used instead of <a href=\"#attribute()\"><code>attribute()</code></a> when <a href=\"#annotation()\"><code>annotation()</code></a>\nis not declared — for example: <code>@AliasFor(\"value\")</code> instead of\n<code>@AliasFor(attribute = \"value\")</code>.",
+      "translation": "旨在在未声明<a href=\"#annotation()\"><code>annotation()</code></a>时替代使用<a href=\"#attribute()\"><code>attribute()</code></a>——例如：使用`@AliasFor(\"value\")`而非<code>@AliasFor(attribute = \"value\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "Like with any annotation in Java, the mere presence of <code>@AliasFor</code>\non its own will not enforce alias semantics. For alias semantics to be\nenforced, annotations must be <em>loaded</em> via <a href=\"MergedAnnotations.html\" title=\"interface in org.springframework.core.annotation\"><code>MergedAnnotations</code></a>.",
+      "translation": "与 Java 中的任何注解一样，单独存在 `<code>@AliasFor</code>` 并不能强制实施别名语义。若要强制实施别名语义，必须通过 <a href=\"MergedAnnotations.html\" title=\"interface in org.springframework.core.annotation\"><code>MergedAnnotations</code></a> <em>加载</em> 这些注解。",
+      "count": 2
+    },
+    {
+      "source": "In <code>@ContextConfiguration</code>, <code>value</code> and <code>locations</code>\nare explicit aliases for each other.",
+      "translation": "在 `<code>@ContextConfiguration</code>` 中，`<code>value</code>` 和 `<code>locations</code>` 是彼此的显式别名。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>Annotation</code></a>, implying that the aliased attribute is\ndeclared in the same annotation as <em>this</em> attribute.",
+      "translation": "默认为 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>Annotation</code></a>`，这意味着该别名属性与 <em>this</em> 属性声明在同一个注解中。",
+      "count": 2
+    },
+    {
+      "source": "Many annotations within the Spring Framework and across the Spring\necosystem rely on <code>@AliasFor</code> to configure attribute aliases. Consult\nthe Javadoc for individual annotations as well as reference documentation for\ndetails.",
+      "translation": "Spring 框架和整个 Spring 生态系统中的许多注解都依赖 `<code>@AliasFor</code>` 来配置属性别名。请查阅各个注解的 Javadoc 以及参考文档以获取详细信息。",
+      "count": 2
+    },
+    {
+      "source": "May be omitted if this attribute is an alias for an attribute in a\nmeta-annotation and both attributes have the same name.",
+      "translation": "如果此属性是元注解中属性的别名，且两个属性名称相同，则可以省略。",
+      "count": 2
+    },
+    {
+      "source": "The type of annotation in which the aliased <a href=\"#attribute()\"><code>attribute()</code></a> is declared.",
+      "translation": "声明别名化<a href=\"#attribute()\"><code>attribute()</code></a>的注解类型。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#attribute()\"><code>attribute()</code></a>.",
+      "translation": "`<a href=\"#attribute()\"><code>attribute()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Explicit aliases within an annotation</strong>:\n<ol>\n<li>Each attribute that makes up an aliased pair should be annotated with\n<code>@AliasFor</code>, and either <a href=\"#attribute()\"><code>attribute()</code></a> or <a href=\"#value()\"><code>value()</code></a> must\nreference the <em>other</em> attribute in the pair. Since Spring Framework\n5.2.1 it is technically possible to annotate only one of the attributes in an\naliased pair; however, it is recommended to annotate both attributes in an\naliased pair for better documentation as well as compatibility with previous\nversions of the Spring Framework.</li>\n<li>Aliased attributes must declare the same return type.</li>\n<li>Aliased attributes must declare a default value.</li>\n<li>Aliased attributes must declare the same default value.</li>\n<li><a href=\"#annotation()\"><code>annotation()</code></a> should not be declared.</li>\n</ol>",
+      "translation": "<strong>注解内的显式别名：</strong>\n<ol>\n<li>构成别名对的每个属性都应使用 <code>@AliasFor</code> 进行注解，并且 <a href=\"#attribute()\"><code>attribute()</code></a> 或 <a href=\"#value()\"><code>value()</code></a> 必须引用该对中的 <em>另一个</em> 属性。自 Spring Framework 5.2.1 起，技术上只需注解别名对中的一个属性即可；但为了提供更好的文档支持以及与早期 Spring Framework 版本的兼容性，建议同时注解别名对中的两个属性。</li>\n<li>别名的属性必须声明相同的返回类型。</li>\n<li>别名的属性必须声明默认值。</li>\n<li>别名的属性必须声明相同的默认值。</li>\n<li>不应声明 <a href=\"#annotation()\"><code>annotation()</code></a>。</li>\n</ol>",
+      "count": 2
+    },
+    {
+      "source": "<strong>Implicit aliases within an annotation</strong>:\n<ol>\n<li>Each attribute that belongs to a set of implicit aliases must be\nannotated with <code>@AliasFor</code>, and <a href=\"#attribute()\"><code>attribute()</code></a> must reference\nthe same attribute in the same meta-annotation (either directly or\ntransitively via other explicit meta-annotation attribute overrides\nwithin the annotation hierarchy).</li>\n<li>Aliased attributes must declare the same return type.</li>\n<li>Aliased attributes must declare a default value.</li>\n<li>Aliased attributes must declare the same default value.</li>\n<li><a href=\"#annotation()\"><code>annotation()</code></a> must reference an appropriate meta-annotation.</li>\n<li>The referenced meta-annotation must be <em>meta-present</em> on the\nannotation class that declares <code>@AliasFor</code>.</li>\n</ol>",
+      "translation": "<strong>注解内的隐式别名</strong>：\n<ol>\n<li>属于隐式别名组的每个属性都必须使用 <code>@AliasFor</code> 进行注解，并且 <a href=\"#attribute()\"><code>attribute()</code></a> 必须在同一个元注解中引用相同的属性（无论是直接引用，还是通过注解层次结构中的其他显式元注解属性覆盖间接引用）。</li>\n<li>别名的属性必须声明相同的返回类型。</li>\n<li>别名的属性必须声明默认值。</li>\n<li>别名的属性必须声明相同的默认值。</li>\n<li><a href=\"#annotation()\"><code>annotation()</code></a> 必须引用适当的元注解。</li>\n<li>被引用的元注解必须在声明 <code>@AliasFor</code> 的注解类上以 <em>meta-present</em> 形式存在。</li>\n</ol>",
+      "count": 2
+    },
+    {
+      "source": "<strong>Explicit alias for attribute in meta-annotation</strong>:\n<ol>\n<li>The attribute that is an alias for an attribute in a meta-annotation\nmust be annotated with <code>@AliasFor</code>, and <a href=\"#attribute()\"><code>attribute()</code></a> must\nreference the attribute in the meta-annotation (unless both attributes have\nthe same name).</li>\n<li>Aliased attributes must declare the same return type.</li>\n<li><a href=\"#annotation()\"><code>annotation()</code></a> must reference the meta-annotation.</li>\n<li>The referenced meta-annotation must be <em>meta-present</em> on the\nannotation class that declares <code>@AliasFor</code>.</li>\n</ol>",
+      "translation": "<strong>元注解中属性的显式别名</strong>：\n<ol>\n<li>作为元注解中属性别名的属性必须使用 <code>@AliasFor</code> 进行标注，且 <a href=\"#attribute()\"><code>attribute()</code></a> 必须引用元注解中的属性（除非两个属性名称相同）。</li>\n<li>别名属性的返回类型必须声明为相同。</li>\n<li><a href=\"#annotation()\"><code>annotation()</code></a> 必须引用该元注解。</li>\n<li>所引用的元注解必须在声明 <code>@AliasFor</code> 的注解类上处于 <em>meta-present</em> 状态。</li>\n</ol>",
+      "count": 2
+    },
+    {
+      "source": "<strong>Explicit alias for attribute in meta-annotation</strong>: if the\n<a href=\"#annotation()\"><code>annotation()</code></a> attribute of <code>@AliasFor</code> is set to a different\nannotation than the one that declares it, the <a href=\"#attribute()\"><code>attribute()</code></a> is\ninterpreted as an alias for an attribute in a meta-annotation (i.e., an\nexplicit meta-annotation attribute override). This enables fine-grained\ncontrol over exactly which attributes are overridden within an annotation\nhierarchy. In fact, with <code>@AliasFor</code> it is even possible to declare\nan alias for the <code>value</code> attribute of a meta-annotation.",
+      "translation": "<strong>元注解中属性的显式别名</strong>：如果 `<code>@AliasFor</code>` 的 `<a href=\"#annotation()\"><code>annotation()</code></a>` 属性被设置为声明它的不同注解，则 `<a href=\"#attribute()\"><code>attribute()</code></a>` 将被解释为元注解中属性的别名（即显式的元注解属性覆盖）。这使得能够精细控制注解层次结构中具体哪些属性被覆盖。事实上，使用 `<code>@AliasFor</code>` 甚至可以为元注解的 `<code>value</code>` 属性声明一个别名。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Explicit aliases within an annotation</strong>: within a single\nannotation, <code>@AliasFor</code> can be declared on a pair of attributes to\nsignal that they are interchangeable aliases for each other.",
+      "translation": "<strong>注解内的显式别名</strong>：在单个注解内，可以在一对属性上声明<code>@AliasFor</code>，以表明它们是彼此的互用别名。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Implicit aliases within an annotation</strong>: if one or\nmore attributes within an annotation are declared as attribute overrides\nfor the same meta-annotation attribute (either directly or transitively),\nthose attributes will be treated as a set of <em>implicit</em> aliases\nfor each other, resulting in behavior analogous to that for explicit\naliases within an annotation.",
+      "translation": "<strong>注解内的隐式别名</strong>：如果注解中的一个或多个属性被声明为同一元注解属性的属性覆盖（无论是直接还是间接），则这些属性将被视为彼此的<em>隐式</em>别名集合，其行为类似于注解内显式别名的行为。",
+      "count": 2
+    },
+    {
+      "source": "Usage Scenarios",
+      "translation": "使用场景",
+      "count": 2
+    },
+    {
+      "source": "Usage Requirements",
+      "translation": "使用要求",
+      "count": 2
+    },
+    {
+      "source": "Implementation Requirements",
+      "translation": "实现要求",
+      "count": 2
+    },
+    {
+      "source": "Example: Explicit Aliases within an Annotation",
+      "translation": "示例：注解内的显式别名",
+      "count": 2
+    },
+    {
+      "source": "Example: Explicit Alias for Attribute in Meta-annotation",
+      "translation": "元注解中属性的显式别名示例",
+      "count": 2
+    },
+    {
+      "source": "Example: Implicit Aliases within an Annotation",
+      "translation": "示例：注解内的隐式别名",
+      "count": 2
+    },
+    {
+      "source": "Example: Transitive Implicit Aliases within an Annotation",
+      "translation": "注解内的传递隐式别名",
+      "count": 2
+    },
+    {
+      "source": "Spring Annotations Supporting Attribute Aliases",
+      "translation": "支持属性别名注解的 Spring",
+      "count": 2
+    },
+    {
+      "source": "The name of the attribute that <em>this</em> attribute is an alias for.",
+      "translation": "`this` 属性是别名所指向的属性的名称。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

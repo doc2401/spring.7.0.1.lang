@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 18:53:27",
+  "updated_at": "2026-04-14 18:53:27",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 48,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6551724137931034,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "Create a new <code>DispatcherHandler</code> which needs to be configured with\nan <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> through <a href=\"#setApplicationContext(org.springframework.context.ApplicationContext)\"><code>setApplicationContext(ApplicationContext)</code></a>.",
+      "translation": "创建一个新的<code>DispatcherHandler</code>，需要通过<a href=\"#setApplicationContext(org.springframework.context.ApplicationContext)\"><code>setApplicationContext(ApplicationContext)</code></a>使用一个<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>对其进行配置。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <code>DispatcherHandler</code> for the given <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>.",
+      "translation": "为给定的<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>创建一个新的<code>DispatcherHandler</code>。",
+      "count": 3
+    },
+    {
+      "source": "<code>DispatcherHandler</code> is also designed to be a Spring bean itself and\nimplements <a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextAware</code></a> for access to the context it runs\nin. If <code>DispatcherHandler</code> is declared as a bean with the name\n\"webHandler\", it is discovered by\n<a href=\"../server/adapter/WebHttpHandlerBuilder.html#applicationContext(org.springframework.context.ApplicationContext)\"><code>WebHttpHandlerBuilder.applicationContext(ApplicationContext)</code></a> which\nputs together a processing chain together with <code>WebFilter</code>,\n<code>WebExceptionHandler</code> and others.",
+      "translation": "`DispatcherHandler` 本身也被设计为 Spring Bean，并实现了<a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextAware</code></a>接口以访问其运行所在的上下文。如果将 `DispatcherHandler` 声明为名为 \"webHandler\" 的 Bean，它将被<a href=\"../server/adapter/WebHttpHandlerBuilder.html#applicationContext(org.springframework.context.ApplicationContext)\"><code>WebHttpHandlerBuilder.applicationContext(ApplicationContext)</code></a>发现，该构建器会将其与 `WebFilter`、`WebExceptionHandler` 及其他组件组合成处理链。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> This method may return <code>null</code> if invoked\nprior to <a href=\"#setApplicationContext(org.springframework.context.ApplicationContext)\"><code>setApplicationContext(ApplicationContext)</code></a>.",
+      "translation": "<strong>注意：</strong> 如果在调用<a href=\"#setApplicationContext(org.springframework.context.ApplicationContext)\"><code>setApplicationContext(ApplicationContext)</code></a>之前调用此方法，它可能会返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "A <code>DispatcherHandler</code> bean declaration is included in\n<a href=\"config/EnableWebFlux.html\" title=\"annotation interface in org.springframework.web.reactive.config\"><code>@EnableWebFlux</code></a>\nconfiguration.",
+      "translation": "`DispatcherHandler` Bean 声明包含在 `<a href=\"config/EnableWebFlux.html\" title=\"annotation interface in org.springframework.web.reactive.config\"><code>@EnableWebFlux</code></a>` 配置中。",
+      "count": 2
+    },
+    {
+      "source": "<code>DispatcherHandler</code> discovers the delegate components it needs from\nSpring configuration. It detects the following in the application context:",
+      "translation": "<code>DispatcherHandler</code> 从 Spring 配置中查找所需的委托组件。它在应用程序上下文中检测到以下内容：",
+      "count": 2
+    },
+    {
+      "source": "Return all <a href=\"HandlerMapping.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerMapping</code></a> beans detected by type in the\n<a href=\"#setApplicationContext(org.springframework.context.ApplicationContext)\"><code>injected context</code></a> and also\n<a href=\"../../core/annotation/AnnotationAwareOrderComparator.html#sort(java.util.List)\"><code>sorted</code></a>.",
+      "translation": "返回在 `<a href=\"#setApplicationContext(org.springframework.context.ApplicationContext)\"><code>injected context</code></a>` 中通过类型检测到的所有 `<a href=\"HandlerMapping.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerMapping</code></a>` Bean，并对它们进行 `<a href=\"../../core/annotation/AnnotationAwareOrderComparator.html#sort(java.util.List)\"><code>sorted</code></a>` 排序。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../server/WebHandler.html#handle(org.springframework.web.server.ServerWebExchange)\">WebHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../server/WebHandler.html#handle(org.springframework.web.server.ServerWebExchange)\">WebHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../cors/reactive/PreFlightRequestHandler.html#handlePreFlight(org.springframework.web.server.ServerWebExchange)\">PreFlightRequestHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../cors/reactive/PreFlightRequestHandler.html#handlePreFlight(org.springframework.web.server.ServerWebExchange)\">PreFlightRequestHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Handle the web server exchange.",
+      "translation": "处理 Web 服务器交换。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../server/WebHandler.html#handle(org.springframework.web.server.ServerWebExchange)\">handle</a></code> in interface <code><a href=\"../server/WebHandler.html\" title=\"interface in org.springframework.web.server\">WebHandler</a></code>",
+      "translation": "`<code><a href=\"../server/WebHandler.html#handle(org.springframework.web.server.ServerWebExchange)\">handle</a></code>` 接口 `<code><a href=\"../server/WebHandler.html\" title=\"interface in org.springframework.web.server\">WebHandler</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../cors/reactive/PreFlightRequestHandler.html#handlePreFlight(org.springframework.web.server.ServerWebExchange)\">handlePreFlight</a></code> in interface <code><a href=\"../cors/reactive/PreFlightRequestHandler.html\" title=\"interface in org.springframework.web.cors.reactive\">PreFlightRequestHandler</a></code>",
+      "translation": "`<code><a href=\"../cors/reactive/PreFlightRequestHandler.html#handlePreFlight(org.springframework.web.server.ServerWebExchange)\">handlePreFlight</a></code>` 接口 `<code><a href=\"../cors/reactive/PreFlightRequestHandler.html\" title=\"interface in org.springframework.web.cors.reactive\">PreFlightRequestHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"HandlerMapping.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerMapping</code></a> -- map requests to handler objects",
+      "translation": "<a href=\"HandlerMapping.html\" title=\"org.springframework.web.reactive 中的接口\"><code>HandlerMapping</code></a> -- 将请求映射到处理器对象",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"HandlerAdapter.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerAdapter</code></a> -- for using any handler interface",
+      "translation": "<a href=\"HandlerAdapter.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerAdapter</code></a> -- 用于使用任何处理器接口",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"HandlerResultHandler.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerResultHandler</code></a> -- process handler return values",
+      "translation": "<a href=\"HandlerResultHandler.html\" title=\"interface in org.springframework.web.reactive\"><code>HandlerResultHandler</code></a> -- 处理处理器返回值",
+      "count": 2
+    },
+    {
+      "source": "<code>applicationContext</code> - the application context to find the handler beans in",
+      "translation": "<code>applicationContext</code> - 在其中查找处理器 Bean 的应用上下文",
+      "count": 2
+    },
+    {
+      "source": "immutable list with the configured mappings or <code>null</code>",
+      "translation": "包含配置的映射或<code>null</code>的不可变列表",
+      "count": 2
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback such\nas <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method. Invoked after <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>,\n<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> and\n<a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>, if applicable.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。在 <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>、<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> 和 <a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>（如果适用）之后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Handle a pre-flight request by finding and applying the CORS configuration\nthat matches the expected actual request. As a result of handling, the\nresponse should be updated with CORS headers or rejected with\n<a href=\"../../http/HttpStatus.html#FORBIDDEN\"><code>HttpStatus.FORBIDDEN</code></a>.",
+      "translation": "通过查找并应用与预期实际请求匹配的 CORS 配置来处理预检请求。作为处理的结果，响应应更新为包含 CORS 标头，或以 <a href=\"../../http/HttpStatus.html#FORBIDDEN\"><code>HttpStatus.FORBIDDEN</code></a> 拒绝。",
+      "count": 1
+    },
+    {
+      "source": "Handle a pre-flight request by finding and applying the CORS configuration\nthat matches the expected actual request.",
+      "translation": "通过查找并应用与预期实际请求匹配的 CORS 配置来处理预检请求。",
+      "count": 1
+    },
+    {
+      "source": "Set the ApplicationContext that this object runs in.",
+      "translation": "设置此对象运行的 ApplicationContext。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code> in interface <code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code>` 接口 `<code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>applicationContext</code> - the ApplicationContext object to be used by this object",
+      "translation": "<code>applicationContext</code> - 此对象将使用的 ApplicationContext 对象",
+      "count": 1
+    },
+    {
+      "source": "<code>exchange</code> - the current server exchange",
+      "translation": "<code>exchange</code> - 当前服务器交换",
+      "count": 1
+    },
+    {
+      "source": "<code>Mono&lt;Void&gt;</code> to indicate when request handling is complete",
+      "translation": "<code>Mono<Void></code> 表示请求处理完成时",
+      "count": 1
+    },
+    {
+      "source": "<code>exchange</code> - the exchange for the request",
+      "translation": "<code>exchange</code> - 请求的交换器",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Sebastien Deleuze, Juergen Hoeller",
+      "translation": "Rossen Stoyanchev，Sebastien Deleuze，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "a completion handle",
+      "translation": "完成句柄",
+      "count": 1
+    }
+  ]
+}

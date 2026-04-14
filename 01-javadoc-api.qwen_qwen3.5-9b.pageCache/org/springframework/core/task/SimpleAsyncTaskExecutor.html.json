@@ -1,0 +1,336 @@
+{
+  "created_at": "2026-04-14 13:24:06",
+  "updated_at": "2026-04-14 13:24:06",
+  "stats": {
+    "total_entries": 64,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 114,
+    "entries_with_hits": 64,
+    "entries_without_hits": 0,
+    "hit_rate": 1.78125,
+    "usage_percentage": 0.0063999999999999994
+  },
+  "items": [
+    {
+      "source": "<code>task</code> - the <code>Runnable</code> to execute (never <code>null</code>)",
+      "translation": "<code>task</code> - 要执行的 <code>Runnable</code>(永远不为 <code>null</code>)",
+      "count": 3
+    },
+    {
+      "source": "<b>NOTE:</b> Exception handling in <code>TaskDecorator</code> implementations\nis limited to plain <code>Runnable</code> execution via <code>execute</code> calls.\nIn case of <code>#submit</code> calls, the exposed <code>Runnable</code> will be a\n<code>FutureTask</code> which does not propagate any exceptions; you might\nhave to cast it and call <code>Future#get</code> to evaluate exceptions.",
+      "translation": "<b>注意：</b><code>TaskDecorator</code> 实现中的异常处理仅限于通过 <code>execute</code> 调用执行的普通 <code>Runnable</code>。对于 <code>#submit</code> 调用，暴露的 <code>Runnable</code> 将是一个 <code>FutureTask</code>，它不会传播任何异常；您可能需要将其转换为 <code>Future</code> 并调用 <code>get</code> 方法来评估异常。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>false</code>, not tracking active threads at all or\njust interrupting any remaining threads that still have not finished after\nthe specified <a href=\"#setTaskTerminationTimeout(long)\"><code>taskTerminationTimeout</code></a>.\nSwitch this to <code>true</code> for immediate interruption on close, either in\ncombination with a subsequent termination timeout or without any waiting\nat all, depending on whether a <code>taskTerminationTimeout</code> has been\nspecified as well.",
+      "translation": "默认值为 `<code>false</code>`，即完全不跟踪活动线程，或者在指定的<a href=\"#setTaskTerminationTimeout(long)\"><code>taskTerminationTimeout</code></a>之后仅中断尚未完成的剩余线程。将此值切换为 `<code>true</code>` 以实现关闭时的立即中断，具体是结合后续的终止超时使用，还是完全不加等待，取决于是否同时指定了<code>taskTerminationTimeout</code>。",
+      "count": 2
+    },
+    {
+      "source": "Supports a graceful shutdown through <a href=\"#setTaskTerminationTimeout(long)\"><code>setTaskTerminationTimeout(long)</code></a>,\nat the expense of task tracking overhead per execution thread at runtime.\nSupports limiting concurrent threads through <a href=\"#setConcurrencyLimit(int)\"><code>setConcurrencyLimit(int)</code></a>.\nBy default, the number of concurrent task executions is unlimited.",
+      "translation": "支持通过<a href=\"#setTaskTerminationTimeout(long)\"><code>setTaskTerminationTimeout(long)</code></a>实现优雅关闭，但会牺牲运行时每个执行线程的任务跟踪开销。支持通过<a href=\"#setConcurrencyLimit(int)\"><code>setConcurrencyLimit(int)</code></a>限制并发线程数。默认情况下，并发任务执行次数没有限制。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This implementation does not reuse threads!</b> Consider a\nthread-pooling TaskExecutor implementation instead, in particular for\nexecuting a large number of short-lived tasks. Alternatively, on JDK 21,\nconsider setting <a href=\"#setVirtualThreads(boolean)\"><code>setVirtualThreads(boolean)</code></a> to <code>true</code>.",
+      "translation": "<b>注意：此实现不会复用线程！</b> 对于执行大量短生命周期任务的情况，请考虑使用线程池的 TaskExecutor 实现。或者，在 JDK 21 上，请考虑将<a href=\"#setVirtualThreads(boolean)\"><code>setVirtualThreads(boolean)</code></a>设置为<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "Note that <code>SimpleAsyncTaskExecutor</code> does not participate in\na coordinated lifecycle stop but rather just awaits task termination\non <a href=\"#close()\"><code>close()</code></a>.",
+      "translation": "注意，<code>SimpleAsyncTaskExecutor</code> 不参与协调的生命周期停止，而只是在<a href=\"#close()\"><code>close()</code></a>处等待任务终止。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This executor does not participate in context-level lifecycle\nmanagement.</b> Tasks on handed-off execution threads cannot be centrally\nstopped and restarted; if such tight lifecycle management is necessary,\nconsider a common <code>ThreadPoolTaskExecutor</code> setup instead.",
+      "translation": "<b>注意：此执行器不参与上下文级别的生命周期管理。</b> 在移交的执行线程上运行的任务无法被集中停止和重启；如果确实需要如此紧密的生命周期管理，请考虑使用通用的 <code>ThreadPoolTaskExecutor</code> 配置。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>false</code>, indicating platform threads.\nSet this flag to <code>true</code> in order to create virtual threads instead.",
+      "translation": "默认值为 `<code>false</code>`，表示平台线程。将此标志设置为 `<code>true</code>` 以创建虚拟线程。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>false</code>, blocking the caller until the submission can\nbe accepted. Switch this to <code>true</code> for immediate rejection instead.",
+      "translation": "默认值为 `<code>false</code>`，会阻塞调用者直到提交被接受。将其切换为 `<code>true</code>` 以立即拒绝。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.1, this method comes with a default implementation that delegates\nto <a href=\"TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>.",
+      "translation": "自 6.1 版本起，此方法具有默认实现，该实现委托给<a href=\"TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This is the equivalent of a maximum pool size in a thread pool,\npreventing temporary overload of the thread management system.\nHowever, in contrast to a thread pool with a managed task queue,\nthis executor will block the submitter until the task can be\naccepted when the configured concurrency limit has been reached.\nIf you prefer queue-based task hand-offs without such blocking,\nconsider using a <code>ThreadPoolTaskExecutor</code> instead.",
+      "translation": "这是线程池中最大池大小的等效设置，可防止线程管理系统出现临时过载。然而，与具有托管任务队列的线程池相比，当达到配置的并发限制时，此执行器将阻塞提交者直到任务可以被接受。如果您更喜欢基于队列的任务交接且无需此类阻塞，请考虑使用 <code>ThreadPoolTaskExecutor</code> 替代。",
+      "count": 2
+    },
+    {
+      "source": "You may specify an inner ThreadFactory bean or also a ThreadFactory reference\nobtained from JNDI (on a Jakarta EE server) or some other lookup mechanism.",
+      "translation": "您可以指定一个内部 `ThreadFactory` Bean，或者从 JNDI（在 Jakarta EE 服务器上）或其他查找机制获取的 `ThreadFactory` 引用。",
+      "count": 2
+    },
+    {
+      "source": "Note that a concrete &gt;0 timeout specified here will lead to the\nwrapping of every submitted task into a task-tracking runnable which\ninvolves considerable overhead in case of a high number of tasks.\nHowever, for a modest level of submissions with longer-running\ntasks, this is feasible in order to arrive at a graceful shutdown.",
+      "translation": "请注意，在此处指定一个具体的 >0 超时时间会导致每个提交的任务都被包装成一个任务跟踪的可运行对象；在任务数量较多的情况下，这将产生相当大的开销。然而，对于提交量适中且任务运行时间较长的情况，这是可行的，以便实现优雅关闭。",
+      "count": 2
+    },
+    {
+      "source": "Executes urgent tasks (with 'immediate' timeout) directly,\nbypassing the concurrency throttle (if active). All other\ntasks are subject to throttling.",
+      "translation": "直接执行紧急任务（带有“立即”超时），绕过并发节流（如果已启用）。所有其他任务均受节流限制。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation creates a new Thread and starts it.",
+      "translation": "默认实现会创建一个新的线程并启动它。",
+      "count": 2
+    },
+    {
+      "source": "Specify a custom <a href=\"TaskDecorator.html\" title=\"interface in org.springframework.core.task\"><code>TaskDecorator</code></a> to be applied to any <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a>\nabout to be executed.",
+      "translation": "指定一个自定义的 <a href=\"TaskDecorator.html\" title=\"interface in org.springframework.core.task\"><code>TaskDecorator</code></a>，以便在即将执行的任何 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> 上应用。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"AsyncTaskExecutor.html#submit(java.lang.Runnable)\">AsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"AsyncTaskExecutor.html#submit(java.lang.Runnable)\">AsyncTaskExecutor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">AsyncTaskExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">AsyncTaskExecutor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "This close method tracks the termination of active threads if a concrete\n<a href=\"#setTaskTerminationTimeout(long)\"><code>task termination timeout</code></a> has been set.",
+      "translation": "此关闭方法会在设置具体的<a href=\"#setTaskTerminationTimeout(long)\"><code>任务终止超时</code></a>时，跟踪活动线程的终止。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether to cancel remaining tasks on close: that is, whether to\ninterrupt any active threads at the time of the <a href=\"#close()\"><code>close()</code></a> call.",
+      "translation": "指定在关闭时是否取消剩余任务：即在调用<a href=\"#close()\"><code>close()</code></a>时是否中断任何活动线程。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether to reject tasks when the concurrency limit has been reached,\nthrowing <a href=\"TaskRejectedException.html\" title=\"class in org.springframework.core.task\"><code>TaskRejectedException</code></a> on any further submission attempts.",
+      "translation": "指定在达到并发限制时是否拒绝任务，并在任何进一步的提交尝试中抛出<a href=\"TaskRejectedException.html\" title=\"class in org.springframework.core.task\"><code>TaskRejectedException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This close method tracks the termination of active threads if a concrete\n<a href=\"#setTaskTerminationTimeout(long)\"><code>task termination timeout</code></a> has been set.\nOtherwise, it is not necessary to close this executor.",
+      "translation": "此关闭方法会在已设置具体的<a href=\"#setTaskTerminationTimeout(long)\"><code>任务终止超时</code></a>时，跟踪活跃线程的终止。否则，无需关闭此执行器。",
+      "count": 2
+    },
+    {
+      "source": "Switch concurrency 'off': that is, don't allow any concurrent invocations.",
+      "translation": "切换并发为“关闭”：即不允许任何并发调用。",
+      "count": 2
+    },
+    {
+      "source": "Permit any number of concurrent invocations: that is, don't throttle concurrency.",
+      "translation": "允许任意数量的并发调用：即不对并发进行节流。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SimpleAsyncTaskExecutor with default thread name prefix.",
+      "translation": "创建一个新的 SimpleAsyncTaskExecutor，使用默认的线程名前缀。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SimpleAsyncTaskExecutor with the given thread name prefix.",
+      "translation": "使用给定的线程名前缀创建一个新的 SimpleAsyncTaskExecutor。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SimpleAsyncTaskExecutor with the given external thread factory.",
+      "translation": "使用给定的外部线程工厂创建一个新的 SimpleAsyncTaskExecutor。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given task, within a concurrency throttle\nif configured (through the superclass's settings).",
+      "translation": "在配置了（通过父类的设置）并发节流的情况下，执行给定的任务。",
+      "count": 2
+    },
+    {
+      "source": "Return the maximum number of parallel task executions allowed.",
+      "translation": "返回允许的最大并行任务执行数。",
+      "count": 2
+    },
+    {
+      "source": "Return the external factory to use for creating new Threads, if any.",
+      "translation": "返回用于创建新线程的外部工厂（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the concurrency throttle is currently active.",
+      "translation": "返回当前并发节流是否处于激活状态。",
+      "count": 2
+    },
+    {
+      "source": "Create a new Thread for the given task.",
+      "translation": "为给定任务创建一个新的线程。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this executor is still active, i.e. not closed yet,\nand therefore accepts further task submissions. Otherwise, it is\neither in the task termination phase or entirely shut down already.",
+      "translation": "返回此执行器是否仍然处于活动状态（即尚未关闭），因此可以接受进一步的任务提交。否则，它要么正处于任务终止阶段，要么已经完全关闭。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setVirtualThreads(boolean)\"><code>setVirtualThreads(boolean)</code></a></li>\n<li><a href=\"#setTaskTerminationTimeout(long)\"><code>setTaskTerminationTimeout(long)</code></a></li>\n<li><a href=\"#setConcurrencyLimit(int)\"><code>setConcurrencyLimit(int)</code></a></li>\n<li><a href=\"../../scheduling/concurrent/SimpleAsyncTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>SimpleAsyncTaskScheduler</code></a></li>\n<li><a href=\"../../scheduling/concurrent/ThreadPoolTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskExecutor</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.core.task.SimpleAsyncTaskExecutor\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setVirtualThreads(boolean)\"><code>setVirtualThreads(boolean)</code></a></li>\n<li><a href=\"#setTaskTerminationTimeout(long)\"><code>setTaskTerminationTimeout(long)</code></a></li>\n<li><a href=\"#setConcurrencyLimit(int)\"><code>setConcurrencyLimit(int)</code></a></li>\n<li><a href=\"../../scheduling/concurrent/SimpleAsyncTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>SimpleAsyncTaskScheduler</code></a></li>\n<li><a href=\"../../scheduling/concurrent/ThreadPoolTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskExecutor</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.core.task.SimpleAsyncTaskExecutor\">序列化形式</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code>startTimeout</code> - the time duration (milliseconds) within which the task is\nsupposed to start. This is intended as a hint to the executor, allowing for\npreferred handling of immediate tasks. Typical values are <a href=\"AsyncTaskExecutor.html#TIMEOUT_IMMEDIATE\"><code>AsyncTaskExecutor.TIMEOUT_IMMEDIATE</code></a>\nor <a href=\"AsyncTaskExecutor.html#TIMEOUT_INDEFINITE\"><code>AsyncTaskExecutor.TIMEOUT_INDEFINITE</code></a> (the default as used by <a href=\"TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a>).",
+      "translation": "<code>startTimeout</code> - 任务预期开始的时间间隔（毫秒）。这旨在作为执行器的提示，以便优先处理即时任务。典型值为 <a href=\"AsyncTaskExecutor.html#TIMEOUT_IMMEDIATE\"><code>AsyncTaskExecutor.TIMEOUT_IMMEDIATE</code></a> 或 <a href=\"AsyncTaskExecutor.html#TIMEOUT_INDEFINITE\"><code>AsyncTaskExecutor.TIMEOUT_INDEFINITE</code></a>（默认值，由 <a href=\"TaskExecutor.html#execute(java.lang.Runnable)\"><code>TaskExecutor.execute(Runnable)</code></a> 使用）。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../../util/ConcurrencyThrottleSupport.html#UNBOUNDED_CONCURRENCY\"><code>ConcurrencyThrottleSupport.UNBOUNDED_CONCURRENCY</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.core.task.SimpleAsyncTaskExecutor.UNBOUNDED_CONCURRENCY\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../../util/ConcurrencyThrottleSupport.html#UNBOUNDED_CONCURRENCY\"><code>ConcurrencyThrottleSupport.UNBOUNDED_CONCURRENCY</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.core.task.SimpleAsyncTaskExecutor.UNBOUNDED_CONCURRENCY\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../../util/ConcurrencyThrottleSupport.html#NO_CONCURRENCY\"><code>ConcurrencyThrottleSupport.NO_CONCURRENCY</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.core.task.SimpleAsyncTaskExecutor.NO_CONCURRENCY\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../../util/ConcurrencyThrottleSupport.html#NO_CONCURRENCY\"><code>ConcurrencyThrottleSupport.NO_CONCURRENCY</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.core.task.SimpleAsyncTaskExecutor.NO_CONCURRENCY\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"TaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code> in interface <code><a href=\"TaskExecutor.html\" title=\"interface in org.springframework.core.task\">TaskExecutor</a></code>",
+      "translation": "`<code><a href=\"TaskExecutor.html#execute(java.lang.Runnable)\">execute</a></code>` 在接口 `<code><a href=\"TaskExecutor.html\" title=\"interface in org.springframework.core.task\">TaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AsyncTaskExecutor.html#execute(java.lang.Runnable,long)\">execute</a></code> in interface <code><a href=\"AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"AsyncTaskExecutor.html#execute(java.lang.Runnable,long)\">execute</a></code>` 接口 `<code><a href=\"AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code> in interface <code><a href=\"AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"AsyncTaskExecutor.html#submit(java.lang.Runnable)\">submit</a></code>` 在接口 `<code><a href=\"AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code> in interface <code><a href=\"AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>",
+      "translation": "`<code><a href=\"AsyncTaskExecutor.html#submit(java.util.concurrent.Callable)\">submit</a></code>` 接口 `<code><a href=\"AsyncTaskExecutor.html\" title=\"interface in org.springframework.core.task\">AsyncTaskExecutor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>threadNamePrefix</code> - the prefix to use for the names of newly created threads",
+      "translation": "<code>threadNamePrefix</code> - 用于新创建线程名称的前缀",
+      "count": 2
+    },
+    {
+      "source": "<code>threadFactory</code> - the factory to use for creating new Threads",
+      "translation": "<code>threadFactory</code> - 用于创建新线程的工厂",
+      "count": 2
+    },
+    {
+      "source": "<code>timeout</code> - the timeout in milliseconds",
+      "translation": "<code>timeout</code> - 以毫秒为单位的超时时间",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the concurrency limit for this instance is active",
+      "translation": "<code>true</code> 表示此实例的并发限制已生效。",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the Runnable to execute",
+      "translation": "<code>task</code> - 要执行的 Runnable",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the Runnable to create a Thread for",
+      "translation": "<code>task</code> - 用于创建线程的 Runnable。",
+      "count": 2
+    },
+    {
+      "source": "a Future representing pending completion of the task",
+      "translation": "代表任务待完成状态的 Future",
+      "count": 2
+    },
+    {
+      "source": "the new Thread instance",
+      "translation": "新的 Thread 实例",
+      "count": 2
+    },
+    {
+      "source": "Note that such a decorator is not necessarily being applied to the\nuser-supplied <code>Runnable</code>/<code>Callable</code> but rather to the actual\nexecution callback (which may be a wrapper around the user-supplied task).",
+      "translation": "注意，此类装饰器并非必然应用于用户提供的 `<code>Runnable</code>`/`<code>Callable</code>`，而是应用于实际的执行回调（该回调可能是对用户所提供任务的包装）。",
+      "count": 1
+    },
+    {
+      "source": "The primary use case is to set some execution context around the task's\ninvocation, or to provide some monitoring/statistics for task execution.",
+      "translation": "主要用例是在任务调用周围设置一些执行上下文，或为任务执行提供一些监控/统计信息。",
+      "count": 1
+    },
+    {
+      "source": "Template method for the actual execution of a task.",
+      "translation": "任务实际执行的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this executor is still active, i.e.",
+      "translation": "返回该执行器是否仍然处于活动状态，即",
+      "count": 1
+    },
+    {
+      "source": "Set the maximum number of parallel task executions allowed.",
+      "translation": "设置允许的最大并行任务执行数。",
+      "count": 1
+    },
+    {
+      "source": "Specify a timeout (in milliseconds) for task termination when closing\nthis executor.",
+      "translation": "关闭此执行器时，指定任务终止的超时时间（以毫秒为单位）。",
+      "count": 1
+    },
+    {
+      "source": "Specify an external factory to use for creating new Threads,\ninstead of relying on the local properties of this executor.",
+      "translation": "指定一个外部工厂用于创建新线程，而不是依赖此执行器的本地属性。",
+      "count": 1
+    },
+    {
+      "source": "Switch this executor to virtual threads.",
+      "translation": "将执行器切换为虚拟线程。",
+      "count": 1
+    },
+    {
+      "source": "Submit a Runnable task for execution, receiving a Future representing that task.",
+      "translation": "提交一个可运行的任务以执行，并接收代表该任务的 Future。",
+      "count": 1
+    },
+    {
+      "source": "Submit a Callable task for execution, receiving a Future representing that task.",
+      "translation": "提交一个可调用任务以执行，并接收代表该任务的 Future。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html#execute(java.lang.Runnable)\" title=\"class or interface in java.util.concurrent\">execute</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\">Executor</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html#execute(java.lang.Runnable)\" title=\"class or interface in java.util.concurrent\">execute</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\">Executor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the <code>Callable</code> to execute (never <code>null</code>)",
+      "translation": "<code>task</code> - 要执行的 <code>Callable</code>(永远不为 <code>null</code>)",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

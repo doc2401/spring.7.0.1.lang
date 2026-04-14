@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-04-14 17:15:14",
+  "updated_at": "2026-04-14 17:15:14",
+  "stats": {
+    "total_entries": 8,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 16,
+    "entries_with_hits": 8,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0007999999999999999
+  },
+  "items": [
+    {
+      "source": "For most processing scenarios, simply use <a href=\"#perform(org.springframework.test.web.servlet.RequestBuilder)\"><code>perform(RequestBuilder)</code></a>,\nor if you need to configure the <code>DispatcherServlet</code>, provide a\n<a href=\"DispatcherServletCustomizer.html\" title=\"interface in org.springframework.test.web.servlet\"><code>DispatcherServletCustomizer</code></a> to the <code>MockMvcBuilder</code>.",
+      "translation": "对于大多数处理场景，只需使用 <a href=\"#perform(org.springframework.test.web.servlet.RequestBuilder)\"><code>perform(RequestBuilder)</code></a>；如果需要配置 <code>DispatcherServlet</code>，则向 <code>MockMvcBuilder</code> 提供一个 <a href=\"DispatcherServletCustomizer.html\" title=\"interface in org.springframework.test.web.servlet\"><code>DispatcherServletCustomizer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This is intended for use in custom request processing scenario where a\nrequest handling component happens to delegate to the <code>DispatcherServlet</code>\nat runtime and therefore needs to be injected with it.",
+      "translation": "此设计旨在用于自定义请求处理场景，其中请求处理组件在运行时委托给 `<code>DispatcherServlet`》，因此需要将其注入。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Main entry point for server-side Spring MVC test support.</strong>\n\n<h3 id=\"example-heading\">Example</h3>\n\n<pre class=\"code\">import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;\nimport static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;\nimport static org.springframework.test.web.servlet.setup.MockMvcBuilders.*;\n\n// ...\n\nWebApplicationContext wac = ...;\n\nMockMvc mockMvc = webAppContextSetup(wac).build();\n\nmockMvc.perform(get(\"/form\"))\n    .andExpectAll(\n        status().isOk(),\n        content().contentType(\"text/html\"),\n        forwardedUrl(\"/WEB-INF/layouts/main.jsp\")\n    );\n</pre>",
+      "translation": "<strong>服务端 Spring MVC 测试支持的主入口点。</strong>\n\n<h3 id=\"example-heading\">示例</h3>\n\n<pre class=\"code\">import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;\nimport static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;\nimport static org.springframework.test.web.servlet.setup.MockMvcBuilders.*;\n\n// ...\n\nWebApplicationContext wac = ...;\n\nMockMvc mockMvc = webAppContextSetup(wac).build();\n\nmockMvc.perform(get(\"/form\"))\n    .andExpectAll(\n        status().isOk(),\n        content().contentType(\"text/html\"),\n        forwardedUrl(\"/WEB-INF/layouts/main.jsp\")\n    );\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "Return the underlying <a href=\"../../../web/servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> instance that this\n<code>MockMvc</code> was initialized with.",
+      "translation": "返回此 `<code>MockMvc</code>` 初始化时使用的底层 <a href=\"../../../web/servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Perform a request and return a type that allows chaining further\nactions, such as asserting expectations, on the result.",
+      "translation": "执行请求并返回一个类型，该类型允许对结果进行链式操作，例如断言期望。",
+      "count": 2
+    },
+    {
+      "source": "<code>requestBuilder</code> - used to prepare the request to execute;\nsee static factory methods in\n<a href=\"request/MockMvcRequestBuilders.html\" title=\"class in org.springframework.test.web.servlet.request\"><code>MockMvcRequestBuilders</code></a>",
+      "translation": "<code>requestBuilder</code> - 用于准备要执行的请求；\n参见静态工厂方法，位于\n<a href=\"request/MockMvcRequestBuilders.html\" title=\"class in org.springframework.test.web.servlet.request\"><code>MockMvcRequestBuilders</code></a>",
+      "count": 2
+    },
+    {
+      "source": "an instance of <a href=\"ResultActions.html\" title=\"interface in org.springframework.test.web.servlet\"><code>ResultActions</code></a> (never <code>null</code>)",
+      "translation": "一个 `<a href=\"ResultActions.html\" title=\"interface in org.springframework.test.web.servlet\"><code>ResultActions</code></a>` 实例（永远不会为 `null`）",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev, Rob Winch, Sam Brannen",
+      "translation": "Rossen Stoyanchev, Rob Winch, Sam Brannen",
+      "count": 2
+    }
+  ]
+}

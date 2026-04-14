@@ -1,0 +1,376 @@
+{
+  "created_at": "2026-04-14 17:32:43",
+  "updated_at": "2026-04-14 17:32:43",
+  "stats": {
+    "total_entries": 72,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 128,
+    "entries_with_hits": 72,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7777777777777777,
+    "usage_percentage": 0.0072
+  },
+  "items": [
+    {
+      "source": "This can either be a traditional <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> or a\n<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> for reactive transaction management.",
+      "translation": "这可以是传统的 `<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>`，或者是用于响应式事务管理的 `<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>`。",
+      "count": 3
+    },
+    {
+      "source": "in favor of <a href=\"#determineTransactionManager(org.springframework.transaction.interceptor.TransactionAttribute,java.lang.Class)\"><code>determineTransactionManager(TransactionAttribute, Class)</code></a>",
+      "translation": "支持<a href=\"#determineTransactionManager(org.springframework.transaction.interceptor.TransactionAttribute,java.lang.Class)\"><code>determineTransactionManager(TransactionAttribute, Class)</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Determine the specific transaction manager to use for the given transaction.",
+      "translation": "确定给定事务要使用的具体事务管理器。",
+      "count": 3
+    },
+    {
+      "source": "<code>txAttr</code> - the TransactionAttribute (may be <code>null</code>)",
+      "translation": "<code>txAttr</code> - 事务属性（可能为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>joinpointIdentification</code> - the fully qualified method name\n(used for monitoring and logging purposes)",
+      "translation": "<code>joinpointIdentification</code> - 完全限定的方法名（用于监控和日志记录）",
+      "count": 3
+    },
+    {
+      "source": "<code>txInfo</code> - information about the current transaction",
+      "translation": "<code>txInfo</code> - 当前事务的信息",
+      "count": 3
+    },
+    {
+      "source": "Uses the <b>Strategy</b> design pattern. A <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> or\n<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> implementation will perform the actual transaction\nmanagement, and a <a href=\"TransactionAttributeSource.html\" title=\"interface in org.springframework.transaction.interceptor\"><code>TransactionAttributeSource</code></a> (for example, annotation-based) is used\nfor determining transaction definitions for a particular class or method.",
+      "translation": "使用<b>策略</b>设计模式。<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>或<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>的实现将执行实际的事务管理，而<a href=\"TransactionAttributeSource.html\" title=\"interface in org.springframework.transaction.interceptor\"><code>TransactionAttributeSource</code></a>（例如基于注解的）则用于确定特定类或方法的事务定义。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>null</code>, indicating the\nuse of <a href=\"DefaultTransactionAttribute.html#getDescriptor()\"><code>DefaultTransactionAttribute.getDescriptor()</code></a> instead,\nending up as <a href=\"../../util/ClassUtils.html#getQualifiedMethodName(java.lang.reflect.Method,java.lang.Class)\"><code>ClassUtils.getQualifiedMethodName(Method, Class)</code></a>.",
+      "translation": "默认实现返回 `<code>null</code>`，表示使用<a href=\"DefaultTransactionAttribute.html#getDescriptor()\"><code>DefaultTransactionAttribute.getDescriptor()</code></a>，最终变为<a href=\"../../util/ClassUtils.html#getQualifiedMethodName(java.lang.reflect.Method,java.lang.Class)\"><code>ClassUtils.getQualifiedMethodName(Method, Class)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This can either point to a traditional <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> or a\n<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> for reactive transaction management.",
+      "translation": "这可以指向传统的 <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>，或者用于响应式事务管理的 <a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If no transaction name has been specified in the <a href=\"TransactionAttribute.html\" title=\"interface in org.springframework.transaction.interceptor\"><code>TransactionAttribute</code></a>,\nthe exposed name will be the <code>fully-qualified class name + \".\" + method name</code>\n(by default).",
+      "translation": "如果未在<a href=\"TransactionAttribute.html\" title=\"interface in org.springframework.transaction.interceptor\"><code>TransactionAttribute</code></a>中指定事务名称，则暴露的名称默认为<code>完全限定类名 + \".\" + 方法名</code>。",
+      "count": 2
+    },
+    {
+      "source": "A transaction aspect is serializable if its <code>TransactionManager</code> and\n<code>TransactionAttributeSource</code> are serializable.",
+      "translation": "如果其 `<code>TransactionManager</code>` 和 `<code>TransactionAttributeSource</code>` 是可序列化的，则该事务切面是可序列化的。",
+      "count": 2
+    },
+    {
+      "source": "To find out about specific transaction characteristics, consider using\nTransactionSynchronizationManager's <code>isSynchronizationActive()</code>\nand/or <code>isActualTransactionActive()</code> methods.",
+      "translation": "要查询特定事务特性，请考虑使用 `TransactionSynchronizationManager` 的 `<code>isSynchronizationActive()</code>` 和/或 `<code>isActualTransactionActive()</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "This exposes the locally declared transaction boundary with its declared name\nand characteristics, as managed by the aspect. Ar runtime, the local boundary may\nparticipate in an outer transaction: If you need transaction metadata from such\nan outer transaction (the actual resource transaction) instead, consider using\n<a href=\"../support/TransactionSynchronizationManager.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionSynchronizationManager</code></a>.",
+      "translation": "这暴露了由切面管理的、具有其声明名称和特性的本地声明事务边界。在运行时，该本地边界可能会参与一个外部事务：如果您需要来自此类外部事务（即实际资源事务）的事务元数据，请考虑使用 <a href=\"../support/TransactionSynchronizationManager.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionSynchronizationManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "A TransactionInfo will be returned even if no transaction was created.\nThe <code>TransactionInfo.hasTransaction()</code> method can be used to query this.",
+      "translation": "即使未创建事务，也会返回一个 `TransactionInfo`。可以使用 `<code>TransactionInfo.hasTransaction()</code>` 方法来查询此信息。",
+      "count": 2
+    },
+    {
+      "source": "The default transaction manager will be used if a <em>qualifier</em>\nhas not been declared for a given transaction or if an explicit name for the\ndefault transaction manager bean has not been specified.",
+      "translation": "如果未为给定事务声明<em>限定符</em>，或者未指定默认事务管理器 Bean 的显式名称，则将使用默认的事务管理器。",
+      "count": 2
+    },
+    {
+      "source": "This enables the underlying Spring transaction infrastructure to be used easily\nto implement an aspect for any aspect system.",
+      "translation": "这使得底层 Spring 事务基础设施能够被轻松利用，以针对任何面向切面系统实现一个切面。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses are responsible for calling methods in this class in the correct order.",
+      "translation": "子类负责按正确顺序调用此类中的方法。",
+      "count": 2
+    },
+    {
+      "source": "Note: Method names are always applied to the target class,\nno matter if defined in an interface or the class itself.",
+      "translation": "注意：无论方法是在接口中定义还是在类本身中定义，方法名始终应用于目标类。",
+      "count": 2
+    },
+    {
+      "source": "Internally, a NameMatchTransactionAttributeSource will be\ncreated from the given properties.",
+      "translation": "内部将根据给定的属性创建一个 NameMatchTransactionAttributeSource。",
+      "count": 2
+    },
+    {
+      "source": "Allows callers to perform custom TransactionAttribute lookups through\nthe TransactionAttributeSource.",
+      "translation": "允许调用者通过 TransactionAttributeSource 执行自定义的 TransactionAttribute 查找。",
+      "count": 2
+    },
+    {
+      "source": "Call this in all cases: exception or normal return!",
+      "translation": "在所有情况下都调用此方法：异常或正常返回！",
+      "count": 2
+    },
+    {
+      "source": "General delegate for around-advice-based subclasses, delegating to several other template\nmethods on this class. Able to handle <a href=\"../support/CallbackPreferringPlatformTransactionManager.html\" title=\"interface in org.springframework.transaction.support\"><code>CallbackPreferringPlatformTransactionManager</code></a>\nas well as regular <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> implementations and\n<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> implementations for reactive return types.",
+      "translation": "用于基于环绕建议的子类的通用委托，将调用此类上的几个其他模板方法。能够处理 <a href=\"../support/CallbackPreferringPlatformTransactionManager.html\" title=\"interface in org.springframework.transaction.support\"><code>CallbackPreferringPlatformTransactionManager</code></a> 以及常规的 <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> 实现，以及用于反应式返回类型的 <a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> 实现。",
+      "count": 2
+    },
+    {
+      "source": "Return the BeanFactory to use for retrieving <code>TransactionManager</code> beans.",
+      "translation": "返回用于检索 `<code>TransactionManager`</code> 的 BeanFactory。",
+      "count": 2
+    },
+    {
+      "source": "Set the BeanFactory to use for retrieving <code>TransactionManager</code> beans.",
+      "translation": "设置用于检索 `<code>TransactionManager</code>` 豆子的 BeanFactory。",
+      "count": 2
+    },
+    {
+      "source": "Check that required properties were set.",
+      "translation": "检查是否已设置必需属性。",
+      "count": 2
+    },
+    {
+      "source": "Clear the transaction manager cache.",
+      "translation": "清除事务管理器缓存。",
+      "count": 2
+    },
+    {
+      "source": "Return the transaction attribute source.",
+      "translation": "返回事务属性源。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the default transaction manager bean.",
+      "translation": "返回默认事务管理器 Bean 的名称。",
+      "count": 2
+    },
+    {
+      "source": "Prepare a TransactionInfo for the given attribute and status object.",
+      "translation": "为给定的属性对象和状态对象准备一个 TransactionInfo。",
+      "count": 2
+    },
+    {
+      "source": "Set multiple transaction attribute sources which are used to find transaction\nattributes. Will build a CompositeTransactionAttributeSource for the given sources.",
+      "translation": "设置多个用于查找事务属性的事务属性源。将为给定的源构建一个 `CompositeTransactionAttributeSource`。",
+      "count": 2
+    },
+    {
+      "source": "Set the transaction attribute source which is used to find transaction\nattributes. If specifying a String property value, a PropertyEditor\nwill create a MethodMapTransactionAttributeSource from the value.",
+      "translation": "设置用于查找事务属性的事务属性源。如果指定字符串属性值，PropertyEditor 将从该值创建一个 MethodMapTransactionAttributeSource。",
+      "count": 2
+    },
+    {
+      "source": "Execute after successful completion of call, but not after an exception was handled.\nDo nothing if we didn't create a transaction.",
+      "translation": "在调用成功完成后执行，但在异常被处理后不执行。如果未创建事务，则不执行任何操作。",
+      "count": 2
+    },
+    {
+      "source": "Handle a throwable, completing the transaction.\nWe may commit or roll back, depending on the configuration.",
+      "translation": "处理异常，完成事务。\n根据配置，我们可能会提交或回滚。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../NoTransactionException.html\" title=\"class in org.springframework.transaction\">NoTransactionException</a></code> - if the transaction info cannot be found,\nbecause the method was invoked outside an AOP invocation context",
+      "translation": "<code><a href=\"../NoTransactionException.html\" title=\"class in org.springframework.transaction\">NoTransactionException</a></code> - 如果找不到事务信息，因为该方法是在 AOP 调用上下文之外调用的。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\">Throwable</a></code> - propagated from the target invocation",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"java.lang 中的类或接口\">Throwable</a></code> - 从目标调用传播而来",
+      "count": 2
+    },
+    {
+      "source": "<code>txInfo</code> - information about the current transaction (may be <code>null</code>)",
+      "translation": "<code>txInfo</code> - 当前事务的信息（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the TransactionInfo bound to this thread, or <code>null</code> if none",
+      "translation": "与当前线程绑定的 TransactionInfo，或者如果没有则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - the Method being invoked",
+      "translation": "<code>method</code> - 被调用的方法",
+      "count": 2
+    },
+    {
+      "source": "<code>targetClass</code> - the target class that we're invoking the method on",
+      "translation": "<code>targetClass</code> - 我们要在其上调用方法的目标类",
+      "count": 2
+    },
+    {
+      "source": "<code>invocation</code> - the callback to use for proceeding with the target invocation",
+      "translation": "<code>invocation</code> - 用于继续目标调用的回调",
+      "count": 2
+    },
+    {
+      "source": "<code>txAttr</code> - the current transaction attribute",
+      "translation": "<code>txAttr</code> - 当前的事务属性",
+      "count": 2
+    },
+    {
+      "source": "<code>targetClass</code> - the target class that the attribute has been declared on",
+      "translation": "<code>targetClass</code> - 属性声明所在的类",
+      "count": 2
+    },
+    {
+      "source": "<code>targetClass</code> - the class that the method is being invoked on",
+      "translation": "<code>targetClass</code> - 该方法被调用的类",
+      "count": 2
+    },
+    {
+      "source": "a TransactionInfo object, whether a transaction was created.\nThe <code>hasTransaction()</code> method on TransactionInfo can be used to\ntell if there was a transaction created.",
+      "translation": "一个 `TransactionInfo` 对象，指示是否创建了事务。`TransactionInfo` 上的 `<code>hasTransaction()</code>` 方法可用于判断是否创建了事务。",
+      "count": 2
+    },
+    {
+      "source": "<code>status</code> - the TransactionStatus for the current transaction",
+      "translation": "<code>status</code> - 当前事务的 TransactionStatus",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - throwable encountered",
+      "translation": "<code>ex</code> - 遇到异常",
+      "count": 2
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller, Stéphane Nicoll, Sam Brannen, Mark Paluch, Sebastien Deleuze, Enric Sala",
+      "translation": "Rod Johnson，Juergen Hoeller，Stéphane Nicoll，Sam Brannen，Mark Paluch，Sebastien Deleuze，Enric Sala",
+      "count": 2
+    },
+    {
+      "source": "the return value of the method, if any",
+      "translation": "该方法的返回值（如果有）",
+      "count": 2
+    },
+    {
+      "source": "a String representation identifying this method",
+      "translation": "一个标识此方法的字符串表示形式",
+      "count": 2
+    },
+    {
+      "source": "the prepared TransactionInfo object",
+      "translation": "已准备的 TransactionInfo 对象",
+      "count": 2
+    },
+    {
+      "source": "Return the default transaction manager, or <code>null</code> if unknown.",
+      "translation": "返回默认事务管理器，如果未知则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Specify the <em>default</em> transaction manager to use to drive transactions.",
+      "translation": "指定用于驱动事务的<em>默认</em>事务管理器。",
+      "count": 1
+    },
+    {
+      "source": "Simple callback interface for proceeding with the target invocation.",
+      "translation": "用于继续目标调用的简单回调接口。",
+      "count": 1
+    },
+    {
+      "source": "Opaque object used to hold transaction information.",
+      "translation": "不透明对象，用于保存事务信息。",
+      "count": 1
+    },
+    {
+      "source": "Reset the TransactionInfo ThreadLocal.",
+      "translation": "重置 TransactionInfo ThreadLocal。",
+      "count": 1
+    },
+    {
+      "source": "Execute after successful completion of call, but not after an exception was handled.",
+      "translation": "在调用成功完成后执行，但在异常被处理后不执行。",
+      "count": 1
+    },
+    {
+      "source": "Handle a throwable, completing the transaction.",
+      "translation": "处理异常，完成事务。",
+      "count": 1
+    },
+    {
+      "source": "Create a transaction if necessary based on the given TransactionAttribute.",
+      "translation": "如有必要，根据给定的 TransactionAttribute 创建事务。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses can use this to return the current TransactionInfo.",
+      "translation": "子类可以使用此方法返回当前的 TransactionInfo。",
+      "count": 1
+    },
+    {
+      "source": "Return the transaction status of the current method invocation.",
+      "translation": "返回当前方法调用的事务状态。",
+      "count": 1
+    },
+    {
+      "source": "General delegate for around-advice-based subclasses, delegating to several other template\nmethods on this class.",
+      "translation": "用于基于环绕建议的子类的通用委托，将调用此类上的几个其他模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Convenience method to return a String representation of this Method\nfor use in logging.",
+      "translation": "用于日志中此 Method 的 String 表示形式的便捷方法。",
+      "count": 1
+    },
+    {
+      "source": "Set properties with method names as keys and transaction attribute\ndescriptors (parsed via TransactionAttributeEditor) as values:\nfor example, key = \"myMethod\", value = \"PROPAGATION_REQUIRED,readOnly\".",
+      "translation": "使用以方法名为键、事务属性描述符（通过 `TransactionAttributeEditor` 解析）为值的属性：例如，键 = \"myMethod\"，值 = \"PROPAGATION_REQUIRED,readOnly\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the transaction attribute source which is used to find transaction\nattributes.",
+      "translation": "设置用于查找事务属性的事务属性源。",
+      "count": 1
+    },
+    {
+      "source": "Set multiple transaction attribute sources which are used to find transaction\nattributes.",
+      "translation": "设置多个事务属性源，用于查找事务属性。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the default transaction manager bean.",
+      "translation": "指定默认事务管理器 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - the method we're interested in",
+      "translation": "<code>method</code> - 我们要关注的方法",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

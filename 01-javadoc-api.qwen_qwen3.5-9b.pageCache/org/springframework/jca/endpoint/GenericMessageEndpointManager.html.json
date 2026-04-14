@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-04-14 14:29:33",
+  "updated_at": "2026-04-14 14:29:33",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 71,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6511627906976745,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "The <a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> will call <i>only</i> this variant of the\n<code>stop</code> method; i.e. <a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> will not be called for\n<code>SmartLifecycle</code> implementations unless explicitly delegated to within\nthe implementation of this method.",
+      "translation": "`<a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>` 将仅调用此版本的 `<code>stop</code>` 方法；即，除非在该方法的实现中显式委托，否则不会为 `<code>SmartLifecycle</code>` 实现调用 `<a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Transactional execution is a responsibility of the concrete message endpoint,\nas built by the specified MessageEndpointFactory. <a href=\"GenericMessageEndpointFactory.html\" title=\"class in org.springframework.jca.endpoint\"><code>GenericMessageEndpointFactory</code></a>\nsupports XA transaction participation through its \"transactionManager\" property,\ntypically with a Spring <a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>\nor a plain <code>TransactionManager</code> implementation specified there.",
+      "translation": "事务执行是具体消息端点的责任，由指定的 MessageEndpointFactory 构建。`GenericMessageEndpointFactory` 通过其 \"transactionManager\" 属性支持 XA 事务参与，通常指定为 Spring `<a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>` 或普通的 `<code>TransactionManager</code>` 实现。",
+      "count": 2
+    },
+    {
+      "source": "The provided callback is used by the <a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> to support\nan ordered, and potentially concurrent, shutdown of all components having a\ncommon shutdown order value. The callback <b>must</b> be executed after\nthe <code>SmartLifecycle</code> component does indeed stop.",
+      "translation": "提供的回调由<a href=\"../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>使用，以支持具有公共关闭顺序值的所有组件的有序且可能并发的关闭。该回调<b>必须</b>在<code>SmartLifecycle</code> 组件确实停止后执行。",
+      "count": 2
+    },
+    {
+      "source": "In this example, Spring's own <a href=\"GenericMessageEndpointFactory.html\" title=\"class in org.springframework.jca.endpoint\"><code>GenericMessageEndpointFactory</code></a> is used\nto point to a standard message listener object that happens to be supported\nby the specified target ResourceAdapter: in this case, a JMS\n<code>MessageListener</code> object as supported by the ActiveMQ\nmessage broker, defined as a Spring bean:",
+      "translation": "在本示例中，Spring 自身的<a href=\"GenericMessageEndpointFactory.html\" title=\"class in org.springframework.jca.endpoint\"><code>GenericMessageEndpointFactory</code></a>被用来指向一个标准的消息监听器对象，该对象恰好由指定的目标资源适配器支持：在此情况下，是一个 JMS<code>MessageListener</code> 对象，由 ActiveMQ 消息代理支持，并定义为 Spring Bean：",
+      "count": 2
+    },
+    {
+      "source": "The asynchronous execution strategy can be customized through the\n\"workManager\" property on the ResourceAdapterFactoryBean as shown above,\nwhere <code>&lt;bean class=\"...\"/&gt;</code> should be replaced with configuration for\nany JCA-compliant <code>WorkManager</code>.",
+      "translation": "异步执行策略可以通过上面所示的 `ResourceAdapterFactoryBean` 上的 \"workManager\" 属性进行自定义，其中 `<code>&lt;bean class=\"...\"/&gt;</code>` 应替换为任何符合 JCA 标准的 `<code>WorkManager</code>` 的配置。",
+      "count": 2
+    },
+    {
+      "source": "A MessageEndpointFactory instance may be shared across multiple\nendpoints (i.e. multiple GenericMessageEndpointManager instances),\nwith different <a href=\"#setActivationSpec(jakarta.resource.spi.ActivationSpec)\"><code>ActivationSpec</code></a> objects applied.",
+      "translation": "`MessageEndpointFactory` 实例可以在多个端点（即多个 `GenericMessageEndpointManager` 实例）之间共享，并应用不同的 `<a href=\"#setActivationSpec(jakarta.resource.spi.ActivationSpec)\"><code>ActivationSpec</code></a>` 对象。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\". Turn this flag off to defer the endpoint\nactivation until an explicit <a href=\"#start()\"><code>start()</code></a> call.",
+      "translation": "默认为\"true\"。关闭此标志可将端点激活推迟到显式调用<a href=\"#start()\"><code>start()</code></a>时进行。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> and immediately\ntriggers the given callback in the calling thread. Note that there is no\nsynchronization between the two, so custom implementations may at least\nwant to put the same steps within their common lifecycle monitor (if any).",
+      "translation": "默认实现会委托给 <a href=\"../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>，并立即在调用线程中触发给定的回调。请注意，这两者之间没有同步机制，因此自定义实现至少希望将相同的步骤放在其公共生命周期监视器（如果有）内。",
+      "count": 2
+    },
+    {
+      "source": "For a different target resource, the configuration would simply point to a\ndifferent ResourceAdapter and a different ActivationSpec object (which are\nboth specific to the resource provider), and possibly a different message\nlistener (for example, a CCI <code>MessageListener</code> for a\nresource adapter which is based on the JCA Common Client Interface).",
+      "translation": "对于不同的目标资源，配置只需指向不同的 ResourceAdapter 和一个不同的 ActivationSpec 对象（两者均特定于资源提供者），以及可能是一个不同的消息监听器（例如，基于 JCA 通用客户端接口 (CCI) 的资源适配器对应的 CCI <code>MessageListener</code>）。",
+      "count": 2
+    },
+    {
+      "source": "This class is completely generic in that it may work with any\nResourceAdapter, any MessageEndpointFactory, and any ActivationSpec.\nIt can be configured in standard bean style, for example through\nSpring's XML bean definition format, as follows:",
+      "translation": "该类是完全通用的，因为它可以与任何 ResourceAdapter、任何 MessageEndpointFactory 以及任何 ActivationSpec 配合使用。它可以通过标准的 Bean 风格进行配置，例如通过 Spring 的 XML Bean 定义格式，如下所示：",
+      "count": 2
+    },
+    {
+      "source": "The target ResourceAdapter may be configured as a local Spring bean as well\n(the typical case) or obtained from JNDI. For the example above, a local\nResourceAdapter bean could be defined as follows (matching the \"resourceAdapter\"\nbean reference above):",
+      "translation": "目标 ResourceAdapter 可以配置为本地 Spring Bean（典型情况），也可以从 JNDI 获取。对于上述示例，可以按如下方式定义一个本地的 ResourceAdapter Bean（与上面的\"resourceAdapter\"Bean 引用相匹配）：",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, check out your resource provider's ActivationSpec object,\nwhich should support local transactions through a provider-specific config flag,\nfor example, ActiveMQActivationSpec's \"useRAManagedTransaction\" bean property.",
+      "translation": "或者，查看您的资源提供者的 `ActivationSpec` 对象，该对象应通过特定于提供者的配置标志支持本地事务，例如 `ActiveMQActivationSpec` 的 `\"useRAManagedTransaction\"` 属性。",
+      "count": 2
+    },
+    {
+      "source": "Note that this ActivationSpec instance should not be shared\nacross multiple ResourceAdapter instances.",
+      "translation": "注意，此 ActivationSpec 实例不应在多个 ResourceAdapter 实例之间共享。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">SmartLifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">SmartLifecycle</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Specify the phase in which this endpoint manager should be started\nand stopped. The startup order proceeds from lowest to highest, and\nthe shutdown order is the reverse of that. By default, this value is\n<code>Integer.MAX_VALUE</code> meaning that this endpoint manager starts\nas late as possible and stops as soon as possible.",
+      "translation": "指定此端点管理器应启动和停止的相位。启动顺序从低到高进行，而关闭顺序则相反。默认情况下，该值为 `<code>Integer.MAX_VALUE</code>`，表示此端点管理器尽可能晚地启动并尽可能早地停止。",
+      "count": 2
+    },
+    {
+      "source": "Prepares the message endpoint, and automatically activates it\nif the \"autoStartup\" flag is set to \"true\".",
+      "translation": "准备消息端点，如果“autoStartup”标志设置为“true”，则自动激活它。",
+      "count": 2
+    },
+    {
+      "source": "Deactivates the message endpoint, preparing it for shutdown.",
+      "translation": "停用消息端点，为其关闭做准备。",
+      "count": 2
+    },
+    {
+      "source": "Return the JCA ActivationSpec to use for activating the endpoint.",
+      "translation": "返回用于激活端点的 JCA ActivationSpec。",
+      "count": 2
+    },
+    {
+      "source": "Return the JCA MessageEndpointFactory to activate.",
+      "translation": "返回 JCA MessageEndpointFactory 以激活它。",
+      "count": 2
+    },
+    {
+      "source": "Return the phase in which this endpoint manager will be started and stopped.",
+      "translation": "返回该端点管理器将启动和停止的相位。",
+      "count": 2
+    },
+    {
+      "source": "Return the JCA ResourceAdapter to manage endpoints for.",
+      "translation": "返回用于管理端点的 JCA ResourceAdapter。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the configured message endpoint is currently active.",
+      "translation": "返回配置的消息端点当前是否处于活动状态。",
+      "count": 2
+    },
+    {
+      "source": "Set the JCA ResourceAdapter to manage endpoints for.",
+      "translation": "将 JCA ResourceAdapter 设置为管理以下端点。",
+      "count": 2
+    },
+    {
+      "source": "Activates the configured message endpoint.",
+      "translation": "激活配置的消息端点。",
+      "count": 2
+    },
+    {
+      "source": "Deactivates the configured message endpoint.",
+      "translation": "停用已配置的消息端点。",
+      "count": 2
+    },
+    {
+      "source": "Return the value for the 'autoStartup' property.        If \"true\", this\nendpoint manager will start upon a ContextRefreshedEvent.",
+      "translation": "返回“autoStartup”属性的值。如果为\"true\"，此端点管理器将在 ContextRefreshedEvent 事件发生时启动。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#isAutoStartup()\">isAutoStartup</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#isAutoStartup()\">isAutoStartup</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "Return the value for the 'autoStartup' property.",
+      "translation": "返回“autoStartup”属性的值。",
+      "count": 1
+    },
+    {
+      "source": "Set the JCA ActivationSpec to use for activating the endpoint.",
+      "translation": "设置用于激活端点的 JCA ActivationSpec。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to auto-start the endpoint activation after this endpoint\nmanager has been initialized and the context has been refreshed.",
+      "translation": "设置是否在此端点管理器初始化且上下文刷新后自动启动端点激活。",
+      "count": 1
+    },
+    {
+      "source": "Set the JCA MessageEndpointFactory to activate, pointing to a\nMessageListener object that the endpoints will delegate to.",
+      "translation": "将 JCA MessageEndpointFactory 设置为激活状态，指向端点将委托的 MessageListener 对象。",
+      "count": 1
+    },
+    {
+      "source": "Specify the phase in which this endpoint manager should be started\nand stopped.",
+      "translation": "指定应启动和停止此端点管理器的阶段。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that a Lifecycle component must stop if it is currently running.",
+      "translation": "指示生命周期组件如果当前正在运行，则必须停止。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    }
+  ]
+}

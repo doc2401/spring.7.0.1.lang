@@ -1,0 +1,491 @@
+{
+  "created_at": "2026-04-14 11:36:12",
+  "updated_at": "2026-04-14 11:36:12",
+  "stats": {
+    "total_entries": 95,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 160,
+    "entries_with_hits": 95,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6842105263157894,
+    "usage_percentage": 0.0095
+  },
+  "items": [
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 13
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean to look for",
+      "translation": "<code>beanName</code> - 要查找的 Bean 的名称",
+      "count": 3
+    },
+    {
+      "source": "This class mainly serves as base class for\n<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> implementations,\nfactoring out the common management of singleton bean instances. Note that\nthe <a href=\"../config/ConfigurableBeanFactory.html\" title=\"interface in org.springframework.beans.factory.config\"><code>ConfigurableBeanFactory</code></a>\ninterface extends the <a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\"><code>SingletonBeanRegistry</code></a> interface.",
+      "translation": "该类主要作为 `<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>` 实现的基类，提取了单例 Bean 实例的通用管理功能。请注意，`<a href=\"../config/ConfigurableBeanFactory.html\" title=\"interface in org.springframework.beans.factory.config\"><code>ConfigurableBeanFactory</code></a>` 接口扩展了 `<a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\"><code>SingletonBeanRegistry</code></a>` 接口。",
+      "count": 2
+    },
+    {
+      "source": "Note that this class assumes neither a bean definition concept\nnor a specific creation process for bean instances, in contrast to\n<a href=\"AbstractBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>AbstractBeanFactory</code></a> and <a href=\"DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>\n(which inherit from it). Can alternatively also be used as a nested\nhelper to delegate to.",
+      "translation": "注意，该类既不假设存在 bean 定义概念，也不针对 bean 实例的创建过程有特定要求，这与 <a href=\"AbstractBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>AbstractBeanFactory</code></a> 和 <a href=\"DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>（继承自该类）形成对比。此外，该类也可用作嵌套辅助类进行委托调用。",
+      "count": 2
+    },
+    {
+      "source": "Also supports registration of\n<a href=\"../DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a> instances,\n(which might or might not correspond to registered singletons),\nto be destroyed on shutdown of the registry. Dependencies between\nbeans can be registered to enforce an appropriate shutdown order.",
+      "translation": "还支持注册 `<a href=\"../DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a>` 实例（这些实例可能对应已注册的单例，也可能不对应），以便在注册表关闭时销毁它们。可以注册 bean 之间的依赖关系以强制实施适当的关闭顺序。",
+      "count": 2
+    },
+    {
+      "source": "The main purpose of this method is to access manually registered singletons\n(see <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>). Can also be used to access a singleton\ndefined by a bean definition that already been created, in a raw fashion.",
+      "translation": "此方法的主要目的是访问手动注册的单例（参见 <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>）。也可用于以原始方式访问已通过 bean 定义创建的单例。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation preserves any given exception in this registry's\ncollection of suppressed exceptions, up to a limit of 100 exceptions, adding\nthem as related causes to an eventual top-level <a href=\"../BeanCreationException.html\" title=\"class in org.springframework.beans.factory\"><code>BeanCreationException</code></a>.",
+      "translation": "默认实现会将此注册表中给定的任何异常保留在受抑制异常集合中，最多限制为 100 个异常，并将它们作为相关原因添加到最终的顶级<a href=\"../BeanCreationException.html\" title=\"class in org.springframework.beans.factory\"><code>BeanCreationException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The main purpose of this method is to check manually registered singletons\n(see <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>). Can also be used to check whether a\nsingleton defined by a bean definition has already been created.",
+      "translation": "此方法的主要目的是检查手动注册的单例（参见 <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>）。也可用于检查由 Bean 定义定义的单例是否已经创建。",
+      "count": 2
+    },
+    {
+      "source": "The main purpose of this method is to check manually registered singletons\n(see <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>). Can also be used to check which singletons\ndefined by a bean definition have already been created.",
+      "translation": "此方法的主要目的是检查手动注册的单例（参见 <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>）。也可用于检查由 Bean 定义定义的哪些单例已经创建。",
+      "count": 2
+    },
+    {
+      "source": "The main purpose of this method is to check manually registered singletons\n(see <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>). Can also be used to count the number of\nsingletons defined by a bean definition that have already been created.",
+      "translation": "此方法的主要目的是检查手动注册的单例（参见 <a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\"><code>SingletonBeanRegistry.registerSingleton(String, Object)</code></a>）。也可用于统计由 Bean 定义定义的、且已创建的单例数量。",
+      "count": 2
+    },
+    {
+      "source": "To be called for early exposure purposes, for example, to be able to\nresolve circular references.",
+      "translation": "用于早期暴露，例如，以解决循环引用。",
+      "count": 2
+    },
+    {
+      "source": "Checks already instantiated singletons and also allows for an early\nreference to a currently created singleton (resolving a circular reference).",
+      "translation": "检查已实例化的单例，并允许对当前正在创建的单例进行早期引用（解决循环引用）。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation register the singleton as currently in creation.",
+      "translation": "默认实现将单例注册为当前正在创建的状态。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation marks the singleton as not in creation anymore.",
+      "translation": "默认实现会将单例标记为不再处于创建状态。",
+      "count": 2
+    },
+    {
+      "source": "Disposable beans usually correspond to registered singletons,\nmatching the bean name but potentially being a different instance\n(for example, a DisposableBean adapter for a singleton that does not\nnaturally implement Spring's DisposableBean interface).",
+      "translation": "可丢弃的 Bean 通常对应于注册的单例，其名称与单例匹配，但可能是不同的实例（例如，为未自然实现 Spring 的 `DisposableBean` 接口的单例提供的 `DisposableBean` 适配器）。",
+      "count": 2
+    },
+    {
+      "source": "Also registers the containing bean as dependent on the contained bean\nin terms of destruction order.",
+      "translation": "同时也注册包含的 Bean，使其在销毁顺序上依赖于被包含的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#addSingletonCallback(java.lang.String,java.util.function.Consumer)\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#addSingletonCallback(java.lang.String,java.util.function.Consumer)\">SingletonBeanRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#getSingleton(java.lang.String)\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#getSingleton(java.lang.String)\">SingletonBeanRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#containsSingleton(java.lang.String)\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#containsSingleton(java.lang.String)\">SingletonBeanRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#getSingletonNames()\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonNames()\">SingletonBeanRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#getSingletonCount()\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonCount()\">SingletonBeanRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#getSingletonMutex()\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonMutex()\">SingletonBeanRegistry</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Add a callback to be triggered when the specified singleton becomes available\nin the bean registry.",
+      "translation": "向 Bean 注册表添加一个回调，以便在指定的单例可用时触发。",
+      "count": 2
+    },
+    {
+      "source": "Clear all cached singleton instances in this registry.",
+      "translation": "清除此注册表中所有缓存的单例实例。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the given bean.",
+      "translation": "销毁给定的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Return the names of all beans that the specified bean depends on, if any.",
+      "translation": "返回指定 Bean 所依赖的所有 Bean 的名称（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return the names of all beans which depend on the specified bean, if any.",
+      "translation": "返回所有依赖于指定 Bean 的 Bean 的名称（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return the (raw) singleton object registered under the given name.",
+      "translation": "返回在给定名称下注册的原始单例对象。",
+      "count": 2
+    },
+    {
+      "source": "Return the (raw) singleton object registered under the given name,\ncreating and registering a new one if none registered yet.",
+      "translation": "返回在给定名称下注册的（原始）单例对象，如果尚未注册则创建并注册一个新的。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether a dependent bean has been registered for the given name.",
+      "translation": "确定是否已为给定名称注册了依赖 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the specified dependent bean has been registered as\ndependent on the given bean or on any of its transitive dependencies.",
+      "translation": "确定指定的依赖 Bean 是否已注册为给定 Bean 或其任何传递性依赖的依赖项。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the specified singleton bean is currently in creation\n(within the entire factory).",
+      "translation": "返回指定的单例 Bean 是否当前正在创建中（在整个工厂内）。",
+      "count": 2
+    },
+    {
+      "source": "Register a dependent bean for the given bean,\nto be destroyed before the given bean is destroyed.",
+      "translation": "为给定的 Bean 注册一个依赖的 Bean，以便在给定 Bean 销毁之前进行销毁。",
+      "count": 2
+    },
+    {
+      "source": "Remove the bean with the given name from the singleton registry, either on\nregular destruction or on cleanup after early exposure when creation failed.",
+      "translation": "从单例注册表中移除给定名称的 Bean，无论是在常规销毁时，还是在早期暴露后创建失败进行清理时。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the given bean. Must destroy beans that depend on the given\nbean before the bean itself. Should not throw any exceptions.",
+      "translation": "销毁给定的 Bean。在销毁该 Bean 本身之前，必须先销毁依赖于给定 Bean 的 Bean。不应抛出任何异常。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#addSingletonCallback(java.lang.String,java.util.function.Consumer)\">addSingletonCallback</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#addSingletonCallback(java.lang.String,java.util.function.Consumer)\">addSingletonCallback</a></code>` 接口中的 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#getSingleton(java.lang.String)\">getSingleton</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#getSingleton(java.lang.String)\">getSingleton</a></code>` 接口 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#containsSingleton(java.lang.String)\">containsSingleton</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#containsSingleton(java.lang.String)\">containsSingleton</a></code>` 接口 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonNames()\">getSingletonNames</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonNames()\">getSingletonNames</a></code>` 接口 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonCount()\">getSingletonCount</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonCount()\">getSingletonCount</a></code>` 接口 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonMutex()\">getSingletonMutex</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#getSingletonMutex()\">getSingletonMutex</a></code>` 接口 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>singletonFactory</code> - the factory for the singleton object",
+      "translation": "<code>singletonFactory</code> - 单例对象的工厂",
+      "count": 2
+    },
+    {
+      "source": "the registered singleton object, or <code>null</code> if none found",
+      "translation": "已注册的单例对象，或者如果未找到则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>allowEarlyReference</code> - whether early references should be created or not",
+      "translation": "<code>allowEarlyReference</code> - 是否创建早期引用",
+      "count": 2
+    },
+    {
+      "source": "<code>singletonFactory</code> - the ObjectFactory to lazily create the singleton\nwith, if necessary",
+      "translation": "<code>singletonFactory</code> - 用于在必要时懒式创建单例的 ObjectFactory",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - the Exception to register",
+      "translation": "<code>ex</code> - 要注册的异常",
+      "count": 2
+    },
+    {
+      "source": "<code>beanName</code> - the name of the singleton about to be created",
+      "translation": "<code>beanName</code> - 即将创建的单例的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>beanName</code> - the name of the singleton that has been created",
+      "translation": "<code>beanName</code> - 已创建的单例的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>containedBeanName</code> - the name of the contained (inner) bean",
+      "translation": "<code>containedBeanName</code> - 包含（内部）bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>containingBeanName</code> - the name of the containing (outer) bean",
+      "translation": "<code>containingBeanName</code> - 包含（外部）bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>dependentBeanName</code> - the name of the dependent bean",
+      "translation": "<code>dependentBeanName</code> - 依赖 Bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean to check",
+      "translation": "<code>beanName</code> - 要检查的 Bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "the registered singleton object",
+      "translation": "已注册的单例对象",
+      "count": 2
+    },
+    {
+      "source": "By default, all threads are forced to hold a full lock through <code>null</code>.\n<a href=\"DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a> overrides this to specifically handle its\nthreads during the pre-instantiation phase: <code>true</code> for the main thread,\n<code>false</code> for managed background threads, and configuration-dependent\nbehavior for unmanaged threads.",
+      "translation": "默认情况下，所有线程都通过 `<code>null</code>` 被强制持有完整锁。`<a href=\"DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>` 对此进行了覆盖，以专门处理其预实例化阶段的线程：主线程为 `<code>true</code>`，托管后台线程为 `<code>false</code>`，未托管线程的行为则取决于配置。",
+      "count": 1
+    },
+    {
+      "source": "To check whether a bean factory contains a bean definition with a given name,\nuse ListableBeanFactory's <code>containsBeanDefinition</code>. Calling both\n<code>containsBeanDefinition</code> and <code>containsSingleton</code> answers\nwhether a specific bean factory contains a local bean instance with the given name.",
+      "translation": "要检查 Bean 工厂是否包含具有给定名称的 Bean 定义，请使用 `ListableBeanFactory` 的 `<code>containsBeanDefinition</code>`。同时调用 `<code>containsBeanDefinition</code>` 和 `<code>containsSingleton</code>` 可以回答特定的 Bean 工厂是否包含具有给定名称的本地 Bean 实例。",
+      "count": 1
+    },
+    {
+      "source": "The given instance is supposed to be fully initialized; the registry\nwill not perform any initialization callbacks (in particular, it won't\ncall InitializingBean's <code>afterPropertiesSet</code> method).\nThe given instance will not receive any destruction callbacks\n(like DisposableBean's <code>destroy</code> method) either.",
+      "translation": "给定的实例应已完全初始化；注册表将不会执行任何初始化回调（特别是，它不会调用 InitializingBean 的<code>afterPropertiesSet</code>方法）。给定的实例也不会接收任何销毁回调（例如 DisposableBean 的<code>destroy</code>方法）。",
+      "count": 1
+    },
+    {
+      "source": "When running within a full BeanFactory: <b>Register a bean definition\ninstead of an existing instance if your bean is supposed to receive\ninitialization and/or destruction callbacks.</b>",
+      "translation": "在完整的 BeanFactory 中运行时：<b>如果您的 Bean 需要接收初始化和/或销毁回调，请注册 Bean 定义而不是现有实例。</b>",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> This lookup method is not aware of FactoryBean prefixes or aliases.\nYou need to resolve the canonical bean name first before obtaining the singleton instance.",
+      "translation": "<b>注意：</b>此查找方法不了解 FactoryBean 前缀或别名。在获取单例实例之前，您必须先解析规范化的 Bean 名称。",
+      "count": 1
+    },
+    {
+      "source": "Only checks already instantiated singletons; does not return <code>true</code>\nfor singleton bean definitions which have not been instantiated yet.",
+      "translation": "仅检查已实例化的单例；对于尚未实例化的单例 Bean 定义，不会返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Use BeanFactory's <code>containsBean</code> for general checks whether the\nfactory knows about a bean with a given name (whether manually registered singleton\ninstance or created by bean definition), also checking ancestor factories.",
+      "translation": "使用 `BeanFactory` 的 `<code>containsBean</code>` 进行通用检查，以确定工厂是否知道具有给定名称的 Bean（无论是手动注册的单例实例还是由 Bean 定义创建的），同时也检查祖先工厂。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> This lookup method is not aware of FactoryBean prefixes or aliases.\nYou need to resolve the canonical bean name first before checking the singleton status.",
+      "translation": "<b>注意：</b>此查找方法不了解 FactoryBean 前缀或别名。\n在检查单例状态之前，您需要先解析规范化的 Bean 名称。",
+      "count": 1
+    },
+    {
+      "source": "Typically invoked during registry configuration, but can also be used\nfor runtime registration of singletons. As a consequence, a registry\nimplementation should synchronize singleton access; it will have to do\nthis anyway if it supports a BeanFactory's lazy initialization of singletons.",
+      "translation": "通常在注册表配置期间调用，但也可用于单例的运行时注册。因此，注册表实现应同步对单例的访问；如果它支持 BeanFactory 的单例延迟初始化，无论如何都必须执行此操作。",
+      "count": 1
+    },
+    {
+      "source": "To be called for exposure of freshly registered/created singletons.",
+      "translation": "用于调用新注册或创建的单例对象的暴露。",
+      "count": 1
+    },
+    {
+      "source": "Only checks already instantiated singletons; does not return an Object\nfor singleton bean definitions which have not been instantiated yet.",
+      "translation": "仅检查已实例化的单例；对于尚未实例化的单例 Bean 定义，不会返回一个 Object。",
+      "count": 1
+    },
+    {
+      "source": "Only checks already instantiated singletons; does not return names\nfor singleton bean definitions which have not been instantiated yet.",
+      "translation": "仅检查已实例化的单例；不会返回尚未实例化的单例 Bean 定义的名称。",
+      "count": 1
+    },
+    {
+      "source": "Only checks already instantiated singletons; does not count\nsingleton bean definitions which have not been instantiated yet.",
+      "translation": "仅检查已实例化的单例；不会统计尚未被实例化的单例 Bean 定义。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\">SingletonBeanRegistry</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\">SingletonBeanRegistry</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Destroy the given bean. Delegates to <code>destroyBean</code>\nif a corresponding disposable bean instance is found.",
+      "translation": "销毁给定的 Bean。如果找到对应的可丢弃 Bean 实例，则委托给<code>destroyBean</code>。",
+      "count": 1
+    },
+    {
+      "source": "Add the given singleton object to the singleton registry.",
+      "translation": "将给定的单例对象添加到单例注册表中。",
+      "count": 1
+    },
+    {
+      "source": "Add the given singleton factory for building the specified singleton\nif necessary.",
+      "translation": "如有必要，添加用于构建指定单例的给定单例工厂。",
+      "count": 1
+    },
+    {
+      "source": "Callback after singleton creation.",
+      "translation": "单例创建后的回调。",
+      "count": 1
+    },
+    {
+      "source": "Callback before singleton creation.",
+      "translation": "在创建单例之前调用的回调。",
+      "count": 1
+    },
+    {
+      "source": "Check if this registry contains a singleton instance with the given name.",
+      "translation": "检查此注册表是否包含具有给定名称的单例实例。",
+      "count": 1
+    },
+    {
+      "source": "Return the number of singleton beans registered in this registry.",
+      "translation": "返回此注册表中注册的单例 Bean 的数量。",
+      "count": 1
+    },
+    {
+      "source": "Return the names of singleton beans registered in this registry.",
+      "translation": "返回在此注册表中注册的单例 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the current thread is allowed to hold the singleton lock.",
+      "translation": "确定当前线程是否允许持有单例锁。",
+      "count": 1
+    },
+    {
+      "source": "Register an exception that happened to get suppressed during the creation of a\nsingleton bean instance, for example, a temporary circular reference resolution problem.",
+      "translation": "注册在创建单例 Bean 实例期间被抑制的异常，例如临时循环引用解析问题。",
+      "count": 1
+    },
+    {
+      "source": "Register a containment relationship between two beans,\nfor example, between an inner bean and its containing outer bean.",
+      "translation": "在两个 Bean 之间注册包含关系，例如在内层 Bean 与其包含的外层 Bean 之间。",
+      "count": 1
+    },
+    {
+      "source": "Add the given bean to the list of disposable beans in this registry.",
+      "translation": "将此 Bean 添加到该注册表的可处置 Bean 列表中。",
+      "count": 1
+    },
+    {
+      "source": "Register the given existing object as singleton in the bean registry,\nunder the given bean name.",
+      "translation": "将给定的现有对象注册为单例，在指定的 Bean 名称下。",
+      "count": 1
+    },
+    {
+      "source": "Return the singleton mutex used by this registry (for external collaborators).",
+      "translation": "返回此注册表使用的单例互斥锁（供外部协作方使用）。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\">registerSingleton</a></code> in interface <code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>",
+      "translation": "`<code><a href=\"../config/SingletonBeanRegistry.html#registerSingleton(java.lang.String,java.lang.Object)\">registerSingleton</a></code>` 接口中的 `<code><a href=\"../config/SingletonBeanRegistry.html\" title=\"interface in org.springframework.beans.factory.config\">SingletonBeanRegistry</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if the current thread is explicitly allowed to hold the\nlock but also accepts lenient fallback behavior, <code>false</code> if it is\nexplicitly not allowed to hold the lock and therefore forced to use lenient\nfallback behavior, or <code>null</code> if there is no specific indication\n(traditional behavior: forced to always hold a full lock)",
+      "translation": "如果当前线程被明确允许持有锁但也接受宽松的回退行为，则为<code>true</code>；如果被明确禁止持有锁并因此被迫使用宽松的回退行为，则为<code>false</code>；如果没有具体指示（传统行为：始终被迫持有完整锁），则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>singletonObject</code> - the existing singleton object",
+      "translation": "<code>singletonObject</code> - 现有的单例对象",
+      "count": 1
+    },
+    {
+      "source": "<code>singletonObject</code> - the singleton object",
+      "translation": "<code>singletonObject</code> - 单例对象",
+      "count": 1
+    },
+    {
+      "source": "<code>singletonConsumer</code> - a callback for reacting to the availability of the freshly\nregistered/created singleton instance (intended for follow-up steps before the bean is\nactively used by other callers, not for modifying the given singleton instance itself)",
+      "translation": "<code>singletonConsumer</code> - 用于响应新注册/创建的单例实例可用性的回调（旨在用于在 Bean 被其他调用者主动使用之前执行的后续步骤，而非用于修改给定的单例实例本身）。",
+      "count": 1
+    },
+    {
+      "source": "the list of names as a String array (never <code>null</code>)",
+      "translation": "作为 String 数组的名称列表（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance",
+      "translation": "<code>bean</code> - 该 Bean 实例",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance to destroy",
+      "translation": "<code>bean</code> - 要销毁的 Bean 实例",
+      "count": 1
+    },
+    {
+      "source": "the mutex object (never <code>null</code>)",
+      "translation": "互斥对象（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "if this bean factory contains a singleton instance with the given name",
+      "translation": "如果该 BeanFactory 包含一个具有给定名称的单例实例",
+      "count": 1
+    },
+    {
+      "source": "the number of singleton beans",
+      "translation": "单例 Bean 的数量",
+      "count": 1
+    },
+    {
+      "source": "the array of dependent bean names, or an empty array if none",
+      "translation": "依赖的 Bean 名称数组，如果没有则为空数组。",
+      "count": 1
+    },
+    {
+      "source": "the array of names of beans which the bean depends on,\nor an empty array if none",
+      "translation": "bean 所依赖的 Bean 名称数组，若无依赖则为空数组。",
+      "count": 1
+    }
+  ]
+}

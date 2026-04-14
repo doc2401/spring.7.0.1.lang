@@ -1,0 +1,291 @@
+{
+  "created_at": "2026-04-14 12:30:29",
+  "updated_at": "2026-04-14 12:30:29",
+  "stats": {
+    "total_entries": 55,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 101,
+    "entries_with_hits": 55,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8363636363636364,
+    "usage_percentage": 0.0055000000000000005
+  },
+  "items": [
+    {
+      "source": "For an actual concurrent startup, a bootstrap <code>Executor</code> needs to be\nset for the application context, typically through a \"bootstrapExecutor\" bean.",
+      "translation": "对于实际的并发启动，需要为应用程序上下文设置一个引导 `Executor`，通常通过“bootstrapExecutor”bean 来完成。",
+      "count": 3
+    },
+    {
+      "source": "In case of no specific timeout configured, the default timeout per\nshutdown phase will apply: 10000 milliseconds (10 seconds) as of 6.2.",
+      "translation": "如果未配置特定的超时时间，将应用每个关闭阶段的默认超时时间：自 6.2 版本起为 10000 毫秒（10 秒）。",
+      "count": 3
+    },
+    {
+      "source": "<code>phasesWithTimeouts</code> - a map of phase values (matching\n<a href=\"../SmartLifecycle.html#getPhase()\"><code>SmartLifecycle.getPhase()</code></a>) and corresponding timeout values\n(in milliseconds)",
+      "translation": "`phasesWithTimeouts` - 一个映射，将阶段值（匹配 <a href=\"../SmartLifecycle.html#getPhase()\"><code>SmartLifecycle.getPhase()</code></a>）与相应的超时值（以毫秒为单位）对应起来。",
+      "count": 3
+    },
+    {
+      "source": "<code>phase</code> - the phase value (matching <a href=\"../SmartLifecycle.html#getPhase()\"><code>SmartLifecycle.getPhase()</code></a>)",
+      "translation": "<code>phase</code> - 阶段值（与<a href=\"../SmartLifecycle.html#getPhase()\"><code>SmartLifecycle.getPhase()</code></a>匹配）",
+      "count": 3
+    },
+    {
+      "source": "<code>timeout</code> - the corresponding timeout value (in milliseconds)",
+      "translation": "<code>timeout</code> - 对应的超时值（以毫秒为单位）",
+      "count": 3
+    },
+    {
+      "source": "Provides interaction with <a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> and <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> beans in\ngroups for specific phases, on startup/shutdown as well as for explicit start/stop\ninteractions on a <a href=\"../ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a>.",
+      "translation": "提供针对特定阶段，在启动/关闭期间以及针对 `<a href=\"../ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a>` 的显式启动/停止交互时，与 `<a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a>` 和 `<a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>` 组中的 Bean 进行交互。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.2, this processor can be configured with custom timeouts for specific\nshutdown phases, applied to <a href=\"../SmartLifecycle.html#stop(java.lang.Runnable)\"><code>SmartLifecycle.stop(Runnable)</code></a> implementations.\nAs of 6.2.6, there is also support for the concurrent startup of specific phases\nwith individual timeouts, triggering the <a href=\"../Lifecycle.html#start()\"><code>Lifecycle.start()</code></a> callbacks\nof all associated beans asynchronously and then waiting for all of them to return,\nas an alternative to the default sequential startup of beans without a timeout.",
+      "translation": "自 6.2 版本起，该处理器可针对特定关闭阶段配置自定义超时时间，并应用于 `<a href=\"../SmartLifecycle.html#stop(java.lang.Runnable)\"><code>SmartLifecycle.stop(Runnable)</code></a>` 实现。自 6.2.6 版本起，还支持为特定阶段并发启动并设置独立超时时间，从而异步触发所有关联 Bean 的 `<a href=\"../Lifecycle.html#start()\"><code>Lifecycle.start()</code></a>` 回调，然后等待它们全部返回；这提供了默认情况下无超时的顺序 Bean 启动的替代方案。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation checks for the <a href=\"../Phased.html\" title=\"interface in org.springframework.context\"><code>Phased</code></a> interface, using\na default of 0 otherwise. Can be overridden to apply other/further policies.",
+      "translation": "默认实现会检查 `<a href=\"../Phased.html\" title=\"interface in org.springframework.context\"><code>Phased</code></a>` 接口，否则使用默认值 0。可以重写它以应用其他或进一步的策略。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.1, this also includes support for JVM checkpoint/restore (Project CRaC)\nwhen the <code>org.crac:crac</code> dependency is on the classpath. All running beans\nwill get stopped and restarted according to the CRaC checkpoint/restore callbacks.",
+      "translation": "自 6.1 版本起，当类路径中包含 `<code>org.crac:crac</code>` 依赖时，还支持 JVM 检查点/恢复（Project CRaC）。所有正在运行的 Bean 将根据 CRaC 检查点/恢复回调进行停止和重启。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note: By default, the startup for every phase will be sequential without\na timeout. Calling this setter with timeouts for the given phases switches to a\nmode where the beans in these phases will be started concurrently, cancelling\nthe startup if the corresponding timeout is not met for any of these phases.</b>",
+      "translation": "<b>注意：默认情况下，每个阶段的启动将按顺序进行且无超时限制。调用此 Setter 为给定阶段设置超时时间后，将切换到这些阶段的 Bean 并发启动的模式；如果任何阶段未能在对应超时时间内完成启动，则取消整个启动过程。</b>",
+      "count": 2
+    },
+    {
+      "source": "<b>Note: By default, the startup for every phase will be sequential without\na timeout. Calling this setter with a timeout for the given phase switches to a\nmode where the beans in this phase will be started concurrently, cancelling\nthe startup if the corresponding timeout is not met for this phase.</b>",
+      "translation": "<b>注意：默认情况下，每个阶段的启动将按顺序进行且无超时。为给定阶段调用此 setter 并设置超时时间后，将切换到并发模式启动该阶段的 Bean；如果该阶段未在规定时间内完成启动，则取消启动。</b>",
+      "count": 2
+    },
+    {
+      "source": "The default value is 10000 milliseconds (10 seconds) as of 6.2.",
+      "translation": "默认值为 6.2 版本中的 10000 毫秒（10 秒）。",
+      "count": 2
+    },
+    {
+      "source": "Start all registered beans that implement <a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> and are <i>not</i>\nalready running. Any bean that implements <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> will be\nstarted within its 'phase', and all phases will be ordered from lowest to\nhighest value. All beans that do not implement <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> will be\nstarted in the default phase 0. A bean declared as a dependency of another bean\nwill be started before the dependent bean regardless of the declared phase.",
+      "translation": "启动所有已注册的实现了 <a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> 且尚未运行的 Bean。任何实现了 <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> 的 Bean 都将在其指定的“阶段”内启动，并且所有阶段将按从低到高的值顺序排列。所有未实现 <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> 的 Bean 都将在默认阶段 0 中启动。如果一个 Bean 被声明为另一个 Bean 的依赖项，则无论其声明的阶段如何，该依赖 Bean 都将被先启动。",
+      "count": 2
+    },
+    {
+      "source": "Stop all registered beans that implement <a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> and <i>are</i>\ncurrently running. Any bean that implements <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> will be\nstopped within its 'phase', and all phases will be ordered from highest to\nlowest value. All beans that do not implement <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> will be\nstopped in the default phase 0. A bean declared as dependent on another bean\nwill be stopped before the dependency bean regardless of the declared phase.",
+      "translation": "停止所有已注册的、实现了<a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a>且当前正在运行的 Bean。任何实现了<a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>的 Bean 都将在其指定的“阶段”内停止，并且所有阶段将按从最高值到最低值的顺序排列。所有未实现<a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>的 Bean 都将在默认阶段 0 中停止。声明为依赖于另一个 Bean 的 Bean 将无论其声明的阶段如何，都在依赖 Bean 之前停止。",
+      "count": 2
+    },
+    {
+      "source": "Start all registered beans that implement <a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> and are <i>not</i>\nalready running.",
+      "translation": "启动所有已注册的实现了<a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a>接口且尚未运行的<i>bean</i>。",
+      "count": 2
+    },
+    {
+      "source": "Stop all registered beans that implement <a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> and <i>are</i>\ncurrently running.",
+      "translation": "停止所有已注册的、实现<a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a>且当前正在运行的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LifecycleProcessor.html#onRefresh()\">LifecycleProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LifecycleProcessor.html#onRefresh()\">LifecycleProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LifecycleProcessor.html#onRestart()\">LifecycleProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LifecycleProcessor.html#onRestart()\">LifecycleProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LifecycleProcessor.html#onPause()\">LifecycleProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LifecycleProcessor.html#onPause()\">LifecycleProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LifecycleProcessor.html#onClose()\">LifecycleProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LifecycleProcessor.html#onClose()\">LifecycleProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Switch to concurrent startup for a specific phase (group of <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>\nbeans with the same 'phase' value) with a corresponding timeout.",
+      "translation": "为特定阶段（具有相同“phase”值的<code>SmartLifecycle</code> bean 组）切换到并发启动，并设置相应的超时时间。",
+      "count": 2
+    },
+    {
+      "source": "Switch to concurrent startup for each given phase (group of <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>\nbeans with the same 'phase' value) with corresponding timeouts.",
+      "translation": "为每个给定阶段（具有相同“phase”值的<code>SmartLifecycle</code> bean 组）切换到并发启动，并设置相应的超时时间。",
+      "count": 2
+    },
+    {
+      "source": "Specify the maximum time allotted for the shutdown of a specific phase\n(group of <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> beans with the same 'phase' value).",
+      "translation": "指定特定阶段（一组具有相同“phase”值的<code>SmartLifecycle</code> bean，参见<a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\">org.springframework.context.SmartLifecycle</a>接口）的关闭所允许的最大时间。",
+      "count": 2
+    },
+    {
+      "source": "Specify the maximum time allotted in milliseconds for the shutdown of any\nphase (group of <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> beans with the same 'phase' value).",
+      "translation": "指定任何阶段（具有相同“phase”值的<code>SmartLifecycle</code> 豆组，参见<a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\">org.springframework.context.SmartLifecycle</a>）关闭所分配的最大时间（以毫秒为单位）。",
+      "count": 2
+    },
+    {
+      "source": "Specify the maximum time allotted for the shutdown of each given phase\n(group of <a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> beans with the same 'phase' value).",
+      "translation": "指定每个给定阶段（一组具有相同“phase”值的<code>SmartLifecycle</code><a href=\"../SmartLifecycle.html\" title=\"interface in org.springframework.context\">接口</a>Bean）允许的最大关闭时间。",
+      "count": 2
+    },
+    {
+      "source": "Property name for a common context checkpoint: \"spring.context.checkpoint\".",
+      "translation": "公共上下文检查点的属性名称：\"spring.context.checkpoint\"。",
+      "count": 2
+    },
+    {
+      "source": "Property name for terminating the JVM when the context reaches a specific phase: \"spring.context.exit\".",
+      "translation": "用于在上下文达到特定阶段时终止 JVM 的属性名称：\"spring.context.exit\"。",
+      "count": 2
+    },
+    {
+      "source": "Recognized value for the context checkpoint and exit properties: \"onRefresh\".",
+      "translation": "上下文检查点和退出属性的识别值：\"onRefresh\"。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve all applicable Lifecycle beans: all singletons that have already been created,\nas well as all SmartLifecycle beans (even if they are marked as lazy-init).",
+      "translation": "检索所有适用的生命周期 Bean：所有已创建的单例，以及所有 SmartLifecycle Bean（即使它们被标记为懒加载）。",
+      "count": 2
+    },
+    {
+      "source": "Notification of context close phase for auto-stopping components\nbefore destruction.",
+      "translation": "在销毁之前，为自动停止组件通知上下文关闭阶段。",
+      "count": 2
+    },
+    {
+      "source": "Notification of context pause for auto-stopping components.",
+      "translation": "自动停止组件的上下文暂停通知。",
+      "count": 2
+    },
+    {
+      "source": "Notification of context refresh for auto-starting components.",
+      "translation": "自动启动组件的上下文刷新通知。",
+      "count": 2
+    },
+    {
+      "source": "Notification of context restart for auto-stopping and subsequently\nauto-starting components.",
+      "translation": "<code>Context</code> 自动停止并随后自动启动组件时的上下文重启通知。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../LifecycleProcessor.html#onRefresh()\">onRefresh</a></code> in interface <code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>",
+      "translation": "`<code><a href=\"../LifecycleProcessor.html#onRefresh()\">onRefresh</a></code>` 接口 `<code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../LifecycleProcessor.html#onRestart()\">onRestart</a></code> in interface <code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>",
+      "translation": "`<code><a href=\"../LifecycleProcessor.html#onRestart()\">onRestart</a></code>` 接口 `<code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../LifecycleProcessor.html#onPause()\">onPause</a></code> in interface <code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>",
+      "translation": "`<code><a href=\"../LifecycleProcessor.html#onPause()\">onPause</a></code>` 接口 `<code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../LifecycleProcessor.html#onClose()\">onClose</a></code> in interface <code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>",
+      "translation": "`<code><a href=\"../LifecycleProcessor.html#onClose()\">onClose</a></code>` 接口 `<code><a href=\"../LifecycleProcessor.html\" title=\"interface in org.springframework.context\">LifecycleProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>bean</code> - the bean to introspect",
+      "translation": "<code>bean</code> - 要内省的 Bean",
+      "count": 2
+    },
+    {
+      "source": "Mark Fisher, Juergen Hoeller, Sebastien Deleuze",
+      "translation": "Mark Fisher，Juergen Hoeller，Sebastien Deleuze",
+      "count": 2
+    },
+    {
+      "source": "the Map of applicable beans, with bean names as keys and bean instances as values",
+      "translation": "适用 Bean 的 Map，以 Bean 名称为键，Bean 实例为值。",
+      "count": 2
+    },
+    {
+      "source": "the phase (an integer value)",
+      "translation": "阶段（一个整数值）",
+      "count": 2
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will return <code>true</code> only if <i>all</i>\ncomponents that apply are currently running.",
+      "translation": "对于容器而言，仅当所有适用的组件当前都在运行时，此方法才返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Determine the lifecycle phase of the given bean.",
+      "translation": "确定给定 Bean 的生命周期阶段。",
+      "count": 1
+    },
+    {
+      "source": "Check whether this component is currently running.",
+      "translation": "检查该组件当前是否正在运行。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-04-14 16:41:08",
+  "updated_at": "2026-04-14 16:41:08",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "The default value is <code>true</code>, which means that an annotated class\nwill <em>inherit</em> the listeners defined by an annotated superclass or\nenclosing class. Specifically, the listeners for an annotated class will be\nappended to the list of listeners defined by an annotated superclass or\nenclosing class. Thus, subclasses and nested classes have the option of\n<em>extending</em> the list of listeners. In the following example,\n<code>AbstractBaseTest</code> will be configured with\n<code>DependencyInjectionTestExecutionListener</code> and\n<code>DirtiesContextTestExecutionListener</code>; whereas,\n<code>TransactionalTest</code> will be configured with\n<code>DependencyInjectionTestExecutionListener</code>,\n<code>DirtiesContextTestExecutionListener</code>, <strong>and</strong>\n<code>TransactionalTestExecutionListener</code>, in that order.",
+      "translation": "默认值为 `<code>true</code>`，这意味着一个带注解的类将 <em>继承</em> 由带注解的父类或外部类定义的监听器。具体而言，带注解的类的监听器将被追加到由带注解的父类或外部类定义的监听器列表中。因此，子类及内部类有选项来 <em>扩展</em> 监听器列表。在以下示例中，<code>AbstractBaseTest</code> 将配置为使用 <code>DependencyInjectionTestExecutionListener</code> 和 <code>DirtiesContextTestExecutionListener</code>；而 <code>TransactionalTest</code> 将按顺序配置为使用 <code>DependencyInjectionTestExecutionListener</code>、<code>DirtiesContextTestExecutionListener</code>、<strong>以及</strong> <code>TransactionalTestExecutionListener</code>。",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#listeners()\"><code>listeners()</code></a>, but it may be used instead of <a href=\"#listeners()\"><code>listeners()</code></a>.",
+      "translation": "此属性不能与<a href=\"#listeners()\"><code>listeners()</code></a>一起使用，但可以作为<a href=\"#listeners()\"><code>listeners()</code></a>的替代方案。",
+      "count": 2
+    },
+    {
+      "source": "<code>@TestExecutionListeners</code> is used to register listeners for a\nparticular test class, its subclasses, and its nested classes. If you wish to\nregister a listener globally, you should register it via the automatic discovery\nmechanism described in <a href=\"TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a>.",
+      "translation": "<code>@TestExecutionListeners</code> 用于为特定的测试类、其子类及其嵌套类注册监听器。如果您希望全局注册一个监听器，则应通过<a href=\"TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a>中描述的自动发现机制进行注册。",
+      "count": 2
+    },
+    {
+      "source": "If <code>inheritListeners</code> is set to <code>false</code>, the listeners for\nthe annotated class will <em>shadow</em> and effectively replace any\nlisteners defined by a superclass or enclosing class.",
+      "translation": "如果将 `<code>inheritListeners</code>` 设置为 `<code>false</code>，则注解类的监听器将 <em>遮蔽</em> 并实际上替换由父类或外部类定义的任意监听器。",
+      "count": 2
+    },
+    {
+      "source": "Can be set to <a href=\"TestExecutionListeners.MergeMode.html#MERGE_WITH_DEFAULTS\"><code>MERGE_WITH_DEFAULTS</code></a>\nto have locally declared listeners <em>merged</em> with the default\nlisteners.",
+      "translation": "可设置为 `<a href=\"TestExecutionListeners.MergeMode.html#MERGE_WITH_DEFAULTS\"><code>MERGE_WITH_DEFAULTS</code></a>`，以使本地声明的监听器与默认监听器进行<em>合并</em>。",
+      "count": 2
+    },
+    {
+      "source": "If you extend a class that is annotated with <code>@TestExecutionListeners</code>\nand you need to switch to using the <em>default</em> set of listeners, you\ncan annotate your class with the following.",
+      "translation": "如果您扩展了带有 `<code>@TestExecutionListeners</code>` 注解的类，并且需要切换到使用<em>默认</em>监听器集，您可以使用以下注解来标注您的类。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <a href=\"TestExecutionListeners.MergeMode.html#REPLACE_DEFAULTS\"><code>REPLACE_DEFAULTS</code></a>\nfor backwards compatibility.",
+      "translation": "默认为<a href=\"TestExecutionListeners.MergeMode.html#REPLACE_DEFAULTS\"><code>REPLACE_DEFAULTS</code></a>，以向后兼容。",
+      "count": 2
+    },
+    {
+      "source": "The mode is ignored if listeners are inherited from a superclass or\nenclosing class.",
+      "translation": "如果监听器是从父类或外部类继承的，则忽略该模式。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListeners</code></a> to register with\nthe <a href=\"TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a>.",
+      "translation": "与<a href=\"TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a>注册的<a href=\"TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListeners</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Whether <a href=\"#listeners()\"><code>TestExecutionListeners</code></a> from superclasses\nand enclosing classes should be <em>inherited</em>.",
+      "translation": "超类和包含类中的 `<a href=\"#listeners()\"><code>TestExecutionListeners</code></a>` 是否应该被<em>继承</em>。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#listeners()\"><code>listeners()</code></a>.",
+      "translation": "`<a href=\"#listeners()\">`<code>listeners()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "Switching to default <code>TestExecutionListener</code> implementations",
+      "translation": "切换到默认的<code>TestExecutionListener</code>实现",
+      "count": 2
+    },
+    {
+      "source": "This attribute may <strong>not</strong> be used in conjunction with\n<a href=\"#value()\"><code>value()</code></a>, but it may be used instead of <a href=\"#value()\"><code>value()</code></a>.",
+      "translation": "此属性不能与<a href=\"#value()\"><code>value()</code></a>一起使用，但可以作为<a href=\"#value()\"><code>value()</code></a>的替代方案。",
+      "count": 1
+    },
+    {
+      "source": "This annotation may be used as a <em>meta-annotation</em> to create custom\n<em>composed annotations</em>. In addition, this annotation will be inherited\nfrom an enclosing test class by default. See\n<a href=\"NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a> for details.",
+      "translation": "此注解可用作<em>元注解</em>来创建自定义的<em>组合注解</em>。此外，默认情况下，该注解将从外部测试类继承。有关详细信息，请参阅<a href=\"NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Enumeration of <em>modes</em> that dictate whether explicitly\ndeclared listeners are merged with the default listeners when\n<code>@TestExecutionListeners</code> is declared on a class that does\n<strong>not</strong> inherit listeners from a superclass or enclosing\nclass.",
+      "translation": "枚举 <em>模式</em>，用于规定当在类上声明了 <code>@TestExecutionListeners</code> 且该类未从父类或外部类继承监听器时，显式声明的监听器是否与默认监听器合并。",
+      "count": 1
+    },
+    {
+      "source": "The <em>merge mode</em> to use when <code>@TestExecutionListeners</code> is\ndeclared on a class that does <strong>not</strong> inherit listeners from\na superclass or enclosing class.",
+      "translation": "当 `<code>@TestExecutionListeners</code>` 声明在一个不继承自父类或外部类的监听器的类上时，要使用的<em>合并模式</em>。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

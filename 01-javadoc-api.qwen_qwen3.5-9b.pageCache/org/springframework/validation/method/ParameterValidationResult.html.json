@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-04-14 18:10:52",
+  "updated_at": "2026-04-14 18:10:52",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 35,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8421052631578947,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "When <code>@Valid</code> is declared on a container of elements such as\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>,\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a>, and others, this method returns the container\nof the validated <a href=\"#getArgument()\"><code>argument</code></a>, while\n<a href=\"#getContainerIndex()\"><code>getContainerIndex()</code></a> and <a href=\"#getContainerKey()\"><code>getContainerKey()</code></a> provide\ninformation about the index or key if applicable.",
+      "translation": "当在元素容器（如<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a>等）上声明<code>@Valid</code>时，此方法返回包含已验证的<a href=\"#getArgument()\"><code>argument</code></a>的容器，而<a href=\"#getContainerIndex()\"><code>getContainerIndex()</code></a>和<a href=\"#getContainerKey()\"><code>getContainerKey()</code></a>则提供（如适用）索引或键的信息。",
+      "count": 3
+    },
+    {
+      "source": "When <code>@Valid</code> is declared on an indexed container of elements such as\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> or array, this method returns the index of the validated\n<a href=\"#getArgument()\"><code>argument</code></a>.",
+      "translation": "当在索引容器（如 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 或数组）的元素上声明了 `<code>@Valid` 时，此方法返回已验证的 <a href=\"#getArgument()\"><code>argument</code></a> 的索引。",
+      "count": 3
+    },
+    {
+      "source": "When <code>@Valid</code> is declared on a container of elements referenced by\nkey such as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>, this method returns the key of the\nvalidated <a href=\"#getArgument()\"><code>argument</code></a>.",
+      "translation": "当在通过键引用的元素容器（如<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>）上声明<code>@Valid</code>时，此方法返回已验证的<a href=\"#getArgument()\"><code>argument</code></a>的键。",
+      "count": 3
+    },
+    {
+      "source": "When the method parameter is a container such as a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>, array,\nor <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>, then a separate <a href=\"ParameterValidationResult.html\" title=\"class in org.springframework.validation.method\"><code>ParameterValidationResult</code></a>\nis created for each element with errors. In that case, the properties\n<a href=\"#getContainer()\"><code>container</code></a>, <a href=\"#getContainerIndex()\"><code>containerIndex</code></a>,\nand <a href=\"#getContainerKey()\"><code>containerKey</code></a> provide additional context.",
+      "translation": "当方法参数是容器（如<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>）、数组或<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>）时，会为每个具有错误的元素创建一个单独的<a href=\"ParameterValidationResult.html\" title=\"class in org.springframework.validation.method\"><code>ParameterValidationResult</code></a>。在这种情况下，属性<a href=\"#getContainer()\"><code>container</code></a>、<a href=\"#getContainerIndex()\"><code>containerIndex</code></a>和<a href=\"#getContainerKey()\"><code>containerKey</code></a>提供额外的上下文信息。",
+      "count": 2
+    },
+    {
+      "source": "List of <a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a> representations adapted from the\nvalidation errors of the validation library.\n<ul>\n<li>For a constraints directly on a method parameter, error codes are\nbased on the names of the constraint annotation, the object, the method,\nthe parameter, and parameter type, for example,\n<code>[\"Max.myObject#myMethod.myParameter\", \"Max.myParameter\", \"Max.int\", \"Max\"]</code>.\nArguments include the parameter itself as a <a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a>, for example,\n<code>[\"myObject#myMethod.myParameter\", \"myParameter\"]</code>, followed by actual\nconstraint annotation attributes (i.e. excluding \"message\", \"groups\" and\n\"payload\") in alphabetical order of attribute names.\n</li><li>For cascaded constraints via <code>@Valid</code>\non a bean method parameter, this method returns\n<a href=\"../FieldError.html\" title=\"class in org.springframework.validation\"><code>field errors</code></a> that you\ncan also access more conveniently through methods of the\n<a href=\"ParameterErrors.html\" title=\"class in org.springframework.validation.method\"><code>ParameterErrors</code></a> sub-class.\n</li></ul>",
+      "translation": "由验证库的验证错误适配而来的 <a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a> 表示列表。\n<ul>\n<li>对于直接应用于方法参数的约束，错误代码基于约束注解、对象、方法、参数和参数类型的名称，例如，<code>[\"Max.myObject#myMethod.myParameter\", \"Max.myParameter\", \"Max.int\", \"Max\"]</code>。参数包括作为 <a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a> 的参数本身，例如，<code>[\"myObject#myMethod.myParameter\", \"myParameter\"]</code>，随后按属性名称字母顺序排列实际的约束注解属性（即不包括 \"message\"、\"groups\" 和 \"payload\"）。\n</li><li>对于通过 <code>@Valid</code> 在 Bean 方法参数上进行的级联约束，此方法返回 <a href=\"../FieldError.html\" title=\"class in org.springframework.validation\"><code>field errors</code></a>，您也可以通过 <a href=\"ParameterErrors.html\" title=\"class in org.springframework.validation.method\"><code>ParameterErrors</code></a> 子类的更便捷地访问这些错误。\n</li></ul>",
+      "count": 2
+    },
+    {
+      "source": "List of <a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a> representations adapted from the\nvalidation errors of the validation library.",
+      "translation": "由验证库的验证错误转换而来的 `<a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a>` 表示列表。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>ParameterValidationResult</code>.",
+      "translation": "创建<code>ParameterValidationResult</code>。",
+      "count": 2
+    },
+    {
+      "source": "Unwrap the source behind the given error. For Jakarta Bean validation the\nsource is a <code>ConstraintViolation</code>.",
+      "translation": "展开给定错误背后的源。对于 Jakarta Bean 验证，该源是一个 `<code>ConstraintViolation</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The method argument value that was validated.",
+      "translation": "经过验证的方法参数值。",
+      "count": 2
+    },
+    {
+      "source": "The method parameter the validation results are for.",
+      "translation": "该参数是验证结果所针对的方法参数。",
+      "count": 2
+    },
+    {
+      "source": "Nested validation errors on an Object method parameter are exposed as\n<a href=\"../Errors.html\" title=\"interface in org.springframework.validation\"><code>Errors</code></a> by the subclass\n<a href=\"ParameterErrors.html\" title=\"class in org.springframework.validation.method\"><code>ParameterErrors</code></a>.",
+      "translation": "嵌套验证错误在 Object 方法参数上，由子类 <a href=\"ParameterErrors.html\" title=\"class in org.springframework.validation.method\"><code>ParameterErrors</code></a> 作为 <a href=\"../Errors.html\" title=\"interface in org.springframework.validation\"><code>Errors</code></a> 暴露。",
+      "count": 2
+    },
+    {
+      "source": "Validation errors directly on method parameter values are exposed as a\nlist of <a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a>s.",
+      "translation": "方法参数值上的验证错误以 `<a href=\"../../context/MessageSourceResolvable.html\" title=\"interface in org.springframework.context\"><code>MessageSourceResolvable</code></a>` 列表形式暴露。",
+      "count": 2
+    },
+    {
+      "source": "<code>sourceType</code> - the expected source type",
+      "translation": "<code>sourceType</code> - 预期的源类型",
+      "count": 2
+    },
+    {
+      "source": "Unwrap the source behind the given error.",
+      "translation": "展开给定错误背后的源信息。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "the source object of the given type",
+      "translation": "给定类型的源对象",
+      "count": 1
+    }
+  ]
+}

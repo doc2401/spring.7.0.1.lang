@@ -1,0 +1,321 @@
+{
+  "created_at": "2026-04-14 15:50:10",
+  "updated_at": "2026-04-14 15:50:10",
+  "stats": {
+    "total_entries": 61,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 113,
+    "entries_with_hits": 61,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8524590163934427,
+    "usage_percentage": 0.0060999999999999995
+  },
+  "items": [
+    {
+      "source": "an accessor instance of the specified type, or <code>null</code> if none",
+      "translation": "指定类型的访问器实例，如果没有则为<code>null</code>。",
+      "count": 4
+    },
+    {
+      "source": "This method can be invoked many times, with modifications in between\nwhere each new call returns a fresh copy of the current header values.",
+      "translation": "此方法可多次调用，中间可进行修改，每次新调用都会返回当前头部值的副本。",
+      "count": 3
+    },
+    {
+      "source": "This is for cases where the existence of an accessor is strongly expected\n(followed up with an assertion) or where an accessor will be created otherwise.",
+      "translation": "这是针对以下情况：强烈预期存在访问器（随后会进行断言），或者否则将创建该访问器。",
+      "count": 3
+    },
+    {
+      "source": "<code>requiredType</code> - the required accessor type (or <code>null</code> for any)",
+      "translation": "<code>requiredType</code> - 所需的访问器类型（或为任意类型时设为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>message</code> - the message to get an accessor for",
+      "translation": "<code>message</code> - 要获取访问器的消息",
+      "count": 3
+    },
+    {
+      "source": "However when this is set to <code>true</code>, the returned (underlying)\n<code>MessageHeaders</code> instance remains mutable. To make further modifications\ncontinue to use the same accessor instance or re-obtain it via:<br/>\n<a href=\"#getAccessor(org.springframework.messaging.Message,java.lang.Class)\"><code>MessageHeaderAccessor.getAccessor(Message, Class)</code></a>",
+      "translation": "然而，当此值设置为 `<code>true</code>` 时，返回的（底层）`<code>MessageHeaders</code>` 实例仍然可修改。若要继续进行修改，请继续使用相同的访问器实例或通过以下方式重新获取：<br/>\n<a href=\"#getAccessor(org.springframework.messaging.Message,java.lang.Class)\"><code>MessageHeaderAccessor.getAccessor(Message, Class)</code></a>",
+      "count": 2
+    },
+    {
+      "source": "This method always returns the same <code>MessageHeaders</code> instance if\ninvoked multiples times. To obtain a copy of the underlying headers, use\n<a href=\"#toMessageHeaders()\"><code>toMessageHeaders()</code></a> or <a href=\"#toMap()\"><code>toMap()</code></a> instead.",
+      "translation": "此方法如果多次调用，始终返回相同的 `<code>MessageHeaders</code>` 实例。若要获取底层 headers 的副本，请使用<a href=\"#toMessageHeaders()\"><code>toMessageHeaders()</code></a>或<a href=\"#toMap()\"><code>toMap()</code></a>代替。",
+      "count": 2
+    },
+    {
+      "source": "Below is a workflow to initialize headers via <code>MessageHeaderAccessor</code>,\nor one of its subclasses, then create a <a href=\"../Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a>, and then re-obtain\nthe accessor possibly from a different component:",
+      "translation": "下面是通过 `<code>MessageHeaderAccessor` 或其子类初始化标头，然后创建 `<a href=\"../Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a>`，随后可能从不同组件重新获取访问器的流程：",
+      "count": 2
+    },
+    {
+      "source": "In order for the above to work, all participating components must use\n<code>MessageHeaders</code> to create, access, or modify headers, or otherwise\n<a href=\"#getAccessor(org.springframework.messaging.Message,java.lang.Class)\"><code>getAccessor(Message, Class)</code></a> will return null.\nBelow is a workflow that shows how headers are created and left mutable,\nthen modified possibly by a different component, and finally made immutable\nperhaps before the possibility of being accessed on a different thread:",
+      "translation": "为了使上述内容生效，所有参与组件必须使用<code>MessageHeaders</code>来创建、访问或修改头部信息；否则，<a href=\"#getAccessor(org.springframework.messaging.Message,java.lang.Class)\"><code>getAccessor(Message, Class)</code></a>将返回 null。\n下面是一个工作流程示例，展示了如何创建头部信息并保持其可变性，随后可能由不同组件进行修改，最后可能在跨线程访问之前将其设为不可变：",
+      "count": 2
+    },
+    {
+      "source": "Unless <a href=\"#setLeaveMutable(boolean)\"><code>setLeaveMutable(boolean)</code></a> was set to <code>true</code>, after\nthis call, the headers are immutable and this accessor can no longer\nmodify them.",
+      "translation": "除非在调用此方法之前，<a href=\"#setLeaveMutable(boolean)\"><code>setLeaveMutable(boolean)</code></a> 已设置为 <code>true</code>，否则在此调用之后，头部将变为不可变，且此访问器将无法再对其进行修改。",
+      "count": 2
+    },
+    {
+      "source": "When modifications are complete use <a href=\"#setImmutable()\"><code>setImmutable()</code></a> to prevent\nfurther changes. The intended use case for this mechanism is initialization\nof a Message within a single thread.",
+      "translation": "完成修改后，请使用 `<a href=\"#setImmutable()\"><code>setImmutable()</code></a>` 防止进一步更改。此机制的预期使用场景是在单个线程中初始化一个 `Message`。",
+      "count": 2
+    },
+    {
+      "source": "This operation will overwrite any existing values. Use\n<a href=\"#copyHeadersIfAbsent(java.util.Map)\"><code>copyHeadersIfAbsent(Map)</code></a> to avoid overwriting values.",
+      "translation": "此操作将覆盖任何现有值。使用 <a href=\"#copyHeadersIfAbsent(java.util.Map)\"><code>copyHeadersIfAbsent(Map)</code></a> 来避免覆盖值。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is set to <code>false</code>.",
+      "translation": "默认情况下，该值设置为<code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "If the provided value is <code>null</code>, the header will be removed.",
+      "translation": "如果提供的值为<code>null</code>，则头信息将被移除。",
+      "count": 2
+    },
+    {
+      "source": "This operation will <em>not</em> overwrite any existing values.",
+      "translation": "此操作将 <em>不会</em> 覆盖任何现有值。",
+      "count": 2
+    },
+    {
+      "source": "As the name suggests, array may contain simple matching patterns for header\nnames. Supported pattern styles are: \"xxx*\", \"*xxx\", \"*xxx*\" and \"xxx*yyy\".",
+      "translation": "顾名思义，数组可以包含用于匹配标头名称的简单模式。支持的模式样式包括：\"xxx*\"、\"*xxx\"、\"*xxx*\" 和 \"xxx*yyy\"。",
+      "count": 2
+    },
+    {
+      "source": "This is for cases when a full message may not have been created yet.",
+      "translation": "这是针对完整消息尚未创建的情况。",
+      "count": 2
+    },
+    {
+      "source": "This is for cases where a header needs to be updated in generic code\nwhile preserving the accessor type for downstream processing.",
+      "translation": "这是用于在通用代码中更新头信息，同时保留下游处理所需的访问器类型的情况。",
+      "count": 2
+    },
+    {
+      "source": "By default, when <a href=\"#getMessageHeaders()\"><code>getMessageHeaders()</code></a> is called, <code>\"this\"</code>\n<code>MessageHeaderAccessor</code> instance can no longer be used to modify the\nunderlying message headers. However if <a href=\"#setLeaveMutable(boolean)\"><code>setLeaveMutable(boolean)</code></a>\nis used, this method is necessary to indicate explicitly when the\n<code>MessageHeaders</code> instance should no longer be modified.",
+      "translation": "默认情况下，当调用<a href=\"#getMessageHeaders()\"><code>getMessageHeaders()</code></a>时，<code>\"this\"</code><code>MessageHeaderAccessor</code>实例将不能再用于修改底层消息头。然而，如果使用<a href=\"#setLeaveMutable(boolean)\"><code>setLeaveMutable(boolean)</code></a>，则此方法是必要的，以明确指示何时不应再修改<code>MessageHeaders</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "By default, when <a href=\"#getMessageHeaders()\"><code>getMessageHeaders()</code></a> is called, <code>\"this\"</code>\n<code>MessageHeaderAccessor</code> instance can no longer be used to modify the\nunderlying message headers and the returned <code>MessageHeaders</code> is immutable.",
+      "translation": "默认情况下，当调用<a href=\"#getMessageHeaders()\"><code>getMessageHeaders()</code></a>时，<code>\"this\"</code><code>MessageHeaderAccessor</code>实例将无法再用于修改底层消息头，且返回的<code>MessageHeaders</code>是不可变的。",
+      "count": 2
+    },
+    {
+      "source": "A variation of <a href=\"#getAccessor(org.springframework.messaging.Message,java.lang.Class)\"><code>getAccessor(org.springframework.messaging.Message, Class)</code></a>\nwith a <code>MessageHeaders</code> instance instead of a <code>Message</code>.",
+      "translation": "`<a href=\"#getAccessor(org.springframework.messaging.Message,java.lang.Class)\"><code>getAccessor(org.springframework.messaging.Message, Class)</code></a>` 的一个变体，使用 `<code>MessageHeaders</code>` 实例而不是 `<code>Message</code>`。",
+      "count": 2
+    },
+    {
+      "source": "By default, when <a href=\"#getMessageHeaders()\"><code>getMessageHeaders()</code></a> is called, <code>\"this\"</code>\n<code>MessageHeaderAccessor</code> instance can no longer be used to modify the\nunderlying message headers.",
+      "translation": "默认情况下，当调用<a href=\"#getMessageHeaders()\"><code>getMessageHeaders()</code></a>时，<code>\"this\"</code><code>MessageHeaderAccessor</code>实例将不能再用于修改底层消息头。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance from a plain <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
+      "translation": "从普通的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>创建实例。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance from an existing <a href=\"../MessageHeaders.html\" title=\"class in org.springframework.messaging\"><code>MessageHeaders</code></a> instance.",
+      "translation": "从现有的<a href=\"../MessageHeaders.html\" title=\"class in org.springframework.messaging\"><code>MessageHeaders</code></a>实例创建一个实例。",
+      "count": 2
+    },
+    {
+      "source": "The default charset used for headers.",
+      "translation": "用于标头的默认字符集。",
+      "count": 2
+    },
+    {
+      "source": "A constructor to create new headers.",
+      "translation": "用于创建新标头的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "A constructor accepting the headers of an existing message to copy.",
+      "translation": "接受现有消息头以进行复制的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Copy the name-value pairs from the provided Map.",
+      "translation": "从提供的 Map 中复制名称 - 值对。",
+      "count": 2
+    },
+    {
+      "source": "Build a 'nested' accessor for the given message.",
+      "translation": "为给定的消息构建一个“嵌套”访问器。",
+      "count": 2
+    },
+    {
+      "source": "Return a more detailed message for logging purposes.",
+      "translation": "返回更详细的日志消息以供记录目的。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the value for the header with the given name.",
+      "translation": "获取给定名称的标头值。",
+      "count": 2
+    },
+    {
+      "source": "Return a concise message for logging purposes.",
+      "translation": "返回用于日志记录的简洁消息。",
+      "count": 2
+    },
+    {
+      "source": "Check whether the underlying message headers have been marked as modified.",
+      "translation": "检查底层消息头是否已标记为修改。",
+      "count": 2
+    },
+    {
+      "source": "Whether the underlying headers can still be modified.",
+      "translation": "底层标头是否仍可修改。",
+      "count": 2
+    },
+    {
+      "source": "Remove the value for the given header name.",
+      "translation": "删除给定标头名称的值。",
+      "count": 2
+    },
+    {
+      "source": "Set the value for the given header name only if the header name is not\nalready associated with a value.",
+      "translation": "仅在给定标头名称尚未关联值时，设置该标头的值。",
+      "count": 2
+    },
+    {
+      "source": "Mark the underlying message headers as modified.",
+      "translation": "将底层消息头标记为已修改。",
+      "count": 2
+    },
+    {
+      "source": "<code>modified</code> - typically <code>true</code>, or <code>false</code> to reset the flag",
+      "translation": "<code>modified</code> - 通常为 <code>true</code>，或设为 <code>false</code> 以重置标志。",
+      "count": 2
+    },
+    {
+      "source": "<code>message</code> - a message to copy the headers from, or <code>null</code> if none",
+      "translation": "<code>message</code> - 要复制其标头的消息，或者如果没有则为 <code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the flag has been set, <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示该标志已设置，否则为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "the associated value, or <code>null</code> if none found",
+      "translation": "关联的值，如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>payload</code> - the payload that corresponds to the headers.",
+      "translation": "<code>payload</code> - 与标头对应的负载。",
+      "count": 2
+    },
+    {
+      "source": "<code>map</code> - the raw headers",
+      "translation": "<code>map</code> - 原始标头",
+      "count": 2
+    },
+    {
+      "source": "<code>messageHeaders</code> - the message headers to get an accessor for",
+      "translation": "<code>messageHeaders</code> - 要获取访问器的消息头",
+      "count": 2
+    },
+    {
+      "source": "an accessor of the required type (never <code>null</code>)",
+      "translation": "所需类型的访问器（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the message",
+      "translation": "消息",
+      "count": 2
+    },
+    {
+      "source": "Return the original <code>MessageHeaderAccessor</code> used to create the headers\nof the given <code>Message</code>, or <code>null</code> if that's not available.",
+      "translation": "返回用于创建给定<code>Message</code>的标头的原始<code>MessageHeaderAccessor</code>，如果不可用则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the original <code>MessageHeaderAccessor</code> used to create the headers\nof the given <code>Message</code>, or <code>null</code> if that's not available or if\nits type does not match the required type.",
+      "translation": "返回用于创建给定 `<code>Message</code>` 的标头的原始 `<code>MessageHeaderAccessor</code>`，如果不可用或其类型不匹配所需类型，则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return a mutable <code>MessageHeaderAccessor</code> for the given message attempting\nto match the type of accessor used to create the message headers, or otherwise\nwrapping the message with a <code>MessageHeaderAccessor</code> instance.",
+      "translation": "返回给定消息的可变 `<code>MessageHeaderAccessor`，尝试匹配用于创建消息标头的访问器类型；否则，使用 `<code>MessageHeaderAccessor` 实例包装该消息。",
+      "count": 1
+    },
+    {
+      "source": "Return a copy of the underlying header values as a plain <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> object.",
+      "translation": "返回底层标头值的副本，作为一个普通的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 对象。",
+      "count": 1
+    },
+    {
+      "source": "Return a copy of the underlying header values as a <a href=\"../MessageHeaders.html\" title=\"class in org.springframework.messaging\"><code>MessageHeaders</code></a> object.",
+      "translation": "返回底层标头值的副本，作为 `<a href=\"../MessageHeaders.html\" title=\"class in org.springframework.messaging\"><code>MessageHeaders</code></a>` 对象。",
+      "count": 1
+    },
+    {
+      "source": "Return the underlying <code>MessageHeaders</code> instance.",
+      "translation": "返回底层的<code>MessageHeaders</code>实例。",
+      "count": 1
+    },
+    {
+      "source": "Removes all headers provided via array of 'headerPatterns'.",
+      "translation": "通过 'headerPatterns' 数组提供的所有标头均被移除。",
+      "count": 1
+    },
+    {
+      "source": "Set the value for the given header name.",
+      "translation": "设置给定标头名称的值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the message to build a new accessor for",
+      "translation": "<code>message</code> - 用于构建新访问器的消息",
+      "count": 1
+    },
+    {
+      "source": "<code>headerName</code> - the name of the header",
+      "translation": "<code>headerName</code> - 标头的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>headers</code> - the headers",
+      "translation": "<code>headers</code> - 标头",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Juergen Hoeller",
+      "translation": "Rossen Stoyanchev，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the nested accessor (typically a specific subclass)",
+      "translation": "嵌套访问器（通常是特定子类）",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

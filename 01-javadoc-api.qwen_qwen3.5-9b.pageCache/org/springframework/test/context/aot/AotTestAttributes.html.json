@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-04-14 16:42:13",
+  "updated_at": "2026-04-14 16:42:13",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 41,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 2.1578947368421053,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "<code>name</code> - the unique attribute name",
+      "translation": "<code>name</code> - 唯一的属性名称",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - if invoked during\n<a href=\"../../../aot/AotDetector.html#useGeneratedArtifacts()\">AOT run-time execution</a>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - 如果在 <a href=\"../../../aot/AotDetector.html#useGeneratedArtifacts()\">AOT 运行时执行</a> 期间调用",
+      "count": 4
+    },
+    {
+      "source": "In general, users should take care to prevent overlaps with other\nmetadata attributes by using fully-qualified names, perhaps using a\nclass or package name as a prefix.",
+      "translation": "通常，用户应通过使用完全限定名称（例如使用类或包名作为前缀）来防止与其他元数据属性发生重叠。",
+      "count": 3
+    },
+    {
+      "source": "<code>value</code> - the associated attribute value",
+      "translation": "<code>value</code> - 关联的属性值",
+      "count": 3
+    },
+    {
+      "source": "An <a href=\"AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\"><code>AotContextLoader</code></a> would typically contribute an attribute in\n<a href=\"AotContextLoader.html#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContextForAotProcessing()</code></a>;\nwhereas, an <a href=\"AotTestExecutionListener.html\" title=\"interface in org.springframework.test.context.aot\"><code>AotTestExecutionListener</code></a> would typically contribute an attribute\nin <a href=\"AotTestExecutionListener.html#processAheadOfTime(org.springframework.aot.hint.RuntimeHints,java.lang.Class,java.lang.ClassLoader)\"><code>processAheadOfTime()</code></a>.\nAny other test component — such as a\n<a href=\"../TestContextBootstrapper.html\" title=\"interface in org.springframework.test.context\"><code>TestContextBootstrapper</code></a>\n— can choose to contribute an attribute at any point in time. Note that\ncontributing an attribute during standard JVM test execution will not have any\nadverse side effect since AOT attributes will be ignored in that scenario. In\nany case, you should use <a href=\"../../../aot/AotDetector.html#useGeneratedArtifacts()\"><code>AotDetector.useGeneratedArtifacts()</code></a> to determine\nif invocations of <a href=\"#setAttribute(java.lang.String,java.lang.String)\"><code>setAttribute(String, String)</code></a> and\n<a href=\"#removeAttribute(java.lang.String)\"><code>removeAttribute(String)</code></a> are permitted.",
+      "translation": "`AotContextLoader` 接口通常会在 `<a href=\"AotContextLoader.html#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration)\">`<code>loadContextForAotProcessing()</code>`</a> 方法中贡献一个属性；而 `AotTestExecutionListener` 接口通常会在 `<a href=\"AotTestExecutionListener.html#processAheadOfTime(org.springframework.aot.hint.RuntimeHints,java.lang.Class,java.lang.ClassLoader)\">`<code>processAheadOfTime()</code>`</a> 方法中贡献一个属性。任何其他测试组件（例如 `<a href=\"../TestContextBootstrapper.html\" title=\"interface in org.springframework.test.context\">`<code>TestContextBootstrapper</code>`</a>）都可以在任意时间点选择贡献一个属性。请注意，在标准 JVM 测试执行期间贡献属性不会产生任何不利影响，因为在这种情况下会忽略 AOT 属性。无论如何，您都应使用 `<a href=\"../../../aot/AotDetector.html#useGeneratedArtifacts()\">`<code>AotDetector.useGeneratedArtifacts()</code>`</a> 来确定是否允许调用 `<a href=\"#setAttribute(java.lang.String,java.lang.String)\">`<code>setAttribute(String, String)</code>`</a> 和 `<a href=\"#removeAttribute(java.lang.String)\">`<code>removeAttribute(String)</code>`</a>。",
+      "count": 2
+    },
+    {
+      "source": "AOT test attributes are supported in two modes of operation: build-time\nand run-time. At build time, test components can <a href=\"#setAttribute(java.lang.String,java.lang.String)\">contribute</a>\nattributes during the AOT processing phase. At run time, test components can\n<a href=\"#getString(java.lang.String)\">retrieve</a> attributes that were contributed at\nbuild time. If <a href=\"../../../aot/AotDetector.html#useGeneratedArtifacts()\"><code>AotDetector.useGeneratedArtifacts()</code></a> returns <code>true</code>,\nrun-time mode applies.",
+      "translation": "AOT 测试属性支持两种运行模式：构建时和运行时。在构建时，测试组件可以在 AOT 处理阶段<a href=\"#setAttribute(java.lang.String,java.lang.String)\">贡献</a>属性。在运行时，测试组件可以<a href=\"#getString(java.lang.String)\">检索**",
+      "count": 2
+    },
+    {
+      "source": "See the class-level <a href=\"AotTestAttributes.html\" title=\"interface in org.springframework.test.context.aot\"><code>Javadoc</code></a> for details on\nthe two supported modes.",
+      "translation": "有关两种支持模式的详细信息，请参阅类级别的<a href=\"AotTestAttributes.html\" title=\"interface in org.springframework.test.context.aot\"><code>Javadoc</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "For example, if a test component computes something at build time that\ncannot be computed at run time, the result of the build-time computation can\nbe stored as an AOT attribute and retrieved at run time without repeating the\ncomputation.",
+      "translation": "例如，如果测试组件在构建时计算了无法在运行时计算的内容，则可以将构建时计算的结果存储为 AOT 属性，并在运行时检索该结果而无需重复计算。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the attribute value for the given name as a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>.",
+      "translation": "获取给定名称的属性值，返回类型为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the attribute value for the given name as a <code>boolean</code>.",
+      "translation": "获取给定名称的属性值作为<code>boolean</code>。",
+      "count": 2
+    },
+    {
+      "source": "Remove the attribute stored under the provided name.",
+      "translation": "删除在指定名称下存储的属性。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the provided value is <code>null</code> or\nif an attempt is made to override an existing attribute",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果提供的值为 <code>null</code>，或者尝试覆盖现有属性时。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if an attempt is made to override an\nexisting attribute",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果尝试覆盖现有属性，则抛出此异常。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the attribute is set to \"true\" (ignoring case),\n<code>false</code> otherwise",
+      "translation": "<code>true</code> 如果该属性设置为 \"true\"（不区分大小写），否则为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "the associated attribute value, or <code>null</code> if not found",
+      "translation": "关联的属性值，如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "Get the current instance of <code>AotTestAttributes</code> to use.",
+      "translation": "获取当前使用的 <code>AotTestAttributes</code> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Set a <code>boolean</code> attribute for later retrieval during AOT run-time execution.",
+      "translation": "在 AOT 运行时执行期间设置一个用于稍后检索的 `<code>boolean</code>` 属性。",
+      "count": 1
+    },
+    {
+      "source": "Set a <code>String</code> attribute for later retrieval during AOT run-time execution.",
+      "translation": "在 AOT 运行时执行期间设置一个<code>String</code>属性以便稍后检索。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    }
+  ]
+}

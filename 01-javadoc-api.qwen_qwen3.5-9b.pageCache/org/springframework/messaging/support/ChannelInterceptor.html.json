@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-04-14 15:49:16",
+  "updated_at": "2026-04-14 15:49:16",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "Note that this will be invoked only if <a href=\"#preSend(org.springframework.messaging.Message,org.springframework.messaging.MessageChannel)\"><code>preSend(Message, MessageChannel)</code></a> successfully\ncompleted and returned a Message, i.e. it did not return <code>null</code>.",
+      "translation": "请注意，仅当<a href=\"#preSend(org.springframework.messaging.Message,org.springframework.messaging.MessageChannel)\"><code>preSend(Message, MessageChannel)</code></a>成功完成并返回一个 Message（即未返回<code>null</code>）时才会调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "Note that this will be invoked only if <a href=\"#preReceive(org.springframework.messaging.MessageChannel)\"><code>preReceive(MessageChannel)</code></a> successfully\ncompleted and returned <code>true</code>.",
+      "translation": "请注意，仅当<a href=\"#preReceive(org.springframework.messaging.MessageChannel)\"><code>preReceive(MessageChannel)</code></a>成功完成并返回<code>true</code>时才会调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "Interface for interceptors that are able to view and/or modify the\n<a href=\"../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a> being sent-to and/or received-from a\n<a href=\"../MessageChannel.html\" title=\"interface in org.springframework.messaging\"><code>MessageChannel</code></a>.",
+      "translation": "用于拦截器（interceptors）的接口，这些拦截器能够查看和/或修改发送到和/或从消息通道（<a href=\"../MessageChannel.html\" title=\"interface in org.springframework.messaging\"><code>MessageChannel</code></a>）接收的消息（<a href=\"../Message.html\" title=\"interface in org.springframework.messaging\"><code>Messages</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Invoked before the Message is actually sent to the channel.\nThis allows for modification of the Message if necessary.\nIf this method returns <code>null</code> then the actual\nsend invocation will not occur.",
+      "translation": "在消息实际发送到通道之前被调用。\n这允许在必要时修改消息。\n如果此方法返回 `<code>null</code>`，则不会执行实际的发送调用。",
+      "count": 2
+    },
+    {
+      "source": "Invoked immediately after a Message has been retrieved but before\nit is returned to the caller. The Message may be modified if\nnecessary; <code>null</code> aborts further interceptor invocations.\nThis only applies to PollableChannels.",
+      "translation": "在从通道检索到消息但尚未返回给调用者之前立即被调用。如有必要，可以修改该消息；`null` 会中止后续的拦截器调用。此规则仅适用于可轮询通道（PollableChannels）。",
+      "count": 2
+    },
+    {
+      "source": "Invoked immediately after the send invocation. The boolean\nvalue argument represents the return value of that invocation.",
+      "translation": "在发送调用后立即被调用。布尔值参数代表该调用的返回值。",
+      "count": 2
+    },
+    {
+      "source": "Invoked as soon as receive is called and before a Message is\nactually retrieved. If the return value is 'false', then no\nMessage will be retrieved. This only applies to PollableChannels.",
+      "translation": "在调用 `receive` 后立即被调用，且在实际检索到 `Message` 之前。如果返回值为 `'false'`，则不会检索到任何 `Message`。此规则仅适用于 `PollableChannels`。",
+      "count": 2
+    },
+    {
+      "source": "Invoked after the completion of a receive regardless of any exception that\nhave been raised thus allowing for proper resource cleanup.",
+      "translation": "在接收完成之后被调用，无论是否已引发任何异常，从而允许进行适当的资源清理。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the completion of a send regardless of any exception that\nhave been raised thus allowing for proper resource cleanup.",
+      "translation": "在发送完成后被调用，无论是否已抛出任何异常，从而允许正确清理资源。",
+      "count": 1
+    },
+    {
+      "source": "Invoked immediately after a Message has been retrieved but before\nit is returned to the caller.",
+      "translation": "在从消息队列中检索到消息但尚未返回给调用者之前立即被调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked immediately after the send invocation.",
+      "translation": "在发送调用后立即被调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked as soon as receive is called and before a Message is\nactually retrieved.",
+      "translation": "在调用 `receive` 后立即被调用，且在实际检索消息之前。",
+      "count": 1
+    },
+    {
+      "source": "Invoked before the Message is actually sent to the channel.",
+      "translation": "在消息实际发送到通道之前被调用。",
+      "count": 1
+    },
+    {
+      "source": "Mark Fisher, Rossen Stoyanchev",
+      "translation": "Mark Fisher，Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

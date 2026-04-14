@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-04-14 18:18:43",
+  "updated_at": "2026-04-14 18:18:43",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 15,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6666666666666667,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "Note that @<a href=\"RequestParam.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestParam</code></a> annotation can also be used to associate the part\nof a \"multipart/form-data\" request with a method argument supporting the same method\nargument types. The main difference is that when the method argument is not a String\nor raw <code>MultipartFile</code> / <code>Part</code>, <code>@RequestParam</code> relies on type\nconversion via a registered <a href=\"../../../core/convert/converter/Converter.html\" title=\"interface in org.springframework.core.convert.converter\"><code>Converter</code></a> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a> while\n<a href=\"RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a> relies on <a href=\"../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverters</code></a>\ntaking into consideration the 'Content-Type' header of the request part.\n<a href=\"RequestParam.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestParam</code></a> is likely to be used with name-value form fields while\n<a href=\"RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a> is likely to be used with parts containing more complex content\nfor example, JSON, XML).",
+      "translation": "请注意，`@<a href=\"RequestParam.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestParam</code></a>` 注解也可用于将 \"multipart/form-data\" 请求的部分与方法参数关联起来，该方法参数支持相同的参数类型。主要区别在于：当方法参数不是 `String` 或原始的 `<code>MultipartFile</code>` / `<code>Part</code>` 时，`<code>@RequestParam</code>` 依赖于通过注册的 `<a href=\"../../../core/convert/converter/Converter.html\" title=\"interface in org.springframework.core.convert.converter\"><code>Converter</code></a>` 或 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyEditor.html\" title=\"class or interface in java.beans\"><code>PropertyEditor</code></a>` 进行类型转换，而 `<a href=\"RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a>` 则依赖于 `<a href=\"../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverters</code></a>`，并考虑请求部分的 \"Content-Type\" 标头。`<a href=\"RequestParam.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestParam</code></a>` 通常与名称 - 值表单字段一起使用，而 `<a href=\"RequestPart.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestPart</code></a>` 通常用于包含更复杂内容（例如 JSON、XML）的部分。",
+      "count": 2
+    },
+    {
+      "source": "Supported method argument types include <a href=\"../../multipart/MultipartFile.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartFile</code></a> in conjunction with\nSpring's <a href=\"../../multipart/MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> abstraction, <code>jakarta.servlet.http.Part</code> in\nconjunction with Servlet multipart requests, or otherwise for any other method\nargument, the content of the part is passed through an <a href=\"../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverter</code></a>\ntaking into consideration the 'Content-Type' header of the request part. This is\nanalogous to what @<a href=\"RequestBody.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestBody</code></a> does to resolve an argument based on the\ncontent of a non-multipart regular request.",
+      "translation": "支持的方法参数类型包括与 Spring 的 <a href=\"../../multipart/MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> 抽象配合使用的 <a href=\"../../multipart/MultipartFile.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartFile</code></a>，或与 Servlet 多部分请求配合使用的 <code>jakarta.servlet.http.Part</code>；对于任何其他方法参数，则通过 <a href=\"../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverter</code></a> 传递该部分的內容，同时考虑请求部分的 'Content-Type' 标头。这与 @<a href=\"RequestBody.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>RequestBody</code></a> 根据非多部分常规请求的内容解析参数的行为类似。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <code>true</code>, leading to an exception being thrown\nif the part is missing in the request. Switch this to\n<code>false</code> if you prefer a <code>null</code> value if the part is\nnot present in the request.",
+      "translation": "默认为 `<code>true</code>`，如果请求中缺少该部分，将抛出异常。如果您希望在请求中不存在该部分时返回 `<code>null</code>` 值，请将其切换为 `<code>false</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#name()\"><code>name()</code></a>.",
+      "translation": "`<a href=\"#name()\"><code>name()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "The name of the part in the <code>\"multipart/form-data\"</code> request to bind to.",
+      "translation": "要绑定的 `<code>\"multipart/form-data\"</code>` 请求中部件的名称。",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev, Arjen Poutsma, Sam Brannen",
+      "translation": "Rossen Stoyanchev, Arjen Poutsma, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "Whether the part is required.",
+      "translation": "该部件是否必需。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

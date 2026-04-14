@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-04-14 12:29:11",
+  "updated_at": "2026-04-14 12:29:11",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 69,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6046511627906976,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "Overridden to turn it into a no-op: With AbstractRefreshableApplicationContext,\n<a href=\"#getBeanFactory()\"><code>getBeanFactory()</code></a> serves a strong assertion for an active context anyway.",
+      "translation": "重写以将其变为空操作：对于 `AbstractRefreshableApplicationContext`，<a href=\"#getBeanFactory()\"><code>getBeanFactory()</code></a> 无论如何都提供了一个有效的断言来确认上下文处于活动状态。",
+      "count": 3
+    },
+    {
+      "source": "Concrete standalone subclasses of this base class, reading in a\nspecific bean definition format, are <a href=\"ClassPathXmlApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>ClassPathXmlApplicationContext</code></a>\nand <a href=\"FileSystemXmlApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>FileSystemXmlApplicationContext</code></a>, which both derive from the\ncommon <a href=\"AbstractXmlApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>AbstractXmlApplicationContext</code></a> base class;\n<a href=\"../annotation/AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a>\nsupports <code>@Configuration</code>-annotated classes as a source of bean definitions.",
+      "translation": "读取特定 Bean 定义格式的该基类的具体独立子类是 `<a href=\"ClassPathXmlApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>ClassPathXmlApplicationContext</code></a>` 和 `<a href=\"FileSystemXmlApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>FileSystemXmlApplicationContext</code></a>`，它们都源自共同的 `<a href=\"AbstractXmlApplicationContext.html\" title=\"class in org.springframework.context.support\"><code>AbstractXmlApplicationContext</code></a>` 基类；`<a href=\"../annotation/AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a>` 支持使用 `<code>@Configuration</code>` 注解的类作为 Bean 定义源。",
+      "count": 2
+    },
+    {
+      "source": "The only method to be implemented by subclasses is <a href=\"#loadBeanDefinitions(org.springframework.beans.factory.support.DefaultListableBeanFactory)\"><code>loadBeanDefinitions(DefaultListableBeanFactory)</code></a>,\nwhich gets invoked on each refresh. A concrete implementation is supposed to load\nbean definitions into the given\n<a href=\"../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>,\ntypically delegating to one or more specific bean definition readers.",
+      "translation": "子类需要实现的唯一方法是 <a href=\"#loadBeanDefinitions(org.springframework.beans.factory.support.DefaultListableBeanFactory)\"><code>loadBeanDefinitions(DefaultListableBeanFactory)</code></a>，该方法在每次刷新时都会被调用。具体实现应该将 bean 定义加载到给定的 <a href=\"../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a> 中，通常通过委托给一个或多个特定的 bean 定义读取器来实现。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation applies this context's\n<a href=\"#setAllowBeanDefinitionOverriding(boolean)\">\"allowBeanDefinitionOverriding\"</a>\nand <a href=\"#setAllowCircularReferences(boolean)\">\"allowCircularReferences\"</a> settings,\nif specified. Can be overridden in subclasses to customize any of\n<a href=\"../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>'s settings.",
+      "translation": "默认实现会应用此上下文中指定的 <a href=\"#setAllowBeanDefinitionOverriding(boolean)\">\"allowBeanDefinitionOverriding\"</a> 和 <a href=\"#setAllowCircularReferences(boolean)\">\"allowCircularReferences\"</a> 设置。可以在子类中重写它以自定义任何 <a href=\"../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a> 的设置。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note that there is a similar base class for WebApplicationContexts.</b>\n<a href=\"../../web/context/support/AbstractRefreshableWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>AbstractRefreshableWebApplicationContext</code></a>\nprovides the same subclassing strategy, but additionally pre-implements\nall context functionality for web environments. There is also a\npre-defined way to receive config locations for a web context.",
+      "translation": "<b>请注意，WebApplicationContext 也有一个类似的基类。</b>\n<a href=\"../../web/context/support/AbstractRefreshableWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>AbstractRefreshableWebApplicationContext</code></a>\n提供了相同的子类化策略，但此外还预先实现了所有针对 Web 环境的功能。此外，还有一种预定义的方式来接收 Web 环境的配置位置。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation creates a\n<a href=\"../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>\nwith the <a href=\"AbstractApplicationContext.html#getInternalParentBeanFactory()\">internal bean factory</a> of this\ncontext's parent as parent bean factory. Can be overridden in subclasses,\nfor example to customize DefaultListableBeanFactory's settings.",
+      "translation": "默认实现会创建一个`<a href=\"../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a>`，其父 bean 工厂为上下文的父对象的<a href=\"AbstractApplicationContext.html#getInternalParentBeanFactory()\">内部 bean 工厂</a>。可在子类中重写此方法，例如用于自定义`DefaultListableBeanFactory`的设置。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractApplicationContext.html#cancelRefresh(java.lang.Throwable)\">AbstractApplicationContext</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractApplicationContext.html#cancelRefresh(java.lang.Throwable)\">AbstractApplicationContext</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractApplicationContext.html#closeBeanFactory()\">AbstractApplicationContext</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractApplicationContext.html#closeBeanFactory()\">AbstractApplicationContext</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractApplicationContext.html#getBeanFactory()\">AbstractApplicationContext</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractApplicationContext.html#getBeanFactory()\">AbstractApplicationContext</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Cancel this context's refresh attempt, resetting the <code>active</code> flag\nafter an exception got thrown.",
+      "translation": "取消此上下文的刷新尝试，在抛出异常后重置 `<code>active</code>` 标志。",
+      "count": 2
+    },
+    {
+      "source": "Create a new AbstractRefreshableApplicationContext with no parent.",
+      "translation": "创建一个没有父类的新的 `AbstractRefreshableApplicationContext`。",
+      "count": 2
+    },
+    {
+      "source": "Create a new AbstractRefreshableApplicationContext with the given parent context.",
+      "translation": "使用给定的父上下文创建一个新的 `AbstractRefreshableApplicationContext`。",
+      "count": 2
+    },
+    {
+      "source": "Load bean definitions into the given bean factory, typically through\ndelegating to one or more bean definition readers.",
+      "translation": "将 Bean 定义加载到给定的 BeanFactory 中，通常通过委托给一个或多个 Bean 定义读取器来实现。",
+      "count": 2
+    },
+    {
+      "source": "This implementation performs an actual refresh of this context's underlying\nbean factory, shutting down the previous bean factory (if any) and\ninitializing a fresh bean factory for the next phase of the context's lifecycle.",
+      "translation": "此实现会实际刷新该上下文的基础 Bean 工厂，关闭之前的 Bean 工厂（如果有），并为上下文的下一个生命周期阶段初始化一个新的 Bean 工厂。",
+      "count": 2
+    },
+    {
+      "source": "Set whether it should be allowed to override bean definitions by registering\na different definition with the same name, automatically replacing the former.\nIf not, an exception will be thrown. Default is \"true\".",
+      "translation": "设置是否允许通过注册具有相同名称的不同定义来覆盖 Bean 定义，从而自动替换前者。如果不允许，将抛出异常。默认值为\"true\"。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether this context currently holds a bean factory,\ni.e. has been refreshed at least once and not been closed yet.",
+      "translation": "确定当前上下文是否持有 BeanFactory，即是否至少刷新过一次且尚未关闭。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractApplicationContext.html#refreshBeanFactory()\">refreshBeanFactory</a></code> in class <code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>",
+      "translation": "`<code><a href=\"AbstractApplicationContext.html#refreshBeanFactory()\">refreshBeanFactory</a></code>` 类中的 `<code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractApplicationContext.html#cancelRefresh(java.lang.Throwable)\">cancelRefresh</a></code> in class <code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>",
+      "translation": "`<code><a href=\"AbstractApplicationContext.html#cancelRefresh(java.lang.Throwable)\">cancelRefresh</a></code>` 类中的 `<code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractApplicationContext.html#closeBeanFactory()\">closeBeanFactory</a></code> in class <code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>",
+      "translation": "`<code><a href=\"AbstractApplicationContext.html#closeBeanFactory()\">closeBeanFactory</a></code>` 类中的 `<code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractApplicationContext.html#getBeanFactory()\">getBeanFactory</a></code> in class <code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>",
+      "translation": "`<code><a href=\"AbstractApplicationContext.html#getBeanFactory()\">getBeanFactory</a></code>` 类中的 `<code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractApplicationContext.html#assertBeanFactoryActive()\">assertBeanFactoryActive</a></code> in class <code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>",
+      "translation": "`<code><a href=\"AbstractApplicationContext.html#assertBeanFactoryActive()\">assertBeanFactoryActive</a></code>` 类中的 `<code><a href=\"AbstractApplicationContext.html\" title=\"class in org.springframework.context.support\">AbstractApplicationContext</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - if parsing of the bean definitions failed",
+      "translation": "<code><a href=\"../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 如果 Bean 定义解析失败",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - if loading of bean definition files failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - 如果加载 Bean 定义文件失败",
+      "count": 2
+    },
+    {
+      "source": "<code>beanFactory</code> - the newly created bean factory for this context",
+      "translation": "<code>beanFactory</code> - 为此上下文新创建的 BeanFactory",
+      "count": 2
+    },
+    {
+      "source": "the bean factory for this context",
+      "translation": "该上下文的 BeanFactory",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\". Turn this off to throw an exception when encountering\na circular reference, disallowing them completely.",
+      "translation": "默认为\"true\"。将其关闭以在遇到循环引用时抛出异常，从而完全禁止它们。",
+      "count": 1
+    },
+    {
+      "source": "Should never throw an exception but rather log shutdown failures.",
+      "translation": "不应抛出异常，而应记录关闭失败信息。",
+      "count": 1
+    },
+    {
+      "source": "Note: Subclasses should check whether the context is still active before\nreturning the internal bean factory. The internal factory should generally be\nconsidered unavailable once the context has been closed.",
+      "translation": "注意：子类在返回内部 Bean 工厂之前，应检查上下文是否仍然处于活动状态。一旦上下文已关闭，通常应认为该内部工厂不可用。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses must implement this method to release their internal bean factory.",
+      "translation": "子类必须实现此方法以释放其内部 Bean 工厂。",
+      "count": 1
+    },
+    {
+      "source": "Create an internal bean factory for this context.",
+      "translation": "为此上下文创建一个内部 BeanFactory。",
+      "count": 1
+    },
+    {
+      "source": "Customize the internal bean factory used by this context.",
+      "translation": "自定义此上下文使用的内部 BeanFactory。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses must return their internal bean factory here.",
+      "translation": "子类必须在此处返回其内部 Bean 工厂。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether this context currently holds a bean factory,\ni.e.",
+      "translation": "确定当前上下文是否持有 BeanFactory，即",
+      "count": 1
+    },
+    {
+      "source": "Set whether it should be allowed to override bean definitions by registering\na different definition with the same name, automatically replacing the former.",
+      "translation": "设置是否允许通过注册具有相同名称的不同定义来覆盖 Bean 定义，从而自动替换前者。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to allow circular references between beans - and automatically\ntry to resolve them.",
+      "translation": "设置是否允许 Bean 之间的循环引用，并自动尝试解析它们。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ConfigurableApplicationContext.html#getBeanFactory()\">getBeanFactory</a></code> in interface <code><a href=\"../ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\">ConfigurableApplicationContext</a></code>",
+      "translation": "`<code><a href=\"../ConfigurableApplicationContext.html#getBeanFactory()\">getBeanFactory</a></code>` 接口 `<code><a href=\"../ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\">ConfigurableApplicationContext</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - if initialization of the bean factory failed",
+      "translation": "<code><a href=\"../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 如果 Bean 工厂初始化失败",
+      "count": 1
+    },
+    {
+      "source": "<code>parent</code> - the parent context",
+      "translation": "<code>parent</code> - 父上下文",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the exception that led to the cancellation",
+      "translation": "<code>ex</code> - 导致取消的异常",
+      "count": 1
+    },
+    {
+      "source": "this application context's internal bean factory (never <code>null</code>)",
+      "translation": "该应用程序上下文的内部 Bean 工厂（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - the bean factory to load bean definitions into",
+      "translation": "<code>beanFactory</code> - 用于加载 Bean 定义的 Bean Factory",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Chris Beams",
+      "translation": "Jürgen Hoeller，Chris Beams",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

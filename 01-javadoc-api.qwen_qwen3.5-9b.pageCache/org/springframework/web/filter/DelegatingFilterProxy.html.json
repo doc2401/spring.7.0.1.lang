@@ -1,0 +1,296 @@
+{
+  "created_at": "2026-04-14 18:43:46",
+  "updated_at": "2026-04-14 18:43:46",
+  "stats": {
+    "total_entries": 56,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 106,
+    "entries_with_hits": 56,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8928571428571428,
+    "usage_percentage": 0.0056
+  },
+  "items": [
+    {
+      "source": "For use with instance-based registration of filters.",
+      "translation": "用于基于实例的过滤器注册。",
+      "count": 4
+    },
+    {
+      "source": "The target bean must implement the standard Servlet Filter interface.",
+      "translation": "目标 Bean 必须实现标准的 Servlet Filter 接口。",
+      "count": 3
+    },
+    {
+      "source": "Return the name of the ServletContext attribute which should be used to retrieve the\n<a href=\"../context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a> from which to load the delegate <code>Filter</code> bean.",
+      "translation": "返回用于从其中加载委托 `<code>Filter</code>`  Bean 的 ServletContext 属性的名称，以检索该<a href=\"../context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Set the name of the ServletContext attribute which should be used to retrieve the\n<a href=\"../context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a> from which to load the delegate <code>Filter</code> bean.",
+      "translation": "设置用于从其中加载委托 `<code>Filter</code>`  Bean 的 `<code>WebApplicationContext</code>`（<a href=\"../context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\">org.springframework.web.context.WebApplicationContext</a> 接口）的 ServletContext 属性名称。",
+      "count": 3
+    },
+    {
+      "source": "<code>jakarta.servlet.ServletException</code> - if thrown by the Filter",
+      "translation": "<code>jakarta.servlet.ServletException</code> - 如果由 Filter 抛出",
+      "count": 3
+    },
+    {
+      "source": "The given <code>WebApplicationContext</code> may or may not be refreshed when passed\nin. If it has not, and if the context implements <a href=\"../../context/ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a>,\na <a href=\"../../context/ConfigurableApplicationContext.html#refresh()\"><code>refresh()</code></a> will be attempted before\nretrieving the named target bean.",
+      "translation": "给定的 `<code>WebApplicationContext` 在传入时可能已刷新，也可能未刷新。如果尚未刷新，且该上下文实现了 <a href=\"../../context/ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a>，则在检索命名目标 Bean 之前将尝试调用 <a href=\"../../context/ConfigurableApplicationContext.html#refresh()\"><code>refresh()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> The lifecycle methods defined by the Servlet Filter interface\nwill by default <i>not</i> be delegated to the target bean, relying on the\nSpring application context to manage the lifecycle of that bean. Specifying\nthe \"targetFilterLifecycle\" filter init-param as \"true\" will enforce invocation\nof the <code>Filter.init(jakarta.servlet.FilterConfig)</code> and\n<code>Filter.destroy()</code> lifecycle methods on the target bean, letting the\nServlet container manage the filter lifecycle.",
+      "translation": "<b>注意：</b> 由 Servlet Filter 接口定义的生命周期方法默认<i>不会</i>委派给目标 Bean，而是依赖 Spring 应用程序上下文来管理该 Bean 的生命周期。将 \"targetFilterLifecycle\" 过滤器初始化参数指定为 \"true\" 将强制在目标 Bean 上调用 <code>Filter.init(jakarta.servlet.FilterConfig)</code> 和 <code>Filter.destroy()</code> 生命周期方法，从而让 Servlet 容器管理过滤器生命周期。",
+      "count": 2
+    },
+    {
+      "source": "<code>web.xml</code> will usually contain a <code>DelegatingFilterProxy</code> definition,\nwith the specified <code>filter-name</code> corresponding to a bean name in\nSpring's root application context. All calls to the filter proxy will then\nbe delegated to that bean in the Spring context, which is required to implement\nthe standard Servlet Filter interface.",
+      "translation": "`web.xml` 通常包含一个 `<code>DelegatingFilterProxy</code>` 定义，其中指定的 `<code>filter-name</code>` 对应于 Spring 根应用程序上下文中的 bean 名称。随后对过滤器代理的所有调用都将被委托给 Spring 上下文中的该 bean，而该 bean 必须实现标准的 Servlet Filter 接口。",
+      "count": 2
+    },
+    {
+      "source": "<code>DelegatingFilterProxy</code> can optionally accept constructor parameters\nwhen using a Servlet container's instance-based filter registration methods,\nusually in conjunction with Spring's\n<a href=\"../WebApplicationInitializer.html\" title=\"interface in org.springframework.web\"><code>WebApplicationInitializer</code></a> SPI. These constructors allow\nfor providing the delegate Filter bean directly, or providing the application context\nand bean name to fetch, avoiding the need to look up the application context from the\nServletContext.",
+      "translation": "<code>DelegatingFilterProxy</code> 在使用 Servlet 容器的基于实例的过滤器注册方法时，可选地接受构造函数参数，通常与 Spring 的 <a href=\"../WebApplicationInitializer.html\" title=\"interface in org.springframework.web\"><code>WebApplicationInitializer</code></a> SPI 结合使用。这些构造函数允许直接提供委托 Filter  Bean，或提供应用程序上下文和要获取的 Bean 名称，从而避免从 ServletContext 中查找应用程序上下文的需要。",
+      "count": 2
+    },
+    {
+      "source": "This proxy's <code>Environment</code> will be inherited from the given\n<code>WebApplicationContext</code>.",
+      "translation": "此代理的 `<code>Environment</code>` 将从给定的 `<code>WebApplicationContext</code>` 继承。",
+      "count": 2
+    },
+    {
+      "source": "By default, the <code>filter-name</code> as specified for the\nDelegatingFilterProxy in <code>web.xml</code> will be used.",
+      "translation": "默认情况下，将使用在 `<code>web.xml</code>` 中为 DelegatingFilterProxy 指定的 `<code>filter-name</code>`。",
+      "count": 2
+    },
+    {
+      "source": "This class was originally inspired by Spring Security's <code>FilterToBeanProxy</code>\nclass, written by Ben Alex.",
+      "translation": "该类最初受 Ben Alex 编写的 Spring Security 的 `<code>FilterToBeanProxy</code>` 类启发。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses may override this method to provide a different\n<code>WebApplicationContext</code> retrieval strategy.",
+      "translation": "子类可以重写此方法以提供不同的 <code>WebApplicationContext</code> 获取策略。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation fetches the bean from the application context\nand calls the standard <code>Filter.init</code> method on it, passing\nin the FilterConfig of this Filter proxy.",
+      "translation": "默认实现从应用程序上下文中获取该 Bean，并调用其标准的 `<code>Filter.init</code>` 方法，传入此 Filter 代理的 FilterConfig。",
+      "count": 2
+    },
+    {
+      "source": "This approach is particularly useful for Filter implementations with complex\nsetup needs, allowing to apply the full Spring bean definition machinery to\nFilter instances. Alternatively, consider standard Filter setup in combination\nwith looking up service beans from the Spring root application context.",
+      "translation": "这种方法对于具有复杂配置需求的 Filter 实现特别有用，允许将完整的 Spring Bean 定义机制应用于 Filter 实例。或者，可以考虑使用标准的 Filter 配置方式，并结合从 Spring 根应用程序上下文中查找服务 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\"; target beans usually rely on the Spring application\ncontext for managing their lifecycle. Setting this flag to \"true\" means\nthat the servlet container will control the lifecycle of the target\nFilter, with this proxy delegating the corresponding calls.",
+      "translation": "默认为 \"false\"；目标 Bean 通常依赖 Spring 应用程序上下文来管理其生命周期。将此标志设置为 \"true\" 意味着 Servlet 容器将控制目标 Filter 的生命周期，而该代理将委托相应的调用。",
+      "count": 2
+    },
+    {
+      "source": "Note: This method will be called from standard filter initialization\nas well as filter bean initialization in a Spring application context.\nFilter name and ServletContext will be available in both cases.",
+      "translation": "注意：此方法将在标准过滤器初始化以及 Spring 应用程序上下文中的过滤器 Bean 初始化时调用。在这两种情况下，均可获取过滤器名称和 ServletContext。",
+      "count": 2
+    },
+    {
+      "source": "This default implementation is empty.",
+      "translation": "该默认实现为空。",
+      "count": 2
+    },
+    {
+      "source": "Note: This method will be called from standard filter destruction\nas well as filter bean destruction in a Spring application context.",
+      "translation": "注意：此方法将从标准过滤器销毁以及 Spring 应用上下文中的过滤器 Bean 销毁中调用。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>DelegatingFilterProxy</code> that will retrieve the named target\nbean from the Spring <code>WebApplicationContext</code> found in the <code>ServletContext</code>\n(either the 'root' application context or the context named by\n<a href=\"#setContextAttribute(java.lang.String)\"><code>setContextAttribute(String)</code></a>).",
+      "translation": "创建一个新的<code>DelegatingFilterProxy</code>，该代理将从位于<code>ServletContext</code>中的 Spring <code>WebApplicationContext</code>（即“root”应用程序上下文或由<a href=\"#setContextAttribute(java.lang.String)\"><code>setContextAttribute(String)</code></a>指定的上下文）检索命名目标 bean。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"GenericFilterBean.html#initFilterBean()\">GenericFilterBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"GenericFilterBean.html#initFilterBean()\">GenericFilterBean</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"GenericFilterBean.html#destroy()\">GenericFilterBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"GenericFilterBean.html#destroy()\">GenericFilterBean</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return whether to invoke the <code>Filter.init</code> and\n<code>Filter.destroy</code> lifecycle methods on the target bean.",
+      "translation": "返回是否要在目标 Bean 上调用 `<code>Filter.init</code>` 和 `<code>Filter.destroy</code>` 生命周期方法。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>DelegatingFilterProxy</code>. For traditional use in <code>web.xml</code>.",
+      "translation": "创建一个新的<code>DelegatingFilterProxy</code>，用于在<code>web.xml</code>中的传统使用。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the Filter delegate.\nDefault implementation simply calls <code>Filter.destroy</code> on it.",
+      "translation": "销毁 Filter 委托。默认实现简单地调用其上的 `<code>Filter.destroy</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the target bean in the Spring application context.",
+      "translation": "返回 Spring 应用程序上下文中目标 Bean 的名称。",
+      "count": 2
+    },
+    {
+      "source": "Actually invoke the delegate Filter with the given request and response.",
+      "translation": "实际上调用给定的请求和响应中的委托过滤器。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"GenericFilterBean.html#initFilterBean()\">initFilterBean</a></code> in class <code><a href=\"GenericFilterBean.html\" title=\"class in org.springframework.web.filter\">GenericFilterBean</a></code>",
+      "translation": "`<code><a href=\"GenericFilterBean.html#initFilterBean()\">initFilterBean</a></code>` 类中的 `<code><a href=\"GenericFilterBean.html\" title=\"class in org.springframework.web.filter\">GenericFilterBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"GenericFilterBean.html#destroy()\">destroy</a></code> in class <code><a href=\"GenericFilterBean.html\" title=\"class in org.springframework.web.filter\">GenericFilterBean</a></code>",
+      "translation": "`<code><a href=\"GenericFilterBean.html#destroy()\">destroy</a></code>` 在类 `<code><a href=\"GenericFilterBean.html\" title=\"class in org.springframework.web.filter\">GenericFilterBean</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>delegate</code> - the <code>Filter</code> instance that this proxy will delegate to and\nmanage the lifecycle for (must not be <code>null</code>).",
+      "translation": "<code>delegate</code> - 此代理将委托并管理其生命周期的 <code>Filter</code> 实例（不能为 <code>null</code>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>wac</code> - the application context from which the target filter will be retrieved;\nif <code>null</code>, an application context will be looked up from <code>ServletContext</code>\nas a fallback.",
+      "translation": "`wac` - 用于检索目标过滤器（filter）的应用程序上下文；如果为 `null`，则从 `ServletContext` 中查找应用程序上下文作为后备。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetBeanName</code> - name of the target filter bean to look up in the Spring\napplication context (must not be <code>null</code>).",
+      "translation": "<code>targetBeanName</code> - 要在 Spring 应用程序上下文中查找的目标过滤器 Bean 的名称（不能为 <code>null</code>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetBeanName</code> - name of the target filter bean in the Spring application\ncontext (must not be <code>null</code>).",
+      "translation": "<code>targetBeanName</code> - Spring 应用程序中目标过滤器 Bean 的名称（不能为 <code>null</code>）。",
+      "count": 2
+    },
+    {
+      "source": "the <code>WebApplicationContext</code> for this proxy, or <code>null</code> if not found",
+      "translation": "此代理的 <code>WebApplicationContext</code>，如果未找到则为 <code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - if thrown by the Filter",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"java.io 中的类或接口\">IOException</a></code> - 如果由过滤器抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>delegate</code> - the Filter delegate (never <code>null</code>)",
+      "translation": "<code>delegate</code> - 过滤器委托（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.servlet.ServletException</code> - if subclass initialization fails",
+      "translation": "<code>jakarta.servlet.ServletException</code> - 如果子类初始化失败",
+      "count": 2
+    },
+    {
+      "source": "<code>wac</code> - the root application context",
+      "translation": "<wac> - 根应用程序上下文",
+      "count": 2
+    },
+    {
+      "source": "<code>delegate</code> - the delegate Filter",
+      "translation": "<code>delegate</code> - 委托过滤器",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the current HTTP request",
+      "translation": "<code>request</code> - 当前的 HTTP 请求",
+      "count": 2
+    },
+    {
+      "source": "<code>response</code> - the current HTTP response",
+      "translation": "<code>response</code> - 当前的 HTTP 响应",
+      "count": 2
+    },
+    {
+      "source": "<code>filterChain</code> - the current FilterChain",
+      "translation": "<code>filterChain</code> - 当前的 FilterChain",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen, Chris Beams",
+      "translation": "Juergen Hoeller, Sam Brannen, Chris Beams",
+      "count": 2
+    },
+    {
+      "source": "the initialized delegate Filter",
+      "translation": "已初始化的委托过滤器",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>DelegatingFilterProxy</code> with the given <code>Filter</code> delegate.",
+      "translation": "创建一个新的带有给定<code>Filter</code>委托的<code>DelegatingFilterProxy</code>。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <code>DelegatingFilterProxy</code> that will retrieve the named target\nbean from the given Spring <code>WebApplicationContext</code>.",
+      "translation": "创建一个新的<code>DelegatingFilterProxy</code>，它将从给定的 Spring <code>WebApplicationContext</code> 中检索命名的目标 bean。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to invoke the <code>Filter.init</code> and\n<code>Filter.destroy</code> lifecycle methods on the target bean.",
+      "translation": "设置是否要在目标 Bean 上调用 `<code>Filter.init</code>` 和 `<code>Filter.destroy</code>` 生命周期方法。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <code>DelegatingFilterProxy</code>.",
+      "translation": "创建一个新的<code>DelegatingFilterProxy</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the <code>WebApplicationContext</code> passed in at construction time, if available.",
+      "translation": "返回构造时传入的<code>WebApplicationContext</code>（如果可用）。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses may override this to perform custom filter shutdown.",
+      "translation": "子类可以重写此方法以执行自定义的过滤器关闭操作。",
+      "count": 1
+    },
+    {
+      "source": "Destroy the Filter delegate.",
+      "translation": "销毁 Filter 委托。",
+      "count": 1
+    },
+    {
+      "source": "Initialize the Filter delegate, defined as bean the given Spring\napplication context.",
+      "translation": "初始化由给定 Spring 应用程序上下文定义的 Filter 委托。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses may override this to perform custom initialization.",
+      "translation": "子类可以重写此方法以执行自定义初始化。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the target bean in the Spring application context.",
+      "translation": "在 Spring 应用程序上下文中设置目标 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>destroy</code> in interface <code>jakarta.servlet.Filter</code>",
+      "translation": "<code>destroy</code> 在接口 <code>jakarta.servlet.Filter</code> 中",
+      "count": 1
+    }
+  ]
+}

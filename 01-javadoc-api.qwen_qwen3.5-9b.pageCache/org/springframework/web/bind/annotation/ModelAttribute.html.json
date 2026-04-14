@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-04-14 18:17:45",
+  "updated_at": "2026-04-14 18:17:45",
+  "stats": {
+    "total_entries": 12,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 18,
+    "entries_with_hits": 12,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0012000000000000001
+  },
+  "items": [
+    {
+      "source": "<code>@ModelAttribute</code> can also be used to expose reference data to a web\nview by annotating accessor methods in a controller class with\n<a href=\"RequestMapping.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RequestMapping</code></a> methods. Such accessor\nmethods are allowed to have any arguments that\n<a href=\"RequestMapping.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RequestMapping</code></a> methods support, returning\nthe model attribute value to expose.",
+      "translation": "`@ModelAttribute` 也可用于通过注解控制器类中的访问器方法来向 Web 视图暴露引用数据，这些访问器方法使用支持 `<a href=\"RequestMapping.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RequestMapping</code></a>` 方法的注解。此类访问器方法可以拥有 `<a href=\"RequestMapping.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RequestMapping</code></a>` 方法支持的任何参数，并返回要暴露的模型属性值。",
+      "count": 2
+    },
+    {
+      "source": "Note however that reference data and all other model content are\nnot available to web views when request processing results in an\n<code>Exception</code> since the exception could be raised at any time\nmaking the content of the model unreliable. For this reason\n<a href=\"ExceptionHandler.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@ExceptionHandler</code></a> methods do not provide\naccess to a <a href=\"../../../ui/Model.html\" title=\"interface in org.springframework.ui\"><code>Model</code></a> argument.",
+      "translation": "不过请注意，当请求处理导致抛出 `<code>Exception</code>` 时，引用数据及其他所有模型内容对 Web 视图均不可用，因为异常可能在任何时刻被抛出，从而导致模型内容不可靠。因此，<a href=\"ExceptionHandler.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@ExceptionHandler</code></a> 方法不提供 `<code>Model</code>` 参数的访问权限。",
+      "count": 2
+    },
+    {
+      "source": "<code>@ModelAttribute</code> can be used to expose command objects to a web view,\nusing specific attribute names, by annotating corresponding parameters of an\n<a href=\"RequestMapping.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RequestMapping</code></a> method.",
+      "translation": "<code>@ModelAttribute</code> 可用于通过注解 <a href=\"RequestMapping.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@RequestMapping</code></a> 方法的相应参数，使用特定的属性名将命令对象暴露给 Web 视图。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to <code>true</code> in which case data binding applies.\nSet this to <code>false</code> to disable data binding.",
+      "translation": "默认情况下，此值设置为 `<code>true</code>`，此时会应用数据绑定。将其设置为 `<code>false</code>` 可禁用数据绑定。",
+      "count": 2
+    },
+    {
+      "source": "The default model attribute name is inferred from the declared\nattribute type (i.e. the method parameter type or method return type),\nbased on the non-qualified class name:\nfor example, \"orderAddress\" for class \"mypackage.OrderAddress\",\nor \"orderAddressList\" for \"List&lt;mypackage.OrderAddress&gt;\".",
+      "translation": "默认模型属性名称是根据声明的属性类型（即方法参数类型或方法返回类型）推断得出的，基于非限定类名：例如，对于类 \"mypackage.OrderAddress\" 为 \"orderAddress\"，或者对于 \"List&lt;mypackage.OrderAddress&gt;\" 为 \"orderAddressList\"。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#name()\"><code>name()</code></a>.",
+      "translation": "`<a href=\"#name()\"><code>name()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: Data binding can lead to security issues by exposing\nparts of the object graph that are not meant to be accessed or modified by\nexternal clients. Therefore the design and use of data binding should be considered\ncarefully with regard to security. For more details, please refer to the dedicated\nsections on data binding for\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder-model-design\">Spring Web MVC</a> and\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-ann-initbinder-model-design\">Spring WebFlux</a>\nin the reference manual.",
+      "translation": "<strong>警告：</strong> 数据绑定可能导致安全问题，因为它会暴露外部客户端不应访问或修改的对象图部分。因此，在设计和使用数据绑定时应仔细考虑安全性问题。有关详细信息，请参阅参考手册中关于 Spring Web MVC 和 Spring WebFlux 的数据绑定专用章节：\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder-model-design\">Spring Web MVC</a> 和\n<a href=\"https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-ann-initbinder-model-design\">Spring WebFlux</a>。",
+      "count": 1
+    },
+    {
+      "source": "Allows data binding to be disabled directly on an <code>@ModelAttribute</code>\nmethod parameter or on the attribute returned from an <code>@ModelAttribute</code>\nmethod, both of which would prevent data binding for that attribute.",
+      "translation": "允许直接在 `<code>@ModelAttribute</code>` 方法参数或从 `<code>@ModelAttribute</code>` 方法返回的属性上禁用数据绑定，这两种方式都会阻止对该属性的数据绑定。",
+      "count": 1
+    },
+    {
+      "source": "The name of the model attribute to bind to.",
+      "translation": "要绑定的模型属性名称。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rossen Stoyanchev, Sebastien Deleuze",
+      "translation": "Juergen Hoeller, Rossen Stoyanchev, Sebastien Deleuze",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

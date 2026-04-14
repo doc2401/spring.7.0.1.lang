@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-14 10:27:59",
+  "updated_at": "2026-04-14 10:27:59",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 35,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5217391304347827,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Note: Only called for regular bean instances but not for existing\nproxy instances which implement <a href=\"../Advised.html\" title=\"interface in org.springframework.aop.framework\"><code>Advised</code></a> and allow for adding\nthe local <a href=\"../../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisor</code></a> to the existing proxy's <a href=\"../../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisor</code></a> chain.\nFor the latter, <a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Class)\"><code>AbstractAdvisingBeanPostProcessor.isEligible(Class)</code></a> is being called directly,\nwith the actual target class behind the existing proxy (as determined\nby <a href=\"../../support/AopUtils.html#getTargetClass(java.lang.Object)\"><code>AopUtils.getTargetClass(Object)</code></a>).",
+      "translation": "注意：此方法仅针对普通 Bean 实例调用，而不适用于实现<a href=\"../Advised.html\" title=\"interface in org.springframework.aop.framework\"><code>Advised</code></a>接口并允许将本地<a href=\"../../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisor</code></a>添加到现有代理的<a href=\"../../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisor</code></a>链中的现有代理实例。对于后者，会直接调用<a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Class)\"><code>AbstractAdvisingBeanPostProcessor.isEligible(Class)</code></a>，其实际目标类为现有代理背后的类（由<a href=\"../../support/AopUtils.html#getTargetClass(java.lang.Object)\"><code>AopUtils.getTargetClass(Object)</code></a>确定）。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses may customize the handling of the target instance and in\nparticular the exposure of the target class. The default introspection\nof interfaces for non-target-class proxies and the configured advisor\nwill be applied afterwards; <a href=\"../AbstractAdvisingBeanPostProcessor.html#customizeProxyFactory(org.springframework.aop.framework.ProxyFactory)\"><code>AbstractAdvisingBeanPostProcessor.customizeProxyFactory(ProxyFactory)</code></a> allows for\nlate customizations of those parts right before proxy creation.",
+      "translation": "子类可以自定义目标实例的处理方式，特别是目标类的暴露方式。随后将应用非目标类代理的接口默认内省以及配置的顾问；<a href=\"../AbstractAdvisingBeanPostProcessor.html#customizeProxyFactory(org.springframework.aop.framework.ProxyFactory)\"><code>AbstractAdvisingBeanPostProcessor.customizeProxyFactory(ProxyFactory)</code></a> 允许在代理创建之前对这些部分进行后期自定义。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Class)\"><code>AbstractAdvisingBeanPostProcessor.isEligible(Class)</code></a> for target class checking.\nCan be overridden, for example, to specifically exclude certain beans by name.",
+      "translation": "委托给 <a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Class)\"><code>AbstractAdvisingBeanPostProcessor.isEligible(Class)</code></a> 进行目标类检查。可以重写此方法，例如专门通过名称排除某些 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Extension of <a href=\"../AbstractAdvisingBeanPostProcessor.html\" title=\"class in org.springframework.aop.framework\"><code>AbstractAdvisingBeanPostProcessor</code></a> which implements\n<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, adds exposure of the original target class for each\nproxied bean (<a href=\"AutoProxyUtils.html#ORIGINAL_TARGET_CLASS_ATTRIBUTE\"><code>AutoProxyUtils.ORIGINAL_TARGET_CLASS_ATTRIBUTE</code></a>),\nand participates in an externally enforced target-class mode for any given bean\n(<a href=\"AutoProxyUtils.html#PRESERVE_TARGET_CLASS_ATTRIBUTE\"><code>AutoProxyUtils.PRESERVE_TARGET_CLASS_ATTRIBUTE</code></a>).\nThis post-processor is therefore aligned with <a href=\"AbstractAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>AbstractAutoProxyCreator</code></a>.",
+      "translation": "扩展了实现<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>的<a href=\"../AbstractAdvisingBeanPostProcessor.html\" title=\"class in org.springframework.aop.framework\"><code>AbstractAdvisingBeanPostProcessor</code></a>，为每个代理bean暴露原始目标类（<a href=\"AutoProxyUtils.html#ORIGINAL_TARGET_CLASS_ATTRIBUTE\"><code>AutoProxyUtils.ORIGINAL_TARGET_CLASS_ATTRIBUTE</code></a>），并参与任何给定bean的外部强制目标类模式（<a href=\"AutoProxyUtils.html#PRESERVE_TARGET_CLASS_ATTRIBUTE\"><code>AutoProxyUtils.PRESERVE_TARGET_CLASS_ATTRIBUTE</code></a>）。因此，该后置处理器与<a href=\"AbstractAutoProxyCreator.html\" title=\"class in org.springframework.aop.framework.autoproxy\"><code>AbstractAutoProxyCreator</code></a>保持一致。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../AbstractAdvisingBeanPostProcessor.html#prepareProxyFactory(java.lang.Object,java.lang.String)\">AbstractAdvisingBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../AbstractAdvisingBeanPostProcessor.html#prepareProxyFactory(java.lang.Object,java.lang.String)\">AbstractAdvisingBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Object,java.lang.String)\">AbstractAdvisingBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Object,java.lang.String)\">AbstractAdvisingBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Check whether the given bean is eligible for advising with this\npost-processor's <a href=\"../../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisor</code></a>.",
+      "translation": "检查给定的 Bean 是否可以通过此后置处理器的<a href=\"../../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisor</code></a>进行增强。",
+      "count": 2
+    },
+    {
+      "source": "Prepare a <a href=\"../ProxyFactory.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactory</code></a> for the given bean.",
+      "translation": "为给定的 Bean 准备一个<a href=\"../ProxyFactory.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"AutoProxyUtils.html#shouldProxyTargetClass(org.springframework.beans.factory.config.ConfigurableListableBeanFactory,java.lang.String)\"><code>AutoProxyUtils.shouldProxyTargetClass(ConfigurableListableBeanFactory, String)</code></a></li>\n<li><a href=\"AutoProxyUtils.html#determineTargetClass(org.springframework.beans.factory.config.ConfigurableListableBeanFactory,java.lang.String)\"><code>AutoProxyUtils.determineTargetClass(ConfigurableListableBeanFactory, String)</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"AutoProxyUtils.html#shouldProxyTargetClass(org.springframework.beans.factory.config.ConfigurableListableBeanFactory,java.lang.String)\"><code>AutoProxyUtils.shouldProxyTargetClass(ConfigurableListableBeanFactory, String)</code></a></li>\n<li><a href=\"AutoProxyUtils.html#determineTargetClass(org.springframework.beans.factory.config.ConfigurableListableBeanFactory,java.lang.String)\"><code>AutoProxyUtils.determineTargetClass(ConfigurableListableBeanFactory, String)</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor\">序列化形式</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../AbstractAdvisingBeanPostProcessor.html#prepareProxyFactory(java.lang.Object,java.lang.String)\">prepareProxyFactory</a></code> in class <code><a href=\"../AbstractAdvisingBeanPostProcessor.html\" title=\"class in org.springframework.aop.framework\">AbstractAdvisingBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../AbstractAdvisingBeanPostProcessor.html#prepareProxyFactory(java.lang.Object,java.lang.String)\">prepareProxyFactory</a></code>` 类中的 `<code><a href=\"../AbstractAdvisingBeanPostProcessor.html\" title=\"class in org.springframework.aop.framework\">AbstractAdvisingBeanPostProcessor</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Object,java.lang.String)\">isEligible</a></code> in class <code><a href=\"../AbstractAdvisingBeanPostProcessor.html\" title=\"class in org.springframework.aop.framework\">AbstractAdvisingBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../AbstractAdvisingBeanPostProcessor.html#isEligible(java.lang.Object,java.lang.String)\">isEligible</a></code>` 在类 `<code><a href=\"../AbstractAdvisingBeanPostProcessor.html\" title=\"class in org.springframework.aop.framework\">AbstractAdvisingBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "the ProxyFactory, initialized with this processor's\n<a href=\"../ProxyConfig.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyConfig</code></a> settings and the specified bean",
+      "translation": "由该处理器的<a href=\"../ProxyConfig.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyConfig</code></a>配置和指定的 bean 初始化的 ProxyFactory。",
+      "count": 2
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance to create a proxy for",
+      "translation": "<code>bean</code> - 要为其创建代理的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - the corresponding bean name",
+      "translation": "<code>beanName</code> - 对应的 Bean 名称",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance",
+      "translation": "<code>bean</code> - 该 Bean 实例",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

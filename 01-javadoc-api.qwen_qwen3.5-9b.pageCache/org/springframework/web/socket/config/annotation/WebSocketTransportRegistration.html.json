@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 20:23:52",
+  "updated_at": "2026-04-14 20:23:52",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9583333333333333,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "Protected accessor for internal use.",
+      "translation": "用于内部访问的受保护访问器。",
+      "count": 8
+    },
+    {
+      "source": "In general WebSocket servers expect that messages to a single WebSocket\nsession are sent from a single thread at a time. This is automatically\nguaranteed when using <code>@EnableWebSocketMessageBroker</code> configuration.\nIf message sending is slow, or at least slower than rate of messages sending,\nsubsequent messages are buffered until either the <code>sendTimeLimit</code>\nor the <code>sendBufferSizeLimit</code> are reached at which point the session\nstate is cleared and an attempt is made to close the session.",
+      "translation": "通常，WebSocket 服务器期望单个 WebSocket 会话的消息由单个线程依次发送。使用 `<code>@EnableWebSocketMessageBroker</code>` 配置时会自动保证这一点。如果消息发送速度较慢，或者至少慢于消息发送速率，后续消息将被缓冲，直到达到 `<code>sendTimeLimit</code>` 或 `<code>sendBufferSizeLimit</code>` 限制，此时会话状态将被清除，并尝试关闭该会话。",
+      "count": 3
+    },
+    {
+      "source": "<strong>NOTE</strong> that closing the session may not succeed in\nactually closing the physical socket and may also hang. This is true\nespecially when using blocking IO such as the BIO connector in Tomcat\nthat is used by default on Tomcat 7. Therefore, it is recommended to ensure\nthe server is using non-blocking IO such as Tomcat's NIO connector that\nis used by default on Tomcat 8. If you must use blocking IO consider\ncustomizing OS-level TCP settings, for example\n<code>/proc/sys/net/ipv4/tcp_retries2</code> on Linux.",
+      "translation": "<strong>注意</strong>，关闭会话可能无法实际关闭物理套接字，并且可能导致挂起。这在使用阻塞式 IO（例如 Tomcat 中默认使用的 BIO 连接器）时尤其如此。因此，建议确保服务器使用非阻塞式 IO，例如 Tomcat 的 NIO 连接器（Tomcat 8 中默认使用）。如果您必须使用阻塞式 IO，请考虑自定义操作系统级别的 TCP 设置，例如 Linux 上的<code>/proc/sys/net/ipv4/tcp_retries2</code>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong> that closing the session may not succeed in\nactually closing the physical socket and may also hang. This is true\nespecially when using blocking IO such as the BIO connector in Tomcat\nconfigured by default on Tomcat 7. Therefore, it is recommended to ensure\nthe server is using non-blocking IO such as Tomcat's NIO connector used\nby default on Tomcat 8. If you must use blocking IO consider customizing\nOS-level TCP settings, for example <code>/proc/sys/net/ipv4/tcp_retries2</code>\non Linux.",
+      "translation": "<strong>注意</strong>，关闭会话可能无法实际关闭物理套接字，甚至可能导致挂起。这在使用阻塞式 IO（例如 Tomcat 中默认配置的 BIO 连接器）时尤为常见。因此，建议确保服务器使用非阻塞式 IO，例如 Tomcat 8 默认使用的 NIO 连接器。如果必须使用阻塞式 IO，请考虑自定义操作系统级别的 TCP 设置，例如 Linux 上的 <code>/proc/sys/net/ipv4/tcp_retries2</code>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> This is not the same as the size of an\nindividual WebSocket message which needs to be configured at the WebSocket\nserver level instead. See the reference documentation for details.",
+      "translation": "<strong>注意：</strong> 这与单个 WebSocket 消息的大小不同，后者需要在 WebSocket 服务器级别进行配置。有关详细信息，请参阅参考文档。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong> that the session time limit is checked only\non attempts to send additional messages. So if only a single message is\nsent and it hangs, the session will not time out until another message is\nsent or the underlying physical socket times out. So this is not a\nreplacement for WebSocket server or HTTP connection timeout but is rather\nintended to control the extent of buffering of unsent messages.",
+      "translation": "<strong>注意</strong>，会话超时限制仅在尝试发送额外消息时进行检查。因此，如果仅发送一条消息且该消息挂起，则直到发送另一条消息或底层物理套接字超时时，会话才会在超时。因此，这并非 WebSocket 服务器或 HTTP 连接超时的替代方案，而是旨在控制未发送消息的缓冲范围。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to <code>60,000</code> (1 minute).",
+      "translation": "默认情况下，此值设置为<code>60,000</code>（1 分钟）。",
+      "count": 2
+    },
+    {
+      "source": "The default value is 64K (i.e. 64 * 1024).",
+      "translation": "默认值为 64K（即 64 * 1024）。",
+      "count": 2
+    },
+    {
+      "source": "The default value is 10 seconds (i.e. 10 * 1000).",
+      "translation": "默认值为 10 秒（即 10 * 1000）。",
+      "count": 2
+    },
+    {
+      "source": "The default value is 512K (i.e. 512 * 1024).",
+      "translation": "默认值为 512K（即 512 * 1024）。",
+      "count": 2
+    },
+    {
+      "source": "This handler is for WebSocket connections that use a sub-protocol.\nTherefore, we expect the client to send at least one sub-protocol message\nin the beginning, or else we assume the connection isn't doing well, for example,\nproxy issue, slow network, and can be closed.",
+      "translation": "此处理器用于使用子协议的 WebSocket 连接。因此，我们期望客户端在开始时至少发送一条子协议消息；否则，我们将假设连接状态不佳（例如代理问题或网络缓慢），并可以将其关闭。",
+      "count": 2
+    },
+    {
+      "source": "Configure one or more factories to decorate the handler used to process\nWebSocket messages. This may be useful in some advanced use cases, for\nexample to allow Spring Security to forcibly close the WebSocket session\nwhen the corresponding HTTP session expires.",
+      "translation": "配置一个或多个工厂来装饰用于处理 WebSocket 消息的处理器。这在某些高级用例中可能很有用，例如允许 Spring Security 在相应的 HTTP 会话过期时强制关闭 WebSocket 会话。",
+      "count": 2
+    },
+    {
+      "source": "Add a factory that to decorate the handler used to process WebSocket\nmessages. This may be useful for some advanced use cases, for example\nto allow Spring Security to forcibly close the WebSocket session when\nthe corresponding HTTP session expires.",
+      "translation": "添加一个工厂来装饰用于处理 WebSocket 消息的处理器。这对于某些高级用例可能很有用，例如允许 Spring Security 在相应的 HTTP 会话过期时强制关闭 WebSocket 会话。",
+      "count": 2
+    },
+    {
+      "source": "<code>timeLimit</code> - the timeout value in milliseconds; the value must be\ngreater than 0, otherwise it is ignored.",
+      "translation": "<code>timeLimit</code> - 以毫秒为单位的超时值；该值必须大于 0，否则将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "<code>sendBufferSizeLimit</code> - the maximum number of bytes to buffer when\nsending messages; if the value is less than or equal to 0 then buffering\nis effectively disabled.",
+      "translation": "<code>sendBufferSizeLimit</code> - 发送消息时缓冲的最大字节数；如果该值小于或等于 0，则实际上禁用了缓冲。",
+      "count": 2
+    },
+    {
+      "source": "<code>timeToFirstMessage</code> - the maximum time allowed in milliseconds",
+      "translation": "<code>timeToFirstMessage</code> - 允许的最大时间（毫秒）",
+      "count": 2
+    },
+    {
+      "source": "Configure the processing of messages received from and sent to WebSocket clients.",
+      "translation": "配置从 WebSocket 客户端接收和发送的消息处理。",
+      "count": 1
+    },
+    {
+      "source": "Add a factory that to decorate the handler used to process WebSocket\nmessages.",
+      "translation": "添加一个工厂，用于装饰处理 WebSocket 消息的处理器。",
+      "count": 1
+    },
+    {
+      "source": "Configure one or more factories to decorate the handler used to process\nWebSocket messages.",
+      "translation": "配置一个或多个工厂来装饰用于处理 WebSocket 消息的处理器。",
+      "count": 1
+    },
+    {
+      "source": "Configure the maximum size of an inbound sub-protocol message, such as\na STOMP frame which may be aggregated from multiple WebSocket messages.",
+      "translation": "配置入站子协议消息的最大大小，例如可能由多个 WebSocket 消息聚合而成的 STOMP 帧。",
+      "count": 1
+    },
+    {
+      "source": "Configure the maximum amount of data to buffer when sending messages\nto a WebSocket session, or an HTTP response when SockJS fallback\noption are in use.",
+      "translation": "配置在将消息发送到 WebSocket 会话，或在启用 SockJS 回退选项时发送 HTTP 响应期间要缓冲的最大数据量。",
+      "count": 1
+    },
+    {
+      "source": "Configure a time limit (in milliseconds) for the maximum amount of a time\nallowed when sending messages to a WebSocket session or writing to an\nHTTP response when SockJS fallback option are in use.",
+      "translation": "配置一个时间限制（以毫秒为单位），用于在使用 SockJS 回退选项时，向 WebSocket 会话发送消息或写入 HTTP 响应所允许的最大时间量。",
+      "count": 1
+    },
+    {
+      "source": "Set the maximum time allowed in milliseconds after the WebSocket connection\nis established and before the first sub-protocol message is received.",
+      "translation": "设置 WebSocket 连接建立后、收到第一个子协议消息之前允许的最大时间（毫秒）。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

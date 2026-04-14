@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 18:44:42",
+  "updated_at": "2026-04-14 18:44:42",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 38,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.52,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Name of the request attribute holding the <a href=\"../../http/server/observation/ServerRequestObservationContext.html\" title=\"class in org.springframework.http.server.observation\"><code>ServerRequestObservationContext</code></a> for the current observation.",
+      "translation": "持有当前观察的<a href=\"../../http/server/observation/ServerRequestObservationContext.html\" title=\"class in org.springframework.http.server.observation\"><code>ServerRequestObservationContext</code></a>的请求属性名称。",
+      "count": 3
+    },
+    {
+      "source": "Get the current <a href=\"../../http/server/observation/ServerRequestObservationContext.html\" title=\"class in org.springframework.http.server.observation\"><code>observation context</code></a> from the given request, if available.",
+      "translation": "从给定的请求中获取当前的<code>observation context</code>（如果可用）。",
+      "count": 3
+    },
+    {
+      "source": "<code>observationRegistry</code> - the registry to use for recording observations",
+      "translation": "<code>observationRegistry</code> - 用于记录观测的注册表",
+      "count": 3
+    },
+    {
+      "source": "Web Frameworks can fetch the current <a href=\"../../http/server/observation/ServerRequestObservationContext.html\" title=\"class in org.springframework.http.server.observation\"><code>context</code></a>\nas a <a href=\"#CURRENT_OBSERVATION_CONTEXT_ATTRIBUTE\"><code>request attribute</code></a> and contribute\nadditional information to it.\nThe configured <a href=\"../../http/server/observation/ServerRequestObservationConvention.html\" title=\"interface in org.springframework.http.server.observation\"><code>ServerRequestObservationConvention</code></a> will use this context to collect\n<code>metadata</code> and attach it to the observation.",
+      "translation": "Web 框架可以将当前的 <a href=\"../../http/server/observation/ServerRequestObservationContext.html\" title=\"class in org.springframework.http.server.observation\"><code>context</code></a> 作为 <a href=\"#CURRENT_OBSERVATION_CONTEXT_ATTRIBUTE\"><code>request attribute</code></a> 获取，并向其贡献额外信息。\n配置的 <a href=\"../../http/server/observation/ServerRequestObservationConvention.html\" title=\"interface in org.springframework.http.server.observation\"><code>ServerRequestObservationConvention</code></a> 将使用此上下文来收集 <code>metadata</code> 并将其附加到观察中。",
+      "count": 2
+    },
+    {
+      "source": "Create an <code>HttpRequestsObservationFilter</code> that records observations\nagainst the given <code>ObservationRegistry</code>. The default\n<a href=\"../../http/server/observation/DefaultServerRequestObservationConvention.html\" title=\"class in org.springframework.http.server.observation\"><code>convention</code></a> will be used.",
+      "translation": "创建一个<code>HttpRequestsObservationFilter</code>来记录针对给定<code>ObservationRegistry</code>的观察。将使用默认的<a href=\"../../http/server/observation/DefaultServerRequestObservationConvention.html\" title=\"class in org.springframework.http.server.observation\"><code>convention</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create an <code>HttpRequestsObservationFilter</code> that records observations\nagainst the given <code>ObservationRegistry</code> with a custom convention.",
+      "translation": "创建一个<code>HttpRequestsObservationFilter</code>，它会根据自定义约定记录针对给定<code>ObservationRegistry</code>的观察结果。",
+      "count": 2
+    },
+    {
+      "source": "Notify this filter that a new <code>Observation.Scope</code> is opened for the\nobservation that was just created.",
+      "translation": "通知此过滤器，为刚刚创建的观测打开了一个新的 `<code>Observation.Scope</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>observationConvention</code> - the convention to use for all recorded observations",
+      "translation": "<code>observationConvention</code> - 用于所有记录观测值的约定",
+      "count": 2
+    },
+    {
+      "source": "<code>scope</code> - the newly opened observation scope",
+      "translation": "<code>scope</code> - 新打开的观察范围",
+      "count": 2
+    },
+    {
+      "source": "<code>response</code> - the filter's response",
+      "translation": "<code>response</code> - 过滤器的响应",
+      "count": 2
+    },
+    {
+      "source": "Note that although a filter can be mapped to handle specific dispatcher\ntypes via <code>web.xml</code> or in Java through the <code>ServletContext</code>,\nservlet containers may enforce different defaults with respect to\ndispatcher types. This flag enforces the design intent of the filter.",
+      "translation": "注意，尽管可以通过 `<code>web.xml` 将过滤器映射到处理特定分发器类型，或通过 Java 中的 <code>ServletContext</code> 进行配置，但 servlet 容器可能会针对分发器类型强制执行不同的默认设置。此标志强制实施过滤器的设计意图。",
+      "count": 1
+    },
+    {
+      "source": "The default return value is \"true\", which means the filter will not be\ninvoked during subsequent async dispatches. If \"false\", the filter will\nbe invoked during async dispatches with the same guarantees of being\ninvoked only once during a request within a single thread.",
+      "translation": "默认返回值为\"true\"，这意味着在随后的异步分发中不会调用该过滤器。如果为\"false\"，则会在异步分发中调用该过滤器，并保证在单个线程的请求中仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "Provides HttpServletRequest and HttpServletResponse arguments instead of the\ndefault ServletRequest and ServletResponse ones.",
+      "translation": "提供 HttpServletRequest 和 HttpServletResponse 参数，而不是默认的 ServletRequest 和 ServletResponse。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">OncePerRequestFilter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create an <code>HttpRequestsObservationFilter</code> that records observations\nagainst the given <code>ObservationRegistry</code>.",
+      "translation": "创建一个<code>HttpRequestsObservationFilter</code>，以记录针对给定<code>ObservationRegistry</code>的观察结果。",
+      "count": 1
+    },
+    {
+      "source": "Same contract as for <code>doFilter</code>, but guaranteed to be\njust invoked once per request within a single request thread.",
+      "translation": "与<code>doFilter</code>相同的合同，但保证在单个请求线程中每个请求仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "The dispatcher type <code>jakarta.servlet.DispatcherType.ASYNC</code> means a\nfilter can be invoked in more than one thread over the course of a single\nrequest.",
+      "translation": "<code>jakarta.servlet.DispatcherType.ASYNC</code> 类型的分发器意味着在单个请求期间，过滤器可以在多个线程中被调用。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code>` 在类 `<code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterInternal</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`doFilterInternal` 在类 `<a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a>` 中。",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the HTTP client request",
+      "translation": "<code>request</code> - HTTP 客户端请求",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 1
+    },
+    {
+      "source": "Brian Clozel",
+      "translation": "布莱恩·克洛泽尔",
+      "count": 1
+    },
+    {
+      "source": "the current observation context",
+      "translation": "当前观察上下文",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

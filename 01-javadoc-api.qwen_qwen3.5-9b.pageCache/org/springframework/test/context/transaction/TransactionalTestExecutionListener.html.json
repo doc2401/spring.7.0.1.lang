@@ -1,0 +1,291 @@
+{
+  "created_at": "2026-04-14 17:03:28",
+  "updated_at": "2026-04-14 17:03:28",
+  "stats": {
+    "total_entries": 55,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 99,
+    "entries_with_hits": 55,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8,
+    "usage_percentage": 0.0055000000000000005
+  },
+  "items": [
+    {
+      "source": "Returns <a href=\"#ORDER\">4000</a>, which ensures that the <code>TransactionalTestExecutionListener</code>\nis ordered after the\n<a href=\"../support/CommonCachesTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\"><code>CommonCachesTestExecutionListener</code></a> and before the\n<a href=\"../jdbc/SqlScriptsTestExecutionListener.html\" title=\"class in org.springframework.test.context.jdbc\"><code>SqlScriptsTestExecutionListener</code></a>.",
+      "translation": "返回 <a href=\"#ORDER\">4000</a>，这确保了 <code>TransactionalTestExecutionListener</code> 在\n<a href=\"../support/CommonCachesTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\"><code>CommonCachesTestExecutionListener</code></a> 之后且在\n<a href=\"../jdbc/SqlScriptsTestExecutionListener.html\" title=\"class in org.springframework.test.context.jdbc\"><code>SqlScriptsTestExecutionListener</code></a> 之前执行。",
+      "count": 3
+    },
+    {
+      "source": "Determine whether to rollback transactions for the supplied\n<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a> by taking into consideration the\n<a href=\"#isDefaultRollback(org.springframework.test.context.TestContext)\">default rollback</a> flag and a\npossible method-level override via the <a href=\"../../annotation/Rollback.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Rollback</code></a>\nannotation.",
+      "translation": "确定是否回滚为提供的<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>的事务，需考虑<a href=\"#isDefaultRollback(org.springframework.test.context.TestContext)\">默认回滚</a>标志以及通过<a href=\"../../annotation/Rollback.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Rollback</code></a>注解进行的方法级覆盖。",
+      "count": 3
+    },
+    {
+      "source": "The <a href=\"#getOrder()\"><code>order</code></a> value for this listener: 4000.",
+      "translation": "此监听器的<a href=\"#getOrder()\"><code>order</code></a>值为：4000。",
+      "count": 3
+    },
+    {
+      "source": "<code>testContext</code> - the current test context",
+      "translation": "<code>testContext</code> - 当前测试上下文",
+      "count": 3
+    },
+    {
+      "source": "<code>testContext</code> - the test context for which the transaction manager\nshould be retrieved",
+      "translation": "<code>testContext</code> - 应从中获取事务管理器的测试上下文",
+      "count": 3
+    },
+    {
+      "source": "<code>TransactionalTestExecutionListener</code> expects a\n<a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> bean to be defined in the Spring\n<code>ApplicationContext</code> for the test. In case there are multiple\ninstances of <code>PlatformTransactionManager</code> within the test's\n<code>ApplicationContext</code>, a <em>qualifier</em> may be declared via\n<a href=\"../../../transaction/annotation/Transactional.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>@Transactional</code></a> (for example, <code>@Transactional(\"myTxMgr\")</code>\nor <code>@Transactional(transactionManager = \"myTxMgr\")</code>, or\n<a href=\"../../../transaction/annotation/TransactionManagementConfigurer.html\" title=\"interface in org.springframework.transaction.annotation\"><code>TransactionManagementConfigurer</code></a> can be implemented by an\n<a href=\"../../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a>\nclass. See <a href=\"TestContextTransactionUtils.html#retrieveTransactionManager(org.springframework.test.context.TestContext,java.lang.String)\"><code>TestContextTransactionUtils.retrieveTransactionManager(TestContext, String)</code></a>\nfor details on the algorithm used to look up a transaction manager in\nthe test's <code>ApplicationContext</code>.",
+      "translation": "<code>TransactionalTestExecutionListener</code> 期望在测试的 Spring <code>ApplicationContext</code> 中定义一个\n<a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> Bean。如果在测试的\n<code>ApplicationContext</code> 中存在多个\n<code>PlatformTransactionManager</code> 实例，可以通过\n<a href=\"../../../transaction/annotation/Transactional.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>@Transactional</code></a> 声明一个 <em>限定符</em>（例如，<code>@Transactional(\"myTxMgr\")</code>\n或 <code>@Transactional(transactionManager = \"myTxMgr\")</code>），或者由一个\n<a href=\"../../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a>\n类实现\n<a href=\"../../../transaction/annotation/TransactionManagementConfigurer.html\" title=\"interface in org.springframework.transaction.annotation\"><code>TransactionManagementConfigurer</code></a>。有关在测试的\n<code>ApplicationContext</code> 中查找事务管理器的算法详情，请参阅 <a href=\"TestContextTransactionUtils.html#retrieveTransactionManager(org.springframework.test.context.TestContext,java.lang.String)\"><code>TestContextTransactionUtils.retrieveTransactionManager(TestContext, String)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Annotating a test method with <code>@Transactional</code> causes the test\nto be run within a transaction that will, by default, be automatically\n<em>rolled back</em> after completion of the test. If a test class is\nannotated with <code>@Transactional</code>, each test method within that class\nhierarchy or nested class hierarchy will be run within a transaction. Test\nmethods that are <em>not</em> annotated with <code>@Transactional</code> (at the\nclass or method level) will not be run within a transaction. Furthermore,\ntests that <em>are</em> annotated with <code>@Transactional</code> but have the\n<a href=\"../../../transaction/annotation/Transactional.html#propagation()\"><code>propagation</code></a> type set to\n<a href=\"../../../transaction/annotation/Propagation.html#NOT_SUPPORTED\"><code>NOT_SUPPORTED</code></a>\nor <a href=\"../../../transaction/annotation/Propagation.html#NEVER\"><code>NEVER</code></a>\nwill not be run within a transaction.",
+      "translation": "为测试方法添加 `<code>@Transactional</code>` 注解会导致该测试在事务中运行，默认情况下，测试完成后该事务将自动<em>回滚</em>。如果测试类被添加了 `<code>@Transactional</code>` 注解，则该类的类层次结构或嵌套类层次结构中的每个测试方法都将在事务中运行。未添加 `<code>@Transactional</code>` 注解（在类或方法级别）的测试方法不会在事务中运行。此外，虽然添加了 `<code>@Transactional</code>` 注解但传播类型设置为 <a href=\"../../../transaction/annotation/Transactional.html#propagation()\"><code>propagation</code></a>\n<a href=\"../../../transaction/annotation/Propagation.html#NOT_SUPPORTED\"><code>NOT_SUPPORTED</code></a>\n或 <a href=\"../../../transaction/annotation/Propagation.html#NEVER\"><code>NEVER</code></a> 的测试不会在事务中运行。",
+      "count": 2
+    },
+    {
+      "source": "<em>Test-managed transactions</em> are transactions that are managed\ndeclaratively via this listener or programmatically via\n<a href=\"TestTransaction.html\" title=\"class in org.springframework.test.context.transaction\"><code>TestTransaction</code></a>. Such transactions should not be confused with\n<em>Spring-managed transactions</em> (i.e., those managed directly\nby Spring within the <code>ApplicationContext</code> loaded for tests) or\n<em>application-managed transactions</em> (i.e., those managed\nprogrammatically within application code that is invoked via tests).\nSpring-managed and application-managed transactions will typically\nparticipate in test-managed transactions; however, caution should be\ntaken if Spring-managed or application-managed transactions are\nconfigured with any propagation type other than\n<a href=\"../../../transaction/annotation/Propagation.html#REQUIRED\"><code>REQUIRED</code></a>\nor <a href=\"../../../transaction/annotation/Propagation.html#SUPPORTS\"><code>SUPPORTS</code></a>.",
+      "translation": "<em>测试管理的交易</em>是指通过此监听器以声明方式或通过<a href=\"TestTransaction.html\" title=\"class in org.springframework.test.context.transaction\"><code>TestTransaction</code></a>以编程方式管理的交易。此类交易不应与<em>Spring 管理的交易</em>（即由 Spring 在测试加载的<code>ApplicationContext</code>内直接管理的交易）或<em>应用管理的交易</em>（即在通过测试调用的应用程序代码中以编程方式管理的交易）相混淆。Spring 管理和应用管理的交易通常将参与测试管理的交易；但是，如果 Spring 管理的应用程序管理的交易配置了除<a href=\"../../../transaction/annotation/Propagation.html#REQUIRED\"><code>REQUIRED</code></a>或<a href=\"../../../transaction/annotation/Propagation.html#SUPPORTS\"><code>SUPPORTS</code></a>之外的任何传播类型，则应谨慎处理。",
+      "count": 2
+    },
+    {
+      "source": "When executing transactional tests, it is sometimes useful to be able to\nexecute certain <em>set up</em> or <em>tear down</em> code outside a\ntransaction. <code>TransactionalTestExecutionListener</code> provides such\nsupport for methods annotated with <a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@BeforeTransaction</code></a>\nor <a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@AfterTransaction</code></a>. As of Spring Framework 4.3,\n<code>@BeforeTransaction</code> and <code>@AfterTransaction</code> may also be declared\non Java 8 based interface default methods.",
+      "translation": "在执行事务性测试时，有时需要能够在事务之外执行某些<em>设置</em>或<em>清理</em>代码。<code>TransactionalTestExecutionListener</code>为使用<a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@BeforeTransaction</code></a>或<a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@AfterTransaction</code></a>注解的方法提供了此类支持。自 Spring Framework 4.3 起，<code>@BeforeTransaction</code>和<code>@AfterTransaction</code>也可声明在基于 Java 8 的接口默认方法上。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 4.1, it is possible to interact with test-managed\ntransactions programmatically via the static methods in <a href=\"TestTransaction.html\" title=\"class in org.springframework.test.context.transaction\"><code>TestTransaction</code></a>.\n<code>TestTransaction</code> may be used within <em>test</em> methods,\n<em>before</em> methods, and <em>after</em> methods.",
+      "translation": "自 Spring Framework 4.1 起，可以通过 <a href=\"TestTransaction.html\" title=\"class in org.springframework.test.context.transaction\"><code>TestTransaction</code></a> 中的静态方法以编程方式与测试管理的事务进行交互。<code>TestTransaction</code> 可用于 <em>test</em> 方法、<em>before</em> 方法和 <em>after</em> 方法中。",
+      "count": 2
+    },
+    {
+      "source": "By default, test transactions will be automatically <em>rolled back</em>\nafter completion of the test; however, transactional commit and rollback\nbehavior can be configured declaratively via the <a href=\"../../annotation/Commit.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Commit</code></a>\nand <a href=\"../../annotation/Rollback.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Rollback</code></a> annotations at the class level and at the\nmethod level.",
+      "translation": "默认情况下，测试事务将在测试完成后自动<em>回滚</em>；然而，可以通过在类级别和方法级别使用<a href=\"../../annotation/Commit.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Commit</code></a>和<a href=\"../../annotation/Rollback.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Rollback</code></a>注解以声明方式配置事务提交和回滚行为。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"#getTransactionManager(org.springframework.test.context.TestContext)\"><code>getTransactionManager(TestContext)</code></a> if the\nsupplied <code>qualifier</code> is <code>null</code> or empty.",
+      "translation": "如果提供的 `<code>qualifier</code>` 为 `<code>null</code>` 或为空，则委托给<a href=\"#getTransactionManager(org.springframework.test.context.TestContext)\"><code>getTransactionManager(TestContext)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Supports <a href=\"../../annotation/Rollback.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Rollback</code></a> or <a href=\"../../annotation/Commit.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Commit</code></a> at the\nclass-level.",
+      "translation": "支持在类级别使用<a href=\"../../annotation/Rollback.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Rollback</code></a>或<a href=\"../../annotation/Commit.html\" title=\"annotation interface in org.springframework.test.annotation\"><code>@Commit</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note that if a <code>@BeforeTransaction</code> method fails, any remaining\n<code>@BeforeTransaction</code> methods will not be invoked, and a transaction\nwill not be started.",
+      "translation": "注意，如果 `<code>@BeforeTransaction</code>` 方法失败，则剩余的 `<code>@BeforeTransaction</code>` 方法将不会被调用，并且不会启动事务。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply delegates to\n<a href=\"TestContextTransactionUtils.html#retrieveTransactionManager(org.springframework.test.context.TestContext,java.lang.String)\"><code>TestContextTransactionUtils.retrieveTransactionManager(TestContext, String)</code></a>.",
+      "translation": "默认实现只是委托给 <a href=\"TestContextTransactionUtils.html#retrieveTransactionManager(org.springframework.test.context.TestContext,java.lang.String)\"><code>TestContextTransactionUtils.retrieveTransactionManager(TestContext, String)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>@AfterTransaction</code> methods are guaranteed to be invoked even if\nan error occurs while ending the transaction.",
+      "translation": "<code>@AfterTransaction</code> 方法即使在结束事务时发生错误，也保证会被调用。",
+      "count": 2
+    },
+    {
+      "source": "Run all <a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@BeforeTransaction</code></a> methods for the\nspecified <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>. If one of the methods\nfails, however, the caught exception will be rethrown in a wrapped\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>, and the remaining methods will <strong>not</strong>\nbe given a chance to execute.",
+      "translation": "运行指定<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>中的所有<code>@BeforeTransaction</code><a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\">注解接口</a>方法。然而，如果其中一个方法失败，捕获的异常将在包装后的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>中重新抛出，其余的方法将<strong>不会</strong>获得执行机会。",
+      "count": 2
+    },
+    {
+      "source": "If a transaction is currently active for the supplied\n<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>, this method will end the transaction\nand run <a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@AfterTransaction</code></a> methods.",
+      "translation": "如果为提供的<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>当前存在活动事务，此方法将结束该事务并运行 <a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@AfterTransaction</code></a> 方法。",
+      "count": 2
+    },
+    {
+      "source": "If the test method of the supplied <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>\nis configured to run within a transaction, this method will run\n<a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@BeforeTransaction</code></a> methods and start a new\ntransaction.",
+      "translation": "如果提供的 <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a> 的测试方法配置为在事务中运行，则此方法将运行 <a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@BeforeTransaction</code></a> 方法并启动一个新的事务。",
+      "count": 2
+    },
+    {
+      "source": "Run all <a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@AfterTransaction</code></a> methods for the\nspecified <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>.",
+      "translation": "运行指定<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>中的所有<code>@AfterTransaction</code><a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\">注解接口</a>方法。",
+      "count": 2
+    },
+    {
+      "source": "Run all <a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@BeforeTransaction</code></a> methods for the\nspecified <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>.",
+      "translation": "运行指定<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>的所有<code>@BeforeTransaction</code><a href=\"BeforeTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\">注解接口</a>方法。",
+      "count": 2
+    },
+    {
+      "source": "Run all <a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\"><code>@AfterTransaction</code></a> methods for the\nspecified <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>. If one of the methods\nfails, the caught exception will be logged as an error, and the remaining\nmethods will be given a chance to execute. After all methods have\nexecuted, the first caught exception, if any, will be rethrown.",
+      "translation": "运行指定<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>中的所有<code>@AfterTransaction</code><a href=\"AfterTransaction.html\" title=\"annotation interface in org.springframework.test.context.transaction\">注解接口</a>方法。如果其中一个方法失败，捕获的异常将作为错误记录，其余方法仍有机会执行。所有方法执行完毕后，如果有捕获到的异常，第一个捕获的异常将被重新抛出。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - allows any exception to propagate",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 允许任何异常传播。",
+      "count": 2
+    },
+    {
+      "source": "<code>qualifier</code> - the qualifier for selecting between multiple bean matches;\nmay be <code>null</code> or empty",
+      "translation": "<code>qualifier</code> - 用于在多个 Bean 匹配项之间进行选择的选择器；可为 <code>null</code> 或空。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - if an error occurs while retrieving the transaction manager",
+      "translation": "<code><a href=\"../../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 如果在获取事务管理器时发生错误",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if an error occurs while determining the default rollback flag",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 如果在确定默认回滚标志时发生错误",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if an error occurs while determining the rollback flag",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 如果在确定回滚标志时发生错误",
+      "count": 2
+    },
+    {
+      "source": "the transaction manager to use, or <code>null</code> if not found",
+      "translation": "使用的事务管理器，如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>testContext</code> - the test context for which the default rollback flag\nshould be retrieved",
+      "translation": "<code>testContext</code> - 应获取默认回滚标志的测试上下文",
+      "count": 2
+    },
+    {
+      "source": "the <em>default rollback</em> flag for the supplied test context",
+      "translation": "<em>默认回滚</em>标志对于提供的测试上下文",
+      "count": 2
+    },
+    {
+      "source": "<code>testContext</code> - the test context for which the rollback flag\nshould be retrieved",
+      "translation": "<code>testContext</code> - 应获取回滚标志的测试上下文",
+      "count": 2
+    },
+    {
+      "source": "the <em>rollback</em> flag for the supplied test context",
+      "translation": "<em>rollback</em> 标志对于提供的测试上下文",
+      "count": 2
+    },
+    {
+      "source": "<code>@Transactional</code> Attribute Support",
+      "translation": "<code>@Transactional</code> 属性支持",
+      "count": 2
+    },
+    {
+      "source": "Test-managed Transactions",
+      "translation": "测试管理的交易",
+      "count": 2
+    },
+    {
+      "source": "Enabling and Disabling Transactions",
+      "translation": "启用和禁用事务",
+      "count": 2
+    },
+    {
+      "source": "Declarative Rollback and Commit Behavior",
+      "translation": "声明式回滚和提交行为",
+      "count": 2
+    },
+    {
+      "source": "Programmatic Transaction Management",
+      "translation": "程序化事务管理",
+      "count": 2
+    },
+    {
+      "source": "Executing Code outside of a Transaction",
+      "translation": "在事务之外执行代码",
+      "count": 2
+    },
+    {
+      "source": "Configuring a Transaction Manager",
+      "translation": "配置事务管理器",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">transaction manager</a> to use\nfor the supplied <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a> and <code>qualifier</code>.",
+      "translation": "获取用于提供的<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>和<code>qualifier</code>的<a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">事务管理器</a>。",
+      "count": 1
+    },
+    {
+      "source": "Get the <a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">transaction manager</a>\nto use for the supplied <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>.",
+      "translation": "获取用于提供的<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>的<a href=\"../../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">事务管理器</a>。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether to rollback transactions by default for the\nsupplied <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">test context</a>.",
+      "translation": "确定是否默认回滚所提供的<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\">测试上下文</a>中的事务。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#getOrder()\">getOrder</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#getOrder()\">getOrder</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code> in interface <code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../TestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code>` 接口 `<code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code> in interface <code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../TestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code>` 接口 `<code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>testContext</code> - the test context in which the test method will be\nexecuted; never <code>null</code>",
+      "translation": "<code>testContext</code> - 测试方法将在此测试上下文中执行；永远不会为 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>testContext</code> - the test context in which the test method was\nexecuted; never <code>null</code>",
+      "translation": "<code>testContext</code> - 测试方法执行所在的测试上下文；永远不会为 <code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - if an error occurs while retrieving an explicitly\nnamed transaction manager",
+      "translation": "<code><a href=\"../../../beans/BeansException.html\" title=\"class in org.springframework.beans\">BeansException</a></code> - 如果在检索显式命名的事务管理器时发生错误",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if more than one TransactionManagementConfigurer\nexists in the ApplicationContext",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果 ApplicationContext 中存在多个 TransactionManagementConfigurer",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Juergen Hoeller",
+      "translation": "Sam Brannen，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

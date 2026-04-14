@@ -1,0 +1,206 @@
+{
+  "created_at": "2026-04-14 20:06:02",
+  "updated_at": "2026-04-14 20:06:02",
+  "stats": {
+    "total_entries": 38,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 66,
+    "entries_with_hits": 38,
+    "entries_without_hits": 0,
+    "hit_rate": 1.736842105263158,
+    "usage_percentage": 0.0038000000000000004
+  },
+  "items": [
+    {
+      "source": "Optionally perform further registration customization once\n<a href=\"#registerDispatcherServlet(jakarta.servlet.ServletContext)\"><code>registerDispatcherServlet(ServletContext)</code></a> has completed.",
+      "translation": "可选地，在 `<a href=\"#registerDispatcherServlet(jakarta.servlet.ServletContext)\"><code>registerDispatcherServlet(ServletContext)</code></a>` 完成后执行进一步的注册自定义。",
+      "count": 3
+    },
+    {
+      "source": "This method will create a <code>DispatcherServlet</code> with the name returned by\n<a href=\"#getServletName()\"><code>getServletName()</code></a>, initializing it with the application context returned\nfrom <a href=\"#createServletApplicationContext()\"><code>createServletApplicationContext()</code></a>, and mapping it to the patterns\nreturned from <a href=\"#getServletMappings()\"><code>getServletMappings()</code></a>.",
+      "translation": "此方法将创建一个名为 `<a href=\"#getServletName()\"><code>getServletName()</code></a>` 返回值的 `DispatcherServlet`，使用从 `<a href=\"#createServletApplicationContext()\"><code>createServletApplicationContext()</code></a>` 返回的应用上下文对其进行初始化，并将其映射到由 `<a href=\"#getServletMappings()\"><code>getServletMappings()</code></a>` 返回的模式。",
+      "count": 2
+    },
+    {
+      "source": "Further customization can be achieved by overriding <a href=\"#customizeRegistration(jakarta.servlet.ServletRegistration.Dynamic)\"><code>customizeRegistration(ServletRegistration.Dynamic)</code></a> or\n<a href=\"#createDispatcherServlet(org.springframework.web.context.WebApplicationContext)\"><code>createDispatcherServlet(WebApplicationContext)</code></a>.",
+      "translation": "进一步的自定义可以通过重写 <a href=\"#customizeRegistration(jakarta.servlet.ServletRegistration.Dynamic)\"><code>customizeRegistration(ServletRegistration.Dynamic)</code></a> 或 <a href=\"#createDispatcherServlet(org.springframework.web.context.WebApplicationContext)\"><code>createDispatcherServlet(WebApplicationContext)</code></a> 来实现。",
+      "count": 2
+    },
+    {
+      "source": "Note: This allows for any <a href=\"../FrameworkServlet.html\" title=\"class in org.springframework.web.servlet\"><code>FrameworkServlet</code></a> subclass as of 4.2.3.\nPreviously, it insisted on returning a <a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> or subclass thereof.",
+      "translation": "注意：自 4.2.3 版本起，此处允许任何 `<a href=\"../FrameworkServlet.html\" title=\"class in org.springframework.web.servlet\"><code>FrameworkServlet</code></a>` 子类。此前，它坚持要求返回一个 `<a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>` 或其子类。",
+      "count": 2
+    },
+    {
+      "source": "Most applications should consider extending the Spring Java config subclass\n<a href=\"AbstractAnnotationConfigDispatcherServletInitializer.html\" title=\"class in org.springframework.web.servlet.support\"><code>AbstractAnnotationConfigDispatcherServletInitializer</code></a>.",
+      "translation": "大多数应用程序应考虑扩展 Spring Java 配置子类 <a href=\"AbstractAnnotationConfigDispatcherServletInitializer.html\" title=\"class in org.springframework.web.servlet.support\"><code>AbstractAnnotationConfigDispatcherServletInitializer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If the above defaults are not suitable or insufficient, override this\nmethod and register filters directly with the <code>ServletContext</code>.",
+      "translation": "如果上述默认值不合适或不足，请重写此方法并直接将过滤器注册到 `<code>ServletContext</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The default value is \"true\".",
+      "translation": "默认值为\"true\"。",
+      "count": 2
+    },
+    {
+      "source": "Add the given filter to the ServletContext and map it to the\n<code>DispatcherServlet</code> as follows:\n\na default filter name is chosen based on its concrete type\nthe <code>asyncSupported</code> flag is set depending on the\nreturn value of <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a>\na filter mapping is created with dispatcher types <code>REQUEST</code>,\n<code>FORWARD</code>, <code>INCLUDE</code>, and conditionally <code>ASYNC</code> depending\non the return value of <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a>",
+      "translation": "将给定的过滤器添加到 ServletContext 并将其映射到 `<code>DispatcherServlet`，方式如下：\n默认根据具体类型选择过滤器名称\n<code>asyncSupported</code> 标志的设置取决于 <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a> 的返回值\n创建过滤器映射，其分发类型为 <code>REQUEST</code>、<code>FORWARD</code>、<code>INCLUDE</code>，并视 <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a> 的返回值条件性地包含 <code>ASYNC</code>",
+      "count": 2
+    },
+    {
+      "source": "A single place to control the <code>asyncSupported</code> flag for the\n<code>DispatcherServlet</code> and all filters added via <a href=\"#getServletFilters()\"><code>getServletFilters()</code></a>.",
+      "translation": "一个集中控制 `DispatcherServlet` 的 `<code>asyncSupported</code>` 标志以及通过 <a href=\"#getServletFilters()\"><code>getServletFilters()</code></a> 添加的所有过滤器的位置。",
+      "count": 2
+    },
+    {
+      "source": "Return the name under which the <a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> will be registered.\nDefaults to <a href=\"#DEFAULT_SERVLET_NAME\"><code>DEFAULT_SERVLET_NAME</code></a>.",
+      "translation": "返回将注册 `<a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>` 的名称。默认为 <a href=\"#DEFAULT_SERVLET_NAME\"><code>DEFAULT_SERVLET_NAME</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify the servlet mapping(s) for the <code>DispatcherServlet</code> —\nfor example <code>\"/\"</code>, <code>\"/app\"</code>, etc.",
+      "translation": "指定 `<code>DispatcherServlet</code>` 的 Servlet 映射——例如 `\"/\"`、`\"/app\"` 等。",
+      "count": 2
+    },
+    {
+      "source": "Return the name under which the <a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> will be registered.",
+      "translation": "返回将注册 `<a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>` 的名称。",
+      "count": 2
+    },
+    {
+      "source": "Register a <a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> against the given servlet context.",
+      "translation": "针对给定的 Servlet 上下文注册一个 `<a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "The default servlet name. Can be customized by overriding <a href=\"#getServletName()\"><code>getServletName()</code></a>.",
+      "translation": "默认 Servlet 名称。可以通过重写<a href=\"#getServletName()\"><code>getServletName()</code></a>来自定义。",
+      "count": 2
+    },
+    {
+      "source": "Specify application context initializers to be applied to the servlet-specific\napplication context that the <code>DispatcherServlet</code> is being created with.",
+      "translation": "指定要应用于 `<code>DispatcherServlet</code>` 创建时使用的 Servlet 特定应用程序上下文的应用程序上下文初始化器。",
+      "count": 2
+    },
+    {
+      "source": "Specify filters to add and map to the <code>DispatcherServlet</code>.",
+      "translation": "指定要添加并映射到 `<code>DispatcherServlet</code>` 的过滤器。",
+      "count": 2
+    },
+    {
+      "source": "a filter mapping is created with dispatcher types <code>REQUEST</code>,\n<code>FORWARD</code>, <code>INCLUDE</code>, and conditionally <code>ASYNC</code> depending\non the return value of <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a>",
+      "translation": "创建一个过滤器映射，其分发器类型为 `<code>REQUEST`</code>、`<code>FORWARD`</code> 和 `<code>INCLUDE`</code>，并根据 <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a> 的返回值条件性地包含 `<code>ASYNC</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/AbstractContextLoaderInitializer.html#onStartup(jakarta.servlet.ServletContext)\">onStartup</a></code> in class <code><a href=\"../../context/AbstractContextLoaderInitializer.html\" title=\"class in org.springframework.web.context\">AbstractContextLoaderInitializer</a></code>",
+      "translation": "`<code><a href=\"../../context/AbstractContextLoaderInitializer.html#onStartup(jakarta.servlet.ServletContext)\">onStartup</a></code>` 类中的 `<code><a href=\"../../context/AbstractContextLoaderInitializer.html\" title=\"class in org.springframework.web.context\">AbstractContextLoaderInitializer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "the <code>asyncSupported</code> flag is set depending on the\nreturn value of <a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a>",
+      "translation": "<code>asyncSupported</code> 标志的设置取决于<a href=\"#isAsyncSupported()\"><code>asyncSupported</code></a>的返回值。",
+      "count": 2
+    },
+    {
+      "source": "<code>registration</code> - the <code>DispatcherServlet</code> registration to be customized",
+      "translation": "<code>registration</code> - 用于自定义的 <code>DispatcherServlet</code> 注册",
+      "count": 2
+    },
+    {
+      "source": "<code>servletContext</code> - the context to register the servlet against",
+      "translation": "<code>servletContext</code> - 注册 servlet 的上下文",
+      "count": 2
+    },
+    {
+      "source": "an array of filters or <code>null</code>",
+      "translation": "一个过滤器数组或<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>servletContext</code> - the servlet context to register filters with",
+      "translation": "<servletContext> - 用于注册过滤器的 Servlet 上下文",
+      "count": 2
+    },
+    {
+      "source": "<code>filter</code> - the filter to be registered",
+      "translation": "<code>filter</code> - 要注册的过滤器",
+      "count": 2
+    },
+    {
+      "source": "a default filter name is chosen based on its concrete type",
+      "translation": "默认过滤器名称根据其具体类型进行选择。",
+      "count": 2
+    },
+    {
+      "source": "Arjen Poutsma, Chris Beams, Rossen Stoyanchev, Juergen Hoeller, Stephane Nicoll",
+      "translation": "Arjen Poutsma, Chris Beams, Rossen Stoyanchev, Juergen Hoeller, Stephane Nicoll",
+      "count": 2
+    },
+    {
+      "source": "the filter registration",
+      "translation": "过滤器注册",
+      "count": 2
+    },
+    {
+      "source": "The returned context is delegated to Spring's\n<a href=\"../DispatcherServlet.html#%3Cinit%3E(org.springframework.web.context.WebApplicationContext)\"><code>DispatcherServlet(WebApplicationContext)</code></a>. As such,\nit typically contains controllers, view resolvers, locale resolvers, and other\nweb-related beans.",
+      "translation": "返回的上下文已委托给 Spring 的 <a href=\"../DispatcherServlet.html#%3Cinit%3E(org.springframework.web.context.WebApplicationContext)\"><code>DispatcherServlet(WebApplicationContext)</code></a>。因此，它通常包含控制器、视图解析器、区域解析器以及其他与 Web 相关的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "Create a <a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> (or other kind of <a href=\"../FrameworkServlet.html\" title=\"class in org.springframework.web.servlet\"><code>FrameworkServlet</code></a>-derived\ndispatcher) with the specified <a href=\"../../context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>.",
+      "translation": "创建一个带有指定<a href=\"../../context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>的<a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>（或其他类型的<a href=\"../FrameworkServlet.html\" title=\"class in org.springframework.web.servlet\"><code>FrameworkServlet</code></a>派生式分发器）。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../WebApplicationInitializer.html#onStartup(jakarta.servlet.ServletContext)\">WebApplicationInitializer</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../WebApplicationInitializer.html#onStartup(jakarta.servlet.ServletContext)\">WebApplicationInitializer</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Configure the given <code>ServletContext</code> with any servlets, filters, listeners\ncontext-params and attributes necessary for initializing this web application. See\nexamples <a href=\"../../WebApplicationInitializer.html\" title=\"interface in org.springframework.web\">above</a>.",
+      "translation": "配置给定的 `<code>ServletContext</code>`，设置初始化此 Web 应用程序所需的任何 servlet、过滤器、监听器、上下文参数和属性。参见上面的示例<a href=\"../../WebApplicationInitializer.html\" title=\"interface in org.springframework.web\">链接</a>。",
+      "count": 1
+    },
+    {
+      "source": "Create a servlet application context to be provided to the <code>DispatcherServlet</code>.",
+      "translation": "创建要提供给 `<code>DispatcherServlet</code>` 的 Servlet 应用程序上下文。",
+      "count": 1
+    },
+    {
+      "source": "Configure the given <code>ServletContext</code> with any servlets, filters, listeners\ncontext-params and attributes necessary for initializing this web application.",
+      "translation": "配置给定的 `<code>ServletContext</code>`，设置初始化此 Web 应用程序所需的任何 Servlet、过滤器、监听器、上下文参数和属性。",
+      "count": 1
+    },
+    {
+      "source": "The default servlet name.",
+      "translation": "默认 Servlet 名称。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../WebApplicationInitializer.html#onStartup(jakarta.servlet.ServletContext)\">onStartup</a></code> in interface <code><a href=\"../../WebApplicationInitializer.html\" title=\"interface in org.springframework.web\">WebApplicationInitializer</a></code>",
+      "translation": "`<a href=\"../../WebApplicationInitializer.html#onStartup(jakarta.servlet.ServletContext)\">onStartup</a>` 接口 `<code><a href=\"../../WebApplicationInitializer.html\" title=\"interface in org.springframework.web\">WebApplicationInitializer</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.servlet.ServletException</code> - if any call against the given <code>ServletContext</code>\nthrows a <code>ServletException</code>",
+      "translation": "<code>jakarta.servlet.ServletException</code> - 如果针对给定的 <code>ServletContext</code> 的任何调用抛出 <code>ServletException</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>servletContext</code> - the <code>ServletContext</code> to initialize",
+      "translation": "<code>servletContext</code> - 要初始化的 <code>ServletContext</code>",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

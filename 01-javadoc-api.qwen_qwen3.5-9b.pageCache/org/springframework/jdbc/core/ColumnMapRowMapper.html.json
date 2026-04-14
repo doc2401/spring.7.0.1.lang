@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 14:31:14",
+  "updated_at": "2026-04-14 14:31:14",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 37,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5416666666666667,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "The Map implementation to use and the key to use for each column\nin the column Map can be customized by overriding <a href=\"#createColumnMap(int)\"><code>createColumnMap(int)</code></a>\nand <a href=\"#getColumnKey(java.lang.String)\"><code>getColumnKey(String)</code></a>, respectively.",
+      "translation": "要使用的 Map 实现以及列 Map 中每列所使用的键，可以通过分别重写<a href=\"#createColumnMap(int)\"><code>createColumnMap(int)</code></a>和<a href=\"#getColumnKey(java.lang.String)\"><code>getColumnKey(String)</code></a>来自定义。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note:</b> By default, <code>ColumnMapRowMapper</code> will try to build a linked Map\nwith case-insensitive keys, to preserve column order as well as allow any\ncasing to be used for column names.",
+      "translation": "<b>注意：</b> 默认情况下，<code>ColumnMapRowMapper</code> 将尝试构建一个具有不区分大小写键的关联 Map，以保留列顺序并允许使用任意大小写的列名。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation uses the <code>getObject</code> method.\nAdditionally, this implementation includes a \"hack\" to get around Oracle\nreturning a non-standard object for their TIMESTAMP data type.",
+      "translation": "默认实现使用 `getObject` 方法。此外，该实现包含一个“变通”方案，以解决 Oracle 为其 TIMESTAMP 数据类型返回非标准对象的问题。",
+      "count": 2
+    },
+    {
+      "source": "By default, a linked case-insensitive Map will be created.",
+      "translation": "默认情况下，将创建一个关联的不区分大小写的 Map。",
+      "count": 2
+    },
+    {
+      "source": "By default, the supplied column name will be returned unmodified.",
+      "translation": "默认情况下，提供的列名将原样返回。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">RowMapper</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">RowMapper</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">mapRow</a></code> in interface <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.jdbc.core\">RowMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>, <a class=\"external-link\" href=\"https://jspecify.dev/docs/api/org/jspecify/annotations/Nullable.html\" title=\"class or interface in org.jspecify.annotations\">@Nullable</a> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "translation": "`<a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">mapRow</a>` 在接口 `<code><a href=\"RowMapper.html\" title=\"interface in org.springframework.jdbc.core\">RowMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>, <a class=\"external-link\" href=\"https://jspecify.dev/docs/api/org/jspecify/annotations/Nullable.html\" title=\"class or interface in org.jspecify.annotations\">@Nullable</a> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code>columnCount</code> - the column count, to be used as initial\ncapacity for the Map",
+      "translation": "<code>columnCount</code> - 列数，用作 Map 的初始容量",
+      "count": 2
+    },
+    {
+      "source": "<code>columnName</code> - the column name as returned by the ResultSet",
+      "translation": "<code>columnName</code> - 由 ResultSet 返回的列名",
+      "count": 2
+    },
+    {
+      "source": "<code>rs</code> - the ResultSet holding the data",
+      "translation": "<code>rs</code> - 持有数据的 ResultSet",
+      "count": 2
+    },
+    {
+      "source": "<code>index</code> - the column index",
+      "translation": "<code>index</code> - 列索引",
+      "count": 2
+    },
+    {
+      "source": "the column key to use",
+      "translation": "要使用的列键",
+      "count": 2
+    },
+    {
+      "source": "the Object returned",
+      "translation": "返回的 Object",
+      "count": 2
+    },
+    {
+      "source": "Implementations must implement this method to map each row of data in the\n<code>ResultSet</code>. This method should not call <code>next()</code> on the\n<code>ResultSet</code>; it is only supposed to map values of the current row.",
+      "translation": "实现类必须实现此方法，以映射 `<code>ResultSet`</code> 中的每一行数据。此方法不应调用 `<code>ResultSet`</code> 的 `next()`；它仅用于映射当前行的值。",
+      "count": 1
+    },
+    {
+      "source": "Implementations must implement this method to map each row of data in the\n<code>ResultSet</code>.",
+      "translation": "实现必须实现此方法，以映射 <code>ResultSet</code> 中的每一行数据。",
+      "count": 1
+    },
+    {
+      "source": "Create a Map instance to be used as column map.",
+      "translation": "创建用作列映射的 Map 实例。",
+      "count": 1
+    },
+    {
+      "source": "Determine the key to use for the given column in the column Map.",
+      "translation": "确定给定列在列 Map 中使用的键。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a JDBC object value for the specified column.",
+      "translation": "检索指定列的 JDBC 对象值。",
+      "count": 1
+    },
+    {
+      "source": "<code>rs</code> - the <code>ResultSet</code> to map (pre-initialized for the current row)",
+      "translation": "<code>rs</code> - 要映射的 <code>ResultSet</code>（已针对当前行预初始化）",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if an SQLException is encountered while getting\ncolumn values (that is, there's no need to catch SQLException)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果在获取列值时遇到 SQLException（即无需捕获 SQLException）。",
+      "count": 1
+    },
+    {
+      "source": "<code>rowNum</code> - the number of the current row",
+      "translation": "<code>rowNum</code> - 当前行的行号",
+      "count": 1
+    },
+    {
+      "source": "the result object for the current row (may be <code>null</code>)",
+      "translation": "当前行的结果对象（可能为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the new Map instance",
+      "translation": "新的 Map 实例",
+      "count": 1
+    }
+  ]
+}

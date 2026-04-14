@@ -1,0 +1,211 @@
+{
+  "created_at": "2026-04-14 10:30:14",
+  "updated_at": "2026-04-14 10:30:14",
+  "stats": {
+    "total_entries": 39,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 77,
+    "entries_with_hits": 39,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9743589743589745,
+    "usage_percentage": 0.0039
+  },
+  "items": [
+    {
+      "source": "<code>defaultExecutor</code> - the <code>Executor</code> (typically a Spring <code>AsyncTaskExecutor</code>\nor <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>) to delegate to, unless a more specific\nexecutor has been requested via a qualifier on the async method, in which case the\nexecutor will be looked up at invocation time against the enclosing bean factory",
+      "translation": "<code>defaultExecutor</code> - 要委托的 <code>Executor</code>（通常是 Spring <code>AsyncTaskExecutor</code> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>），除非通过异步方法上的限定符请求了更具体的执行器，在这种情况下，将在调用时从外围 Bean 工厂中查找该执行器。",
+      "count": 4
+    },
+    {
+      "source": "Supply the <a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> to use to handle exceptions\nthrown by invoking asynchronous methods with a <code>void</code> return type.",
+      "translation": "提供 `<a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>` 来处理通过调用返回类型为 `<code>void</code>` 的异步方法时抛出的异常。",
+      "count": 3
+    },
+    {
+      "source": "Create a new instance with a default <a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>.",
+      "translation": "创建一个带有默认 <a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> 的新实例。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"AsyncExecutionAspectSupport.html\" title=\"class in org.springframework.aop.interceptor\"><code>AsyncExecutionAspectSupport</code></a> with the given exception handler.",
+      "translation": "创建一个新的带有给定异常处理器的<a href=\"AsyncExecutionAspectSupport.html\" title=\"class in org.springframework.aop.interceptor\"><code>AsyncExecutionAspectSupport</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Set the <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> to be used when looking up executors by qualifier\nor when relying on the default executor lookup algorithm.",
+      "translation": "将 `<a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>` 设置为通过限定符查找执行器或依赖默认执行器查找算法时使用的工厂。",
+      "count": 3
+    },
+    {
+      "source": "The default implementation searches for a unique <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> bean\nin the context, or for an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> bean named \"taskExecutor\" otherwise.\nIf neither of the two is resolvable, this implementation will return <code>null</code>.",
+      "translation": "默认实现会在上下文中搜索唯一的<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>Bean，否则将搜索名为 \"taskExecutor\" 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>Bean。如果这两种情况都无法解析，此实现将返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Provides support for <i>executor qualification</i> on a method-by-method basis.\n<code>AsyncExecutionAspectSupport</code> objects must be constructed with a default <code>\nExecutor</code>, but each individual method may further qualify a specific <code>Executor</code>\nbean to be used when executing it, for example, through an annotation attribute.",
+      "translation": "支持按方法级别进行<i>执行器资格认证</i>。必须使用默认 <code>Executor</code> 构造 <code>AsyncExecutionAspectSupport</code> 对象，但每个单独的方法可以进一步指定用于执行特定 <code>Executor</code> Bean 的实例，例如通过注解属性。",
+      "count": 2
+    },
+    {
+      "source": "If the return type of the method is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a> object, the original\nexception can be propagated by just throwing it at the higher level. However,\nfor all other cases, the exception will not be transmitted back to the client.\nIn that later case, the current <a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> will be\nused to manage such exception.",
+      "translation": "如果方法的返回类型是 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a>` 对象，则可以通过在更高层抛出原始异常来传播该异常。然而，对于所有其他情况，异常将不会传输回客户端。在后一种情况下，当前的 `<a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>` 将被用于管理此类异常。",
+      "count": 2
+    },
+    {
+      "source": "Returning an empty string or <code>null</code> indicates that no specific executor has\nbeen specified and that the <a href=\"#setExecutor(java.util.concurrent.Executor)\">default executor</a>\nshould be used.",
+      "translation": "返回空字符串或 `<code>null</code>` 表示未指定特定的执行器，应使用<a href=\"#setExecutor(java.util.concurrent.Executor)\">默认执行器</a>。",
+      "count": 2
+    },
+    {
+      "source": "Note that the initial lookup happens by type; this is just the fallback\nin case of multiple executor beans found in the context.",
+      "translation": "注意，初始查找是按类型进行的；这只是在上下文中找到多个执行器 Bean 时的后备方案。",
+      "count": 2
+    },
+    {
+      "source": "An executor returned from here will be cached for further use.",
+      "translation": "从此处返回的 Executor 将被缓存以供后续使用。",
+      "count": 2
+    },
+    {
+      "source": "The default name of the <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> bean to pick up: \"taskExecutor\".",
+      "translation": "默认要拾取的 `<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>` bean 的名称为：\"taskExecutor\"。",
+      "count": 2
+    },
+    {
+      "source": "Configure this aspect with the given executor and exception handler suppliers,\napplying the corresponding default if a supplier is not resolvable.",
+      "translation": "使用给定的执行器和异常处理器供应商配置此方面，如果无法解析供应商则应用相应的默认值。",
+      "count": 2
+    },
+    {
+      "source": "Determine the specific executor to use when executing the given method.",
+      "translation": "确定执行给定方法时使用的具体执行器。",
+      "count": 2
+    },
+    {
+      "source": "Delegate for actually executing the given task with the chosen executor.",
+      "translation": "用于使用所选执行器实际执行给定任务的委托。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve a target executor for the given qualifier.",
+      "translation": "获取给定限定符的目标执行器。",
+      "count": 2
+    },
+    {
+      "source": "Supply the executor to be used when executing async methods.",
+      "translation": "提供用于执行异步方法的执行器。",
+      "count": 2
+    },
+    {
+      "source": "<code>exceptionHandler</code> - the <a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> to use",
+      "translation": "`exceptionHandler` - 要使用的 `<a href=\"AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>`",
+      "count": 2
+    },
+    {
+      "source": "<code>returnType</code> - the declared return type (potentially a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a> variant)",
+      "translation": "<code>returnType</code> - 声明的返回类型（可能是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a> 变体）",
+      "count": 2
+    },
+    {
+      "source": "the execution result (potentially a corresponding <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a> handle)",
+      "translation": "执行结果（可能是一个对应的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a> 处理程序）",
+      "count": 2
+    },
+    {
+      "source": "the executor to use (or <code>null</code>, but just if no default executor is available)",
+      "translation": "要使用的执行器（或<code>null</code>，但仅在默认执行器不可用时）",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - the method to inspect for executor qualifier metadata",
+      "translation": "<code>method</code> - 要检查执行器限定符元数据的方法",
+      "count": 2
+    },
+    {
+      "source": "the qualifier if specified, otherwise empty String or <code>null</code>",
+      "translation": "如果指定了限定符，则为该限定符；否则为空字符串或<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>qualifier</code> - the qualifier to resolve",
+      "translation": "<code>qualifier</code> - 要解析的限定符",
+      "count": 2
+    },
+    {
+      "source": "the target executor, or <code>null</code> if none available",
+      "translation": "目标执行器，如果没有可用则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>beanFactory</code> - the BeanFactory to use for a default executor lookup",
+      "translation": "<code>beanFactory</code> - 用于默认执行器查找的 BeanFactory",
+      "count": 2
+    },
+    {
+      "source": "the default executor, or <code>null</code> if none available",
+      "translation": "默认执行器，或者如果没有可用则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the task to execute",
+      "translation": "<code>task</code> - 要执行的任务",
+      "count": 2
+    },
+    {
+      "source": "<code>executor</code> - the chosen executor",
+      "translation": "<code>executor</code> - 选定的执行器",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - the method that was invoked",
+      "translation": "<code>method</code> - 被调用的方法",
+      "count": 2
+    },
+    {
+      "source": "<code>params</code> - the parameters used to invoke the method",
+      "translation": "<code>params</code> - 用于调用方法的参数",
+      "count": 2
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller, Stephane Nicoll, He Bo, Sebastien Deleuze",
+      "translation": "Chris Beams, Juergen Hoeller, Stephane Nicoll, 何波，Sebastien Deleuze",
+      "count": 2
+    },
+    {
+      "source": "Handles a fatal error thrown while asynchronously invoking the specified\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>.",
+      "translation": "处理在异步调用指定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 时抛出的致命错误。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve or build a default executor for this advice instance.",
+      "translation": "为此建议实例检索或构建默认执行器。",
+      "count": 1
+    },
+    {
+      "source": "Return the qualifier or bean name of the executor to be used when executing the\ngiven async method, typically specified in the form of an annotation attribute.",
+      "translation": "返回用于执行给定异步方法的执行器的限定符或 Bean 名称，通常以注解属性的形式指定。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the exception to handle",
+      "translation": "<code>ex</code> - 要处理的异常",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-04-14 16:19:33",
+  "updated_at": "2026-04-14 16:19:33",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4545454545454546,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Set the <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> to use to handle uncaught\nexceptions thrown by asynchronous method executions.",
+      "translation": "设置要用于处理异步方法执行中抛出的未捕获异常的 <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "The <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> responsible for the asynchronous execution may\nbe provided as well as the annotation type that indicates a method should be\ninvoked asynchronously. If no annotation type is specified, this post-\nprocessor will detect both Spring's <a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@Async</code></a> annotation as well\nas the EJB 3.1 <code>jakarta.ejb.Asynchronous</code> annotation.",
+      "translation": "负责异步执行的<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>以及指示方法应被异步调用的注解类型也可以提供。如果未指定注解类型，此后置处理器将检测 Spring 的<a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@Async</code></a>注解以及 EJB 3.1 的<code>jakarta.ejb.Asynchronous</code>注解。",
+      "count": 2
+    },
+    {
+      "source": "If not specified, default executor resolution will apply: searching for a\nunique <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> bean in the context, or for an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>\nbean named \"taskExecutor\" otherwise. If neither of the two is resolvable,\na local default executor will be created within the interceptor.",
+      "translation": "如果未指定，将应用默认的执行器解析：在上下文中搜索唯一的<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>Bean，或者（否则）搜索名为 \"taskExecutor\" 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>Bean。如果这两种方式都无法解析，则将在拦截器内创建一个本地默认执行器。",
+      "count": 2
+    },
+    {
+      "source": "For methods having a <code>void</code> return type, any exception thrown\nduring the asynchronous method invocation cannot be accessed by the\ncaller. An <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> can be specified to handle\nthese cases.",
+      "translation": "对于返回类型为 `<code>void</code>` 的方法，在异步方法调用期间抛出的任何异常都无法被调用者访问。可以指定一个 <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> 来处理这些情况。",
+      "count": 2
+    },
+    {
+      "source": "Note: The underlying async advisor applies before existing advisors by default,\nin order to switch to async execution as early as possible in the invocation chain.",
+      "translation": "注意：底层异步顾问默认在现有顾问之前应用，以便在调用链中尽早切换到异步执行。",
+      "count": 2
+    },
+    {
+      "source": "This setter property exists so that developers can provide their own\n(non-Spring-specific) annotation type to indicate that a method (or all\nmethods of a given class) should be invoked asynchronously.",
+      "translation": "此 Setter 属性存在，以便开发人员提供自己的（非 Spring 特定的）注解类型，以指示应异步调用某个方法（或给定类的所有方法）。",
+      "count": 2
+    },
+    {
+      "source": "Configure this post-processor with the given executor and exception handler suppliers,\napplying the corresponding default if a supplier is not resolvable.",
+      "translation": "配置此后置处理器，使用给定的执行器和异常处理程序供应商；如果无法解析某个供应商，则应用相应的默认值。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>Async</code></a></li>\n<li><a href=\"AsyncAnnotationAdvisor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>AsyncAnnotationAdvisor</code></a></li>\n<li><a href=\"../../aop/framework/AbstractAdvisingBeanPostProcessor.html#setBeforeExistingAdvisors(boolean)\"><code>AbstractAdvisingBeanPostProcessor.setBeforeExistingAdvisors(boolean)</code></a></li>\n<li><a href=\"ScheduledAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>ScheduledAnnotationBeanPostProcessor</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>Async</code></a></li>\n<li><a href=\"AsyncAnnotationAdvisor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>AsyncAnnotationAdvisor</code></a></li>\n<li><a href=\"../../aop/framework/AbstractAdvisingBeanPostProcessor.html#setBeforeExistingAdvisors(boolean)\"><code>AbstractAdvisingBeanPostProcessor.setBeforeExistingAdvisors(boolean)</code></a></li>\n<li><a href=\"ScheduledAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>ScheduledAnnotationBeanPostProcessor</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../../aop/interceptor/AsyncExecutionAspectSupport.html#DEFAULT_TASK_EXECUTOR_BEAN_NAME\"><code>AsyncExecutionAspectSupport.DEFAULT_TASK_EXECUTOR_BEAN_NAME</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor.DEFAULT_TASK_EXECUTOR_BEAN_NAME\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../../aop/interceptor/AsyncExecutionAspectSupport.html#DEFAULT_TASK_EXECUTOR_BEAN_NAME\"><code>AsyncExecutionAspectSupport.DEFAULT_TASK_EXECUTOR_BEAN_NAME</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor.DEFAULT_TASK_EXECUTOR_BEAN_NAME\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "Note that the initial lookup happens by type; this is just the fallback\nin case of multiple executor beans found in the context.",
+      "translation": "注意，初始查找是按类型进行的；这只是在上下文中找到多个执行器 Bean 时的后备方案。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "The default name of the <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> bean to pick up: \"taskExecutor\".",
+      "translation": "默认要拾取的 `<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>` bean 的名称为：\"taskExecutor\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> to use when invoking methods asynchronously.",
+      "translation": "设置异步调用方法时使用的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set the 'async' annotation type to be detected at either class or method\nlevel.",
+      "translation": "将 `'async'` 注解类型设置为在类或方法级别进行检测。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../aop/framework/autoproxy/AbstractBeanFactoryAwareAdvisingPostProcessor.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in class <code><a href=\"../../aop/framework/autoproxy/AbstractBeanFactoryAwareAdvisingPostProcessor.html\" title=\"class in org.springframework.aop.framework.autoproxy\">AbstractBeanFactoryAwareAdvisingPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../aop/framework/autoproxy/AbstractBeanFactoryAwareAdvisingPostProcessor.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 类中的 `<code><a href=\"../../aop/framework/autoproxy/AbstractBeanFactoryAwareAdvisingPostProcessor.html\" title=\"class in org.springframework.aop.framework.autoproxy\">AbstractBeanFactoryAwareAdvisingPostProcessor</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>asyncAnnotationType</code> - the desired annotation type",
+      "translation": "<code>asyncAnnotationType</code> - 期望的注解类型",
+      "count": 1
+    },
+    {
+      "source": "Mark Fisher, Juergen Hoeller, Stephane Nicoll",
+      "translation": "Mark Fisher，Juergen Hoeller，Stephane Nicoll",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

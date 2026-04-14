@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-04-14 16:20:13",
+  "updated_at": "2026-04-14 16:20:13",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 43,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6538461538461537,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "By default, Spring will be searching for an associated thread pool definition:\neither a unique <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> bean in the context,\nor an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> bean named \"taskExecutor\" otherwise. If\nneither of the two is resolvable, a <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>\nwill be used to process async method invocations. Besides, annotated methods having a\n<code>void</code> return type cannot transmit any exception back to the caller. By default,\nsuch uncaught exceptions are only logged.",
+      "translation": "默认情况下，Spring 将搜索关联的线程池定义：即上下文中唯一的 <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> Bean，或者名为 \"taskExecutor\" 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> Bean。如果两者均无法解析，则使用 <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> 来处理异步方法调用。此外，返回类型为 <code>void</code> 的注解方法无法将任何异常回传给调用者。默认情况下，此类未捕获的异常仅会被记录日志。",
+      "count": 2
+    },
+    {
+      "source": "<b>The default is <a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>.</b>\nPlease note that proxy mode allows for interception of calls through the proxy\nonly. Local calls within the same class cannot get intercepted that way; an\n<a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>Async</code></a> annotation on such a method within a local call will be ignored\nsince Spring's interceptor does not even kick in for such a runtime scenario.\nFor a more advanced mode of interception, consider switching this to\n<a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>.",
+      "translation": "<b>默认值为 <a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>。</b>请注意，代理模式仅允许通过代理拦截调用。同一类内的本地调用无法以这种方式被拦截；此类本地调用中该方法的 <a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>Async</code></a> 注解将被忽略，因为 Spring 的拦截器在此运行时场景下甚至不会启动。若要采用更高级别的拦截模式，请考虑将此值切换为 <a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Applicable only if the <a href=\"#mode()\"><code>mode()</code></a> is set to <a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a></strong>.",
+      "translation": "<strong>仅适用于<a href=\"#mode()\"><code>mode()</code></a>设置为<a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>的情况。</strong>",
+      "count": 2
+    },
+    {
+      "source": "Note: In the above example the <code>ThreadPoolTaskExecutor</code> is not a fully managed\nSpring bean. Add the <code>@Bean</code> annotation to the <code>getAsyncExecutor()</code> method\nif you want a fully managed bean. In such circumstances it is no longer necessary to\nmanually call the <code>executor.initialize()</code> method as this will be invoked\nautomatically when the bean is initialized.",
+      "translation": "注意：在上述示例中，<code>ThreadPoolTaskExecutor</code> 并非完全由 Spring 管理的 Bean。如果您希望它是一个完全管理的 Bean，请为 <code>getAsyncExecutor()</code> 方法添加 <code>@Bean</code> 注解。在这种情况下，不再需要手动调用 <code>executor.initialize()</code> 方法，因为该 Bean 初始化时会自动调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note: <code>@EnableAsync</code> applies to its local application context only,\nallowing for selective activation at different levels.</b> Please redeclare\n<code>@EnableAsync</code> in each individual context, for example, the common root web\napplication context and any separate <code>DispatcherServlet</code> application contexts,\nif you need to apply its behavior at multiple levels.",
+      "translation": "<b>注意：<code>@EnableAsync</code> 仅适用于其本地应用程序上下文，从而允许在不同级别进行选择性激活。</b> 如果您需要在多个级别应用其行为，请在每个单独的上下文中重新声明<code>@EnableAsync</code>，例如公共根 Web 应用程序上下文和任何单独的 <code>DispatcherServlet</code> 应用程序上下文。",
+      "count": 2
+    },
+    {
+      "source": "Note that setting this attribute to <code>true</code> will affect <em>all</em>\nSpring-managed beans requiring proxying, not just those marked with <code>@Async</code>.\nFor example, other beans marked with Spring's <code>@Transactional</code> annotation\nwill be upgraded to subclass proxying at the same time. This approach has no\nnegative impact in practice unless one is explicitly expecting one type of proxy\nvs. another — for example, in tests.",
+      "translation": "请注意，将此属性设置为 `<code>true</code>` 将影响所有需要代理的 Spring 托管 Bean，而不仅仅是那些标记了 `<code>@Async</code>` 的 Bean。例如，其他标记有 Spring 的 `<code>@Transactional</code>` 注解的 Bean 也会同时升级为子类代理。除非在测试等场景中明确期望一种类型的代理而非另一种，否则此方法在实践中不会产生负面影响。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: <a href=\"AsyncConfigurer.html\" title=\"interface in org.springframework.scheduling.annotation\"><code>AsyncConfigurer</code></a> configuration classes get initialized early\nin the application context bootstrap. If you need any dependencies on other beans\nthere, make sure to declare them 'lazy' as far as possible in order to let them\ngo through other post-processors as well.</b>",
+      "translation": "<b>注意：<a href=\"AsyncConfigurer.html\" title=\"interface in org.springframework.scheduling.annotation\"><code>AsyncConfigurer</code></a> 配置类会在应用程序上下文引导阶段早期进行初始化。如果需要在这些配置类中依赖其他 Bean，请尽可能将它们声明为“懒加载”，以便让它们也能经过其他后置处理器。</b>",
+      "count": 2
+    },
+    {
+      "source": "By default, both Spring's @<a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>Async</code></a> annotation and the EJB 3.1\n<code>@jakarta.ejb.Asynchronous</code> annotation will be detected.",
+      "translation": "默认情况下，Spring 的@<a href=\"Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>Async</code></a>注解和 EJB 3.1 <code>@jakarta.ejb.Asynchronous</code> 注解都将被检测到。",
+      "count": 2
+    },
+    {
+      "source": "To be used together with @<a href=\"../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Configuration</code></a> classes as follows,\nenabling annotation-driven async processing for an entire Spring application context:",
+      "translation": "与 `@<a href=\"../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Configuration</code></a>` 类配合使用，如下所示，可为整个 Spring 应用程序上下文启用基于注解的异步处理：",
+      "count": 2
+    },
+    {
+      "source": "To customize all this, implement <a href=\"AsyncConfigurer.html\" title=\"interface in org.springframework.scheduling.annotation\"><code>AsyncConfigurer</code></a> and provide:",
+      "translation": "要自定义所有这些内容，请实现<a href=\"AsyncConfigurer.html\" title=\"interface in org.springframework.scheduling.annotation\"><code>AsyncConfigurer</code></a>并提供：",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a> in order to run\nafter all other post-processors, so that it can add an advisor to\nexisting proxies rather than double-proxy.",
+      "translation": "默认值为 <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>，以便在所有其他后置处理器之后运行，从而可以向现有代理添加顾问，而不是进行双重代理。",
+      "count": 2
+    },
+    {
+      "source": "If only one item needs to be customized, <code>null</code> can be returned to\nkeep the default settings.",
+      "translation": "如果只需自定义一个项目，可以返回 `<code>null</code>` 以保持默认设置。",
+      "count": 2
+    },
+    {
+      "source": "This attribute exists so that developers can provide their own\ncustom annotation type to indicate that a method (or all methods of\na given class) should be invoked asynchronously.",
+      "translation": "该属性存在是为了让开发人员可以提供自定义的注解类型，以指示某个方法（或给定类的所有方法）应被异步调用。",
+      "count": 2
+    },
+    {
+      "source": "Indicate the order in which the <a href=\"AsyncAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>AsyncAnnotationBeanPostProcessor</code></a>\nshould be applied.",
+      "translation": "指示应用 `<a href=\"AsyncAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>AsyncAnnotationBeanPostProcessor</code></a>` 的顺序。",
+      "count": 2
+    },
+    {
+      "source": "your own <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> through the\n<a href=\"AsyncConfigurer.html#getAsyncExecutor()\"><code>getAsyncExecutor()</code></a> method, and",
+      "translation": "通过 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>` 类实现自己的 <a href=\"AsyncConfigurer.html#getAsyncExecutor()\"><code>getAsyncExecutor()</code></a> 方法，并",
+      "count": 2
+    },
+    {
+      "source": "your own <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> through the <a href=\"AsyncConfigurer.html#getAsyncUncaughtExceptionHandler()\"><code>getAsyncUncaughtExceptionHandler()</code></a>\nmethod.",
+      "translation": "通过 `getAsyncUncaughtExceptionHandler()` 方法提供您自己的 `<a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller, Stephane Nicoll, Sam Brannen",
+      "translation": "Chris Beams, Juergen Hoeller, Stephane Nicoll, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "Note that if the <a href=\"#mode()\">mode()</a> is set to <a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>, then the\nvalue of the <a href=\"#proxyTargetClass()\"><code>proxyTargetClass()</code></a> attribute will be ignored. Note also that in\nthis case the <code>spring-aspects</code> module JAR must be present on the classpath, with\ncompile-time weaving or load-time weaving applying the aspect to the affected classes.\nThere is no proxy involved in such a scenario; local calls will be intercepted as well.",
+      "translation": "请注意，如果 <a href=\"#mode()\">mode()</a> 设置为 <a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>，则 <a href=\"#proxyTargetClass()\"><code>proxyTargetClass()</code></a> 属性的值将被忽略。此外，在此情况下，类路径上必须存在 <code>spring-aspects</code> 模块 JAR，并通过编译时织入或加载时织入将切面应用到受影响的类中。此类场景不涉及代理；本地调用也将被拦截。",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"#mode()\"><code>mode()</code></a> attribute controls how advice is applied: If the mode is\n<a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a> (the default), then the other attributes control the behavior\nof the proxying. Please note that proxy mode allows for interception of calls through\nthe proxy only; local calls within the same class cannot get intercepted that way.",
+      "translation": "`<a href=\"#mode()\"><code>mode()</code></a>` 属性控制建议（advice）的施加方式：如果模式为 `<a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>`（默认值），则其他属性控制代理的行为。请注意，代理模式仅允许通过代理拦截调用；同一类内部的本地调用无法以这种方式被拦截。",
+      "count": 1
+    },
+    {
+      "source": "The default is <code>false</code>.",
+      "translation": "默认值为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "For reference, the example above can be compared to the following Spring XML\nconfiguration:",
+      "translation": "作为参考，上述示例可与以下 Spring XML 配置进行比较：",
+      "count": 1
+    },
+    {
+      "source": "Indicate the 'async' annotation type to be detected at either class\nor method level.",
+      "translation": "指示在类或方法级别检测的 'async' 注解类型。",
+      "count": 1
+    },
+    {
+      "source": "Indicate how async advice should be applied.",
+      "translation": "指示如何应用异步建议。",
+      "count": 1
+    },
+    {
+      "source": "Indicate whether subclass-based (CGLIB) proxies are to be created as opposed\nto standard Java interface-based proxies.",
+      "translation": "指明是否应创建基于子类（CGLIB）的代理，而不是标准的基于 Java 接口的代理。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

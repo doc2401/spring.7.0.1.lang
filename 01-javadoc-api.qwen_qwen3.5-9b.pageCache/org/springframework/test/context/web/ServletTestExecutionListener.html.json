@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-04-14 17:05:01",
+  "updated_at": "2026-04-14 17:05:01",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 49,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 1.75,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "Permissible values include <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html#TRUE\" title=\"class or interface in java.lang\"><code>Boolean.TRUE</code></a> and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html#FALSE\" title=\"class or interface in java.lang\"><code>Boolean.FALSE</code></a>.",
+      "translation": "允许的取值包括<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html#TRUE\" title=\"class or interface in java.lang\"><code>Boolean.TRUE</code></a>和<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html#FALSE\" title=\"class or interface in java.lang\"><code>Boolean.FALSE</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "Sets up thread-local state during the <em>test instance preparation</em>\ncallback phase via Spring Web's <a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>, but only if\nthe <a href=\"../TestContext.html#getTestClass()\">test class</a> is annotated with\n<a href=\"WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a>.",
+      "translation": "在通过 Spring Web 的 <a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a> 设置测试实例准备回调阶段的线程本地状态，但仅当 <a href=\"../TestContext.html#getTestClass()\">测试类</a> 标注有 <a href=\"WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a> 时才会执行。",
+      "count": 3
+    },
+    {
+      "source": "Sets up thread-local state before each test method via Spring Web's\n<a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>, but only if the\n<a href=\"../TestContext.html#getTestClass()\">test class</a> is annotated with\n<a href=\"WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a>.",
+      "translation": "在每个测试方法之前通过 Spring Web 的 <a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a> 设置线程本地状态，但仅当 <a href=\"../TestContext.html#getTestClass()\">测试类</a> 标注了 <a href=\"WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a> 时才会执行。",
+      "count": 3
+    },
+    {
+      "source": "Returns <a href=\"#ORDER\">1000</a>, which ensures that the <code>ServletTestExecutionListener</code>\nis ordered before the\n<a href=\"../support/DirtiesContextBeforeModesTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\"><code>DirtiesContextBeforeModesTestExecutionListener</code></a>.",
+      "translation": "返回 <a href=\"#ORDER\">1000</a>，这确保了 <code>ServletTestExecutionListener</code> 在\n<a href=\"../support/DirtiesContextBeforeModesTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\"><code>DirtiesContextBeforeModesTestExecutionListener</code></a>之前执行。",
+      "count": 3
+    },
+    {
+      "source": "The <a href=\"#getOrder()\"><code>order</code></a> value for this listener: 1000.",
+      "translation": "此监听器的<a href=\"#getOrder()\"><code>order</code></a>值为：1000。",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - allows any exception to propagate",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 允许任何异常传播。",
+      "count": 3
+    },
+    {
+      "source": "Specifically, <code>ServletTestExecutionListener</code> sets up thread-local\nstate via Spring Web's <a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a> during <a href=\"#prepareTestInstance(org.springframework.test.context.TestContext)\">test instance preparation</a> and <a href=\"#beforeTestMethod(org.springframework.test.context.TestContext)\">before each test method</a> and creates a <a href=\"../../../mock/web/MockHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletRequest</code></a>, <a href=\"../../../mock/web/MockHttpServletResponse.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletResponse</code></a>, and\n<a href=\"../../../web/context/request/ServletWebRequest.html\" title=\"class in org.springframework.web.context.request\"><code>ServletWebRequest</code></a> based on the <a href=\"../../../mock/web/MockServletContext.html\" title=\"class in org.springframework.mock.web\"><code>MockServletContext</code></a> present in\nthe <code>WebApplicationContext</code>. This listener also ensures that the\n<code>MockHttpServletResponse</code> and <code>ServletWebRequest</code> can be injected\ninto the test instance, and once the test is complete this listener <a href=\"#afterTestMethod(org.springframework.test.context.TestContext)\">cleans up</a> thread-local state.",
+      "translation": "具体来说，<code>ServletTestExecutionListener</code> 会在<a href=\"#prepareTestInstance(org.springframework.test.context.TestContext)\">测试实例准备</a>和<a href=\"#beforeTestMethod(org.springframework.test.context.TestContext)\">每个测试方法之前</a>通过 Spring Web 的 <a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a> 设置线程本地状态，并根据 <code>WebApplicationContext</code> 中存在的 <a href=\"../../../mock/web/MockServletContext.html\" title=\"class in org.springframework.mock.web\"><code>MockServletContext</code></a> 创建 <a href=\"../../../mock/web/MockHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletRequest</code></a>、<a href=\"../../../mock/web/MockHttpServletResponse.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletResponse</code></a> 和 <a href=\"../../../web/context/request/ServletWebRequest.html\" title=\"class in org.springframework.web.context.request\"><code>ServletWebRequest</code></a>。该监听器还确保可以将 <code>MockHttpServletResponse</code> 和 <code>ServletWebRequest</code> 注入到测试实例中，并且在测试完成后，该监听器会<a href=\"#afterTestMethod(org.springframework.test.context.TestContext)\">清理</a>线程本地状态。",
+      "count": 2
+    },
+    {
+      "source": "Note that <code>ServletTestExecutionListener</code> is enabled by default but\ngenerally takes no action if the <a href=\"../TestContext.html#getTestClass()\">test\nclass</a> is not annotated with <a href=\"WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a>.\nSee the javadocs for individual methods in this class for details.",
+      "translation": "请注意，<code>ServletTestExecutionListener</code> 默认已启用，但如果 <a href=\"../TestContext.html#getTestClass()\">测试类</a> 未使用 <a href=\"WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a> 进行注解，则通常不会执行任何操作。有关详细信息，请参阅此类的各个方法的 JavaDoc。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE\"><code>RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE</code></a> and\n<a href=\"#POPULATED_REQUEST_CONTEXT_HOLDER_ATTRIBUTE\"><code>POPULATED_REQUEST_CONTEXT_HOLDER_ATTRIBUTE</code></a> will be subsequently\nremoved from the test context, regardless of their values.",
+      "translation": "`RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE` 和 `POPULATED_REQUEST_CONTEXT_HOLDER_ATTRIBUTE` 将随后从测试上下文中移除，无论其值如何。",
+      "count": 2
+    },
+    {
+      "source": "If the <a href=\"#RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE\"><code>RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE</code></a> in the supplied\n<code>TestContext</code> has a value of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html#TRUE\" title=\"class or interface in java.lang\"><code>Boolean.TRUE</code></a>, this method will\n(1) clean up thread-local state after each test method by <a href=\"../../../web/context/request/RequestContextHolder.html#resetRequestAttributes()\">resetting</a> Spring Web's\n<code>RequestContextHolder</code> and (2) ensure that new mocks are injected\ninto the test instance for subsequent tests by setting the\n<a href=\"../support/DependencyInjectionTestExecutionListener.html#REINJECT_DEPENDENCIES_ATTRIBUTE\"><code>DependencyInjectionTestExecutionListener.REINJECT_DEPENDENCIES_ATTRIBUTE</code></a>\nin the test context to <code>true</code>.",
+      "translation": "如果提供的<code>TestContext</code>中的<a href=\"#RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE\"><code>RESET_REQUEST_CONTEXT_HOLDER_ATTRIBUTE</code></a>的值为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html#TRUE\" title=\"class or interface in java.lang\"><code>Boolean.TRUE</code></a>，则此方法将：(1) 通过重置 Spring Web 的<code>RequestContextHolder</code>来清理每个测试方法之后的线程本地状态；以及 (2) 通过将测试上下文中的<a href=\"../support/DependencyInjectionTestExecutionListener.html#REINJECT_DEPENDENCIES_ATTRIBUTE\"><code>DependencyInjectionTestExecutionListener.REINJECT_DEPENDENCIES_ATTRIBUTE</code></a>设置为<code>true</code>，确保为后续测试向测试实例注入新的模拟对象。",
+      "count": 2
+    },
+    {
+      "source": "Attribute name for a <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a> attribute which indicates\nwhether the <code>ServletTestExecutionListener</code> should <a href=\"../../../web/context/request/RequestContextHolder.html#resetRequestAttributes()\">reset</a> Spring Web's\n<code>RequestContextHolder</code> in <a href=\"#afterTestMethod(org.springframework.test.context.TestContext)\"><code>afterTestMethod(TestContext)</code></a>.",
+      "translation": "用于 `<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a>` 属性的属性名称，该属性指示是否应在 <a href=\"#afterTestMethod(org.springframework.test.context.TestContext)\"><code>afterTestMethod(TestContext)</code></a> 中重置 Spring Web 的 <code>RequestContextHolder</code>（通过调用 <a href=\"../../../web/context/request/RequestContextHolder.html#resetRequestAttributes()\">reset</a>）。",
+      "count": 2
+    },
+    {
+      "source": "Attribute name for a request attribute which indicates that the\n<a href=\"../../../mock/web/MockHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletRequest</code></a> stored in the <a href=\"../../../web/context/request/RequestAttributes.html\" title=\"interface in org.springframework.web.context.request\"><code>RequestAttributes</code></a>\nin Spring Web's <a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a> was created by the TestContext\nframework.",
+      "translation": "请求属性名称，用于指示存储在 Spring Web 的<a href=\"../../../web/context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>中的<a href=\"../../../mock/web/MockHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletRequest</code></a><a href=\"../../../web/context/request/RequestAttributes.html\" title=\"interface in org.springframework.web.context.request\"></a>是由 TestContext 框架创建的。",
+      "count": 2
+    },
+    {
+      "source": "Attribute name for a <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a> attribute which indicates that\n<code>ServletTestExecutionListener</code> has already populated Spring Web's\n<code>RequestContextHolder</code>.",
+      "translation": "用于 `<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a>` 属性的属性名称，该属性指示`<code>ServletTestExecutionListener</code>` 已经填充了 Spring Web 的`<code>RequestContextHolder</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Attribute name for a <a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a> attribute which indicates that the\n<code>ServletTestExecutionListener</code> should be activated.",
+      "translation": "用于指示应激活 `<code>ServletTestExecutionListener</code>` 的 `<a href=\"../TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a>` 属性的属性名称。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#getOrder()\">getOrder</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#getOrder()\">getOrder</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TestExecutionListener.html#prepareTestInstance(org.springframework.test.context.TestContext)\">prepareTestInstance</a></code> in interface <code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../TestExecutionListener.html#prepareTestInstance(org.springframework.test.context.TestContext)\">prepareTestInstance</a></code>` 接口 `<code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#prepareTestInstance(org.springframework.test.context.TestContext)\">prepareTestInstance</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#prepareTestInstance(org.springframework.test.context.TestContext)\">prepareTestInstance</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code> in interface <code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../TestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code>` 接口 `<code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#beforeTestMethod(org.springframework.test.context.TestContext)\">beforeTestMethod</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code> in interface <code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../TestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code>` 接口 `<code><a href=\"../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\">TestExecutionListener</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../support/AbstractTestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code> in class <code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>",
+      "translation": "`<code><a href=\"../support/AbstractTestExecutionListener.html#afterTestMethod(org.springframework.test.context.TestContext)\">afterTestMethod</a></code>` 类中的 `<code><a href=\"../support/AbstractTestExecutionListener.html\" title=\"class in org.springframework.test.context.support\">AbstractTestExecutionListener</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>testContext</code> - the test context for the test; never <code>null</code>",
+      "translation": "<code>testContext</code> - 测试的测试上下文；永远不会为 <code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>testContext</code> - the test context in which the test method will be\nexecuted; never <code>null</code>",
+      "translation": "<code>testContext</code> - 测试方法将在此测试上下文中执行；永远不会为 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>testContext</code> - the test context in which the test method was\nexecuted; never <code>null</code>",
+      "translation": "<code>testContext</code> - 测试方法执行所在的测试上下文；永远不会为 <code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Phillip Webb",
+      "translation": "Sam Brannen, Phillip Webb",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

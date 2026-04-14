@@ -1,0 +1,701 @@
+{
+  "created_at": "2026-04-14 17:37:31",
+  "updated_at": "2026-04-14 17:37:31",
+  "stats": {
+    "total_entries": 137,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 208,
+    "entries_with_hits": 137,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5182481751824817,
+    "usage_percentage": 0.0137
+  },
+  "items": [
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在系统错误的情况下",
+      "count": 6
+    },
+    {
+      "source": "<code>transaction</code> - the transaction object returned by <code>doGetTransaction</code>",
+      "translation": "<code>transaction</code> - 由 <code>doGetTransaction</code> 返回的事务对象",
+      "count": 5
+    },
+    {
+      "source": "<code>status</code> - the status representation of the transaction",
+      "translation": "<code>status</code> - 事务的状态表示",
+      "count": 4
+    },
+    {
+      "source": "<code>status</code> - object representing the transaction",
+      "translation": "<code>status</code> - 表示事务的对象",
+      "count": 3
+    },
+    {
+      "source": "<b>Note:</b>This flag only applies to an explicit rollback attempt for a\nsubtransaction, typically caused by an exception thrown by a data access operation\n(where TransactionInterceptor will trigger a <code>PlatformTransactionManager.rollback()</code>\ncall according to a rollback rule). If the flag is off, the caller can handle the exception\nand decide on a rollback, independent of the rollback rules of the subtransaction.\nThis flag does, however, <i>not</i> apply to explicit <code>setRollbackOnly</code>\ncalls on a <code>TransactionStatus</code>, which will always cause an eventual\nglobal rollback (as it might not throw an exception after the rollback-only call).",
+      "translation": "<b>注意：</b>此标志仅适用于子事务的显式回滚尝试，通常由数据访问操作抛出的异常引起（此时 TransactionInterceptor 将根据回滚规则触发<code>PlatformTransactionManager.rollback()</code>调用）。如果该标志关闭，调用者可以处理异常并决定是否回滚，而独立于子事务的回滚规则。然而，此标志不适用于对<code>TransactionStatus</code>的显式<code>setRollbackOnly</code>调用，这些调用将始终导致最终的全局回滚（因为在设置回滚-only 后可能不会抛出异常）。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can override this to return <code>false</code>, causing a further\ncall to <code>doBegin</code> - within the context of an already existing transaction.\nThe <code>doBegin</code> implementation needs to handle this accordingly in such\na scenario. This is appropriate for JTA, for example.",
+      "translation": "子类可以重写此方法以返回 `<code>false</code>`，从而在已存在的事务上下文中进一步调用 `<code>doBegin</code>`。在这种情况下，`<code>doBegin</code>` 的实现需要相应地处理。例如，这对于 JTA 是合适的。",
+      "count": 2
+    },
+    {
+      "source": "Override this to return \"true\" if the concrete transaction manager expects a\n<code>doCommit</code> call even for a rollback-only transaction, allowing for\nspecial handling there. This will, for example, be the case for JTA, where\n<code>UserTransaction.commit</code> will check the read-only flag itself and\nthrow a corresponding RollbackException, which might include the specific reason\n(such as a transaction timeout).",
+      "translation": "覆盖此方法，以便在具体的事务管理器即使对于仅回滚的事务也期望调用<code>doCommit</code>时返回\"true\"，从而允许对此进行特殊处理。例如，对于 JTA 而言，<code>UserTransaction.commit</code> 将自行检查只读标志并抛出相应的 RollbackException，该异常可能包含具体原因（如事务超时）。",
+      "count": 2
+    },
+    {
+      "source": "Default is the underlying transaction infrastructure's default timeout,\nfor example, typically 30 seconds in case of a JTA provider, indicated by the\n<code>TransactionDefinition.TIMEOUT_DEFAULT</code> value.",
+      "translation": "默认值为底层事务基础设施的默认超时时间，例如在 JTA 提供者的情况下通常为 30 秒，由 `<code>TransactionDefinition.TIMEOUT_DEFAULT</code>` 值指示。",
+      "count": 2
+    },
+    {
+      "source": "Returns <code>TransactionDefinition.TIMEOUT_DEFAULT</code> to indicate\nthe underlying transaction infrastructure's default timeout.",
+      "translation": "返回<code>TransactionDefinition.TIMEOUT_DEFAULT</code>，以指示底层事务基础设施的默认超时时间。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\": If a participating transaction (for example, with\nPROPAGATION_REQUIRED or PROPAGATION_SUPPORTS encountering an existing\ntransaction) fails, the transaction will be globally marked as rollback-only.\nThe only possible outcome of such a transaction is a rollback: The\ntransaction originator <i>cannot</i> make the transaction commit anymore.",
+      "translation": "默认为\"true\"：如果参与的事务（例如，遇到现有事务的 PROPAGATION_REQUIRED 或 PROPAGATION_SUPPORTS）失败，该事务将被全局标记为仅回滚。此类事务的唯一可能结果就是回滚：事务发起者<i>无法</i>再提交该事务。",
+      "count": 2
+    },
+    {
+      "source": "To be called by this abstract manager itself, or by special implementations\nof the <code>registerAfterCompletionWithExistingTransaction</code> callback.",
+      "translation": "由该抽象管理器本身调用，或由<code>registerAfterCompletionWithExistingTransaction</code>回调的特殊实现调用。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>true</code>, which causes delegation to DefaultTransactionStatus\nfor creating and holding a savepoint. If the transaction object does not implement\nthe SavepointManager interface, a NestedTransactionNotSupportedException will be\nthrown. Else, the SavepointManager will be asked to create a new savepoint to\ndemarcate the start of the nested transaction.",
+      "translation": "默认为 `<code>true</code>`，这将导致委托给 DefaultTransactionStatus 以创建和保存保存点。如果事务对象未实现 SavepointManager 接口，将抛出 NestedTransactionNotSupportedException 异常。否则，将请求 SavepointManager 创建一个新的保存点，以界定嵌套事务的开始。",
+      "count": 2
+    },
+    {
+      "source": "If this method returns \"true\" but the <code>doCommit</code> implementation does not\nthrow an exception, this transaction manager will throw an UnexpectedRollbackException\nitself. This should not be the typical case; it is mainly checked to cover misbehaving\nJTA providers that silently roll back even when the rollback has not been requested\nby the calling code.",
+      "translation": "如果此方法返回 \"true\"，但 `<code>doCommit</code>` 实现未抛出异常，则此事务管理器本身将抛出 `UnexpectedRollbackException`。这不应是典型情况；主要检查此情况是为了涵盖行为不当的 JTA 提供者，这些提供者在调用代码未请求回滚的情况下静默回滚。",
+      "count": 2
+    },
+    {
+      "source": "Transaction synchronization is a generic mechanism for registering callbacks\nthat get invoked at transaction completion time. This is mainly used internally\nby the data access support classes for JDBC, Hibernate, JPA, etc when running\nwithin a JTA transaction: They register resources that are opened within the\ntransaction for closing at transaction completion time, allowing, for example, for reuse\nof the same Hibernate Session within the transaction. The same mechanism can\nalso be leveraged for custom synchronization needs in an application.",
+      "translation": "事务同步是一种通用机制，用于注册在事务完成时调用的回调。这主要被数据访问支持类（如 JDBC、Hibernate、JPA 等）在 JTA 事务内部运行时使用：它们注册在事务期间打开的资源，以便在事务完成时关闭，从而允许例如在同一事务中重用同一个 Hibernate Session。该机制也可用于应用程序中的自定义同步需求。",
+      "count": 2
+    },
+    {
+      "source": "Note that transaction synchronization isn't supported for\nmultiple concurrent transactions by different transaction managers.\nOnly one transaction manager is allowed to activate it at any time.",
+      "translation": "请注意，事务同步不支持由不同事务管理器管理的多个并发事务。在任何时候，只允许一个事务管理器激活它。",
+      "count": 2
+    },
+    {
+      "source": "Typically initialized with an appropriate default by the\nconcrete transaction manager subclass.",
+      "translation": "通常由具体的事务管理器子类初始化为适当的默认值。",
+      "count": 2
+    },
+    {
+      "source": "When participating in an existing transaction (for example, with\nPROPAGATION_REQUIRED or PROPAGATION_SUPPORTS encountering an existing\ntransaction), this outer transaction's characteristics will apply even\nto the inner transaction scope. Validation will detect incompatible\nisolation level and read-only settings on the inner transaction definition\nand reject participation accordingly through throwing a corresponding exception.",
+      "translation": "当参与现有事务（例如，在遇到现有事务时遇到 PROPAGATION_REQUIRED 或 PROPAGATION_SUPPORTS）时，该外部事务的特性将适用于内部事务范围。验证将检测内部事务定义中不兼容的隔离级别和只读设置，并通过抛出相应的异常来拒绝参与。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", leniently ignoring inner transaction settings,\nsimply overriding them with the outer transaction's characteristics.\nSwitch this flag to \"true\" in order to enforce strict validation.",
+      "translation": "默认为 \"false\"，宽松地忽略内部事务设置，仅用外部事务的特性覆盖它们。将此标志切换为 \"true\" 以强制执行严格验证。",
+      "count": 2
+    },
+    {
+      "source": "Switch this to \"false\" to let the transaction originator make the rollback\ndecision. If a participating transaction fails with an exception, the caller\ncan still decide to continue with a different path within the transaction.\nHowever, note that this will only work as long as all participating resources\nare capable of continuing towards a transaction commit even after a data access\nfailure: This is generally not the case for a Hibernate Session, for example;\nneither is it for a sequence of JDBC insert/update/delete operations.",
+      "translation": "将其切换为 \"false\" 以允许事务发起方做出回滚决定。如果参与的事务因异常而失败，调用方仍可以决定在事务内继续执行不同的路径。然而，请注意，这仅在所有参与的资源在数据访问失败后仍能继续向事务提交推进时才有效：例如，Hibernate Session 通常不具备此能力；JDBC 的插入/更新/删除操作序列也是如此。",
+      "count": 2
+    },
+    {
+      "source": "The recommended solution for handling failure of a subtransaction\nis a \"nested transaction\", where the global transaction can be rolled\nback to a savepoint taken at the beginning of the subtransaction.\nPROPAGATION_NESTED provides exactly those semantics; however, it will\nonly work when nested transaction support is available. This is the case\nwith DataSourceTransactionManager, but not with JtaTransactionManager.",
+      "translation": "处理子事务失败的推荐解决方案是“嵌套事务”，其中全局事务可以回滚到子事务开始时设置的保存点。`PROPAGATION_NESTED` 提供了这些语义；然而，它仅在支持嵌套事务时才能工作。`DataSourceTransactionManager` 支持此功能，但 `JtaTransactionManager` 不支持。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", only causing an UnexpectedRollbackException at the\noutermost transaction boundary. Switch this flag on to cause an\nUnexpectedRollbackException as early as the global rollback-only marker\nhas been first detected, even from within an inner transaction boundary.",
+      "translation": "默认为\"false\"，仅在最外层事务边界处引发 UnexpectedRollbackException。将此标志设置为 true 后，一旦检测到全局回滚标记，即使在内部事务边界内，也会尽早引发 UnexpectedRollbackException。",
+      "count": 2
+    },
+    {
+      "source": "Note that the fail-early behavior for global\nrollback-only markers has been unified: All transaction managers will by\ndefault only cause UnexpectedRollbackException at the outermost transaction\nboundary. This allows, for example, to continue unit tests even after an\noperation failed and the transaction will never be completed. All transaction\nmanagers will only fail earlier if this flag has explicitly been set to \"true\".",
+      "translation": "请注意，全局 `rollback-only` 标记的提前失败行为已统一：所有事务管理器默认仅在最外层事务边界处抛出 `UnexpectedRollbackException`。例如，即使操作失败且事务将永远不会完成，也可以继续执行单元测试。仅当此标志被显式设置为 \"true\" 时，所有事务管理器才会更早地失败。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation throws a TransactionSuspensionNotSupportedException,\nassuming that transaction suspension is generally not supported.",
+      "translation": "默认实现会抛出 `TransactionSuspensionNotSupportedException`，假定事务挂起通常不受支持。",
+      "count": 2
+    },
+    {
+      "source": "Does not apply if an application locally sets the transaction to rollback-only\nvia the TransactionStatus, but only to the transaction itself being marked as\nrollback-only by the transaction coordinator.",
+      "translation": "如果应用程序通过 `TransactionStatus` 在本地将事务设置为仅回滚，则此规则不适用；但仅当事务协调器将事务本身标记为仅回滚时除外。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\": Local transaction strategies usually don't hold the rollback-only\nmarker in the transaction itself, therefore they can't handle rollback-only transactions\nas part of transaction commit. Hence, AbstractPlatformTransactionManager will trigger\na rollback in that case, throwing an UnexpectedRollbackException afterwards.",
+      "translation": "默认为 \"false\"：本地事务策略通常不会在事务本身中保留回滚标记，因此它们无法将回滚仅事务作为事务提交的一部分进行处理。因此，AbstractPlatformTransactionManager 在这种情况下会触发回滚，随后抛出 UnexpectedRollbackException。",
+      "count": 2
+    },
+    {
+      "source": "Return whether <code>doRollback</code> should be performed on failure of the\n<code>doCommit</code> call.",
+      "translation": "返回在<code>doCommit</code>调用失败时是否应执行<code>doRollback</code>。",
+      "count": 2
+    },
+    {
+      "source": "This implementation of rollback handles participating in existing\ntransactions. Delegates to <code>doRollback</code> and\n<code>doSetRollbackOnly</code>.",
+      "translation": "此回滚实现处理参与现有事务。委托给 `<code>doRollback</code>` 和 `<code>doSetRollbackOnly</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Set the transaction synchronization by the name of the corresponding constant\nin this class — for example, <code>\"SYNCHRONIZATION_ALWAYS\"</code>.",
+      "translation": "通过此类的相应常量的名称设置事务同步——例如，<code>\"SYNCHRONIZATION_ALWAYS\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "Suspend the given transaction. Suspends transaction synchronization first,\nthen delegates to the <code>doSuspend</code> template method.",
+      "translation": "挂起给定的事务。首先挂起事务同步，然后委托给 `doSuspend` 模板方法。",
+      "count": 2
+    },
+    {
+      "source": "Resume the given transaction. Delegates to the <code>doResume</code>\ntemplate method first, then resuming transaction synchronization.",
+      "translation": "恢复给定的事务。首先委托调用 <code>doResume</code> 模板方法，然后恢复事务同步。",
+      "count": 2
+    },
+    {
+      "source": "Always activate transaction synchronization, even for \"empty\" transactions\nthat result from PROPAGATION_SUPPORTS with no existing backend transaction.",
+      "translation": "始终激活事务同步，即使对于由 PROPAGATION_SUPPORTS 且不存在后端事务而导致的“空”事务也是如此。",
+      "count": 2
+    },
+    {
+      "source": "Never active transaction synchronization, not even for actual transactions.",
+      "translation": "永不激活事务同步，即使对于实际的事务也是如此。",
+      "count": 2
+    },
+    {
+      "source": "Activate transaction synchronization only for actual transactions,\nthat is, not for empty ones that result from PROPAGATION_SUPPORTS with\nno existing backend transaction.",
+      "translation": "仅针对实际事务激活事务同步，即不包括由 PROPAGATION_SUPPORTS 且无现有后端事务导致的空事务。",
+      "count": 2
+    },
+    {
+      "source": "Return the registered transaction execution listeners for this transaction manager.",
+      "translation": "返回此事务管理器已注册的执行监听器。",
+      "count": 2
+    },
+    {
+      "source": "Return if this transaction manager should activate the thread-bound\ntransaction synchronization support.",
+      "translation": "如果该事务管理器应激活线程绑定的事务同步支持，则返回。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to fail early in case of the transaction being globally marked\nas rollback-only.",
+      "translation": "返回在事务被全局标记为仅回滚时是否应提前失败。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to globally mark an existing transaction as rollback-only\nafter a participating transaction failed.",
+      "translation": "在参与的事务失败后，返回是否将现有事务全局标记为仅回滚。",
+      "count": 2
+    },
+    {
+      "source": "Return whether nested transactions are allowed.",
+      "translation": "返回是否允许嵌套事务。",
+      "count": 2
+    },
+    {
+      "source": "Return whether existing transactions should be validated before participating\nin them.",
+      "translation": "返回在参与现有事务之前是否应验证这些事务。",
+      "count": 2
+    },
+    {
+      "source": "Initialize transaction synchronization as appropriate.",
+      "translation": "根据需要初始化事务同步。",
+      "count": 2
+    },
+    {
+      "source": "Set the transaction execution listeners for begin/commit/rollback callbacks\nfrom this transaction manager.",
+      "translation": "从此事务管理器设置用于开始/提交/回滚回调的事务执行监听器。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setTransactionSynchronization(int)\"><code>setTransactionSynchronization(int)</code></a></li>\n<li><a href=\"TransactionSynchronizationManager.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionSynchronizationManager</code></a></li>\n<li><a href=\"../jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.transaction.support.AbstractPlatformTransactionManager\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setTransactionSynchronization(int)\"><code>setTransactionSynchronization(int)</code></a></li>\n<li><a href=\"TransactionSynchronizationManager.html\" title=\"class in org.springframework.transaction.support\"><code>TransactionSynchronizationManager</code></a></li>\n<li><a href=\"../jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.transaction.support.AbstractPlatformTransactionManager\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_SUPPORTS\"><code>TransactionDefinition.PROPAGATION_SUPPORTS</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_NOT_SUPPORTED\"><code>TransactionDefinition.PROPAGATION_NOT_SUPPORTED</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_NEVER\"><code>TransactionDefinition.PROPAGATION_NEVER</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.transaction.support.AbstractPlatformTransactionManager.SYNCHRONIZATION_ALWAYS\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_SUPPORTS\"><code>TransactionDefinition.PROPAGATION_SUPPORTS</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_NOT_SUPPORTED\"><code>TransactionDefinition.PROPAGATION_NOT_SUPPORTED</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_NEVER\"><code>TransactionDefinition.PROPAGATION_NEVER</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.transaction.support.AbstractPlatformTransactionManager.SYNCHRONIZATION_ALWAYS\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_MANDATORY\"><code>TransactionDefinition.PROPAGATION_MANDATORY</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.transaction.support.AbstractPlatformTransactionManager.SYNCHRONIZATION_ON_ACTUAL_TRANSACTION\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_MANDATORY\"><code>TransactionDefinition.PROPAGATION_MANDATORY</code></a></li>\n<li><a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.transaction.support.AbstractPlatformTransactionManager.SYNCHRONIZATION_ON_ACTUAL_TRANSACTION\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../PlatformTransactionManager.html#getTransaction(org.springframework.transaction.TransactionDefinition)\">getTransaction</a></code> in interface <code><a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../PlatformTransactionManager.html#getTransaction(org.springframework.transaction.TransactionDefinition)\">getTransaction</a></code>` 接口 `<code><a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">PlatformTransactionManager</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../PlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\">commit</a></code> in interface <code><a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../PlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\">commit</a></code>` 接口 `<code><a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">PlatformTransactionManager</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../PlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\">rollback</a></code> in interface <code><a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../PlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\">rollback</a></code>` 接口 `<code><a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\">PlatformTransactionManager</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>resourcesHolder</code> - the object that holds suspended resources,\nas returned by <code>suspend</code> (or <code>null</code> to just\nresume synchronizations, if any)",
+      "translation": "`resourcesHolder` - 持有挂起资源的对象，由 `suspend` 返回（或为 `null`，仅用于恢复同步，如果有的话）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of lookup, creation, or system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在查找、创建或系统错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>transaction</code> - the current transaction object\n(or <code>null</code> to just suspend active synchronizations, if any)",
+      "translation": "<code>transaction</code> - 当前事务对象（或为 <code>null</code>，仅挂起任何活动同步）",
+      "count": 2
+    },
+    {
+      "source": "<code>status</code> - object returned by the <code>getTransaction</code> method",
+      "translation": "<code>status</code> - 由 <code>getTransaction</code> 方法返回的对象",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of lookup or system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在查找或系统错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of creation or system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在创建或系统错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../NestedTransactionNotSupportedException.html\" title=\"class in org.springframework.transaction\">NestedTransactionNotSupportedException</a></code> - if the underlying transaction does not support nesting",
+      "translation": "<code><a href=\"../NestedTransactionNotSupportedException.html\" title=\"class in org.springframework.transaction\">NestedTransactionNotSupportedException</a></code> - 如果底层事务不支持嵌套",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionSuspensionNotSupportedException.html\" title=\"class in org.springframework.transaction\">TransactionSuspensionNotSupportedException</a></code> - if resuming is not supported by the transaction manager implementation",
+      "translation": "<code><a href=\"../TransactionSuspensionNotSupportedException.html\" title=\"class in org.springframework.transaction\">TransactionSuspensionNotSupportedException</a></code> - 如果事务管理器实现不支持恢复",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of commit or system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在提交或系统错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "an object that holds suspended resources\n(or <code>null</code> if neither transaction nor synchronization active)",
+      "translation": "一个持有挂起资源的对象（或者如果既没有事务也没有同步活动，则为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>transaction</code> - the current transaction object",
+      "translation": "<code>transaction</code> - 当前事务对象",
+      "count": 2
+    },
+    {
+      "source": "<code>synchronizations</code> - a List of TransactionSynchronization objects",
+      "translation": "<synchronizations></synchronizations> - 一个 TransactionSynchronization 对象的列表",
+      "count": 2
+    },
+    {
+      "source": "<code>completionStatus</code> - the completion status according to the\nconstants in the TransactionSynchronization interface",
+      "translation": "<code>completionStatus</code> - 根据 TransactionSynchronization 接口中的常量确定的完成状态",
+      "count": 2
+    },
+    {
+      "source": "triggers registered synchronization callbacks\n(if transaction synchronization is active).",
+      "translation": "注册的触发器会调用同步回调（如果事务同步处于活动状态）。",
+      "count": 2
+    },
+    {
+      "source": "The state of this class is serializable, to allow for serializing the\ntransaction strategy along with proxies that carry a transaction interceptor.\nIt is up to subclasses if they wish to make their state to be serializable too.\nThey should implement the <code>java.io.Serializable</code> marker interface in\nthat case, and potentially a private <code>readObject()</code> method (according\nto Java serialization rules) if they need to restore any transient state.",
+      "translation": "该类的状态是可序列化的，以便能够连同携带事务拦截器的代理一起序列化事务策略。子类可根据需要自行决定是否使其状态也可序列化。如果是这样，它们应实现 `<code>java.io.Serializable</code>` 标记接口，并且如果需要恢复任何瞬态状态，则可能需要根据 Java 序列化规则实现一个私有的 `<code>readObject()</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "The returned object should contain information about any existing\ntransaction, that is, a transaction that has already started before the\ncurrent <code>getTransaction</code> call on the transaction manager.\nConsequently, a <code>doGetTransaction</code> implementation will usually\nlook for an existing transaction and store corresponding state in the\nreturned transaction object.",
+      "translation": "返回的对象应包含有关任何现有事务的信息，即在当前对事务管理器的 `<code>getTransaction</code>` 调用之前已经启动的事务。因此，`<code>doGetTransaction</code>` 的实现通常会查找现有事务，并将相应的状态存储在返回的事务对象中。",
+      "count": 1
+    },
+    {
+      "source": "Called after <code>doCommit</code> and <code>doRollback</code> execution,\non any outcome. The default implementation does nothing.",
+      "translation": "在 `<code>doCommit</code>` 和 `<code>doRollback</code>` 执行后，无论结果如何都会调用。默认实现什么都不做。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>false</code>, assuming that\nparticipating in existing transactions is generally not supported.\nSubclasses are of course encouraged to provide such support.",
+      "translation": "默认实现返回 `<code>false</code>`，假设通常不支持参与现有事务。当然鼓励子类提供此类支持。",
+      "count": 1
+    },
+    {
+      "source": "A special scenario is a nested transaction without savepoint: If\n<code>useSavepointForNestedTransaction()</code> returns \"false\", this method\nwill be called to start a nested transaction when necessary. In such a context,\nthere will be an active transaction: The implementation of this method has\nto detect this and start an appropriate nested transaction.",
+      "translation": "特殊场景是指不带保存点的嵌套事务：如果<code>useSavepointForNestedTransaction()</code>返回\"false\"，则会在必要时调用此方法以启动嵌套事务。在此类上下文中，将存在一个活动事务：此方法的实现必须检测这一点并启动适当的嵌套事务。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation simply invokes the <code>afterCompletion</code> methods\nimmediately, passing in \"STATUS_UNKNOWN\". This is the best we can do if there's no\nchance to determine the actual outcome of the outer transaction.",
+      "translation": "默认实现会立即调用<code>afterCompletion</code>方法，并传入\"STATUS_UNKNOWN\"。如果无法确定外部事务的实际结果，这是我们能做的最好的了。",
+      "count": 1
+    },
+    {
+      "source": "This base class provides the following workflow handling:",
+      "translation": "该基类提供以下工作流处理：",
+      "count": 1
+    },
+    {
+      "source": "Subclasses have to implement specific template methods for specific\nstates of a transaction, for example: begin, suspend, resume, commit, rollback.\nThe most important of them are abstract and must be provided by a concrete\nimplementation; for the rest, defaults are provided, so overriding is optional.",
+      "translation": "子类必须为事务的特定状态（例如：begin、suspend、resume、commit、rollback）实现特定的模板方法。其中最重要的是抽象方法，必须由具体实现提供；其余方法提供了默认实现，因此重写是可选的。",
+      "count": 1
+    },
+    {
+      "source": "Default is \"false\".",
+      "translation": "默认值为\"false\"。",
+      "count": 1
+    },
+    {
+      "source": "The returned object will usually be specific to the concrete transaction\nmanager implementation, carrying corresponding transaction state in a\nmodifiable fashion. This object will be passed into the other template\nmethods (for example, doBegin and doCommit), either directly or as part of a\nDefaultTransactionStatus instance.",
+      "translation": "返回的对象通常针对具体的事务管理器实现，以可修改的方式承载相应的事务状态。该对象将直接作为参数传入其他模板方法（例如 doBegin 和 doCommit），或者作为 DefaultTransactionStatus 实例的一部分传入。",
+      "count": 1
+    },
+    {
+      "source": "The result will be evaluated according to the specified propagation\nbehavior for the new transaction. An existing transaction might get\nsuspended (in case of PROPAGATION_REQUIRES_NEW), or the new transaction\nmight participate in the existing one (in case of PROPAGATION_REQUIRED).",
+      "translation": "结果将根据新事务指定的传播行为进行评估。现有事务可能会被挂起（在 PROPAGATION_REQUIRES_NEW 的情况下），或者新事务可能会参与现有事务（在 PROPAGATION_REQUIRED 的情况下）。",
+      "count": 1
+    },
+    {
+      "source": "This method gets called when the transaction manager has decided to actually\nstart a new transaction. Either there wasn't any transaction before, or the\nprevious transaction has been suspended.",
+      "translation": "此方法在事务管理器决定实际开始一个新事务时被调用。要么之前没有事务，要么之前的交易已被挂起。",
+      "count": 1
+    },
+    {
+      "source": "Note that exceptions will get propagated to the commit caller\nand cause a rollback of the transaction.",
+      "translation": "注意，异常将传播到提交调用者并导致事务回滚。",
+      "count": 1
+    },
+    {
+      "source": "An implementation does not need to check the \"new transaction\" flag\nor the rollback-only flag; this will already have been handled before.\nUsually, a straight commit will be performed on the transaction object\ncontained in the passed-in status.",
+      "translation": "实现无需检查“新事务”标志或回滚专用标志；这些在此之前已经处理过。通常，将在传入状态中包含的事务对象上执行直接提交。",
+      "count": 1
+    },
+    {
+      "source": "An implementation does not need to check the \"new transaction\" flag;\nthis will already have been handled before. Usually, a straight rollback\nwill be performed on the transaction object contained in the passed-in status.",
+      "translation": "实现无需检查“新事务”标志；该标志此前已处理。通常，将对传入状态中包含的事务对象执行直接回滚。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation throws an IllegalTransactionStateException,\nassuming that participating in existing transactions is generally not\nsupported. Subclasses are of course encouraged to provide such support.",
+      "translation": "默认实现会抛出 `IllegalTransactionStateException`，假定参与现有事务通常不受支持。当然，鼓励子类提供此类支持。",
+      "count": 1
+    },
+    {
+      "source": "Invoked when the control of the Spring transaction manager and thus all Spring\ntransaction synchronizations end, without the transaction being completed yet. This\nis for example the case when participating in an existing JTA or EJB CMT transaction.",
+      "translation": "在 Spring 事务管理器以及所有 Spring 事务同步结束但事务尚未完成时被调用。例如，当参与现有的 JTA 或 EJB CMT 事务时就会出现这种情况。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw any exceptions but just issue warnings on errors.",
+      "translation": "不应抛出任何异常，而应在出错时仅发出警告。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ConfigurableTransactionManager.html#setTransactionExecutionListeners(java.util.Collection)\">ConfigurableTransactionManager</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ConfigurableTransactionManager.html#setTransactionExecutionListeners(java.util.Collection)\">ConfigurableTransactionManager</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ConfigurableTransactionManager.html#getTransactionExecutionListeners()\">ConfigurableTransactionManager</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ConfigurableTransactionManager.html#getTransactionExecutionListeners()\">ConfigurableTransactionManager</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "This implementation handles propagation behavior. Delegates to\n<code>doGetTransaction</code>, <code>isExistingTransaction</code>\nand <code>doBegin</code>.",
+      "translation": "此实现处理传播行为。委托给`doGetTransaction`、`isExistingTransaction`和`doBegin`。",
+      "count": 1
+    },
+    {
+      "source": "This implementation of commit handles participating in existing\ntransactions and programmatic rollback requests.\nDelegates to <code>isRollbackOnly</code>, <code>doCommit</code>\nand <code>rollback</code>.",
+      "translation": "此提交实现处理参与现有事务和程序化回滚请求。委托给<code>isRollbackOnly</code>、<code>doCommit</code>和<code>rollback</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set whether <code>doRollback</code> should be performed on failure of the\n<code>doCommit</code> call.",
+      "translation": "设置是否在<code>doCommit</code>调用失败时执行<code>doRollback</code>。",
+      "count": 1
+    },
+    {
+      "source": "Actually invoke the <code>afterCompletion</code> methods of the\ngiven Spring TransactionSynchronization objects.",
+      "translation": "实际上调用给定 Spring 事务同步对象的<code>afterCompletion</code>方法。",
+      "count": 1
+    },
+    {
+      "source": "Make preparations for commit, to be performed before the\n<code>beforeCommit</code> synchronization callbacks occur.",
+      "translation": "准备提交，在发生 <code>beforeCommit</code> 同步回调之前执行。",
+      "count": 1
+    },
+    {
+      "source": "Return whether to call <code>doCommit</code> on a transaction that has been\nmarked as rollback-only in a global fashion.",
+      "translation": "返回是否对已在全局范围内标记为仅回滚的事务调用 `doCommit`。",
+      "count": 1
+    },
+    {
+      "source": "Holder for suspended resources.",
+      "translation": "挂起资源的持有者。",
+      "count": 1
+    },
+    {
+      "source": "This implementation of commit handles participating in existing\ntransactions and programmatic rollback requests.",
+      "translation": "该提交实现支持参与现有事务以及程序化回滚请求。",
+      "count": 1
+    },
+    {
+      "source": "Determine the actual timeout to use for the given definition.",
+      "translation": "确定给定定义要使用的实际超时时间。",
+      "count": 1
+    },
+    {
+      "source": "Begin a new transaction with semantics according to the given transaction\ndefinition.",
+      "translation": "根据给定的事务定义，开始一个新的事务。",
+      "count": 1
+    },
+    {
+      "source": "Cleanup resources after transaction completion.",
+      "translation": "事务完成后清理资源。",
+      "count": 1
+    },
+    {
+      "source": "Perform an actual commit of the given transaction.",
+      "translation": "提交给定事务的实际提交。",
+      "count": 1
+    },
+    {
+      "source": "Return a transaction object for the current transaction state.",
+      "translation": "返回当前事务状态的 Transaction 对象。",
+      "count": 1
+    },
+    {
+      "source": "Resume the resources of the current transaction.",
+      "translation": "恢复当前事务的资源。",
+      "count": 1
+    },
+    {
+      "source": "Perform an actual rollback of the given transaction.",
+      "translation": "执行给定事务的实际回滚。",
+      "count": 1
+    },
+    {
+      "source": "Set the given transaction rollback-only.",
+      "translation": "将给定的事务设置为仅回滚。",
+      "count": 1
+    },
+    {
+      "source": "Suspend the resources of the current transaction.",
+      "translation": "挂起当前事务的资源。",
+      "count": 1
+    },
+    {
+      "source": "Return the default timeout that this transaction manager should apply\nif there is no timeout specified at the transaction level, in seconds.",
+      "translation": "返回此事务管理器在事务级别未指定超时时应应用的默认超时时间，单位为秒。",
+      "count": 1
+    },
+    {
+      "source": "This implementation handles propagation behavior.",
+      "translation": "此实现处理传播行为。",
+      "count": 1
+    },
+    {
+      "source": "Check if the given transaction object indicates an existing transaction\n(that is, a transaction which has already started).",
+      "translation": "检查给定的事务对象是否表示一个已存在的事务（即，一个已经启动的事务）。",
+      "count": 1
+    },
+    {
+      "source": "Register the given list of transaction synchronizations with the existing transaction.",
+      "translation": "将给定的事务同步列表注册到现有事务中。",
+      "count": 1
+    },
+    {
+      "source": "Resume the given transaction.",
+      "translation": "恢复给定的事务。",
+      "count": 1
+    },
+    {
+      "source": "This implementation of rollback handles participating in existing\ntransactions.",
+      "translation": "此回滚实现处理参与现有事务。",
+      "count": 1
+    },
+    {
+      "source": "Specify the default timeout that this transaction manager should apply\nif there is no timeout specified at the transaction level, in seconds.",
+      "translation": "指定此事务管理器在事务级别未指定超时时应应用的默认超时时间，单位为秒。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to fail early in case of the transaction being globally marked\nas rollback-only.",
+      "translation": "设置是否在事务被全局标记为仅回滚时提前失败。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to globally mark an existing transaction as rollback-only\nafter a participating transaction failed.",
+      "translation": "设置是否在参与的事务失败后，将现有事务全局标记为仅回滚。",
+      "count": 1
+    },
+    {
+      "source": "Set whether nested transactions are allowed.",
+      "translation": "设置是否允许嵌套事务。",
+      "count": 1
+    },
+    {
+      "source": "Set when this transaction manager should activate the thread-bound\ntransaction synchronization support.",
+      "translation": "设置何时此事务管理器应激活线程绑定的事务同步支持。",
+      "count": 1
+    },
+    {
+      "source": "Set whether existing transactions should be validated before participating\nin them.",
+      "translation": "设置是否在参与现有事务之前对其进行验证。",
+      "count": 1
+    },
+    {
+      "source": "Suspend the given transaction.",
+      "translation": "挂起给定的事务。",
+      "count": 1
+    },
+    {
+      "source": "Return whether to use a savepoint for a nested transaction.",
+      "translation": "返回是否对嵌套事务使用保存点。",
+      "count": 1
+    },
+    {
+      "source": "Determine the actual timeout to use for the given definition.\nWill fall back to this manager's default timeout if the\ntransaction definition doesn't specify a non-default value.",
+      "translation": "确定给定定义要使用的实际超时时间。如果事务定义未指定非默认值，则回退到此管理器的默认超时时间。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ConfigurableTransactionManager.html#setTransactionExecutionListeners(java.util.Collection)\">setTransactionExecutionListeners</a></code> in interface <code><a href=\"../ConfigurableTransactionManager.html\" title=\"interface in org.springframework.transaction\">ConfigurableTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../ConfigurableTransactionManager.html#setTransactionExecutionListeners(java.util.Collection)\">setTransactionExecutionListeners</a></code>` 接口 `<code><a href=\"../ConfigurableTransactionManager.html\" title=\"interface in org.springframework.transaction\">ConfigurableTransactionManager</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ConfigurableTransactionManager.html#getTransactionExecutionListeners()\">getTransactionExecutionListeners</a></code> in interface <code><a href=\"../ConfigurableTransactionManager.html\" title=\"interface in org.springframework.transaction\">ConfigurableTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../ConfigurableTransactionManager.html#getTransactionExecutionListeners()\">getTransactionExecutionListeners</a></code>` 接口 `<code><a href=\"../ConfigurableTransactionManager.html\" title=\"interface in org.springframework.transaction\">ConfigurableTransactionManager</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - in case of errors; will be <b>propagated to the caller</b>\n(note: do not throw TransactionException subclasses here!)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - 在发生错误时；将<b>传播给调用者</b>(注意：此处不要抛出 TransactionException 的子类！)",
+      "count": 1
+    },
+    {
+      "source": "<code>definition</code> - the TransactionDefinition instance (can be <code>null</code> for defaults),\ndescribing propagation behavior, isolation level, timeout etc.",
+      "translation": "<code>definition</code> - 事务定义实例（默认值可为 <code>null</code>），描述传播行为、隔离级别、超时时间等。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../CannotCreateTransactionException.html\" title=\"class in org.springframework.transaction\">CannotCreateTransactionException</a></code> - if transaction support is not available",
+      "translation": "<code><a href=\"../CannotCreateTransactionException.html\" title=\"class in org.springframework.transaction\">CannotCreateTransactionException</a></code> - 如果不可用事务支持",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TransactionSuspensionNotSupportedException.html\" title=\"class in org.springframework.transaction\">TransactionSuspensionNotSupportedException</a></code> - if suspending is not supported by the transaction manager implementation",
+      "translation": "<code><a href=\"../TransactionSuspensionNotSupportedException.html\" title=\"class in org.springframework.transaction\">TransactionSuspensionNotSupportedException</a></code> - 如果事务管理器实现不支持挂起",
+      "count": 1
+    },
+    {
+      "source": "<code>constantName</code> - name of the constant",
+      "translation": "<code>constantName</code> - 常量的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>definition</code> - the transaction definition",
+      "translation": "<code>definition</code> - 事务定义",
+      "count": 1
+    },
+    {
+      "source": "<code>transaction</code> - the transaction object returned by doGetTransaction",
+      "translation": "<code>transaction</code> - 由 doGetTransaction 返回的事务对象",
+      "count": 1
+    },
+    {
+      "source": "<code>definition</code> - a TransactionDefinition instance, describing propagation\nbehavior, isolation level, read-only flag, timeout, and transaction name",
+      "translation": "<code>definition</code> - 一个描述传播行为、隔离级别、只读标志、超时时间和事务名称的 TransactionDefinition 实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>suspendedResources</code> - the object that holds suspended resources,\nas returned by doSuspend",
+      "translation": "<code>suspendedResources</code> - 由 doSuspend 返回的持有挂起资源的对象。",
+      "count": 1
+    },
+    {
+      "source": "determines if there is an existing transaction;",
+      "translation": "确定是否存在现有事务；",
+      "count": 1
+    },
+    {
+      "source": "applies the appropriate propagation behavior;",
+      "translation": "应用适当的传播行为；",
+      "count": 1
+    },
+    {
+      "source": "suspends and resumes transactions if necessary;",
+      "translation": "必要时挂起和恢复事务；",
+      "count": 1
+    },
+    {
+      "source": "checks the rollback-only flag on commit;",
+      "translation": "提交时检查回滚标志；",
+      "count": 1
+    },
+    {
+      "source": "applies the appropriate modification on rollback\n(actual rollback or setting rollback-only);",
+      "translation": "在回滚时应用适当的修改（实际回滚或设置仅回滚）；",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen",
+      "translation": "Juergen Hoeller, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "transaction status object representing the new or current transaction",
+      "translation": "代表新事务或当前事务的事务状态对象",
+      "count": 1
+    },
+    {
+      "source": "the actual timeout to use",
+      "translation": "要使用的实际超时时间",
+      "count": 1
+    },
+    {
+      "source": "the current transaction object",
+      "translation": "当前事务对象",
+      "count": 1
+    },
+    {
+      "source": "if there is an existing transaction",
+      "translation": "如果存在现有事务",
+      "count": 1
+    },
+    {
+      "source": "an object that holds suspended resources\n(will be kept unexamined for passing it into doResume)",
+      "translation": "一个持有挂起资源的对象（将保持未检查状态，以便传入 doResume）",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

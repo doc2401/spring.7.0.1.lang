@@ -1,0 +1,241 @@
+{
+  "created_at": "2026-04-14 16:20:54",
+  "updated_at": "2026-04-14 16:20:54",
+  "stats": {
+    "total_entries": 45,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 86,
+    "entries_with_hits": 45,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9111111111111112,
+    "usage_percentage": 0.0045000000000000005
+  },
+  "items": [
+    {
+      "source": "a plain integer — which is interpreted to represent a duration in\nmilliseconds by default unless overridden via <a href=\"#timeUnit()\"><code>timeUnit()</code></a> (prefer\nusing <a href=\"#fixedDelay()\"><code>fixedDelay()</code></a> in that case)",
+      "translation": "一个普通整数——默认情况下被解释为以毫秒表示的持续时间，除非通过<a href=\"#timeUnit()\"><code>timeUnit()</code></a>覆盖（在这种情况下，请改用<a href=\"#fixedDelay()\"><code>fixedDelay()</code></a>）",
+      "count": 4
+    },
+    {
+      "source": "<b>NOTE: With virtual threads, fixed rates and cron triggers are recommended\nover fixed delays.</b> Fixed-delay tasks operate on a single scheduler thread\nwith <a href=\"../concurrent/SimpleAsyncTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>SimpleAsyncTaskScheduler</code></a>.",
+      "translation": "<b>注意：使用虚拟线程时，建议使用固定速率和 Cron 触发器，而不是固定延迟。</b> 固定延迟任务在单个调度器线程上运行，该线程使用 <a href=\"../concurrent/SimpleAsyncTaskScheduler.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>SimpleAsyncTaskScheduler</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "The time unit is milliseconds by default but can be overridden via\n<a href=\"#timeUnit()\"><code>timeUnit()</code></a>.",
+      "translation": "默认时间单位为毫秒，但可以通过 <a href=\"#timeUnit()\"><code>timeUnit()</code></a> 进行覆盖。",
+      "count": 3
+    },
+    {
+      "source": "The duration String can be in several formats:",
+      "translation": "持续时间字符串可以采用多种格式：",
+      "count": 3
+    },
+    {
+      "source": "Number of units of time to delay before the first execution of a\n<a href=\"#fixedRate()\"><code>fixedRate()</code></a> or <a href=\"#fixedDelay()\"><code>fixedDelay()</code></a> task.",
+      "translation": "在首次执行 `<a href=\"#fixedRate()\"><code>fixedRate()</code></a>` 或 `<a href=\"#fixedDelay()\"><code>fixedDelay()</code></a>` 任务之前延迟的时间单位数量。",
+      "count": 3
+    },
+    {
+      "source": "any of the known <a href=\"../../format/annotation/DurationFormat.Style.html\" title=\"enum class in org.springframework.format.annotation\"><code>DurationFormat.Style</code></a>: the <a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>ISO8601</code></a>\nstyle or the <a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>SIMPLE</code></a> style\n— using the <a href=\"#timeUnit()\"><code>timeUnit()</code></a> as fallback if the string doesn't contain an explicit unit",
+      "translation": "任何已知的<a href=\"../../format/annotation/DurationFormat.Style.html\" title=\"enum class in org.springframework.format.annotation\"><code>DurationFormat.Style</code></a>：即<a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>ISO8601</code></a>样式或<a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>SIMPLE</code></a>样式——如果字符串中未包含显式单位，则使用<a href=\"#timeUnit()\"><code>timeUnit()</code></a>作为后备。",
+      "count": 3
+    },
+    {
+      "source": "This attribute is ignored for <a href=\"#cron()\">cron expressions</a>\nand for <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a> values supplied via <a href=\"#fixedDelayString()\"><code>fixedDelayString()</code></a>,\n<a href=\"#fixedRateString()\"><code>fixedRateString()</code></a>, or <a href=\"#initialDelayString()\"><code>initialDelayString()</code></a>.",
+      "translation": "此属性对于 `<a href=\"#cron()\">cron 表达式</a>` 以及通过 `<a href=\"#fixedDelayString()\"><code>fixedDelayString()</code></a>`、`<a href=\"#fixedRateString()\"><code>fixedRateString()</code></a>` 或 `<a href=\"#initialDelayString()\"><code>initialDelayString()</code></a>` 提供的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a>` 值将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "Methods that return a reactive <code>Publisher</code> or a type which can be adapted\nto <code>Publisher</code> by the default <code>ReactiveAdapterRegistry</code> are supported.\nThe <code>Publisher</code> must support multiple subsequent subscriptions. The returned\n<code>Publisher</code> is only produced once, and the scheduling infrastructure then\nperiodically subscribes to it according to configuration. Values emitted by\nthe publisher are ignored. Errors are logged at <code>WARN</code> level, which\ndoesn't prevent further iterations. If a fixed delay is configured, the\nsubscription is blocked in order to respect the fixed delay semantics.",
+      "translation": "支持返回反应式 `<code>Publisher` 或由默认 `<code>ReactiveAdapterRegistry` 可适配为 `<code>Publisher` 的类型的方法。该 `<code>Publisher` 必须支持多个连续订阅。返回的 `<code>Publisher` 仅产生一次，随后调度基础设施会根据配置定期对其进行订阅。忽略由发布者发出的值。错误将在 `<code>WARN</code>` 级别记录，这不会阻止进一步的迭代。如果配置了固定延迟，则订阅将被阻塞以遵守固定延迟语义。",
+      "count": 2
+    },
+    {
+      "source": "Processing of <code>@Scheduled</code> annotations is performed by registering a\n<a href=\"ScheduledAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>ScheduledAnnotationBeanPostProcessor</code></a>. This can be done manually or,\nmore conveniently, through the <code>&lt;task:annotation-driven/&gt;</code> XML element\nor <a href=\"EnableScheduling.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@EnableScheduling</code></a> annotation.",
+      "translation": "`@Scheduled` 注解的处理是通过注册一个 `<a href=\"ScheduledAnnotationBeanPostProcessor.html\" title=\"class in org.springframework.scheduling.annotation\"><code>ScheduledAnnotationBeanPostProcessor</code></a>` 来完成的。这可以手动完成，或者更方便地通过 `<code>&lt;task:annotation-driven/&gt;</code>` XML 元素或 `<a href=\"EnableScheduling.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@EnableScheduling</code></a>` 注解来完成。",
+      "count": 2
+    },
+    {
+      "source": "May be used to determine the target scheduler to be used,\nmatching the qualifier value (or the bean name) of a specific\n<a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\"><code>TaskScheduler</code></a> or\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> bean definition.",
+      "translation": "可能用于确定要使用的目标调度器，匹配特定<a href=\"../TaskScheduler.html\" title=\"interface in org.springframework.scheduling\"><code>TaskScheduler</code></a>或<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>bean 定义的限定符值（或 bean 名称）。",
+      "count": 2
+    },
+    {
+      "source": "The special value <a href=\"#CRON_DISABLED\"><code>\"-\"</code></a> indicates a disabled cron\ntrigger, primarily meant for externally specified values resolved by a\n<code>${...}</code> placeholder.",
+      "translation": "特殊值<a href=\"#CRON_DISABLED\"><code>\"-\"</code></a>表示已禁用的 Cron 触发器，主要用于由<code>${...}</code>占位符解析的外部指定值。",
+      "count": 2
+    },
+    {
+      "source": "Kotlin suspending functions are also supported, provided the coroutine-reactor\nbridge (<code>kotlinx.coroutine.reactor</code>) is present at runtime. This bridge is\nused to adapt the suspending function to a <code>Publisher</code> which is treated\nthe same way as in the reactive method case (see above).",
+      "translation": "Kotlin 挂起函数也得到支持，前提是运行时存在协程-Reactor 桥接（<code>kotlinx.coroutine.reactor</code>）。该桥接用于将挂起函数适配为 <code>Publisher</code>，其处理方式与响应式方法的情况相同（见上文）。",
+      "count": 2
+    },
+    {
+      "source": "This annotation can be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em>\nannotation. If several scheduled declarations are found on the same method,\neach of them will be processed independently, with a separate trigger firing\nfor each of them. As a consequence, such co-located schedules may overlap\nand execute multiple times in parallel or in immediate succession.",
+      "translation": "此注解可作为 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em> 注解使用。如果在同一方法上找到多个调度声明，则每个声明将独立处理，并为每个声明触发单独的触发器。因此，此类共定位的调度可能会重叠，并多次并行或连续执行。",
+      "count": 2
+    },
+    {
+      "source": "The annotated method must not accept arguments. It will typically have\na <code>void</code> return type; if not, the returned value will be ignored\nwhen called through the scheduler.",
+      "translation": "注释的方法不得接受参数。它通常具有 `<code>void`</code> 返回类型；如果不是，则通过调度器调用时返回的值将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "This is primarily meant for use with <code>${...}</code> placeholders,\nallowing for external disabling of corresponding scheduled methods.",
+      "translation": "这主要用于配合<code>${...}</code>占位符使用，允许外部禁用相应的定时方法。",
+      "count": 2
+    },
+    {
+      "source": "For example, <code>\"0 * * * * MON-FRI\"</code> means once per minute on weekdays\n(at the top of the minute - the 0th second).",
+      "translation": "例如，<code>\"0 * * * * MON-FRI\"</code>表示在工作日每分钟执行一次（在分钟顶部——第 0 秒）。",
+      "count": 2
+    },
+    {
+      "source": "The fields read from left to right are interpreted as follows.",
+      "translation": "从左到右读取的字段解释如下。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to an empty String, suggesting the default scheduler.",
+      "translation": "默认为空字符串，表示使用默认调度器。",
+      "count": 2
+    },
+    {
+      "source": "The <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a> to use for <a href=\"#fixedDelay()\"><code>fixedDelay()</code></a>, <a href=\"#fixedDelayString()\"><code>fixedDelayString()</code></a>,\n<a href=\"#fixedRate()\"><code>fixedRate()</code></a>, <a href=\"#fixedRateString()\"><code>fixedRateString()</code></a>, <a href=\"#initialDelay()\"><code>initialDelay()</code></a>, and\n<a href=\"#initialDelayString()\"><code>initialDelayString()</code></a>.",
+      "translation": "用于 `<a href=\"#fixedDelay()\"><code>fixedDelay()</code></a>`、`<a href=\"#fixedDelayString()\"><code>fixedDelayString()</code></a>`、`<a href=\"#fixedRate()\"><code>fixedRate()</code></a>`、`<a href=\"#fixedRateString()\"><code>fixedRateString()</code></a>`、`<a href=\"#initialDelay()\"><code>initialDelay()</code></a>` 和 `<a href=\"#initialDelayString()\"><code>initialDelayString()</code></a>` 的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Execute the annotated method with a fixed period between the end of the\nlast invocation and the start of the next.",
+      "translation": "以固定的周期执行已注解的方法，该周期介于上一次调用的结束和下一次调用的开始之间。",
+      "count": 2
+    },
+    {
+      "source": "Execute the annotated method with a fixed period between invocations.",
+      "translation": "以固定的周期执行注释的方法。",
+      "count": 2
+    },
+    {
+      "source": "A time zone for which the cron expression will be resolved. By default, this\nattribute is the empty String (i.e. the scheduler's time zone will be used).",
+      "translation": "用于解析 cron 表达式的时间区域。默认情况下，此属性为空字符串（即使用调度程序的时间区域）。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../config/ScheduledTaskRegistrar.html#CRON_DISABLED\"><code>ScheduledTaskRegistrar.CRON_DISABLED</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.annotation.Scheduled.CRON_DISABLED\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../config/ScheduledTaskRegistrar.html#CRON_DISABLED\"><code>ScheduledTaskRegistrar.CRON_DISABLED</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.annotation.Scheduled.CRON_DISABLED\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "the period as a String value — for example a placeholder,\nor a <a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>java.time.Duration</code></a> compliant value\nor a <a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>simple format</code></a> compliant value",
+      "translation": "作为 String 值的周期——例如占位符，或符合<a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>java.time.Duration</code></a>的值，或符合<a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>simple format</code></a>的值",
+      "count": 2
+    },
+    {
+      "source": "the delay as a String value — for example a placeholder,\nor a <a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>java.time.Duration</code></a> compliant value\nor a <a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>simple format</code></a> compliant value",
+      "translation": "延迟作为 String 值——例如占位符，或符合<a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>java.time.Duration</code></a>的值，或符合<a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>simple format</code></a>的值",
+      "count": 2
+    },
+    {
+      "source": "a zone id accepted by <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html#getTimeZone(java.lang.String)\" title=\"class or interface in java.util\"><code>TimeZone.getTimeZone(String)</code></a>,\nor an empty String to indicate the scheduler's default time zone",
+      "translation": "一个被 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html#getTimeZone(java.lang.String)\" title=\"class or interface in java.util\"><code>TimeZone.getTimeZone(String)</code></a> 接受的时区 ID，或一个空字符串以表示调度器的默认时区。",
+      "count": 2
+    },
+    {
+      "source": "day of month",
+      "translation": "月份中的日期",
+      "count": 2
+    },
+    {
+      "source": "day of week",
+      "translation": "星期",
+      "count": 2
+    },
+    {
+      "source": "one of the above, with Spring-style \"${...}\" placeholders as well as SpEL expressions",
+      "translation": "上述之一，同时支持 Spring 风格的\"${...}\"占位符以及 SpEL 表达式。",
+      "count": 2
+    },
+    {
+      "source": "Mark Fisher, Juergen Hoeller, Dave Syer, Chris Beams, Victor Brown, Sam Brannen",
+      "translation": "Mark Fisher, Juergen Hoeller, Dave Syer, Chris Beams, Victor Brown, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "an expression that can be parsed to a cron schedule",
+      "translation": "可解析为 cron 调度表的表达式",
+      "count": 2
+    },
+    {
+      "source": "the period",
+      "translation": "周期",
+      "count": 2
+    },
+    {
+      "source": "the delay",
+      "translation": "延迟",
+      "count": 2
+    },
+    {
+      "source": "the initial",
+      "translation": "初始的",
+      "count": 2
+    },
+    {
+      "source": "This annotation may be used as a <em>meta-annotation</em> to create custom\n<em>composed annotations</em> with attribute overrides.",
+      "translation": "此注解可用作 <em>元注解</em> 来创建具有属性覆盖的自定义 <em>组合注解</em>。",
+      "count": 1
+    },
+    {
+      "source": "The default is <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html#MILLISECONDS\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit.MILLISECONDS</code></a>.",
+      "translation": "默认值为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html#MILLISECONDS\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit.MILLISECONDS</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "A special cron expression value that indicates a disabled trigger: \"-\".",
+      "translation": "表示已禁用触发器的特殊 Cron 表达式值：\"-\"。",
+      "count": 1
+    },
+    {
+      "source": "A cron-like expression, extending the usual UN*X definition to include triggers\non the second, minute, hour, day of month, month, and day of week.",
+      "translation": "一种类 cron 表达式，扩展了通常的 UN*X 定义，以支持在秒、分钟、小时、日期、月份和星期几上设置触发器。",
+      "count": 1
+    },
+    {
+      "source": "A qualifier for determining a scheduler to run this scheduled method on.",
+      "translation": "用于确定在此调度方法上运行它的调度器的限定符。",
+      "count": 1
+    },
+    {
+      "source": "A time zone for which the cron expression will be resolved.",
+      "translation": "用于解析 cron 表达式的时间区域。",
+      "count": 1
+    },
+    {
+      "source": "the initial delay as a String value — for example a placeholder,\nor a <a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>java.time.Duration</code></a> compliant value\nor a <a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>simple format</code></a> compliant value",
+      "translation": "作为 String 值的初始延迟——例如占位符，或符合<a href=\"../../format/annotation/DurationFormat.Style.html#ISO8601\"><code>java.time.Duration</code></a>的值，或符合<a href=\"../../format/annotation/DurationFormat.Style.html#SIMPLE\"><code>simple format</code></a>的值。",
+      "count": 1
+    },
+    {
+      "source": "the <code>TimeUnit</code> to use",
+      "translation": "要使用的<code>TimeUnit</code>",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

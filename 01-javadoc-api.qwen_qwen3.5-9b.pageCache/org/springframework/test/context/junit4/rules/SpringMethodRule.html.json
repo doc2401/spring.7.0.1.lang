@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-04-14 16:56:16",
+  "updated_at": "2026-04-14 16:56:16",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 24,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "<strong>WARNING:</strong> Due to the shortcomings of JUnit rules, the\n<code>SpringMethodRule</code>\n<a href=\"../../TestExecutionListener.html#prepareTestInstance(org.springframework.test.context.TestContext)\">prepares the test instance</a> before <code>@Before</code> lifecycle methods instead of\nimmediately after instantiation of the test class. In addition, the\n<code>SpringMethodRule</code> does <strong>not</strong> support the\n<code>beforeTestExecution()</code> and <code>afterTestExecution()</code> callbacks of the\n<a href=\"../../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a>\nAPI.",
+      "translation": "<strong>警告：</strong> 由于 JUnit 规则的局限性，<code>SpringMethodRule</code><a href=\"../../TestExecutionListener.html#prepareTestInstance(org.springframework.test.context.TestContext)\">在 <code>@Before</code> 生命周期方法之前准备测试实例</a>，而不是在测试类实例化后立即进行。此外，<code>SpringMethodRule</code> 不支持<a href=\"../../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a>API 的 <code>beforeTestExecution()</code> 和 <code>afterTestExecution()</code> 回调。",
+      "count": 2
+    },
+    {
+      "source": "Specifically, this method invokes the\n<a href=\"../../TestContextManager.html#prepareTestInstance(java.lang.Object)\"><code>prepareTestInstance()</code></a>,\n<a href=\"../../TestContextManager.html#beforeTestMethod(java.lang.Object,java.lang.reflect.Method)\"><code>beforeTestMethod()</code></a>, and\n<a href=\"../../TestContextManager.html#afterTestMethod(java.lang.Object,java.lang.reflect.Method,java.lang.Throwable)\"><code>afterTestMethod()</code></a> methods\non the <code>TestContextManager</code>, potentially with Spring timeouts\nand repetitions.",
+      "translation": "具体来说，此方法会调用<code>TestContextManager</code>上的<a href=\"../../TestContextManager.html#prepareTestInstance(java.lang.Object)\"><code>prepareTestInstance()</code></a>、<a href=\"../../TestContextManager.html#beforeTestMethod(java.lang.Object,java.lang.reflect.Method)\"><code>beforeTestMethod()</code></a>和<a href=\"../../TestContextManager.html#afterTestMethod(java.lang.Object,java.lang.reflect.Method,java.lang.Throwable)\"><code>afterTestMethod()</code></a>方法，可能带有 Spring 超时和重复次数。",
+      "count": 2
+    },
+    {
+      "source": "In order to achieve the same functionality as the <code>SpringJUnit4ClassRunner</code>,\nhowever, a <code>SpringMethodRule</code> must be combined with a <a href=\"SpringClassRule.html\" title=\"class in org.springframework.test.context.junit4.rules\"><code>SpringClassRule</code></a>,\nsince <code>SpringMethodRule</code> only supports the instance-level and method-level\nfeatures of the <code>SpringJUnit4ClassRunner</code>.",
+      "translation": "为了实现与 `<code>SpringJUnit4ClassRunner</code>` 相同的功能，必须将 `<code>SpringMethodRule</code>` 与一个 <a href=\"SpringClassRule.html\" title=\"class in org.springframework.test.context.junit4.rules\"><code>SpringClassRule</code></a> 结合使用，因为 `<code>SpringMethodRule</code>` 仅支持 `<code>SpringJUnit4ClassRunner</code>` 的实例级和方法级功能。",
+      "count": 2
+    },
+    {
+      "source": "The following list constitutes all annotations currently supported directly\nor indirectly by <code>SpringMethodRule</code>. <em>(Note that additional annotations\nmay be supported by various\n<a href=\"../../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a> or\n<a href=\"../../TestContextBootstrapper.html\" title=\"interface in org.springframework.test.context\"><code>TestContextBootstrapper</code></a>\nimplementations.)</em>",
+      "translation": "以下列表构成了当前由 `<code>SpringMethodRule</code>` 直接支持或间接支持的所有注解。<em>(请注意，各种 <a href=\"../../TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListener</code></a> 或 <a href=\"../../TestContextBootstrapper.html\" title=\"interface in org.springframework.test.context\"><code>TestContextBootstrapper</code></a> 实现可能支持额外的注解。)</em>",
+      "count": 2
+    },
+    {
+      "source": "In addition, this method checks whether the test is enabled in\nthe current execution environment. This prevents methods with a\nnon-matching <code>@IfProfileValue</code> annotation from running altogether,\neven skipping the execution of <code>prepareTestInstance()</code> methods\nin <code>TestExecutionListeners</code>.",
+      "translation": "此外，此方法还会检查测试在当前执行环境中是否已启用。这可以防止带有不匹配的 `<code>@IfProfileValue</code>` 注解的方法完全运行，甚至跳过 `<code>TestExecutionListeners</code>` 中 `<code>prepareTestInstance()</code>` 方法的执行。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/rules/MethodRule.html#apply-org.junit.runners.model.Statement-org.junit.runners.model.FrameworkMethod-java.lang.Object-\" title=\"class or interface in org.junit.rules\">apply</a></code> in interface <code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/rules/MethodRule.html\" title=\"class or interface in org.junit.rules\">MethodRule</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/rules/MethodRule.html#apply-org.junit.runners.model.Statement-org.junit.runners.model.FrameworkMethod-java.lang.Object-\" title=\"class or interface in org.junit.rules\">apply</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/rules/MethodRule.html\" title=\"class or interface in org.junit.rules\">MethodRule</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>frameworkMethod</code> - the method which is about to be invoked on the test instance",
+      "translation": "<code>frameworkMethod</code> - 即将在测试实例上调用的方法",
+      "count": 2
+    },
+    {
+      "source": "a statement that wraps the supplied <code>base</code> with instance-level\nand method-level features of the Spring TestContext Framework",
+      "translation": "一个将提供的<code>base</code>包装起来，并包含 Spring TestContext Framework 的实例级和方法级特性的语句。",
+      "count": 2
+    },
+    {
+      "source": "In contrast to the <a href=\"../SpringJUnit4ClassRunner.html\" title=\"class in org.springframework.test.context.junit4\"><code>SpringJUnit4ClassRunner</code></a>, Spring's rule-based JUnit support has the advantage\nthat it is independent of any <a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runner/Runner.html\" title=\"class or interface in org.junit.runner\"><code>Runner</code></a> and\ncan therefore be combined with existing alternative runners like JUnit's\n<code>Parameterized</code> or third-party runners such as the <code>MockitoJUnitRunner</code>.",
+      "translation": "与<a href=\"../SpringJUnit4ClassRunner.html\" title=\"class in org.springframework.test.context.junit4\"><code>SpringJUnit4ClassRunner</code></a>相比，Spring 基于规则的 JUnit 支持具有优势，即它不依赖于任何<a class=\"external-link\" href=\"https://junit.org/junit4/javadoc/4.13.2/org/junit/runner/Runner.html\" title=\"class or interface in org.junit.runner\"><code>Runner</code></a>，因此可以与现有的替代运行器（如 JUnit 的<code>Parameterized</code>）或第三方运行器（如<code>MockitoJUnitRunner</code>）结合使用。",
+      "count": 1
+    },
+    {
+      "source": "<strong>NOTE:</strong> This class requires JUnit 4.12 or higher.",
+      "translation": "<strong>注意：</strong>此类需要 JUnit 4.12 或更高版本。",
+      "count": 1
+    },
+    {
+      "source": "Apply <em>instance-level</em> and <em>method-level</em> features of\nthe <em>Spring TestContext Framework</em> to the supplied <code>base</code>\nstatement.",
+      "translation": "应用<em>Spring TestContext Framework</em>的<em>实例级</em>和<em>方法级</em>功能到提供的<code>base</code>语句。",
+      "count": 1
+    },
+    {
+      "source": "since Spring Framework 7.0 in favor of the\n<a href=\"../../junit/jupiter/SpringExtension.html\" title=\"class in org.springframework.test.context.junit.jupiter\"><code>SpringExtension</code></a>\nand JUnit Jupiter",
+      "translation": "自 Spring Framework 7.0 起，推荐使用\n<a href=\"../../junit/jupiter/SpringExtension.html\" title=\"class in org.springframework.test.context.junit.jupiter\"><code>SpringExtension</code></a>\n和 JUnit Jupiter。",
+      "count": 1
+    },
+    {
+      "source": "<code>base</code> - the base <code>Statement</code> that this rule should be applied to",
+      "translation": "<code>base</code> - 此规则应应用到的基础 <code>Statement</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>testInstance</code> - the current test instance",
+      "translation": "<code>testInstance</code> - 当前测试实例",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Philippe Marschall",
+      "translation": "Sam Brannen, Philippe Marschall",
+      "count": 1
+    },
+    {
+      "source": "Example Usage",
+      "translation": "示例用法",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "created_at": "2026-04-14 17:35:45",
+  "updated_at": "2026-04-14 17:35:45",
+  "stats": {
+    "total_entries": 49,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 86,
+    "entries_with_hits": 49,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7551020408163265,
+    "usage_percentage": 0.0049
+  },
+  "items": [
+    {
+      "source": "The default implementation returns <code>false</code>.",
+      "translation": "默认实现返回<code>false</code>。",
+      "count": 3
+    },
+    {
+      "source": "The \"new\" status can be transaction manager specific, for example, returning\n<code>true</code> for an actual nested transaction but potentially <code>false</code>\nfor a savepoint-based nested transaction scope if the savepoint management\nis explicitly exposed (such as on <a href=\"../TransactionStatus.html\" title=\"interface in org.springframework.transaction\"><code>TransactionStatus</code></a>). A combined\ncheck for any kind of nested execution is provided by <a href=\"../TransactionExecution.html#isNested()\"><code>TransactionExecution.isNested()</code></a>.",
+      "translation": "“new”状态可能因事务管理器而异，例如，对于实际嵌套事务返回<code>true</code>，但对于显式暴露保存点管理（如在<a href=\"../TransactionStatus.html\" title=\"interface in org.springframework.transaction\"><code>TransactionStatus</code></a>）的基于保存点的嵌套事务范围则可能返回<code>false</code>。由<a href=\"../TransactionExecution.html#isNested()\"><code>TransactionExecution.isNested()</code></a>提供对任何类型嵌套执行的联合检查。",
+      "count": 2
+    },
+    {
+      "source": "Holds all status information that <a href=\"AbstractReactiveTransactionManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>AbstractReactiveTransactionManager</code></a>\nneeds internally, including a generic transaction object determined by the\nconcrete transaction manager implementation.",
+      "translation": "包含 `<a href=\"AbstractReactiveTransactionManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>AbstractReactiveTransactionManager</code></a>` 内部所需的所有状态信息，包括由具体事务管理器实现确定的通用事务对象。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This is <i>not</i> intended for use with other ReactiveTransactionManager\nimplementations, in particular not for mock transaction managers in testing environments.",
+      "translation": "<b>注意：</b> 此实现不打算与其他 ReactiveTransactionManager 实现一起使用，特别是在测试环境中的模拟事务管理器。",
+      "count": 2
+    },
+    {
+      "source": "This is primarily here for transaction manager state handling.\nPrefer the use of <a href=\"../TransactionExecution.html#hasTransaction()\"><code>TransactionExecution.hasTransaction()</code></a> for application purposes\nsince this is usually semantically appropriate.",
+      "translation": "这主要用于事务管理器状态处理。对于应用程序用途，请优先使用<a href=\"../TransactionExecution.html#hasTransaction()\"><code>TransactionExecution.hasTransaction()</code></a>，因为这通常更符合语义。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>true</code>.",
+      "translation": "默认实现返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "Will only return \"true\" if the application called <code>setRollbackOnly</code>\non this TransactionStatus object.",
+      "translation": "仅在应用程序对此 `TransactionStatus` 对象调用了 `setRollbackOnly` 时返回 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#getTransactionName()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#getTransactionName()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#hasTransaction()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#hasTransaction()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#isNewTransaction()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#isNewTransaction()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#isNested()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#isNested()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#isReadOnly()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#isReadOnly()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return whether the progress of this transaction is debugged. This is used by\n<a href=\"AbstractReactiveTransactionManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>AbstractReactiveTransactionManager</code></a> as an optimization, to prevent repeated\ncalls to <code>logger.isDebugEnabled()</code>. Not really intended for client code.",
+      "translation": "返回此事务的进度是否已调试。这由<a href=\"AbstractReactiveTransactionManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>AbstractReactiveTransactionManager</code></a>用作优化，以防止重复调用<code>logger.isDebugEnabled()</code>。并非真正打算供客户端代码使用。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#setRollbackOnly()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#setRollbackOnly()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionExecution.html#isCompleted()\">TransactionExecution</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionExecution.html#isCompleted()\">TransactionExecution</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>DefaultReactiveTransactionStatus</code> instance.",
+      "translation": "创建一个新的<code>DefaultReactiveTransactionStatus</code> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Return the holder for resources that have been suspended for this transaction,\nif any.",
+      "translation": "返回此事务中已挂起的资源持有者（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return the underlying transaction object.",
+      "translation": "返回底层事务对象。",
+      "count": 2
+    },
+    {
+      "source": "Return if a new transaction synchronization has been opened for this transaction.",
+      "translation": "如果为此事务已打开新的事务同步，则返回。",
+      "count": 2
+    },
+    {
+      "source": "Mark this transaction as completed, that is, committed or rolled back.",
+      "translation": "将此事务标记为已完成，即提交或回滚。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#getTransactionName()\">getTransactionName</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#getTransactionName()\">getTransactionName</a></code>` 接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#hasTransaction()\">hasTransaction</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#hasTransaction()\">hasTransaction</a></code>` 接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#isNewTransaction()\">isNewTransaction</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#isNewTransaction()\">isNewTransaction</a></code>` 接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#isNested()\">isNested</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#isNested()\">isNested</a></code>` 接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#isReadOnly()\">isReadOnly</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#isReadOnly()\">isReadOnly</a></code>` 接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#setRollbackOnly()\">setRollbackOnly</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#setRollbackOnly()\">setRollbackOnly</a></code>` 在接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#isRollbackOnly()\">isRollbackOnly</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#isRollbackOnly()\">isRollbackOnly</a></code>` 在接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../TransactionExecution.html#isCompleted()\">isCompleted</a></code> in interface <code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>",
+      "translation": "`<code><a href=\"../TransactionExecution.html#isCompleted()\">isCompleted</a></code>` 接口 `<code><a href=\"../TransactionExecution.html\" title=\"interface in org.springframework.transaction\">TransactionExecution</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no transaction is active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果没有活动的事务",
+      "count": 2
+    },
+    {
+      "source": "<code>transactionName</code> - the defined name of the transaction",
+      "translation": "<code>transactionName</code> - 事务的已定义名称",
+      "count": 2
+    },
+    {
+      "source": "<code>transaction</code> - underlying transaction object that can hold state\nfor the internal transaction implementation",
+      "translation": "<code>transaction</code> - 底层事务对象，可保存内部事务实现的状态",
+      "count": 2
+    },
+    {
+      "source": "<code>newTransaction</code> - if the transaction is new, otherwise participating\nin an existing transaction",
+      "translation": "<code>newTransaction</code> - 如果是新事务，否则参与现有事务",
+      "count": 2
+    },
+    {
+      "source": "<code>newSynchronization</code> - if a new transaction synchronization has been\nopened for the given transaction",
+      "translation": "<code>newSynchronization</code> - 如果已为给定事务打开新的事务同步。",
+      "count": 2
+    },
+    {
+      "source": "<code>readOnly</code> - whether the transaction is marked as read-only",
+      "translation": "<code>readOnly</code> - 是否将事务标记为只读",
+      "count": 2
+    },
+    {
+      "source": "<code>debug</code> - should debug logging be enabled for the handling of this transaction?\nCaching it in here can prevent repeated calls to ask the logging system whether\ndebug logging should be enabled.",
+      "translation": "`debug` - 是否应为此事务的处理启用调试日志？在此处缓存它可以防止重复调用以询问日志系统是否应启用调试日志。",
+      "count": 2
+    },
+    {
+      "source": "<code>suspendedResources</code> - a holder for resources that have been suspended\nfor this transaction, if any",
+      "translation": "<suspendedResources></suspendedResources> - 用于存储已挂起的资源（如果有）的持有者",
+      "count": 2
+    },
+    {
+      "source": "In case of Spring's declarative transactions, the exposed name will be\nthe <code>fully-qualified class name + \".\" + method name</code> (by default).",
+      "translation": "在 Spring 声明式事务的情况下，暴露的名称默认为 `<code>完全限定类名 + \".\" + 方法名</code>`。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns an empty String.",
+      "translation": "默认实现返回一个空字符串。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation throws an UnsupportedOperationException.",
+      "translation": "默认实现抛出 UnsupportedOperationException。",
+      "count": 1
+    },
+    {
+      "source": "Return whether there is an actual transaction active: this is meant to cover\na new transaction as well as participation in an existing transaction, only\nreturning <code>false</code> when not running in an actual transaction at all.",
+      "translation": "返回是否存在实际活动的事务：此方法旨在涵盖新事务以及参与现有事务的情况，仅在完全不处于实际事务中时返回 `<code>false</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return the defined name of the transaction (possibly an empty String).",
+      "translation": "返回事务的已定义名称（可能为空字符串）。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this transaction is completed, that is,\nwhether it has already been committed or rolled back.",
+      "translation": "返回此事务是否已完成，即它是否已经提交或回滚。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the progress of this transaction is debugged.",
+      "translation": "返回此事务的进度是否处于调试状态。",
+      "count": 1
+    },
+    {
+      "source": "Return if this transaction executes in a nested fashion within another.",
+      "translation": "如果此事务在另一个事务中以嵌套方式执行，则返回。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the transaction manager considers the present transaction\nas new; otherwise participating in an existing transaction, or potentially\nnot running in an actual transaction in the first place.",
+      "translation": "返回事务管理器是否将当前事务视为新事务；否则，表示正在参与现有事务，或者实际上并未运行在任何事务中。",
+      "count": 1
+    },
+    {
+      "source": "Return if this transaction is defined as read-only transaction.",
+      "translation": "如果该事务被定义为只读事务，则返回。",
+      "count": 1
+    },
+    {
+      "source": "Determine the rollback-only flag via checking this ReactiveTransactionStatus.",
+      "translation": "通过检查此 ReactiveTransactionStatus 来确定回滚仅标志。",
+      "count": 1
+    },
+    {
+      "source": "Set the transaction rollback-only.",
+      "translation": "设置事务为仅回滚状态。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Juergen Hoeller",
+      "translation": "Mark Paluch，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

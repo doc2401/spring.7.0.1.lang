@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 11:48:19",
+  "updated_at": "2026-04-14 11:48:19",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 27,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.588235294117647,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "<strong>A bean of type <a href=\"../CacheManager.html\" title=\"interface in org.springframework.cache\"><code>CacheManager</code></a>\nmust be registered</strong>, as there is no reasonable default that the framework can\nuse as a convention. And whereas the <code>&lt;cache:annotation-driven&gt;</code> element assumes\na bean <em>named</em> \"cacheManager\", <code>@EnableCaching</code> searches for a cache\nmanager bean <em>by type</em>. Therefore, naming of the cache manager bean method is\nnot significant.",
+      "translation": "<strong>必须注册一个类型为 <a href=\"../CacheManager.html\" title=\"interface in org.springframework.cache\"><code>CacheManager</code></a> 的 Bean</strong>，因为框架无法使用合理的默认约定。虽然 <code>&lt;cache:annotation-driven&gt;</code> 元素假设存在一个名为 \"cacheManager\" 的 Bean，但 <code>@EnableCaching</code> 是按类型搜索缓存管理器 Bean 的。因此，缓存管理器 Bean 的方法命名并不重要。",
+      "count": 2
+    },
+    {
+      "source": "Notice also the <code>keyGenerator</code> method in the example above. This allows for\ncustomizing the strategy for cache key generation, per Spring's <a href=\"../interceptor/KeyGenerator.html\" title=\"interface in org.springframework.cache.interceptor\"><code>KeyGenerator</code></a> SPI. Normally,\n<code>@EnableCaching</code> will configure Spring's\n<a href=\"../interceptor/SimpleKeyGenerator.html\" title=\"class in org.springframework.cache.interceptor\"><code>SimpleKeyGenerator</code></a>\nfor this purpose, but when implementing <code>CachingConfigurer</code>, a custom key\ngenerator can be specified.",
+      "translation": "还要注意上面的示例中的 `keyGenerator` 方法。它允许根据 Spring 的 `<a href=\"../interceptor/KeyGenerator.html\" title=\"interface in org.springframework.cache.interceptor\"><code>KeyGenerator</code></a>` SPI 自定义缓存键生成的策略。通常，`<code>@EnableCaching</code>` 会为此配置 Spring 的 `<a href=\"../interceptor/SimpleKeyGenerator.html\" title=\"class in org.springframework.cache.interceptor\"><code>SimpleKeyGenerator</code></a>`，但在实现 `<code>CachingConfigurer</code>` 时，可以指定自定义的键生成器。",
+      "count": 2
+    },
+    {
+      "source": "Note that if the <a href=\"#mode()\">mode()</a> is set to <a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>, then the\nvalue of the <a href=\"#proxyTargetClass()\"><code>proxyTargetClass()</code></a> attribute will be ignored. Note also that in\nthis case the <code>spring-aspects</code> module JAR must be present on the classpath, with\ncompile-time weaving or load-time weaving applying the aspect to the affected classes.\nThere is no proxy involved in such a scenario; local calls will be intercepted as well.",
+      "translation": "请注意，如果 <a href=\"#mode()\">mode()</a> 设置为 <a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>，则 <a href=\"#proxyTargetClass()\"><code>proxyTargetClass()</code></a> 属性的值将被忽略。此外，在此情况下，类路径上必须存在 <code>spring-aspects</code> 模块 JAR，并通过编译时织入或加载时织入将切面应用到受影响的类中。此类场景不涉及代理；本地调用也将被拦截。",
+      "count": 2
+    },
+    {
+      "source": "<b>The default is <a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>.</b>\nPlease note that proxy mode allows for interception of calls through the proxy\nonly. Local calls within the same class cannot get intercepted that way;\na caching annotation on such a method within a local call will be ignored\nsince Spring's interceptor does not even kick in for such a runtime scenario.\nFor a more advanced mode of interception, consider switching this to\n<a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>.",
+      "translation": "<b>默认值为 <a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>。</b>请注意，代理模式仅允许通过代理拦截调用。同一类内的本地调用无法以这种方式被拦截；对于此类本地调用中的方法上的缓存注解将被忽略，因为 Spring 的拦截器在此运行时场景下甚至不会启动。若要采用更高级别的拦截模式，请考虑将此值切换为 <a href=\"../../context/annotation/AdviceMode.html#ASPECTJ\"><code>AdviceMode.ASPECTJ</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If the JSR-107 API and Spring's JCache implementation are present, the necessary\ncomponents to manage standard cache annotations are also registered. This creates the\nproxy- or AspectJ-based advice that weaves the interceptor into the call stack when\nmethods annotated with <code>CacheResult</code>, <code>CachePut</code>, <code>CacheRemove</code> or\n<code>CacheRemoveAll</code> are invoked.",
+      "translation": "如果存在 JSR-107 API 和 Spring 的 JCache 实现，则也会注册管理标准缓存注解所需的组件。这会创建基于代理或 AspectJ 的建议（advice），在调用带有 <code>CacheResult</code>、<code>CachePut</code>、<code>CacheRemove</code> 或 <code>CacheRemoveAll</code> 注解的方法时，将拦截器织入调用栈。",
+      "count": 2
+    },
+    {
+      "source": "For those that wish to establish a more direct relationship between\n<code>@EnableCaching</code> and the exact cache manager bean to be used,\nthe <a href=\"CachingConfigurer.html\" title=\"interface in org.springframework.cache.annotation\"><code>CachingConfigurer</code></a> callback interface may be implemented.\nNotice the <code>@Override</code>-annotated methods below:",
+      "translation": "对于那些希望建立 `@EnableCaching` 与要使用的确切缓存管理器 Bean 之间更直接关系的用户，可以实现 `<a href=\"CachingConfigurer.html\" title=\"interface in org.springframework.cache.annotation\"><code>CachingConfigurer</code></a>` 回调接口。请注意下面带有 `<code>@Override</code>` 注解的方法：",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"CachingConfigurer.html\" title=\"interface in org.springframework.cache.annotation\"><code>CachingConfigurer</code></a> offers additional customization options:\nsee the <a href=\"CachingConfigurer.html\" title=\"interface in org.springframework.cache.annotation\"><code>CachingConfigurer</code></a> javadoc for further details.",
+      "translation": "<a href=\"CachingConfigurer.html\" title=\"interface in org.springframework.cache.annotation\"><code>CachingConfigurer</code></a> 提供额外的自定义选项：有关更多详细信息，请参阅 <a href=\"CachingConfigurer.html\" title=\"interface in org.springframework.cache.annotation\"><code>CachingConfigurer</code></a> 的 JavaDoc。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#mode()\"><code>mode()</code></a> attribute controls how advice is applied: If the mode is\n<a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a> (the default), then the other attributes control the behavior\nof the proxying. Please note that proxy mode allows for interception of calls through\nthe proxy only; local calls within the same class cannot get intercepted that way.",
+      "translation": "`<a href=\"#mode()\"><code>mode()</code></a>` 属性控制建议（advice）的施加方式：如果模式为 `<a href=\"../../context/annotation/AdviceMode.html#PROXY\"><code>AdviceMode.PROXY</code></a>`（默认值），则其他属性控制代理的行为。请注意，代理模式仅允许通过代理拦截调用；同一类内部的本地调用无法以这种方式被拦截。",
+      "count": 2
+    },
+    {
+      "source": "Note that setting this attribute to <code>true</code> will affect <em>all</em>\nSpring-managed beans requiring proxying, not just those marked with <code>@Cacheable</code>.\nFor example, other beans marked with Spring's <code>@Transactional</code> annotation will\nbe upgraded to subclass proxying at the same time. This approach has no negative\nimpact in practice unless one is explicitly expecting one type of proxy vs another,\nfor example, in tests.",
+      "translation": "请注意，将此属性设置为 `<code>true</code>` 将影响所有需要代理的 Spring 托管 Bean，而不仅仅是那些标记有 `<code>@Cacheable</code>` 的 Bean。例如，其他标记有 Spring 的 `<code>@Transactional</code>` 注解的 Bean 也将同时升级为子类代理。除非在测试等场景中明确期望一种类型的代理而非另一种，否则这种做法在实践中不会产生负面影响。",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>.",
+      "translation": "默认值为 `<a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "For reference, the example above can be compared to the following Spring XML\nconfiguration:",
+      "translation": "作为参考，上述示例可与以下 Spring XML 配置进行比较：",
+      "count": 1
+    },
+    {
+      "source": "Indicate how caching advice should be applied.",
+      "translation": "指示如何应用缓存建议。",
+      "count": 1
+    },
+    {
+      "source": "Indicate the ordering of the execution of the caching advisor\nwhen multiple advices are applied at a specific joinpoint.",
+      "translation": "指示在特定连接点应用多个建议时，缓存顾问的执行顺序。",
+      "count": 1
+    },
+    {
+      "source": "Indicate whether subclass-based (CGLIB) proxies are to be created as opposed\nto standard Java interface-based proxies.",
+      "translation": "指明是否应创建基于子类（CGLIB）的代理，而不是标准的基于 Java 接口的代理。",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller",
+      "translation": "Chris Beams，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-04-14 10:58:37",
+  "updated_at": "2026-04-14 10:58:37",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 40,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4285714285714286,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "The name of an attribute that can be\n<a href=\"../../core/AttributeAccessor.html#setAttribute(java.lang.String,java.lang.Object)\"><code>set</code></a> on a\n<a href=\"config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> so that\nfactory beans can signal their object type when it cannot be deduced from\nthe factory bean class.",
+      "translation": "属性名称，可以在 `<a href=\"config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>` 上<a href=\"../../core/AttributeAccessor.html#setAttribute(java.lang.String,java.lang.Object)\"><code>set</code></a>，以便工厂 Bean 在无法从工厂 Bean 类推断出对象类型时，能够指示其对象类型。",
+      "count": 3
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b>此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口可以通过其<a href=\"SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a>方法明确指示独立实例。未实现此扩展接口的普通<a href=\"FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>实现，如果<code>isSingleton()</code>实现返回 <code>false</code>，则假定其始终返回独立实例。",
+      "count": 2
+    },
+    {
+      "source": "<b><code>FactoryBean</code> is a programmatic contract. Implementations are not\nsupposed to rely on annotation-driven injection or other reflective facilities.</b>\nInvocations of <a href=\"#getObjectType()\"><code>getObjectType()</code></a> and <a href=\"#getObject()\"><code>getObject()</code></a> may arrive early\nin the bootstrap process, even ahead of any post-processor setup. If you need access\nto other beans, implement <a href=\"BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a> and obtain them programmatically.",
+      "translation": "<b><code>FactoryBean</code> 是一种编程式契约。实现不应依赖注解驱动的注入或其他反射设施。</b>对 <a href=\"#getObjectType()\"><code>getObjectType()</code></a> 和 <a href=\"#getObject()\"><code>getObject()</code></a> 的调用可能在引导过程的早期阶段发生，甚至早于任何后置处理器的设置。如果您需要访问其他 Bean，请实现 <a href=\"BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a> 并通过编程方式获取它们。",
+      "count": 2
+    },
+    {
+      "source": "<b>The container is only responsible for managing the lifecycle of the FactoryBean\ninstance, not the lifecycle of the objects created by the FactoryBean.</b> Therefore,\na destroy method on an exposed bean object (such as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"class or interface in java.io\"><code>Closeable.close()</code></a>)\nwill <i>not</i> be called automatically. Instead, a FactoryBean should implement\n<a href=\"DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a> and delegate any such close call to the underlying object.",
+      "translation": "<b>The container 仅负责管理 FactoryBean 实例的生命周期，而非由 FactoryBean 创建的对象的生命周期。</b> 因此，在暴露的 Bean 对象（例如 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"class or interface in java.io\"><code>Closeable.close()</code></a>）上的销毁方法将不会自动被调用。相反，FactoryBean 应实现 <a href=\"DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a> 并将此类关闭调用委托给底层对象。",
+      "count": 2
+    },
+    {
+      "source": "This interface is heavily used within the framework itself, for example for\nthe AOP <a href=\"../../aop/framework/ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a> or the\n<a href=\"../../jndi/JndiObjectFactoryBean.html\" title=\"class in org.springframework.jndi\"><code>JndiObjectFactoryBean</code></a>. It can be used for\ncustom components as well; however, this is only common for infrastructure code.",
+      "translation": "该接口在框架内部被广泛使用，例如用于 AOP <a href=\"../../aop/framework/ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a> 或 <a href=\"../../jndi/JndiObjectFactoryBean.html\" title=\"class in org.springframework.jndi\"><code>JndiObjectFactoryBean</code></a>。它也可用于自定义组件；然而，这种情况通常仅出现在基础设施代码中。",
+      "count": 2
+    },
+    {
+      "source": "<b>NB: A bean that implements this interface cannot be used as a normal bean.</b>\nA FactoryBean is defined in a bean style, but the object exposed for bean\nreferences (<a href=\"#getObject()\"><code>getObject()</code></a>) is always the object that it creates.",
+      "translation": "<b>注意：实现了此接口的 Bean 不能用作普通 Bean。</b>FactoryBean 以 Bean 风格定义，但暴露给 Bean 引用（<a href=\"#getObject()\"><code>getObject()</code></a>）的对象始终是其创建的对象。",
+      "count": 2
+    },
+    {
+      "source": "FactoryBeans can support singletons and prototypes, and can either create\nobjects lazily on demand or eagerly on startup. The <a href=\"SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>\ninterface allows for exposing more fine-grained behavioral metadata.",
+      "translation": "FactoryBeans 可以支持单例和原型，并且可以在需要时懒式创建对象或在启动时急切创建。`<a href=\"SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>` 接口允许暴露更细粒度的行为元数据。",
+      "count": 2
+    },
+    {
+      "source": "As with a <a href=\"BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，这支持单例和原型两种设计模式。",
+      "count": 2
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的<a href=\"FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Finally, FactoryBean objects participate in the containing BeanFactory's\nsynchronization of bean creation. Thus, there is usually no need for internal\nsynchronization other than for purposes of lazy initialization within the\nFactoryBean itself (or the like).",
+      "translation": "最后，FactoryBean 对象参与包含的 BeanFactory 中的 Bean 创建同步。因此，除了 FactoryBean 本身（或类似情况）内的懒初始化目的外，通常不需要内部同步。",
+      "count": 2
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"#getObject()\"><code>getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"#getObject()\"><code>getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 2
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the bean type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 圈类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of creation errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 在创建错误时",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller",
+      "translation": "Rod Johnson，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

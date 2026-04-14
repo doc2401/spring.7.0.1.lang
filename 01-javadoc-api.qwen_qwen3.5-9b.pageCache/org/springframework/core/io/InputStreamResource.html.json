@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-14 13:07:36",
+  "updated_at": "2026-04-14 13:07:36",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 46,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Create a new <code>InputStreamResource</code> with a lazy <code>InputStream</code>\nfor single use.",
+      "translation": "创建一个新的用于单次使用的具有惰性<code>InputStream</code>的<code>InputStreamResource</code>。",
+      "count": 4
+    },
+    {
+      "source": "This implementation always returns <code>true</code>.",
+      "translation": "此实现始终返回<code>true</code>。",
+      "count": 4
+    },
+    {
+      "source": "Create a new <code>InputStreamResource</code> for an existing <code>InputStream</code>.",
+      "translation": "为现有的 <code>InputStream</code> 创建一个新的 <code>InputStreamResource</code>。",
+      "count": 3
+    },
+    {
+      "source": "<code>inputStreamSource</code> - an on-demand source for a single-use InputStream",
+      "translation": "<code>inputStreamSource</code> - 用于一次性 InputStream 的按需源",
+      "count": 3
+    },
+    {
+      "source": "<code>description</code> - where the InputStream comes from",
+      "translation": "<code>description</code> - InputStream 的来源",
+      "count": 3
+    },
+    {
+      "source": "<code>inputStream</code> - the InputStream to use",
+      "translation": "<code>inputStream</code> - 要使用的 InputStream",
+      "count": 3
+    },
+    {
+      "source": "Should only be used if no other specific <code>Resource</code> implementation\nis applicable. In particular, prefer <a href=\"ByteArrayResource.html\" title=\"class in org.springframework.core.io\"><code>ByteArrayResource</code></a> or any of the\nfile-based <code>Resource</code> implementations if possible. If you need to obtain\na custom stream multiple times, use a custom <a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\"><code>AbstractResource</code></a> subclass\nwith a corresponding <code>getInputStream()</code> implementation.",
+      "translation": "仅在没有任何其他特定的<code>Resource</code>实现适用时才应使用。特别是，如果可能，请优先使用<a href=\"ByteArrayResource.html\" title=\"class in org.springframework.core.io\"><code>ByteArrayResource</code></a>或任何基于文件的<code>Resource</code>实现。如果您需要多次获取自定义流，请使用带有相应<code>getInputStream()</code>实现的自定义<a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\"><code>AbstractResource</code></a>子类。",
+      "count": 2
+    },
+    {
+      "source": "In contrast to other <code>Resource</code> implementations, this is a descriptor\nfor an <i>already opened</i> resource - therefore returning <code>true</code> from\n<a href=\"#isOpen()\"><code>isOpen()</code></a>. Do not use an <code>InputStreamResource</code> if you need to keep\nthe resource descriptor somewhere, or if you need to read from a stream multiple\ntimes. This also applies when constructed with an <code>InputStreamSource</code>\nwhich lazily obtains the stream but only allows for single access as well.",
+      "translation": "与其他 `<code>Resource`</code> 实现不同，这是一个针对<i>已打开</i>资源的描述符——因此从<a href=\"#isOpen()\"><code>isOpen()</code></a>返回<code>true</code>。如果您需要保留资源描述符或需要从流中多次读取，请勿使用 <code>InputStreamResource</code>。此规则同样适用于通过 <code>InputStreamSource</code> 构造的情况，后者会懒加载流，但也仅允许单次访问。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This class does not provide an independent <a href=\"AbstractResource.html#contentLength()\"><code>AbstractResource.contentLength()</code></a>\nimplementation: Any such call will consume the given <code>InputStream</code>!</b>\nConsider overriding <code>#contentLength()</code> with a custom implementation if\npossible. For any other purpose, it is not recommended to extend from this\nclass; this is particularly true when used with Spring's web resource rendering\nwhich specifically skips <code>#contentLength()</code> for this exact class only.",
+      "translation": "<b>注意：该类不提供独立的<a href=\"AbstractResource.html#contentLength()\"><code>AbstractResource.contentLength()</code></a>实现：任何此类调用都将消耗给定的<code>InputStream</code>！</b>如果可能，请考虑用自定义实现覆盖<code>#contentLength()</code>。出于任何其他目的，不建议从该类扩展；当与 Spring 的 Web 资源渲染配合使用时尤其如此，后者专门只为该类跳过<code>#contentLength()</code>。",
+      "count": 2
+    },
+    {
+      "source": "Consider retrieving the InputStream on demand if possible, reducing its\nlifetime and reliably opening it and closing it through regular\n<a href=\"InputStreamSource.html#getInputStream()\"><code>InputStreamSource.getInputStream()</code></a> usage.",
+      "translation": "如果可能，请按需获取 `InputStream`，缩短其生命周期，并通过常规的 `<a href=\"InputStreamSource.html#getInputStream()\"><code>InputStreamSource.getInputStream()</code></a>` 用法可靠地打开和关闭它。",
+      "count": 2
+    },
+    {
+      "source": "This implementation compares the underlying InputStream.",
+      "translation": "此实现比较底层的 InputStream。",
+      "count": 2
+    },
+    {
+      "source": "This implementation returns a description that includes the passed-in\ndescription, if any.",
+      "translation": "此实现返回的描述包含传入的描述（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "This implementation throws IllegalStateException if attempting to\nread the underlying stream multiple times.",
+      "translation": "此实现会在尝试多次读取底层流时抛出 IllegalStateException。",
+      "count": 2
+    },
+    {
+      "source": "This implementation returns the hash code of the underlying InputStream.",
+      "translation": "该实现返回底层 InputStream 的哈希码。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractResource.html#isOpen()\">isOpen</a></code> in class <code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>",
+      "translation": "`<code><a href=\"AbstractResource.html#isOpen()\">isOpen</a></code>` 在类 `<code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"Resource.html#exists()\">exists</a></code> in interface <code><a href=\"Resource.html\" title=\"interface in org.springframework.core.io\">Resource</a></code>",
+      "translation": "`<code><a href=\"Resource.html#exists()\">exists</a></code>` 在接口 `<code><a href=\"Resource.html\" title=\"interface in org.springframework.core.io\">Resource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractResource.html#exists()\">exists</a></code> in class <code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>",
+      "translation": "`<code><a href=\"AbstractResource.html#exists()\">exists</a></code>` 类中的 `<code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Resource.html#isOpen()\">isOpen</a></code> in interface <code><a href=\"Resource.html\" title=\"interface in org.springframework.core.io\">Resource</a></code>",
+      "translation": "`<code><a href=\"Resource.html#isOpen()\">isOpen</a></code>` 在接口 `<code><a href=\"Resource.html\" title=\"interface in org.springframework.core.io\">Resource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractResource.html#equals(java.lang.Object)\">equals</a></code> in class <code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>",
+      "translation": "`<code><a href=\"AbstractResource.html#equals(java.lang.Object)\">equals</a></code>` 在类 `<code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractResource.html#hashCode()\">hashCode</a></code> in class <code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>",
+      "translation": "<code><a href=\"AbstractResource.html#hashCode()\">hashCode</a></code> 类中的 <code><a href=\"AbstractResource.html\" title=\"class in org.springframework.core.io\">AbstractResource</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - if the content stream could not be opened",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - 如果内容流无法打开",
+      "count": 1
+    },
+    {
+      "source": "the input stream for the underlying resource (must not be <code>null</code>)",
+      "translation": "底层资源的输入流（不能为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen",
+      "translation": "Juergen Hoeller, Sam Brannen",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 11:25:51",
+  "updated_at": "2026-04-14 11:25:51",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 23,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3529411764705883,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "With the introduction of <a href=\"../xml/NamespaceHandler.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>pluggable custom XML tags</code></a>,\nit is now possible for a single logical configuration entity, in this case an XML tag, to\ncreate multiple <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> and <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>RuntimeBeanReferences</code></a>\nin order to provide more succinct configuration and greater convenience to end users. As such, it can\nno longer be assumed that each configuration entity (for example, XML tag) maps to one <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>.\nFor tool vendors and other users who wish to present visualization or support for configuring Spring\napplications it is important that there is some mechanism in place to tie the <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>\nin the <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> back to the configuration data in a way\nthat has concrete meaning to the end user. As such, <a href=\"../xml/NamespaceHandler.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>NamespaceHandler</code></a>\nimplementations are able to publish events in the form of a <code>ComponentDefinition</code> for each\nlogical entity being configured. Third parties can then <a href=\"ReaderEventListener.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>subscribe to these events</code></a>,\nallowing for a user-centric view of the bean metadata.",
+      "translation": "随着<a href=\"../xml/NamespaceHandler.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>可插拔自定义 XML 标签</code></a>的引入，单个逻辑配置实体（在此处为 XML 标签）现在可以创建多个<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>和<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>RuntimeBeanReferences</code></a>，从而为最终用户提供更简洁的配置和更大的便利性。因此，不能再假设每个配置实体（例如 XML 标签）都映射到一个<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>。对于希望提供可视化或支持来配置 Spring 应用程序的工具供应商和其他用户来说，重要的是必须有一种机制将<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>与<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>中的配置数据关联起来，并且这种关联方式对最终用户具有具体意义。因此，<a href=\"../xml/NamespaceHandler.html\" title=\"interface in org.springframework.beans.factory.xml\"><code>NamespaceHandler</code></a>实现能够为每个正在配置的逻辑实体发布形式为<code>ComponentDefinition</code>的事件。第三方可以<a href=\"ReaderEventListener.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>订阅这些事件</code></a>，从而实现对 Bean 元数据以用户为中心的视图。",
+      "count": 2
+    },
+    {
+      "source": "Whilst direct access to important <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> is provided through\n<a href=\"#getBeanReferences()\"><code>getBeanReferences()</code></a>, tools may wish to inspect all <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> to gather\nthe full set of <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>. Implementations are required to provide\nall <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> that are required to validate the configuration of the\noverall logical entity as well as those required to provide full user visualization of the configuration.\nIt is expected that certain <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> will not be important to\nvalidation or to the user view of the configuration and as such these may be omitted. A tool may wish to\ndisplay any additional <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> sourced through the supplied\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> but this is not considered to be a typical case.",
+      "translation": "虽然通过 `<a href=\"#getBeanReferences()\"><code>getBeanReferences()</code></a>` 提供了对重要 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>` 的直接访问，但工具可能希望检查所有 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>` 以收集完整的 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>` 集合。实现必须提供所有用于验证整体逻辑实体配置以及用于提供完整用户可视化配置的所需 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>`。\n预计某些 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>` 对验证或用户视图并不重要，因此可以省略它们。工具可能希望显示通过提供的 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>` 获取的任何额外 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>`，但这不被视为典型情况。",
+      "count": 2
+    },
+    {
+      "source": "Each <code>ComponentDefinition</code> has a <a href=\"../../BeanMetadataElement.html#getSource()\"><code>source object</code></a> which is configuration-specific.\nIn the case of XML-based configuration this is typically the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a> which contains the user\nsupplied configuration information. In addition to this, each <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> enclosed in a\n<code>ComponentDefinition</code> has its own <a href=\"../../BeanMetadataElement.html#getSource()\"><code>source object</code></a> which may point\nto a different, more specific, set of configuration data. Beyond this, individual pieces of bean metadata such\nas the <a href=\"../../PropertyValue.html\" title=\"class in org.springframework.beans\"><code>PropertyValues</code></a> may also have a source object giving an\neven greater level of detail. Source object extraction is handled through the\n<a href=\"SourceExtractor.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>SourceExtractor</code></a> which can be customized as required.",
+      "translation": "每个 `<code>ComponentDefinition</code>` 都有一个 `<a href=\"../../BeanMetadataElement.html#getSource()\"><code>源对象</code></a>`，该对象与配置相关。在基于 XML 的配置情况下，这通常是包含用户提供的配置信息的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Node.html\" title=\"class or interface in org.w3c.dom\"><code>Node</code></a>`。此外，每个封装在 `<code>ComponentDefinition</code>` 内的 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>` 也有自己的 `<a href=\"../../BeanMetadataElement.html#getSource()\"><code>源对象</code></a>`，该对象可能指向不同且更具体的配置数据集合。此外，bean 元数据的各个部分（例如 `<a href=\"../../PropertyValue.html\" title=\"class in org.springframework.beans\"><code>PropertyValues</code></a>`）也可能拥有源对象，从而提供更详细的层级信息。源对象的提取由 `<a href=\"SourceExtractor.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>SourceExtractor</code></a>` 处理，可根据需要进行自定义。",
+      "count": 2
+    },
+    {
+      "source": "Tools can determine the importance of contained <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> by checking the\n<a href=\"../config/BeanDefinition.html#getRole()\"><code>role identifier</code></a>. The role is essentially a hint to the tool as to how\nimportant the configuration provider believes a <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a> is to the end user. It is expected\nthat tools will <strong>not</strong> display all <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> for a given\n<code>ComponentDefinition</code> choosing instead to filter based on the role. Tools may choose to make\nthis filtering user configurable. Particular notice should be given to the\n<a href=\"../config/BeanDefinition.html#ROLE_INFRASTRUCTURE\"><code>INFRASTRUCTURE role identifier</code></a>. <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>\nclassified with this role are completely unimportant to the end user and are required only for\ninternal implementation reasons.",
+      "translation": "工具可以通过检查<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>的<a href=\"../config/BeanDefinition.html#getRole()\"><code>角色标识符</code></a>来确定其重要性。该角色本质上是一个提示，告知工具配置提供者认为某个<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinition</code></a>对最终用户有多重要。预期工具将<strong>不会</strong>显示给定<code>ComponentDefinition</code>的所有<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>，而是根据角色进行过滤。工具可以选择将此过滤功能配置为用户可自定义。应特别注意<a href=\"../config/BeanDefinition.html#ROLE_INFRASTRUCTURE\"><code>INFRASTRUCTURE 角色标识符</code></a>。被归类为此角色的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>对最终用户完全无关紧要，仅因内部实现原因而需要。",
+      "count": 2
+    },
+    {
+      "source": "It should be noted that a <code>ComponentDefinition</code> may well be related with\nother <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> via <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>references</code></a>,\nhowever these are <strong>not</strong> included as they may be not available immediately.\nImportant <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> are available from <a href=\"#getBeanReferences()\"><code>getBeanReferences()</code></a>.",
+      "translation": "需要注意的是，`ComponentDefinition` 可能通过<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>references</code></a>与其他<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>相关联，但这些关联并不包含在内，因为它们可能无法立即获取。重要的<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>可以通过<a href=\"#getBeanReferences()\"><code>getBeanReferences()</code></a>获取。",
+      "count": 2
+    },
+    {
+      "source": "the array of BeanDefinitions, or an empty array if none",
+      "translation": "BeanDefinitions 数组，如果没有则为空数组",
+      "count": 2
+    },
+    {
+      "source": "Other <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> may exist within the associated\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>, however these are not considered\nto be needed for validation or for user visualization.",
+      "translation": "其他 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>` 可能存在于关联的 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>` 中，但这些不被视为验证或用户可视化所必需。",
+      "count": 1
+    },
+    {
+      "source": "Other inner beans may exist within the associated <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>,\nhowever these are not considered to be needed for validation or for user visualization.",
+      "translation": "其他内部 Bean 可能存在于关联的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>中，但这些不需要用于验证或用户可视化。",
+      "count": 1
+    },
+    {
+      "source": "Implementations are encouraged to return the same value from\n<code>toString()</code>.",
+      "translation": "建议实现从<code>toString()</code>返回相同的值。",
+      "count": 1
+    },
+    {
+      "source": "This should link back directly to the corresponding configuration data\nfor this component in a given context.",
+      "translation": "这应直接链接到给定上下文中该组件对应的配置数据。",
+      "count": 1
+    },
+    {
+      "source": "Return the <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> that were registered\nto form this <code>ComponentDefinition</code>.",
+      "translation": "返回已注册以形成此 `<code>ComponentDefinition</code>` 的 `<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "Return the set of <a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a> that are considered\nto be important to this <code>ComponentDefinition</code>.",
+      "translation": "返回被视为此 `<code>ComponentDefinition</code>` 重要的 `<a href=\"../config/BeanReference.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanReferences</code></a>` 集合。",
+      "count": 1
+    },
+    {
+      "source": "Return the <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a> that represent all relevant\ninner beans within this component.",
+      "translation": "返回代表此组件内所有相关内部 Bean 的<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanDefinitions</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Get the user-visible name of this <code>ComponentDefinition</code>.",
+      "translation": "获取此<code>ComponentDefinition</code>的用户可见名称。",
+      "count": 1
+    },
+    {
+      "source": "Return a friendly description of the described component.",
+      "translation": "返回所描述组件的友好说明。",
+      "count": 1
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller",
+      "translation": "Rob Harrop，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the array of BeanReferences, or an empty array if none",
+      "translation": "BeanReferences 数组，如果没有则为空数组。",
+      "count": 1
+    }
+  ]
+}

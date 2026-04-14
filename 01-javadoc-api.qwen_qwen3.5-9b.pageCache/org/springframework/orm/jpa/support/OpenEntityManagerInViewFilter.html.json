@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 16:06:18",
+  "updated_at": "2026-04-14 16:06:18",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 48,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6551724137931034,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "the EntityManagerFactory to use",
+      "translation": "要使用的 EntityManagerFactory",
+      "count": 3
+    },
+    {
+      "source": "This filter makes JPA EntityManagers available via the current thread,\nwhich will be autodetected by transaction managers. It is suitable for service\nlayer transactions via <a href=\"../JpaTransactionManager.html\" title=\"class in org.springframework.orm.jpa\"><code>JpaTransactionManager</code></a>\nor <a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> as well\nas for non-transactional read-only execution.",
+      "translation": "此过滤器通过当前线程提供 JPA EntityManagers，事务管理器将自动检测它们。它适用于通过 <a href=\"../JpaTransactionManager.html\" title=\"class in org.springframework.orm.jpa\"><code>JpaTransactionManager</code></a> 或 <a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> 的服务层事务，也适用于非事务性只读执行。",
+      "count": 2
+    },
+    {
+      "source": "Looks up the EntityManagerFactory in Spring's root web application context.\nSupports an \"entityManagerFactoryBeanName\" filter init-param in <code>web.xml</code>;\nthe default bean name is \"entityManagerFactory\". As an alternative, the\n\"persistenceUnitName\" init-param allows for retrieval by logical unit name\n(as specified in <code>persistence.xml</code>).",
+      "translation": "在 Spring 的根 Web 应用程序上下文中查找 EntityManagerFactory。支持 `<code>web.xml</code>` 中的 \"entityManagerFactoryBeanName\" filter init-param；默认 bean 名称为 \"entityManagerFactory\"。作为替代方案，\"persistenceUnitName\" init-param 允许通过逻辑单元名称（如 `<code>persistence.xml</code>` 中指定）进行检索。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to the <code>lookupEntityManagerFactory</code>\nwithout arguments, caching the EntityManagerFactory reference once obtained.",
+      "translation": "默认实现会委托给不带参数的<code>lookupEntityManagerFactory</code>，并在获取到 EntityManagerFactory 引用后将其缓存。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"entityManagerFactory\". Note that this default only applies\nwhen no \"persistenceUnitName\" param has been specified.",
+      "translation": "默认值为 \"entityManagerFactory\"。请注意，此默认值仅在未指定 \"persistenceUnitName\" 参数时适用。",
+      "count": 2
+    },
+    {
+      "source": "This is an alternative to specifying the EntityManagerFactory by bean name,\nresolving it by its persistence unit name instead. If no bean name and no persistence\nunit name have been specified, we'll check whether a bean exists for the default\nbean name \"entityManagerFactory\"; if not, a default EntityManagerFactory will\nbe retrieved through finding a single unique bean of type EntityManagerFactory.",
+      "translation": "这是通过持久化单元名称解析而非通过 Bean 名称指定 EntityManagerFactory 的替代方案。如果未指定 Bean 名称和持久化单元名称，我们将检查是否存在名为\"entityManagerFactory\"的默认 Bean；如果不存在，则将通过查找唯一的 EntityManagerFactory 类型 Bean 来获取默认的 EntityManagerFactory。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation looks for a bean with the specified name\nin Spring's root application context.",
+      "translation": "默认实现会在 Spring 的根应用程序上下文中查找指定名称的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../../web/filter/OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../../web/filter/OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Returns \"false\" so that the filter may re-bind the opened <code>EntityManager</code>\nto each asynchronously dispatched thread and postpone closing it until the very\nlast asynchronous dispatch.",
+      "translation": "返回 \"false\"，以便过滤器可以将打开的 `<code>EntityManager</code>` 重新绑定到每个异步分发的线程，并将其关闭推迟到最后一个异步分发时。",
+      "count": 2
+    },
+    {
+      "source": "Returns \"false\" so that the filter may provide an <code>EntityManager</code>\nto each error dispatches.",
+      "translation": "返回 \"false\"，以便过滤器能够为每个错误分派提供 `<code>EntityManager</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Return the bean name of the EntityManagerFactory to fetch from Spring's\nroot application context.",
+      "translation": "返回 EntityManagerFactory 的 Bean 名称，以便从 Spring 的根应用程序上下文中获取。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the persistence unit to access the EntityManagerFactory for, if any.",
+      "translation": "返回要访问 EntityManagerFactory 的持久化单元名称（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Default EntityManagerFactory bean name: \"entityManagerFactory\".\nOnly applies when no \"persistenceUnitName\" param has been specified.",
+      "translation": "默认 EntityManagerFactory 的 Bean 名称为：\"entityManagerFactory\"。\n仅在未指定\"persistenceUnitName\"参数时适用。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setEntityManagerFactoryBeanName(java.lang.String)\"><code>setEntityManagerFactoryBeanName(String)</code></a></li>\n<li><a href=\"#setPersistenceUnitName(java.lang.String)\"><code>setPersistenceUnitName(String)</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.DEFAULT_ENTITY_MANAGER_FACTORY_BEAN_NAME\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setEntityManagerFactoryBeanName(java.lang.String)\"><code>setEntityManagerFactoryBeanName(String)</code></a></li>\n<li><a href=\"#setPersistenceUnitName(java.lang.String)\"><code>setPersistenceUnitName(String)</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.DEFAULT_ENTITY_MANAGER_FACTORY_BEAN_NAME\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../web/filter/OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code> in class <code><a href=\"../../../web/filter/OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"../../../web/filter/OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code>` 在类 `<code><a href=\"../../../web/filter/OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../web/filter/OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">shouldNotFilterErrorDispatch</a></code> in class <code><a href=\"../../../web/filter/OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"../../../web/filter/OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">shouldNotFilterErrorDispatch</a></code>` 类中的 `<code><a href=\"../../../web/filter/OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../web/filter/OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterInternal</a></code> in class <code><a href=\"../../../web/filter/OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`doFilterInternal` 在类 `<a href=\"../../../web/filter/OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>emf</code> - the EntityManagerFactory to use",
+      "translation": "<code>emf</code> - 要使用的 EntityManagerFactory",
+      "count": 2
+    },
+    {
+      "source": "Provides HttpServletRequest and HttpServletResponse arguments instead of the\ndefault ServletRequest and ServletResponse ones.",
+      "translation": "提供 HttpServletRequest 和 HttpServletResponse 参数，而不是默认的 ServletRequest 和 ServletResponse。",
+      "count": 1
+    },
+    {
+      "source": "Can be overridden in subclasses.",
+      "translation": "可在子类中重写。",
+      "count": 1
+    },
+    {
+      "source": "Same contract as for <code>doFilter</code>, but guaranteed to be\njust invoked once per request within a single request thread.",
+      "translation": "与<code>doFilter</code>相同的合同，但保证在单个请求线程中每个请求仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "Default EntityManagerFactory bean name: \"entityManagerFactory\".",
+      "translation": "默认 EntityManagerFactory Bean 名称：\"entityManagerFactory\"。",
+      "count": 1
+    },
+    {
+      "source": "Create a JPA EntityManager to be bound to a request.",
+      "translation": "创建一个与请求绑定的 JPA EntityManager。",
+      "count": 1
+    },
+    {
+      "source": "Look up the EntityManagerFactory that this filter should use.",
+      "translation": "查找该过滤器应使用的 EntityManagerFactory。",
+      "count": 1
+    },
+    {
+      "source": "Look up the EntityManagerFactory that this filter should use,\ntaking the current HTTP request as argument.",
+      "translation": "查找此过滤器应使用的 EntityManagerFactory，并将当前 HTTP 请求作为参数传入。",
+      "count": 1
+    },
+    {
+      "source": "Set the bean name of the EntityManagerFactory to fetch from Spring's\nroot application context.",
+      "translation": "将 EntityManagerFactory 的 Bean 名称设置为从 Spring 根应用程序上下文中获取。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the persistence unit to access the EntityManagerFactory for.",
+      "translation": "设置持久化单元的名称，用于访问 EntityManagerFactory。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

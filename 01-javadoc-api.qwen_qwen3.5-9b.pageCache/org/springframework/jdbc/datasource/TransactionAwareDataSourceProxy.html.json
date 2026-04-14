@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 14:47:16",
+  "updated_at": "2026-04-14 14:47:16",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 41,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7083333333333333,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "Create a new TransactionAwareDataSourceProxy.",
+      "translation": "创建一个新的 TransactionAwareDataSourceProxy。",
+      "count": 4
+    },
+    {
+      "source": "Delegates to <a href=\"DataSourceUtils.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceUtils</code></a> for automatically participating in\nthread-bound transactions, for example managed by <a href=\"DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>.\n<code>getConnection</code> calls and <code>close</code> calls on returned Connections\nwill behave properly within a transaction, i.e. always operate on the transactional\nConnection. If not within a transaction, normal DataSource behavior applies.",
+      "translation": "委托给<a href=\"DataSourceUtils.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceUtils</code></a>以自动参与线程绑定的事务，例如由<a href=\"DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>管理的事务。<code>getConnection</code> 调用和对返回的 Connection 的<code>close</code> 调用将在事务内正确执行，即始终在事务性 Connection 上操作。如果不在事务中，则应用正常的 DataSource 行为。",
+      "count": 2
+    },
+    {
+      "source": "<b>Make sure that TransactionAwareDataSourceProxy is the outermost DataSource\nof a chain of DataSource proxies/adapters.</b> TransactionAwareDataSourceProxy\ncan delegate either directly to the target connection pool or to some\nintermediary proxy/adapter like <a href=\"LazyConnectionDataSourceProxy.html\" title=\"class in org.springframework.jdbc.datasource\"><code>LazyConnectionDataSourceProxy</code></a> or\n<a href=\"UserCredentialsDataSourceAdapter.html\" title=\"class in org.springframework.jdbc.datasource\"><code>UserCredentialsDataSourceAdapter</code></a>.",
+      "translation": "<b>确保 TransactionAwareDataSourceProxy 是 DataSource 代理/适配器链中最外层的 DataSource。</b> TransactionAwareDataSourceProxy 可以委托给目标连接池，或者委托给某些中间代理/适配器，例如 <a href=\"LazyConnectionDataSourceProxy.html\" title=\"class in org.springframework.jdbc.datasource\"><code>LazyConnectionDataSourceProxy</code></a> 或 <a href=\"UserCredentialsDataSourceAdapter.html\" title=\"class in org.springframework.jdbc.datasource\"><code>UserCredentialsDataSourceAdapter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This DataSource proxy needs to return wrapped Connections (which\nimplement the <a href=\"ConnectionProxy.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ConnectionProxy</code></a> interface) in order to handle close calls\nproperly. Use <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Wrapper.html#unwrap(java.lang.Class)\" title=\"class or interface in java.sql\"><code>Wrapper.unwrap(Class)</code></a> to retrieve the native JDBC Connection.",
+      "translation": "<b>注意：</b>此 DataSource 代理需要返回包装后的连接（实现<a href=\"ConnectionProxy.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ConnectionProxy</code></a>接口），以便正确处理关闭调用。请使用<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Wrapper.html#unwrap(java.lang.Class)\" title=\"class or interface in java.sql\"><code>Wrapper.unwrap(Class)</code></a>获取原生 JDBC 连接。",
+      "count": 2
+    },
+    {
+      "source": "Data access code that should remain unaware of Spring's data access support\ncan work with this proxy to seamlessly participate in Spring-managed transactions.\nNote that the transaction manager, for example <a href=\"DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>,\nstill needs to work with the underlying DataSource, <i>not</i> with this proxy.",
+      "translation": "应使数据访问代码对 Spring 的数据访问支持保持无感知，该代理可使其无缝参与由 Spring 管理的事务。请注意，事务管理器（例如 <a href=\"DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>）仍需与底层 DataSource 配合工作，<i>而非</i>与此代理配合。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>true</code> for all\nstandard cases. This can be overridden through the\n<a href=\"#setReobtainTransactionalConnections(boolean)\"><code>\"reobtainTransactionalConnections\"</code></a>\nflag, which enforces a non-fixed target Connection within an active transaction.\nNote that non-transactional access will always use a fixed Connection.",
+      "translation": "默认实现对于所有标准情况均返回 <code>true</code>。这可以通过<a href=\"#setReobtainTransactionalConnections(boolean)\"><code>\"reobtainTransactionalConnections\"</code></a>标志进行覆盖，该标志强制在活跃事务中使用非固定目标 Connection。请注意，非事务性访问将始终使用固定 Connection。",
+      "count": 2
+    },
+    {
+      "source": "This proxy allows data access code to work with the plain JDBC API and still\nparticipate in Spring-managed transactions, similar to JDBC code in a Jakarta EE/JTA\nenvironment. However, if possible, use Spring's DataSourceUtils, JdbcTemplate or\nJDBC operation objects to get transaction participation even without a proxy for\nthe target DataSource, avoiding the need to define such a proxy in the first place.",
+      "translation": "此代理允许数据访问代码使用纯 JDBC API 工作，同时参与 Spring 管理的事务，类似于 Jakarta EE/JTA 环境中的 JDBC 代码。然而，如果可能，请使用 Spring 的 `DataSourceUtils`、`JdbcTemplate` 或 JDBC 操作对象来获取事务参与，即使目标 DataSource 没有代理也是如此，从而避免首先定义此类代理的需要。",
+      "count": 2
+    },
+    {
+      "source": "As a further effect, using a transaction-aware DataSource will apply remaining\ntransaction timeouts to all created JDBC (Prepared/Callable)Statement. This means\nthat all operations performed through standard JDBC will automatically participate\nin Spring-managed transaction timeouts.",
+      "translation": "此外，使用支持事务的 DataSource 会将剩余的事务超时时间应用于所有创建的 JDBC（预编译/可调用）Statement。这意味着通过标准 JDBC 执行的所有操作将自动参与由 Spring 管理的事务超时。",
+      "count": 2
+    },
+    {
+      "source": "The default is \"true\". Specify \"false\" to immediately obtain a target\nConnection when a transaction-aware Connection handle is retrieved.",
+      "translation": "默认值为 \"true\"。指定 \"false\" 可在获取事务感知连接句柄时立即获得目标 Connection。",
+      "count": 2
+    },
+    {
+      "source": "The default is \"false\". Specify \"true\" to reobtain transactional\nConnections for every call on the Connection proxy; this is advisable\non JBoss if you hold on to a Connection handle across transaction boundaries.",
+      "translation": "默认值为 \"false\"。指定 \"true\" 可在连接代理的每次调用时重新获取事务性连接；如果在 JBoss 中跨事务边界持有连接句柄，则建议采用此设置。",
+      "count": 2
+    },
+    {
+      "source": "The effect of this setting is similar to the\n\"hibernate.connection.release_mode\" value \"after_statement\".",
+      "translation": "此设置的效果与 `\"hibernate.connection.release_mode\"` 值为 `\"after_statement\"` 类似。",
+      "count": 2
+    },
+    {
+      "source": "Wraps the given Connection with a proxy that delegates every method call to it\nbut delegates <code>close()</code> calls to DataSourceUtils.",
+      "translation": "将给定的 Connection 包装为代理，该代理将所有方法调用委托给它，但将 `<code>close()</code>` 调用委托给 DataSourceUtils。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetDataSource</code> - the target DataSource",
+      "translation": "<code>targetDataSource</code> - 目标 DataSource",
+      "count": 2
+    },
+    {
+      "source": "<code>targetDataSource</code> - the DataSource that the Connection came from",
+      "translation": "<code>targetDataSource</code> - 连接来源的 DataSource",
+      "count": 2
+    },
+    {
+      "source": "a transactional Connection if any, a new one else",
+      "translation": "如果有事务性连接，则使用该连接，否则创建一个新的连接。",
+      "count": 2
+    },
+    {
+      "source": "The returned Connection handle implements the ConnectionProxy interface,\nallowing to retrieve the underlying target Connection.",
+      "translation": "返回的 Connection 句柄实现了 ConnectionProxy 接口，允许获取底层的目标 Connection。",
+      "count": 1
+    },
+    {
+      "source": "Delegates to DataSourceUtils for automatically participating in Spring-managed\ntransactions.",
+      "translation": "委托给 DataSourceUtils 以自动参与 Spring 管理的交易。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to obtain the transactional target Connection lazily on\nactual data access.",
+      "translation": "指定是否在真正进行数据访问时懒式获取事务目标 Connection。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to reobtain the target Connection for each operation\nperformed within a transaction.",
+      "translation": "指定是否在每个事务内执行的操作中重新获取目标连接。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether to obtain a fixed target Connection for the proxy\nor to reobtain the target Connection for each operation.",
+      "translation": "确定是为代理获取固定的目标连接，还是为每个操作重新获取目标连接。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"DelegatingDataSource.html#getConnection()\">getConnection</a></code> in class <code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>",
+      "translation": "`<code><a href=\"DelegatingDataSource.html#getConnection()\">getConnection</a></code>` 在类 `<code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the wrapped Connection",
+      "translation": "被包装的 Connection",
+      "count": 1
+    }
+  ]
+}

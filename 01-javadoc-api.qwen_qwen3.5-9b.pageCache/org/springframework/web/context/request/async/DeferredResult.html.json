@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-04-14 18:34:35",
+  "updated_at": "2026-04-14 18:34:35",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 62,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7714285714285714,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "Variant of <a href=\"#%3Cinit%3E(java.lang.Long,java.lang.Object)\"><code>DeferredResult(Long, Object)</code></a> that accepts a dynamic\nfallback value based on a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a>.",
+      "translation": "`<a href=\"#%3Cinit%3E(java.lang.Long,java.lang.Object)\"><code>DeferredResult(Long, Object)</code></a>` 的变体，接受基于 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a>` 的动态回退值。",
+      "count": 3
+    },
+    {
+      "source": "<code>timeoutValue</code> - timeout value in milliseconds (ignored if <code>null</code>)",
+      "translation": "<code>timeoutValue</code> - 以毫秒为单位的超时值（如果为 <code>null</code> 则被忽略）",
+      "count": 3
+    },
+    {
+      "source": "An example of associating additional behavior to this class might be realized\nby extending the class to implement an additional interface. For example, one\nmight want to implement <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\"><code>Comparable</code></a> so that when the <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a>\nis added to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html\" title=\"class or interface in java.util\"><code>PriorityQueue</code></a> it is handled in the correct order.",
+      "translation": "将附加行为与此类关联的一个示例是通过扩展该类以实现额外的接口。例如，可能需要实现<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\"><code>Comparable</code></a>，以便当将<a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a>添加到<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html\" title=\"class or interface in java.util\"><code>PriorityQueue</code></a>时，能够按正确的顺序进行处理。",
+      "count": 2
+    },
+    {
+      "source": "This method is called from a container thread when an async request\ntimes out before the <code>DeferredResult</code> has been populated.\nIt may invoke <a href=\"#setResult(T)\"><code>setResult</code></a> or\n<a href=\"#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> to resume processing.",
+      "translation": "此方法在异步请求超时且 `<code>DeferredResult</code>` 尚未填充时，由容器线程调用。它可能会调用 <a href=\"#setResult(T)\"><code>setResult</code></a> 或 <a href=\"#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> 来恢复处理。",
+      "count": 2
+    },
+    {
+      "source": "This method is called from a container thread when an error occurs\nwhile processing an async request before the <code>DeferredResult</code> has\nbeen populated. It may invoke <a href=\"#setResult(T)\"><code>setResult</code></a>\nor <a href=\"#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> to resume\nprocessing.",
+      "translation": "此方法在异步请求处理过程中、<code>DeferredResult</code> 尚未填充时发生错误，由容器线程调用。它可能会调用 <a href=\"#setResult(T)\"><code>setResult</code></a> 或 <a href=\"#setErrorResult(java.lang.Object)\"><code>setErrorResult</code></a> 以恢复处理。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can extend this class to easily associate additional data or behavior\nwith the <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a>. For example, one might want to associate the user\nused to create the <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a> by extending the class and adding an\nadditional property for the user. In this way, the user could easily be accessed\nlater without the need to use a data structure to do the mapping.",
+      "translation": "子类可以扩展此类，以便轻松将附加数据或行为与 <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a> 关联。例如，可以通过扩展该类并添加一个用于用户的额外属性，来关联创建 <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a> 的用户。通过这种方式，以后可以轻松访问该用户，而无需使用数据结构进行映射。",
+      "count": 2
+    },
+    {
+      "source": "The result may have been set with a call to <a href=\"#setResult(T)\"><code>setResult(Object)</code></a>,\nor <a href=\"#setErrorResult(java.lang.Object)\"><code>setErrorResult(Object)</code></a>, or as a result of a timeout, if a\ntimeout result was provided to the constructor. The request may also\nexpire due to a timeout or network error.",
+      "translation": "结果可能通过调用 <a href=\"#setResult(T)\"><code>setResult(Object)</code></a> 或 <a href=\"#setErrorResult(java.lang.Object)\"><code>setErrorResult(Object)</code></a> 设置，或者如果构造函数提供了超时结果，则可能是由于超时而设置。请求也可能因超时而过期，或因网络错误而过期。",
+      "count": 2
+    },
+    {
+      "source": "This method is called from a container thread when an async request\ncompleted for any reason including timeout and network error. This is useful\nfor detecting that a <code>DeferredResult</code> instance is no longer usable.",
+      "translation": "此方法在异步请求因任何原因（包括超时和网络错误）完成时，由容器线程调用。这对于检测 `<code>DeferredResult` 实例不再可用非常有用。",
+      "count": 2
+    },
+    {
+      "source": "By default not set in which case the default configured in the MVC\nJava Config or the MVC namespace is used, or if that's not set, then the\ntimeout depends on the default of the underlying server.",
+      "translation": "默认情况下未设置，此时将使用在 MVC Java 配置或 MVC 命名空间中配置的默认值；如果该值也未设置，则超时时间取决于底层服务器的默认值。",
+      "count": 2
+    },
+    {
+      "source": "Set an error value for the <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a> and handle it.\nThe value may be an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\"><code>Exception</code></a> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\"><code>Throwable</code></a> in which case\nit will be processed as if a handler raised the exception.",
+      "translation": "为 `<a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a>` 设置错误值并处理它。该值可以是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\"><code>Exception</code></a> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html\" title=\"class or interface in java.lang\"><code>Throwable</code></a>，在这种情况下，它将像处理器抛出异常一样进行处理。",
+      "count": 2
+    },
+    {
+      "source": "Return the result, or <code>null</code> if the result wasn't set. Since the result\ncan also be <code>null</code>, it is recommended to use <a href=\"#hasResult()\"><code>hasResult()</code></a> first\nto check if there is a result prior to calling this method.",
+      "translation": "返回结果，或者如果未设置结果则返回 `<code>null</code>`。由于结果也可能为 `<code>null</code>`，建议在调用此方法之前先使用 <a href=\"#hasResult()\"><code>hasResult()</code></a> 检查是否存在结果。",
+      "count": 2
+    },
+    {
+      "source": "Set an error value for the <a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a> and handle it.",
+      "translation": "为 `<a href=\"DeferredResult.html\" title=\"class in org.springframework.web.context.request.async\"><code>DeferredResult</code></a>` 设置错误值并处理它。",
+      "count": 2
+    },
+    {
+      "source": "Return <code>true</code> if the DeferredResult has been set.",
+      "translation": "如果 DeferredResult 已设置，则返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "Create a DeferredResult.",
+      "translation": "创建 DeferredResult。",
+      "count": 2
+    },
+    {
+      "source": "Create a DeferredResult with a timeout value and a default result to use\nin case of timeout.",
+      "translation": "创建一个带有超时值和默认结果的 `DeferredResult`，以便在发生超时时使用。",
+      "count": 2
+    },
+    {
+      "source": "Set the value for the DeferredResult and handle it.",
+      "translation": "设置 DeferredResult 的值并处理它。",
+      "count": 2
+    },
+    {
+      "source": "Provide a handler to use to handle the result value.",
+      "translation": "提供用于处理结果值的处理器。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the result was set and passed on for handling;\n<code>false</code> if the result was already set or the async request expired",
+      "translation": "<code>true</code> 如果结果已设置并传递给处理程序；\n<code>false</code> 如果结果已设置或异步请求已过期。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the result was set to the error value and passed on\nfor handling; <code>false</code> if the result was already set or the async\nrequest expired",
+      "translation": "如果结果已设置为错误值并传递用于处理，则为`true`；如果结果已设置或异步请求已过期，则为`false`。",
+      "count": 2
+    },
+    {
+      "source": "<code>timeoutValue</code> - timeout value in milliseconds",
+      "translation": "<code>timeoutValue</code> - 以毫秒为单位的超时值",
+      "count": 2
+    },
+    {
+      "source": "<code>timeoutResult</code> - the result to use",
+      "translation": "<code>timeoutResult</code> - 要使用的结果",
+      "count": 2
+    },
+    {
+      "source": "<code>timeoutResult</code> - the result supplier to use",
+      "translation": "<code>timeoutResult</code> - 要使用的结果供应器",
+      "count": 2
+    },
+    {
+      "source": "<code>resultHandler</code> - the handler",
+      "translation": "<code>resultHandler</code> - 处理器",
+      "count": 2
+    },
+    {
+      "source": "<code>result</code> - the value to set",
+      "translation": "<code>result</code> - 要设置的值",
+      "count": 2
+    },
+    {
+      "source": "<code>result</code> - the error result value",
+      "translation": "<code>result</code> - 错误结果值",
+      "count": 2
+    },
+    {
+      "source": "Return the result, or <code>null</code> if the result wasn't set.",
+      "translation": "返回结果，如果未设置结果则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return <code>true</code> if this DeferredResult is no longer usable either\nbecause it was previously set or because the underlying request expired.",
+      "translation": "如果此 DeferredResult 已不再可用（无论是由于之前已被设置还是底层请求已过期），则返回<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Handles a DeferredResult value when set.",
+      "translation": "设置时处理 DeferredResult 值。",
+      "count": 1
+    },
+    {
+      "source": "Create a DeferredResult with a custom timeout value.",
+      "translation": "创建具有自定义超时值的 DeferredResult。",
+      "count": 1
+    },
+    {
+      "source": "Register code to invoke when the async request completes.",
+      "translation": "注册代码以在异步请求完成时调用。",
+      "count": 1
+    },
+    {
+      "source": "Register code to invoke when an error occurred during the async request.",
+      "translation": "注册代码以在异步请求期间发生错误时调用。",
+      "count": 1
+    },
+    {
+      "source": "Register code to invoke when the async request times out.",
+      "translation": "注册在异步请求超时时调用的代码。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the result type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 结果类型</span>",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Juergen Hoeller, Rob Winch, Sam Brannen",
+      "translation": "Rossen Stoyanchev, Juergen Hoeller, Rob Winch, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

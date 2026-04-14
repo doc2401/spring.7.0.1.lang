@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-04-14 16:28:13",
+  "updated_at": "2026-04-14 16:28:13",
+  "stats": {
+    "total_entries": 7,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 11,
+    "entries_with_hits": 7,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5714285714285714,
+    "usage_percentage": 0.0007
+  },
+  "items": [
+    {
+      "source": "<b>Note that the preferred way to apply dependency injection\nto Job instances is via a JobFactory:</b> that is, to specify\n<a href=\"SpringBeanJobFactory.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SpringBeanJobFactory</code></a> as Quartz JobFactory (typically via\n<a href=\"SchedulerFactoryBean.html#setJobFactory(org.quartz.spi.JobFactory)\"><code>SchedulerFactoryBean's \"jobFactory\" property</code></a>).\nThis allows to implement dependency-injected Quartz Jobs without\na dependency on Spring base classes.",
+      "translation": "<b>请注意，对 Job 实例应用依赖注入的首选方式是通过 JobFactory：</b>即指定<a href=\"SpringBeanJobFactory.html\" title=\"class in org.springframework.scheduling.quartz\"><code>SpringBeanJobFactory</code></a>作为 Quartz JobFactory（通常通过<a href=\"SchedulerFactoryBean.html#setJobFactory(org.quartz.spi.JobFactory)\"><code>SchedulerFactoryBean 的 \"jobFactory\" 属性</code></a>）。这使得可以在不依赖 Spring 基础类的情况下实现依赖注入的 Quartz Jobs。",
+      "count": 2
+    },
+    {
+      "source": "For example, let's assume that the JobDataMap contains a key\n\"myParam\" with value \"5\": The Job implementation can then expose\na bean property \"myParam\" of type int to receive such a value,\ni.e. a method \"setMyParam(int)\". This will also work for complex\ntypes like business objects etc.",
+      "translation": "例如，假设 JobDataMap 包含一个键为 \"myParam\"、值为 \"5\" 的条目：Job 实现可以暴露一个类型为 int 的 bean 属性 \"myParam\" 来接收此类值，即提供一个 \"setMyParam(int)\" 方法。这对于复杂类型（如业务对象等）也同样适用。",
+      "count": 2
+    },
+    {
+      "source": "This implementation applies the passed-in job data map as bean property\nvalues, and delegates to <code>executeInternal</code> afterwards.",
+      "translation": "此实现将传入的作业数据映射作为 Bean 属性值应用，随后委托给 `<code>executeInternal</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Execute the actual job. The job data map will already have been\napplied as bean property values by execute. The contract is\nexactly the same as for the standard Quartz execute method.",
+      "translation": "执行实际任务。`execute` 方法已作为 Bean 属性值应用了作业数据映射。其契约与标准 Quartz `execute` 方法完全相同。",
+      "count": 2
+    },
+    {
+      "source": "Execute the actual job.",
+      "translation": "执行实际任务。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Job.html#execute-org.quartz.JobExecutionContext-\" title=\"class or interface in org.quartz\">execute</a></code> in interface <code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Job.html\" title=\"class or interface in org.quartz\">Job</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Job.html#execute-org.quartz.JobExecutionContext-\" title=\"class or interface in org.quartz\">execute</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://www.quartz-scheduler.org/api/2.3.0/org/quartz/Job.html\" title=\"class or interface in org.quartz\">Job</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

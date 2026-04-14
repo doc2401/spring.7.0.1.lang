@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-04-14 14:47:04",
+  "updated_at": "2026-04-14 14:47:04",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 84,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7872340425531914,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "Create a new SingleConnectionDataSource with the given standard\nDriverManager parameters.",
+      "translation": "使用给定的标准 DriverManager 参数创建一个新的 SingleConnectionDataSource。",
+      "count": 4
+    },
+    {
+      "source": "<code>suppressClose</code> - if the returned Connection should be a\nclose-suppressing proxy or the physical Connection",
+      "translation": "<code>suppressClose</code> - 如果返回的 Connection 应为关闭抑制代理或物理 Connection。",
+      "count": 3
+    },
+    {
+      "source": "Note that at shutdown, someone should close the underlying Connection\nvia the <code>close()</code> method. Client code will never call close\non the Connection handle if it is SmartDataSource-aware (for example, uses\n<code>DataSourceUtils.releaseConnection</code>).",
+      "translation": "请注意，在关闭时，应通过 `close()` 方法关闭底层的 Connection。如果客户端代码是 SmartDataSource 感知的（例如使用 `DataSourceUtils.releaseConnection`），则永远不会调用 Connection 句柄的 close 方法。",
+      "count": 2
+    },
+    {
+      "source": "This is primarily intended for testing. For example, it enables easy testing\noutside an application server, for code that expects to work on a DataSource.\nIn contrast to <a href=\"DriverManagerDataSource.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DriverManagerDataSource</code></a>, it reuses the same Connection\nall the time, avoiding excessive creation of physical Connections.",
+      "translation": "这主要用于测试。例如，它使得在应用程序服务器之外轻松测试期望在 DataSource 上运行的代码成为可能。与 <a href=\"DriverManagerDataSource.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DriverManagerDataSource</code></a> 不同，它始终复用同一个 Connection，从而避免了物理连接的过度创建。",
+      "count": 2
+    },
+    {
+      "source": "As this class implements <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\"><code>AutoCloseable</code></a>, it can be used\nwith a try-with-resource statement.",
+      "translation": "由于该类实现了 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\"><code>AutoCloseable</code></a>，因此可以与 try-with-resources 语句一起使用。",
+      "count": 2
+    },
+    {
+      "source": "As this bean implements <a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a>, a bean factory\nwill automatically invoke this on destruction of the bean.",
+      "translation": "由于此 Bean 实现了<a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a>接口，因此当 Bean 被销毁时，Bean 工厂将自动调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "If client code will call <code>close()</code> in the assumption of a pooled\nConnection, like when using persistence tools, set \"suppressClose\" to \"true\".\nThis will return a close-suppressing proxy instead of the physical Connection.",
+      "translation": "如果客户端代码在假设使用连接池的情况下调用 `<code>close()</code>`（例如在使用持久化工具时），请将 \"suppressClose\" 设置为 \"true\"。这将返回一个抑制关闭的代理，而不是物理连接。",
+      "count": 2
+    },
+    {
+      "source": "This is recommended for the Oracle JDBC driver in testing scenarios.",
+      "translation": "这在测试场景中推荐使用 Oracle JDBC 驱动程序。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation applies the auto-commit flag, if necessary.\nCan be overridden in subclasses.",
+      "translation": "默认实现会在必要时应用自动提交标志。可在子类中重写此方法。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractDriverBasedDataSource.html#getConnection()\">AbstractDriverBasedDataSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractDriverBasedDataSource.html#getConnection()\">AbstractDriverBasedDataSource</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "This implementation delegates to <code>getConnectionFromDriver</code>,\nusing the default username and password of this DataSource.",
+      "translation": "此实现委托给<code>getConnectionFromDriver</code>，使用此 DataSource 的默认用户名和密码。",
+      "count": 2
+    },
+    {
+      "source": "Constructor for bean-style configuration.",
+      "translation": "用于 Bean 风格配置的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SingleConnectionDataSource with a given Connection.",
+      "translation": "使用给定的 Connection 创建一个新的 SingleConnectionDataSource。",
+      "count": 2
+    },
+    {
+      "source": "Close the underlying Connection.",
+      "translation": "关闭底层连接。",
+      "count": 2
+    },
+    {
+      "source": "Close the underlying shared Connection.",
+      "translation": "关闭底层的共享连接。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the returned Connection's \"autoCommit\" setting should be overridden.",
+      "translation": "返回是否应覆盖返回的 Connection 的\"autoCommit\"设置。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given Connection with a proxy that delegates every method call to it\nbut suppresses close calls.",
+      "translation": "用代理包装给定的 Connection，该代理将委托所有方法调用给它，但会抑制 close 调用。",
+      "count": 2
+    },
+    {
+      "source": "Initialize the underlying Connection via the DriverManager.",
+      "translation": "通过 DriverManager 初始化底层 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the shared Connection should be explicitly rolled back\nbefore close (if not in auto-commit mode).",
+      "translation": "返回在关闭之前是否应显式回滚共享的 Connection（如果未处于自动提交模式）。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the returned Connection will be a close-suppressing proxy\nor the physical Connection.",
+      "translation": "返回的 Connection 是否为关闭抑制代理或物理 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Reset the underlying shared Connection, to be reinitialized on next access.",
+      "translation": "重置底层的共享连接，以便在下次访问时重新初始化。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether the returned Connection's \"autoCommit\" setting should be overridden.",
+      "translation": "指定是否应覆盖返回的 Connection 的\"autoCommit\"设置。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether the returned Connection should be a close-suppressing proxy\nor the physical Connection.",
+      "translation": "指定返回的 Connection 应为抑制关闭的代理还是物理 Connection。",
+      "count": 2
+    },
+    {
+      "source": "This is a single Connection: Do not close it when returning to the \"pool\".",
+      "translation": "这是一个单独的 Connection：在返回到“池”时不要关闭它。",
+      "count": 2
+    },
+    {
+      "source": "Specifying a custom username and password doesn't make sense\nwith a single Connection. Returns the single Connection if given\nthe same username and password; throws an SQLException else.",
+      "translation": "指定自定义用户名和密码对于单个连接没有意义。如果提供相同的用户名和密码，则返回该单个连接；否则抛出 SQLException。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractDriverBasedDataSource.html#getConnection()\">getConnection</a></code> in class <code><a href=\"AbstractDriverBasedDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">AbstractDriverBasedDataSource</a></code>",
+      "translation": "`<code><a href=\"AbstractDriverBasedDataSource.html#getConnection()\">getConnection</a></code>` 类中的 `<code><a href=\"AbstractDriverBasedDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">AbstractDriverBasedDataSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractDriverBasedDataSource.html#getConnection(java.lang.String,java.lang.String)\">getConnection</a></code> in class <code><a href=\"AbstractDriverBasedDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">AbstractDriverBasedDataSource</a></code>",
+      "translation": "`<code><a href=\"AbstractDriverBasedDataSource.html#getConnection(java.lang.String,java.lang.String)\">getConnection</a></code>` 类中的 `<code><a href=\"AbstractDriverBasedDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">AbstractDriverBasedDataSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"SmartDataSource.html#shouldClose(java.sql.Connection)\">shouldClose</a></code> in interface <code><a href=\"SmartDataSource.html\" title=\"interface in org.springframework.jdbc.datasource\">SmartDataSource</a></code>",
+      "translation": "`<code><a href=\"SmartDataSource.html#shouldClose(java.sql.Connection)\">shouldClose</a></code>` 在接口 `<code><a href=\"SmartDataSource.html\" title=\"interface in org.springframework.jdbc.datasource\">SmartDataSource</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>suppressClose</code> - if the Connection should be wrapped with a Connection that\nsuppresses <code>close()</code> calls (to allow for normal <code>close()</code>\nusage in applications that expect a pooled Connection but do not know our\nSmartDataSource interface)",
+      "translation": "<code>suppressClose</code> - 如果应将 Connection 包装为抑制 <code>close()</code> 调用的 Connection（以便在期望池化 Connection 但不知道我们的 SmartDataSource 接口的应用程序中正常使用 <code>close()</code>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>url</code> - the JDBC URL to use for accessing the DriverManager",
+      "translation": "<code>url</code> - 用于访问 DriverManager 的 JDBC URL。",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - underlying target Connection",
+      "translation": "<code>target</code> - 底层目标连接",
+      "count": 2
+    },
+    {
+      "source": "the \"autoCommit\" value, or <code>null</code> if none to be applied",
+      "translation": "\"autoCommit\" 值，或为 null（表示不应用任何设置）。",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - the original Connection to wrap",
+      "translation": "<code>target</code> - 要包装的原始 Connection",
+      "count": 2
+    },
+    {
+      "source": "whether the given Connection should be closed",
+      "translation": "是否应关闭给定的 Connection",
+      "count": 2
+    },
+    {
+      "source": "Specifying a custom username and password doesn't make sense\nwith a single Connection.",
+      "translation": "为单个连接指定自定义用户名和密码没有意义。",
+      "count": 1
+    },
+    {
+      "source": "Prepare the given Connection before it is exposed.",
+      "translation": "在暴露该连接之前，请对其进行准备。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether the shared Connection should be explicitly rolled back\nbefore close (if not in auto-commit mode).",
+      "translation": "指定在关闭之前是否应显式回滚共享的 Connection（如果未处于自动提交模式）。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection(java.lang.String,java.lang.String)\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection(java.lang.String,java.lang.String)\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>username</code> - the JDBC username to use for accessing the DriverManager",
+      "translation": "<code>username</code> - 用于访问 DriverManager 的 JDBC 用户名。",
+      "count": 1
+    },
+    {
+      "source": "<code>password</code> - the JDBC password to use for accessing the DriverManager",
+      "translation": "<code>password</code> - 用于访问 DriverManager 的 JDBC 密码。",
+      "count": 1
+    },
+    {
+      "source": "<code>con</code> - the Connection to check",
+      "translation": "<code>con</code> - 要检查的连接",
+      "count": 1
+    },
+    {
+      "source": "<code>con</code> - the Connection to prepare",
+      "translation": "<code>con</code> - 待准备的连接",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller",
+      "translation": "Rod Johnson，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the wrapped Connection",
+      "translation": "被包装的 Connection",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "created_at": "2026-04-14 16:23:09",
+  "updated_at": "2026-04-14 16:23:09",
+  "stats": {
+    "total_entries": 81,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 128,
+    "entries_with_hits": 81,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5802469135802468,
+    "usage_percentage": 0.0081
+  },
+  "items": [
+    {
+      "source": "<a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\"><code>ContextClosedEvent</code></a> handler for initiating an early shutdown.",
+      "translation": "用于启动提前关闭的 <a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\"><code>ContextClosedEvent</code></a> 处理器。",
+      "count": 3
+    },
+    {
+      "source": "Variant of <a href=\"#setAwaitTerminationSeconds(int)\"><code>setAwaitTerminationSeconds(int)</code></a> with millisecond precision.",
+      "translation": "带有毫秒精度的 `<a href=\"#setAwaitTerminationSeconds(int)\"><code>setAwaitTerminationSeconds(int)</code></a>` 变体。",
+      "count": 3
+    },
+    {
+      "source": "This flag will only have effect when the executor is running in a Spring\napplication context and able to receive the <a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\"><code>ContextClosedEvent</code></a>. Also,\nnote that <a href=\"ThreadPoolTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskExecutor</code></a> effectively accepts tasks after context\nclose by default, in combination with a coordinated lifecycle stop, unless\n<a href=\"ThreadPoolTaskExecutor.html#setStrictEarlyShutdown(boolean)\"><code>\"strictEarlyShutdown\"</code></a>\nhas been specified.",
+      "translation": "此标志仅在执行器在 Spring 应用程序上下文中运行且能够接收 <a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\"><code>ContextClosedEvent</code></a> 时生效。此外，请注意，除非已指定 <a href=\"ThreadPoolTaskExecutor.html#setStrictEarlyShutdown(boolean)\"><code>\"strictEarlyShutdown\"</code></a>，否则 <a href=\"ThreadPoolTaskExecutor.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ThreadPoolTaskExecutor</code></a> 默认会在与协调的生命周期停止相结合后接受上下文关闭后的任务。",
+      "count": 2
+    },
+    {
+      "source": "Called from <a href=\"#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>onApplicationEvent(ContextClosedEvent)</code></a> if no\nindications for a late shutdown have been determined, that is, if the\n<a href=\"#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose</code></a> and\n<a href=\"#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>\nflags have not been set.",
+      "translation": "由 <a href=\"#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>onApplicationEvent(ContextClosedEvent)</code></a> 调用，前提是未检测到延迟关闭的迹象，即如果尚未设置 <a href=\"#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose\"</code></a> 和 <a href=\"#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a> 标志。",
+      "count": 2
+    },
+    {
+      "source": "This is different from the default phase <code>Integer.MAX_VALUE</code> associated with\nother <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> implementations, putting the typically auto-started\nexecutor/scheduler beans into an earlier startup phase and a later shutdown phase while\nstill leaving room for regular <a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> components with the common phase 0.",
+      "translation": "这与与其他<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>实现关联的默认阶段<code>Integer.MAX_VALUE</code>不同，它将通常自动启动的执行器/调度器 Bean 置于更早的启动阶段和更晚的关闭阶段，同时仍为具有通用阶段 0 的常规<a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a>组件留出空间。",
+      "count": 2
+    },
+    {
+      "source": "<code>acceptTasksAfterContextClose=true</code> like behavior also follows from\n<a href=\"#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>\nwhich effectively is a specific variant of this flag, replacing the early soft\nshutdown in the concurrent managed stop phase with a serial soft shutdown in\nthe executor's destruction step, with individual awaiting according to the\n<a href=\"#setAwaitTerminationSeconds(int)\"><code>\"awaitTerminationSeconds\"</code></a> property.",
+      "translation": "`acceptTasksAfterContextClose=true` 的行为同样适用于\n<a href=\"#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>，\n该选项实际上是此标志的一个特定变体：它将并发管理停止阶段中的早期软关闭替换为执行器销毁步骤中的串行软关闭，并根据\n<a href=\"#setAwaitTerminationSeconds(int)\"><code>\"awaitTerminationSeconds\"</code></a> 属性对各个任务进行等待。",
+      "count": 2
+    },
+    {
+      "source": "In a Jakarta EE or other managed environment with JSR-236 support,\nconsider specifying a JNDI-located ManagedThreadFactory: by default,\nto be found at \"java:comp/DefaultManagedThreadFactory\".\nUse the \"jee:jndi-lookup\" namespace element in XML or the programmatic\n<a href=\"../../jndi/JndiLocatorDelegate.html\" title=\"class in org.springframework.jndi\"><code>JndiLocatorDelegate</code></a> for convenient lookup.\nAlternatively, consider using Spring's <a href=\"DefaultManagedAwareThreadFactory.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>DefaultManagedAwareThreadFactory</code></a>\nwith its fallback to local threads in case of no managed thread factory found.",
+      "translation": "在支持 JSR-236 的 Jakarta EE 或其他托管环境中，可以考虑指定一个位于 JNDI 的 ManagedThreadFactory：默认情况下，该工厂位于 \"java:comp/DefaultManagedThreadFactory\"。请在 XML 中使用 \"jee:jndi-lookup\" 命名空间元素，或使用程序化的 <a href=\"../../jndi/JndiLocatorDelegate.html\" title=\"class in org.springframework.jndi\"><code>JndiLocatorDelegate</code></a> 进行便捷的查找。或者，可以考虑使用 Spring 的 <a href=\"DefaultManagedAwareThreadFactory.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>DefaultManagedAwareThreadFactory</code></a>，并在未找到托管线程工厂时回退到本地线程。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>false</code>, with a coordinated lifecycle stop first\n(unless <a href=\"#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose\"</code></a>\nhas been set) and then an immediate shutdown through interrupting ongoing\ntasks and clearing the queue. Switch this flag to <code>true</code> if you\nprefer fully completed tasks at the expense of a longer shutdown phase.\nThe executor will not go through a coordinated lifecycle stop phase then\nbut rather only stop and wait for task completion on its own shutdown.",
+      "translation": "默认值为 `<code>false</code>`，首先执行协调的生命周期停止（除非已设置<a href=\"#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose\"</code></a>），然后通过中断正在运行的任务并清空队列立即关闭。如果您更倾向于完全完成的任务，即使这会延长关闭阶段，请将此标志切换为 `<code>true</code>`。执行器将不会经过协调的生命周期停止阶段，而是在其自身关闭时仅停止并等待任务完成。",
+      "count": 2
+    },
+    {
+      "source": "The default for executors/schedulers is <a href=\"#DEFAULT_PHASE\"><code>DEFAULT_PHASE</code></a> as of 6.2,\nfor stopping after other <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> implementations.",
+      "translation": "自 6.2 版本起，执行器/调度器的默认值为<a href=\"#DEFAULT_PHASE\"><code>DEFAULT_PHASE</code></a>，用于在其他<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>实现之后停止。",
+      "count": 2
+    },
+    {
+      "source": "Set this flag to <code>true</code> on Java 21 or higher for a tightly\nmanaged thread pool setup with virtual threads. In contrast to\n<a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>, this is integrated with Spring's\nlifecycle management for stopping and restarting execution threads,\nincluding an early stop signal for a graceful shutdown arrangement.",
+      "translation": "将此标志设置为 Java 21 或更高版本的 <code>true</code>，以配置带有虚拟线程的紧密管理线程池。与<a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>相比，此功能集成了 Spring 的生命周期管理，用于停止和重新启动执行线程，包括为优雅关闭安排提供的早期停止信号。",
+      "count": 2
+    },
+    {
+      "source": "By default, this executor won't wait for the termination of tasks at all.\nIt will either shut down immediately, interrupting ongoing tasks and clearing\nthe remaining task queue - or, if the\n<a href=\"#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>\nflag has been set to <code>true</code>, it will continue to fully execute all\nongoing tasks as well as all remaining tasks in the queue, in parallel to\nthe rest of the container shutting down.",
+      "translation": "默认情况下，此执行器根本不会等待任务终止。它要么立即关闭，中断正在运行的任务并清空剩余的任务队列；或者，如果已设置<a href=\"#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>标志为<code>true</code>，则将继续完全执行所有正在运行的任务以及队列中的所有剩余任务，同时容器其余部分也在关闭。",
+      "count": 2
+    },
+    {
+      "source": "Defines common configuration settings and common lifecycle handling,\ninheriting thread customization options (name, priority, etc) from\n<a href=\"../../util/CustomizableThreadCreator.html\" title=\"class in org.springframework.util\"><code>CustomizableThreadCreator</code></a>.",
+      "translation": "定义通用配置设置和通用生命周期处理，从 <a href=\"../../util/CustomizableThreadCreator.html\" title=\"class in org.springframework.util\"><code>CustomizableThreadCreator</code></a> 继承线程自定义选项（名称、优先级等）。",
+      "count": 2
+    },
+    {
+      "source": "Specify either this or <a href=\"#setThreadFactory(java.util.concurrent.ThreadFactory)\"><code>setThreadFactory(ThreadFactory)</code></a>, not both.",
+      "translation": "指定此选项或<a href=\"#setThreadFactory(java.util.concurrent.ThreadFactory)\"><code>setThreadFactory(ThreadFactory)</code></a>，不可两者兼用。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>false</code> as of 6.1, triggering an early soft shutdown of\nthe executor and therefore rejecting any further task submissions. Switch this\nto <code>true</code> in order to let other components submit tasks even during their\nown stop and destruction callbacks, at the expense of a longer shutdown phase.\nThe executor will not go through a coordinated lifecycle stop phase then\nbut rather only stop tasks on its own shutdown.",
+      "translation": "默认值自 6.1 版本起为 `<code>false</code>`，这会触发执行器的早期软关闭，从而拒绝任何后续的任务提交。将其切换为 `<code>true</code>` 以允许其他组件在其自身的停止和销毁回调期间提交任务，但这会延长关闭阶段。此时，执行器将不会经历协调的生命周期停止阶段，而仅在其自身关闭时停止任务。",
+      "count": 2
+    },
+    {
+      "source": "Note that Spring's container shutdown continues while ongoing tasks\nare being completed. If you want this executor to block and wait for the\ntermination of tasks before the rest of the container continues to shut\ndown - for example, in order to keep up other resources that your tasks may need -,\nset the <a href=\"#setAwaitTerminationSeconds(int)\"><code>\"awaitTerminationSeconds\"</code></a>\nproperty instead of or in addition to this property.",
+      "translation": "请注意，Spring 容器的关闭过程会在持续的任务完成时继续进行。如果您希望该执行器阻塞并等待任务终止后再继续关闭容器中的其余部分——例如，为了保留您的任务可能需要使用的其他资源——请设置 <a href=\"#setAwaitTerminationSeconds(int)\"><code>\"awaitTerminationSeconds\"</code></a> 属性，而不是或除了此属性之外。",
+      "count": 2
+    },
+    {
+      "source": "The executor will not accept further tasks and will prevent further\nscheduling of periodic tasks, letting existing tasks complete still.\nThis step is non-blocking and can be applied as an early shutdown signal\nbefore following up with a full <a href=\"#shutdown()\"><code>shutdown()</code></a> call later on.",
+      "translation": "执行器将不再接受新任务，并阻止进一步调度周期性任务，但允许现有任务继续完成。此步骤是非阻塞的，可作为早期关闭信号应用，随后再调用完整的 <a href=\"#shutdown()\"><code>shutdown()</code></a> 方法。",
+      "count": 2
+    },
+    {
+      "source": "Automatically called for early shutdown signals on\n<a href=\"#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>context close</code></a>.\nCan be manually called as well, in particular outside a container.",
+      "translation": "在接收到早期关闭信号时自动调用，例如在<code>context close</code><a href=\"#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\">(org.springframework.context.event.ContextClosedEvent)</a>上。也可以手动调用，特别是在容器外部。",
+      "count": 2
+    },
+    {
+      "source": "This step potentially blocks for the configured termination period,\nwaiting for remaining tasks to complete. For an early shutdown signal\nto not accept further tasks, call <a href=\"#initiateShutdown()\"><code>initiateShutdown()</code></a> first.",
+      "translation": "此步骤可能会在配置的终止期内阻塞，等待剩余任务完成。若要使提前关闭信号不再接受新任务，请首先调用<a href=\"#initiateShutdown()\"><code>initiateShutdown()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation calls <a href=\"#initiateShutdown()\"><code>initiateShutdown()</code></a>.",
+      "translation": "默认实现调用<a href=\"#initiateShutdown()\"><code>initiateShutdown()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "In either case, if you specify an await-termination period using this property,\nthis executor will wait for the given time (max) for the termination of tasks.\nAs a rule of thumb, specify a significantly higher timeout here if you set\n\"waitForTasksToCompleteOnShutdown\" to <code>true</code> at the same time,\nsince all remaining tasks in the queue will still get executed - in contrast\nto the default shutdown behavior where it's just about waiting for currently\nexecuting tasks that aren't reacting to thread interruption.",
+      "translation": "在任何一种情况下，如果通过此属性指定了等待终止时间，该执行器将等待给定的时间（最大）以完成任务的终止。一般来说，如果您同时将 `waitForTasksToCompleteOnShutdown` 设置为 `<code>true</code>`，请在此处指定一个显著更高的超时时间，因为队列中的所有剩余任务仍将继续执行——这与默认的关闭行为不同，后者仅涉及等待那些未对线程中断做出反应的当前正在执行的任务。",
+      "count": 2
+    },
+    {
+      "source": "The default phase for an executor <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>: <code>Integer.MAX_VALUE / 2</code>.",
+      "translation": "执行器 `<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>` 的默认阶段：<code>Integer.MAX_VALUE / 2</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../util/CustomizableThreadCreator.html#setThreadNamePrefix(java.lang.String)\">CustomizableThreadCreator</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../util/CustomizableThreadCreator.html#setThreadNamePrefix(java.lang.String)\">CustomizableThreadCreator</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Create the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> instance.\nCalled by <code>afterPropertiesSet</code>.",
+      "translation": "创建 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>` 实例。\n由 `<code>afterPropertiesSet</code>` 调用。",
+      "count": 2
+    },
+    {
+      "source": "Cancel the given remaining task which never commenced execution,\nas returned from <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#shutdownNow()\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService.shutdownNow()</code></a>.",
+      "translation": "取消由 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#shutdownNow()\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService.shutdownNow()</code></a> 返回且从未开始执行的给定剩余任务。",
+      "count": 2
+    },
+    {
+      "source": "Early shutdown signal: do not trigger further tasks, let existing tasks complete\nbefore hitting the actual destruction step in the <a href=\"#shutdown()\"><code>shutdown()</code></a> method.",
+      "translation": "早期关闭信号：不要触发更多任务，让现有任务在到达<a href=\"#shutdown()\"><code>shutdown()</code></a>方法中的实际销毁步骤之前完成。",
+      "count": 2
+    },
+    {
+      "source": "Calls <code>initialize()</code> after the container applied all property values.",
+      "translation": "在容器应用所有属性值后调用<code>initialize()</code>。",
+      "count": 2
+    },
+    {
+      "source": "Calls <code>shutdown</code> when the BeanFactory destroys the executor instance.",
+      "translation": "销毁执行器实例时，BeanFactory 会调用<code>shutdown</code>。",
+      "count": 2
+    },
+    {
+      "source": "An after-execute callback for framework subclasses to delegate to\n(for start/stop handling), and possibly also for custom subclasses\nto extend (making sure to call this implementation as well).",
+      "translation": "框架子类的执行后回调，用于委托处理（针对启动/停止操作），自定义子类也可扩展此功能（确保同时调用此实现）。",
+      "count": 2
+    },
+    {
+      "source": "A before-execute callback for framework subclasses to delegate to\n(for start/stop handling), and possibly also for custom subclasses\nto extend (making sure to call this implementation as well).",
+      "translation": "用于框架子类委托（以处理启动/停止）的 before-execute 回调，自定义子类也可扩展此回调（确保同时调用此实现）。",
+      "count": 2
+    },
+    {
+      "source": "Return the lifecycle phase for pausing and resuming this executor.",
+      "translation": "返回用于暂停和恢复此执行器的生命周期阶段。",
+      "count": 2
+    },
+    {
+      "source": "Set up the ExecutorService.",
+      "translation": "配置 ExecutorService。",
+      "count": 2
+    },
+    {
+      "source": "Check whether this executor is not paused and has not been shut down either.",
+      "translation": "检查该执行器是否未处于暂停状态且未被关闭。",
+      "count": 2
+    },
+    {
+      "source": "Resume this executor if paused before (otherwise a no-op).",
+      "translation": "如果之前已暂停，则恢复此执行器（否则为无操作）。",
+      "count": 2
+    },
+    {
+      "source": "Pause this executor, not waiting for tasks to complete.",
+      "translation": "暂停此执行器，无需等待任务完成。",
+      "count": 2
+    },
+    {
+      "source": "Pause this executor, triggering the given callback\nonce all currently executing tasks have completed.",
+      "translation": "暂停此执行器，在所有当前正在执行的任务完成后触发给定的回调。",
+      "count": 2
+    },
+    {
+      "source": "Specify the prefix to use for the names of newly created threads.\nDefault is \"SimpleAsyncTaskExecutor-\".",
+      "translation": "指定用于新创建线程名称的前缀。默认值为\"SimpleAsyncTaskExecutor-\"。",
+      "count": 2
+    },
+    {
+      "source": "Set the RejectedExecutionHandler to use for the ExecutorService.\nThe default is the ExecutorService's default abort policy.",
+      "translation": "设置用于 ExecutorService 的 RejectedExecutionHandler。默认值为 ExecutorService 的默认中止策略。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#getPhase()\"><code>getPhase()</code></a></li>\n<li><a href=\"../../context/SmartLifecycle.html#DEFAULT_PHASE\"><code>SmartLifecycle.DEFAULT_PHASE</code></a></li>\n<li><a href=\"../../context/support/DefaultLifecycleProcessor.html#setTimeoutPerShutdownPhase(long)\"><code>DefaultLifecycleProcessor.setTimeoutPerShutdownPhase(long)</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.DEFAULT_PHASE\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#getPhase()\"><code>getPhase()</code></a></li>\n<li><a href=\"../../context/SmartLifecycle.html#DEFAULT_PHASE\"><code>SmartLifecycle.DEFAULT_PHASE</code></a></li>\n<li><a href=\"../../context/support/DefaultLifecycleProcessor.html#setTimeoutPerShutdownPhase(long)\"><code>DefaultLifecycleProcessor.setTimeoutPerShutdownPhase(long)</code></a></li>\n<li><a href=\"../../../../constant-values.html#org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.DEFAULT_PHASE\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\">onApplicationEvent</a></code> in interface <code><a href=\"../../context/ApplicationListener.html\" title=\"interface in org.springframework.context\">ApplicationListener</a>&lt;<a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\">ContextClosedEvent</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\">onApplicationEvent</a></code>` 在接口 `<code><a href=\"../../context/ApplicationListener.html\" title=\"interface in org.springframework.context\">ApplicationListener</a>&lt;<a href=\"../../context/event/ContextClosedEvent.html\" title=\"class in org.springframework.context.event\">ContextClosedEvent</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../util/CustomizableThreadCreator.html#setThreadNamePrefix(java.lang.String)\">setThreadNamePrefix</a></code> in class <code><a href=\"../../util/CustomizableThreadCreator.html\" title=\"class in org.springframework.util\">CustomizableThreadCreator</a></code>",
+      "translation": "`<code><a href=\"../../util/CustomizableThreadCreator.html#setThreadNamePrefix(java.lang.String)\">setThreadNamePrefix</a></code>` 类中的 `<code><a href=\"../../util/CustomizableThreadCreator.html\" title=\"class in org.springframework.util\">CustomizableThreadCreator</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the task to cancel (typically a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/RunnableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>RunnableFuture</code></a>)",
+      "translation": "<code>task</code> - 要取消的任务（通常是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/RunnableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>RunnableFuture</code></a>）",
+      "count": 2
+    },
+    {
+      "source": "<code>thread</code> - the thread to run the task",
+      "translation": "<code>thread</code> - 用于运行任务的线程",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the task to be executed",
+      "translation": "<code>task</code> - 要执行的任务",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the task that has been executed",
+      "translation": "<code>task</code> - 已执行的任务",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - the exception thrown during execution, if any",
+      "translation": "<code>ex</code> - 执行期间抛出的异常（如有）",
+      "count": 2
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback such\nas <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method. Invoked after <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>,\n<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> and\n<a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>, if applicable.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。在 <a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>、<a href=\"../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> 和 <a href=\"../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>（如果适用）之后调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an\ninit callback such as <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（如<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">BeanNameAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">BeanNameAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> instance.",
+      "translation": "创建目标 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Initiate a shutdown on the underlying ExecutorService,\nrejecting further task submissions.",
+      "translation": "在底层 ExecutorService 上启动关闭，拒绝进一步的任务提交。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to accept further tasks after the application context close phase\nhas begun.",
+      "translation": "设置是否在应用上下文关闭阶段开始后接受更多任务。",
+      "count": 1
+    },
+    {
+      "source": "Set the ApplicationContext that this object runs in.",
+      "translation": "设置此对象运行的 ApplicationContext。",
+      "count": 1
+    },
+    {
+      "source": "Set the maximum number of seconds that this executor is supposed to block\non shutdown in order to wait for remaining tasks to complete their execution\nbefore the rest of the container continues to shut down.",
+      "translation": "设置此执行器在关闭时阻塞的最大秒数，以便在容器其余部分继续关闭之前等待剩余任务完成执行。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the bean in the bean factory that created this bean.",
+      "translation": "在创建此 Bean 的 Bean Factory 中设置该 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Specify the lifecycle phase for pausing and resuming this executor.",
+      "translation": "指定暂停和恢复此执行器的生命周期阶段。",
+      "count": 1
+    },
+    {
+      "source": "Set the RejectedExecutionHandler to use for the ExecutorService.",
+      "translation": "设置用于 ExecutorService 的 RejectedExecutionHandler。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadFactory to use for the ExecutorService's thread pool.",
+      "translation": "设置用于 ExecutorService 线程池的 ThreadFactory。",
+      "count": 1
+    },
+    {
+      "source": "Specify the prefix to use for the names of newly created threads.",
+      "translation": "指定用于新创建线程名称的前缀。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to use virtual threads instead of platform threads.",
+      "translation": "指定是使用虚拟线程还是平台线程。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to wait for scheduled tasks to complete on shutdown,\nnot interrupting running tasks and executing all tasks in the queue.",
+      "translation": "设置是否在关闭时等待计划任务完成，不中断正在运行的任务并执行队列中的所有任务。",
+      "count": 1
+    },
+    {
+      "source": "Perform a full shutdown on the underlying ExecutorService,\naccording to the corresponding configuration settings.",
+      "translation": "根据相应的配置设置，对底层 ExecutorService 执行完全关闭。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">setBeanName</a></code> in interface <code><a href=\"../../beans/factory/BeanNameAware.html\" title=\"interface in org.springframework.beans.factory\">BeanNameAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\">setBeanName</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanNameAware.html\" title=\"interface in org.springframework.beans.factory\">BeanNameAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code> in interface <code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code>` 接口 `<code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the bean in the factory.\nNote that this name is the actual bean name used in the factory, which may\ndiffer from the originally specified name: in particular for inner bean\nnames, the actual bean name might have been made unique through appending\n\"#...\" suffixes. Use the <a href=\"../../beans/factory/BeanFactoryUtils.html#originalBeanName(java.lang.String)\"><code>BeanFactoryUtils.originalBeanName(String)</code></a>\nmethod to extract the original bean name (without suffix), if desired.",
+      "translation": "<code>name</code> - 工厂中 Bean 的名称。\n请注意，此名称是工厂中实际使用的 Bean 名称，可能与最初指定的名称不同：特别是对于内部 Bean 名称，实际的 Bean 名称可能已通过追加\"#...\"后缀使其唯一化。如需提取原始 Bean 名称（不带后缀），请使用<a href=\"../../beans/factory/BeanFactoryUtils.html#originalBeanName(java.lang.String)\"><code>BeanFactoryUtils.originalBeanName(String)</code></a>方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>applicationContext</code> - the ApplicationContext object to be used by this object",
+      "translation": "<code>applicationContext</code> - 此对象将使用的 ApplicationContext 对象",
+      "count": 1
+    },
+    {
+      "source": "<code>threadFactory</code> - the ThreadFactory to use",
+      "translation": "<code>threadFactory</code> - 要使用的 ThreadFactory",
+      "count": 1
+    },
+    {
+      "source": "<code>rejectedExecutionHandler</code> - the RejectedExecutionHandler to use",
+      "translation": "<code>rejectedExecutionHandler</code> - 要使用的 RejectedExecutionHandler",
+      "count": 1
+    },
+    {
+      "source": "<code>event</code> - the event to respond to",
+      "translation": "<code>event</code> - 要响应的事件",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "a new ExecutorService instance",
+      "translation": "一个新的 ExecutorService 实例",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

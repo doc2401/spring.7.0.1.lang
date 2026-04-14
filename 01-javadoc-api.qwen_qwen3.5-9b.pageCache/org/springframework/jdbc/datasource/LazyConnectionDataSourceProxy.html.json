@@ -1,0 +1,181 @@
+{
+  "created_at": "2026-04-14 14:46:32",
+  "updated_at": "2026-04-14 14:46:32",
+  "stats": {
+    "total_entries": 33,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 63,
+    "entries_with_hits": 33,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9090909090909092,
+    "usage_percentage": 0.0033000000000000004
+  },
+  "items": [
+    {
+      "source": "Create a new LazyConnectionDataSourceProxy.",
+      "translation": "创建一个新的 LazyConnectionDataSourceProxy。",
+      "count": 4
+    },
+    {
+      "source": "If not specified, the default gets determined by checking lazily on first\naccess of a Connection.",
+      "translation": "如果未指定，默认值将在首次访问 Connection 时通过惰性检查确定。",
+      "count": 3
+    },
+    {
+      "source": "The returned Connection handle implements the ConnectionProxy interface,\nallowing to retrieve the underlying target Connection.",
+      "translation": "返回的 Connection 句柄实现了 ConnectionProxy 接口，允许获取底层的目标 Connection。",
+      "count": 3
+    },
+    {
+      "source": "a lazy Connection handle",
+      "translation": "一个懒加载的 Connection 句柄",
+      "count": 3
+    },
+    {
+      "source": "<b>NOTE:</b> This DataSource proxy needs to return wrapped Connections\n(which implement the <a href=\"ConnectionProxy.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ConnectionProxy</code></a> interface) in order to handle\nlazy fetching of an actual JDBC Connection. Use <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Wrapper.html#unwrap(java.lang.Class)\" title=\"class or interface in java.sql\"><code>Wrapper.unwrap(Class)</code></a>\nto retrieve the native JDBC Connection.",
+      "translation": "<b>注意：</b>此 DataSource 代理需要返回包装后的连接（实现<a href=\"ConnectionProxy.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ConnectionProxy</code></a>接口），以便处理实际 JDBC 连接的懒加载。请使用<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Wrapper.html#unwrap(java.lang.Class)\" title=\"class or interface in java.sql\"><code>Wrapper.unwrap(Class)</code></a>获取原生 JDBC 连接。",
+      "count": 2
+    },
+    {
+      "source": "<b>If you configure both a LazyConnectionDataSourceProxy and a\nTransactionAwareDataSourceProxy, make sure that the latter is the outermost\nDataSource.</b> In such a scenario, data access code will talk to the\ntransaction-aware DataSource, which will in turn work with the\nLazyConnectionDataSourceProxy. As of 6.1.2, LazyConnectionDataSourceProxy will\ninitialize its default connection characteristics on first Connection access;\nto enforce this on startup, call <a href=\"#checkDefaultConnectionProperties()\"><code>checkDefaultConnectionProperties()</code></a>.",
+      "translation": "<b>如果您同时配置了 LazyConnectionDataSourceProxy 和 TransactionAwareDataSourceProxy，请确保后者是最外层的 DataSource。</b> 在这种情况下，数据访问代码将与事务感知的 DataSource 通信，而该 DataSource 进而与 LazyConnectionDataSourceProxy 协作。自 6.1.2 版本起，LazyConnectionDataSourceProxy 会在首次访问 Connection 时初始化其默认连接特性；若要强制在启动时执行此操作，请调用 <a href=\"#checkDefaultConnectionProperties()\"><code>checkDefaultConnectionProperties()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This property accepts the int constant value (for example, 8) as defined in the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a> interface; it is mainly intended for programmatic\nuse. Consider using the \"defaultTransactionIsolationName\" property for setting\nthe value by name (for example, <code>\"TRANSACTION_SERIALIZABLE\"</code>).",
+      "translation": "此属性接受 `int` 常量值（例如，8），该值定义在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a>接口中；它主要用于编程用途。建议使用\"defaultTransactionIsolationName\"属性通过名称设置值（例如，<code>\"TRANSACTION_SERIALIZABLE\"</code>）。",
+      "count": 2
+    },
+    {
+      "source": "This DataSource proxy allows to avoid fetching JDBC Connections from\na pool unless actually necessary. JDBC transaction control can happen\nwithout fetching a Connection from the pool or communicating with the\ndatabase; this will be done lazily on first creation of a JDBC Statement.\nAs a bonus, this allows for taking the transaction-synchronized read-only\nflag and/or isolation level into account in a routing DataSource (for example,\n<a href=\"lookup/IsolationLevelDataSourceRouter.html\" title=\"class in org.springframework.jdbc.datasource.lookup\"><code>IsolationLevelDataSourceRouter</code></a>).",
+      "translation": "此 DataSource 代理允许仅在必要时才从池中获取 JDBC 连接。JDBC 事务控制可以在不获取池中的连接或不与数据库通信的情况下进行；这将在首次创建 JDBC Statement 时懒加载执行。此外，这还允许在路由 DataSource（例如，<a href=\"lookup/IsolationLevelDataSourceRouter.html\" title=\"class in org.springframework.jdbc.datasource.lookup\"><code>IsolationLevelDataSourceRouter</code></a>）中考虑事务同步的只读标志和/或隔离级别。",
+      "count": 2
+    },
+    {
+      "source": "If available, a Connection from such a read-only DataSource will be lazily\nobtained within a Spring-managed transaction that has been marked as read-only.\nThe <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#setReadOnly(boolean)\" title=\"class or interface in java.sql\"><code>Connection.setReadOnly(boolean)</code></a> flag will be left untouched, expecting it\nto be pre-configured as a default on the read-only DataSource, avoiding the\noverhead of switching it at the beginning and end of every transaction.\nAlso, the default auto-commit and isolation level settings are expected to\nmatch the default connection properties of the primary target DataSource.",
+      "translation": "如果可用，来自此类只读数据源的连接将在已标记为只读的 Spring 管理事务中懒加载获取。<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#setReadOnly(boolean)\" title=\"class or interface in java.sql\"><code>Connection.setReadOnly(boolean)</code></a> 标志将保持原样，预期它已在只读数据源上作为默认配置预先设置，从而避免在每个事务的开始和结束时切换该标志的开销。此外，默认的自动提交和隔离级别设置应与主目标数据源的默认连接属性相匹配。",
+      "count": 2
+    },
+    {
+      "source": "Lazy fetching of physical JDBC Connections is particularly beneficial\nin a generic transaction demarcation environment. It allows you to demarcate\ntransactions on all methods that could potentially perform data access,\nwithout paying a performance penalty if no actual data access happens.",
+      "translation": "物理 JDBC 连接的惰性获取在通用事务界定环境中特别有益。它允许您在所有可能执行数据访问的方法上界定事务，而无需为未实际发生的数据访问支付性能代价。",
+      "count": 2
+    },
+    {
+      "source": "This DataSource proxy gives you behavior analogous to JTA and a\ntransactional JNDI DataSource (as provided by the Jakarta EE server), even\nwith a local transaction strategy like DataSourceTransactionManager or\nHibernateTransactionManager. It does not add value with Spring's\nJtaTransactionManager as transaction strategy.",
+      "translation": "此 DataSource 代理提供了与 JTA 以及由 Jakarta EE 服务器提供的事务性 JNDI DataSource 类似的行为，即使在使用 DataSourceTransactionManager 或 HibernateTransactionManager 等本地事务策略时也是如此。如果将 Spring 的 JtaTransactionManager 用作事务策略，则它不会增加任何价值。",
+      "count": 2
+    },
+    {
+      "source": "Lazy fetching of JDBC Connections is also recommended for read-only\noperations with Hibernate, in particular if the chances of resolving the\nresult in the second-level cache are high. This avoids the need to\ncommunicate with the database at all for such read-only operations.\nYou will get the same effect with non-transactional reads, but lazy fetching\nof JDBC Connections allows you to still perform reads in transactions.",
+      "translation": "对于 Hibernate 的只读操作，也建议使用懒加载 JDBC 连接，特别是当结果在二级缓存中解析的可能性较高时。这样可以完全避免为这些只读操作与数据库通信。非事务性读取也能达到相同效果，但使用 JDBC 连接的懒加载允许您仍在事务中执行读取操作。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.2.6, this DataSource proxy also suppresses a rollback attempt\nin case of a timeout where the connection has been closed in the meantime.",
+      "translation": "自 6.2.6 版本起，此 DataSource 代理还会在连接在此期间已关闭的情况下，抑制因超时而触发的回滚尝试。",
+      "count": 2
+    },
+    {
+      "source": "Set the default transaction isolation level by the name of the corresponding\nconstant in <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a> — for example,\n<code>\"TRANSACTION_SERIALIZABLE\"</code>.",
+      "translation": "通过设置与 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a> 中相应常量的名称来指定默认事务隔离级别——例如，<code>\"TRANSACTION_SERIALIZABLE\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "Determine default auto-commit and transaction isolation\nvia a Connection from the target DataSource, if possible.",
+      "translation": "通过目标 DataSource 的 Connection 确定默认自动提交和事务隔离级别，如果可能的话。",
+      "count": 2
+    },
+    {
+      "source": "Check the default connection properties (auto-commit, transaction isolation),\nkeeping them to be able to expose them correctly without fetching an actual\nJDBC Connection from the target DataSource later on.",
+      "translation": "检查默认连接属性（自动提交、事务隔离级别），保留这些属性以便稍后在不从目标数据源获取实际 JDBC 连接的情况下正确暴露它们。",
+      "count": 2
+    },
+    {
+      "source": "Expose the default auto-commit value.",
+      "translation": "暴露默认自动提交值。",
+      "count": 2
+    },
+    {
+      "source": "Expose the default transaction isolation value.",
+      "translation": "暴露默认事务隔离级别值。",
+      "count": 2
+    },
+    {
+      "source": "Return a Connection handle that lazily fetches an actual JDBC Connection\nwhen asked for a Statement (or PreparedStatement or CallableStatement).",
+      "translation": "返回一个连接句柄，该句柄在需要获取 Statement（或 PreparedStatement 或 CallableStatement）时，才会懒式地获取实际的 JDBC 连接。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"DelegatingDataSource.html#getConnection()\">getConnection</a></code> in class <code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>",
+      "translation": "`<code><a href=\"DelegatingDataSource.html#getConnection()\">getConnection</a></code>` 在类 `<code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"DelegatingDataSource.html#getConnection(java.lang.String,java.lang.String)\">getConnection</a></code> in class <code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>",
+      "translation": "`<code><a href=\"DelegatingDataSource.html#getConnection(java.lang.String,java.lang.String)\">getConnection</a></code>` 类中的 `<code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by Connection methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果由 Connection 方法抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>con</code> - the Connection to use for checking",
+      "translation": "<code>con</code> - 用于检查的连接",
+      "count": 2
+    },
+    {
+      "source": "<code>username</code> - the per-Connection username",
+      "translation": "<code>username</code> - 每个 Connection 的用户名",
+      "count": 2
+    },
+    {
+      "source": "<code>password</code> - the per-Connection password",
+      "translation": "<code>password</code> - 每个连接的密码",
+      "count": 2
+    },
+    {
+      "source": "Set the default auto-commit mode to expose when no target Connection\nhas been fetched yet (when the actual JDBC Connection default is not known yet).",
+      "translation": "将默认自动提交模式设置为“暴露”，直到尚未获取到目标连接（当实际的 JDBC 连接默认值尚未知时）。",
+      "count": 1
+    },
+    {
+      "source": "Set the default transaction isolation level to expose when no target Connection\nhas been fetched yet (when the actual JDBC Connection default is not known yet).",
+      "translation": "在尚未获取目标 Connection 时（即实际 JDBC Connection 的默认值尚未知），将默认事务隔离级别设置为 EXPOSE。",
+      "count": 1
+    },
+    {
+      "source": "Specify a variant of the target DataSource to use for read-only transactions.",
+      "translation": "指定用于只读事务的目标 DataSource 变体。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection(java.lang.String,java.lang.String)\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection(java.lang.String,java.lang.String)\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>targetDataSource</code> - the target DataSource",
+      "translation": "<code>targetDataSource</code> - 目标 DataSource",
+      "count": 1
+    },
+    {
+      "source": "<code>constantName</code> - name of the constant",
+      "translation": "<code>constantName</code> - 常量的名称",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen",
+      "translation": "Juergen Hoeller, Sam Brannen",
+      "count": 1
+    }
+  ]
+}

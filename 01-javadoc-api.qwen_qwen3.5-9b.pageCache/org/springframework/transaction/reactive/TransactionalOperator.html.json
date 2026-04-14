@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-04-14 17:36:11",
+  "updated_at": "2026-04-14 17:36:11",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 2.238095238095238,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"TransactionalOperator.html\" title=\"interface in org.springframework.transaction.reactive\"><code>TransactionalOperator</code></a> using <a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>\nand <a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a>.",
+      "translation": "使用 `<code>ReactiveTransactionManager</code>` 和 `<code>TransactionDefinition</code>` 创建一个新的 <a href=\"TransactionalOperator.html\" title=\"interface in org.springframework.transaction.reactive\"><code>TransactionalOperator</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"TransactionalOperator.html\" title=\"interface in org.springframework.transaction.reactive\"><code>TransactionalOperator</code></a> using <a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>,\nusing a default transaction.",
+      "translation": "使用默认事务创建一个新的<a href=\"TransactionalOperator.html\" title=\"interface in org.springframework.transaction.reactive\"><code>TransactionalOperator</code></a>，该操作符基于<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of initialization, rollback, or system errors",
+      "translation": "<code><a href=\"../TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在初始化、回滚或系统错误的情况下",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\">RuntimeException</a></code> - if thrown by the TransactionCallback",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\">RuntimeException</a></code> - 如果由 TransactionCallback 抛出",
+      "count": 3
+    },
+    {
+      "source": "<code>transactionManager</code> - the transaction management strategy to be used",
+      "translation": "<code>transactionManager</code> - 要使用的事务管理策略",
+      "count": 3
+    },
+    {
+      "source": "the transactional operator",
+      "translation": "事务运算符",
+      "count": 3
+    },
+    {
+      "source": "The central method is <a href=\"#transactional(reactor.core.publisher.Flux)\"><code>transactional(Flux)</code></a>, supporting transactional wrapping\nof functional sequences code that. This operator handles the transaction lifecycle\nand possible exceptions such that neither the ReactiveTransactionCallback\nimplementation nor the calling code needs to explicitly handle transactions.",
+      "translation": "核心方法是 <a href=\"#transactional(reactor.core.publisher.Flux)\"><code>transactional(Flux)</code></a>，它支持对函数式序列代码进行事务包装。该算子处理事务生命周期及可能的异常，使得 ReactiveTransactionCallback 实现或调用代码无需显式处理事务。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> Transactional Publishers should avoid Subscription\ncancellation. See the\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#tx-prog-operator-cancel\">Cancel Signals</a>\nsection of the Spring Framework reference for more details.",
+      "translation": "<strong>注意：</strong> 事务发布者应避免取消订阅。有关更多详细信息，请参阅 Spring 框架参考中的<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#tx-prog-operator-cancel\">取消信号</a>部分。",
+      "count": 2
+    },
+    {
+      "source": "Typical usage: Allows for writing low-level data access objects that use\nresources such as database connections but are not transaction-aware themselves.\nInstead, they can implicitly participate in transactions handled by higher-level\napplication services utilizing this class, making calls to the low-level\nservices via an inner-class callback object.",
+      "translation": "典型用法：允许编写使用数据库连接等资源但自身不具备事务感知能力的低级数据访问对象。相反，它们可以通过内部类的回调对象调用低级服务，从而隐式参与由更高级的应用程序服务（利用此类）处理的事务。",
+      "count": 2
+    },
+    {
+      "source": "Allows for returning a result object created within the transaction, that is,\na domain object or a collection of domain objects. A RuntimeException thrown\nby the callback is treated as a fatal exception that enforces a rollback.\nSuch an exception gets propagated to the caller of the template.",
+      "translation": "允许返回在事务内创建的结果对象，即领域对象或领域对象的集合。由回调抛出的 `RuntimeException` 被视为致命异常，强制回滚。此类异常会传播到模板的调用者。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the functional sequence specified by the given Flux within a transaction.",
+      "translation": "在由给定 Flux 指定的功能序列中包装事务。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the functional sequence specified by the given Mono within a transaction.",
+      "translation": "在事务中包装由给定 Mono 指定的功能序列。",
+      "count": 2
+    },
+    {
+      "source": "<code>flux</code> - the Flux that should be executed within the transaction",
+      "translation": "`flux` - 应在事务内执行的 Flux",
+      "count": 2
+    },
+    {
+      "source": "a result publisher returned by the callback, or <code>null</code> if none",
+      "translation": "回调返回的结果发布器，或若无则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>mono</code> - the Mono that should be executed within the transaction",
+      "translation": "<code>mono</code> - 应在事务内执行的 Mono",
+      "count": 2
+    },
+    {
+      "source": "<code>action</code> - the callback object that specifies the transactional action",
+      "translation": "<code>action</code> - 指定事务操作的回调对象",
+      "count": 2
+    },
+    {
+      "source": "<code>transactionDefinition</code> - the transaction definition to apply",
+      "translation": "<code>transactionDefinition</code> - 要应用的事务定义",
+      "count": 2
+    },
+    {
+      "source": "Mark Paluch, Juergen Hoeller, Enric Sala",
+      "translation": "Mark Paluch，Juergen Hoeller，Enric Sala",
+      "count": 2
+    },
+    {
+      "source": "a result publisher returned by the callback",
+      "translation": "回调返回的结果发布器",
+      "count": 2
+    },
+    {
+      "source": "a result object returned by the callback",
+      "translation": "回调返回的结果对象",
+      "count": 2
+    },
+    {
+      "source": "Execute the action specified by the given callback object within a transaction.",
+      "translation": "在给定的事务中执行由给定的回调对象指定的操作。",
+      "count": 1
+    }
+  ]
+}

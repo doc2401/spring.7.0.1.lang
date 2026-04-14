@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-04-14 11:19:23",
+  "updated_at": "2026-04-14 11:19:23",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5454545454545454,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "An alternate approach to this application of an object creational pattern\n would be to use the <a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ServiceLocatorFactoryBean</code></a>\n to source (prototype) beans. The <a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ServiceLocatorFactoryBean</code></a> approach\n has the advantage of the fact that one doesn't have to depend on any\n Spring-specific interface such as <a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a>,\n but has the disadvantage of requiring runtime class generation. Please do\n consult the <a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ServiceLocatorFactoryBean JavaDoc</code></a>\n for a fuller discussion of this issue.",
+      "translation": "对象创建模式应用的另一种替代方法是使用 `<a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ServiceLocatorFactoryBean</code></a>` 来提供（原型化）bean。`<a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ServiceLocatorFactoryBean</code></a>` 方法的优势在于不需要依赖任何 Spring 特定的接口，例如 `<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a>`，但其劣势是需要运行时类生成。请查阅 `<a href=\"ServiceLocatorFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>ServiceLocatorFactoryBean JavaDoc</code></a>` 以获取对此问题的更详细讨论。",
+      "count": 2
+    },
+    {
+      "source": "As such, this may be used to avoid having a client object directly calling\n <a href=\"../BeanFactory.html#getBean(java.lang.String)\"><code>BeanFactory.getBean(String)</code></a> to get\n a (typically prototype) bean from a\n <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, which would be a\n violation of the inversion of control principle. Instead, with the use\n of this class, the client object can be fed an\n <a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a> instance as a\n property which directly returns only the one target bean (again, which is\n typically a prototype bean).",
+      "translation": "因此，这可用于避免客户端对象直接调用 <a href=\"../BeanFactory.html#getBean(java.lang.String)\"><code>BeanFactory.getBean(String)</code></a> 从 <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 获取（通常是原型）bean，这将违反控制反转原则。相反，使用此类时，客户端对象可以接收一个 <a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a> 实例作为属性，该实例直接返回唯一的目标 bean（同样，通常是原型 bean）。",
+      "count": 2
+    },
+    {
+      "source": "A sample config in an XML-based\n <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> might look as follows:",
+      "translation": "基于 XML 的 `<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>` 示例配置可能如下所示：",
+      "count": 2
+    },
+    {
+      "source": "The attendant <code>MyClientBean</code> class implementation might look\n something like this:",
+      "translation": "`MyClientBean` 助手类的实现可能如下所示：",
+      "count": 2
+    },
+    {
+      "source": "The target does not <i>have</i> to be a non-singleton bean, but realistically\nalways will be (because if the target bean were a singleton, then said singleton\nbean could simply be injected straight into the dependent object, thus obviating\nthe need for the extra level of indirection afforded by this factory approach).",
+      "translation": "目标对象<i>不必</i>是非单例 Bean，但现实中几乎总是如此（因为如果目标 Bean 是单例的，那么该单例 Bean 可以直接注入到依赖对象中，从而消除了这种工厂方法所提供的额外一层间接性的需要）。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractFactoryBean.html#afterPropertiesSet()\">AbstractFactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractFactoryBean.html#afterPropertiesSet()\">AbstractFactoryBean</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Eagerly create the singleton instance, if necessary.",
+      "translation": "如有必要，急切地创建单例实例。",
+      "count": 2
+    },
+    {
+      "source": "This abstract method declaration mirrors the method in the FactoryBean\ninterface, for a consistent offering of abstract template methods.",
+      "translation": "此抽象方法声明与 FactoryBean 接口中的方法相对应，以提供一致的抽象模板方法。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractFactoryBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in class <code><a href=\"AbstractFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractFactoryBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> 类中的 <code><a href=\"AbstractFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "translation": "`<a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractFactoryBean.html#getObjectType()\">getObjectType</a></code> in class <code><a href=\"AbstractFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractFactoryBean.html#getObjectType()\">getObjectType</a></code> 类中的 <code><a href=\"AbstractFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractFactoryBean.html#createInstance()\">createInstance</a></code> in class <code><a href=\"AbstractFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "translation": "`<code><a href=\"AbstractFactoryBean.html#createInstance()\">createInstance</a></code>` 在类 `<code><a href=\"AbstractFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\">ObjectFactory</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "Invoked on initialization of this FactoryBean in case of\na singleton; else, on each <a href=\"AbstractFactoryBean.html#getObject()\"><code>AbstractFactoryBean.getObject()</code></a> call.",
+      "translation": "在单例的情况下，在本 FactoryBean 初始化时调用；否则，在每次 `<a href=\"AbstractFactoryBean.html#getObject()\"><code>AbstractFactoryBean.getObject()</code></a>` 调用时。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractFactoryBean.html#getObjectType()\">AbstractFactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractFactoryBean.html#getObjectType()\">AbstractFactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractFactoryBean.html#createInstance()\">AbstractFactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractFactoryBean.html#createInstance()\">AbstractFactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Template method that subclasses must override to construct\nthe object returned by this factory.",
+      "translation": "子类必须重写以构建此工厂返回对象的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the target bean.",
+      "translation": "设置目标 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in the event of misconfiguration (such as failure to set an\nessential property) or if initialization fails for any other reason",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在配置错误（例如未设置必需属性）或因任何其他原因导致初始化失败的情况下",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Colin Sampaleanu, Juergen Hoeller",
+      "translation": "Colin Sampaleanu，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the object returned by this factory",
+      "translation": "该工厂返回的对象",
+      "count": 1
+    }
+  ]
+}

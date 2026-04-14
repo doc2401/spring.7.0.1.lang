@@ -1,0 +1,236 @@
+{
+  "created_at": "2026-04-14 16:44:37",
+  "updated_at": "2026-04-14 16:44:37",
+  "stats": {
+    "total_entries": 44,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 75,
+    "entries_with_hits": 44,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7045454545454546,
+    "usage_percentage": 0.0044
+  },
+  "items": [
+    {
+      "source": "Defaults to none.",
+      "translation": "默认为无。",
+      "count": 3
+    },
+    {
+      "source": "<strong>WARNING</strong>: Using <code>@MockitoBean</code> in conjunction with\n<code>@ContextHierarchy</code> can lead to undesirable results since each\n<code>@MockitoBean</code> will be applied to all context hierarchy levels by default.\nTo ensure that a particular <code>@MockitoBean</code> is applied to a single context\nhierarchy level, set the <a href=\"#contextName()\"><code>contextName</code></a> to match a\nconfigured <code>@ContextConfiguration</code>\n<a href=\"../../../ContextConfiguration.html#name()\"><code>name</code></a>.\nSee the Javadoc for <a href=\"../../../ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a>\nfor further details and examples.",
+      "translation": "<strong>警告</strong>：将 <code>@MockitoBean</code> 与 <code>@ContextHierarchy</code> 结合使用可能会导致不理想的结果，因为每个 <code>@MockitoBean</code> 默认会应用于所有上下文层次级别。要确保特定的 <code>@MockitoBean</code> 仅应用于单个上下文层次级别，请将 <a href=\"#contextName()\"><code>contextName</code></a> 设置为与配置的 <code>@ContextConfiguration</code> 的 <a href=\"../../../ContextConfiguration.html#name()\"><code>name</code></a> 匹配。有关更多详细信息和示例，请参阅 <a href=\"../../../ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@MockitoBean</code> is declared on a field, the bean to mock is inferred\nfrom the type of the annotated field. If multiple candidates exist in the\n<code>ApplicationContext</code>, a <code>@Qualifier</code> annotation can be declared\non the field to help disambiguate. In the absence of a <code>@Qualifier</code>\nannotation, the name of the annotated field will be used as a <em>fallback\nqualifier</em>. Alternatively, you can explicitly specify a bean name to mock\nby setting the <a href=\"#value()\"><code>value</code></a> or <a href=\"#name()\"><code>name</code></a> attribute.",
+      "translation": "当在字段上声明 `<code>@MockitoBean</code>` 时，要模拟的 Bean 将从该注解字段的类型中推断得出。如果 `<code>ApplicationContext</code>` 中存在多个候选项，可以在字段上声明一个 `<code>@Qualifier</code>` 注解以帮助消除歧义。如果没有 `<code>@Qualifier</code>` 注解，将使用注解字段的名称作为 <em>后备限定符</em>。或者，您可以通过设置 `<a href=\"#value()\"><code>value</code></a>` 或 `<a href=\"#name()\"><code>name</code></a>` 属性来显式指定要模拟的 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@MockitoBean</code> is declared at the type level, the type of bean\n(or beans) to mock must be supplied via the <a href=\"#types()\"><code>types</code></a> attribute.\nIf multiple candidates exist in the <code>ApplicationContext</code>, you can\nexplicitly specify a bean name to mock by setting the <a href=\"#name()\"><code>name</code></a>\nattribute. Note, however, that the <code>types</code> attribute must contain a\nsingle type if an explicit bean <code>name</code> is configured.",
+      "translation": "当在类型级别声明 `<code>@MockitoBean</code>` 时，必须通过 `<a href=\"#types()\"><code>types</code></a>` 属性提供要模拟的 Bean（或 Beans）的类型。如果在 `<code>ApplicationContext</code>` 中存在多个候选项，您可以通过设置 `<a href=\"#name()\"><code>name</code></a>` 属性显式指定要模拟的 Bean 名称。但请注意，如果配置了显式的 Bean `<code>name</code>`，则 `<code>types</code>` 属性必须包含单个类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MockitoBean</code> may be used as a <em>meta-annotation</em> to create custom\n<em>composed annotations</em> — for example, to define common mock\nconfiguration in a single annotation that can be reused across a test suite.\n<code>@MockitoBean</code> can also be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em>\nannotation at the type level — for example, to mock several beans by\n<a href=\"#name()\"><code>name</code></a>.",
+      "translation": "<code>@MockitoBean</code> 可用作 <em>元注解</em> 来创建自定义的 <em>组合注解</em>——例如，在单个注解中定义可在测试套件中重用的通用模拟配置。<code>@MockitoBean</code> 还可用作类型级别的 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em>注解——例如，通过<a href=\"#name()\"><code>name</code></a>模拟多个 Bean。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong>: When mocking a non-singleton bean, the non-singleton\nbean will be replaced with a singleton mock, and the corresponding bean definition\nwill be converted to a singleton. Consequently, if you mock a prototype or scoped\nbean, the mock will be treated as a singleton. Similarly, when mocking a bean\ncreated by a <a href=\"../../../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>,\nthe <code>FactoryBean</code> will be replaced with a singleton mock of the type of\nobject created by the <code>FactoryBean</code>.",
+      "translation": "<strong>注意</strong>：当模拟非单例 Bean 时，该非单例 Bean 将被替换为单例 Mock，相应的 Bean 定义也将转换为单例。因此，如果您模拟原型或作用域 Bean，Mock 将被视为单例。同样地，当模拟由 <a href=\"../../../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> 创建的 Bean 时，<code>FactoryBean</code> 将被替换为 <code>FactoryBean</code> 所创建对象类型的单例 Mock。",
+      "count": 2
+    },
+    {
+      "source": "A bean will be created if a corresponding bean does not exist. However, if\nyou would like for the test to fail when a corresponding bean does not exist,\nyou can set the <a href=\"#enforceOverride()\"><code>enforceOverride</code></a> attribute to <code>true</code>\n— for example,  <code>@MockitoBean(enforceOverride = true)</code>.",
+      "translation": "如果不存在对应的 bean，将创建一个 bean。但是，如果您希望在不存在对应 bean 时使测试失败，可以将 `<a href=\"#enforceOverride()\"><code>enforceOverride</code></a>` 属性设置为 `<code>true</code>`——例如，`<code>@MockitoBean(enforceOverride = true)</code>`。",
+      "count": 2
+    },
+    {
+      "source": "There are no restrictions on the visibility of a <code>@MockitoBean</code> field.\nSuch fields can therefore be <code>public</code>, <code>protected</code>, package-private\n(default visibility), or <code>private</code> depending on the needs or coding\npractices of the project.",
+      "translation": "`@MockitoBean` 字段的可见性没有限制。因此，这些字段可以是 `public`、`protected`、包私有（默认可见性）或 `private`，具体取决于项目的需求或编码实践。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MockitoBean</code> fields and type-level <code>@MockitoBean</code> declarations\nwill be inherited from an enclosing test class by default. See\n<a href=\"../../../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>\nfor details.",
+      "translation": "<code>@MockitoBean</code> 字段和类型级别的 <code>@MockitoBean</code> 声明默认将从其封闭的测试类继承。有关详细信息，请参阅<a href=\"../../../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If left unspecified, the bean to mock is selected according to the\nconfigured <a href=\"#types()\"><code>types</code></a> or the annotated field's type, taking\nqualifiers into account if necessary. See the <a href=\"MockitoBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\">class-level documentation</a> for details.",
+      "translation": "如果未指定，将根据配置的<a href=\"#types()\"><code>types</code></a>或注解字段的类型（必要时考虑限定符）来选择要模拟的 Bean。有关详细信息，请参阅<a href=\"MockitoBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\">类级别文档</a>。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@MockitoBean</code> also defines a <a href=\"#name()\"><code>name</code></a>, this attribute\ncan only contain a single value.",
+      "translation": "当 `<code>@MockitoBean</code>` 也定义了一个 `<a href=\"#name()\"><code>name</code></a>` 时，该属性只能包含单个值。",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"MockReset.html#AFTER\"><code>MockReset.AFTER</code></a> meaning that mocks are\nautomatically reset after each test method is invoked.",
+      "translation": "默认值为 `<a href=\"MockReset.html#AFTER\"><code>MockReset.AFTER</code></a>`，这意味着每次调用测试方法后会自动重置模拟对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MockitoBean</code> can be applied in the following ways.",
+      "translation": "<code>@MockitoBean</code> 可以按以下方式应用。",
+      "count": 2
+    },
+    {
+      "source": "Dependencies that are known to the application context but are not beans\n(such as those\n<a href=\"../../../../../beans/factory/config/ConfigurableListableBeanFactory.html#registerResolvableDependency(java.lang.Class,java.lang.Object)\">registered directly</a>) will not be found, and a mocked bean will be added to\nthe context alongside the existing dependency.",
+      "translation": "已知于应用程序上下文但不是 Bean 的依赖项（例如那些<a href=\"../../../../../beans/factory/config/ConfigurableListableBeanFactory.html#registerResolvableDependency(java.lang.Class,java.lang.Object)\">直接注册</a>的）将无法找到，并且将在上下文中为现有依赖项添加一个模拟 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Intended to be used when no other attributes are needed — for\nexample, <code>@MockitoBean(\"customBeanName\")</code>.",
+      "translation": "用于无需其他属性的情况——例如，<code>@MockitoBean(\"customBeanName\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "Each type specified will result in a mock being created and registered\nwith the <code>ApplicationContext</code>.",
+      "translation": "每种指定的类型都将导致创建一个 Mock 并注册到 `<code>ApplicationContext</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to an empty string which indicates that this <code>@MockitoBean</code>\nshould be applied to all application contexts.",
+      "translation": "默认为空字符串，表示此 `<code>@MockitoBean</code>` 应应用于所有应用程序上下文。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <code>Answers.RETURNS_DEFAULTS</code>.",
+      "translation": "默认为<code>Answers.RETURNS_DEFAULTS</code>。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <code>false</code> which means that a mock will be created if a\ncorresponding bean does not exist.",
+      "translation": "默认为<code>false</code>，这意味着如果不存在相应的 Bean，将创建一个模拟对象。",
+      "count": 2
+    },
+    {
+      "source": "Types must be omitted when the annotation is used on a field.",
+      "translation": "当注解用于字段时，必须省略类型。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#name()\"><code>name</code></a>.",
+      "translation": "`<a href=\"#name()\"><code>name</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "On a non-static field in an enclosing class for a <code>@Nested</code> test class\nor in any class in the type hierarchy or enclosing class hierarchy above the\n<code>@Nested</code> test class.",
+      "translation": "在 `<code>@Nested</code>` 测试类的封闭类中的非静态字段，或在 `<code>@Nested</code>` 测试类上方的类型层次结构或封闭类层次结构中的任何类中。",
+      "count": 2
+    },
+    {
+      "source": "At the type level on an enclosing class for a <code>@Nested</code> test class\nor on any class or interface in the type hierarchy or enclosing class hierarchy\nabove the <code>@Nested</code> test class.",
+      "translation": "在 `<code>@Nested</code>` 测试类的封闭类类型级别上，或在 `<code>@Nested</code>` 测试类的类型层次结构或封闭类层次结构中位于其上方的任何类或接口上。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the mock is serializable",
+      "translation": "<code>true</code> 如果该模拟对象是可序列化的。",
+      "count": 2
+    },
+    {
+      "source": "On a non-static field in a test class or any of its superclasses.",
+      "translation": "在测试类或其任何超类的非静态字段上。",
+      "count": 2
+    },
+    {
+      "source": "At the type level on a test class or any superclass or implemented interface\nin the type hierarchy above the test class.",
+      "translation": "在测试类或其类型层次结构中位于该测试类之上的任何父类或实现的接口上的类型级别。",
+      "count": 2
+    },
+    {
+      "source": "the types to mock",
+      "translation": "要模拟的类型",
+      "count": 2
+    },
+    {
+      "source": "any extra interfaces",
+      "translation": "任何额外的接口",
+      "count": 2
+    },
+    {
+      "source": "the answer type",
+      "translation": "答案类型",
+      "count": 2
+    },
+    {
+      "source": "the reset mode",
+      "translation": "重置模式",
+      "count": 2
+    },
+    {
+      "source": "If a context name is configured, it must match a name configured via\n<code>@ContextConfiguration(name=...)</code>.",
+      "translation": "如果配置了上下文名称，它必须与通过 `<code>@ContextConfiguration(name=...)</code>` 配置的名称匹配。",
+      "count": 1
+    },
+    {
+      "source": "Defaults to <code>false</code>.",
+      "translation": "默认为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set to <code>true</code> to cause an exception to be thrown if a corresponding\nbean does not exist.",
+      "translation": "设置为<code>true</code>，以便在找不到对应的 bean 时抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "The <code>Answers</code> type to use in the mock.",
+      "translation": "用于模拟的<code>Answers</code>类型。",
+      "count": 1
+    },
+    {
+      "source": "The name of the context hierarchy level in which this <code>@MockitoBean</code>\nshould be applied.",
+      "translation": "此 `<code>@MockitoBean</code>` 应应用到的上下文层次结构级别的名称。",
+      "count": 1
+    },
+    {
+      "source": "Whether to require the existence of the bean being mocked.",
+      "translation": "是否要求被模拟的 Bean 必须存在。",
+      "count": 1
+    },
+    {
+      "source": "Extra interfaces that should also be declared by the mock.",
+      "translation": "还应由模拟声明的额外接口。",
+      "count": 1
+    },
+    {
+      "source": "Name of the bean to mock.",
+      "translation": "要模拟的 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "The reset mode to apply to the mock.",
+      "translation": "要应用于模拟对象的重置模式。",
+      "count": 1
+    },
+    {
+      "source": "Whether the generated mock is serializable.",
+      "translation": "生成的模拟对象是否可序列化。",
+      "count": 1
+    },
+    {
+      "source": "One or more types to mock.",
+      "translation": "一个或多个要模拟的类型。",
+      "count": 1
+    },
+    {
+      "source": "Simon Baslé, Sam Brannen",
+      "translation": "Simon Baslé，Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

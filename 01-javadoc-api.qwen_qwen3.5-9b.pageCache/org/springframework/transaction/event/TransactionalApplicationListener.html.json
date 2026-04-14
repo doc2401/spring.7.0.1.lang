@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 17:30:33",
+  "updated_at": "2026-04-14 17:30:33",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 54,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "Create a new <code>TransactionalApplicationListener</code> for the given payload consumer,\nto be applied in the default phase <a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>TransactionPhase.AFTER_COMMIT</code></a>.",
+      "translation": "为给定的负载消费者创建一个新的 `<code>TransactionalApplicationListener</code>`，将其应用于默认阶段 <a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>TransactionPhase.AFTER_COMMIT</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Transaction-synchronized listeners do not support asynchronous execution,\nonly their target listener (<a href=\"#processEvent(E)\"><code>processEvent(E)</code></a>) potentially does.",
+      "translation": "事务同步监听器不支持异步执行，仅其目标监听器（<a href=\"#processEvent(E)\"><code>processEvent(E)</code></a>）可能支持。",
+      "count": 3
+    },
+    {
+      "source": "a corresponding <code>TransactionalApplicationListener</code> instance",
+      "translation": "一个对应的<code>TransactionalApplicationListener</code> 实例",
+      "count": 3
+    },
+    {
+      "source": "As of 6.1, transactional event listeners can work with thread-bound transactions managed\nby a <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> as well as reactive\ntransactions managed by a <a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>.\nFor the former, listeners are guaranteed to see the current thread-bound transaction.\nSince the latter uses the Reactor context instead of thread-local variables, the transaction\ncontext needs to be included in the published event instance as the event source:\nsee <a href=\"../reactive/TransactionalEventPublisher.html\" title=\"class in org.springframework.transaction.reactive\"><code>TransactionalEventPublisher</code></a>.",
+      "translation": "自 6.1 版本起，事务性事件监听器可以与由 `<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 管理的线程绑定事务以及由 `<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>` 管理的响应式事务一起工作。对于前者，监听器保证能看到当前线程绑定的事务。由于后者使用 Reactor 上下文而非线程本地变量，因此需要将事务上下文包含在发布的事件实例中作为事件源：请参阅 `<a href=\"../reactive/TransactionalEventPublisher.html\" title=\"class in org.springframework.transaction.reactive\"><code>TransactionalEventPublisher</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Adding <a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> to your listener implementation\nallows you to prioritize that listener amongst other listeners running before or after\ntransaction completion.",
+      "translation": "将 `<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>` 添加到您的监听器实现中，允许您在该监听器与其他在事务完成之前或之后运行的监听器之间进行优先级排序。",
+      "count": 2
+    },
+    {
+      "source": "Default is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>.",
+      "translation": "默认值为 `<a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "The default phase is <a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>TransactionPhase.AFTER_COMMIT</code></a>.",
+      "translation": "默认阶段是<a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>TransactionPhase.AFTER_COMMIT</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "It might be necessary for specific completion callback implementations\nto provide a specific id, whereas for other scenarios an empty String\n(as the common default value) is acceptable as well.",
+      "translation": "特定完成回调实现可能需要提供特定的 id，而在其他场景中，空字符串（作为通用默认值）也是可以接受的。",
+      "count": 2
+    },
+    {
+      "source": "Immediately process the given <a href=\"../../context/ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>. In contrast to\n<a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\"><code>ApplicationListener.onApplicationEvent(ApplicationEvent)</code></a>, a call to this method will\ndirectly process the given event without deferring it to the associated\n<a href=\"#getTransactionPhase()\"><code>transaction phase</code></a>.",
+      "translation": "立即处理给定的 <a href=\"../../context/ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>。与 <a href=\"../../context/ApplicationListener.html#onApplicationEvent(E)\"><code>ApplicationListener.onApplicationEvent(ApplicationEvent)</code></a> 不同，调用此方法将直接处理给定事件，而不会将其推迟到相关的 <a href=\"#getTransactionPhase()\"><code>事务阶段</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Callback to be invoked on synchronization-driven event processing,\nwrapping the target listener invocation (<a href=\"#processEvent(E)\"><code>processEvent(E)</code></a>).",
+      "translation": "在由同步驱动的事件处理中调用的回调，它封装了对目标监听器的调用（<a href=\"#processEvent(E)\"><code>processEvent(E)</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a href=\"TransactionPhase.html\" title=\"enum class in org.springframework.transaction.event\"><code>TransactionPhase</code></a> in which the listener will be invoked.",
+      "translation": "返回将调用该监听器的<a href=\"TransactionPhase.html\" title=\"enum class in org.springframework.transaction.event\"><code>TransactionPhase</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Immediately process the given <a href=\"../../context/ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>.",
+      "translation": "立即处理给定的<a href=\"../../context/ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Add a callback to be invoked on processing within transaction synchronization,\ni.e. when <a href=\"#processEvent(E)\"><code>processEvent(E)</code></a> is being triggered during actual transactions.",
+      "translation": "添加一个回调，以便在事务同步期间进行处理时调用，即在触发实际事务中的<a href=\"#processEvent(E)\"><code>processEvent(E)</code></a>时。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>TransactionalApplicationListener</code> for the given payload consumer.",
+      "translation": "为给定的负载创建器创建一个新<code>TransactionalApplicationListener</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationListener.html#supportsAsyncExecution()\">supportsAsyncExecution</a></code> in interface <code><a href=\"../../context/ApplicationListener.html\" title=\"interface in org.springframework.context\">ApplicationListener</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in TransactionalApplicationListener\">E</a> extends <a href=\"../../context/ApplicationEvent.html\" title=\"class in org.springframework.context\">ApplicationEvent</a>&gt;</code>",
+      "translation": "<code><a href=\"../../context/ApplicationListener.html#supportsAsyncExecution()\">supportsAsyncExecution</a></code> 在接口 <code><a href=\"../../context/ApplicationListener.html\" title=\"interface in org.springframework.context\">ApplicationListener</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in TransactionalApplicationListener\">E</a> extends <a href=\"../../context/ApplicationEvent.html\" title=\"class in org.springframework.context\">ApplicationEvent</a>&gt;</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"forPayload(org.springframework.transaction.event.TransactionPhase,java.util.function.Consumer)-type-param-T\"><code>T</code> - the type of the event payload</span>",
+      "translation": "<span id=\"forPayload(org.springframework.transaction.event.TransactionPhase,java.util.function.Consumer)-type-param-T\"><code>T</code> - 事件负载的类型</span>",
+      "count": 2
+    },
+    {
+      "source": "<code>callback</code> - the synchronization callback to apply",
+      "translation": "<code>callback</code> - 要应用的同步回调",
+      "count": 2
+    },
+    {
+      "source": "<code>event</code> - the event to process through the target listener implementation",
+      "translation": "<code>event</code> - 要通过目标监听器实现处理的事件",
+      "count": 2
+    },
+    {
+      "source": "<code>consumer</code> - the event payload consumer",
+      "translation": "<code>consumer</code> - 事件负载消费者",
+      "count": 2
+    },
+    {
+      "source": "<code>phase</code> - the transaction phase in which to invoke the listener",
+      "translation": "<code>phase</code> - 调用监听器的事务阶段",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Oliver Drotbohm",
+      "translation": "Juergen Hoeller, Oliver Drotbohm",
+      "count": 2
+    },
+    {
+      "source": "Add a callback to be invoked on processing within transaction synchronization,\ni.e.",
+      "translation": "在事务同步期间处理时添加回调，即",
+      "count": 1
+    },
+    {
+      "source": "Return an identifier for the listener to be able to refer to it individually.",
+      "translation": "返回一个标识符，以便能够单独引用该监听器。",
+      "count": 1
+    },
+    {
+      "source": "Return the execution order within transaction synchronizations.",
+      "translation": "返回事务同步中的执行顺序。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-E\"><code>E</code> - the specific <code>ApplicationEvent</code> subclass to listen to</span>",
+      "translation": "<span id=\"type-param-E\"><code>E</code> - 要监听的具体 <code>ApplicationEvent</code> 子类</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if this listener instance can be executed asynchronously\ndepending on the multicaster configuration (the default), or <code>false</code> if it\nneeds to immediately run within the original thread which published the event",
+      "translation": "如果此监听器实例可以根据多播器配置异步执行（默认情况），则为<code>true</code>；否则，如果它需要在发布事件的原始线程中立即运行，则为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"forPayload(java.util.function.Consumer)-type-param-T\"><code>T</code> - the type of the event payload</span>",
+      "translation": "<span id=\"forPayload(java.util.function.Consumer)-type-param-T\"><code>T</code> - 事件负载的类型</span>",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

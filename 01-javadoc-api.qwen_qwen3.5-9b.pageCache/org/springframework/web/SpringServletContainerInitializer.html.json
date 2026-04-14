@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 18:12:35",
+  "updated_at": "2026-04-14 18:12:35",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 30,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "Assuming that one or more <code>WebApplicationInitializer</code> types are detected,\nthey will be instantiated (and <em>sorted</em> if the @<a href=\"../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> annotation is present or\nthe <a href=\"../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> interface has been\nimplemented). Then the <a href=\"WebApplicationInitializer.html#onStartup(jakarta.servlet.ServletContext)\"><code>WebApplicationInitializer.onStartup(ServletContext)</code></a>\nmethod will be invoked on each instance, delegating the <code>ServletContext</code> such\nthat each instance may register and configure servlets such as Spring's\n<code>DispatcherServlet</code>, listeners such as Spring's <code>ContextLoaderListener</code>,\nor any other Servlet API features such as filters.",
+      "translation": "假设有检测到一种或多种 `<code>WebApplicationInitializer` 类型，它们将被实例化（如果存在 `@<a href=\"../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a>` 注解或已实现 <a href=\"../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> 接口，则会对它们进行<em>排序</em>）。然后，将调用每个实例上的 <a href=\"WebApplicationInitializer.html#onStartup(jakarta.servlet.ServletContext)\"><code>WebApplicationInitializer.onStartup(ServletContext)</code></a> 方法，传递 `ServletContext`，以便每个实例可以注册和配置 Servlet，例如 Spring 的 `<code>DispatcherServlet</code>`、监听器（如 Spring 的 `<code>ContextLoaderListener</code>`），或任何其他 Servlet API 功能，例如过滤器。",
+      "count": 2
+    },
+    {
+      "source": "Note that use of this container initializer and of <code>WebApplicationInitializer</code>\nis not in any way \"tied\" to Spring MVC other than the fact that the types are shipped\nin the <code>spring-web</code> module JAR. Rather, they can be considered general-purpose\nin their ability to facilitate convenient code-based configuration of the\n<code>ServletContext</code>. In other words, any servlet, listener, or filter may be\nregistered within a <code>WebApplicationInitializer</code>, not just Spring MVC-specific\ncomponents.",
+      "translation": "请注意，使用此容器初始化器和 `<code>WebApplicationInitializer</code>` 与 Spring MVC 没有任何绑定关系，唯一的联系是这些类型包含在 `<code>spring-web</code>` 模块的 JAR 中。相反，它们应被视为通用工具，能够方便地基于代码配置 `<code>ServletContext</code>`。换句话说，任何 servlet、监听器或过滤器都可以在 `<code>WebApplicationInitializer</code>` 中进行注册，而不仅仅是 Spring MVC 特定的组件。",
+      "count": 2
+    },
+    {
+      "source": "Because this class declares @<code>HandlesTypes(WebApplicationInitializer.class)</code>,\nServlet containers will automatically scan the classpath for implementations of\nSpring's <code>WebApplicationInitializer</code> interface and provide the set of all\nsuch types to the <code>webAppInitializerClasses</code> parameter of this method.",
+      "translation": "由于该类声明了 `@HandlesTypes(WebApplicationInitializer.class)`，Servlet 容器会自动扫描类路径中 Spring 的 `WebApplicationInitializer` 接口的所有实现，并将这些类型的集合提供给此方法的 `webAppInitializerClasses` 参数。",
+      "count": 2
+    },
+    {
+      "source": "If no <code>WebApplicationInitializer</code> implementations are found on the classpath,\nthis method is effectively a no-op. An INFO-level log message will be issued notifying\nthe user that the <code>ServletContainerInitializer</code> has indeed been invoked but that\nno <code>WebApplicationInitializer</code> implementations were found.",
+      "translation": "如果在类路径上未找到任何 `<code>WebApplicationInitializer</code>` 实现，此方法实际上是一个空操作。将发出 INFO 级别的日志消息通知用户，`<code>ServletContainerInitializer</code>` 确实已被调用，但未找到任何 `<code>WebApplicationInitializer</code>` 实现。",
+      "count": 2
+    },
+    {
+      "source": "This class is neither designed for extension nor intended to be extended.\nIt should be considered an internal type, with <code>WebApplicationInitializer</code>\nbeing the public-facing SPI.",
+      "translation": "该类既未设计用于扩展，也不打算被扩展。应将其视为内部类型，其中 `<code>WebApplicationInitializer</code>` 是面向公共的 SPI。",
+      "count": 2
+    },
+    {
+      "source": "Delegate the <code>ServletContext</code> to any <a href=\"WebApplicationInitializer.html\" title=\"interface in org.springframework.web\"><code>WebApplicationInitializer</code></a>\nimplementations present on the application classpath.",
+      "translation": "将 `<code>ServletContext</code>` 委托给应用程序类路径上存在的任何 `<a href=\"WebApplicationInitializer.html\" title=\"interface in org.springframework.web\"><code>WebApplicationInitializer</code></a>` 实现。",
+      "count": 2
+    },
+    {
+      "source": "<code>webAppInitializerClasses</code> - all implementations of\n<a href=\"WebApplicationInitializer.html\" title=\"interface in org.springframework.web\"><code>WebApplicationInitializer</code></a> found on the application classpath",
+      "translation": "`webAppInitializerClasses` - 在应用程序类路径中发现的所有 `WebApplicationInitializer` 接口实现，<a href=\"WebApplicationInitializer.html\" title=\"interface in org.springframework.web\"><code>WebApplicationInitializer</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>onStartup</code> in interface <code>jakarta.servlet.ServletContainerInitializer</code>",
+      "translation": "<code>onStartup</code> 在接口 <code>jakarta.servlet.ServletContainerInitializer</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>servletContext</code> - the servlet context to be initialized",
+      "translation": "<code>servletContext</code> - 待初始化的 Servlet 上下文",
+      "count": 2
+    },
+    {
+      "source": "Relationship to Spring's <code>WebApplicationInitializer</code>",
+      "translation": "与 Spring 的<code>WebApplicationInitializer</code>的关系",
+      "count": 2
+    },
+    {
+      "source": "In combination with <code>web.xml</code>",
+      "translation": "与<code>web.xml</code>结合使用",
+      "count": 2
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller, Rossen Stoyanchev",
+      "translation": "Chris Beams, Juergen Hoeller, Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "Mechanism of Operation",
+      "translation": "工作机制",
+      "count": 2
+    },
+    {
+      "source": "General Notes",
+      "translation": "通用说明",
+      "count": 2
+    },
+    {
+      "source": "See Also",
+      "translation": "参见",
+      "count": 2
+    }
+  ]
+}

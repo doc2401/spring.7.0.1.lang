@@ -1,0 +1,216 @@
+{
+  "created_at": "2026-04-14 20:12:43",
+  "updated_at": "2026-04-14 20:12:43",
+  "stats": {
+    "total_entries": 40,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 58,
+    "entries_with_hits": 40,
+    "entries_without_hits": 0,
+    "hit_rate": 1.45,
+    "usage_percentage": 0.004
+  },
+  "items": [
+    {
+      "source": "Determines the list of <a href=\"../../../http/MediaType.html\" title=\"class in org.springframework.http\"><code>MediaType</code></a> for the given <code>HttpServletRequest</code>.",
+      "translation": "确定给定 `<code>HttpServletRequest</code>` 的<code>MediaType</code>列表。<a href=\"../../../http/MediaType.html\" title=\"class in org.springframework.http\">`MediaType`</a>",
+      "count": 3
+    },
+    {
+      "source": "Return the <a href=\"../../accept/ContentNegotiationManager.html\" title=\"class in org.springframework.web.accept\"><code>ContentNegotiationManager</code></a> to use to determine requested media types.",
+      "translation": "返回<a href=\"../../accept/ContentNegotiationManager.html\" title=\"class in org.springframework.web.accept\"><code>ContentNegotiationManager</code></a>用于确定请求的媒体类型。",
+      "count": 3
+    },
+    {
+      "source": "The <code>ContentNegotiatingViewResolver</code> does not resolve views itself, but delegates to\nother <a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\"><code>ViewResolvers</code></a>. By default, these other view resolvers are picked up automatically\nfrom the application context, though they can also be set explicitly by using the\n<a href=\"#setViewResolvers(java.util.List)\"><code>viewResolvers</code></a> property. <strong>Note</strong> that in order for this\nview resolver to work properly, the <a href=\"#setOrder(int)\"><code>order</code></a> property needs to be set to a higher\nprecedence than the others (the default is <a href=\"../../../core/Ordered.html#HIGHEST_PRECEDENCE\"><code>Ordered.HIGHEST_PRECEDENCE</code></a>).",
+      "translation": "<code>ContentNegotiatingViewResolver</code> 本身不解析视图，而是委托给其他 <a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\"><code>ViewResolvers</code></a>。默认情况下，这些其他视图解析器会自动从应用程序上下文中获取，但也可以通过使用 <a href=\"#setViewResolvers(java.util.List)\"><code>viewResolvers</code></a> 属性显式设置。<strong>注意</strong>，为了使该视图解析器正常工作，<a href=\"#setOrder(int)\"><code>order</code></a> 属性需要设置为比其他解析器更高的优先级（默认为 <a href=\"../../../core/Ordered.html#HIGHEST_PRECEDENCE\"><code>Ordered.HIGHEST_PRECEDENCE</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "This view resolver uses the requested <a href=\"../../../http/MediaType.html\" title=\"class in org.springframework.http\">media type</a> to select a suitable\n<a href=\"../View.html\" title=\"interface in org.springframework.web.servlet\"><code>View</code></a> for a request. The requested media type is determined through the configured\n<a href=\"../../accept/ContentNegotiationManager.html\" title=\"class in org.springframework.web.accept\"><code>ContentNegotiationManager</code></a>. Once the requested media type has been determined, this resolver\nqueries each delegate view resolver for a <a href=\"../View.html\" title=\"interface in org.springframework.web.servlet\"><code>View</code></a> and determines if the requested media type\nis <a href=\"../../../http/MediaType.html#includes(org.springframework.http.MediaType)\">compatible</a> with the view's\n<a href=\"../View.html#getContentType()\">content type</a>). The most compatible view is returned.",
+      "translation": "此视图解析器使用请求的<a href=\"../../../http/MediaType.html\" title=\"class in org.springframework.http\">媒体类型</a>来选择一个合适的<a href=\"../View.html\" title=\"interface in org.springframework.web.servlet\"><code>View</code></a>以响应请求。请求的媒体类型是通过配置的<a href=\"../../accept/ContentNegotiationManager.html\" title=\"class in org.springframework.web.accept\"><code>ContentNegotiationManager</code></a>确定的。一旦确定了请求的媒体类型，此解析器就会查询每个委托视图解析器以获取一个<a href=\"../View.html\" title=\"interface in org.springframework.web.servlet\"><code>View</code></a>，并确定请求的媒体类型是否与视图的<a href=\"../View.html#getContentType()\">内容类型</a><a href=\"../../../http/MediaType.html#includes(org.springframework.http.MediaType)\">兼容</a>）。返回最兼容的视图。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>false</code>, meaning that this view resolver returns <code>null</code> for\n<a href=\"#resolveViewName(java.lang.String,java.util.Locale)\"><code>resolveViewName(String, Locale)</code></a> when an acceptable view cannot be found.\nThis will allow for view resolvers chaining. When this property is set to <code>true</code>,\n<a href=\"#resolveViewName(java.lang.String,java.util.Locale)\"><code>resolveViewName(String, Locale)</code></a> will respond with a view that sets the\nresponse status to <code>406 Not Acceptable</code> instead.",
+      "translation": "默认值为 `<code>false</code>`，这意味着当找不到可接受的视图时，该视图解析器会对<a href=\"#resolveViewName(java.lang.String,java.util.Locale)\"><code>resolveViewName(String, Locale)</code></a>返回 `<code>null</code>`。这将允许视图解析器进行链式调用。当将此属性设置为 `<code>true</code>` 时，<a href=\"#resolveViewName(java.lang.String,java.util.Locale)\"><code>resolveViewName(String, Locale)</code></a>将响应一个将响应状态设置为 `<code>406 Not Acceptable</code>` 的视图。",
+      "count": 2
+    },
+    {
+      "source": "For example, if the request path is <code>/view.html</code>, this view resolver will look for a view\nthat has the <code>text/html</code> content type (based on the <code>html</code> file extension). A request\nfor <code>/view</code> with a <code>text/html</code> request <code>Accept</code> header has the same result.",
+      "translation": "例如，如果请求路径是 `<code>/view.html</code>`，此视图解析器将查找具有 `<code>text/html</code>` 内容类型的视图（基于 `<code>html</code>` 文件扩展名）。对于带有 `<code>text/html</code>` 请求 `<code>Accept</code>` 头的 `<code>/view</code>` 请求，结果相同。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation is empty. Called by\n<a href=\"../../context/support/WebApplicationObjectSupport.html#initApplicationContext(org.springframework.context.ApplicationContext)\"><code>WebApplicationObjectSupport.initApplicationContext(org.springframework.context.ApplicationContext)</code></a>\nas well as <a href=\"../../context/support/WebApplicationObjectSupport.html#setServletContext(jakarta.servlet.ServletContext)\"><code>WebApplicationObjectSupport.setServletContext(jakarta.servlet.ServletContext)</code></a>.",
+      "translation": "默认实现为空。由<a href=\"../../context/support/WebApplicationObjectSupport.html#initApplicationContext(org.springframework.context.ApplicationContext)\"><code>WebApplicationObjectSupport.initApplicationContext(org.springframework.context.ApplicationContext)</code></a>以及<a href=\"../../context/support/WebApplicationObjectSupport.html#setServletContext(jakarta.servlet.ServletContext)\"><code>WebApplicationObjectSupport.setServletContext(jakarta.servlet.ServletContext)</code></a>调用。",
+      "count": 2
+    },
+    {
+      "source": "Additionally, this view resolver exposes the <a href=\"#setDefaultViews(java.util.List)\"><code>defaultViews</code></a> property,\nallowing you to override the views provided by the view resolvers. Note that these default views are\noffered as candidates, and still need have the content type requested (via file extension, parameter,\nor <code>Accept</code> header, described above).",
+      "translation": "此外，此视图解析器还公开了<a href=\"#setDefaultViews(java.util.List)\"><code>defaultViews</code></a>属性，允许您覆盖视图解析器提供的视图。请注意，这些默认视图是作为候选项提供的，并且仍然需要满足请求的内容类型（通过文件扩展名、参数或上文描述的<code>Accept</code>头）。",
+      "count": 2
+    },
+    {
+      "source": "If not set, ContentNegotiationManager's default constructor will be used,\napplying a <a href=\"../../accept/HeaderContentNegotiationStrategy.html\" title=\"class in org.springframework.web.accept\"><code>HeaderContentNegotiationStrategy</code></a>.",
+      "translation": "如果未设置，将使用 ContentNegotiationManager 的默认构造函数，应用一个<a href=\"../../accept/HeaderContentNegotiationStrategy.html\" title=\"class in org.springframework.web.accept\"><code>HeaderContentNegotiationStrategy</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If this property is not set, view resolvers will be detected automatically.",
+      "translation": "如果未设置此属性，视图解析器将自动检测。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../context/support/WebApplicationObjectSupport.html#initServletContext(jakarta.servlet.ServletContext)\">WebApplicationObjectSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../context/support/WebApplicationObjectSupport.html#initServletContext(jakarta.servlet.ServletContext)\">WebApplicationObjectSupport</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../accept/ContentNegotiationManager.html\" title=\"class in org.springframework.web.accept\"><code>ContentNegotiationManager</code></a> to use to determine requested media types.",
+      "translation": "将 `<a href=\"../../accept/ContentNegotiationManager.html\" title=\"class in org.springframework.web.accept\"><code>ContentNegotiationManager</code></a>` 设置为用于确定请求的媒体类型。",
+      "count": 2
+    },
+    {
+      "source": "Set the default views to use when a more specific view can not be obtained\nfrom the <a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\"><code>ViewResolver</code></a> chain.",
+      "translation": "设置默认视图，当无法从 `<a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\"><code>ViewResolver</code></a>` 链中获取更具体的视图时使用。",
+      "count": 2
+    },
+    {
+      "source": "Whether to return HTTP Status 406 if no suitable is found.",
+      "translation": "是否在没有找到合适的资源时返回 HTTP 状态码 406。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/support/WebApplicationObjectSupport.html#initServletContext(jakarta.servlet.ServletContext)\">initServletContext</a></code> in class <code><a href=\"../../context/support/WebApplicationObjectSupport.html\" title=\"class in org.springframework.web.context.support\">WebApplicationObjectSupport</a></code>",
+      "translation": "`<a href=\"../../context/support/WebApplicationObjectSupport.html#initServletContext(jakarta.servlet.ServletContext)\">initServletContext</a>` 在类 `<a href=\"../../context/support/WebApplicationObjectSupport.html\" title=\"class in org.springframework.web.context.support\">WebApplicationObjectSupport</a>` 中",
+      "count": 2
+    },
+    {
+      "source": "the list of media types requested, if any",
+      "translation": "请求的媒体类型列表（如有）",
+      "count": 2
+    },
+    {
+      "source": "Note: To allow for ViewResolver chaining, a ViewResolver should\nreturn <code>null</code> if a view with the given name is not defined in it.\nHowever, this is not required: Some ViewResolvers will always attempt\nto build View objects with the given name, unable to return <code>null</code>\n(rather throwing an exception when View creation failed).",
+      "translation": "注意：为了支持 ViewResolver 链式调用，如果未定义具有给定名称的视图，ViewResolver 应返回 `<code>null</code>`。然而，这并非必需：某些 ViewResolver 将始终尝试使用给定名称构建 View 对象，无法返回 `<code>null</code>`（而是在视图创建失败时抛出异常）。",
+      "count": 1
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">ViewResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">ViewResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Indicate whether a <code>406 Not Acceptable</code>\nstatus code should be returned if no suitable view can be found.",
+      "translation": "指示如果找不到合适的视图，是否应返回 `<code>406 Not Acceptable</code>` 状态码。",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses may override this for custom initialization based\non the ServletContext that this application object runs in.",
+      "translation": "子类可以重写此方法，以便根据该应用程序对象运行的 ServletContext 进行自定义初始化。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the given view by name.",
+      "translation": "按名称解析给定的视图。",
+      "count": 1
+    },
+    {
+      "source": "Sets the view resolvers to be wrapped by this view resolver.",
+      "translation": "设置将被此视图解析器包装的视图解析器。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">resolveViewName</a></code> in interface <code><a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\">ViewResolver</a></code>",
+      "translation": "`<code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">resolveViewName</a></code>` 接口 `<code><a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\">ViewResolver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>servletContext</code> - the ServletContext that this application object runs in\n(never <code>null</code>)",
+      "translation": "<code>servletContext</code> - 此应用程序对象运行的 ServletContext（永远不会为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if the view cannot be resolved\n(typically in case of problems creating an actual View object)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 如果视图无法解析（通常在创建实际的 View 对象时出现问题）",
+      "count": 1
+    },
+    {
+      "source": "<code>viewName</code> - name of the view to resolve",
+      "translation": "<code>viewName</code> - 要解析的视图名称",
+      "count": 1
+    },
+    {
+      "source": "<code>locale</code> - the Locale in which to resolve the view.\nViewResolvers that support internationalization should respect this.",
+      "translation": "<code>locale</code> - 解析视图的 Locale。支持国际化的 ViewResolvers 应尊重此设置。",
+      "count": 1
+    },
+    {
+      "source": "the View object, or <code>null</code> if not found\n(optional, to allow for ViewResolver chaining)",
+      "translation": "View 对象，如果未找到则为<code>null</code>\n（可选，以允许 ViewResolver 链式调用）",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the current servlet request",
+      "translation": "<code>request</code> - 当前的 Servlet 请求",
+      "count": 1
+    },
+    {
+      "source": "Arjen Poutsma, Juergen Hoeller, Rossen Stoyanchev",
+      "translation": "Arjen Poutsma, Juergen Hoeller, Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    }
+  ]
+}

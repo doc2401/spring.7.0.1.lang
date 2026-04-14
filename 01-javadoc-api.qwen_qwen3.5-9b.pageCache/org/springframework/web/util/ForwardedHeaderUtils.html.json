@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 20:33:23",
+  "updated_at": "2026-04-14 20:33:23",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 33,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 2.2,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "<code>uri</code> - the request <code>URI</code>",
+      "translation": "<code>uri</code> - 请求 <code>URI</code>",
+      "count": 4
+    },
+    {
+      "source": "an <code>InetSocketAddress</code> with the extracted host and port, or\n<code>null</code> if the headers are not present",
+      "translation": "一个包含提取的主机和端口的 `<code>InetSocketAddress</code>`，或者如果标头不存在则为 `<code>null</code>`。",
+      "count": 3
+    },
+    {
+      "source": "<code>headers</code> - the request headers that may contain forwarded headers",
+      "translation": "<code>headers</code> - 可能包含转发请求头的请求头",
+      "count": 3
+    },
+    {
+      "source": "In most cases, you should not use this class directly but rather rely on\n<a href=\"../filter/ForwardedHeaderFilter.html\" title=\"class in org.springframework.web.filter\"><code>ForwardedHeaderFilter</code></a> for Spring MVC or\n<a href=\"../server/adapter/ForwardedHeaderTransformer.html\" title=\"class in org.springframework.web.server.adapter\"><code>ForwardedHeaderTransformer</code></a> in\norder to extract the information from the headers as early as possible and discard\nsuch headers. Underlying servers such as Tomcat, Jetty, and Reactor Netty also\nprovide options to handle forwarded headers even earlier.",
+      "translation": "在大多数情况下，您不应直接使用此类，而应依赖 Spring MVC 中的<a href=\"../filter/ForwardedHeaderFilter.html\" title=\"class in org.springframework.web.filter\"><code>ForwardedHeaderFilter</code></a>或<a href=\"../server/adapter/ForwardedHeaderTransformer.html\" title=\"class in org.springframework.web.server.adapter\"><code>ForwardedHeaderTransformer</code></a>，以便尽早从标头中提取信息并丢弃这些标头。底层服务器（如 Tomcat、Jetty 和 Reactor Netty）也提供了选项来更早地处理转发标头。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> There are security considerations surrounding the use\nof forwarded headers. Those should not be used unless the application is\nbehind a trusted proxy that inserts them and also explicitly removes any such\nheaders coming from an external source.",
+      "translation": "<strong>注意：</strong> 转发标头的使用涉及安全考虑。除非应用程序位于可信代理之后，该代理会插入这些标头并显式移除来自外部源的此类标头，否则不应使用它们。",
+      "count": 2
+    },
+    {
+      "source": "Adapt the scheme+host+port of the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URI.html\" title=\"class or interface in java.net\"><code>URI</code></a> from the \"Forwarded\" header\n(see <a href=\"https://tools.ietf.org/html/rfc7239\">RFC 7239</a>) or from the\n\"X-Forwarded-Host\", \"X-Forwarded-Port\", and \"X-Forwarded-Proto\" headers if\n\"Forwarded\" is not present.",
+      "translation": "从\"Forwarded\"标头（参见<a href=\"https://tools.ietf.org/html/rfc7239\">RFC 7239</a>）或如果不存在\"Forwarded\"标头，则从\"X-Forwarded-Host\"、\"X-Forwarded-Port\"和\"X-Forwarded-Proto\"标头中，适配给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URI.html\" title=\"class or interface in java.net\"><code>URI</code></a>的 scheme+host+port。",
+      "count": 2
+    },
+    {
+      "source": "Parse the first \"Forwarded: by=...\" header value to\nan <code>InetSocketAddress</code> representing the address of the server.",
+      "translation": "解析第一个\"Forwarded: by=...\"标头值，将其转换为表示服务器地址的<code>InetSocketAddress</code>。",
+      "count": 2
+    },
+    {
+      "source": "Parse the first \"Forwarded: for=...\" or \"X-Forwarded-For\" header value to\nan <code>InetSocketAddress</code> representing the address of the client.",
+      "translation": "解析第一个 \"Forwarded: for=...\" 或 \"X-Forwarded-For\" 标头值，将其转换为代表客户端地址的 `<code>InetSocketAddress</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7239#section-5.2\">RFC 7239, Section 5.2</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7239#section-5.2\">RFC 7239，第 5.2 节</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7239#section-5.1\">RFC 7239, Section 5.1</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7239#section-5.1\">RFC 7239，第 5.1 节</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "a <a href=\"UriComponentsBuilder.html\" title=\"class in org.springframework.web.util\"><code>UriComponentsBuilder</code></a> that reflects the request URI and\nadditional updates from forwarded headers",
+      "translation": "一个反映请求 URI 以及来自转发头部的额外更新的<a href=\"UriComponentsBuilder.html\" title=\"class in org.springframework.web.util\"><code>UriComponentsBuilder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>headers</code> - the HTTP headers to consider",
+      "translation": "<code>headers</code> - 要检查的 HTTP 标头",
+      "count": 2
+    },
+    {
+      "source": "<code>remoteAddress</code> - the current remote address",
+      "translation": "<code>remoteAddress</code> - 当前远程地址",
+      "count": 2
+    },
+    {
+      "source": "<code>localAddress</code> - the current local address",
+      "translation": "<code>localAddress</code> - 当前本地地址",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

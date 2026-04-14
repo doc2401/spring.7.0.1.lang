@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-04-14 20:21:09",
+  "updated_at": "2026-04-14 20:21:09",
+  "stats": {
+    "total_entries": 37,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 49,
+    "entries_with_hits": 37,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3243243243243243,
+    "usage_percentage": 0.0036999999999999997
+  },
+  "items": [
+    {
+      "source": "Base class for a connection manager that automates the process of connecting\nto a WebSocket server with the Spring ApplicationContext lifecycle. Connects\nto a WebSocket server on <a href=\"#start()\"><code>start()</code></a> and disconnects on <a href=\"#stop()\"><code>stop()</code></a>.\nIf <a href=\"#setAutoStartup(boolean)\"><code>setAutoStartup(boolean)</code></a> is set to <code>true</code> this will be done\nautomatically when the Spring <code>ApplicationContext</code> is refreshed.",
+      "translation": "连接管理器的基类，用于自动化与 WebSocket 服务器建立连接的过程，并集成 Spring ApplicationContext 生命周期。在调用<a href=\"#start()\"><code>start()</code></a>时连接到 WebSocket 服务器，在调用<a href=\"#stop()\"><code>stop()</code></a>时断开连接。如果将<a href=\"#setAutoStartup(boolean)\"><code>setAutoStartup(boolean)</code></a>设置为<code>true</code>，则在 Spring <code>ApplicationContext</code>刷新时将自动执行此操作。",
+      "count": 2
+    },
+    {
+      "source": "Constructor with a prepared <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URI.html\" title=\"class or interface in java.net\"><code>URI</code></a>.",
+      "translation": "带有已准备的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/URI.html\" title=\"class or interface in java.net\"><code>URI</code></a>的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Whether the connection is open/<code>true</code> or closed/<code>false</code>.",
+      "translation": "连接是打开的/<code>true</code> 还是关闭的/<code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "Constructor with a URI template and variables.",
+      "translation": "带有 URI 模板和变量的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses implement this to close the connection.",
+      "translation": "子类实现此方法以关闭连接。",
+      "count": 2
+    },
+    {
+      "source": "Return the phase in which this endpoint connection factory will be auto-connected\nand stopped.",
+      "translation": "返回该端点连接工厂将自动连接并停止的相位。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this ConnectionManager has been started.",
+      "translation": "返回该 ConnectionManager 是否已启动。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses implement this to actually establish the connection.",
+      "translation": "子类实现此方法以实际建立连接。",
+      "count": 2
+    },
+    {
+      "source": "Return the value for the 'autoStartup' property. If \"true\", this endpoint\nconnection manager will connect to the remote endpoint upon a\nContextRefreshedEvent.",
+      "translation": "返回\"autoStartup\"属性的值。如果为\"true\"，此端点连接管理器将在 ContextRefreshedEvent 事件发生时连接到远程端点。",
+      "count": 2
+    },
+    {
+      "source": "Specify the phase in which a connection should be established to the remote\nendpoint and subsequently closed. The startup order proceeds from lowest to\nhighest, and the shutdown order is the reverse of that. By default, this value is\nInteger.MAX_VALUE meaning that this endpoint connection factory connects as late as\npossible and is closed as soon as possible.",
+      "translation": "指定与远程端点建立连接并随后关闭的连接阶段。启动顺序从低到高，而关闭顺序则相反。默认情况下，该值为 Integer.MAX_VALUE，表示此端点连接工厂尽可能晚地建立连接，并尽可能早地关闭。",
+      "count": 2
+    },
+    {
+      "source": "Start the WebSocket connection. If already connected, the method has no impact.",
+      "translation": "启动 WebSocket 连接。如果已连接，该方法将不产生任何影响。",
+      "count": 2
+    },
+    {
+      "source": "<code>uri</code> - the url to connect to",
+      "translation": "<code>uri</code> - 要连接的 URL",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"../../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> will call <i>only</i> this variant of the\n<code>stop</code> method; i.e. <a href=\"../../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> will not be called for\n<code>SmartLifecycle</code> implementations unless explicitly delegated to within\nthe implementation of this method.",
+      "translation": "`<a href=\"../../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>` 将仅调用此版本的 `<code>stop</code>` 方法；即，除非在该方法的实现中显式委托，否则不会为 `<code>SmartLifecycle</code>` 实现调用 `<a href=\"../../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "The provided callback is used by the <a href=\"../../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> to support\nan ordered, and potentially concurrent, shutdown of all components having a\ncommon shutdown order value. The callback <b>must</b> be executed after\nthe <code>SmartLifecycle</code> component does indeed stop.",
+      "translation": "提供的回调由<a href=\"../../../context/LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>使用，以支持具有公共关闭顺序值的所有组件的有序且可能并发的关闭。该回调<b>必须</b>在<code>SmartLifecycle</code> 组件确实停止后执行。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"../../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> and immediately\ntriggers the given callback in the calling thread. Note that there is no\nsynchronization between the two, so custom implementations may at least\nwant to put the same steps within their common lifecycle monitor (if any).",
+      "translation": "默认实现会委托给 <a href=\"../../../context/Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>，并立即在调用线程中触发给定的回调。请注意，这两者之间没有同步机制，因此自定义实现至少应该将其中的相同步骤放在其公共生命周期监视器（如果有）内。",
+      "count": 1
+    },
+    {
+      "source": "Note that this stop notification is not guaranteed to come before destruction:\nOn regular shutdown, <code>Lifecycle</code> beans will first receive a stop notification\nbefore the general destruction callbacks are being propagated; however, on hot\nrefresh during a context's lifetime or on aborted refresh attempts, a given bean's\ndestroy method will be called without any consideration of stop signals upfront.",
+      "translation": "请注意，此停止通知并不保证在销毁之前发出：\n在常规关闭过程中，<code>Lifecycle</code> 圈会先接收停止通知，然后再传播通用的销毁回调；然而，在上下文生命周期期间的热刷新或中止的刷新尝试中，给定 bean 的销毁方法将在不考虑任何预先停止信号的情况下被调用。",
+      "count": 1
+    },
+    {
+      "source": "Default is \"false\".",
+      "translation": "默认值为\"false\"。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is not running (not started yet).",
+      "translation": "如果组件尚未运行（尚未启动），则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate the stop signal to all components\nthat apply.",
+      "translation": "对于容器，这将向所有适用的组件传播停止信号。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">SmartLifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">SmartLifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return the value for the 'autoStartup' property.",
+      "translation": "返回“autoStartup”属性的值。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to auto-connect to the remote endpoint after this connection manager\nhas been initialized and the Spring context has been refreshed.",
+      "translation": "设置是否在初始化此连接管理器且 Spring 上下文刷新后自动连接到远程端点。",
+      "count": 1
+    },
+    {
+      "source": "Specify the phase in which a connection should be established to the remote\nendpoint and subsequently closed.",
+      "translation": "指定建立与远程端点连接并随后关闭连接的阶段。",
+      "count": 1
+    },
+    {
+      "source": "Start the WebSocket connection.",
+      "translation": "启动 WebSocket 连接。",
+      "count": 1
+    },
+    {
+      "source": "Stop this component, typically in a synchronous fashion, such that the component is\nfully stopped upon return of this method.",
+      "translation": "停止此组件，通常以同步方式执行，使得该方法返回时组件已完全停止。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that a Lifecycle component must stop if it is currently running.",
+      "translation": "指示生命周期组件如果当前正在运行，则必须停止。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/SmartLifecycle.html#isAutoStartup()\">isAutoStartup</a></code> in interface <code><a href=\"../../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../context/SmartLifecycle.html#isAutoStartup()\">isAutoStartup</a></code>` 接口 `<code><a href=\"../../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"../../../context/Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code> in interface <code><a href=\"../../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../context/SmartLifecycle.html#stop(java.lang.Runnable)\">stop</a></code>` 接口 `<code><a href=\"../../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

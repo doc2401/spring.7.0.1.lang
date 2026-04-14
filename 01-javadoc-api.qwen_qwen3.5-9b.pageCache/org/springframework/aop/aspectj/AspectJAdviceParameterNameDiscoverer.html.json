@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-04-14 10:18:25",
+  "updated_at": "2026-04-14 10:18:25",
+  "stats": {
+    "total_entries": 31,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 57,
+    "entries_with_hits": 31,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8387096774193548,
+    "usage_percentage": 0.0031000000000000003
+  },
+  "items": [
+    {
+      "source": "Indicate whether <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\"><code>IllegalArgumentException</code></a> and <a href=\"AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException.html\" title=\"class in org.springframework.aop.aspectj\"><code>AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException</code></a>\nmust be thrown as appropriate in the case of failing to deduce advice parameter names.",
+      "translation": "指明在无法推导出建议参数名称的情况下，是否应适当抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\"><code>IllegalArgumentException</code></a> 和 <a href=\"AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException.html\" title=\"class in org.springframework.aop.aspectj\"><code>AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "The behavior on raising an <code>IllegalArgumentException</code> or\n<code>AmbiguousBindingException</code> is configurable to allow this discoverer\nto be used as part of a chain-of-responsibility. By default the condition will\nbe logged and the <a href=\"#getParameterNames(java.lang.reflect.Method)\"><code>getParameterNames(Method)</code></a> method will simply return\n<code>null</code>. If the <a href=\"#setRaiseExceptions(boolean)\"><code>raiseExceptions</code></a>\nproperty is set to <code>true</code>, the conditions will be thrown as\n<code>IllegalArgumentException</code> and <code>AmbiguousBindingException</code>,\nrespectively.",
+      "translation": "抛出 `<code>IllegalArgumentException</code>` 或 `<code>AmbiguousBindingException</code>` 的行为是可配置的，以便将此发现器用作责任链的一部分。默认情况下，该条件将被记录，且 `<a href=\"#getParameterNames(java.lang.reflect.Method)\"><code>getParameterNames(Method)</code></a>` 方法将简单地返回 `<code>null</code>`。如果将 `<a href=\"#setRaiseExceptions(boolean)\"><code>raiseExceptions</code></a>` 属性设置为 `<code>true</code>`，则条件将分别作为 `<code>IllegalArgumentException</code>` 和 `<code>AmbiguousBindingException</code>` 抛出。",
+      "count": 2
+    },
+    {
+      "source": "If an unambiguous binding can be deduced, then it is.\nIf the advice requirements cannot possibly be satisfied, then <code>null</code>\nis returned. By setting the <a href=\"#setRaiseExceptions(boolean)\"><code>raiseExceptions</code></a>\nproperty to <code>true</code>, descriptive exceptions will be thrown instead of\nreturning <code>null</code> in the case that the parameter names cannot be discovered.",
+      "translation": "如果可以推导出无歧义的结合，那么就会进行结合。如果建议要求不可能满足，则返回 `<code>null</code>`。通过将 `<a href=\"#setRaiseExceptions(boolean)\"><code>raiseExceptions</code></a>` 属性设置为 `<code>true</code>`，在无法发现参数名称的情况下，将抛出描述性异常而不是返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"AspectJAdviceParameterNameDiscoverer.html\" title=\"class in org.springframework.aop.aspectj\"><code>class-level javadoc</code></a>\nfor this class for details on the algorithm used.",
+      "translation": "有关此类所用算法的详细信息，请参阅<a href=\"AspectJAdviceParameterNameDiscoverer.html\" title=\"class in org.springframework.aop.aspectj\"><code>类级别 Javadoc</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This class interprets arguments in the following way:",
+      "translation": "该类以如下方式解释参数：",
+      "count": 2
+    },
+    {
+      "source": "If <code>afterReturning</code> advice binds the return value, the\n<code>returning</code> variable name must be specified.",
+      "translation": "如果 `<code>afterReturning</code>` 建议绑定返回值，则必须指定 `<code>returning</code>` 变量名。",
+      "count": 2
+    },
+    {
+      "source": "If <code>afterThrowing</code> advice binds the thrown value, the\n<code>throwing</code> variable name must be specified.",
+      "translation": "如果 `<code>afterThrowing</code>` 建议绑定抛出的值，则必须指定 `<code>throwing</code>` 变量名。",
+      "count": 2
+    },
+    {
+      "source": "An advice method can never be a constructor in Spring.",
+      "translation": "Spring 中的建议方法永远不能是构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Create a new discoverer that attempts to discover parameter names.\nfrom the given pointcut expression.",
+      "translation": "创建一个新的发现器，尝试从给定的切入点表达式中查找参数名称。",
+      "count": 2
+    },
+    {
+      "source": "If there remain unbound arguments, then the pointcut expression is\nexamined once more for <code>this</code>, <code>target</code>, and\n<code>args</code> pointcut expressions used in the binding form (binding\nforms are deduced as described for the annotation based pointcuts). If\nthere remains more than one unbound argument of a primitive type (which\ncan only be bound in <code>args</code>) then an\n<code>AmbiguousBindingException</code> is raised. If there is exactly\none argument of a primitive type, then if exactly one <code>args</code>\nbound variable was found, we assign the corresponding parameter name\nthe variable name. If there were no <code>args</code> bound variables\nfound an <code>IllegalStateException</code> is raised. If there are\nmultiple <code>args</code> bound variables, an\n<code>AmbiguousBindingException</code> is raised. At this point, if\nthere remains more than one unbound argument we raise an\n<code>AmbiguousBindingException</code>. If there are no unbound arguments\nremaining, we are done. If there is exactly one unbound argument\nremaining, and only one candidate variable name unbound from\n<code>this</code>, <code>target</code>, or <code>args</code>, it is\nassigned as the corresponding parameter name. If there are multiple\npossibilities, an <code>AmbiguousBindingException</code> is raised.",
+      "translation": "如果仍有未绑定的参数，则再次检查点切面表达式中用于绑定形式的 `<code>this</code>`、`<code>target</code>` 和 `<code>args</code>` 点切面表达式（绑定形式如基于注解的点切面所述进行推导）。如果剩余多个基本类型的未绑定参数（这些只能由 `<code>args</code>` 绑定），则抛出 `<code>AmbiguousBindingException</code>`。如果恰好有一个基本类型参数，且发现恰好一个 `<code>args</code>` 绑定变量，则将对应的参数名赋为该变量名。如果没有找到 `<code>args</code>` 绑定变量，则抛出 `<code>IllegalStateException</code>`。如果存在多个 `<code>args</code>` 绑定变量，则抛出 `<code>AmbiguousBindingException</code>`。此时，如果仍有多个未绑定参数，则抛出 `<code>AmbiguousBindingException</code>`。如果没有剩余未绑定参数，则完成。如果恰好剩余一个未绑定参数，且仅有一个候选变量名未从 `<code>this</code>`、`<code>target</code>` 或 `<code>args</code>` 中解绑，则将其赋为对应的参数名。如果存在多个可能性，则抛出 `<code>AmbiguousBindingException</code>`。",
+      "count": 2
+    },
+    {
+      "source": "If a <a href=\"#setThrowingName(java.lang.String)\"><code>throwingName</code></a> has been set, and\nthere are no unbound arguments of type <code>Throwable+</code>, then an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\"><code>IllegalArgumentException</code></a> is raised. If there is more than one\nunbound argument of type <code>Throwable+</code>, then an\n<a href=\"AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException.html\" title=\"class in org.springframework.aop.aspectj\"><code>AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException</code></a> is raised. If there is exactly one\nunbound argument of type <code>Throwable+</code>, then the corresponding\nparameter name is assigned the value &lt;throwingName&gt;.",
+      "translation": "如果已设置 `<a href=\"#setThrowingName(java.lang.String)\"><code>throwingName</code></a>`，且没有类型为 `<code>Throwable+</code>` 的未绑定参数，则会抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\"><code>IllegalArgumentException</code></a>。如果有多个类型为 `<code>Throwable+</code>` 的未绑定参数，则会抛出 <a href=\"AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException.html\" title=\"class in org.springframework.aop.aspectj\"><code>AspectJAdviceParameterNameDiscoverer.AmbiguousBindingException</code></a>。如果恰好有一个类型为 `<code>Throwable+</code>` 的未绑定参数，则将其对应的参数名赋值为 &lt;throwingName&gt;。",
+      "count": 2
+    },
+    {
+      "source": "If there remain unbound arguments, then the pointcut expression is\nexamined. Let <code>a</code> be the number of annotation-based pointcut\nexpressions (@annotation, @this, @target, @args,\n@within, @withincode) that are used in binding form. Usage in\nbinding form has itself to be deduced: if the expression inside the\npointcut is a single string literal that meets Java variable name\nconventions it is assumed to be a variable name. If <code>a</code> is\nzero we proceed to the next stage. If <code>a</code> &gt; 1 then an\n<code>AmbiguousBindingException</code> is raised. If <code>a</code> == 1,\nand there are no unbound arguments of type <code>Annotation+</code>,\nthen an <code>IllegalArgumentException</code> is raised. If there is\nexactly one such argument, then the corresponding parameter name is\nassigned the value from the pointcut expression.",
+      "translation": "如果仍有未绑定的参数，则检查点切面表达式。设 `<code>a</code>` 为在绑定形式中使用的基于注解的点切面表达式（@annotation、@this、@target、@args、@within、@withincode）的数量。在绑定形式中的使用本身需要推断：如果点切面内部的表达式是一个符合 Java 变量命名约定的单个字符串字面量，则假定其为变量名。如果 `<code>a</code>` 为零，则进入下一阶段。如果 `<code>a</code>` > 1，则抛出 <code>AmbiguousBindingException</code>。如果 `<code>a</code>` == 1，且没有类型为 <code>Annotation+</code> 的未绑定参数，则抛出 <code>IllegalArgumentException</code>。如果恰好有一个此类参数，则将对应的参数名赋值为点切面表达式中的值。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - if\n<a href=\"#setRaiseExceptions(boolean)\"><code>raiseExceptions</code></a> has been set to <code>true</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - 如果 <a href=\"#setRaiseExceptions(boolean)\"><code>raiseExceptions</code></a> 已设置为 <code>true</code>",
+      "count": 2
+    },
+    {
+      "source": "If the first parameter of the method is of type <code>JoinPoint</code>\nor <code>ProceedingJoinPoint</code>, it is assumed to be for passing\n<code>thisJoinPoint</code> to the advice, and the parameter name will\nbe assigned the value <code>\"thisJoinPoint\"</code>.",
+      "translation": "如果方法的第一个参数类型为 `<code>JoinPoint</code>` 或 `<code>ProceedingJoinPoint</code>`，则假定该参数用于向切面传递 `<code>thisJoinPoint</code>`，并且该参数名将被赋值为 `<code>\"thisJoinPoint\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "If a <code>returningName</code> has been set, and there are no unbound arguments\nthen an <code>IllegalArgumentException</code> is raised. If there is\nmore than one unbound argument then an\n<code>AmbiguousBindingException</code> is raised. If there is exactly\none unbound argument then the corresponding parameter name is assigned\nthe value of the <code>returningName</code>.",
+      "translation": "如果已设置 `<code>returningName</code>` 且没有未绑定的参数，则抛出 `<code>IllegalArgumentException`》。如果有多个未绑定参数，则抛出 `<code>AmbiguousBindingException</code>`。如果恰好有一个未绑定参数，则将对应的参数名赋值为 `<code>returningName</code>` 的值。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/ParameterNameDiscoverer.html#getParameterNames(java.lang.reflect.Method)\">getParameterNames</a></code> in interface <code><a href=\"../../core/ParameterNameDiscoverer.html\" title=\"interface in org.springframework.core\">ParameterNameDiscoverer</a></code>",
+      "translation": "`<code><a href=\"../../core/ParameterNameDiscoverer.html#getParameterNames(java.lang.reflect.Method)\">getParameterNames</a></code>` 在接口 `<code><a href=\"../../core/ParameterNameDiscoverer.html\" title=\"interface in org.springframework.core\">ParameterNameDiscoverer</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../core/ParameterNameDiscoverer.html#getParameterNames(java.lang.reflect.Constructor)\">getParameterNames</a></code> in interface <code><a href=\"../../core/ParameterNameDiscoverer.html\" title=\"interface in org.springframework.core\">ParameterNameDiscoverer</a></code>",
+      "translation": "`<code><a href=\"../../core/ParameterNameDiscoverer.html#getParameterNames(java.lang.reflect.Constructor)\">getParameterNames</a></code>` 在接口 `<code><a href=\"../../core/ParameterNameDiscoverer.html\" title=\"interface in org.springframework.core\">ParameterNameDiscoverer</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "If the first parameter of the method is of type\n<code>JoinPoint.StaticPart</code>, it is assumed to be for passing\n<code>\"thisJoinPointStaticPart\"</code> to the advice, and the parameter name\nwill be assigned the value <code>\"thisJoinPointStaticPart\"</code>.",
+      "translation": "如果方法的第一个参数类型为`JoinPoint.StaticPart`，则假定它是用于向切面传递`\"thisJoinPointStaticPart\"`，并且该参数名将被赋值为`\"thisJoinPointStaticPart\"`。",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>",
+      "translation": "<code>method</code> - 目标 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>raiseExceptions</code> - <code>true</code> if exceptions are to be thrown",
+      "translation": "<code>raiseExceptions</code> - 如果抛出异常则为 <code>true</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>returningName</code> - the name of the returning variable",
+      "translation": "<code>returningName</code> - 返回变量的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>throwingName</code> - the name of the throwing variable",
+      "translation": "<code>throwingName</code> - 抛出变量的名称",
+      "count": 2
+    },
+    {
+      "source": "the parameter names",
+      "translation": "参数名称",
+      "count": 2
+    },
+    {
+      "source": "Algorithm Summary",
+      "translation": "算法摘要",
+      "count": 2
+    },
+    {
+      "source": "Algorithm Details",
+      "translation": "算法细节",
+      "count": 2
+    },
+    {
+      "source": "Thrown in response to an ambiguous binding being detected when\ntrying to resolve a method's parameter names.",
+      "translation": "在尝试解析方法参数名称时检测到歧义绑定而抛出的异常。",
+      "count": 1
+    },
+    {
+      "source": "Create a new discoverer that attempts to discover parameter names.",
+      "translation": "创建一个新的发现器，尝试发现参数名称。",
+      "count": 1
+    },
+    {
+      "source": "Deduce the parameter names for an advice method.",
+      "translation": "推导建议方法的参数名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>ctor</code> - the constructor to find parameter names for",
+      "translation": "<code>ctor</code> - 用于查找参数名称的构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Adrian Colyer, Juergen Hoeller",
+      "translation": "Adrian Colyer，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

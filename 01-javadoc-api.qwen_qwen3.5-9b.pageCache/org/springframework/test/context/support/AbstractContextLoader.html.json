@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-04-14 16:57:22",
+  "updated_at": "2026-04-14 16:57:22",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 81,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8837209302325582,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "If the supplied <code>locations</code> are <code>null</code> or <em>empty</em>\nand <a href=\"#isGenerateDefaultLocations()\"><code>isGenerateDefaultLocations()</code></a> returns <code>true</code>,\ndefault locations will be <a href=\"#generateDefaultLocations(java.lang.Class)\"><code>generated</code></a> (i.e., detected) for the specified <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>class</code></a>\nand the configured <a href=\"#getResourceSuffixes()\">resource suffixes</a>;\notherwise, the supplied <code>locations</code> will be\n<a href=\"#modifyLocations(java.lang.Class,java.lang.String...)\">modified</a> if necessary and returned.",
+      "translation": "如果提供的 `<code>locations` 为 `<code>null</code>` 或<em>空</em>，且 <a href=\"#isGenerateDefaultLocations()\"><code>isGenerateDefaultLocations()</code></a> 返回 `<code>true</code>`，则将为指定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>class</code></a> 和配置的 <a href=\"#getResourceSuffixes()\">resource suffixes</a> <a href=\"#generateDefaultLocations(java.lang.Class)\"><code>generated</code></a>（即检测）默认位置；否则，将对提供的 `<code>locations` 进行必要的 <a href=\"#modifyLocations(java.lang.Class,java.lang.String...)\">修改</a> 并返回。",
+      "count": 3
+    },
+    {
+      "source": "<code>context</code> - the newly created application context",
+      "translation": "<code>context</code> - 新创建的应用程序上下文",
+      "count": 3
+    },
+    {
+      "source": "<code>AbstractContextLoader</code> also provides a basis for all concrete implementations\nof the <a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI. For backwards compatibility with the\n<code>ContextLoader</code> SPI,\n<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration(ContextConfigurationAttributes)</code></a> delegates\nto <a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations(Class, String...)</code></a>.",
+      "translation": "<code>AbstractContextLoader</code> 还为所有具体实现的<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI 提供了基础。为了与<code>ContextLoader</code> SPI 保持向后兼容，<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration(ContextConfigurationAttributes)</code></a>会委托给<a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations(Class, String...)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The semantics of this method have been overloaded to include detection\nof either default resource locations or default configuration classes.\nConsequently, this method can also be used to determine whether\n<em>default</em> configuration classes should be detected if the\n<code>classes</code> present in the <a href=\"../ContextConfigurationAttributes.html\" title=\"class in org.springframework.test.context\">configuration attributes</a> supplied to\n<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration(ContextConfigurationAttributes)</code></a>\nare <code>null</code> or empty.",
+      "translation": "此方法的语义已重载，以包含对默认资源位置或默认配置类的检测。因此，如果提供给<a href=\"../ContextConfigurationAttributes.html\" title=\"class in org.springframework.test.context\">configuration attributes</a>中的<code>classes</code>为<code>null</code>或空，则此方法也可用于确定是否应检测<em>default</em>配置类。",
+      "count": 2
+    },
+    {
+      "source": "For example, if the supplied class is <code>com.example.MyTest</code>,\nthe generated locations will contain a single string with a value of\n<code>\"classpath:com/example/MyTest&lt;suffix&gt;\"</code>, where <code>&lt;suffix&gt;</code>\nis the value of the first configured\n<a href=\"#getResourceSuffixes()\">resource suffix</a> for which the\ngenerated location actually exists in the classpath.",
+      "translation": "例如，如果提供的类是<code>com.example.MyTest</code>，生成的位置将包含一个字符串，其值为<code>\"classpath:com/example/MyTest&lt;suffix&gt;\"</code>，其中<code>&lt;suffix&gt;</code>是在类路径中实际存在的第一个配置的<a href=\"#getResourceSuffixes()\">资源后缀</a>的值。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to all\n<a href=\"../MergedContextConfiguration.html#getContextCustomizers()\"><code>context customizers</code></a>\nthat have been registered with the supplied <code>mergedConfig</code>.",
+      "translation": "默认实现会委托给所有已注册到提供的 `<code>mergedConfig</code>` 的<a href=\"../MergedContextConfiguration.html#getContextCustomizers()\"><code>context customizers</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The implementation of this method adheres to the contract defined in the\n<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI. Specifically, this method will\n<em>preemptively</em> verify that the generated default location actually\nexists. If it does not exist, this method will log a warning and return an\nempty array.",
+      "translation": "此方法的实现遵循在 <a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI 中定义的契约。具体而言，此方法将 <em>预先</em> 验证生成的默认位置是否实际存在。如果该位置不存在，此方法将记录警告并返回空数组。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses must provide an implementation of this method that returns\na single suffix. Alternatively subclasses may provide a <em>no-op</em>\nimplementation of this method and override <a href=\"#getResourceSuffixes()\"><code>getResourceSuffixes()</code></a>\nin order to provide multiple custom suffixes.",
+      "translation": "子类必须提供此方法的实现，以返回单个后缀。或者，子类可以提供此方法的<em>空操作</em>（no-op）实现，并覆盖<a href=\"#getResourceSuffixes()\"><code>getResourceSuffixes()</code></a>，以便提供多个自定义后缀。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply delegates to\n<a href=\"../util/TestContextResourceUtils.html#convertToClasspathResourcePaths(java.lang.Class,java.lang.String...)\"><code>TestContextResourceUtils.convertToClasspathResourcePaths(Class, String...)</code></a>.",
+      "translation": "默认实现只是委托给 <a href=\"../util/TestContextResourceUtils.html#convertToClasspathResourcePaths(java.lang.Class,java.lang.String...)\"><code>TestContextResourceUtils.convertToClasspathResourcePaths(Class, String...)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply wraps the value returned by\n<a href=\"#getResourceSuffix()\"><code>getResourceSuffix()</code></a> in a single-element array, but this\ncan be overridden by subclasses in order to support multiple suffixes.",
+      "translation": "默认实现只是将 <a href=\"#getResourceSuffix()\"><code>getResourceSuffix()</code></a> 返回的值包装在单个元素的数组中，但子类可以重写它以支持多个后缀。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can override this method to implement a different\n<em>default location generation</em> strategy.",
+      "translation": "子类可以重写此方法以实施不同的<em>默认位置生成</em>策略。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can override this method to implement a different\n<em>location modification</em> strategy.",
+      "translation": "子类可以重写此方法以实现不同的<em>位置修改</em>策略。",
+      "count": 2
+    },
+    {
+      "source": "Can be overridden in subclasses — for example, to process\nannotated classes instead of resource locations.",
+      "translation": "可在子类中重写——例如，用于处理注释类而非资源位置。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation:",
+      "translation": "默认实现：",
+      "count": 2
+    },
+    {
+      "source": "Can be overridden by subclasses to change the default behavior.",
+      "translation": "可被子类重写以更改默认行为。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation processes locations analogous to\n<a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations(Class, String...)</code></a>, using the\n<a href=\"../ContextConfigurationAttributes.html#getDeclaringClass()\"><code>declaring class</code></a>\nas the test class and the <a href=\"../ContextConfigurationAttributes.html#getLocations()\"><code>resource locations</code></a> retrieved from the supplied\n<a href=\"../ContextConfigurationAttributes.html\" title=\"class in org.springframework.test.context\"><code>configuration attributes</code></a> as the\nlocations to process.",
+      "translation": "默认实现处理位置的方式类似于 <a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations(Class, String...)</code></a>，使用<a href=\"../ContextConfigurationAttributes.html#getDeclaringClass()\"><code>声明类</code></a>作为测试类，并使用从提供的<a href=\"../ContextConfigurationAttributes.html\" title=\"class in org.springframework.test.context\"><code>配置属性</code></a>中检索的<a href=\"../ContextConfigurationAttributes.html#getLocations()\"><code>资源位置</code></a>作为要处理的位置。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether <em>default</em> resource locations should be\ngenerated if the <code>locations</code> provided to\n<a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations(Class, String...)</code></a> are <code>null</code> or empty.",
+      "translation": "确定是否应生成<em>default</em>资源位置，如果提供给<a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations(Class, String...)</code></a>的<code>locations</code>为<code>null</code>或为空。",
+      "count": 2
+    },
+    {
+      "source": "Get the suffix to append to <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> resource locations\nwhen detecting default locations.",
+      "translation": "获取要附加到检测默认位置时的 `<a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>` 资源位置的后缀。",
+      "count": 2
+    },
+    {
+      "source": "Get the suffixes to append to <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> resource locations\nwhen detecting default locations.",
+      "translation": "获取在检测默认位置时要附加到 <a href=\"../../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> 资源位置的后缀。",
+      "count": 2
+    },
+    {
+      "source": "Determines what (if any) context initializer classes have been supplied\nvia the <code>MergedContextConfiguration</code> and instantiates and\n<a href=\"../../../context/ApplicationContextInitializer.html#initialize(C)\">invokes</a> each with the\ngiven application context.\n<ul>\n<li>Any <code>ApplicationContextInitializers</code> implementing\n<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> or annotated with <a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> will be sorted appropriately.</li>\n</ul>",
+      "translation": "确定已通过 `<code>MergedContextConfiguration</code>` 提供（如果有）哪些上下文初始化器类，并实例化每个类，然后使用给定的应用程序上下文<a href=\"../../../context/ApplicationContextInitializer.html#initialize(C)\">调用</a>它们。\n<ul>\n<li>任何实现<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>或带有<a href=\"../../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a>注解的<code>ApplicationContextInitializers</code>都将按适当顺序排序。</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "Adds <a href=\"../../../core/env/PropertySource.html\" title=\"class in org.springframework.core.env\"><code>PropertySources</code></a> for all\n<a href=\"../MergedContextConfiguration.html#getPropertySourceLocations()\">resource locations</a> and\n<a href=\"../MergedContextConfiguration.html#getPropertySourceProperties()\">inlined properties</a> from the supplied <code>MergedContextConfiguration</code>\nto the <code>Environment</code> of the context.",
+      "translation": "为上下文的 <code>Environment</code> 添加来自提供的 <code>MergedContextConfiguration</code> 的所有 <a href=\"../../../core/env/PropertySource.html\" title=\"class in org.springframework.core.env\"><code>PropertySources</code></a>，包括 <a href=\"../MergedContextConfiguration.html#getPropertySourceLocations()\">resource locations</a> 和 <a href=\"../MergedContextConfiguration.html#getPropertySourceProperties()\">inlined properties</a>。",
+      "count": 2
+    },
+    {
+      "source": "Sets the <em>active bean definition profiles</em> from the supplied\n<code>MergedContextConfiguration</code> in the\n<a href=\"../../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> of the\ncontext.",
+      "translation": "设置上下文中环境的 <a href=\"../../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> 的 <em>active bean definition profiles</em>，该环境来自提供的<code>MergedContextConfiguration</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../SmartContextLoader.html#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\">processContextConfiguration</a></code> in interface <code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>",
+      "translation": "`<code><a href=\"../SmartContextLoader.html#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\">processContextConfiguration</a></code>` 接口 `<code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ContextLoader.html#processLocations(java.lang.Class,java.lang.String...)\">processLocations</a></code> in interface <code><a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>",
+      "translation": "`<code><a href=\"../ContextLoader.html#processLocations(java.lang.Class,java.lang.String...)\">processLocations</a></code>` 接口 `<code><a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../SmartContextLoader.html#processLocations(java.lang.Class,java.lang.String...)\">processLocations</a></code> in interface <code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>",
+      "translation": "`<code><a href=\"../SmartContextLoader.html#processLocations(java.lang.Class,java.lang.String...)\">processLocations</a></code>` 接口 `<code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>mergedConfig</code> - the merged context configuration",
+      "translation": "<code>mergedConfig</code> - 合并后的上下文配置",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - the class with which the locations are associated: to be\nused when generating default locations",
+      "translation": "<code>clazz</code> - 与这些位置关联的类：在生成默认位置时使用。",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - the class for which the default locations are to be generated",
+      "translation": "<code>clazz</code> - 要为其生成默认位置的类",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - the class with which the locations are associated",
+      "translation": "<code>clazz</code> - 与这些位置关联的类",
+      "count": 2
+    },
+    {
+      "source": "<code>locations</code> - the resource locations to be modified",
+      "translation": "<code>locations</code> - 要修改的资源位置",
+      "count": 2
+    },
+    {
+      "source": "always <code>true</code> by default",
+      "translation": "默认始终为<code>true</code>",
+      "count": 2
+    },
+    {
+      "source": "the resource suffixes; never <code>null</code> or empty",
+      "translation": "资源后缀；永远不为<code>null</code>或空。",
+      "count": 2
+    },
+    {
+      "source": "Sam Brannen, Juergen Hoeller, Phillip Webb",
+      "translation": "Sam Brannen, Juergen Hoeller, Phillip Webb",
+      "count": 2
+    },
+    {
+      "source": "a processed array of application context resource locations",
+      "translation": "已处理的应用程序上下文资源位置数组",
+      "count": 2
+    },
+    {
+      "source": "an array of default application context resource locations",
+      "translation": "默认应用程序上下文资源位置的数组",
+      "count": 2
+    },
+    {
+      "source": "an array of modified application context resource locations",
+      "translation": "一个已修改的应用程序上下文资源位置数组",
+      "count": 2
+    },
+    {
+      "source": "Customize the <a href=\"../../../context/ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a> created by this\n<code>ContextLoader</code> <em>after</em> bean definitions have been loaded\ninto the context but <em>before</em> the context has been refreshed.",
+      "translation": "自定义由该`ContextLoader` 在将 Bean 定义加载到上下文后但在刷新上下文之前创建的<a href=\"../../../context/ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Prepare the <a href=\"../../../context/ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a> created by this\n<code>SmartContextLoader</code> <i>before</i> bean definitions are read.",
+      "translation": "在读取 Bean 定义之前，准备由该 <code>SmartContextLoader</code> 创建的 <a href=\"../../../context/ConfigurableApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ConfigurableApplicationContext</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Generate the default classpath resource locations array based on the\nsupplied class.",
+      "translation": "根据提供的类生成默认类路径资源位置数组。",
+      "count": 1
+    },
+    {
+      "source": "Generate a modified version of the supplied locations array and return it.",
+      "translation": "生成提供的 `locations` 数组的修改版本并返回它。",
+      "count": 1
+    },
+    {
+      "source": "<code>locations</code> - the unmodified locations to use for loading the\napplication context (can be <code>null</code> or empty)",
+      "translation": "<code>locations</code> - 用于加载应用程序上下文的未修改位置（可以为 <code>null</code> 或为空）",
+      "count": 1
+    },
+    {
+      "source": "<code>configAttributes</code> - the context configuration attributes to process",
+      "translation": "<code>configAttributes</code> - 要处理的上下文配置属性",
+      "count": 1
+    },
+    {
+      "source": "the resource suffix; never <code>null</code> or empty",
+      "translation": "资源后缀；永远不为<code>null</code>或空。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "created_at": "2026-04-14 17:38:20",
+  "updated_at": "2026-04-14 17:38:20",
+  "stats": {
+    "total_entries": 40,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 43,
+    "entries_with_hits": 40,
+    "entries_without_hits": 0,
+    "hit_rate": 1.075,
+    "usage_percentage": 0.004
+  },
+  "items": [
+    {
+      "source": "<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a> implementation that delegates all calls to a given target\n<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a> instance. Abstract because it is meant to be subclassed,\nwith subclasses overriding specific methods that are not supposed to simply delegate\nto the target instance.",
+      "translation": "实现 `<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a>` 接口并委托所有调用给特定目标 `<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a>` 实例的抽象类，旨在被继承，子类应重写某些不应简单委托给目标实例的特定方法。",
+      "count": 2
+    },
+    {
+      "source": "Create a DelegatingTransactionAttribute for the given target attribute.",
+      "translation": "为给定的目标属性创建一个 DelegatingTransactionAttribute。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetDefinition</code> - the target TransactionAttribute to delegate to",
+      "translation": "<code>targetDefinition</code> - 要委托的目标 TransactionAttribute",
+      "count": 2
+    },
+    {
+      "source": "The read-only flag applies to any transaction context, whether backed\nby an actual resource transaction (<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a>/\n<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a>) or operating non-transactionally at\nthe resource level (<a href=\"../TransactionDefinition.html#PROPAGATION_SUPPORTS\"><code>TransactionDefinition.PROPAGATION_SUPPORTS</code></a>). In the latter case,\nthe flag will only apply to managed resources within the application,\nsuch as a Hibernate <code>Session</code>.",
+      "translation": "只读标志适用于任何事务上下文，无论是由实际资源事务支持（<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a>/\n<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a>）还是在资源级别以非事务方式运行（<a href=\"../TransactionDefinition.html#PROPAGATION_SUPPORTS\"><code>TransactionDefinition.PROPAGATION_SUPPORTS</code></a>）。在后一种情况下，该标志仅适用于应用程序内的托管资源，例如 Hibernate <code>Session</code>。",
+      "count": 1
+    },
+    {
+      "source": "Must return one of the <code>ISOLATION_XXX</code> constants defined on\n<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>this interface</code></a>. Those constants are designed\nto match the values of the same constants on <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a>.",
+      "translation": "必须返回在<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>此接口</code></a>上定义的<code>ISOLATION_XXX</code>常量之一。这些常量旨在与<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a>上的相同常量的值相匹配。",
+      "count": 1
+    },
+    {
+      "source": "Exclusively designed for use with <a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a> or\n<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a> since it only applies to newly started\ntransactions. Consider switching the \"validateExistingTransactions\" flag to\n\"true\" on your transaction manager if you'd like isolation level declarations\nto get rejected when participating in an existing transaction with a different\nisolation level.",
+      "translation": "专为与<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a>或<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a>配合使用而设计，因为它仅适用于新启动的事务。如果您希望在参与具有不同隔离级别的现有事务时拒绝隔离级别声明，请考虑将事务管理器上的\"validateExistingTransactions\"标志切换为\"true\"。",
+      "count": 1
+    },
+    {
+      "source": "The default is <a href=\"../TransactionDefinition.html#ISOLATION_DEFAULT\"><code>TransactionDefinition.ISOLATION_DEFAULT</code></a>. Note that a transaction manager\nthat does not support custom isolation levels will throw an exception when\ngiven any other level than <a href=\"../TransactionDefinition.html#ISOLATION_DEFAULT\"><code>TransactionDefinition.ISOLATION_DEFAULT</code></a>.",
+      "translation": "默认值为 `<a href=\"../TransactionDefinition.html#ISOLATION_DEFAULT\"><code>TransactionDefinition.ISOLATION_DEFAULT</code></a>`。请注意，不支持自定义隔离级别的事务管理器在接收到除 `<a href=\"../TransactionDefinition.html#ISOLATION_DEFAULT\"><code>TransactionDefinition.ISOLATION_DEFAULT</code></a>` 以外的任何级别时都会抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "Exclusively designed for use with <a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a> or\n<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a> since it only applies to newly started\ntransactions.",
+      "translation": "专为与 <a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a> 或\n<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRES_NEW\"><code>TransactionDefinition.PROPAGATION_REQUIRES_NEW</code></a> 配合使用而设计，因为它仅适用于新启动的事务。",
+      "count": 1
+    },
+    {
+      "source": "Must return one of the <code>PROPAGATION_XXX</code> constants\ndefined on <a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>this interface</code></a>.",
+      "translation": "必须返回在<a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>此接口</code></a>上定义的<code>PROPAGATION_XXX</code>常量之一。",
+      "count": 1
+    },
+    {
+      "source": "The default is <a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a>.",
+      "translation": "默认值为 `<a href=\"../TransactionDefinition.html#PROPAGATION_REQUIRED\"><code>TransactionDefinition.PROPAGATION_REQUIRED</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "Must return a number of seconds, or <a href=\"../TransactionDefinition.html#TIMEOUT_DEFAULT\"><code>TransactionDefinition.TIMEOUT_DEFAULT</code></a>.",
+      "translation": "必须返回秒数，或<a href=\"../TransactionDefinition.html#TIMEOUT_DEFAULT\"><code>TransactionDefinition.TIMEOUT_DEFAULT</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Note that a transaction manager that does not support timeouts will throw\nan exception when given any other timeout than <a href=\"../TransactionDefinition.html#TIMEOUT_DEFAULT\"><code>TransactionDefinition.TIMEOUT_DEFAULT</code></a>.",
+      "translation": "请注意，不支持超时的事务管理器在接收到除 `<a href=\"../TransactionDefinition.html#TIMEOUT_DEFAULT\"><code>TransactionDefinition.TIMEOUT_DEFAULT</code></a>` 以外的任何超时设置时都会抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "The default is <a href=\"../TransactionDefinition.html#TIMEOUT_DEFAULT\"><code>TransactionDefinition.TIMEOUT_DEFAULT</code></a>.",
+      "translation": "默认值为<a href=\"../TransactionDefinition.html#TIMEOUT_DEFAULT\"><code>TransactionDefinition.TIMEOUT_DEFAULT</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "This just serves as a hint for the actual transaction subsystem;\nit will <i>not necessarily</i> cause failure of write access attempts.\nA transaction manager which cannot interpret the read-only hint will\n<i>not</i> throw an exception when asked for a read-only transaction.",
+      "translation": "这仅作为实际事务子系统的提示；它<i>不一定</i>会导致写入访问尝试失败。无法解释只读提示的事务管理器，在请求只读事务时<i>不会</i>抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In case of Spring's declarative transactions, the exposed name will be\nthe <code>fully-qualified class name + \".\" + method name</code> (by default).",
+      "translation": "在 Spring 声明式事务的情况下，暴露的名称默认为 `<code>完全限定类名 + \".\" + 方法名</code>`。",
+      "count": 1
+    },
+    {
+      "source": "This will be used as the transaction name to be shown in a\ntransaction monitor, if applicable.",
+      "translation": "这将用作事务监视器中显示的事务名称（如适用）。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionDefinition.html#getPropagationBehavior()\">TransactionDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionDefinition.html#getPropagationBehavior()\">TransactionDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionDefinition.html#getIsolationLevel()\">TransactionDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionDefinition.html#getIsolationLevel()\">TransactionDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionDefinition.html#getTimeout()\">TransactionDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionDefinition.html#getTimeout()\">TransactionDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionDefinition.html#isReadOnly()\">TransactionDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionDefinition.html#isReadOnly()\">TransactionDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../TransactionDefinition.html#getName()\">TransactionDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../TransactionDefinition.html#getName()\">TransactionDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return the isolation level.",
+      "translation": "返回隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of this transaction.",
+      "translation": "返回此事务的名称。",
+      "count": 1
+    },
+    {
+      "source": "Return the propagation behavior.",
+      "translation": "返回传播行为。",
+      "count": 1
+    },
+    {
+      "source": "Return the transaction timeout.",
+      "translation": "返回事务超时时间。",
+      "count": 1
+    },
+    {
+      "source": "Return whether to optimize as a read-only transaction.",
+      "translation": "返回是否优化为只读事务。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TransactionDefinition.html#getPropagationBehavior()\">getPropagationBehavior</a></code> in interface <code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>",
+      "translation": "`<code><a href=\"../TransactionDefinition.html#getPropagationBehavior()\">getPropagationBehavior</a></code>` 接口 `<code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TransactionDefinition.html#getIsolationLevel()\">getIsolationLevel</a></code> in interface <code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>",
+      "translation": "`<code><a href=\"../TransactionDefinition.html#getIsolationLevel()\">getIsolationLevel</a></code>` 接口 `<code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TransactionDefinition.html#getTimeout()\">getTimeout</a></code> in interface <code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>",
+      "translation": "`<code><a href=\"../TransactionDefinition.html#getTimeout()\">getTimeout</a></code>` 接口 `<code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TransactionDefinition.html#isReadOnly()\">isReadOnly</a></code> in interface <code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>",
+      "translation": "`<code><a href=\"../TransactionDefinition.html#isReadOnly()\">isReadOnly</a></code>` 接口 `<code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../TransactionDefinition.html#getName()\">getName</a></code> in interface <code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>",
+      "translation": "`<code><a href=\"../TransactionDefinition.html#getName()\">getName</a></code>` 在接口 `<code><a href=\"../TransactionDefinition.html\" title=\"interface in org.springframework.transaction\">TransactionDefinition</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if the transaction is to be optimized as read-only\n(<code>false</code> by default)",
+      "translation": "<code>true</code> 表示该事务应作为只读进行优化（默认为 <code>false</code>）",
+      "count": 1
+    },
+    {
+      "source": "the name of this transaction (<code>null</code> by default}",
+      "translation": "该事务的名称（默认为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the propagation behavior",
+      "translation": "传播行为",
+      "count": 1
+    },
+    {
+      "source": "the isolation level",
+      "translation": "隔离级别",
+      "count": 1
+    },
+    {
+      "source": "the transaction timeout",
+      "translation": "事务超时",
+      "count": 1
+    }
+  ]
+}

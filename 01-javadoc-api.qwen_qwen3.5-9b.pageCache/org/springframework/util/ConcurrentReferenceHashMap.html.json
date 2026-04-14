@@ -1,0 +1,386 @@
+{
+  "created_at": "2026-04-14 17:47:51",
+  "updated_at": "2026-04-14 17:47:51",
+  "stats": {
+    "total_entries": 74,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 159,
+    "entries_with_hits": 74,
+    "entries_without_hits": 0,
+    "hit_rate": 2.1486486486486487,
+    "usage_percentage": 0.0073999999999999995
+  },
+  "items": [
+    {
+      "source": "Create a new <code>ConcurrentReferenceHashMap</code> instance.",
+      "translation": "创建一个新的<code>ConcurrentReferenceHashMap</code> 实例。",
+      "count": 14
+    },
+    {
+      "source": "<code>initialCapacity</code> - the initial capacity of the map",
+      "translation": "<code>initialCapacity</code> - 映射的初始容量",
+      "count": 6
+    },
+    {
+      "source": "<code>concurrencyLevel</code> - the expected number of threads that will concurrently\nwrite to the map",
+      "translation": "<code>concurrencyLevel</code> - 预期将并发写入该 Map 的线程数",
+      "count": 4
+    },
+    {
+      "source": "Return a <a href=\"ConcurrentReferenceHashMap.Reference.html\" title=\"interface in org.springframework.util\"><code>ConcurrentReferenceHashMap.Reference</code></a> to the <a href=\"ConcurrentReferenceHashMap.Entry.html\" title=\"class in org.springframework.util\"><code>ConcurrentReferenceHashMap.Entry</code></a> for the specified <code>key</code>,\nor <code>null</code> if not found.",
+      "translation": "返回指定 `<code>key</code>` 的<a href=\"ConcurrentReferenceHashMap.Reference.html\" title=\"interface in org.springframework.util\"><code>ConcurrentReferenceHashMap.Reference</code></a>到<a href=\"ConcurrentReferenceHashMap.Entry.html\" title=\"class in org.springframework.util\"><code>ConcurrentReferenceHashMap.Entry</code></a>，如果未找到则返回 `<code>null</code>`。",
+      "count": 3
+    },
+    {
+      "source": "<code>referenceType</code> - the reference type used for entries (soft or weak)",
+      "translation": "<code>referenceType</code> - 用于条目（软引用或弱引用）的引用类型",
+      "count": 3
+    },
+    {
+      "source": "<code>loadFactor</code> - the load factor. When the average number of references per\ntable exceeds this value, resize will be attempted.",
+      "translation": "<code>loadFactor</code> - 负载因子。当表中每个元素的平均引用数超过此值时，将尝试进行扩容。",
+      "count": 3
+    },
+    {
+      "source": "This class can be used as an alternative to\n<code>Collections.synchronizedMap(new WeakHashMap&lt;K, Reference&lt;V&gt;&gt;())</code> in order to\nsupport better performance when accessed concurrently. This implementation follows the\nsame design constraints as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html\" title=\"class or interface in java.util.concurrent\"><code>ConcurrentHashMap</code></a> with the exception that\n<code>null</code> values and <code>null</code> keys are supported.",
+      "translation": "该类可作为替代方案，用于 `Collections.synchronizedMap(new WeakHashMap<K, Reference<V>>())`，以在并发访问时提供更好的性能支持。此实现遵循与<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html\" title=\"class or interface in java.util.concurrent\"><code>ConcurrentHashMap</code></a>相同的设计约束，但支持`null`值和`null`键。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> The use of references means that there is no guarantee that items\nplaced into the map will be subsequently available. The garbage collector may discard\nreferences at any time, so it may appear that an unknown thread is silently removing\nentries.",
+      "translation": "<b>注意：</b> 使用引用意味着无法保证放入 Map 中的项随后仍可访问。垃圾收集器随时可能丢弃引用，因此看起来像是某个未知线程在静默地移除条目。",
+      "count": 2
+    },
+    {
+      "source": "If not explicitly specified, this implementation will use\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ref/SoftReference.html\" title=\"class or interface in java.lang.ref\">soft entry references</a>.",
+      "translation": "如果未明确指定，此实现将使用<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ref/SoftReference.html\" title=\"class or interface in java.lang.ref\">软引用</a>。",
+      "count": 2
+    },
+    {
+      "source": "Factory method that returns the <code><a href=\"ConcurrentReferenceHashMap.html\" title=\"class in org.springframework.util\">ConcurrentReferenceHashMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;.<a href=\"ConcurrentReferenceHashMap.ReferenceManager.html\" title=\"class in org.springframework.util\">ReferenceManager</a></code>.\nThis method will be called once for each <code><a href=\"ConcurrentReferenceHashMap.html\" title=\"class in org.springframework.util\">ConcurrentReferenceHashMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;.<a href=\"ConcurrentReferenceHashMap.Segment.html\" title=\"class in org.springframework.util\">Segment</a></code>.",
+      "translation": "返回 <code><a href=\"ConcurrentReferenceHashMap.html\" title=\"class in org.springframework.util\">ConcurrentReferenceHashMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;.<a href=\"ConcurrentReferenceHashMap.ReferenceManager.html\" title=\"class in org.springframework.util\">ReferenceManager</a></code> 的工厂方法。\n此方法将为每个 <code><a href=\"ConcurrentReferenceHashMap.html\" title=\"class in org.springframework.util\">ConcurrentReferenceHashMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;.<a href=\"ConcurrentReferenceHashMap.Segment.html\" title=\"class in org.springframework.util\">Segment</a></code> 调用一次。",
+      "count": 2
+    },
+    {
+      "source": "Factory method that returns the <code><a href=\"ConcurrentReferenceHashMap.html\" title=\"class in org.springframework.util\">ConcurrentReferenceHashMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;.<a href=\"ConcurrentReferenceHashMap.ReferenceManager.html\" title=\"class in org.springframework.util\">ReferenceManager</a></code>.",
+      "translation": "返回 <code><a href=\"ConcurrentReferenceHashMap.html\" title=\"class in org.springframework.util\">ConcurrentReferenceHashMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;.<a href=\"ConcurrentReferenceHashMap.ReferenceManager.html\" title=\"class in org.springframework.util\">ReferenceManager</a></code> 的工厂方法。",
+      "count": 2
+    },
+    {
+      "source": "A reference to an <a href=\"ConcurrentReferenceHashMap.Entry.html\" title=\"class in org.springframework.util\"><code>ConcurrentReferenceHashMap.Entry</code></a> contained in the map.",
+      "translation": "对包含在映射中的<a href=\"ConcurrentReferenceHashMap.Entry.html\" title=\"class in org.springframework.util\"><code>ConcurrentReferenceHashMap.Entry</code></a>的引用。",
+      "count": 2
+    },
+    {
+      "source": "Strategy class used to manage <a href=\"ConcurrentReferenceHashMap.Reference.html\" title=\"interface in org.springframework.util\"><code>References</code></a>.",
+      "translation": "用于管理<a href=\"ConcurrentReferenceHashMap.Reference.html\" title=\"interface in org.springframework.util\"><code>References</code></a>的 Strategy 类。",
+      "count": 2
+    },
+    {
+      "source": "Get the hash for a given object, apply an additional hash function to reduce\ncollisions. This implementation uses the same Wang/Jenkins algorithm as\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html\" title=\"class or interface in java.util.concurrent\"><code>ConcurrentHashMap</code></a>. Subclasses can override to provide alternative hashing.",
+      "translation": "获取给定对象的哈希值，并应用额外的哈希函数以减少冲突。此实现使用了与<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html\" title=\"class or interface in java.util.concurrent\"><code>ConcurrentHashMap</code></a>相同的 Wang/Jenkins 算法。子类可以重写以提供替代的哈希方法。",
+      "count": 2
+    },
+    {
+      "source": "Calculate a shift value that can be used to create a power-of-two value between\nthe specified maximum and minimum values.",
+      "translation": "计算一个偏移值，该值可用于在指定的最大值和最小值之间创建一个 2 的幂次方值。",
+      "count": 2
+    },
+    {
+      "source": "Remove any entries that have been garbage collected and are no longer referenced.\nUnder normal circumstances garbage collected entries are automatically purged as\nitems are added or removed from the Map. This method can be used to force a purge,\nand is useful when the Map is read frequently but updated less often.",
+      "translation": "移除任何已被垃圾回收且不再被引用的条目。在正常情况下，垃圾回收的条目会随着向 Map 添加或删除项目而自动清除。此方法可用于强制清除，当 Map 频繁读取但更新较少时非常有用。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#get(java.lang.Object)\" title=\"class or interface in java.util\">get</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#get(java.lang.Object)\" title=\"class or interface in java.util\">get</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#get(java.lang.Object)\" title=\"class or interface in java.util\">get</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#get(java.lang.Object)\" title=\"class or interface in java.util\">get</a></code>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#getOrDefault(java.lang.Object,V)\" title=\"class or interface in java.util.concurrent\">getOrDefault</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#getOrDefault(java.lang.Object,V)\" title=\"class or interface in java.util.concurrent\">getOrDefault</a>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#getOrDefault(java.lang.Object,V)\" title=\"class or interface in java.util\">getOrDefault</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#getOrDefault(java.lang.Object,V)\" title=\"class or interface in java.util\">getOrDefault</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#containsKey(java.lang.Object)\" title=\"class or interface in java.util\">containsKey</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#containsKey(java.lang.Object)\" title=\"class or interface in java.util\">containsKey</a></code> 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#containsKey(java.lang.Object)\" title=\"class or interface in java.util\">containsKey</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#containsKey(java.lang.Object)\" title=\"class or interface in java.util\">containsKey</a></code>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#put(K,V)\" title=\"class or interface in java.util\">put</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#put(K,V)\" title=\"class or interface in java.util\">put</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#put(K,V)\" title=\"class or interface in java.util\">put</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#put(K,V)\" title=\"class or interface in java.util\">put</a></code>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#putIfAbsent(K,V)\" title=\"class or interface in java.util.concurrent\">putIfAbsent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#putIfAbsent(K,V)\" title=\"class or interface in java.util.concurrent\">putIfAbsent</a>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#putIfAbsent(K,V)\" title=\"class or interface in java.util\">putIfAbsent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#putIfAbsent(K,V)\" title=\"class or interface in java.util\">putIfAbsent</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#remove(java.lang.Object)\" title=\"class or interface in java.util\">remove</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#remove(java.lang.Object)\" title=\"class or interface in java.util\">remove</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#remove(java.lang.Object)\" title=\"class or interface in java.util\">remove</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#remove(java.lang.Object)\" title=\"class or interface in java.util\">remove</a>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#remove(java.lang.Object,java.lang.Object)\" title=\"class or interface in java.util.concurrent\">remove</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#remove(java.lang.Object,java.lang.Object)\" title=\"class or interface in java.util.concurrent\">remove</a></code> 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#remove(java.lang.Object,java.lang.Object)\" title=\"class or interface in java.util\">remove</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#remove(java.lang.Object,java.lang.Object)\" title=\"class or interface in java.util\">remove</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#replace(K,V,V)\" title=\"class or interface in java.util.concurrent\">replace</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#replace(K,V,V)\" title=\"class or interface in java.util.concurrent\">replace</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#replace(K,V,V)\" title=\"class or interface in java.util\">replace</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#replace(K,V,V)\" title=\"class or interface in java.util\">replace</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#replace(K,V)\" title=\"class or interface in java.util.concurrent\">replace</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#replace(K,V)\" title=\"class or interface in java.util.concurrent\">replace</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#replace(K,V)\" title=\"class or interface in java.util\">replace</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#replace(K,V)\" title=\"class or interface in java.util\">replace</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#computeIfAbsent(K,java.util.function.Function)\" title=\"class or interface in java.util.concurrent\">computeIfAbsent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#computeIfAbsent(K,java.util.function.Function)\" title=\"class or interface in java.util.concurrent\">computeIfAbsent</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#computeIfAbsent(K,java.util.function.Function)\" title=\"class or interface in java.util\">computeIfAbsent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#computeIfAbsent(K,java.util.function.Function)\" title=\"class or interface in java.util\">computeIfAbsent</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#computeIfPresent(K,java.util.function.BiFunction)\" title=\"class or interface in java.util.concurrent\">computeIfPresent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`ConcurrentMap` 接口中的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#computeIfPresent(K,java.util.function.BiFunction)\" title=\"class or interface in java.util.concurrent\">computeIfPresent</a>` 方法，其类型为 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#computeIfPresent(K,java.util.function.BiFunction)\" title=\"class or interface in java.util\">computeIfPresent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#computeIfPresent(K,java.util.function.BiFunction)\" title=\"class or interface in java.util\">computeIfPresent</a>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#compute(K,java.util.function.BiFunction)\" title=\"class or interface in java.util.concurrent\">compute</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`ConcurrentMap` 接口中的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#compute(K,java.util.function.BiFunction)\" title=\"class or interface in java.util.concurrent\">compute</a>` 方法，其泛型类型为 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#compute(K,java.util.function.BiFunction)\" title=\"class or interface in java.util\">compute</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#compute(K,java.util.function.BiFunction)\" title=\"class or interface in java.util\">compute</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#merge(K,V,java.util.function.BiFunction)\" title=\"class or interface in java.util.concurrent\">merge</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html#merge(K,V,java.util.function.BiFunction)\" title=\"class or interface in java.util.concurrent\">merge</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentMap.html\" title=\"class or interface in java.util.concurrent\">ConcurrentMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#merge(K,V,java.util.function.BiFunction)\" title=\"class or interface in java.util\">merge</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#merge(K,V,java.util.function.BiFunction)\" title=\"class or interface in java.util\">merge</a>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#clear()\" title=\"class or interface in java.util\">clear</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#clear()\" title=\"class or interface in java.util\">clear</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#clear()\" title=\"class or interface in java.util\">clear</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#clear()\" title=\"class or interface in java.util\">clear</a>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#size()\" title=\"class or interface in java.util\">size</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#size()\" title=\"class or interface in java.util\">size</a></code> 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#size()\" title=\"class or interface in java.util\">size</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#size()\" title=\"class or interface in java.util\">size</a>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#isEmpty()\" title=\"class or interface in java.util\">isEmpty</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#isEmpty()\" title=\"class or interface in java.util\">isEmpty</a></code> 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#isEmpty()\" title=\"class or interface in java.util\">isEmpty</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#isEmpty()\" title=\"class or interface in java.util\">isEmpty</a></code>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#entrySet()\" title=\"class or interface in java.util\">entrySet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#entrySet()\" title=\"class or interface in java.util\">entrySet</a>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#entrySet()\" title=\"class or interface in java.util\">entrySet</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#entrySet()\" title=\"class or interface in java.util\">entrySet</a></code>` 类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#keySet()\" title=\"class or interface in java.util\">keySet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#keySet()\" title=\"class or interface in java.util\">keySet</a>` 在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#keySet()\" title=\"class or interface in java.util\">keySet</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#keySet()\" title=\"class or interface in java.util\">keySet</a>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#values()\" title=\"class or interface in java.util\">values</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html#values()\" title=\"class or interface in java.util\">values</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#values()\" title=\"class or interface in java.util\">values</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html#values()\" title=\"class or interface in java.util\">values</a>` 方法在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/AbstractMap.html\" title=\"class or interface in java.util\">AbstractMap</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in ConcurrentReferenceHashMap\">K</a>,<wbr/><a href=\"#type-param-V\" title=\"type parameter in ConcurrentReferenceHashMap\">V</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key (can be <code>null</code>)",
+      "translation": "<code>key</code> - 键（可以为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>loadFactor</code> - the load factor. When the average number of references per table\nexceeds this value resize will be attempted",
+      "translation": "<code>loadFactor</code> - 负载因子。当表中每个元素的平均引用数超过此值时，将尝试进行扩容。",
+      "count": 2
+    },
+    {
+      "source": "<code>o</code> - the object to hash (may be null)",
+      "translation": "<code>o</code> - 要哈希的对象（可为 null）",
+      "count": 2
+    },
+    {
+      "source": "<code>restructure</code> - types of restructure allowed during this call",
+      "translation": "<code>restructure</code> - 本次调用允许的重组类型",
+      "count": 2
+    },
+    {
+      "source": "the reference, or <code>null</code> if not found",
+      "translation": "引用，或如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>minimumValue</code> - the minimum value",
+      "translation": "<code>minimumValue</code> - 最小值",
+      "count": 2
+    },
+    {
+      "source": "<code>maximumValue</code> - the maximum value",
+      "translation": "<code>maximumValue</code> - 最大值",
+      "count": 2
+    },
+    {
+      "source": "the calculated shift (use <code>1 &lt;&lt; shift</code> to obtain a value)",
+      "translation": "计算出的移位（使用 `<code>1 << shift</code>` 获取一个值）",
+      "count": 2
+    },
+    {
+      "source": "a new reference manager",
+      "translation": "一个新的参考文献管理器",
+      "count": 2
+    },
+    {
+      "source": "the resulting hash code",
+      "translation": "生成的哈希码",
+      "count": 2
+    },
+    {
+      "source": "A single map entry.",
+      "translation": "单个映射条目。",
+      "count": 1
+    },
+    {
+      "source": "Various reference types supported by this map.",
+      "translation": "本地图支持的各种引用类型。",
+      "count": 1
+    },
+    {
+      "source": "The types of restructuring that can be performed.",
+      "translation": "可执行的重构类型。",
+      "count": 1
+    },
+    {
+      "source": "A single segment used to divide the map to allow better concurrent performance.",
+      "translation": "用于划分地图以允许更好的并发性能的单段。",
+      "count": 1
+    },
+    {
+      "source": "Get the hash for a given object, apply an additional hash function to reduce\ncollisions.",
+      "translation": "获取给定对象的哈希值，并应用额外的哈希函数以减少冲突。",
+      "count": 1
+    },
+    {
+      "source": "Remove any entries that have been garbage collected and are no longer referenced.",
+      "translation": "移除已被垃圾回收且不再被引用的任何条目。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-K\"><code>K</code> - the key type</span>",
+      "translation": "<span id=\"type-param-K\"><code>K</code> - 键类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-V\"><code>V</code> - the value type</span>",
+      "translation": "<span id=\"type-param-V\"><code>V</code> - 值类型</span>",
+      "count": 1
+    },
+    {
+      "source": "Phillip Webb, Juergen Hoeller, Brian Clozel",
+      "translation": "Phillip Webb，Juergen Hoeller，Brian Clozel",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

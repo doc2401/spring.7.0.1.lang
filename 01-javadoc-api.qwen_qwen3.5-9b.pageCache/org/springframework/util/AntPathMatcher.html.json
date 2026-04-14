@@ -1,0 +1,461 @@
+{
+  "created_at": "2026-04-14 17:42:07",
+  "updated_at": "2026-04-14 17:42:07",
+  "stats": {
+    "total_entries": 89,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 162,
+    "entries_with_hits": 89,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8202247191011236,
+    "usage_percentage": 0.0089
+  },
+  "items": [
+    {
+      "source": "Create a new instance with the <a href=\"#DEFAULT_PATH_SEPARATOR\"><code>DEFAULT_PATH_SEPARATOR</code></a>.",
+      "translation": "使用<a href=\"#DEFAULT_PATH_SEPARATOR\"><code>DEFAULT_PATH_SEPARATOR</code></a>创建新实例。",
+      "count": 3
+    },
+    {
+      "source": "<code>true</code> if the supplied <code>path</code> matched,\n<code>false</code> if it didn't",
+      "translation": "<code>true</code> 如果提供的 <code>path</code> 匹配，否则为 <code>false</code>",
+      "count": 3
+    },
+    {
+      "source": "<code>pattern</code> - the pattern to match against",
+      "translation": "<code>pattern</code> - 要匹配的模式",
+      "count": 3
+    },
+    {
+      "source": "<code>path</code> - the path to test",
+      "translation": "<code>path</code> - 要测试的路径",
+      "count": 3
+    },
+    {
+      "source": "Assumes that <a href=\"#match(java.lang.String,java.lang.String)\"><code>match(String, String)</code></a> returns <code>true</code> for '<code>pattern</code>' and '<code>path</code>', but\ndoes <strong>not</strong> enforce this.",
+      "translation": "假定<a href=\"#match(java.lang.String,java.lang.String)\"><code>match(String, String)</code></a>对'<code>pattern</code>'和'<code>path</code>'返回<code>true</code>，但并<strong>不</strong>强制执行此规则。",
+      "count": 2
+    },
+    {
+      "source": "Performs caching based on <a href=\"#setCachePatterns(boolean)\"><code>setCachePatterns(boolean)</code></a>, delegating to\n<a href=\"#tokenizePath(java.lang.String)\"><code>tokenizePath(String)</code></a> for the actual tokenization algorithm.",
+      "translation": "基于 `<a href=\"#setCachePatterns(boolean)\"><code>setCachePatterns(boolean)</code></a>` 执行缓存，并将实际的标记化算法委托给 `<a href=\"#tokenizePath(java.lang.String)\"><code>tokenizePath(String)</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "If the return value is <code>false</code>, then the <a href=\"PathMatcher.html#match(java.lang.String,java.lang.String)\"><code>PathMatcher.match(String, String)</code></a>\nmethod does not have to be used because direct equality comparisons\non the static path Strings will lead to the same result.",
+      "translation": "如果返回值为 `<code>false</code>`，则不必使用 <a href=\"PathMatcher.html#match(java.lang.String,java.lang.String)\"><code>PathMatcher.match(String, String)</code></a> 方法，因为对静态路径字符串进行直接相等性比较将得出相同的结果。",
+      "count": 2
+    },
+    {
+      "source": "The full path given as parameter is used to test for exact matches. So when the given path\nis <code>/hotels/2</code>, the pattern <code>/hotels/2</code> will be sorted before <code>/hotels/1</code>.",
+      "translation": "作为参数给出的完整路径用于测试精确匹配。因此，当给定的路径为 `<code>/hotels/2</code>` 时，模式 `<code>/hotels/2</code>` 将排在 `<code>/hotels/1</code>` 之前。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>true</code>. Switch this to <code>false</code> for case-insensitive matching.",
+      "translation": "默认值为<code>true</code>。将其切换为<code>false</code>以启用不区分大小写的匹配。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation checks this AntPathMatcher's internal cache\n(see <a href=\"#setCachePatterns(boolean)\"><code>setCachePatterns(boolean)</code></a>), creating a new AntPathStringMatcher instance\nif no cached copy is found.",
+      "translation": "默认实现会检查此 AntPathMatcher 的内部缓存（参见<a href=\"#setCachePatterns(boolean)\"><code>setCachePatterns(boolean)</code></a>），如果未找到缓存副本，则创建一个新的 AntPathStringMatcher 实例。",
+      "count": 2
+    },
+    {
+      "source": "This implementation simply concatenates the two patterns, unless\nthe first pattern contains a file extension match (for example, <code>*.html</code>).\nIn that case, the second pattern will be merged into the first. Otherwise,\nan <code>IllegalArgumentException</code> will be thrown.",
+      "translation": "此实现仅将两个模式连接起来，除非第一个模式包含文件扩展名匹配（例如 `<code>*.html</code>`）。在这种情况下，第二个模式将被合并到第一个模式中。否则，将抛出 `<code>IllegalArgumentException</code>`。",
+      "count": 2
+    },
+    {
+      "source": "This <code>Comparator</code> will <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html#sort(java.util.Comparator)\" title=\"class or interface in java.util\">sort</a>\na list so that more specific patterns (without URI templates or wild cards) come before\ngeneric patterns. So given a list with the following patterns, the returned comparator\nwill sort this list so that the order will be as indicated.",
+      "translation": "此 `<code>Comparator</code>` 将 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html#sort(java.util.Comparator)\" title=\"class or interface in java.util\">排序</a>列表，使更具体的模式（不带 URI 模板或通配符）排在通用模式之前。因此，给定包含以下模式的列表，返回的 comparator 将对此列表进行排序，顺序如下所示。",
+      "count": 2
+    },
+    {
+      "source": "Part of this mapping code has been kindly borrowed from <a href=\"https://ant.apache.org\">Apache Ant</a>.",
+      "translation": "此映射代码的一部分已获 Apache Ant 慷慨借用。<a href=\"https://ant.apache.org\">Apache Ant</a>。",
+      "count": 2
+    },
+    {
+      "source": "The mapping matches URLs using the following rules:<br/>",
+      "translation": "映射使用以下规则匹配 URL：<br/>",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> a pattern and a path must both be absolute or must\nboth be relative in order for the two to match. Therefore, it is recommended\nthat users of this implementation to sanitize patterns in order to prefix\nthem with \"/\" as it makes sense in the context in which they're used.",
+      "translation": "<strong>注意：</strong> 模式与路径必须同为绝对路径或同为相对路径才能匹配。因此，建议本实现的用户对模式进行清理，并在其前面添加\"/\"前缀，这符合它们的使用上下文。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"/\", as in Ant.",
+      "translation": "默认值为 \"/\"，与 Ant 相同。",
+      "count": 2
+    },
+    {
+      "source": "Default is for the cache to be on, but with the variant to automatically\nturn it off when encountering too many patterns to cache at runtime\n(the threshold is 65536), assuming that arbitrary permutations of patterns\nare coming in, with little chance for encountering a recurring pattern.",
+      "translation": "默认情况下缓存处于开启状态，但会配置一个变体以在运行时遇到过多需要缓存的模式时自动将其关闭（阈值为 65536），前提是假设传入的模式为任意排列，且遇到重复模式的可能性极低。",
+      "count": 2
+    },
+    {
+      "source": "Determines whether the pattern at least matches as far as the given base\npath goes, assuming that a full path may then match as well.",
+      "translation": "确定模式是否至少匹配到给定的基本路径，假设完整路径也可能随之匹配。",
+      "count": 2
+    },
+    {
+      "source": "When encountering too many patterns to cache at runtime (the threshold is 65536),\nit turns the default cache off, assuming that arbitrary permutations of patterns\nare coming in, with little chance for encountering a recurring pattern.",
+      "translation": "当运行时遇到的缓存模式过多（阈值为 65536）时，将默认缓存关闭，假设传入的是任意排列的模式，遇到重复模式的几率很小。",
+      "count": 2
+    },
+    {
+      "source": "This method may be overridden to implement a custom cache strategy.",
+      "translation": "此方法可被重写以实施自定义缓存策略。",
+      "count": 2
+    },
+    {
+      "source": "For example: For pattern \"/hotels/{hotel}\" and path \"/hotels/1\", this method will\nreturn a map containing \"hotel\" → \"1\".",
+      "translation": "例如：对于模式\"/hotels/{hotel}\"和路径\"/hotels/1\"，此方法将返回一个包含\"hotel\" → \"1\"的映射。",
+      "count": 2
+    },
+    {
+      "source": "The default <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a> implementation returned by\n<a href=\"#getPatternComparator(java.lang.String)\"><code>getPatternComparator(String)</code></a>.",
+      "translation": "由`<a href=\"#getPatternComparator(java.lang.String)\" title=\"method in this class\"><code>getPatternComparator(String)</code></a>` 返回的默认 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a>` 实现。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PathMatcher.html#isPattern(java.lang.String)\">PathMatcher</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PathMatcher.html#isPattern(java.lang.String)\">PathMatcher</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PathMatcher.html#match(java.lang.String,java.lang.String)\">PathMatcher</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PathMatcher.html#match(java.lang.String,java.lang.String)\">PathMatcher</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PathMatcher.html#matchStart(java.lang.String,java.lang.String)\">PathMatcher</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PathMatcher.html#matchStart(java.lang.String,java.lang.String)\">PathMatcher</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PathMatcher.html#extractUriTemplateVariables(java.lang.String,java.lang.String)\">PathMatcher</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PathMatcher.html#extractUriTemplateVariables(java.lang.String,java.lang.String)\">PathMatcher</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Actually match the given <code>path</code> against the given <code>pattern</code>.",
+      "translation": "实际上将给定的<code>path</code>与给定的<code>pattern</code>进行匹配。",
+      "count": 2
+    },
+    {
+      "source": "Build or retrieve an <a href=\"AntPathMatcher.AntPathStringMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher.AntPathStringMatcher</code></a> for the given pattern.",
+      "translation": "构建或检索给定模式的<a href=\"AntPathMatcher.AntPathStringMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher.AntPathStringMatcher</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Match the given <code>path</code> against the given <code>pattern</code>,\naccording to this PathMatcher's matching strategy.",
+      "translation": "根据此 PathMatcher 的匹配策略，将给定的 `<code>path</code>` 与给定的 `<code>pattern</code>` 进行匹配。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether to cache parsed pattern metadata for patterns passed\ninto this matcher's <a href=\"#match(java.lang.String,java.lang.String)\"><code>match(String, String)</code></a> method.",
+      "translation": "指定是否缓存传入此匹配器的<a href=\"#match(java.lang.String,java.lang.String)\"><code>match(String, String)</code></a>方法的解析模式元数据。",
+      "count": 2
+    },
+    {
+      "source": "Default path separator: \"/\".",
+      "translation": "默认路径分隔符：\"/\"。",
+      "count": 2
+    },
+    {
+      "source": "A convenient, alternative constructor to use with a custom path separator.",
+      "translation": "一个方便使用的替代构造函数，可与自定义路径分隔符配合使用。",
+      "count": 2
+    },
+    {
+      "source": "Tokenize the given path into parts, based on this matcher's settings.",
+      "translation": "根据此匹配器的设置，将给定路径拆分为各个部分。",
+      "count": 2
+    },
+    {
+      "source": "<code>com/t?st.jsp</code> — matches <code>com/test.jsp</code> but also\n<code>com/tast.jsp</code> or <code>com/txst.jsp</code>",
+      "translation": "`com/t?st.jsp` 匹配 `com/test.jsp`，但也匹配 `com/tast.jsp` 或 `com/txst.jsp`。",
+      "count": 2
+    },
+    {
+      "source": "<code>org/**/servlet/bla.jsp</code> — matches\n<code>org/springframework/servlet/bla.jsp</code> but also\n<code>org/springframework/testing/servlet/bla.jsp</code> and <code>org/servlet/bla.jsp</code>",
+      "translation": "<code>org/**/servlet/bla.jsp</code> — 匹配\n<code>org/springframework/servlet/bla.jsp</code>，但也包括\n<code>org/springframework/testing/servlet/bla.jsp</code> 和 <code>org/servlet/bla.jsp</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>com/{filename:\\\\w+}.jsp</code> will match <code>com/test.jsp</code> and assign the value <code>test</code>\nto the <code>filename</code> variable",
+      "translation": "`com/{filename:\\\\w+}.jsp` 将匹配 `com/test.jsp` 并将值 `test` 分配给变量 `filename`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#isPattern(java.lang.String)\">isPattern</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#isPattern(java.lang.String)\">isPattern</a></code>` 在接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#match(java.lang.String,java.lang.String)\">match</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#match(java.lang.String,java.lang.String)\">match</a></code>` 接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#matchStart(java.lang.String,java.lang.String)\">matchStart</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#matchStart(java.lang.String,java.lang.String)\">matchStart</a></code>` 接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#extractPathWithinPattern(java.lang.String,java.lang.String)\">extractPathWithinPattern</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#extractPathWithinPattern(java.lang.String,java.lang.String)\">extractPathWithinPattern</a></code>` 接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#extractUriTemplateVariables(java.lang.String,java.lang.String)\">extractUriTemplateVariables</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#extractUriTemplateVariables(java.lang.String,java.lang.String)\">extractUriTemplateVariables</a></code>` 接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#combine(java.lang.String,java.lang.String)\">combine</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#combine(java.lang.String,java.lang.String)\">combine</a></code>` 接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"PathMatcher.html#getPatternComparator(java.lang.String)\">getPatternComparator</a></code> in interface <code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>",
+      "translation": "`<code><a href=\"PathMatcher.html#getPatternComparator(java.lang.String)\">getPatternComparator</a></code>` 接口 `<code><a href=\"PathMatcher.html\" title=\"interface in org.springframework.util\">PathMatcher</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>com/*.jsp</code> — matches all <code>.jsp</code> files in the\n<code>com</code> directory",
+      "translation": "<code>com/*.jsp</code> 匹配 <code>com</code> 目录中的所有 <code>.jsp</code> 文件",
+      "count": 2
+    },
+    {
+      "source": "<code>com/**/test.jsp</code> — matches all <code>test.jsp</code>\nfiles underneath the <code>com</code> path",
+      "translation": "<code>com/**/test.jsp</code> — 匹配 <code>com</code> 路径下的所有 <code>test.jsp</code> 文件",
+      "count": 2
+    },
+    {
+      "source": "<code>org/springframework/**/*.jsp</code> — matches all\n<code>.jsp</code> files underneath the <code>org/springframework</code> path",
+      "translation": "<code>org/springframework/**/*.jsp</code> — 匹配所有位于 <code>org/springframework</code> 路径下的 <code>.jsp</code> 文件",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the supplied <code>path</code> matched, <code>false</code> if it didn't",
+      "translation": "如果提供的 <code>path</code> 匹配，则返回 <code>true</code>；否则返回 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>**</code> matches zero or more <em>directories</em> in a path",
+      "translation": "<code>**</code> 匹配路径中的零个或多个 <em>目录</em>。",
+      "count": 2
+    },
+    {
+      "source": "<code>{spring:[a-z]+}</code> matches the regexp <code>[a-z]+</code> as a path variable named \"spring\"",
+      "translation": "<code>{spring:[a-z]+}</code> 将正则表达式 <code>[a-z]+</code> 匹配为名为 \"spring\" 的路径变量。",
+      "count": 2
+    },
+    {
+      "source": "<code>pathSeparator</code> - the path separator to use, must not be <code>null</code>.",
+      "translation": "<code>pathSeparator</code> - 要使用的路径分隔符，不能为 <code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the given <code>path</code> represents a pattern",
+      "translation": "如果给定的 <code>path</code> 表示一个模式，则为 <code>true</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>pattern</code> - the pattern to match against (never <code>null</code>)",
+      "translation": "<code>pattern</code> - 要匹配的图案（永远不为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the pattern-mapped part of the given <code>path</code>\n(never <code>null</code>)",
+      "translation": "给定 `<code>path</code>` 的模式映射部分（永远不会为 `<code>null</code>`）",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the two patterns cannot be combined",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果两个模式无法合并",
+      "count": 2
+    },
+    {
+      "source": "<code>?</code> matches one character",
+      "translation": "<code>?</code> 匹配单个字符",
+      "count": 2
+    },
+    {
+      "source": "<code>*</code> matches zero or more characters",
+      "translation": "<code>*</code> 匹配零个或多个字符",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - the path to check",
+      "translation": "<code>path</code> - 要检查的路径",
+      "count": 2
+    },
+    {
+      "source": "<code>fullMatch</code> - whether a full pattern match is required (else a pattern match\nas far as the given base path goes is sufficient)",
+      "translation": "<code>fullMatch</code> - 是否要求完全匹配模式（否则，只要给定基本路径范围内的模式匹配就足够了）",
+      "count": 2
+    },
+    {
+      "source": "<code>pattern</code> - the pattern to tokenize",
+      "translation": "<code>pattern</code> - 用于分词的模板",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - the path to tokenize",
+      "translation": "<code>path</code> - 要分词的路径",
+      "count": 2
+    },
+    {
+      "source": "a corresponding AntPathStringMatcher (never <code>null</code>)",
+      "translation": "一个对应的 AntPathStringMatcher（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>pattern</code> - the path pattern",
+      "translation": "<code>pattern</code> - 路径模式",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - the full path to introspect",
+      "translation": "<code>path</code> - 用于内省的完整路径",
+      "count": 2
+    },
+    {
+      "source": "<code>pattern</code> - the path pattern, possibly containing URI templates",
+      "translation": "<code>pattern</code> - 路径模式，可能包含 URI 模板",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - the full path to extract template variables from",
+      "translation": "<code>path</code> - 用于提取模板变量的完整路径",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - the full path to use for comparison",
+      "translation": "<code>path</code> - 用于比较的完整路径",
+      "count": 2
+    },
+    {
+      "source": "the tokenized pattern parts",
+      "translation": "分词后的模式部分",
+      "count": 2
+    },
+    {
+      "source": "the tokenized path parts",
+      "translation": "分词后的路径部分",
+      "count": 2
+    },
+    {
+      "source": "a map, containing variable names as keys; variables values as values",
+      "translation": "一个包含变量名作为键、变量值作为值的映射；",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>false</code>.",
+      "translation": "默认值为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "For example:",
+      "translation": "例如：",
+      "count": 1
+    },
+    {
+      "source": "Tests whether a string matches against a pattern via a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html\" title=\"class or interface in java.util.regex\"><code>Pattern</code></a>.",
+      "translation": "测试字符串是否通过<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html\" title=\"class or interface in java.util.regex\"><code>Pattern</code></a>匹配模式。",
+      "count": 1
+    },
+    {
+      "source": "Given a full path, returns a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a> suitable for sorting patterns in order of\nexplicitness.",
+      "translation": "给定完整路径，返回一个适合按明确性对模式进行排序的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Match the given <code>path</code> against the corresponding part of the given\n<code>pattern</code>, according to this PathMatcher's matching strategy.",
+      "translation": "根据此 PathMatcher 的匹配策略，将给定的 <code>path</code> 与给定的 <code>pattern</code> 的相应部分进行匹配。",
+      "count": 1
+    },
+    {
+      "source": "Does the given <code>path</code> represent a pattern that can be matched\nby an implementation of this interface?",
+      "translation": "给定的 `<code>path</code>` 是否代表一个可以由该接口的实现进行匹配的模式？",
+      "count": 1
+    },
+    {
+      "source": "Combine two patterns into a new pattern.",
+      "translation": "将两个模式组合成一个新的模式。",
+      "count": 1
+    },
+    {
+      "source": "Given a pattern and a full path, determine the pattern-mapped part.",
+      "translation": "给定一个模式和完整路径，确定模式映射部分。",
+      "count": 1
+    },
+    {
+      "source": "Given a pattern and a full path, extract the URI template variables.",
+      "translation": "给定一个模式和完整路径，提取 URI 模板变量。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to perform pattern matching in a case-sensitive fashion.",
+      "translation": "指定是否以区分大小写的方式执行模式匹配。",
+      "count": 1
+    },
+    {
+      "source": "Set the path separator to use for pattern parsing.",
+      "translation": "设置用于模式解析的路径分隔符。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to trim tokenized paths and patterns.",
+      "translation": "指定是否修剪分词后的路径和模式。",
+      "count": 1
+    },
+    {
+      "source": "Tokenize the given path pattern into parts, based on this matcher's settings.",
+      "translation": "根据此匹配器的设置，将给定的路径模式拆分为部分。",
+      "count": 1
+    },
+    {
+      "source": "<code>pattern1</code> - the first pattern",
+      "translation": "<code>pattern1</code> - 第一个模式",
+      "count": 1
+    },
+    {
+      "source": "<code>pattern2</code> - the second pattern",
+      "translation": "<code>pattern2</code> - 第二个模式",
+      "count": 1
+    },
+    {
+      "source": "Alef Arendsen, Juergen Hoeller, Rob Harrop, Arjen Poutsma, Rossen Stoyanchev, Sam Brannen, Vladislav Kisel",
+      "translation": "Alef Arendsen，Juergen Hoeller，Rob Harrop，Arjen Poutsma，Rossen Stoyanchev，Sam Brannen，Vladislav Kisel",
+      "count": 1
+    },
+    {
+      "source": "the combination of the two patterns",
+      "translation": "两种模式的组合",
+      "count": 1
+    },
+    {
+      "source": "a comparator capable of sorting patterns in order of explicitness",
+      "translation": "一个能够按明确性顺序对模式进行排序的比较器。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

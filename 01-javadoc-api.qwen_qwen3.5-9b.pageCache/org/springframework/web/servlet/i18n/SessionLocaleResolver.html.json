@@ -1,0 +1,206 @@
+{
+  "created_at": "2026-04-14 19:53:00",
+  "updated_at": "2026-04-14 19:53:00",
+  "stats": {
+    "total_entries": 38,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 38,
+    "entries_without_hits": 0,
+    "hit_rate": 1.236842105263158,
+    "usage_percentage": 0.0038000000000000004
+  },
+  "items": [
+    {
+      "source": "Only used internally by this implementation.",
+      "translation": "仅由本实现内部使用。",
+      "count": 3
+    },
+    {
+      "source": "In contrast to <a href=\"CookieLocaleResolver.html\" title=\"class in org.springframework.web.servlet.i18n\"><code>CookieLocaleResolver</code></a>, this strategy stores locally\nchosen locale settings in the Servlet container's <code>HttpSession</code>. As a\nconsequence, those settings are just temporary for each session and therefore\nlost when each session terminates.",
+      "translation": "与<a href=\"CookieLocaleResolver.html\" title=\"class in org.springframework.web.servlet.i18n\"><code>CookieLocaleResolver</code></a>相反，此策略将用户本地选择的区域设置存储在 Servlet 容器的<code>HttpSession</code>中。因此，这些设置仅对每个会话临时有效，并在每个会话终止时丢失。",
+      "count": 2
+    },
+    {
+      "source": "Note that there is no direct relationship with external session management\nmechanisms such as the \"Spring Session\" project. This <code>LocaleResolver</code>\nwill simply evaluate and modify corresponding <code>HttpSession</code> attributes\nagainst the current <code>HttpServletRequest</code>.",
+      "translation": "请注意，与外部会话管理机制（如\"Spring Session\"项目）之间没有直接关系。此<code>LocaleResolver</code>将简单地根据当前的<code>HttpServletRequest</code>评估并修改相应的<code>HttpSession</code>属性。",
+      "count": 2
+    },
+    {
+      "source": "The default is an internal <a href=\"#LOCALE_SESSION_ATTRIBUTE_NAME\"><code>LOCALE_SESSION_ATTRIBUTE_NAME</code></a>.",
+      "translation": "默认值为内部<a href=\"#LOCALE_SESSION_ATTRIBUTE_NAME\"><code>LOCALE_SESSION_ATTRIBUTE_NAME</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default is an internal <a href=\"#TIME_ZONE_SESSION_ATTRIBUTE_NAME\"><code>TIME_ZONE_SESSION_ATTRIBUTE_NAME</code></a>.",
+      "translation": "默认值为内部<a href=\"#TIME_ZONE_SESSION_ATTRIBUTE_NAME\"><code>TIME_ZONE_SESSION_ATTRIBUTE_NAME</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This is most appropriate if the application needs user sessions anyway,\ni.e. when the <code>HttpSession</code> does not have to be created just for storing\nthe user's locale. The session may optionally contain an associated time zone\nattribute as well; alternatively, you may specify a default time zone.",
+      "translation": "如果应用程序本身就需要用户会话，即当不需要仅为了存储用户的区域设置而创建 `<code>HttpSession</code>` 时，这是最合适的方法。会话还可以可选地包含一个关联的时区属性；或者，您可以指定一个默认时区。",
+      "count": 2
+    },
+    {
+      "source": "Set the current locale context to the given one,\npotentially including a locale with associated time zone information.",
+      "translation": "设置当前区域上下文为给定的一个，可能包含带有相关时区信息的区域。",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Vedran Pavic",
+      "translation": "Jürgen Hoeller，Vedran Pavic",
+      "count": 2
+    },
+    {
+      "source": "This is primarily intended for framework-level processing; consider using\n<a href=\"../support/RequestContextUtils.html\" title=\"class in org.springframework.web.servlet.support\"><code>RequestContextUtils</code></a> or\n<a href=\"../support/RequestContext.html\" title=\"class in org.springframework.web.servlet.support\"><code>RequestContext</code></a> for\napplication-level access to the current locale and/or time zone.",
+      "translation": "这主要用于框架级别的处理；如需在应用级别访问当前区域设置和/或时区，请考虑使用<a href=\"../support/RequestContextUtils.html\" title=\"class in org.springframework.web.servlet.support\"><code>RequestContextUtils</code></a> 或<a href=\"../support/RequestContext.html\" title=\"class in org.springframework.web.servlet.support\"><code>RequestContext</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Custom controllers can override the user's locale and time zone by calling\n<code>#setLocale(Context)</code> on the resolver, for example, responding to a locale change\nrequest. As a more convenient alternative, consider using\n<a href=\"../support/RequestContext.html#changeLocale(java.util.Locale)\"><code>RequestContext.changeLocale(Locale)</code></a>.",
+      "translation": "自定义控制器可以通过在解析器上调用<code>#setLocale(Context)</code>来覆盖用户的区域设置和时区，例如响应区域设置更改请求。作为一种更便捷的替代方案，请考虑使用<a href=\"../support/RequestContext.html#changeLocale(java.util.Locale)\"><code>RequestContext.changeLocale(Locale)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The returned context may be a\n<a href=\"../../../context/i18n/TimeZoneAwareLocaleContext.html\" title=\"interface in org.springframework.context.i18n\"><code>TimeZoneAwareLocaleContext</code></a>,\ncontaining a locale with associated time zone information.\nSimply apply an <code>instanceof</code> check and downcast accordingly.",
+      "translation": "返回的上下文可能是`<a href=\"../../../context/i18n/TimeZoneAwareLocaleContext.html\" title=\"interface in org.springframework.context.i18n\"><code>TimeZoneAwareLocaleContext</code></a>`，其中包含带有关联时区信息的区域设置。只需应用一个 `<code>instanceof</code>` 检查并相应地进行向下转换即可。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the configured\n<a href=\"AbstractLocaleResolver.html#setDefaultLocale(java.util.Locale)\">default locale</a>, if any, and otherwise\nfalls back to the request's <code>Accept-Language</code> header locale or the\ndefault locale for the server.",
+      "translation": "默认实现会返回配置的<a href=\"AbstractLocaleResolver.html#setDefaultLocale(java.util.Locale)\">默认区域设置</a>（如果有），否则回退到请求的<code>Accept-Language</code> 标头区域设置或服务器的默认区域设置。",
+      "count": 1
+    },
+    {
+      "source": "Use <code>RequestContext(Utils).getLocale()</code>\nto retrieve the current locale in controllers or views.",
+      "translation": "使用<code>RequestContext(Utils).getLocale()</code>在控制器或视图中获取当前区域设置。",
+      "count": 1
+    },
+    {
+      "source": "Use <code>RequestContext(Utils).getTimeZone()</code>\nto retrieve the current time zone in controllers or views.",
+      "translation": "使用<code>RequestContext(Utils).getTimeZone()</code>在控制器或视图中获取当前时区。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the configured default time zone,\nif any, or <code>null</code> otherwise.",
+      "translation": "默认实现返回配置的默认时区（如果有），否则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Can return a default locale as fallback in any case.",
+      "translation": "在任何情况下都可以返回默认区域设置作为后备。",
+      "count": 1
+    },
+    {
+      "source": "Custom resolver implementations may also return extra settings in\nthe returned context, which again can be accessed through downcasting.",
+      "translation": "自定义解析器实现也可以在返回的上下文中返回额外的设置，这些设置同样可以通过向下转型进行访问。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the corresponding attribute in the <code>HttpSession</code>,\nholding the current <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html\" title=\"class or interface in java.util\"><code>Locale</code></a> value.",
+      "translation": "指定 `<code>HttpSession</code>` 中用于存储当前 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html\" title=\"class or interface in java.util\"><code>Locale</code></a> 值的相应属性名称。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the corresponding attribute in the <code>HttpSession</code>,\nholding the current <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html\" title=\"class or interface in java.util\"><code>TimeZone</code></a> value.",
+      "translation": "指定 `<code>HttpSession</code>` 中用于存储当前 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html\" title=\"class or interface in java.util\"><code>TimeZone</code></a> 值的相应属性名称。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LocaleResolver.html#resolveLocale(jakarta.servlet.http.HttpServletRequest)\">LocaleResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LocaleResolver.html#resolveLocale(jakarta.servlet.http.HttpServletRequest)\">LocaleResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LocaleContextResolver.html#resolveLocaleContext(jakarta.servlet.http.HttpServletRequest)\">LocaleContextResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LocaleContextResolver.html#resolveLocaleContext(jakarta.servlet.http.HttpServletRequest)\">LocaleContextResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../LocaleContextResolver.html#setLocaleContext(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,org.springframework.context.i18n.LocaleContext)\">LocaleContextResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../LocaleContextResolver.html#setLocaleContext(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,org.springframework.context.i18n.LocaleContext)\">LocaleContextResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Set the function used to determine the default locale for the given request,\ncalled if no <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html\" title=\"class or interface in java.util\"><code>Locale</code></a> session attribute has been found.",
+      "translation": "设置用于确定给定请求默认区域设置的函数，如果在会话中未找到 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Locale.html\" title=\"class or interface in java.util\"><code>Locale</code></a>` 会话属性，则调用该函数。",
+      "count": 1
+    },
+    {
+      "source": "Set the function used to determine the default time zone for the given request,\ncalled if no <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html\" title=\"class or interface in java.util\"><code>TimeZone</code></a> session attribute has been found.",
+      "translation": "设置用于确定给定请求的默认时区的函数，如果在未找到 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html\" title=\"class or interface in java.util\"><code>TimeZone</code></a>` 会话属性时将调用该函数。",
+      "count": 1
+    },
+    {
+      "source": "Default name of the session attribute that holds the Locale.",
+      "translation": "存储 Locale 的会话属性的默认名称。",
+      "count": 1
+    },
+    {
+      "source": "Default name of the session attribute that holds the TimeZone.",
+      "translation": "存储时区的会话属性的默认名称。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the current locale via the given request.",
+      "translation": "通过给定的请求解析当前区域设置。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the current locale context via the given request.",
+      "translation": "通过给定的请求解析当前的区域设置上下文。",
+      "count": 1
+    },
+    {
+      "source": "<code>localeContext</code> - the new locale context, or <code>null</code> to clear the locale",
+      "translation": "<code>localeContext</code> - 新的区域设置上下文，或为 <code>null</code> 以清除区域设置",
+      "count": 1
+    },
+    {
+      "source": "<code>defaultLocaleFunction</code> - the function used to determine the default locale",
+      "translation": "<code>defaultLocaleFunction</code> - 用于确定默认区域设置的函数",
+      "count": 1
+    },
+    {
+      "source": "<code>defaultTimeZoneFunction</code> - the function used to determine the default time zone",
+      "translation": "<code>defaultTimeZoneFunction</code> - 用于确定默认时区的函数",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the request to resolve the locale for",
+      "translation": "<code>request</code> - 用于解析区域设置的请求",
+      "count": 1
+    },
+    {
+      "source": "the current locale (never <code>null</code>)",
+      "translation": "当前区域设置（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the request to resolve the locale context for",
+      "translation": "<code>request</code> - 用于解析区域设置上下文的请求",
+      "count": 1
+    },
+    {
+      "source": "the current locale context (never <code>null</code>",
+      "translation": "当前区域设置上下文（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the request to be used for locale modification",
+      "translation": "<code>request</code> - 用于修改区域设置的请求",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - the response to be used for locale modification",
+      "translation": "<code>response</code> - 用于区域设置修改的响应",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

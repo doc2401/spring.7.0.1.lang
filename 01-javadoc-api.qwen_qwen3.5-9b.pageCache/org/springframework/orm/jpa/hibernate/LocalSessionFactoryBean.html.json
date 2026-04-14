@@ -1,0 +1,486 @@
+{
+  "created_at": "2026-04-14 16:04:08",
+  "updated_at": "2026-04-14 16:04:08",
+  "stats": {
+    "total_entries": 94,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 147,
+    "entries_with_hits": 94,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5638297872340425,
+    "usage_percentage": 0.009399999999999999
+  },
+  "items": [
+    {
+      "source": "Can be used to add to mappings from a Hibernate XML config file,\nor to specify all mappings locally.",
+      "translation": "可用于从 Hibernate XML 配置文件添加映射，或指定所有本地映射。",
+      "count": 5
+    },
+    {
+      "source": "Note: Can be omitted when all necessary properties and mapping\nresources are specified locally via this bean.",
+      "translation": "注：当所有必要的属性和映射资源均通过此 Bean 在本地指定时，可以省略此项。",
+      "count": 3
+    },
+    {
+      "source": "Determine the Spring <a href=\"../../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a> to use for Hibernate metadata.",
+      "translation": "确定用于 Hibernate 元数据的 Spring <a href=\"../../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Specify a Spring <a href=\"../../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a> to use for Hibernate metadata.",
+      "translation": "指定用于 Hibernate 元数据的 Spring <a href=\"../../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Compatible with Hibernate ORM 7.1, as of Spring Framework 7.0.\nThis Hibernate-specific <code>LocalSessionFactoryBean</code> can be an immediate alternative\nto <a href=\"../LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a> for\ncommon JPA purposes: The Hibernate <code>SessionFactory</code> will natively expose the JPA\n<code>EntityManagerFactory</code> interface as well, and Hibernate <code>BeanContainer</code>\nintegration will be registered out of the box. In combination with\n<a href=\"HibernateTransactionManager.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>HibernateTransactionManager</code></a>, this naturally allows for mixing JPA access code\nwith native Hibernate access code within the same transaction.",
+      "translation": "与 Hibernate ORM 7.1 兼容，自 Spring Framework 7.0 起。此特定于 Hibernate 的<code>LocalSessionFactoryBean</code>可作为<a href=\"../LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a>的即时替代方案，用于常见的 JPA 目的：Hibernate 的<code>SessionFactory</code>将原生暴露 JPA<code>EntityManagerFactory</code>接口，并且 Hibernate<code>BeanContainer</code>集成也将开箱即用。与<a href=\"HibernateTransactionManager.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>HibernateTransactionManager</code></a>结合使用时，这自然允许在同一事务中混合使用 JPA 访问代码和原生 Hibernate 访问代码。",
+      "count": 2
+    },
+    {
+      "source": "This will only be applied for an internally built <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a>\ninstance. <a href=\"#setMetadataSources(org.hibernate.boot.MetadataSources)\"><code>setMetadataSources(MetadataSources)</code></a> effectively overrides such settings,\nwith integrators to be applied to the externally built <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a>.",
+      "translation": "这仅适用于内部构建的 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a> 实例。<a href=\"#setMetadataSources(org.hibernate.boot.MetadataSources)\"><code>setMetadataSources(MetadataSources)</code></a> 实际上会覆盖此类设置，而集成器将应用于外部构建的 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>SessionFactory</code> initialization will then switch into background\nbootstrap mode, with a <code>SessionFactory</code> proxy immediately returned for\ninjection purposes instead of waiting for Hibernate's bootstrapping to complete.\nHowever, note that the first actual call to a <code>SessionFactory</code> method will\nthen block until Hibernate's bootstrapping completed, if not ready by then.\nFor maximum benefit, make sure to avoid early <code>SessionFactory</code> calls\nin init methods of related beans, even for metadata introspection purposes.",
+      "translation": "<code>SessionFactory</code> 初始化随后将切换到后台引导模式，立即返回一个 <code>SessionFactory</code> 代理用于注入目的，而无需等待 Hibernate 的引导完成。然而，请注意，如果此时尚未准备好，对 <code>SessionFactory</code> 方法的首次实际调用将会阻塞，直到 Hibernate 的引导完成。为了获得最大收益，请确保在相关 Bean 的初始化方法中避免早期调用 <code>SessionFactory</code>，即使是为了元数据内省目的。",
+      "count": 2
+    },
+    {
+      "source": "Can also be externally called to initialize and pre-populate a <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a>\ninstance which is then going to be used for <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\"><code>SessionFactory</code></a> building.",
+      "translation": "也可从外部调用以初始化并预填充一个 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a> 实例，该实例随后将用于 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\"><code>SessionFactory</code></a> 的构建。",
+      "count": 2
+    },
+    {
+      "source": "Default is to search all specified packages for classes annotated with\n<code>@jakarta.persistence.Entity</code>, <code>@jakarta.persistence.Embeddable</code>\nor <code>@jakarta.persistence.MappedSuperclass</code>.",
+      "translation": "默认情况下，会在所有指定的包中搜索带有 `<code>@jakarta.persistence.Entity</code>`、`<code>@jakarta.persistence.Embeddable</code>` 或 `<code>@jakarta.persistence.MappedSuperclass</code>` 注解的类。",
+      "count": 2
+    },
+    {
+      "source": "By default, this supports the primary type exposed by the factory, as\nindicated by <a href=\"../../../beans/factory/FactoryBean.html#getObjectType()\"><code>FactoryBean.getObjectType()</code></a>. Specific factories may support\nadditional types for dependency injection.",
+      "translation": "默认情况下，它支持工厂暴露的主类型，如<a href=\"../../../beans/factory/FactoryBean.html#getObjectType()\"><code>FactoryBean.getObjectType()</code></a>所示。特定工厂可能支持用于依赖注入的额外类型。",
+      "count": 2
+    },
+    {
+      "source": "If this is set, the Hibernate settings should not define\na connection provider to avoid meaningless double configuration.",
+      "translation": "如果设置了此项，Hibernate 配置不应定义连接提供者，以避免无意义的重复配置。",
+      "count": 2
+    },
+    {
+      "source": "Note: If this is set, the Hibernate settings should not define a\ncache provider to avoid meaningless double configuration.",
+      "translation": "注意：如果设置了此项，Hibernate 配置不应定义缓存提供者，以避免无意义的重复配置。",
+      "count": 2
+    },
+    {
+      "source": "Note: Do not specify a transaction provider here when using\nSpring-driven transactions. It is also advisable to omit connection\nprovider settings and use a Spring-set DataSource instead.",
+      "translation": "注意：在使用 Spring 驱动的事务时，请勿在此指定事务提供者。此外，建议省略连接提供者设置，并使用由 Spring 配置的 DataSource。",
+      "count": 2
+    },
+    {
+      "source": "As of 6.2, Hibernate initialization is enforced before context refresh\ncompletion, waiting for asynchronous bootstrapping to complete by then.",
+      "translation": "自 6.2 版本起，Hibernate 初始化将在上下文刷新完成之前强制执行，等待此时异步引导完成。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation invokes LocalSessionFactoryBuilder's buildSessionFactory.\nA custom implementation could prepare the instance in a specific way (for example, applying\na custom ServiceRegistry) or use a custom SessionFactoryImpl subclass.",
+      "translation": "默认实现会调用 `LocalSessionFactoryBuilder` 的 `buildSessionFactory` 方法。自定义实现可以以特定方式准备该实例（例如，应用自定义的 `ServiceRegistry`），或使用自定义的 `SessionFactoryImpl` 子类。",
+      "count": 2
+    },
+    {
+      "source": "Accept the containing <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, registering corresponding Hibernate\n<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/resource/beans/container/spi/BeanContainer.html\" title=\"class or interface in org.hibernate.resource.beans.container.spi\"><code>BeanContainer</code></a> integration for\nit if possible. This requires a Spring <a href=\"../../../beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"interface in org.springframework.beans.factory.config\"><code>ConfigurableListableBeanFactory</code></a>.",
+      "translation": "接受包含的<a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>，并在可能的情况下为其注册相应的 Hibernate<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/resource/beans/container/spi/BeanContainer.html\" title=\"class or interface in org.hibernate.resource.beans.container.spi\"><code>BeanContainer</code></a>集成。这需要 Spring 的<a href=\"../../../beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"interface in org.springframework.beans.factory.config\"><code>ConfigurableListableBeanFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Accept the containing <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, registering corresponding Hibernate\n<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/resource/beans/container/spi/BeanContainer.html\" title=\"class or interface in org.hibernate.resource.beans.container.spi\"><code>BeanContainer</code></a> integration for\nit if possible.",
+      "translation": "接受包含 <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 的内容，如果可能的话，为其注册相应的 Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/resource/beans/container/spi/BeanContainer.html\" title=\"class or interface in org.hibernate.resource.beans.container.spi\"><code>BeanContainer</code></a> 集成。",
+      "count": 2
+    },
+    {
+      "source": "Specify a Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a> service to use (for example, reusing an\nexisting one), potentially populated with a custom Hibernate bootstrap\n<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/service/ServiceRegistry.html\" title=\"class or interface in org.hibernate.service\"><code>ServiceRegistry</code></a> as well.",
+      "translation": "指定要使用的 Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a> 服务（例如，重用现有的一个），并可能使用自定义的 Hibernate 引导 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/service/ServiceRegistry.html\" title=\"class or interface in org.hibernate.service\"><code>ServiceRegistry</code></a> 对其进行填充。",
+      "count": 2
+    },
+    {
+      "source": "Set the Spring <a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>\nor the JTA <code>TransactionManager</code> to be used with Hibernate,\nif any. Implicitly sets up <code>JtaPlatform</code>.",
+      "translation": "设置要与 Hibernate 一起使用的 Spring <a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> 或 JTA <code>TransactionManager</code>（如果有）。隐式设置 <code>JtaPlatform</code>。",
+      "count": 2
+    },
+    {
+      "source": "Set the Spring <a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>\nor the JTA <code>TransactionManager</code> to be used with Hibernate,\nif any.",
+      "translation": "设置要与 Hibernate 一起使用的 Spring <a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>或 JTA<code>TransactionManager</code>（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/SmartFactoryBean.html#supportsType(java.lang.Class)\">SmartFactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/SmartFactoryBean.html#supportsType(java.lang.Class)\">SmartFactoryBean</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Specify an asynchronous executor for background bootstrapping,\nfor example, a <a href=\"../../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>.",
+      "translation": "指定一个用于后台引导的异步执行器，例如<a href=\"../../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set a <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/context/spi/CurrentTenantIdentifierResolver.html\" title=\"class or interface in org.hibernate.context.spi\"><code>CurrentTenantIdentifierResolver</code></a> to be passed on to the SessionFactory.",
+      "translation": "设置一个 `<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/context/spi/CurrentTenantIdentifierResolver.html\" title=\"class or interface in org.hibernate.context.spi\"><code>CurrentTenantIdentifierResolver</code></a>` 传递给 SessionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Set a Hibernate 5 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/model/naming/ImplicitNamingStrategy.html\" title=\"class or interface in org.hibernate.boot.model.naming\"><code>ImplicitNamingStrategy</code></a> for the SessionFactory.",
+      "translation": "为 SessionFactory 设置一个 Hibernate 5 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/model/naming/ImplicitNamingStrategy.html\" title=\"class or interface in org.hibernate.boot.model.naming\"><code>ImplicitNamingStrategy</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set a <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/engine/jdbc/connections/spi/MultiTenantConnectionProvider.html\" title=\"class or interface in org.hibernate.engine.jdbc.connections.spi\"><code>MultiTenantConnectionProvider</code></a> to be passed on to the SessionFactory.",
+      "translation": "设置一个 `<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/engine/jdbc/connections/spi/MultiTenantConnectionProvider.html\" title=\"class or interface in org.hibernate.engine.jdbc.connections.spi\"><code>MultiTenantConnectionProvider</code></a>` 传递给 SessionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Set a Hibernate 5 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/model/naming/PhysicalNamingStrategy.html\" title=\"class or interface in org.hibernate.boot.model.naming\"><code>PhysicalNamingStrategy</code></a> for the SessionFactory.",
+      "translation": "为 SessionFactory 设置一个 Hibernate 5 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/model/naming/PhysicalNamingStrategy.html\" title=\"class or interface in org.hibernate.boot.model.naming\"><code>PhysicalNamingStrategy</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify packages to search for autodetection of your entity classes in the\nclasspath. This is analogous to Spring's component-scan feature\n(<a href=\"../../../context/annotation/ClassPathBeanDefinitionScanner.html\" title=\"class in org.springframework.context.annotation\"><code>ClassPathBeanDefinitionScanner</code></a>).",
+      "translation": "在类路径中指定要搜索以自动检测实体类的包。这类似于 Spring 的组件扫描功能（<a href=\"../../../context/annotation/ClassPathBeanDefinitionScanner.html\" title=\"class in org.springframework.context.annotation\"><code>ClassPathBeanDefinitionScanner</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> on destruction of a bean.",
+      "translation": "由包含的<code>BeanFactory</code>在销毁 Bean 时调用。",
+      "count": 2
+    },
+    {
+      "source": "Return either the singleton SessionFactory or a shared (Stateless)Session proxy.",
+      "translation": "返回单例的 SessionFactory 或共享（无状态）Session 代理。",
+      "count": 2
+    },
+    {
+      "source": "Specify annotated entity classes to register with this Hibernate SessionFactory.",
+      "translation": "指定要与此 Hibernate SessionFactory 注册的注解实体类。",
+      "count": 2
+    },
+    {
+      "source": "Specify the names of annotated packages, for which package-level\nannotation metadata will be read.",
+      "translation": "指定已标注的包名称，将读取这些包的包级注解元数据。",
+      "count": 2
+    },
+    {
+      "source": "Set a Hibernate entity interceptor that allows to inspect and change\nproperty values before writing to and reading from the database.\nWill get applied to any new Session created by this factory.",
+      "translation": "设置一个 Hibernate 实体拦截器，以便在写入和读取数据库之前检查和修改属性值。此拦截器将应用于该工厂创建的任何新 Session。",
+      "count": 2
+    },
+    {
+      "source": "Return the Hibernate properties, if any. Mainly available for\nconfiguration through property paths that specify individual keys.",
+      "translation": "返回 Hibernate 属性（如果有）。主要通过指定单个键的属性路径进行配置。",
+      "count": 2
+    },
+    {
+      "source": "Return the Hibernate Configuration object used to build the SessionFactory.\nAllows for access to configuration metadata stored there (rarely needed).",
+      "translation": "返回用于构建 SessionFactory 的 Hibernate Configuration 对象。允许访问存储在该处的配置元数据（很少需要）。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code>` 在接口 `<code><a href=\"../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/SmartFactoryBean.html#getObject(java.lang.Class)\">getObject</a></code> in interface <code><a href=\"../../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\">SmartFactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../../beans/factory/SmartFactoryBean.html#getObject(java.lang.Class)\">getObject</a></code>` 在接口 `<code><a href=\"../../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\">SmartFactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/SmartFactoryBean.html#supportsType(java.lang.Class)\">supportsType</a></code> in interface <code><a href=\"../../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\">SmartFactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code>",
+      "translation": "<code><a href=\"../../../beans/factory/SmartFactoryBean.html#supportsType(java.lang.Class)\">supportsType</a></code> 在接口 <code><a href=\"../../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\">SmartFactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\">SessionFactory</a>&gt;</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code> in interface <code><a href=\"../../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code>` 接口 `<code><a href=\"../../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if <a href=\"../../../beans/factory/SmartFactoryBean.html#getObject(java.lang.Class)\"><code>SmartFactoryBean.getObject(Class)</code></a> is able to\nreturn a corresponding instance, <code>false</code> otherwise",
+      "translation": "如果 `<a href=\"../../../beans/factory/SmartFactoryBean.html#getObject(java.lang.Class)\"><code>SmartFactoryBean.getObject(Class)</code></a>` 能够返回相应的实例，则为 `<code>true</code>`，否则为 `<code>false</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader to use (never <code>null</code>)",
+      "translation": "<code>resourceLoader</code> - 要使用的资源加载器（绝不能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the Configuration object has not been initialized yet",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果 Configuration 对象尚未初始化",
+      "count": 2
+    },
+    {
+      "source": "the MetadataSources to use (never <code>null</code>)",
+      "translation": "要使用的 MetadataSources（永远不能为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the ResourceLoader to use (never <code>null</code>)",
+      "translation": "要使用的 ResourceLoader（绝不能为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>sfb</code> - a LocalSessionFactoryBuilder prepared by this LocalSessionFactoryBean",
+      "translation": "<sfb/> - 由该 LocalSessionFactoryBean 准备的 LocalSessionFactoryBuilder",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the requested type",
+      "translation": "<code>type</code> - 请求的类型",
+      "count": 2
+    },
+    {
+      "source": "the SessionFactory instance",
+      "translation": "SessionFactory 实例",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This callback won't be triggered for singleton beans\nlazily initialized on demand after <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> bootstrap,\nand not for any other bean scope either. Carefully use it for beans\nwith the intended bootstrap semantics only.",
+      "translation": "<b>注意：</b>此回调不会为在 <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 引导后按需懒式初始化的单例 Bean 触发，也不会为任何其他 Bean 作用域触发。请仅针对具有预期引导语义的 Bean 谨慎使用它。",
+      "count": 1
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "As with a <a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"../../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，这支持单例和原型两种设计模式。",
+      "count": 1
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"../../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的 <a href=\"../../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/SmartInitializingSingleton.html#afterSingletonsInstantiated()\">SmartInitializingSingleton</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/SmartInitializingSingleton.html#afterSingletonsInstantiated()\">SmartInitializingSingleton</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/DisposableBean.html#destroy()\">DisposableBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/DisposableBean.html#destroy()\">DisposableBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Determine the Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a> to use.",
+      "translation": "确定要使用的 Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/boot/MetadataSources.html\" title=\"class or interface in org.hibernate.boot\"><code>MetadataSources</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set the Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/cache/spi/RegionFactory.html\" title=\"class or interface in org.hibernate.cache.spi\"><code>RegionFactory</code></a> to use for the SessionFactory.",
+      "translation": "将 Hibernate 的<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/cache/spi/RegionFactory.html\" title=\"class or interface in org.hibernate.cache.spi\"><code>RegionFactory</code></a>设置为 SessionFactory 所用。",
+      "count": 1
+    },
+    {
+      "source": "Specify one or more Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/integrator/spi/Integrator.html\" title=\"class or interface in org.hibernate.integrator.spi\"><code>Integrator</code></a> implementations to apply.",
+      "translation": "指定一个或多个要应用的 Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/integrator/spi/Integrator.html\" title=\"class or interface in org.hibernate.integrator.spi\"><code>Integrator</code></a> 实现。",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Invoked right at the end of the singleton pre-instantiation phase,\nwith a guarantee that all regular singleton beans have been created\nalready.",
+      "translation": "在单例预实例化阶段的最末尾被调用，此时可以保证所有常规单例 Bean 已经创建完毕。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses can override this method to perform custom initialization\nof the SessionFactory instance, creating it via the given Configuration\nobject that got prepared by this LocalSessionFactoryBean.",
+      "translation": "子类可以重写此方法，以通过由该 LocalSessionFactoryBean 准备好的给定 Configuration 对象来执行对 SessionFactory 实例的自定义初始化。",
+      "count": 1
+    },
+    {
+      "source": "Return the Hibernate Configuration object used to build the SessionFactory.",
+      "translation": "返回用于构建 SessionFactory 的 Hibernate Configuration 对象。",
+      "count": 1
+    },
+    {
+      "source": "Return the Hibernate properties, if any.",
+      "translation": "返回任何存在的 Hibernate 属性。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "Set locations of cacheable Hibernate mapping files, for example as web app\nresource \"/WEB-INF/mapping/example.hbm.xml\".",
+      "translation": "设置可缓存的 Hibernate 映射文件的位置，例如作为 Web 应用程序资源\"/WEB-INF/mapping/example.hbm.xml\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the location of a single Hibernate XML config file, for example as\nclasspath resource \"classpath:hibernate.cfg.xml\".",
+      "translation": "设置单个 Hibernate XML 配置文件的位置，例如作为类路径资源\"classpath:hibernate.cfg.xml\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the locations of multiple Hibernate XML config files, for example as\nclasspath resources \"classpath:hibernate.cfg.xml,classpath:extension.cfg.xml\".",
+      "translation": "设置多个 Hibernate XML 配置文件的位置，例如作为类路径资源\"classpath:hibernate.cfg.xml,classpath:extension.cfg.xml\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the DataSource to be used by the SessionFactory.",
+      "translation": "将用于 SessionFactory 的 DataSource 设置好。",
+      "count": 1
+    },
+    {
+      "source": "Set a Hibernate entity interceptor that allows to inspect and change\nproperty values before writing to and reading from the database.",
+      "translation": "设置一个 Hibernate 实体拦截器，以便在写入和读取数据库之前检查和修改属性值。",
+      "count": 1
+    },
+    {
+      "source": "Specify custom type filters for Spring-based scanning for entity classes.",
+      "translation": "为基于 Spring 的实体类扫描指定自定义类型过滤器。",
+      "count": 1
+    },
+    {
+      "source": "Set Hibernate properties, such as \"hibernate.dialect\".",
+      "translation": "设置 Hibernate 属性，例如\"hibernate.dialect\"。",
+      "count": 1
+    },
+    {
+      "source": "Set locations of directories that contain Hibernate mapping resources,\nlike \"WEB-INF/mappings\".",
+      "translation": "设置包含 Hibernate 映射资源的目录位置，例如\"WEB-INF/mappings\"。",
+      "count": 1
+    },
+    {
+      "source": "Set locations of jar files that contain Hibernate mapping resources,\nlike \"WEB-INF/lib/example.hbm.jar\".",
+      "translation": "设置包含 Hibernate 映射资源的 jar 文件位置，例如\"WEB-INF/lib/example.hbm.jar\"。",
+      "count": 1
+    },
+    {
+      "source": "Set locations of Hibernate mapping files, for example as classpath\nresource \"classpath:example.hbm.xml\".",
+      "translation": "设置 Hibernate 映射文件的位置，例如作为类路径资源\"classpath:example.hbm.xml\"。",
+      "count": 1
+    },
+    {
+      "source": "Set Hibernate mapping resources to be found in the class path,\nlike \"example.hbm.xml\" or \"mypackage/example.hbm.xml\".",
+      "translation": "将 Hibernate 映射资源设置为在类路径中查找，例如 \"example.hbm.xml\" 或 \"mypackage/example.hbm.xml\"。",
+      "count": 1
+    },
+    {
+      "source": "Specify packages to search for autodetection of your entity classes in the\nclasspath.",
+      "translation": "在类路径中指定要搜索以自动检测实体类的包。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether this factory supports the requested type.",
+      "translation": "确定该工厂是否支持请求的类型。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/SmartInitializingSingleton.html#afterSingletonsInstantiated()\">afterSingletonsInstantiated</a></code> in interface <code><a href=\"../../../beans/factory/SmartInitializingSingleton.html\" title=\"interface in org.springframework.beans.factory\">SmartInitializingSingleton</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/SmartInitializingSingleton.html#afterSingletonsInstantiated()\">afterSingletonsInstantiated</a></code>` 接口 `<code><a href=\"../../../beans/factory/SmartInitializingSingleton.html\" title=\"interface in org.springframework.beans.factory\">SmartInitializingSingleton</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 接口 `<code><a href=\"../../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of creation errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 在创建错误时",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "a corresponding instance managed by this factory,\nor <code>null</code> if none available",
+      "translation": "由该工厂管理的对应实例，若无可用实例则为<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

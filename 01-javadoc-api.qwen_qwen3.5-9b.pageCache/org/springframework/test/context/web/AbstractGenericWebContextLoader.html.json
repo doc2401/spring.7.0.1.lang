@@ -1,0 +1,341 @@
+{
+  "created_at": "2026-04-14 17:04:12",
+  "updated_at": "2026-04-14 17:04:12",
+  "stats": {
+    "total_entries": 65,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 114,
+    "entries_with_hits": 65,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7538461538461538,
+    "usage_percentage": 0.0065
+  },
+  "items": [
+    {
+      "source": "a new web application context",
+      "translation": "一个新的 Web 应用程序上下文",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if context loading failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 如果上下文加载失败",
+      "count": 4
+    },
+    {
+      "source": "<code>mergedConfig</code> - the merged context configuration to use to load the\napplication context",
+      "translation": "<code>mergedConfig</code> - 用于加载应用上下文的合并上下文配置",
+      "count": 4
+    },
+    {
+      "source": "<code>webMergedConfig</code> - the merged context configuration to use to load the\nweb application context",
+      "translation": "<code>webMergedConfig</code> - 用于加载 Web 应用程序上下文的合并上下文配置。",
+      "count": 4
+    },
+    {
+      "source": "Instances of concrete subclasses are invoked via the\n<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>\nSPI, and the context will be loaded from the <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>\nprovided to <a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext(MergedContextConfiguration)</code></a>. In such cases, a\n<code>SmartContextLoader</code> will decide whether to load the context from\n<em>locations</em> or <em>annotated classes</em>. Note that <code>\nAbstractGenericWebContextLoader</code> does not support the <code>\nloadContext(String... locations)</code> method from the legacy\n<a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a> SPI.",
+      "translation": "具体子类的实例通过 `<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>` SPI 调用，上下文将从提供给 `<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext(MergedContextConfiguration)</code></a>` 的 `<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>` 中加载。在这种情况下，`<code>SmartContextLoader</code>` 将决定是从 `<em>locations</em>` 还是从 `<em>annotated classes</em>` 加载上下文。请注意，`<code>AbstractGenericWebContextLoader</code>` 不支持来自遗留 `<a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>` SPI 的 `<code>loadContext(String... locations)</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "In contrast to <a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext(MergedContextConfiguration)</code></a>, this\nmethod does not\n<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\">refresh</a> the <code>ApplicationContext</code> or\n<a href=\"../../../context/ConfigurableApplicationContext.html#registerShutdownHook()\">register a JVM shutdown hook</a> for it. Otherwise, this method implements\nbehavior identical to <a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext(MergedContextConfiguration)</code></a>.",
+      "translation": "与<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext(MergedContextConfiguration)</code></a>不同，此方法不会<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\">刷新</a><code>ApplicationContext</code>或为其<a href=\"../../../context/ConfigurableApplicationContext.html#registerShutdownHook()\">注册 JVM 关闭钩子</a>。否则，此方法实现的行为与<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext(MergedContextConfiguration)</code></a>完全相同。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation creates a <code>GenericWebApplicationContext</code>\nusing the default constructor. This method may be overridden — for\nexample, to use a custom context subclass or to create a\n<code>GenericWebApplicationContext</code> with a custom\n<a href=\"../../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a> implementation.",
+      "translation": "默认实现使用默认构造函数创建 <code>GenericWebApplicationContext</code>。此方法可以被重写——例如，以使用自定义上下文子类或创建带有自定义<a href=\"../../../beans/factory/support/DefaultListableBeanFactory.html\" title=\"class in org.springframework.beans.factory.support\"><code>DefaultListableBeanFactory</code></a> 实现的 <code>GenericWebApplicationContext</code>。",
+      "count": 2
+    },
+    {
+      "source": "Concrete subclasses must provide an appropriate implementation of\n<a href=\"#loadBeanDefinitions(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>loadBeanDefinitions(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a>.",
+      "translation": "具体子类必须提供 <a href=\"#loadBeanDefinitions(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>loadBeanDefinitions(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a> 的适当实现。",
+      "count": 2
+    },
+    {
+      "source": "Otherwise the context hierarchy of the supplied WAC will be traversed\nto find the top-most WAC (i.e., the root); and the <code>ServletContext</code>\nof the Root WAC will be set as the <code>ServletContext</code> for the supplied\nWAC.",
+      "translation": "否则，将遍历所提供的 WAC 的上下文层次结构以查找最顶层的 WAC（即根）；并将根 WAC 的 `<code>ServletContext</code>` 设置为所提供 WAC 的 `<code>ServletContext</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply delegates to\n<a href=\"../support/AbstractContextLoader.html#customizeContext(org.springframework.context.ConfigurableApplicationContext,org.springframework.test.context.MergedContextConfiguration)\"><code>AbstractContextLoader.customizeContext(ConfigurableApplicationContext, MergedContextConfiguration)</code></a>.",
+      "translation": "默认实现只是委托给 <a href=\"../support/AbstractContextLoader.html#customizeContext(org.springframework.context.ConfigurableApplicationContext,org.springframework.test.context.MergedContextConfiguration)\"><code>AbstractContextLoader.customizeContext(ConfigurableApplicationContext, MergedContextConfiguration)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If the supplied WAC has no parent or its parent is not a WAC, the\nsupplied WAC will be configured as the Root WAC (see \"<em>Root WAC\nConfiguration</em>\" below).",
+      "translation": "如果提供的 WAC 没有父节点或其父节点不是 WAC，则提供的 WAC 将被配置为根 WAC（参见下面的\"<em>根 WAC 配置</em>\"）。",
+      "count": 2
+    },
+    {
+      "source": "Concrete subclasses must provide an appropriate implementation.",
+      "translation": "具体子类必须提供适当的实现。",
+      "count": 2
+    },
+    {
+      "source": "Load a <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> for AOT run-time execution based on\nthe supplied <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> and\n<a href=\"../../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextInitializer</code></a>.",
+      "translation": "基于提供的 <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a> 和 <a href=\"../../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\"><code>ApplicationContextInitializer</code></a>，为 AOT 运行时加载一个 <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>AbstractGenericWebContextLoader</code> should be used as a\n<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>,\nnot as a legacy <a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>.",
+      "translation": "<code>AbstractGenericWebContextLoader</code> 应作为<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>使用，而不是作为遗留的<a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>AbstractGenericWebContextLoader</code> should be used as a\n<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>,\nnot as a legacy <a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>.\nConsequently, this method is not supported.",
+      "translation": "<code>AbstractGenericWebContextLoader</code> 应作为<a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>使用，而不是作为遗留的<a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>。因此，此方法不受支持。",
+      "count": 2
+    },
+    {
+      "source": "Customize the <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> created by this context\nloader <i>after</i> bean definitions have been loaded into the context but\n<i>before</i> the context is refreshed.",
+      "translation": "自定义此上下文加载器在将 Bean 定义加载到上下文中但刷新上下文<i>之前</i>创建的<a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a><i>之后</i>。",
+      "count": 2
+    },
+    {
+      "source": "Factory method for creating the <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> used\nby this <code>ContextLoader</code>.",
+      "translation": "用于创建此<code>ContextLoader</code>使用的<a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a>的工厂方法。",
+      "count": 2
+    },
+    {
+      "source": "Load bean definitions into the supplied <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>context</code></a>\nfrom the locations or classes in the supplied <code>WebMergedContextConfiguration</code>.",
+      "translation": "从提供的 `<code>WebMergedContextConfiguration</code>` 中的位置或类加载到提供的 <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>context</code></a> 中。",
+      "count": 2
+    },
+    {
+      "source": "as of Spring Framework 6.2.4, in favor of\n<a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\"><code>loadContextForAotProcessing(MergedContextConfiguration, RuntimeHints)</code></a>;\nto be removed in Spring Framework 8.0",
+      "translation": "自 Spring Framework 6.2.4 起，推荐使用\n<a href=\"#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\"><code>loadContextForAotProcessing(MergedContextConfiguration, RuntimeHints)</code></a>；\n将在 Spring Framework 8.0 中移除。",
+      "count": 2
+    },
+    {
+      "source": "Validate the supplied <a href=\"WebMergedContextConfiguration.html\" title=\"class in org.springframework.test.context.web\"><code>WebMergedContextConfiguration</code></a> with respect to\nwhat this context loader supports.",
+      "translation": "验证提供的<a href=\"WebMergedContextConfiguration.html\" title=\"class in org.springframework.test.context.web\"><code>WebMergedContextConfiguration</code></a>是否符合此上下文加载器的支持范围。",
+      "count": 2
+    },
+    {
+      "source": "A <a href=\"../../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a> is instantiated for the <a href=\"../../../mock/web/MockServletContext.html\" title=\"class in org.springframework.mock.web\"><code>MockServletContext</code></a>:\nif the resource base path is prefixed with \"<code>classpath:</code>\", a\n<a href=\"../../../core/io/DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a> will be used; otherwise, a\n<a href=\"../../../core/io/FileSystemResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>FileSystemResourceLoader</code></a> will be used.",
+      "translation": "为 `<a href=\"../../../mock/web/MockServletContext.html\" title=\"class in org.springframework.mock.web\"><code>MockServletContext</code></a>` 实例化一个 `<a href=\"../../../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>`：如果资源基础路径以 \"<code>classpath:</code>\" 开头，则使用 `<a href=\"../../../core/io/DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>`；否则，将使用 `<a href=\"../../../core/io/FileSystemResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>FileSystemResourceLoader</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"#configureWebResources(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>configureWebResources(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a> to create the\n<a href=\"../../../mock/web/MockServletContext.html\" title=\"class in org.springframework.mock.web\"><code>MockServletContext</code></a> and set it in the <code>WebApplicationContext</code>.",
+      "translation": "委托给 `<a href=\"#configureWebResources(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>configureWebResources(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a>` 以创建 `<a href=\"../../../mock/web/MockServletContext.html\" title=\"class in org.springframework.mock.web\"><code>MockServletContext</code></a>`，并将其设置在 `<code>WebApplicationContext</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "The supplied <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> is then stored in\nthe <code>MockServletContext</code> under the\n<a href=\"../../../web/context/WebApplicationContext.html#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE\"><code>WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</code></a> key.",
+      "translation": "提供的 `<a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a>` 随后存储在`<code>MockServletContext</code>` 下，键为`<a href=\"../../../web/context/WebApplicationContext.html#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE\"><code>WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Calls <a href=\"#customizeBeanFactory(org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>customizeBeanFactory(DefaultListableBeanFactory, WebMergedContextConfiguration)</code></a> to allow for customizing the\ncontext's <code>DefaultListableBeanFactory</code>.",
+      "translation": "调用<a href=\"#customizeBeanFactory(org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>customizeBeanFactory(DefaultListableBeanFactory, WebMergedContextConfiguration)</code></a>以允许自定义上下文的<code>DefaultListableBeanFactory</code>。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"#loadBeanDefinitions(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>loadBeanDefinitions(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a> to populate the context\nfrom the locations or classes in the supplied <code>MergedContextConfiguration</code>.",
+      "translation": "委托给<a href=\"#loadBeanDefinitions(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>loadBeanDefinitions(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a>，以从提供的<code>MergedContextConfiguration</code>中的位置或类填充上下文。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"../../../context/annotation/AnnotationConfigUtils.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigUtils</code></a> for\n<a href=\"../../../context/annotation/AnnotationConfigUtils.html#registerAnnotationConfigProcessors(org.springframework.beans.factory.support.BeanDefinitionRegistry)\">registering</a>\nannotation configuration processors.",
+      "translation": "委托给 <a href=\"../../../context/annotation/AnnotationConfigUtils.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigUtils</code></a> 以注册注解配置处理器。",
+      "count": 2
+    },
+    {
+      "source": "Calls <a href=\"#validateMergedContextConfiguration(org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>validateMergedContextConfiguration(WebMergedContextConfiguration)</code></a>\nto allow subclasses to validate the supplied configuration before proceeding.",
+      "translation": "调用<a href=\"#validateMergedContextConfiguration(org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>validateMergedContextConfiguration(WebMergedContextConfiguration)</code></a>，以允许子类在继续之前验证提供的配置。",
+      "count": 2
+    },
+    {
+      "source": "Creates a <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> instance.",
+      "translation": "创建一个 `<a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a>` 实例。",
+      "count": 2
+    },
+    {
+      "source": "Calls <a href=\"../support/AbstractContextLoader.html#prepareContext(org.springframework.context.ConfigurableApplicationContext,org.springframework.test.context.MergedContextConfiguration)\"><code>AbstractContextLoader.prepareContext(ConfigurableApplicationContext, MergedContextConfiguration)</code></a> to allow for customizing the context\nbefore bean definitions are loaded.",
+      "translation": "调用 <a href=\"../support/AbstractContextLoader.html#prepareContext(org.springframework.context.ConfigurableApplicationContext,org.springframework.test.context.MergedContextConfiguration)\"><code>AbstractContextLoader.prepareContext(ConfigurableApplicationContext, MergedContextConfiguration)</code></a> 以允许在加载 bean 定义之前自定义上下文。",
+      "count": 2
+    },
+    {
+      "source": "Calls <a href=\"#customizeContext(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>customizeContext(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a> to allow for customizing the context\nbefore it is refreshed.",
+      "translation": "调用 <a href=\"#customizeContext(org.springframework.web.context.support.GenericWebApplicationContext,org.springframework.test.context.web.WebMergedContextConfiguration)\"><code>customizeContext(GenericWebApplicationContext, WebMergedContextConfiguration)</code></a> 以在刷新上下文之前对其进行自定义。",
+      "count": 2
+    },
+    {
+      "source": "Finally, the <code>MockServletContext</code> is set in the\n<code>WebApplicationContext</code>.",
+      "translation": "最后，`MockServletContext` 被设置在 `<code>WebApplicationContext</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "The resource base path is retrieved from the supplied\n<code>WebMergedContextConfiguration</code>.",
+      "translation": "资源基础路径从提供的 <code>WebMergedContextConfiguration</code> 中获取。",
+      "count": 2
+    },
+    {
+      "source": "A <code>MockServletContext</code> will be created using the resource base\npath and resource loader.",
+      "translation": "将使用资源基路径和资源加载器创建 `<code>MockServletContext</code>`。",
+      "count": 2
+    },
+    {
+      "source": "a newly instantiated <code>GenericWebApplicationContext</code>",
+      "translation": "新实例化的<code>GenericWebApplicationContext</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>context</code> - the web application context for which to configure the web resources",
+      "translation": "<code>context</code> - 要为其配置 Web 资源的 Web 应用程序上下文",
+      "count": 2
+    },
+    {
+      "source": "<code>webMergedConfig</code> - the merged context configuration to use to load the web application context",
+      "translation": "<code>webMergedConfig</code> - 用于加载 Web 应用程序上下文的合并上下文配置。",
+      "count": 2
+    },
+    {
+      "source": "<code>beanFactory</code> - the bean factory created by this context loader",
+      "translation": "<code>beanFactory</code> - 由该上下文加载器创建的 Bean 工厂",
+      "count": 2
+    },
+    {
+      "source": "<code>context</code> - the newly created web application context",
+      "translation": "<code>context</code> - 新创建的 Web 应用程序上下文",
+      "count": 2
+    },
+    {
+      "source": "Implementation Details",
+      "translation": "实现细节",
+      "count": 2
+    },
+    {
+      "source": "Root WAC Configuration",
+      "translation": "根 WAC 配置",
+      "count": 2
+    },
+    {
+      "source": "The default implementation is a <em>no-op</em> but can be overridden by\nsubclasses as appropriate.",
+      "translation": "默认实现为<em>空操作</em>，但可根据需要由子类重写。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty but can be overridden in subclasses\nto customize <code>DefaultListableBeanFactory</code>'s standard settings.",
+      "translation": "默认实现为空，但可在子类中重写以自定义<code>DefaultListableBeanFactory</code>的标准设置。",
+      "count": 1
+    },
+    {
+      "source": "Implementation details:",
+      "translation": "实现细节：",
+      "count": 1
+    },
+    {
+      "source": "Load a <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> for the supplied\n<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>.",
+      "translation": "为提供的<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>加载一个<a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Load a <a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a> for AOT build-time processing based\non the supplied <a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>.",
+      "translation": "基于提供的<a href=\"../MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>加载一个用于 AOT 构建时处理的<a href=\"../../../web/context/support/GenericWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>GenericWebApplicationContext</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Customize the internal bean factory of the <code>WebApplicationContext</code>\ncreated by this context loader.",
+      "translation": "自定义此上下文加载器创建的<code>WebApplicationContext</code>的内部 BeanFactory。",
+      "count": 1
+    },
+    {
+      "source": "Configures web resources for the supplied web application context (WAC).",
+      "translation": "为提供的 Web 应用程序上下文（WAC）配置 Web 资源。",
+      "count": 1
+    },
+    {
+      "source": "If the supplied <code>MergedContextConfiguration</code> references a\n<a href=\"../MergedContextConfiguration.html#getParent()\">parent configuration</a>,\nthe corresponding <a href=\"../MergedContextConfiguration.html#getParentApplicationContext()\"><code>ApplicationContext</code></a> will be retrieved and\n<a href=\"../../../context/support/GenericApplicationContext.html#setParent(org.springframework.context.ApplicationContext)\">set as the parent</a>\nfor the context created by this method.",
+      "translation": "如果提供的 <code>MergedContextConfiguration</code> 引用了\n<a href=\"../MergedContextConfiguration.html#getParent()\">父配置</a>，\n将检索相应的 <a href=\"../MergedContextConfiguration.html#getParentApplicationContext()\"><code>ApplicationContext</code></a> 并\n<a href=\"../../../context/support/GenericApplicationContext.html#setParent(org.springframework.context.ApplicationContext)\">设置为父上下文</a>，\n该父上下文由本方法创建的上下文使用。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../SmartContextLoader.html#loadContext(org.springframework.test.context.MergedContextConfiguration)\">loadContext</a></code> in interface <code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>",
+      "translation": "`<code><a href=\"../SmartContextLoader.html#loadContext(org.springframework.test.context.MergedContextConfiguration)\">loadContext</a></code>` 接口 `<code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../aot/AotContextLoader.html#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration)\">loadContextForAotProcessing</a></code> in interface <code><a href=\"../aot/AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\">AotContextLoader</a></code>",
+      "translation": "`<code><a href=\"../aot/AotContextLoader.html#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration)\">loadContextForAotProcessing</a></code>` 接口 `<code><a href=\"../aot/AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\">AotContextLoader</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../aot/AotContextLoader.html#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\">loadContextForAotProcessing</a></code> in interface <code><a href=\"../aot/AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\">AotContextLoader</a></code>",
+      "translation": "`<code><a href=\"../aot/AotContextLoader.html#loadContextForAotProcessing(org.springframework.test.context.MergedContextConfiguration,org.springframework.aot.hint.RuntimeHints)\">loadContextForAotProcessing</a></code>` 接口 `<code><a href=\"../aot/AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\">AotContextLoader</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../aot/AotContextLoader.html#loadContextForAotRuntime(org.springframework.test.context.MergedContextConfiguration,org.springframework.context.ApplicationContextInitializer)\">loadContextForAotRuntime</a></code> in interface <code><a href=\"../aot/AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\">AotContextLoader</a></code>",
+      "translation": "`<code><a href=\"../aot/AotContextLoader.html#loadContextForAotRuntime(org.springframework.test.context.MergedContextConfiguration,org.springframework.context.ApplicationContextInitializer)\">loadContextForAotRuntime</a></code>` 接口 `<code><a href=\"../aot/AotContextLoader.html\" title=\"interface in org.springframework.test.context.aot\">AotContextLoader</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ContextLoader.html#loadContext(java.lang.String...)\">loadContext</a></code> in interface <code><a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>",
+      "translation": "`<code><a href=\"../ContextLoader.html#loadContext(java.lang.String...)\">loadContext</a></code>` 接口 `<code><a href=\"../ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../SmartContextLoader.html#loadContext(java.lang.String...)\">loadContext</a></code> in interface <code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>",
+      "translation": "`<code><a href=\"../SmartContextLoader.html#loadContext(java.lang.String...)\">loadContext</a></code>` 接口 `<code><a href=\"../SmartContextLoader.html\" title=\"interface in org.springframework.test.context\">SmartContextLoader</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\"><code>Refreshes</code></a> the\ncontext and registers a JVM shutdown hook for it.",
+      "translation": "<a href=\"../../../context/ConfigurableApplicationContext.html#refresh()\"><code>Refreshes</code></a> 上下文并为其注册一个 JVM 关闭钩子。",
+      "count": 1
+    },
+    {
+      "source": "<code>initializer</code> - the <code>ApplicationContextInitializer</code> that should\nbe applied to the context in order to recreate bean definitions",
+      "translation": "<code>initializer</code> - 应应用于上下文以重新创建 Bean 定义的 <code>ApplicationContextInitializer</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the supplied configuration is not valid\nfor this context loader",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果提供的配置对于此上下文加载器无效",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - in this implementation",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code>` - 在此实现中",
+      "count": 1
+    },
+    {
+      "source": "<code>runtimeHints</code> - the runtime hints",
+      "translation": "<code>runtimeHints</code> - 运行时提示",
+      "count": 1
+    },
+    {
+      "source": "<code>mergedConfig</code> - the merged configuration to validate",
+      "translation": "<code>mergedConfig</code> - 要验证的合并配置",
+      "count": 1
+    },
+    {
+      "source": "<code>context</code> - the context into which the bean definitions should be loaded",
+      "translation": "<code>context</code> - 应加载 Bean 定义的上下文",
+      "count": 1
+    },
+    {
+      "source": "<code>locations</code> - the resource locations to use to load the application context",
+      "translation": "<code>locations</code> - 用于加载应用程序上下文的资源位置",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Phillip Webb",
+      "translation": "Sam Brannen, Phillip Webb",
+      "count": 1
+    },
+    {
+      "source": "a new application context",
+      "translation": "一个新的应用程序上下文",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

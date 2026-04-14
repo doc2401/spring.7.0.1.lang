@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 20:12:28",
+  "updated_at": "2026-04-14 20:12:28",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 18,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0588235294117647,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Note: This <code>ViewResolver</code> implements the <a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> interface\nin order to allow for flexible participation in <code>ViewResolver</code> chaining.\nFor example, some special views could be defined via this <code>ViewResolver</code>\n(giving it 0 as \"order\" value), while all remaining views could be resolved by\na <a href=\"UrlBasedViewResolver.html\" title=\"class in org.springframework.web.servlet.view\"><code>UrlBasedViewResolver</code></a>.",
+      "translation": "注意：此 `<code>ViewResolver</code>` 实现了<a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>接口，以便灵活地参与 `<code>ViewResolver</code>` 链式处理。例如，可以通过此 `<code>ViewResolver</code>` 定义一些特殊视图（将其“order\"值设为 0），而所有其余视图则由一个<a href=\"UrlBasedViewResolver.html\" title=\"class in org.springframework.web.servlet.view\"><code>UrlBasedViewResolver</code></a>解析。",
+      "count": 2
+    },
+    {
+      "source": "Note: To allow for ViewResolver chaining, a ViewResolver should\nreturn <code>null</code> if a view with the given name is not defined in it.\nHowever, this is not required: Some ViewResolvers will always attempt\nto build View objects with the given name, unable to return <code>null</code>\n(rather throwing an exception when View creation failed).",
+      "translation": "注意：为了支持 ViewResolver 链式调用，如果未定义具有给定名称的视图，ViewResolver 应返回 `<code>null</code>`。然而，这并非必需：某些 ViewResolver 将始终尝试使用给定名称构建 View 对象，无法返回 `<code>null</code>`（而是在视图创建失败时抛出异常）。",
+      "count": 1
+    },
+    {
+      "source": "The default value is <code>Ordered.LOWEST_PRECEDENCE</code>, meaning non-ordered.",
+      "translation": "默认值为<code>Ordered.LOWEST_PRECEDENCE</code>，表示非排序。",
+      "count": 1
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">ViewResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">ViewResolver</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the given view by name.",
+      "translation": "按名称解析给定的视图。",
+      "count": 1
+    },
+    {
+      "source": "Specify the order value for this ViewResolver bean.",
+      "translation": "为此 ViewResolver Bean 指定顺序值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">resolveViewName</a></code> in interface <code><a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\">ViewResolver</a></code>",
+      "translation": "`<code><a href=\"../ViewResolver.html#resolveViewName(java.lang.String,java.util.Locale)\">resolveViewName</a></code>` 接口 `<code><a href=\"../ViewResolver.html\" title=\"interface in org.springframework.web.servlet\">ViewResolver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>viewName</code> - name of the view to resolve",
+      "translation": "<code>viewName</code> - 要解析的视图名称",
+      "count": 1
+    },
+    {
+      "source": "<code>locale</code> - the Locale in which to resolve the view.\nViewResolvers that support internationalization should respect this.",
+      "translation": "<code>locale</code> - 解析视图的 Locale。支持国际化的 ViewResolvers 应尊重此设置。",
+      "count": 1
+    },
+    {
+      "source": "the View object, or <code>null</code> if not found\n(optional, to allow for ViewResolver chaining)",
+      "translation": "View 对象，如果未找到则为<code>null</code>\n（可选，以允许 ViewResolver 链式调用）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    }
+  ]
+}

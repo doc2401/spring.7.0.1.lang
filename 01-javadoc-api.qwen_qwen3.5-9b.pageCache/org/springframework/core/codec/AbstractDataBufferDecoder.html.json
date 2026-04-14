@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-04-14 12:54:24",
+  "updated_at": "2026-04-14 12:54:24",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 38,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7272727272727273,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "in favor of implementing\n<a href=\"Decoder.html#decode(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>Decoder.decode(DataBuffer, ResolvableType, MimeType, Map)</code></a> instead",
+      "translation": "支持实现 `<a href=\"Decoder.html#decode(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>Decoder.decode(DataBuffer, ResolvableType, MimeType, Map)</code></a>` 而不是",
+      "count": 3
+    },
+    {
+      "source": "Sub-classes must implement <a href=\"#decodeDataBuffer(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decodeDataBuffer(DataBuffer, ResolvableType, MimeType, Map)</code></a> to provide a way to\ntransform a <code>DataBuffer</code> to the target data type. The default\n<a href=\"#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decode(Publisher, ResolvableType, MimeType, Map)</code></a> implementation transforms each individual data buffer while\n<a href=\"#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decodeToMono(Publisher, ResolvableType, MimeType, Map)</code></a> applies \"reduce\" and transforms the aggregated buffer.",
+      "translation": "子类必须实现<a href=\"#decodeDataBuffer(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decodeDataBuffer(DataBuffer, ResolvableType, MimeType, Map)</code></a>，以提供一种将<code>DataBuffer</code>转换为目标数据类型的方法。默认的<a href=\"#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decode(Publisher, ResolvableType, MimeType, Map)</code></a>实现会转换每个单独的数据缓冲区，而<a href=\"#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decodeToMono(Publisher, ResolvableType, MimeType, Map)</code></a>则应用“归约”操作并转换聚合后的缓冲区。",
+      "count": 2
+    },
+    {
+      "source": "Sub-classes can override <a href=\"#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decode(Publisher, ResolvableType, MimeType, Map)</code></a> in order to split the input stream\nalong different boundaries (for example, on new line characters for <code>String</code>)\nor always reduce to a single data buffer (for example, <code>Resource</code>).",
+      "translation": "子类可以重写<a href=\"#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decode(Publisher, ResolvableType, MimeType, Map)</code></a>，以便按照不同的边界拆分输入流（例如，对于<code>String</code>按换行符拆分），或者始终缩减为单个数据缓冲区（例如，<code>Resource</code>）。",
+      "count": 2
+    },
+    {
+      "source": "Decode a <a href=\"../io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a> input stream into a Flux of <code>T</code>.",
+      "translation": "将 `<a href=\"../io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a>` 输入流解码为 `T` 的 Flux。",
+      "count": 2
+    },
+    {
+      "source": "Decode a <a href=\"../io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a> input stream into a Mono of <code>T</code>.",
+      "translation": "将 `<a href=\"../io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a>` 输入流解码为 `T` 的 Mono。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return the <a href=\"#setMaxInMemorySize(int)\"><code>configured</code></a> byte count limit.",
+      "translation": "返回<a href=\"#setMaxInMemorySize(int)\"><code>configured</code></a>字节计数限制。",
+      "count": 2
+    },
+    {
+      "source": "How to decode a <code>DataBuffer</code> to the target element type.",
+      "translation": "如何将 `<code>DataBuffer</code>` 解码为目标元素类型。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decodeToMono</a></code> in interface <code><a href=\"Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractDataBufferDecoder\">T</a>&gt;</code>",
+      "translation": "`decodeToMono` 在接口 `<a href=\"Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractDataBufferDecoder\">T</a>&gt;` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractDecoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decodeToMono</a></code> in class <code><a href=\"AbstractDecoder.html\" title=\"class in org.springframework.core.codec\">AbstractDecoder</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractDataBufferDecoder\">T</a>&gt;</code>",
+      "translation": "`decodeToMono` 在类 `<code><a href=\"AbstractDecoder.html\" title=\"class in org.springframework.core.codec\">AbstractDecoder</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractDataBufferDecoder\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>elementType</code> - the expected type of elements in the output stream;\nthis type must have been previously passed to the <a href=\"Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\"><code>Decoder.canDecode(ResolvableType, MimeType)</code></a>\nmethod and it must have returned <code>true</code>.",
+      "translation": "<code>elementType</code> - 输出流中元素的预期类型；此类型必须已先前传递给<a href=\"Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\"><code>Decoder.canDecode(ResolvableType, MimeType)</code></a>方法，且该方法必须返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the element type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 元素类型</span>",
+      "count": 2
+    },
+    {
+      "source": "<code>input</code> - the <code>DataBuffer</code> input stream to decode",
+      "translation": "<code>input</code> - 要解码的 <code>DataBuffer</code> 输入流",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeType</code> - the MIME type associated with the input stream (optional)",
+      "translation": "<code>mimeType</code> - 与输入流关联的 MIME 类型（可选）",
+      "count": 2
+    },
+    {
+      "source": "<code>hints</code> - additional information about how to do decode",
+      "translation": "<code>hints</code> - 关于如何进行解码的附加信息",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to 256K.",
+      "translation": "默认情况下，该值设置为 256K。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"Decoder.html#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"Decoder.html#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Configure a limit on the number of bytes that can be buffered whenever\nthe input stream needs to be aggregated.",
+      "translation": "配置输入流需要聚合时，可缓冲的字节数限制。",
+      "count": 1
+    },
+    {
+      "source": "<code>byteCount</code> - the max number of bytes to buffer, or -1 for unlimited",
+      "translation": "<code>byteCount</code> - 要缓冲的最大字节数，或为 -1 表示无限制",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "the output stream with decoded elements",
+      "translation": "带有解码元素的输出流",
+      "count": 1
+    },
+    {
+      "source": "the output stream with the decoded element",
+      "translation": "将解码后的元素写入输出流。",
+      "count": 1
+    }
+  ]
+}

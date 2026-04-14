@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-04-14 16:32:28",
+  "updated_at": "2026-04-14 16:32:28",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 65,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5116279069767442,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "Create a new StandardScriptFactory for the given script source.",
+      "translation": "为给定的脚本源创建一个新的 StandardScriptFactory。",
+      "count": 8
+    },
+    {
+      "source": "<code>scriptSourceLocator</code> - a locator that points to the source of the script.\nInterpreted by the post-processor that actually creates the script.",
+      "translation": "<code>scriptSourceLocator</code> - 指向脚本来源的定位器。由实际创建脚本的后处理器进行解释。",
+      "count": 4
+    },
+    {
+      "source": "<code>scriptSource</code> - the actual ScriptSource to retrieve\nthe script source text from (never <code>null</code>)",
+      "translation": "<code>scriptSource</code> - 用于检索脚本源文本的实际 ScriptSource（绝不<code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>scriptInterfaces</code> - the Java interfaces that the scripted object\nis supposed to implement",
+      "translation": "<code>scriptInterfaces</code> - 脚本对象应该实现的 Java 接口",
+      "count": 3
+    },
+    {
+      "source": "<code>scriptEngineName</code> - the name of the JSR-223 ScriptEngine to use\n(explicitly given instead of inferred from the script source)",
+      "translation": "<code>scriptEngineName</code> - 要使用的 JSR-223 ScriptEngine 的名称（显式指定，而非从脚本源推断）",
+      "count": 3
+    },
+    {
+      "source": "Typically used in combination with a\n<a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a>;\nsee the latter's javadoc for a configuration example.",
+      "translation": "通常与 <a href=\"ScriptFactoryPostProcessor.html\" title=\"class in org.springframework.scripting.support\"><code>ScriptFactoryPostProcessor</code></a> 结合使用；请参阅后者的 Javadoc 以获取配置示例。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ScriptFactory.html#requiresConfigInterface()\">ScriptFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ScriptFactory.html#requiresConfigInterface()\">ScriptFactory</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Determine whether a refresh is required (for example, through\nScriptSource's <code>isModified()</code> method).",
+      "translation": "确定是否需要刷新（例如，通过 ScriptSource 的<code>isModified()</code>方法）。",
+      "count": 2
+    },
+    {
+      "source": "Load and parse the script via JSR-223's ScriptEngine.",
+      "translation": "通过 JSR-223 的 ScriptEngine 加载并解析脚本。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - if script retrieval failed",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 如果脚本检索失败",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../ScriptCompilationException.html\" title=\"class in org.springframework.scripting\">ScriptCompilationException</a></code> - if script compilation failed",
+      "translation": "<code><a href=\"../ScriptCompilationException.html\" title=\"class in org.springframework.scripting\">ScriptCompilationException</a></code> - 如果脚本编译失败",
+      "count": 2
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "Can return <code>null</code> if the script itself determines\nits Java interfaces (such as in the case of Groovy).",
+      "translation": "如果脚本本身确定其 Java 接口（例如在 Groovy 的情况下），则可能返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Typical supported locators are Spring resource locations\n(such as \"file:C:/myScript.bsh\" or \"classpath:myPackage/myScript.bsh\")\nand inline scripts (\"inline:myScriptText...\").",
+      "translation": "典型支持的定位器是 Spring 资源位置（例如 \"file:C:/myScript.bsh\" 或 \"classpath:myPackage/myScript.bsh\"）和内联脚本（\"inline:myScriptText...\"）。",
+      "count": 1
+    },
+    {
+      "source": "Implementations are encouraged to cache script metadata such as\na generated script class. Note that this method may be invoked\nconcurrently and must be implemented in a thread-safe fashion.",
+      "translation": "实现者应缓存脚本元数据，例如生成的脚本类。请注意，此方法可能并发调用，必须以线程安全的方式实现。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ScriptFactory.html#getScriptSourceLocator()\">ScriptFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ScriptFactory.html#getScriptSourceLocator()\">ScriptFactory</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ScriptFactory.html#getScriptInterfaces()\">ScriptFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ScriptFactory.html#getScriptInterfaces()\">ScriptFactory</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ScriptFactory.html#getScriptedObjectType(org.springframework.scripting.ScriptSource)\">ScriptFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ScriptFactory.html#getScriptedObjectType(org.springframework.scripting.ScriptSource)\">ScriptFactory</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ScriptFactory.html#requiresScriptedObjectRefresh(org.springframework.scripting.ScriptSource)\">ScriptFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ScriptFactory.html#requiresScriptedObjectRefresh(org.springframework.scripting.ScriptSource)\">ScriptFactory</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the script requires a config interface to be\ngenerated for it. This is typically the case for scripts that\ndo not determine Java signatures themselves, with no appropriate\nconfig interface specified in <code>getScriptInterfaces()</code>.",
+      "translation": "返回该脚本是否需要为其生成配置接口。通常情况下，对于无法自行确定 Java 签名且未在 `getScriptInterfaces()` 中指定适当配置接口的脚本，需要生成配置接口。",
+      "count": 1
+    },
+    {
+      "source": "Determine the type of the scripted Java object.",
+      "translation": "确定脚本化 Java 对象的类型。",
+      "count": 1
+    },
+    {
+      "source": "Return the business interfaces that the script is supposed to implement.",
+      "translation": "返回脚本应实现的业务接口。",
+      "count": 1
+    },
+    {
+      "source": "Return a locator that points to the source of the script.",
+      "translation": "返回一个指向脚本源位置的定位器。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the script requires a config interface to be\ngenerated for it.",
+      "translation": "返回该脚本是否需要为其生成配置接口。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ScriptFactory.html#getScriptSourceLocator()\">getScriptSourceLocator</a></code> in interface <code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>",
+      "translation": "`<code><a href=\"../ScriptFactory.html#getScriptSourceLocator()\">getScriptSourceLocator</a></code>` 接口 `<code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ScriptFactory.html#getScriptInterfaces()\">getScriptInterfaces</a></code> in interface <code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>",
+      "translation": "`<code><a href=\"../ScriptFactory.html#getScriptInterfaces()\">getScriptInterfaces</a></code>` 接口 `<code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ScriptFactory.html#requiresConfigInterface()\">requiresConfigInterface</a></code> in interface <code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>",
+      "translation": "`<code><a href=\"../ScriptFactory.html#requiresConfigInterface()\">requiresConfigInterface</a></code>` 接口 `<code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ScriptFactory.html#getScriptedObject(org.springframework.scripting.ScriptSource,java.lang.Class...)\">getScriptedObject</a></code> in interface <code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>",
+      "translation": "`<code><a href=\"../ScriptFactory.html#getScriptedObject(org.springframework.scripting.ScriptSource,java.lang.Class...)\">getScriptedObject</a></code>` 接口 `<code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ScriptFactory.html#getScriptedObjectType(org.springframework.scripting.ScriptSource)\">getScriptedObjectType</a></code> in interface <code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>",
+      "translation": "`<code><a href=\"../ScriptFactory.html#getScriptedObjectType(org.springframework.scripting.ScriptSource)\">getScriptedObjectType</a></code>` 接口 `<code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../ScriptFactory.html#requiresScriptedObjectRefresh(org.springframework.scripting.ScriptSource)\">requiresScriptedObjectRefresh</a></code> in interface <code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>",
+      "translation": "`<code><a href=\"../ScriptFactory.html#requiresScriptedObjectRefresh(org.springframework.scripting.ScriptSource)\">requiresScriptedObjectRefresh</a></code>` 接口 `<code><a href=\"../ScriptFactory.html\" title=\"interface in org.springframework.scripting\">ScriptFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>actualInterfaces</code> - the actual interfaces to expose,\nincluding script interfaces as well as a generated config interface\n(if applicable; may be <code>null</code>)",
+      "translation": "<code>actualInterfaces</code> - 要暴露的实际接口，包括脚本接口以及生成的配置接口（如适用；可能为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "whether a fresh <a href=\"../ScriptFactory.html#getScriptedObject(org.springframework.scripting.ScriptSource,java.lang.Class...)\"><code>ScriptFactory.getScriptedObject(ScriptSource, Class...)</code></a> call is required",
+      "translation": "是否需要执行一次新的<a href=\"../ScriptFactory.html#getScriptedObject(org.springframework.scripting.ScriptSource,java.lang.Class...)\"><code>ScriptFactory.getScriptedObject(ScriptSource, Class...)</code></a>调用",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "the type of the scripted Java object, or <code>null</code>\nif none could be determined",
+      "translation": "脚本化 Java 对象的类型，或者如果无法确定则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the script source locator",
+      "translation": "脚本源定位器",
+      "count": 1
+    },
+    {
+      "source": "the interfaces for the script",
+      "translation": "脚本的接口",
+      "count": 1
+    },
+    {
+      "source": "whether the script requires a generated config interface",
+      "translation": "脚本是否需要生成配置接口",
+      "count": 1
+    },
+    {
+      "source": "the scripted Java object",
+      "translation": "脚本化的 Java 对象",
+      "count": 1
+    }
+  ]
+}

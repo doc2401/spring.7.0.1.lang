@@ -1,0 +1,186 @@
+{
+  "created_at": "2026-04-14 15:01:49",
+  "updated_at": "2026-04-14 15:01:49",
+  "stats": {
+    "total_entries": 34,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 63,
+    "entries_with_hits": 34,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8529411764705883,
+    "usage_percentage": 0.0034
+  },
+  "items": [
+    {
+      "source": "When using the JMS 1.0.2 API, this ConnectionFactory will switch\ninto queue/topic mode according to the JMS API methods used at runtime:\n<code>createQueueConnection</code> and <code>createTopicConnection</code> will\nlead to queue/topic mode, respectively; generic <code>createConnection</code>\ncalls will lead to a JMS 1.1 connection which is able to serve both modes.",
+      "translation": "在使用 JMS 1.0.2 API 时，此 ConnectionFactory 将根据运行时使用的 JMS API 方法切换到队列/主题模式：`createQueueConnection` 和 `createTopicConnection` 将分别导致进入队列/主题模式；通用的 `createConnection` 调用将导致生成一个能够同时支持两种模式的 JMS 1.1 连接。",
+      "count": 2
+    },
+    {
+      "source": "By default, only one single Session will be cached, with further requested\nSessions being created and disposed on demand. Consider raising the\n<a href=\"#setSessionCacheSize(int)\"><code>\"sessionCacheSize\" value</code></a> in case of a\nhigh-concurrency environment.",
+      "translation": "默认情况下，仅缓存一个 Session，后续请求的 Session 将根据需要创建和销毁。在高并发环境中，请考虑提高<a href=\"#setSessionCacheSize(int)\"><code>\"sessionCacheSize\" 值</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 5, this class supports JMS 2.0 <code>JMSContext</code>\ncalls and therefore requires the JMS 2.0 API to be present at runtime.\nIt may nevertheless run against a JMS 1.1 driver (bound to the JMS 2.0 API)\nas long as no actual JMS 2.0 calls are triggered by the application's setup.",
+      "translation": "自 Spring Framework 5 起，该类支持 JMS 2.0 `<code>JMSContext</code>` 调用，因此需要在运行时提供 JMS 2.0 API。尽管如此，只要应用程序的配置不会触发实际的 JMS 2.0 调用，它仍可与绑定到 JMS 2.0 API 的 JMS 1.1 驱动程序一起运行。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This ConnectionFactory requires explicit closing of all Sessions\nobtained from its shared Connection.</b> This is the usual recommendation for\nnative JMS access code anyway. However, with this ConnectionFactory, its use\nis mandatory in order to actually allow for Session reuse.",
+      "translation": "<b>注意：此 ConnectionFactory 需要显式关闭从其共享连接获取的所有 Sessions。</b> 这本来就是原生 JMS 访问代码的通常建议。然而，使用此 ConnectionFactory 是强制性的，以便实际允许 Session 重用。",
+      "count": 2
+    },
+    {
+      "source": "Note also that MessageConsumers obtained from a cached Session won't get\nclosed until the Session will eventually be removed from the pool. This may\nlead to semantic side effects in some cases. For a durable subscriber, the\nlogical <code>Session.close()</code> call will also close the subscription.\nRe-registering a durable consumer for the same subscription on the same\nSession handle is not supported; close and reobtain a cached Session first.",
+      "translation": "同样请注意，从缓存的 `Session` 获取的 `MessageConsumers` 将在 `Session` 最终从池中移除之前不会被关闭。在某些情况下，这可能会导致语义副作用。对于持久化订阅者，逻辑上的 `<code>Session.close()</code>` 调用也会关闭该订阅。不支持在同一 `Session` 句柄上为同一订阅重新注册持久化消费者；请首先关闭并重新获取缓存的 `Session`。",
+      "count": 2
+    },
+    {
+      "source": "Last but not least, MessageProducers and MessageConsumers for temporary\nqueues and topics (TemporaryQueue/TemporaryTopic) will never be cached.\nUnfortunately, WebLogic JMS happens to implement the temporary queue/topic\ninterfaces on its regular destination implementation, mis-indicating that\nnone of its destinations can be cached. Please use a different connection\npool/cache on WebLogic, or customize this class for WebLogic purposes.",
+      "translation": "最后但同样重要的是，临时队列和主题（TemporaryQueue/TemporaryTopic）的 MessageProducers 和 MessageConsumers 永远不会被缓存。不幸的是，WebLogic JMS 恰好在其常规目标实现上实现了临时队列/主题接口，错误地表明其所有目标都无法被缓存。请在 WebLogic 上使用不同的连接池/缓存，或为此类目的自定义此类。",
+      "count": 2
+    },
+    {
+      "source": "This cache size is the maximum limit for the number of cached Sessions\nper session acknowledgement type (auto, client, dups_ok, transacted).\nAs a consequence, the actual number of cached Sessions may be up to\nfour times as high as the specified value - in the unlikely case\nof mixing and matching different acknowledgement types.",
+      "translation": "此缓存大小是每个会话确认类型（auto、client、dups_ok、transacted）的缓存 Session 数量的最大限制。因此，实际缓存的 Session 数量可能高达指定值的四倍——在混合使用不同确认类型的罕见情况下。",
+      "count": 2
+    },
+    {
+      "source": "Default is 1: caching a single Session, (re-)creating further ones on\ndemand. Specify a number like 10 if you'd like to raise the number of cached\nSessions; that said, 1 may be sufficient for low-concurrency scenarios.",
+      "translation": "默认值为 1：缓存单个 Session，按需创建（重新）其他 Session。如果您希望增加缓存的 Session 数量，可以指定一个数字，例如 10；不过对于低并发场景，1 可能就足够了。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\". Switch this to \"false\" in order to always\nrecreate MessageProducers on demand.",
+      "translation": "默认值为 \"true\"。将其切换为 \"false\" 以始终按需重新创建 MessageProducers。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\". Switch this to \"false\" in order to always\nrecreate MessageConsumers on demand.",
+      "translation": "默认值为 \"true\"。将其切换为 \"false\" 以按需始终重新创建 MessageConsumers。",
+      "count": 2
+    },
+    {
+      "source": "Create a new CachingConnectionFactory for bean-style usage.",
+      "translation": "为 Bean 风格用法创建一个新的 CachingConnectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Create a new CachingConnectionFactory for the given target\nConnectionFactory.",
+      "translation": "为给定的目标 ConnectionFactory 创建一个新的 CachingConnectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Return a current session count, indicating the number of sessions currently\ncached by this connection factory.",
+      "translation": "返回当前会话计数，指示此连接工厂当前缓存的会话数量。",
+      "count": 2
+    },
+    {
+      "source": "Checks for a cached Session for the given mode.",
+      "translation": "检查给定模式的缓存 Session。",
+      "count": 2
+    },
+    {
+      "source": "Return the desired size for the JMS Session cache (per JMS Session type).",
+      "translation": "返回 JMS 会话缓存的期望大小（每种 JMS 会话类型）。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to cache JMS MessageConsumers per JMS Session instance.",
+      "translation": "返回是否按 JMS Session 实例缓存 JMS MessageConsumers。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to cache JMS MessageProducers per JMS Session instance.",
+      "translation": "返回是否按 JMS Session 实例缓存 JMS MessageProducers。",
+      "count": 2
+    },
+    {
+      "source": "Resets the Session cache as well.",
+      "translation": "同时重置会话缓存。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given Session with a proxy that delegates every method call to it\nbut adapts close calls. This is useful for allowing application code to\nhandle a special framework Session just like an ordinary Session.",
+      "translation": "将给定的 Session 包装在一个代理中，该代理会将所有方法调用委托给它，但会适配 `close` 调用。这对于允许应用程序代码像处理普通 Session 一样处理特殊的框架 Session 非常有用。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"SingleConnectionFactory.html#resetConnection()\">resetConnection</a></code> in class <code><a href=\"SingleConnectionFactory.html\" title=\"class in org.springframework.jms.connection\">SingleConnectionFactory</a></code>",
+      "translation": "`<code><a href=\"SingleConnectionFactory.html#resetConnection()\">resetConnection</a></code>` 类中的 `<code><a href=\"SingleConnectionFactory.html\" title=\"class in org.springframework.jms.connection\">SingleConnectionFactory</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"SingleConnectionFactory.html#getSession(jakarta.jms.Connection,java.lang.Integer)\">getSession</a></code> in class <code><a href=\"SingleConnectionFactory.html\" title=\"class in org.springframework.jms.connection\">SingleConnectionFactory</a></code>",
+      "translation": "`<code><a href=\"SingleConnectionFactory.html#getSession(jakarta.jms.Connection,java.lang.Integer)\">getSession</a></code>` 在类 `<code><a href=\"SingleConnectionFactory.html\" title=\"class in org.springframework.jms.connection\">SingleConnectionFactory</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>mode</code> - the Session acknowledgement mode\n(<code>Session.TRANSACTED</code> or one of the common modes)",
+      "translation": "<code>mode</code> - 会话确认模式（<code>Session.TRANSACTED</code> 或常见模式之一）",
+      "count": 2
+    },
+    {
+      "source": "<code>targetConnectionFactory</code> - the target ConnectionFactory",
+      "translation": "<code>targetConnectionFactory</code> - 目标 ConnectionFactory",
+      "count": 2
+    },
+    {
+      "source": "<code>con</code> - the JMS Connection to operate on",
+      "translation": "<code>con</code> - 要操作的 JMS 连接",
+      "count": 2
+    },
+    {
+      "source": "the Session to use, or <code>null</code> to indicate\ncreation of a raw standard Session",
+      "translation": "要使用的 Session，或为指示创建原始标准 Session 而指定 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if thrown by the JMS API",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果由 JMS API 抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - the original Session to wrap",
+      "translation": "<code>target</code> - 要包装的原始 Session",
+      "count": 2
+    },
+    {
+      "source": "<code>sessionList</code> - the List of cached Sessions that the given Session belongs to",
+      "translation": "<code>sessionList</code> - 给定 Session 所属的已缓存 Session 列表",
+      "count": 2
+    },
+    {
+      "source": "the wrapped Session",
+      "translation": "被包装的 Session",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given Session with a proxy that delegates every method call to it\nbut adapts close calls.",
+      "translation": "用代理包装给定的 Session，将每个方法调用委托给它，但适配 close 调用。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to cache JMS MessageConsumers per JMS Session instance\n(more specifically: one MessageConsumer per Destination, selector String\nand Session).",
+      "translation": "指定是否按 JMS Session 实例缓存 JMS MessageConsumers（更具体地说：每个 Destination、selector String 和 Session 对应一个 MessageConsumer）。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to cache JMS MessageProducers per JMS Session instance\n(more specifically: one MessageProducer per Destination and Session).",
+      "translation": "指定是否按 JMS Session 实例缓存 JMS MessageProducers（更具体地说：每个 Destination 和 Session 一个 MessageProducer）。",
+      "count": 1
+    },
+    {
+      "source": "Specify the desired size for the JMS Session cache (per JMS Session type).",
+      "translation": "指定 JMS 会话缓存的期望大小（每个 JMS 会话类型）。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

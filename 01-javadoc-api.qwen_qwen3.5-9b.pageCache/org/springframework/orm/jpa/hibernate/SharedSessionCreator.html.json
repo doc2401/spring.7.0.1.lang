@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-04-14 16:04:41",
+  "updated_at": "2026-04-14 16:04:41",
+  "stats": {
+    "total_entries": 10,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 17,
+    "entries_with_hits": 10,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7,
+    "usage_percentage": 0.001
+  },
+  "items": [
+    {
+      "source": "Typically used next to <a href=\"LocalSessionFactoryBuilder.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>LocalSessionFactoryBuilder</code></a>. Note that\n<a href=\"LocalSessionFactoryBean.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>LocalSessionFactoryBean</code></a> exposes shared <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html\" title=\"class or interface in org.hibernate\"><code>Session</code></a> as well\nas <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a> references for dependency injection already,\navoiding the need to define separate beans for the shared sessions.",
+      "translation": "通常与<a href=\"LocalSessionFactoryBuilder.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>LocalSessionFactoryBuilder</code></a>一起使用。请注意，<a href=\"LocalSessionFactoryBean.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>LocalSessionFactoryBean</code></a>已经公开了共享的<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html\" title=\"class or interface in org.hibernate\"><code>Session</code></a>以及<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a>引用用于依赖注入，从而避免为共享会话定义单独的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "The returned instance behaves like <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html#getCurrentSession()\" title=\"class or interface in org.hibernate\"><code>SessionFactory.getCurrentSession()</code></a>\nbut without the manual get call, automatically delegating every <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html\" title=\"class or interface in org.hibernate\"><code>Session</code></a>\nmethod invocation to the current thread-bound transactional session instance.\nDesigned to work with <a href=\"HibernateTransactionManager.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>HibernateTransactionManager</code></a> as well as JTA.",
+      "translation": "返回的实例表现得如同<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html#getCurrentSession()\" title=\"class or interface in org.hibernate\"><code>SessionFactory.getCurrentSession()</code></a>，但无需手动调用 get，而是自动将每个<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html\" title=\"class or interface in org.hibernate\"><code>Session</code></a>方法调用委托给当前线程绑定的事务性会话实例。该设计旨在与<a href=\"HibernateTransactionManager.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>HibernateTransactionManager</code></a>以及 JTA 配合使用。",
+      "count": 2
+    },
+    {
+      "source": "Works with <a href=\"HibernateTransactionManager.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>HibernateTransactionManager</code></a> (side by side with a\nthread-bound regular Session that drives the transaction) as well as\n<a href=\"../../../jdbc/support/JdbcTransactionManager.html\" title=\"class in org.springframework.jdbc.support\"><code>JdbcTransactionManager</code></a> or\n<a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>\n(with a plain StatelessSession on top of a transactional JDBC Connection).",
+      "translation": "可与 `<a href=\"HibernateTransactionManager.html\" title=\"class in org.springframework.orm.jpa.hibernate\"><code>HibernateTransactionManager</code></a>`（与一个线程绑定的常规 Session 并排运行，该 Session 驱动事务）一起使用，也可与 `<a href=\"../../../jdbc/support/JdbcTransactionManager.html\" title=\"class in org.springframework.jdbc.support\"><code>JdbcTransactionManager</code></a>` 或 `<a href=\"../../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>`（在事务性 JDBC 连接之上使用一个无状态 Session）一起使用。",
+      "count": 2
+    },
+    {
+      "source": "The returned instance automatically delegates every <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a>\nmethod invocation to the current thread-bound transactional session instance.\nOn the first invocation within a new transaction, a <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a>\nwill be opened for the current transactional JDBC Connection.",
+      "translation": "返回的实例会自动将每个 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a> 方法调用委托给当前线程绑定的事务性会话实例。在新事务中的首次调用时，将为当前事务性 JDBC 连接打开一个 <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, call <a href=\"SpringSessionContext.html#currentStatelessSession(org.hibernate.SessionFactory)\"><code>SpringSessionContext.currentStatelessSession(SessionFactory)</code></a>\nfor every operation, avoiding the need for a proxy.",
+      "translation": "或者，为每个操作调用<a href=\"SpringSessionContext.html#currentStatelessSession(org.hibernate.SessionFactory)\"><code>SpringSessionContext.currentStatelessSession(SessionFactory)</code></a>，从而避免使用代理。",
+      "count": 2
+    },
+    {
+      "source": "<code>sessionFactory</code> - the SessionFactory to build the Session proxy for",
+      "translation": "<code>sessionFactory</code> - 用于构建 Session 代理的 SessionFactory。",
+      "count": 2
+    },
+    {
+      "source": "<code>sessionFactory</code> - the SessionFactory to build the StatelessSession proxy for",
+      "translation": "<code>sessionFactory</code> - 用于构建无状态会话代理的 SessionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Create a shared <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html\" title=\"class or interface in org.hibernate\"><code>Session</code></a> proxy for the given <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\"><code>SessionFactory</code></a>.",
+      "translation": "为给定的<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\"><code>SessionFactory</code></a>创建一个共享的<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html\" title=\"class or interface in org.hibernate\"><code>Session</code></a>代理。",
+      "count": 1
+    },
+    {
+      "source": "Create a shared <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a> proxy for the given <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\"><code>SessionFactory</code></a>.",
+      "translation": "为给定的<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/SessionFactory.html\" title=\"class or interface in org.hibernate\"><code>SessionFactory</code></a>创建一个共享的<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/StatelessSession.html\" title=\"class or interface in org.hibernate\"><code>StatelessSession</code></a>代理。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

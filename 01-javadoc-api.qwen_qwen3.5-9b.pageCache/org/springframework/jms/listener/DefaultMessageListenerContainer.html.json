@@ -1,0 +1,671 @@
+{
+  "created_at": "2026-04-14 15:09:22",
+  "updated_at": "2026-04-14 15:09:22",
+  "stats": {
+    "total_entries": 131,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 230,
+    "entries_with_hits": 131,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7557251908396947,
+    "usage_percentage": 0.0131
+  },
+  "items": [
+    {
+      "source": "<b>This setting can be modified at runtime, for example through JMX.</b>",
+      "translation": "<b>此设置可以在运行时进行修改，例如通过 JMX。</b>",
+      "count": 4
+    },
+    {
+      "source": "<b>Do not raise the number of concurrent consumers for a topic,\nunless vendor-specific setup measures clearly allow for it.</b>\nWith regular setup, this would lead to concurrent consumption\nof the same message, which is hardly ever desirable.",
+      "translation": "<b>除非特定供应商的配置措施明确允许，否则不要增加主题的并发消费者数量。</b>\n使用常规配置，这会导致同一消息被并发消费，而这几乎总是不希望的。",
+      "count": 3
+    },
+    {
+      "source": "Raising the number of concurrent consumers is recommendable in order\nto scale the consumption of messages coming in from a queue. However,\nnote that any ordering guarantees are lost once multiple consumers are\nregistered. In general, stick with 1 consumer for low-volume queues.",
+      "translation": "为了提高从队列中消费消息的吞吐量，建议增加并发消费者的数量。但请注意，一旦注册多个消费者，任何顺序保证都将丢失。通常情况下，对于低流量队列，请坚持使用单个消费者。",
+      "count": 3
+    },
+    {
+      "source": "Message receipt and listener execution can automatically be wrapped\nin transactions by passing a Spring\n<a href=\"../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> into the\n<a href=\"AbstractPollingMessageListenerContainer.html#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>\"transactionManager\"</code></a> property. This will usually\nbe a <a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> in a\nJakarta EE environment, in combination with a JTA-aware JMS <code>ConnectionFactory</code>\nobtained from JNDI (check your Jakarta EE server's documentation). Note that this\nlistener container will automatically reobtain all JMS handles for each transaction\nin case an external transaction manager is specified, for compatibility with\nall Jakarta EE servers (in particular JBoss). This non-caching behavior can be\noverridden through the <a href=\"#setCacheLevel(int)\"><code>\"cacheLevel\"</code></a> /\n<a href=\"#setCacheLevelName(java.lang.String)\"><code>\"cacheLevelName\"</code></a> property, enforcing caching of\nthe <code>Connection</code> (or also <code>Session</code> and <code>MessageConsumer</code>)\neven if an external transaction manager is involved.",
+      "translation": "消息接收和监听器执行可以通过将 Spring `<a href=\"../../transaction/PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 传入`<a href=\"AbstractPollingMessageListenerContainer.html#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>\"transactionManager\"</code></a>` 属性而自动包装在事务中。在 Jakarta EE 环境中，这通常是一个 `<a href=\"../../transaction/jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>`，并结合从 JNDI 获取的 JTA 感知 JMS `<code>ConnectionFactory`》（请查阅您的 Jakarta EE 服务器文档）。请注意，如果指定了外部事务管理器，此监听器容器将自动为每个事务重新获取所有 JMS 句柄，以兼容所有 Jakarta EE 服务器（特别是 JBoss）。这种不缓存的行为可以通过`<a href=\"#setCacheLevel(int)\"><code>\"cacheLevel\"</code></a>` / `<a href=\"#setCacheLevelName(java.lang.String)\"><code>\"cacheLevelName\"</code></a>` 属性进行覆盖，强制即使涉及外部事务管理器也要缓存 `<code>Connection</code>`（或同样缓存 `<code>Session</code>` 和 `<code>MessageConsumer</code>`）。",
+      "count": 2
+    },
+    {
+      "source": "Dynamic scaling of the number of concurrent invokers can be activated\nby specifying a <a href=\"#setMaxConcurrentConsumers(int)\"><code>\"maxConcurrentConsumers\"</code></a>\nvalue that is higher than the <a href=\"#setConcurrentConsumers(int)\"><code>\"concurrentConsumers\"</code></a>\nvalue. Since the latter's default is 1, you can also simply specify a\n\"maxConcurrentConsumers\" of, for example, 5, which will lead to dynamic scaling up to\n5 concurrent consumers in case of increasing message load, as well as dynamic\nshrinking back to the standard number of consumers once the load decreases.\nConsider adapting the <a href=\"#setIdleTaskExecutionLimit(int)\"><code>\"idleTaskExecutionLimit\"</code></a>\nsetting to control the lifespan of each new task, to avoid frequent scaling up\nand down, in particular if the <code>ConnectionFactory</code> does not pool JMS\n<code>Sessions</code> and/or the <code>TaskExecutor</code> does not pool threads (check\nyour configuration!). Note that dynamic scaling only really makes sense for a\nqueue in the first place; for a topic, you will typically stick with the default\nnumber of 1 consumer, otherwise you'd receive the same message multiple times on\nthe same node.",
+      "translation": "可以通过指定一个高于 <a href=\"#setMaxConcurrentConsumers(int)\"><code>\"maxConcurrentConsumers\"</code></a> 值的值来激活并发调用者数量的动态扩展。由于后者的默认值为 1，您也可以简单地指定一个\"maxConcurrentConsumers\"值（例如 5），这样在消息负载增加时，将动态扩展到最多 5 个并发消费者；而在负载降低时，则动态缩减回标准数量的消费者。请考虑调整 <a href=\"#setIdleTaskExecutionLimit(int)\"><code>\"idleTaskExecutionLimit\"</code></a> 设置以控制每个新任务的生命周期，从而避免频繁的扩展和收缩，特别是当 <code>ConnectionFactory</code> 不池化 JMS <code>Sessions</code> 和/或 <code>TaskExecutor</code> 不池化线程时（请检查您的配置！）。请注意，动态扩展本质上仅对队列有意义；对于主题，通常应坚持使用默认的 1 个消费者数量，否则在同一节点上会多次接收到相同的消息。",
+      "count": 2
+    },
+    {
+      "source": "<b>It is strongly recommended to either set <a href=\"AbstractPollingMessageListenerContainer.html#setSessionTransacted(boolean)\"><code>\"sessionTransacted\"</code></a> to \"true\" or specify an external <a href=\"AbstractPollingMessageListenerContainer.html#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>\"transactionManager\"</code></a>.</b> See the <a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractMessageListenerContainer</code></a>\njavadoc for details on acknowledge modes and native transaction options, as\nwell as the <a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractPollingMessageListenerContainer</code></a> javadoc for details\non configuring an external transaction manager. Note that for the default\n\"AUTO_ACKNOWLEDGE\" mode, this container applies automatic message acknowledgment\nbefore listener execution, with no redelivery in case of an exception.",
+      "translation": "<b>强烈建议将 <a href=\"AbstractPollingMessageListenerContainer.html#setSessionTransacted(boolean)\"><code>\"sessionTransacted\"</code></a> 设置为 \"true\"，或者指定外部 <a href=\"AbstractPollingMessageListenerContainer.html#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>\"transactionManager\"</code></a>。</b>有关确认模式和原生事务选项的详细信息，请参阅 <a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractMessageListenerContainer</code></a>\njavadoc；有关配置外部事务管理器的详细信息，请参阅 <a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>AbstractPollingMessageListenerContainer</code></a> javadoc。请注意，对于默认的\"AUTO_ACKNOWLEDGE\"模式，此容器会在执行监听器之前自动确认消息，如果发生异常则不会重新投递。",
+      "count": 2
+    },
+    {
+      "source": "Actual <code>MessageListener</code> execution happens in asynchronous work units which are\ncreated through Spring's <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>\nabstraction. By default, the specified number of invoker tasks will be created\non startup, according to the <a href=\"#setConcurrentConsumers(int)\"><code>\"concurrentConsumers\"</code></a>\nsetting. Specify an alternative <code>TaskExecutor</code> to integrate with an existing\nthread pool facility (such as a Jakarta EE server's). With a native JMS setup,\neach of those listener threads is going to use a cached JMS <code>Session</code> and\n<code>MessageConsumer</code> (only refreshed in case of failure), using the JMS provider's\nresources as efficiently as possible.",
+      "translation": "实际的 `<code>MessageListener</code>` 执行发生在通过 Spring 的<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>抽象创建的异步工作单元中。默认情况下，启动时会根据<a href=\"#setConcurrentConsumers(int)\"><code>\"concurrentConsumers\"</code></a>设置创建指定数量的调用器任务。请指定一个替代的 `<code>TaskExecutor</code>` 以集成现有的线程池设施（例如 Jakarta EE 服务器的）。在原生 JMS 配置中，每个监听器线程都将使用缓存的 JMS `<code>Session</code>` 和 `<code>MessageConsumer</code>`（仅在发生故障时刷新），并尽可能高效地使用 JMS 提供者的资源。",
+      "count": 2
+    },
+    {
+      "source": "If the specified executor is a <a href=\"../../scheduling/SchedulingTaskExecutor.html\" title=\"interface in org.springframework.scheduling\"><code>SchedulingTaskExecutor</code></a> indicating\n<a href=\"../../scheduling/SchedulingTaskExecutor.html#prefersShortLivedTasks()\"><code>a preference for\nshort-lived tasks</code></a>, a <a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a> default of 10 will be\napplied in order to provide dynamic scaling at runtime. With the default\ntask executor or a similarly non-pooling external executor specified,\na <a href=\"#setIdleReceivesPerTaskLimit(int)\"><code>setIdleReceivesPerTaskLimit(int)</code></a> default of 10 will apply instead.",
+      "translation": "如果指定的执行器是 `<a href=\"../../scheduling/SchedulingTaskExecutor.html\" title=\"interface in org.springframework.scheduling\"><code>SchedulingTaskExecutor</code></a>`，表明<a href=\"../../scheduling/SchedulingTaskExecutor.html#prefersShortLivedTasks()\"><code>偏好短生命周期任务</code></a>，将应用 `<a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a>` 的默认值 10，以在运行时提供动态扩展。如果使用默认的任务执行器或指定了类似的非池化外部执行器，则将应用 `<a href=\"#setIdleReceivesPerTaskLimit(int)\"><code>setIdleReceivesPerTaskLimit(int)</code></a>` 的默认值 10。",
+      "count": 2
+    },
+    {
+      "source": "Consider specifying concurrency limits through <a href=\"#setConcurrency(java.lang.String)\"><code>setConcurrency(String)</code></a>\nor <a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>/<a href=\"#setMaxConcurrentConsumers(int)\"><code>setMaxConcurrentConsumers(int)</code></a>,\nfor potential dynamic scaling. This works fine with the default executor;\nsee <a href=\"#setIdleReceivesPerTaskLimit(int)\"><code>setIdleReceivesPerTaskLimit(int)</code></a> with its effective default of 10.",
+      "translation": "可以通过 `<a href=\"#setConcurrency(java.lang.String)\"><code>setConcurrency(String)</code></a>` 或 `<a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>`/`<a href=\"#setMaxConcurrentConsumers(int)\"><code>setMaxConcurrentConsumers(int)</code></a>` 指定并发限制，以实现潜在的动态扩展。此方法在使用默认执行器时效果良好；请参阅 `<a href=\"#setIdleReceivesPerTaskLimit(int)\"><code>setIdleReceivesPerTaskLimit(int)</code></a>`，其有效默认值为 10。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note: You may use <a href=\"../connection/CachingConnectionFactory.html\" title=\"class in org.springframework.jms.connection\"><code>CachingConnectionFactory</code></a>\nwith a listener container but it comes with limitations.</b> It is generally preferable\nto let the listener container itself handle appropriate caching within its lifecycle.\nAlso, stopping and restarting a listener container will only work with an independent,\nlocally cached <code>Connection</code>, not with an externally cached one. Last but not least,\nwith <code>CachingConnectionFactory</code>, dynamic scaling with custom provider hints such as\n<a href=\"#setMaxMessagesPerTask(int)\"><code>\"maxMessagesPerTask\"</code></a> can result in JMS messages delivered\nto cached consumers even when they are no longer attached to the listener container.",
+      "translation": "<b>注意：您可以使用 <a href=\"../connection/CachingConnectionFactory.html\" title=\"class in org.springframework.jms.connection\"><code>CachingConnectionFactory</code></a> 配合监听器容器，但它存在局限性。</b> 通常更优选的做法是让监听器容器在其生命周期内自行处理适当的缓存。此外，停止并重新启动监听器容器仅适用于独立且本地缓存的 <code>Connection</code>，不适用于外部缓存的连接。最后但同样重要的是，使用 <code>CachingConnectionFactory</code> 时，带有自定义提供者提示（如 <a href=\"#setMaxMessagesPerTask(int)\"><code>\"maxMessagesPerTask\"</code></a>）的动态扩展可能会导致 JMS 消息被交付给已不再附加到监听器容器的缓存消费者。",
+      "count": 2
+    },
+    {
+      "source": "For example: If <a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a> is set to '500' and\n<code>#setIdleReceivesPerTaskLimit</code> is set to '60' and <a href=\"AbstractPollingMessageListenerContainer.html#setReceiveTimeout(long)\"><code>AbstractPollingMessageListenerContainer.setReceiveTimeout(long)</code></a>\nis set to '1000' and <a href=\"#setIdleTaskExecutionLimit(int)\"><code>setIdleTaskExecutionLimit(int)</code></a> is set to '1', then 500\nmessages per task would be processed unless there is a subsequent number of 60\nidle messages received, the task would be marked as idle and released. This also\nmeans that after the last message was processed, the task would be released after\n60 seconds as long as no new messages appear.",
+      "translation": "例如：如果将 <a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a> 设置为 '500'，并将 <code>#setIdleReceivesPerTaskLimit</code> 设置为 '60'，同时将 <a href=\"AbstractPollingMessageListenerContainer.html#setReceiveTimeout(long)\"><code>AbstractPollingMessageListenerContainer.setReceiveTimeout(long)</code></a> 设置为 '1000'，以及将 <a href=\"#setIdleTaskExecutionLimit(int)\"><code>setIdleTaskExecutionLimit(int)</code></a> 设置为 '1'，那么每个任务将处理 500 条消息，除非随后接收到 60 条空闲消息，此时该任务将被标记为空闲并释放。这也意味着在处理完最后一条消息后，只要没有新消息出现，该任务将在 60 秒后被释放。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: On its own, this idle limit does not apply to core consumers within\n<a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a> but rather just to surplus consumers up until\n<a href=\"#setMaxConcurrentConsumers(int)\"><code>setMaxConcurrentConsumers(int)</code></a> (as of 6.2).</b> Only in combination with\n<a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a> does it have an effect on core consumers as well,\nas inferred for an external thread pool indicating a preference for short-lived\ntasks, leading to dynamic rescheduling of all consumer tasks in the thread pool.",
+      "translation": "<b>注意：仅凭此空闲限制，并不适用于<a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>中的核心消费者，而仅适用于直到<a href=\"#setMaxConcurrentConsumers(int)\"><code>setMaxConcurrentConsumers(int)</code></a>的多余消费者（自 6.2 版本起）。</b> 只有与<a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a>结合使用时，它才会对核心消费者产生影响，因为对于外部线程池而言，这表示偏好短生命周期任务，从而导致线程池中所有消费者任务的动态重新调度。",
+      "count": 2
+    },
+    {
+      "source": "This is a convenience method to create a <a href=\"../../util/backoff/FixedBackOff.html\" title=\"class in org.springframework.util.backoff\"><code>FixedBackOff</code></a> with the\nspecified interval. For more recovery options, consider specifying a\n<a href=\"#setBackOff(org.springframework.util.backoff.BackOff)\"><code>BackOff</code></a> instance instead. Note, however, that\nexplicitly setting the <a href=\"#setBackOff(org.springframework.util.backoff.BackOff)\"><code>BackOff</code></a> overrides this\nproperty.",
+      "translation": "这是一个便捷方法，用于创建具有指定间隔的<a href=\"../../util/backoff/FixedBackOff.html\" title=\"class in org.springframework.util.backoff\"><code>FixedBackOff</code></a>。对于更多的恢复选项，请考虑指定一个<a href=\"#setBackOff(org.springframework.util.backoff.BackOff)\"><code>BackOff</code></a>实例。但请注意，显式设置<a href=\"#setBackOff(org.springframework.util.backoff.BackOff)\"><code>BackOff</code></a>会覆盖此属性。",
+      "count": 2
+    },
+    {
+      "source": "Some Jakarta EE servers only register their JMS resources with an ongoing XA\ntransaction in case of a freshly obtained JMS <code>Connection</code> and <code>Session</code>,\nwhich is why this listener container by default does not cache any of those.\nHowever, depending on the rules of your server with respect to the caching\nof transactional resources, consider switching this setting to at least\n<a href=\"#CACHE_CONNECTION\"><code>CACHE_CONNECTION</code></a> or <a href=\"#CACHE_SESSION\"><code>CACHE_SESSION</code></a> even in conjunction with an\nexternal transaction manager.",
+      "translation": "某些 Jakarta EE 服务器仅在获取新的 JMS `<code>Connection</code>` 和 `<code>Session</code>` 时，将其 JMS 资源注册到正在进行的 XA 事务中，因此此监听器容器默认不缓存这些资源。然而，根据您服务器关于事务性资源缓存的规则，请考虑将此设置至少切换为 <a href=\"#CACHE_CONNECTION\"><code>CACHE_CONNECTION</code></a> 或 <a href=\"#CACHE_SESSION\"><code>CACHE_SESSION</code></a>，即使与外部事务管理器结合使用也是如此。",
+      "count": 2
+    },
+    {
+      "source": "Default is <a href=\"#CACHE_NONE\"><code>CACHE_NONE</code></a> if an external transaction manager has been specified\n(to reobtain all resources freshly within the scope of the external transaction),\nand <a href=\"#CACHE_CONSUMER\"><code>CACHE_CONSUMER</code></a> otherwise (operating with local JMS resources).",
+      "translation": "默认情况下，如果指定了外部事务管理器，则为 `<a href=\"#CACHE_NONE\"><code>CACHE_NONE</code></a>`（以便在外部事务范围内重新获取所有资源），否则为 `<a href=\"#CACHE_CONSUMER\"><code>CACHE_CONSUMER</code></a>`（使用本地 JMS 资源）。",
+      "count": 2
+    },
+    {
+      "source": "This listener container will always hold on to the minimum number of consumers\n(<a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>) and will slowly scale up to the maximum number\nof consumers <a href=\"#setMaxConcurrentConsumers(int)\"><code>setMaxConcurrentConsumers(int)</code></a> in case of increasing load.",
+      "translation": "该监听器容器将始终保留最少数量的消费者（<a href=\"#setConcurrentConsumers(int)\"><code>setConcurrentConsumers(int)</code></a>），并在负载增加时缓慢扩展到最大数量的消费者 <a href=\"#setMaxConcurrentConsumers(int)\"><code>setMaxConcurrentConsumers(int)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default is 1, closing idle resources early once a task didn't\nreceive a message. This applies to dynamic scheduling only; see the\n<a href=\"#setMaxConcurrentConsumers(int)\"><code>\"maxConcurrentConsumers\"</code></a> setting.\nThe minimum number of consumers\n(see <a href=\"#setConcurrentConsumers(int)\"><code>\"concurrentConsumers\"</code></a>)\nwill be kept around until shutdown in any case.",
+      "translation": "默认值为 1，即任务未收到消息时提前关闭空闲资源。此设置仅适用于动态调度；请参阅<a href=\"#setMaxConcurrentConsumers(int)\"><code>\"maxConcurrentConsumers\"</code></a> 设置。无论如何，消费者数量（参见 <a href=\"#setConcurrentConsumers(int)\"><code>\"concurrentConsumers\"</code></a>）的最小值将在关闭前一直保留。",
+      "count": 2
+    },
+    {
+      "source": "This method may be polled after a <a href=\"#start()\"><code>start()</code></a> call, until asynchronous\nregistration of consumers has happened which is when the method will start returning\n<code>true</code> – provided that the listener container ever actually establishes\na fixed registration. It will then keep returning <code>true</code> until shutdown,\nsince the container will hold on to at least one consumer registration thereafter.",
+      "translation": "此方法可在调用 `<a href=\"#start()\"><code>start()</code></a>` 之后进行轮询，直到发生异步消费者注册为止；此时该方法将开始返回`true`——前提是监听器容器确实建立了固定注册。此后，只要容器至少保留一个消费者注册，该方法将持续返回`true`，直到关闭。",
+      "count": 2
+    },
+    {
+      "source": "Note that a listener container is not bound to having a fixed registration in\nthe first place. It may also keep recreating consumers for every invoker execution.\nThis particularly depends on the <a href=\"#setCacheLevel(int)\"><code>cache level</code></a> setting:\nonly <a href=\"#CACHE_CONSUMER\"><code>CACHE_CONSUMER</code></a> will lead to a fixed registration.",
+      "translation": "请注意，监听器容器本身并不一定绑定于固定的注册。它也可能为每个调用者执行重新创建消费者。这特别取决于 `<a href=\"#setCacheLevel(int)\"><code>cache level</code></a>` 设置：只有 `<a href=\"#CACHE_CONSUMER\"><code>CACHE_CONSUMER</code></a>` 会导致固定注册。",
+      "count": 2
+    },
+    {
+      "source": "This is a simple but nevertheless powerful form of message listener container.\nOn startup, it obtains a fixed number of JMS Sessions to invoke the listener,\nand optionally allows for dynamic adaptation at runtime (up to a maximum number).\nLike <a href=\"SimpleMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>SimpleMessageListenerContainer</code></a>, its main advantage is its low level\nof runtime complexity, in particular the minimal requirements on the JMS provider:\nnot even the JMS <code>ServerSessionPool</code> facility is required. Beyond that, it is\nfully self-recovering in case the broker is temporarily unavailable, and allows\nfor stops/restarts as well as runtime changes to its configuration.",
+      "translation": "这是一个简单但同样强大的消息监听器容器形式。启动时，它会获取固定数量的 JMS Session 来调用监听器，并可选择地在运行时进行动态调整（最多达到一个上限）。与 <a href=\"SimpleMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\"><code>SimpleMessageListenerContainer</code></a> 一样，它的主要优势在于其较低的运行时复杂性，特别是对 JMS 提供者的要求极低：甚至不需要 JMS <code>ServerSessionPool</code> 设施。除此之外，它在代理暂时不可用时能够完全自动恢复，并支持停止/重启以及运行时的配置更改。",
+      "count": 2
+    },
+    {
+      "source": "<b>The default for surplus consumers on a default/simple executor is 10,\nleading to a removal of surplus tasks after 10 idle receives in each task.</b>\nIn combination with the default <a href=\"AbstractPollingMessageListenerContainer.html#setReceiveTimeout(long)\"><code>AbstractPollingMessageListenerContainer.setReceiveTimeout(long)</code></a> of 1000 ms (1 second),\na surplus task will be scaled down after 10 seconds of idle receives by default.",
+      "translation": "<b>默认简单执行器上，多余消费者的默认值为 10，导致每个任务在 10 次空闲接收后移除多余的任务。</b>结合默认的<a href=\"AbstractPollingMessageListenerContainer.html#setReceiveTimeout(long)\"><code>AbstractPollingMessageListenerContainer.setReceiveTimeout(long)</code></a>为 1000 ms（1 秒），默认情况下，多余任务将在 10 秒的空闲接收后被缩减。",
+      "count": 2
+    },
+    {
+      "source": "May be used to detect recovery phases but also the end of a recovery phase,\nwith <code>isRecovering()</code> switching to <code>false</code> after having been found\nto return <code>true</code> before.",
+      "translation": "可能用于检测恢复阶段，也可用于检测恢复阶段的结束，此时 `<code>isRecovering()</code>` 在先前被检测到返回 `<code>true</code>` 后，会切换为 `<code>false</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Default is a <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>,\nstarting up a number of new threads, according to the specified number\nof concurrent consumers.",
+      "translation": "默认值为一个<a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>，根据指定的并发消费者数量启动相应数量的新线程。",
+      "count": 2
+    },
+    {
+      "source": "Only applicable if the internal default executor is in use rather than\nan externally provided <a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>TaskExecutor</code></a> instance.\nThe thread name prefix for virtual threads will be derived from the\nlistener container's bean name, just like with default platform threads.",
+      "translation": "仅在使用内部默认执行器而非外部提供的 <a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>TaskExecutor</code></a> 实例时适用。虚拟线程的线程名前缀将从监听器容器的 Bean 名称派生，就像默认平台线程一样。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, pass in a virtual threads based executor through\n<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>setTaskExecutor(Executor)</code></a> (with externally defined thread naming).",
+      "translation": "或者，通过带有外部定义的线程命名方式的 <a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>setTaskExecutor(Executor)</code></a> 传入基于虚拟线程的执行器。",
+      "count": 2
+    },
+    {
+      "source": "This limit is used by the <a href=\"#scheduleNewInvokerIfAppropriate()\"><code>scheduleNewInvokerIfAppropriate()</code></a> method\nto determine if a new invoker should be created. Increasing the limit causes\ninvokers to be created more aggressively. This can be useful to ramp up the\nnumber of invokers faster.",
+      "translation": "此限制由<a href=\"#scheduleNewInvokerIfAppropriate()\"><code>scheduleNewInvokerIfAppropriate()</code></a>方法用于确定是否应创建新的调用者。增加该限制会导致更积极地创建调用者。这有助于更快地增加调用者的数量。",
+      "count": 2
+    },
+    {
+      "source": "This setting differs from <a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a> where the task is\nreleased and re-scheduled after this limit is reached, no matter if the received\nmessages were null or non-null messages. This setting alone can be inflexible\nif one desires to have a large enough batch for each task but requires a\nquick(er) release from the moment there are no more messages to process.",
+      "translation": "此设置与<a href=\"#setMaxMessagesPerTask(int)\"><code>setMaxMessagesPerTask(int)</code></a>不同，后者在达到该限制后无论接收到的消息是否为 null 都会释放并重新调度任务。如果希望每个任务都有足够大的批次，但要求在没有更多消息处理时能快速释放，仅使用此设置可能不够灵活。",
+      "count": 2
+    },
+    {
+      "source": "This setting differs from <a href=\"#setIdleTaskExecutionLimit(int)\"><code>setIdleTaskExecutionLimit(int)</code></a> where this limit\ndecides after how many iterations of being marked as idle, a task is released.",
+      "translation": "此设置与<a href=\"#setIdleTaskExecutionLimit(int)\"><code>setIdleTaskExecutionLimit(int)</code></a>不同，后者决定任务在连续被标记为空闲多少次迭代后被释放。",
+      "count": 2
+    },
+    {
+      "source": "If a subsequent <a href=\"#start()\"><code>start()</code></a> call restarts the listener container\nbefore it has fully stopped, the callback will not get invoked at all.",
+      "translation": "如果随后的 `<a href=\"#start()\"><code>start()</code></a>` 调用在监听器容器完全停止之前将其重新启动，则回调将根本不会被调用。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation builds a <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>\nwith the specified bean name (or the class name, if no bean name specified) as thread name prefix.",
+      "translation": "默认实现会构建一个 <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>，其线程名前缀为指定的 Bean 名称（如果未指定 Bean 名称，则使用类名）。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to DefaultMessageListenerContainer's\nrecovery-capable <a href=\"#refreshConnectionUntilSuccessful()\"><code>refreshConnectionUntilSuccessful()</code></a> method, which will\ntry to re-establish a Connection to the JMS provider both for the shared\nand the non-shared Connection case.",
+      "translation": "默认实现会委托给 DefaultMessageListenerContainer 的具有恢复能力的 <a href=\"#refreshConnectionUntilSuccessful()\"><code>refreshConnectionUntilSuccessful()</code></a> 方法，该方法将尝试为共享和非共享连接情况分别重新建立与 JMS 提供方的连接。",
+      "count": 2
+    },
+    {
+      "source": "Return <code>true</code> if the back-off period has been applied and a new\nattempt to recover should be made, <code>false</code> if no further attempt\nshould be made.",
+      "translation": "如果已应用退避期且应尝试恢复，则返回<code>true</code>；否则（不应再尝试），返回<code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "Specify an alternative <code>TaskExecutor</code> for integration with an existing\nthread pool. Note that this really only adds value if the threads are\nmanaged in a specific fashion, for example within a Jakarta EE environment.\nA plain thread pool does not add much value, as this listener container\nwill occupy a number of threads for its entire lifetime.",
+      "translation": "指定一个替代的 `<code>TaskExecutor</code>` 以与现有的线程池集成。请注意，这仅在线程以特定方式管理时才有实际价值，例如在 Jakarta EE 环境中。普通的线程池不会增加太多价值，因为此监听器容器在其整个生命周期中会占用一定数量的线程。",
+      "count": 2
+    },
+    {
+      "source": "Note that setting the <a href=\"#setRecoveryInterval(long)\">recovery\ninterval</a> overrides this property.",
+      "translation": "注意，设置<a href=\"#setRecoveryInterval(long)\">恢复间隔</a>会覆盖此属性。",
+      "count": 2
+    },
+    {
+      "source": "Note: Further <code>stop(runnable)</code> calls (before processing\nhas actually stopped) will override the specified callback. Only the\nlatest specified callback will be invoked.",
+      "translation": "注意：在实际上停止处理之前，进一步的<code>stop(runnable)</code>调用将覆盖指定的回调。仅会调用最新指定的回调。",
+      "count": 2
+    },
+    {
+      "source": "The default is 5000 ms, that is, 5 seconds.",
+      "translation": "默认值为 5000 ms，即 5 秒。",
+      "count": 2
+    },
+    {
+      "source": "Specifying a higher value for this setting will increase the standard\nlevel of scheduled concurrent consumers at runtime: This is effectively\nthe minimum number of concurrent consumers which will be scheduled\nat any given time. This is a static setting; for dynamic scaling,\nconsider specifying the \"maxConcurrentConsumers\" setting instead.",
+      "translation": "将此设置的值设得更高，将增加运行时计划并发消费者的标准级别：这实际上是在任何给定时间计划的最小并发消费者数量。这是一个静态设置；对于动态扩展，请考虑指定\"maxConcurrentConsumers\"设置。",
+      "count": 2
+    },
+    {
+      "source": "This returns the currently configured \"concurrentConsumers\" value;\nthe number of currently scheduled/active consumers might differ.",
+      "translation": "此方法返回当前配置的\"concurrentConsumers\"值；实际已调度/激活的消费者数量可能有所不同。",
+      "count": 2
+    },
+    {
+      "source": "If this setting is higher than \"concurrentConsumers\", the listener container\nwill dynamically schedule surplus consumers at runtime, provided that enough\nincoming messages are encountered. Once the load goes down again, the number of\nconsumers will be reduced to the standard level (\"concurrentConsumers\") again.",
+      "translation": "如果此设置值高于\"concurrentConsumers\"，监听器容器将在运行时动态调度多余的消费者，前提是遇到足够多的传入消息。一旦负载再次下降，消费者的数量将重新减少到标准水平（即\"concurrentConsumers\"）。",
+      "count": 2
+    },
+    {
+      "source": "This returns the currently configured \"maxConcurrentConsumers\" value;\nthe number of currently scheduled/active consumers might differ.",
+      "translation": "此方法返回当前配置的\"maxConcurrentConsumers\"值；实际已调度/激活的消费者数量可能有所不同。",
+      "count": 2
+    },
+    {
+      "source": "Default is unlimited (-1) in case of a standard TaskExecutor,\nreusing the original invoker threads until shutdown (at the\nexpense of limited dynamic scheduling).",
+      "translation": "默认情况下，对于标准 TaskExecutor 为无限制（-1），会复用原始的调用线程直到关闭（以牺牲有限的动态调度为代价）。",
+      "count": 2
+    },
+    {
+      "source": "In case of a SchedulingTaskExecutor indicating a preference for\nshort-lived tasks, the default is 10 instead. Specify a number\nof 10 to 100 messages to balance between rather long-lived and\nrather short-lived tasks here.",
+      "translation": "如果 `SchedulingTaskExecutor` 指示偏好短生命周期任务，默认值为 10。在此处指定 10 到 100 之间的消息数量，以在较长生命周期的任务和较短生命周期的任务之间取得平衡。",
+      "count": 2
+    },
+    {
+      "source": "Long-lived tasks avoid frequent thread context switches through\nsticking with the same thread all the way through, while short-lived\ntasks allow thread pools to control the scheduling. Hence, thread\npools will usually prefer short-lived tasks.",
+      "translation": "长生命周期任务通过始终由同一线程执行来避免频繁的线程上下文切换，而短生命周期任务则允许线程池控制调度。因此，线程池通常更倾向于处理短生命周期任务。",
+      "count": 2
+    },
+    {
+      "source": "The default is 1, only scheduling a new invoker (which is likely to\nbe idle initially) if none of the existing invokers is currently idle.",
+      "translation": "默认值为 1，仅当现有调用器均非空闲时，才调度一个新的调用器（该调用器初始状态可能为空闲）。",
+      "count": 2
+    },
+    {
+      "source": "Within each task execution, a number of message receipt attempts\n(according to the \"maxMessagesPerTask\" setting) will each wait for an incoming\nmessage (according to the \"receiveTimeout\" setting). If all of those receive\nattempts in a given task return without a message, the task is considered\nidle with respect to received messages. Such a task may still be rescheduled;\nhowever, once it reached the specified \"idleTaskExecutionLimit\", it will\nshut down (in case of dynamic scaling).",
+      "translation": "在每个任务执行中，根据\"maxMessagesPerTask\"设置会进行多次消息接收尝试，每次尝试都会等待传入的消息（根据\"receiveTimeout\"设置）。如果给定任务中的所有接收尝试均未收到消息而返回，则该任务被视为相对于已接收消息处于空闲状态。此类任务仍可能被重新调度；然而，一旦达到指定的\"idleTaskExecutionLimit\"，它将在动态扩展的情况下关闭。",
+      "count": 2
+    },
+    {
+      "source": "Raise this limit if you encounter too frequent scaling up and down.\nWith this limit being higher, an idle consumer will be kept around longer,\navoiding the restart of a consumer once a new load of messages comes in.\nAlternatively, specify a higher \"maxMessagesPerTask\" and/or \"receiveTimeout\" value,\nwhich will also lead to idle consumers being kept around for a longer time\n(while also increasing the average execution time of each scheduled task).",
+      "translation": "如果频繁遇到扩容和缩容的情况，请提高此限制。\n提高此限制后，空闲的消费者将保留更长时间，从而避免在新一批消息到达时重启消费者。\n或者，可以指定更高的\"maxMessagesPerTask\"和/或\"receiveTimeout\"值，这同样会导致空闲消费者保留更长时间（同时也会增加每个定时任务的平均执行时间）。",
+      "count": 2
+    },
+    {
+      "source": "This number will always be between \"concurrentConsumers\" and\n\"maxConcurrentConsumers\", but might be higher than \"activeConsumerCount\"\n(in case some consumers are scheduled but not executing at the moment).",
+      "translation": "该数字将始终介于\"concurrentConsumers\"和\"maxConcurrentConsumers\"之间，但可能高于\"activeConsumerCount\"（如果某些消费者已调度但目前尚未执行）。",
+      "count": 2
+    },
+    {
+      "source": "This number will always be between \"concurrentConsumers\" and\n\"maxConcurrentConsumers\", but might be lower than \"scheduledConsumerCount\"\n(in case some consumers are scheduled but not executing at the moment).",
+      "translation": "该数字将始终介于\"concurrentConsumers\"和\"maxConcurrentConsumers\"之间，但可能低于\"scheduledConsumerCount\"（如果某些消费者已调度但目前未执行）。",
+      "count": 2
+    },
+    {
+      "source": "Called once a message has been received, in order to scale up while\nprocessing the message in the invoker that originally received it.",
+      "translation": "在收到消息后调用一次，以便在最初接收该消息的 invoker 中处理消息时进行扩展。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation logs the exception at warn level\nif not recovered yet, and at debug level if already recovered.\nCan be overridden in subclasses.",
+      "translation": "默认实现会在尚未恢复时以 warn 级别记录异常，在已恢复后以 debug 级别记录。可在子类中重写此方法。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation retries until it successfully established a\nConnection, for as long as this message listener container is running.\nApplies the specified recovery interval between retries.",
+      "translation": "默认实现会一直重试，直到成功建立连接，只要此消息监听器容器处于运行状态。在重试之间应用指定的恢复间隔。",
+      "count": 2
+    },
+    {
+      "source": "Called after listener setup failure, assuming that a cached Destination\nobject might have become invalid (a typical case on WebLogic JMS).",
+      "translation": "在监听器设置失败后调用，假设缓存的 Destination 对象可能已失效（WebLogic JMS 中的典型情况）。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation removes the destination from a\nDestinationResolver's cache, in case of a CachingDestinationResolver.",
+      "translation": "默认实现会从 DestinationResolver 的缓存中移除目标，如果是 CachingDestinationResolver 的话。",
+      "count": 2
+    },
+    {
+      "source": "Constant that indicates to cache a shared JMS <code>Connection</code>, a JMS\n<code>Session</code>, and a JMS MessageConsumer for each listener thread.",
+      "translation": "指示为每个监听器线程缓存共享的 JMS `Connection`、JMS `Session` 和 JMS MessageConsumer 的常量。",
+      "count": 2
+    },
+    {
+      "source": "Constant that indicates to cache a shared JMS <code>Connection</code> and a JMS\n<code>Session</code> for each listener thread.",
+      "translation": "指示为每个监听器线程缓存共享的 JMS `<code>Connection</code>` 和 JMS `<code>Session</code>` 的常量。",
+      "count": 2
+    },
+    {
+      "source": "Apply the next back-off time using the specified <a href=\"../../util/backoff/BackOffExecution.html\" title=\"interface in org.springframework.util.backoff\"><code>BackOffExecution</code></a>.",
+      "translation": "使用指定的<a href=\"../../util/backoff/BackOffExecution.html\" title=\"interface in org.springframework.util.backoff\"><code>BackOffExecution</code></a>应用下一个退避时间。",
+      "count": 2
+    },
+    {
+      "source": "Specify the <a href=\"../../util/backoff/BackOff.html\" title=\"interface in org.springframework.util.backoff\"><code>BackOff</code></a> instance to use to compute the interval\nbetween recovery attempts.",
+      "translation": "指定要用于计算恢复尝试之间间隔的<a href=\"../../util/backoff/BackOff.html\" title=\"interface in org.springframework.util.backoff\"><code>BackOff</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether the default <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> should be\nconfigured to use virtual threads instead of platform threads, for\nefficient blocking behavior in listener threads on Java 21 or higher.",
+      "translation": "指定是否应将默认的 <a href=\"../../core/task/SimpleAsyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> 配置为使用虚拟线程而非平台线程，以便在 Java 21 或更高版本中实现监听器线程的高效阻塞行为。",
+      "count": 2
+    },
+    {
+      "source": "Constant that indicates to cache a shared JMS <code>Connection</code> for each\nlistener thread.",
+      "translation": "指示为每个监听器线程缓存共享 JMS `<code>Connection</code>` 的常量。",
+      "count": 2
+    },
+    {
+      "source": "Specify the level of caching that this listener container is allowed to apply,\nin the form of the name of the corresponding constant — for example,\n<code>\"CACHE_CONNECTION\"</code>.",
+      "translation": "指定此监听器容器允许应用的缓存级别，形式为相应常量的名称——例如，`\"CACHE_CONNECTION\"`。",
+      "count": 2
+    },
+    {
+      "source": "This implementation proceeds even after an exception thrown from\n<code>Connection.start()</code>, relying on listeners to perform\nappropriate recovery.",
+      "translation": "此实现即使在从 `<code>Connection.start()</code>` 抛出的异常之后也会继续执行，依赖监听器来执行适当的恢复操作。",
+      "count": 2
+    },
+    {
+      "source": "This implementation proceeds even after an exception thrown from\n<code>Connection.stop()</code>, relying on listeners to perform\nappropriate recovery after a restart.",
+      "translation": "此实现即使在从 `<code>Connection.stop()</code>` 抛出的异常之后也会继续执行，依赖监听器在重启后执行适当的恢复操作。",
+      "count": 2
+    },
+    {
+      "source": "Constant that indicates automatic choice of an appropriate caching level\n(depending on the transaction management strategy).",
+      "translation": "指示根据事务管理策略自动选择适当缓存级别的常量。",
+      "count": 2
+    },
+    {
+      "source": "Constant that indicates to cache no JMS resources at all.",
+      "translation": "指示完全不缓存任何 JMS 资源的常量。",
+      "count": 2
+    },
+    {
+      "source": "The default recovery interval: 5000 ms = 5 seconds.",
+      "translation": "默认恢复间隔：5000 ms = 5 秒。",
+      "count": 2
+    },
+    {
+      "source": "Default thread name prefix: \"DefaultMessageListenerContainer-\".",
+      "translation": "默认线程名称前缀：\"DefaultMessageListenerContainer-\"。",
+      "count": 2
+    },
+    {
+      "source": "Creates the specified number of concurrent consumers,\nin the form of a JMS Session plus associated MessageConsumer\nrunning in a separate thread.",
+      "translation": "创建指定数量的并发消费者，形式为在独立线程中运行的 JMS Session 及相关 MessageConsumer。",
+      "count": 2
+    },
+    {
+      "source": "Re-executes the given task via this listener container's TaskExecutor.",
+      "translation": "通过此监听器容器中的 TaskExecutor 重新执行给定的任务。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the registered JMS Sessions and associated MessageConsumers.",
+      "translation": "销毁已注册的 JMS 会话及相关消息消费者。",
+      "count": 2
+    },
+    {
+      "source": "Overridden to accept a failure in the initial setup - leaving it up to the\nasynchronous invokers to establish the shared Connection on first access.",
+      "translation": "重写以接受初始设置中的失败，将建立共享连接的任务留给异步调用器在首次访问时处理。",
+      "count": 2
+    },
+    {
+      "source": "Return the level of caching that this listener container is allowed to apply.",
+      "translation": "返回该监听器容器允许应用的缓存级别。",
+      "count": 2
+    },
+    {
+      "source": "Return the limit for the number of idle consumers.",
+      "translation": "返回空闲消费者的数量限制。",
+      "count": 2
+    },
+    {
+      "source": "Return the maximum number of subsequent null messages to receive in a single task\nbefore marking the consumer as 'idle'.",
+      "translation": "在将消费者标记为“空闲”之前，单个任务中接收到的连续空消息的最大数量。",
+      "count": 2
+    },
+    {
+      "source": "Return the limit for idle executions of a consumer task.",
+      "translation": "返回消费者任务空闲执行的限制。",
+      "count": 2
+    },
+    {
+      "source": "Return the maximum number of messages to process in one task.",
+      "translation": "返回单个任务中要处理的最大消息数。",
+      "count": 2
+    },
+    {
+      "source": "Tries scheduling a new invoker, since we know messages are coming in...",
+      "translation": "尝试调度一个新的调用器，因为我们知道消息正在进入……",
+      "count": 2
+    },
+    {
+      "source": "Marks the affected invoker as idle.",
+      "translation": "将受影响的调用者标记为空闲。",
+      "count": 2
+    },
+    {
+      "source": "Use a shared JMS Connection depending on the \"cacheLevel\" setting.",
+      "translation": "使用根据“cacheLevel”设置共享的 JMS 连接。",
+      "count": 2
+    },
+    {
+      "source": "Overridden to reset the stop callback, if any.",
+      "translation": "被重写以重置停止回调（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageListenerContainer.html#setConcurrency(java.lang.String)\">setConcurrency</a></code> in class <code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageListenerContainer.html#setConcurrency(java.lang.String)\">setConcurrency</a></code>` 类中的 `<code><a href=\"AbstractMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractMessageListenerContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractPollingMessageListenerContainer.html#initialize()\">initialize</a></code> in class <code><a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractPollingMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractPollingMessageListenerContainer.html#initialize()\">initialize</a></code>` 类中的 `<code><a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractPollingMessageListenerContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#doInitialize()\">doInitialize</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#doInitialize()\">doInitialize</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#doShutdown()\">doShutdown</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#doShutdown()\">doShutdown</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#start()\">start</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#start()\">start</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#sharedConnectionEnabled()\">sharedConnectionEnabled</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#sharedConnectionEnabled()\">sharedConnectionEnabled</a></code>` 在类 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#doRescheduleTask(java.lang.Object)\">doRescheduleTask</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractJmsListeningContainer.html#doRescheduleTask(java.lang.Object)\">doRescheduleTask</a></code>` 类中的 `<code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractPollingMessageListenerContainer.html#messageReceived(java.lang.Object,jakarta.jms.Session)\">messageReceived</a></code> in class <code><a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractPollingMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractPollingMessageListenerContainer.html#messageReceived(java.lang.Object,jakarta.jms.Session)\">messageReceived</a></code>` 类中的 `<code><a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractPollingMessageListenerContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractPollingMessageListenerContainer.html#noMessageReceived(java.lang.Object,jakarta.jms.Session)\">noMessageReceived</a></code> in class <code><a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractPollingMessageListenerContainer</a></code>",
+      "translation": "`<code><a href=\"AbstractPollingMessageListenerContainer.html#noMessageReceived(java.lang.Object,jakarta.jms.Session)\">noMessageReceived</a></code>` 类中的 `<code><a href=\"AbstractPollingMessageListenerContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractPollingMessageListenerContainer</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#establishSharedConnection()\">establishSharedConnection</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`AbstractJmsListeningContainer` 类中的 `<a href=\"AbstractJmsListeningContainer.html#establishSharedConnection()\">establishSharedConnection</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#startSharedConnection()\">startSharedConnection</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`AbstractJmsListeningContainer` 类中的 `<a href=\"AbstractJmsListeningContainer.html#startSharedConnection()\">startSharedConnection</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJmsListeningContainer.html#stopSharedConnection()\">stopSharedConnection</a></code> in class <code><a href=\"AbstractJmsListeningContainer.html\" title=\"class in org.springframework.jms.listener\">AbstractJmsListeningContainer</a></code>",
+      "translation": "`AbstractJmsListeningContainer` 类中的 `<a href=\"AbstractJmsListeningContainer.html#stopSharedConnection()\">stopSharedConnection</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code>callback</code> - the callback to invoke once listener processing\nhas fully stopped",
+      "translation": "<code>callback</code> - 在监听器处理完全停止后调用的回调",
+      "count": 2
+    },
+    {
+      "source": "<code>invoker</code> - the invoker object (passed through)",
+      "translation": "<code>invoker</code> - 调用对象（透传）",
+      "count": 2
+    },
+    {
+      "source": "<code>session</code> - the receiving JMS Session",
+      "translation": "<code>session</code> - 接收的 JMS Session",
+      "count": 2
+    },
+    {
+      "source": "<code>alreadyRecovered</code> - whether a previously executing listener\nalready recovered from the present listener setup failure\n(this usually indicates a follow-up failure than can be ignored\nother than for debug log purposes)",
+      "translation": "<code>alreadyRecovered</code> - 表示先前正在执行的监听器是否已从当前的监听器配置失败中恢复（这通常指示一个后续失败，除用于调试日志外可被忽略）。",
+      "count": 2
+    },
+    {
+      "source": "Creates a JMS Connection, starts the <code>Connection</code>\n(if <a href=\"AbstractJmsListeningContainer.html#setAutoStartup(boolean)\"><code>\"autoStartup\"</code></a> hasn't been turned off),\nand calls <a href=\"AbstractJmsListeningContainer.html#doInitialize()\"><code>AbstractJmsListeningContainer.doInitialize()</code></a>.",
+      "translation": "创建 JMS 连接，启动 `<code>Connection</code>`（如果未关闭<a href=\"AbstractJmsListeningContainer.html#setAutoStartup(boolean)\"><code>\"autoStartup\"</code></a>），并调用 <a href=\"AbstractJmsListeningContainer.html#doInitialize()\"><code>AbstractJmsListeningContainer.doInitialize()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractJmsListeningContainer.html#initialize()\">AbstractJmsListeningContainer</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractJmsListeningContainer.html#initialize()\">AbstractJmsListeningContainer</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Specify the interval between recovery attempts, in <b>milliseconds</b>.",
+      "translation": "指定恢复尝试之间的间隔，单位为<b>毫秒</b>。",
+      "count": 1
+    },
+    {
+      "source": "Set the Spring <code>TaskExecutor</code> to use for running the listener threads.",
+      "translation": "设置用于运行监听器线程的 Spring <code>TaskExecutor</code>。",
+      "count": 1
+    },
+    {
+      "source": "Create a default TaskExecutor.",
+      "translation": "创建默认的 TaskExecutor。",
+      "count": 1
+    },
+    {
+      "source": "Return the number of currently active consumers.",
+      "translation": "返回当前活动消费者的数量。",
+      "count": 1
+    },
+    {
+      "source": "Return the \"concurrentConsumer\" setting.",
+      "translation": "返回\"concurrentConsumer\"设置。",
+      "count": 1
+    },
+    {
+      "source": "Return the \"maxConcurrentConsumer\" setting.",
+      "translation": "返回“maxConcurrentConsumer”设置。",
+      "count": 1
+    },
+    {
+      "source": "Return the number of currently scheduled consumers.",
+      "translation": "返回当前已调度的消费者数量。",
+      "count": 1
+    },
+    {
+      "source": "Handle the given exception that arose during setup of a listener.",
+      "translation": "处理在监听器设置期间引发的异常。",
+      "count": 1
+    },
+    {
+      "source": "Initialize this container.",
+      "translation": "初始化此容器。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this listener container is currently in a recovery attempt.",
+      "translation": "返回该监听器容器当前是否正在尝试恢复。",
+      "count": 1
+    },
+    {
+      "source": "Return whether at least one consumer has entered a fixed registration with the\ntarget destination.",
+      "translation": "返回是否至少有一个消费者已与目标目的地建立了固定注册。",
+      "count": 1
+    },
+    {
+      "source": "Recover this listener container after a listener failed to set itself up,\nfor example re-establishing the underlying Connection.",
+      "translation": "在监听器未能成功初始化（例如无法重新建立底层连接）后，恢复该监听器容器。",
+      "count": 1
+    },
+    {
+      "source": "Refresh the underlying Connection, not returning before an attempt has been\nsuccessful.",
+      "translation": "刷新底层连接，在尝试成功之前不返回。",
+      "count": 1
+    },
+    {
+      "source": "Refresh the JMS destination that this listener container operates on.",
+      "translation": "刷新该监听器容器所操作的 JMS 目标。",
+      "count": 1
+    },
+    {
+      "source": "Schedule a new invoker, increasing the total number of scheduled\ninvokers for this listener container, but only if the specified\n\"maxConcurrentConsumers\" limit has not been reached yet, and only\nif the specified \"idleConsumerLimit\" has not been reached either.",
+      "translation": "调度一个新的消费者，增加此监听器容器中已调度的消费者总数，但仅当指定的\"maxConcurrentConsumers\"限制尚未达到，且指定的\"idleConsumerLimit\"也尚未达到时才会执行。",
+      "count": 1
+    },
+    {
+      "source": "Specify the level of caching that this listener container is allowed to apply.",
+      "translation": "指定该监听器容器允许应用的缓存级别。",
+      "count": 1
+    },
+    {
+      "source": "Specify concurrency limits via a \"lower-upper\" String, for example, \"5-10\", or a simple\nupper limit String, for example, \"10\" (the lower limit will be 1 in this case).",
+      "translation": "通过“下界 - 上界”形式的字符串指定并发限制，例如\"5-10\"，或通过简单的上界字符串指定，例如\"10\"（此时下界将为 1）。",
+      "count": 1
+    },
+    {
+      "source": "Specify the number of core concurrent consumers to create.",
+      "translation": "指定要创建的核心并发消费者数量。",
+      "count": 1
+    },
+    {
+      "source": "Specify the limit for the number of consumers that are allowed to be idle\nat any given time.",
+      "translation": "指定允许在任何给定时间处于空闲状态的消费者数量限制。",
+      "count": 1
+    },
+    {
+      "source": "Marks the consumer as 'idle' after the specified number of idle receives\nhave been reached.",
+      "translation": "在达到指定数量的空闲接收后，将消费者标记为“空闲”。",
+      "count": 1
+    },
+    {
+      "source": "Specify the limit for idle executions of a consumer task, not having\nreceived any message within its execution.",
+      "translation": "指定消费者任务的空闲执行限制，即在未在其执行期间收到任何消息的情况下的限制。",
+      "count": 1
+    },
+    {
+      "source": "Specify the maximum number of concurrent consumers to create.",
+      "translation": "指定要创建的并发消费者的最大数量。",
+      "count": 1
+    },
+    {
+      "source": "Specify the maximum number of messages to process in one task.",
+      "translation": "指定每个任务中要处理的消息的最大数量。",
+      "count": 1
+    },
+    {
+      "source": "Stop this listener container, invoking the specific callback\nonce all listener processing has actually stopped.",
+      "translation": "停止此监听器容器，在所有监听器处理实际停止后调用特定回调。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JmsException.html\" title=\"class in org.springframework.jms\">JmsException</a></code> - if starting failed",
+      "translation": "<code><a href=\"../JmsException.html\" title=\"class in org.springframework.jms\">JmsException</a></code> - 如果启动失败",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JmsException.html\" title=\"class in org.springframework.jms\">JmsException</a></code> - if stopping failed",
+      "translation": "<code><a href=\"../JmsException.html\" title=\"class in org.springframework.jms\">JmsException</a></code> - 如果停止失败",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if registration failed",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果注册失败",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.jms.JMSException</code> - if shutdown failed",
+      "translation": "<code>jakarta.jms.JMSException</code> - 如果关闭失败",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the task object to reschedule",
+      "translation": "<code>task</code> - 要重新安排的任务对象",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the exception to handle",
+      "translation": "<code>ex</code> - 要处理的异常",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen",
+      "translation": "Juergen Hoeller, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

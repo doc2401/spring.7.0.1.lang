@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 12:22:53",
+  "updated_at": "2026-04-14 12:22:53",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 53,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7666666666666666,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "Processing of <code>@EventListener</code> annotations is performed via\nthe internal <a href=\"EventListenerMethodProcessor.html\" title=\"class in org.springframework.context.event\"><code>EventListenerMethodProcessor</code></a> bean which gets\nregistered automatically when using Java config or manually via the\n<code>&lt;context:annotation-config/&gt;</code> or <code>&lt;context:component-scan/&gt;</code>\nelement when using XML config.",
+      "translation": "`@EventListener` 注解的处理是通过内部 `<a href=\"EventListenerMethodProcessor.html\" title=\"class in org.springframework.context.event\"><code>EventListenerMethodProcessor</code></a>` Bean 执行的，该 Bean 在使用 Java 配置时会自动注册，或者在使用 XML 配置时通过 `<context:annotation-config/>` 或 `<context:component-scan/>` 元素手动注册。",
+      "count": 2
+    },
+    {
+      "source": "The event will be handled if the expression evaluates to boolean\n<code>true</code> or one of the following strings: <code>\"true\"</code>, <code>\"on\"</code>,\n<code>\"yes\"</code>, or <code>\"1\"</code>.",
+      "translation": "如果表达式求值为布尔值`true`或以下字符串之一：`\"true\"`、`\"on\"`、`\"yes\"` 或 `\"1\"`，则事件将被处理。",
+      "count": 2
+    },
+    {
+      "source": "If an annotated method supports a single event type, the method may\ndeclare a single parameter that reflects the event type to listen to.\nIf an annotated method supports multiple event types, this annotation\nmay refer to one or more supported event types using the <code>classes</code>\nattribute. See the <a href=\"#classes()\"><code>classes()</code></a> javadoc for further details.",
+      "translation": "如果注释的方法支持单个事件类型，该方法可以声明一个参数来反映要监听的事件类型。如果注释的方法支持多个事件类型，该注解可以使用 `classes` 属性引用一个或多个支持的事件类型。有关详细信息，请参阅 <a href=\"#classes()\"><code>classes()</code></a> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "Events can be <a href=\"../ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a> instances as well as arbitrary\nobjects.",
+      "translation": "事件可以是 `<a href=\"../ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>` 实例，也可以是任意对象。",
+      "count": 2
+    },
+    {
+      "source": "While it is possible for an event listener to declare that it\nthrows arbitrary exception types, any checked exceptions thrown\nfrom an event listener will be wrapped in an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/UndeclaredThrowableException.html\" title=\"class or interface in java.lang.reflect\"><code>UndeclaredThrowableException</code></a>\nsince the event publisher can only handle runtime exceptions.",
+      "translation": "虽然事件监听器可以声明抛出任意异常类型，但事件监听器抛出的任何受检异常都会被包装在<code>UndeclaredThrowableException</code>中（参见<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/UndeclaredThrowableException.html\" title=\"class or interface in java.lang.reflect\">java.lang.reflect.UndeclaredThrowableException</a>），因为事件发布器只能处理运行时异常。",
+      "count": 2
+    },
+    {
+      "source": "If you want a particular listener to process events asynchronously, you\ncan use Spring's <a href=\"../../scheduling/annotation/Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@Async</code></a>\nsupport, but be aware of the following limitations when using asynchronous events.",
+      "translation": "如果您希望某个监听器异步处理事件，可以使用 Spring 的<a href=\"../../scheduling/annotation/Async.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@Async</code></a>支持，但在使用异步事件时请注意以下限制。",
+      "count": 2
+    },
+    {
+      "source": "It is also possible to define the order in which listeners for a\ncertain event are to be invoked. To do so, add Spring's common\n<a href=\"../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> annotation\nalongside this event listener annotation.",
+      "translation": "还可以定义特定事件监听器的调用顺序。为此，在此事件监听器注解旁添加 Spring 的通用<a href=\"../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a>注解。",
+      "count": 2
+    },
+    {
+      "source": "Annotated methods may have a non-<code>void</code> return type. When they\ndo, the result of the method invocation is sent as a new event. If the\nreturn type is either an array or a collection, each element is sent\nas a new individual event.",
+      "translation": "注解方法可以具有非`void`返回类型。当它们这样做时，方法调用的结果作为新事件发送。如果返回类型是数组或集合，则每个元素都作为单独的新事件发送。",
+      "count": 2
+    },
+    {
+      "source": "The default expression is <code>\"\"</code>, meaning the event is always handled.",
+      "translation": "默认表达式为<code>\"\"</code>，表示该事件始终被处理。",
+      "count": 2
+    },
+    {
+      "source": "The annotated method may optionally accept a single parameter\nof the given event class, or of a common base class or interface\nfor all given event classes.",
+      "translation": "注释的方法可选地接受一个给定事件类的单个参数，或者为所有给定事件类共用的基类或接口的参数。",
+      "count": 2
+    },
+    {
+      "source": "The SpEL expression will be evaluated against a dedicated context that\nprovides the following metadata:",
+      "translation": "SpEL 表达式将在提供以下元数据的专用上下文中进行评估：",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#classes()\"><code>classes()</code></a>.",
+      "translation": "`<a href=\"#classes()\">classes()</a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "Whether the event should be handled by default, without any special\npre-conditions such as an active transaction. Declared here for overriding\nin composed annotations such as <code>TransactionalEventListener</code>.",
+      "translation": "是否应该默认处理该事件，而无需任何特殊前置条件（例如活动事务）。在此声明以便在组合注解（如 `<code>TransactionalEventListener</code>`）中进行覆盖。",
+      "count": 2
+    },
+    {
+      "source": "An optional identifier for the listener, defaulting to the fully-qualified\nsignature of the declaring method (for example, \"mypackage.MyClass.myMethod()\").",
+      "translation": "监听器的可选标识符，默认为声明方法的完全限定签名（例如，\"mypackage.MyClass.myMethod()\"）。",
+      "count": 2
+    },
+    {
+      "source": "<code>#root.event</code> or <code>event</code> for references to the\n<a href=\"../ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>",
+      "translation": "`#root.event` 或 `event`，用于引用 `<a href=\"../ApplicationEvent.html\" title=\"class in org.springframework.context\"><code>ApplicationEvent</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Method arguments can be accessed by index. For example, the first\nargument can be accessed via <code>#root.args[0]</code>, <code>args[0]</code>,\n<code>#a0</code>, or <code>#p0</code>.",
+      "translation": "方法参数可以通过索引访问。例如，第一个参数可以通过 `<code>#root.args[0]</code>`、`<code>args[0]</code>`、`<code>#a0</code>` 或 `<code>#p0</code>` 访问。",
+      "count": 2
+    },
+    {
+      "source": "If an asynchronous event listener throws an exception, it is not propagated\nto the caller. See <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a> for more details.",
+      "translation": "如果异步事件监听器抛出异常，该异常不会传播给调用者。有关详细信息，请参阅 <a href=\"../../aop/interceptor/AsyncUncaughtExceptionHandler.html\" title=\"interface in org.springframework.aop.interceptor\"><code>AsyncUncaughtExceptionHandler</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Asynchronous event listener methods cannot publish a subsequent event by returning a\nvalue. If you need to publish another event as the result of the processing, inject an\n<a href=\"../ApplicationEventPublisher.html\" title=\"interface in org.springframework.context\"><code>ApplicationEventPublisher</code></a>\nto publish the event manually.",
+      "translation": "异步事件监听器方法不能通过返回值发布后续事件。如果需要作为处理结果发布另一个事件，请注入一个<a href=\"../ApplicationEventPublisher.html\" title=\"interface in org.springframework.context\"><code>ApplicationEventPublisher</code></a>来手动发布该事件。",
+      "count": 2
+    },
+    {
+      "source": "<code>#root.args</code> or <code>args</code> for references to the method\narguments array",
+      "translation": "<code>#root.args</code> 或 <code>args</code>，用于引用方法参数数组",
+      "count": 2
+    },
+    {
+      "source": "Method arguments can be accessed by name (with a preceding hash tag)\nif parameter names are available in the compiled byte code.",
+      "translation": "如果编译后的字节码中提供了参数名称，则可以通过名称（前面加上井号）访问方法参数。",
+      "count": 2
+    },
+    {
+      "source": "Exception Handling",
+      "translation": "异常处理",
+      "count": 2
+    },
+    {
+      "source": "Asynchronous Listeners",
+      "translation": "异步监听器",
+      "count": 2
+    },
+    {
+      "source": "Ordering Listeners",
+      "translation": "排序监听器",
+      "count": 2
+    },
+    {
+      "source": "This annotation may be used as a <em>meta-annotation</em> to create custom\n<em>composed annotations</em>.",
+      "translation": "此注解可用作 <em>元注解</em> 来创建自定义的 <em>组合注解</em>。",
+      "count": 1
+    },
+    {
+      "source": "The event classes that this listener handles.",
+      "translation": "该监听器处理的事件类。",
+      "count": 1
+    },
+    {
+      "source": "Spring Expression Language (SpEL) expression used for making the event\nhandling conditional.",
+      "translation": "用于使事件处理条件化的 Spring 表达式语言 (SpEL) 表达式。",
+      "count": 1
+    },
+    {
+      "source": "Whether the event should be handled by default, without any special\npre-conditions such as an active transaction.",
+      "translation": "事件是否应默认处理，而无需任何特殊前置条件（例如活动事务）。",
+      "count": 1
+    },
+    {
+      "source": "Stephane Nicoll, Sam Brannen",
+      "translation": "Stephane Nicoll, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

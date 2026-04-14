@@ -1,0 +1,301 @@
+{
+  "created_at": "2026-04-14 20:27:22",
+  "updated_at": "2026-04-14 20:27:22",
+  "stats": {
+    "total_entries": 57,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 90,
+    "entries_with_hits": 57,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5789473684210527,
+    "usage_percentage": 0.0057
+  },
+  "items": [
+    {
+      "source": "Default constructor that uses <a href=\"../standard/StandardWebSocketUpgradeStrategy.html\" title=\"class in org.springframework.web.socket.server.standard\"><code>StandardWebSocketUpgradeStrategy</code></a>.",
+      "translation": "使用<a href=\"../standard/StandardWebSocketUpgradeStrategy.html\" title=\"class in org.springframework.web.socket.server.standard\"><code>StandardWebSocketUpgradeStrategy</code></a>的默认构造函数。",
+      "count": 3
+    },
+    {
+      "source": "Determine the sub-protocols supported by the given WebSocketHandler by\nchecking whether it is an instance of <a href=\"../../SubProtocolCapable.html\" title=\"interface in org.springframework.web.socket\"><code>SubProtocolCapable</code></a>.",
+      "translation": "通过检查它是否是<a href=\"../../SubProtocolCapable.html\" title=\"interface in org.springframework.web.socket\"><code>SubProtocolCapable</code></a>的实例，来确定给定的 WebSocketHandler 支持的子协议。",
+      "count": 3
+    },
+    {
+      "source": "If the negotiation succeeds, the actual upgrade is delegated to a server-specific\n<a href=\"../RequestUpgradeStrategy.html\" title=\"interface in org.springframework.web.socket.server\"><code>RequestUpgradeStrategy</code></a>, which will update\nthe response as necessary and initialize the WebSocket. As of 7.0, this class uses\n<a href=\"../standard/StandardWebSocketUpgradeStrategy.html\" title=\"class in org.springframework.web.socket.server.standard\"><code>StandardWebSocketUpgradeStrategy</code></a> unless explicitly configured.",
+      "translation": "如果协商成功，实际的升级将委托给特定于服务器的 <a href=\"../RequestUpgradeStrategy.html\" title=\"interface in org.springframework.web.socket.server\"><code>RequestUpgradeStrategy</code></a>，该策略将根据需要更新响应并初始化 WebSocket。从 7.0 版本开始，除非显式配置，否则该类使用 <a href=\"../standard/StandardWebSocketUpgradeStrategy.html\" title=\"class in org.springframework.web.socket.server.standard\"><code>StandardWebSocketUpgradeStrategy</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Note that if the WebSocketHandler passed in at runtime is an instance of\n<a href=\"../../SubProtocolCapable.html\" title=\"interface in org.springframework.web.socket\"><code>SubProtocolCapable</code></a> then there is no need to explicitly configure\nthis property. That is certainly the case with the built-in STOMP over\nWebSocket support. Therefore, this property should be configured explicitly\nonly if the WebSocketHandler does not implement <code>SubProtocolCapable</code>.",
+      "translation": "请注意，如果在运行时传入的 `WebSocketHandler` 是 `<a href=\"../../SubProtocolCapable.html\" title=\"interface in org.springframework.web.socket\"><code>SubProtocolCapable</code></a>` 接口的实例，则无需显式配置此属性。内置的基于 WebSocket 的 STOMP 支持确实属于这种情况。因此，仅当 `WebSocketHandler` 未实现 `<code>SubProtocolCapable</code>` 时，才应显式配置此属性。",
+      "count": 2
+    },
+    {
+      "source": "Performs initial validation of the WebSocket handshake request - possibly rejecting it\nthrough the appropriate HTTP status code - while also allowing its subclasses to override\nvarious parts of the negotiation process: for example, origin validation, sub-protocol\nnegotiation, extensions negotiation, etc.",
+      "translation": "执行 WebSocket 握手请求的初始验证——可能通过适当的 HTTP 状态码拒绝该请求——同时允许其子类重写协商过程的各个部分：例如，源验证、子协议协商、扩展协商等。",
+      "count": 2
+    },
+    {
+      "source": "As of 4.1, the default implementation of this method filters the list to\nleave only extensions that are both requested and supported.",
+      "translation": "自 4.1 版本起，此方法的默认实现会过滤列表，仅保留既被请求又被支持的扩展。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can provide custom logic for associating a user with a session,\nfor example for assigning a name to anonymous users (i.e. not fully authenticated).",
+      "translation": "子类可以为将用户与会话关联提供自定义逻辑，例如为匿名用户（即未完全认证的用户）分配名称。",
+      "count": 2
+    },
+    {
+      "source": "Perform the sub-protocol negotiation based on requested and supported sub-protocols.\nFor the list of supported sub-protocols, this method first checks if the target\nWebSocketHandler is a <a href=\"../../SubProtocolCapable.html\" title=\"interface in org.springframework.web.socket\"><code>SubProtocolCapable</code></a> and then also checks if any\nsub-protocols have been explicitly configured with\n<a href=\"#setSupportedProtocols(java.lang.String...)\"><code>setSupportedProtocols(String...)</code></a>.",
+      "translation": "根据请求和支持的子协议执行子协议协商。对于支持子协议的列表，此方法首先检查目标 WebSocketHandler 是否为 <a href=\"../../SubProtocolCapable.html\" title=\"interface in org.springframework.web.socket\"><code>SubProtocolCapable</code></a>，然后还检查是否已通过<a href=\"#setSupportedProtocols(java.lang.String...)\"><code>setSupportedProtocols(String...)</code></a>显式配置了任何子协议。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../HandshakeHandler.html#doHandshake(org.springframework.http.server.ServerHttpRequest,org.springframework.http.server.ServerHttpResponse,org.springframework.web.socket.WebSocketHandler,java.util.Map)\">HandshakeHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../HandshakeHandler.html#doHandshake(org.springframework.http.server.ServerHttpRequest,org.springframework.http.server.ServerHttpResponse,org.springframework.web.socket.WebSocketHandler,java.util.Map)\">HandshakeHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return whether the request <code>Origin</code> header value is valid or not.\nBy default, all origins as considered as valid. Consider using an\n<a href=\"OriginHandshakeInterceptor.html\" title=\"class in org.springframework.web.socket.server.support\"><code>OriginHandshakeInterceptor</code></a> for filtering origins if needed.",
+      "translation": "返回请求 `<code>Origin</code>` 头值是否有效。默认情况下，所有源均被视为有效。如需过滤源，请考虑使用 <a href=\"OriginHandshakeInterceptor.html\" title=\"class in org.springframework.web.socket.server.support\"><code>OriginHandshakeInterceptor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "A constructor that accepts a runtime-specific <a href=\"../RequestUpgradeStrategy.html\" title=\"interface in org.springframework.web.socket.server\"><code>RequestUpgradeStrategy</code></a>.",
+      "translation": "接受运行时特定的<a href=\"../RequestUpgradeStrategy.html\" title=\"interface in org.springframework.web.socket.server\"><code>RequestUpgradeStrategy</code></a>的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Return the <a href=\"../RequestUpgradeStrategy.html\" title=\"interface in org.springframework.web.socket.server\"><code>RequestUpgradeStrategy</code></a> for WebSocket requests.",
+      "translation": "返回用于 WebSocket 请求的<a href=\"../RequestUpgradeStrategy.html\" title=\"interface in org.springframework.web.socket.server\"><code>RequestUpgradeStrategy</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Initiate the handshake.",
+      "translation": "发起握手。",
+      "count": 2
+    },
+    {
+      "source": "Return the list of supported sub-protocols.",
+      "translation": "返回支持的子协议列表。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../HandshakeHandler.html#doHandshake(org.springframework.http.server.ServerHttpRequest,org.springframework.http.server.ServerHttpResponse,org.springframework.web.socket.WebSocketHandler,java.util.Map)\">doHandshake</a></code> in interface <code><a href=\"../HandshakeHandler.html\" title=\"interface in org.springframework.web.socket.server\">HandshakeHandler</a></code>",
+      "translation": "`<code><a href=\"../HandshakeHandler.html#doHandshake(org.springframework.http.server.ServerHttpRequest,org.springframework.http.server.ServerHttpResponse,org.springframework.web.socket.WebSocketHandler,java.util.Map)\">doHandshake</a></code>` 接口 `<code><a href=\"../HandshakeHandler.html\" title=\"interface in org.springframework.web.socket.server\">HandshakeHandler</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>wsHandler</code> - the handler to process WebSocket messages; see\n<a href=\"../../handler/PerConnectionWebSocketHandler.html\" title=\"class in org.springframework.web.socket.handler\"><code>PerConnectionWebSocketHandler</code></a> for providing a handler with\nper-connection lifecycle.",
+      "translation": "<code>wsHandler</code> - 用于处理 WebSocket 消息的处理器；有关提供具有每连接生命周期的处理器，请参见<a href=\"../../handler/PerConnectionWebSocketHandler.html\" title=\"class in org.springframework.web.socket.handler\"><code>PerConnectionWebSocketHandler</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../HandshakeFailureException.html\" title=\"class in org.springframework.web.socket.server\">HandshakeFailureException</a></code> - thrown when handshake processing failed to\ncomplete due to an internal, unrecoverable error, i.e. a server error as\nopposed to a failure to successfully negotiate the handshake.",
+      "translation": "<code><a href=\"../HandshakeFailureException.html\" title=\"class in org.springframework.web.socket.server\">HandshakeFailureException</a></code> - 当握手处理因内部不可恢复的错误而未能完成时抛出，即服务器错误，而非握手协商失败。",
+      "count": 2
+    },
+    {
+      "source": "<code>requestUpgradeStrategy</code> - the upgrade strategy to use",
+      "translation": "<code>requestUpgradeStrategy</code> - 要使用的升级策略",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 2
+    },
+    {
+      "source": "<code>requestedProtocols</code> - the requested sub-protocols",
+      "translation": "<code>requestedProtocols</code> - 请求的子协议",
+      "count": 2
+    },
+    {
+      "source": "<code>webSocketHandler</code> - the WebSocketHandler that will be used",
+      "translation": "<code>webSocketHandler</code> - 将使用的 WebSocketHandler",
+      "count": 2
+    },
+    {
+      "source": "the selected protocols or <code>null</code>",
+      "translation": "所选协议或<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>handler</code> - the handler to check",
+      "translation": "<code>handler</code> - 要检查的处理器",
+      "count": 2
+    },
+    {
+      "source": "<code>requestedExtensions</code> - the list of extensions requested by the client",
+      "translation": "<code>requestedExtensions</code> - 客户端请求的扩展列表",
+      "count": 2
+    },
+    {
+      "source": "<code>supportedExtensions</code> - the list of extensions supported by the server",
+      "translation": "<code>supportedExtensions</code> - 服务器支持的扩展列表",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the handshake request",
+      "translation": "<code>request</code> - 握手请求",
+      "count": 2
+    },
+    {
+      "source": "<code>wsHandler</code> - the WebSocket handler that will handle messages",
+      "translation": "<code>wsHandler</code> - 用于处理消息的 WebSocket 处理器",
+      "count": 2
+    },
+    {
+      "source": "<code>attributes</code> - handshake attributes to pass to the WebSocket session",
+      "translation": "<code>attributes</code> - 要传递给 WebSocket 会话的握手属性",
+      "count": 2
+    },
+    {
+      "source": "the user for the WebSocket session, or <code>null</code> if not available",
+      "translation": "WebSocket 会话的用户，如果不可用则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "a list of supported protocols, or an empty list if none available",
+      "translation": "支持协议的列表，若无可用协议则为空列表。",
+      "count": 2
+    },
+    {
+      "source": "the selected extensions or an empty list",
+      "translation": "所选扩展或空列表",
+      "count": 2
+    },
+    {
+      "source": "In the case of a container, this will return <code>true</code> only if <i>all</i>\ncomponents that apply are currently running.",
+      "translation": "对于容器而言，仅当所有适用的组件当前都在运行时，此方法才返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Note that this stop notification is not guaranteed to come before destruction:\nOn regular shutdown, <code>Lifecycle</code> beans will first receive a stop notification\nbefore the general destruction callbacks are being propagated; however, on hot\nrefresh during a context's lifetime or on aborted refresh attempts, a given bean's\ndestroy method will be called without any consideration of stop signals upfront.",
+      "translation": "请注意，此停止通知并不保证在销毁之前发出：\n在常规关闭过程中，<code>Lifecycle</code> 圈会先接收停止通知，然后再传播通用的销毁回调；然而，在上下文生命周期期间的热刷新或中止的刷新尝试中，给定 bean 的销毁方法将在不考虑任何预先停止信号的情况下被调用。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is already running.",
+      "translation": "如果组件已经在运行，则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate a hard start signal to all\ncomponents that apply, even to non-auto-startup components.",
+      "translation": "对于容器而言，这将向所有适用的组件传播硬启动信号，即使包括非自动启动的组件。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is not running (not started yet).",
+      "translation": "如果组件尚未运行（尚未启动），则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate the stop signal to all components\nthat apply.",
+      "translation": "对于容器，这将向所有适用的组件传播停止信号。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return whether the request <code>Origin</code> header value is valid or not.",
+      "translation": "返回请求 `<code>Origin</code>` 头值是否有效。",
+      "count": 1
+    },
+    {
+      "source": "A method that can be used to associate a user with the WebSocket session\nin the process of being established.",
+      "translation": "可用于在建立过程中将用户与 WebSocket 会话关联的方法。",
+      "count": 1
+    },
+    {
+      "source": "Filter the list of requested WebSocket extensions.",
+      "translation": "过滤请求的 WebSocket 扩展列表。",
+      "count": 1
+    },
+    {
+      "source": "Check whether this component is currently running.",
+      "translation": "检查该组件当前是否正在运行。",
+      "count": 1
+    },
+    {
+      "source": "Perform the sub-protocol negotiation based on requested and supported sub-protocols.",
+      "translation": "根据请求和支持的子协议执行子协议协商。",
+      "count": 1
+    },
+    {
+      "source": "Use this property to configure the list of supported sub-protocols.",
+      "translation": "使用此属性配置支持的子协议列表。",
+      "count": 1
+    },
+    {
+      "source": "Start this component.",
+      "translation": "启动此组件。",
+      "count": 1
+    },
+    {
+      "source": "Stop this component, typically in a synchronous fashion, such that the component is\nfully stopped upon return of this method.",
+      "translation": "停止此组件，通常以同步方式执行，使得该方法返回时组件已完全停止。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - the current response",
+      "translation": "<code>response</code> - 当前响应",
+      "count": 1
+    },
+    {
+      "source": "<code>attributes</code> - the attributes from the HTTP handshake to associate with the WebSocket\nsession; the provided attributes are copied, the original map is not used.",
+      "translation": "<code>attributes</code> - 要与 WebSocket 会话关联的来自 HTTP 握手的信息；提供的属性会被复制，不会使用原始映射。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Juergen Hoeller",
+      "translation": "Rossen Stoyanchev，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    },
+    {
+      "source": "whether the handshake negotiation was successful or not. In either case the\nresponse status, headers, and body will have been updated to reflect the\nresult of the negotiation",
+      "translation": "无论握手协商是否成功，响应状态、标头和主体都将被更新以反映协商的结果。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

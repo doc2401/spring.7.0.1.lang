@@ -1,0 +1,436 @@
+{
+  "created_at": "2026-04-14 16:02:16",
+  "updated_at": "2026-04-14 16:02:16",
+  "stats": {
+    "total_entries": 84,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 141,
+    "entries_with_hits": 84,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6785714285714286,
+    "usage_percentage": 0.0084
+  },
+  "items": [
+    {
+      "source": "<b>NOTE: Only applied if no external PersistenceUnitManager specified.</b>",
+      "translation": "<b>注意：仅在没有指定外部 PersistenceUnitManager 时适用。</b>",
+      "count": 10
+    },
+    {
+      "source": "Set the <a href=\"persistenceunit/ManagedClassNameFilter.html\" title=\"interface in org.springframework.orm.jpa.persistenceunit\"><code>ManagedClassNameFilter</code></a> to apply on entity classes discovered\nusing <a href=\"#setPackagesToScan(java.lang.String...)\">classpath scanning</a>.",
+      "translation": "将 `<a href=\"persistenceunit/ManagedClassNameFilter.html\" title=\"interface in org.springframework.orm.jpa.persistenceunit\"><code>ManagedClassNameFilter</code></a>` 设置为应用于通过 <a href=\"#setPackagesToScan(java.lang.String...)\">类路径扫描</a> 发现的实体类。",
+      "count": 3
+    },
+    {
+      "source": "Set the <a href=\"persistenceunit/PersistenceManagedTypes.html\" title=\"interface in org.springframework.orm.jpa.persistenceunit\"><code>PersistenceManagedTypes</code></a> to use to build the list of managed types\nas an alternative to entity scanning.",
+      "translation": "将 `<a href=\"persistenceunit/PersistenceManagedTypes.html\" title=\"interface in org.springframework.orm.jpa.persistenceunit\"><code>PersistenceManagedTypes</code></a>` 设置为构建托管类型列表的选项，作为实体扫描的替代方案。",
+      "count": 3
+    },
+    {
+      "source": "As with <a href=\"LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a>, configuration settings\nare usually read in from a <code>META-INF/persistence.xml</code> config file,\nresiding in the class path, according to the general JPA configuration contract.\nHowever, this FactoryBean is more flexible in that you can override the location\nof the <code>persistence.xml</code> file, specify the JDBC DataSources to link to,\netc. Furthermore, it allows for pluggable class instrumentation through Spring's\n<a href=\"../../instrument/classloading/LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\"><code>LoadTimeWeaver</code></a> abstraction,\ninstead of being tied to a special VM agent specified on JVM startup.",
+      "translation": "与 <a href=\"LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a> 一样，配置设置通常从位于类路径中的 <code>META-INF/persistence.xml</code> 配置文件读取，遵循通用的 JPA 配置约定。然而，该 FactoryBean 更加灵活，因为您可以覆盖 <code>persistence.xml</code> 文件的位置、指定要链接的 JDBC DataSources 等。此外，它允许通过 Spring 的 <a href=\"../../instrument/classloading/LoadTimeWeaver.html\" title=\"interface in org.springframework.instrument.classloading\"><code>LoadTimeWeaver</code></a> 抽象实现可插拔的类增强功能，而不是依赖于 JVM 启动时指定的特殊 VM 代理。",
+      "count": 2
+    },
+    {
+      "source": "Note: <code>PersistenceConfiguration</code> includes a persistence unit name,\nso this effectively overrides the <a href=\"#setPersistenceUnitName(java.lang.String)\"><code>setPersistenceUnitName(String)</code></a> method.\nIn contrast, all other settings will be merged with the settings in the\n<code>PersistenceConfiguration</code> instance.",
+      "translation": "注意：<code>PersistenceConfiguration</code> 包含一个持久化单元名称，因此这实际上覆盖了 <a href=\"#setPersistenceUnitName(java.lang.String)\"><code>setPersistenceUnitName(String)</code></a> 方法。相比之下，所有其他设置将与 <code>PersistenceConfiguration</code> 实例中的设置合并。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note: There may be limitations in comparison to regular JPA scanning.</b>\nIn particular, JPA providers may pick up annotated packages for provider-specific\nannotations only when driven by <code>persistence.xml</code>. As of 4.1, Spring's\nscan can detect annotated packages as well if supported by the given\n<a href=\"JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\"><code>JpaVendorAdapter</code></a> (for example, for Hibernate).",
+      "translation": "<b>注意：与常规 JPA 扫描相比，可能存在一些限制。</b>\n特别是，当由 <code>persistence.xml</code> 驱动时，JPA 提供程序可能仅拾取针对特定于提供程序的注解的包。从 4.1 版本开始，如果给定的<a href=\"JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\"><code>JpaVendorAdapter</code></a>（例如 Hibernate）支持，Spring 的扫描也可以检测这些已注解的包。",
+      "count": 2
+    },
+    {
+      "source": "If no explicit <a href=\"#setMappingResources(java.lang.String...)\"><code>mapping resources</code></a> have been\nspecified in addition to these packages, Spring's setup looks for a default\n<code>META-INF/orm.xml</code> file in the classpath, registering it as a mapping\nresource for the default unit if the mapping file is not co-located with a\n<code>persistence.xml</code> file (in which case we assume it is only meant to be\nused with the persistence units defined there, like in standard JPA).",
+      "translation": "如果除了这些包之外没有显式指定任何<a href=\"#setMappingResources(java.lang.String...)\"><code>mapping resources</code></a>，Spring 的配置会查找类路径中的默认<code>META-INF/orm.xml</code>文件。如果该映射文件不与<code>persistence.xml</code>文件共存（在这种情况下，我们假设它仅用于其中定义的持久化单元，就像标准 JPA 一样），则将其注册为默认单元的映射资源。",
+      "count": 2
+    },
+    {
+      "source": "If no explicit mapping resources have been specified next to\n<a href=\"#setPackagesToScan(java.lang.String...)\"><code>packages to scan</code></a>, Spring's setup looks for a default\n<code>META-INF/orm.xml</code> file in the classpath, registering it as a mapping\nresource for the default unit if the mapping file is not co-located with a\n<code>persistence.xml</code> file (in which case we assume it is only meant to be\nused with the persistence units defined there, like in standard JPA).",
+      "translation": "如果未显式指定<a href=\"#setPackagesToScan(java.lang.String...)\"><code>扫描包</code></a>的映射资源，Spring 的配置将在类路径中查找默认的<code>META-INF/orm.xml</code>文件。如果该映射文件不与<code>persistence.xml</code>文件共存（在这种情况下，我们假设它仅用于标准 JPA 中定义的持久化单元），则将其注册为默认单元的映射资源。",
+      "count": 2
+    },
+    {
+      "source": "Internally, this FactoryBean parses the <code>persistence.xml</code> file\nitself and creates a corresponding <code>PersistenceUnitInfo</code>\nobject (with further configuration merged in, such as JDBC DataSources and the\nSpring LoadTimeWeaver), to be passed to the chosen JPA\n<code>PersistenceProvider</code>. This corresponds to a\nlocal JPA container with full support for the standard JPA container contract.",
+      "translation": "内部，该 FactoryBean 解析 `<code>persistence.xml`</code> 文件本身，并创建一个对应的 `<code>PersistenceUnitInfo</code>` 对象（其中已合并进一步的配置，例如 JDBC 数据源和 Spring LoadTimeWeaver），并将其传递给选定的 JPA `<code>PersistenceProvider</code>`。这相当于一个本地 JPA 容器，完全支持标准的 JPA 容器契约。",
+      "count": 2
+    },
+    {
+      "source": "Note that specifying an empty array/list here suppresses the default\n<code>META-INF/orm.xml</code> check. On the other hand, explicitly specifying\n<code>META-INF/orm.xml</code> here will register that file even if it happens\nto be co-located with a <code>persistence.xml</code> file.",
+      "translation": "请注意，在此处指定空数组/列表会抑制默认的 `<code>META-INF/orm.xml</code>` 检查。另一方面，如果此处显式指定 `<code>META-INF/orm.xml</code>`，即使该文件与 `<code>persistence.xml</code> 文件共存，也会注册该文件。",
+      "count": 2
+    },
+    {
+      "source": "In JPA speak, a DataSource passed in here will be used as \"nonJtaDataSource\"\non the PersistenceUnitInfo passed to the PersistenceProvider, as well as\noverriding data source configuration in <code>persistence.xml</code> (if any).\nNote that this variant typically works for JTA transaction management as well;\nif it does not, consider using the explicit <a href=\"#setJtaDataSource(javax.sql.DataSource)\"><code>setJtaDataSource(DataSource)</code></a> instead.",
+      "translation": "在 JPA 术语中，此处传入的 `DataSource` 将作为传递给 `PersistenceProvider` 的 `PersistenceUnitInfo` 中的\"nonJtaDataSource\"使用，并覆盖 `<code>persistence.xml</code>`（如果存在）中的数据源配置。请注意，此变体通常也适用于 JTA 事务管理；如果不行，请考虑改用显式的 <a href=\"#setJtaDataSource(javax.sql.DataSource)\"><code>setJtaDataSource(DataSource)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> Only applied if no external PersistenceUnitManager specified.\nOtherwise, the external <a href=\"#setPersistenceUnitManager(org.springframework.orm.jpa.persistenceunit.PersistenceUnitManager)\"><code>PersistenceUnitManager</code></a>\nis responsible for the weaving configuration.",
+      "translation": "<b>注意：</b> 仅在没有指定外部 PersistenceUnitManager 时适用。否则，外部的 <a href=\"#setPersistenceUnitManager(org.springframework.orm.jpa.persistenceunit.PersistenceUnitManager)\"><code>PersistenceUnitManager</code></a> 负责织入配置。",
+      "count": 2
+    },
+    {
+      "source": "The exposed EntityManagerFactory object will implement all the interfaces of\nthe underlying native EntityManagerFactory returned by the PersistenceProvider,\nplus the <a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\"><code>EntityManagerFactoryInfo</code></a> interface which exposes additional\nmetadata as assembled by this FactoryBean.",
+      "translation": "暴露的 EntityManagerFactory 对象将实现底层原生 EntityManagerFactory（由 PersistenceProvider 返回）的所有接口，以及 <a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\"><code>EntityManagerFactoryInfo</code></a> 接口，该接口提供了此 FactoryBean 组装的额外元数据。",
+      "count": 2
+    },
+    {
+      "source": "Default is none. Specify packages to search for autodetection of your entity\nclasses in the classpath. This is analogous to Spring's component-scan feature\n(<a href=\"../../context/annotation/ClassPathBeanDefinitionScanner.html\" title=\"class in org.springframework.context.annotation\"><code>ClassPathBeanDefinitionScanner</code></a>).",
+      "translation": "默认为无。指定要在类路径中搜索以自动检测实体类的包。这类似于 Spring 的 component-scan 功能（<a href=\"../../context/annotation/ClassPathBeanDefinitionScanner.html\" title=\"class in org.springframework.context.annotation\"><code>ClassPathBeanDefinitionScanner</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Consider setting a <a href=\"persistenceunit/PersistenceManagedTypes.html\" title=\"interface in org.springframework.orm.jpa.persistenceunit\"><code>PersistenceManagedTypes</code></a> instead that allows the\nscanning logic to be optimized by AOT processing.",
+      "translation": "考虑设置一个 `<a href=\"persistenceunit/PersistenceManagedTypes.html\" title=\"interface in org.springframework.orm.jpa.persistenceunit\"><code>PersistenceManagedTypes</code></a>`，以允许通过 AOT 处理优化扫描逻辑。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> As of Spring 2.5, the context's default LoadTimeWeaver (defined\nas bean with name \"loadTimeWeaver\") will be picked up automatically, if available,\nremoving the need for LoadTimeWeaver configuration on each affected target bean.\nConsider using the <code>context:load-time-weaver</code> XML tag for creating\nsuch a shared LoadTimeWeaver (autodetecting the environment by default).",
+      "translation": "<b>注意：</b> 自 Spring 2.5 起，如果可用，上下文默认的 LoadTimeWeaver（定义为名为 \"loadTimeWeaver\" 的 bean）将自动被加载，从而消除了在每个受影响的目标 bean 上配置 LoadTimeWeaver 的需要。建议使用 <code>context:load-time-weaver</code> XML 标签来创建此类共享的 LoadTimeWeaver（默认自动检测环境）。",
+      "count": 2
+    },
+    {
+      "source": "For reuse of existing persistence unit configuration or more advanced forms\nof custom persistence unit handling, consider defining a separate\nPersistenceUnitManager bean (typically a DefaultPersistenceUnitManager instance)\nand linking it in here. <code>persistence.xml</code> location, DataSource\nconfiguration and LoadTimeWeaver will be defined on that separate\nDefaultPersistenceUnitManager bean in such a scenario.",
+      "translation": "若要复用现有的持久化单元配置，或采用更高级的自定义持久化单元处理方式，请考虑定义一个独立的 PersistenceUnitManager 圈（通常为 DefaultPersistenceUnitManager 实例），并将其链接于此。在此类场景中，<code>persistence.xml</code> 位置、DataSource 配置以及 LoadTimeWeaver 均将在该独立的 DefaultPersistenceUnitManager 圈上定义。",
+      "count": 2
+    },
+    {
+      "source": "Note that mapping resources must be relative to the classpath root,\nfor example, \"META-INF/mappings.xml\" or \"com/mycompany/repository/mappings.xml\",\nso that they can be loaded through <code>ClassLoader.getResource</code>.",
+      "translation": "注意，映射资源必须相对于类路径根目录，例如\"META-INF/mappings.xml\"或\"com/mycompany/repository/mappings.xml\"，以便可以通过 `<code>ClassLoader.getResource</code>` 加载它们。",
+      "count": 2
+    },
+    {
+      "source": "In JPA speak, a DataSource passed in here will be used as \"jtaDataSource\"\non the PersistenceUnitInfo passed to the PersistenceProvider, as well as\noverriding data source configuration in <code>persistence.xml</code> (if any).",
+      "translation": "在 JPA 术语中，此处传入的 DataSource 将作为传递给 PersistenceProvider 的 PersistenceUnitInfo 中的\"jtaDataSource\"使用，并覆盖<code>persistence.xml</code>（如果存在）中的数据源配置。",
+      "count": 2
+    },
+    {
+      "source": "Such post-processors can, for example, register further entity\nclasses and jar files, in addition to the metadata read from\n<code>persistence.xml</code>.",
+      "translation": "此类后处理器可以注册额外的实体类和 jar 文件，除了从 `<code>persistence.xml</code>` 读取的元数据之外。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation reads in all persistence unit infos from\n<code>persistence.xml</code>, as defined in the JPA specification, selecting a unit\nby name. If no persistence unit name was specified, it takes the default one\nif configured, or otherwise the first persistence unit as found by the reader.",
+      "translation": "默认实现从 `<code>persistence.xml</code>` 中读取所有持久化单元信息（如 JPA 规范所定义），并通过名称选择单元。如果未指定持久化单元名称，则使用配置的默认单元；否则，使用阅读器找到的第一个持久化单元。",
+      "count": 2
+    },
+    {
+      "source": "The default is to rely on the local settings specified on this FactoryBean,\nsuch as \"persistenceXmlLocation\", \"dataSource\" and \"loadTimeWeaver\".",
+      "translation": "默认情况下，依赖于此 FactoryBean 上指定的本地设置，例如 \"persistenceXmlLocation\"、\"dataSource\" 和 \"loadTimeWeaver\"。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"classpath:META-INF/persistence.xml\".",
+      "translation": "默认值为\"classpath:META-INF/persistence.xml\"。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"classpath:\", that is, the root of the current classpath\n(nearest root directory). To be overridden if unit-specific resolution\ndoes not work and the classpath root is not appropriate either.",
+      "translation": "默认值为\"classpath:\"，即当前类路径的根目录（最近的根目录）。如果无法通过针对特定单元的解析进行覆盖，且类路径根目录也不合适时，则使用此值。",
+      "count": 2
+    },
+    {
+      "source": "It is a not required to specify a LoadTimeWeaver: Most providers will be\nable to provide a subset of their functionality without class instrumentation\nas well, or operate with their VM agent specified on JVM startup.",
+      "translation": "指定 LoadTimeWeaver 并非必需：大多数提供者能够在不执行类增强的情况下提供其功能子集，或者通过在 JVM 启动时指定其 VM 代理来运行。",
+      "count": 2
+    },
+    {
+      "source": "In terms of Spring-provided weaving options, the most important ones are\nInstrumentationLoadTimeWeaver, which requires a Spring-specific (but very general)\nVM agent specified on JVM startup, and ReflectiveLoadTimeWeaver, which interacts\nwith an underlying ClassLoader based on specific extended methods being available\non it.",
+      "translation": "在 Spring 提供的织入选项中，最重要的是 `InstrumentationLoadTimeWeaver`，它需要在 JVM 启动时指定一个 Spring 专用的（但非常通用）VM agent；以及 `ReflectiveLoadTimeWeaver`，它与底层 ClassLoader 交互，依赖于该 ClassLoader 上可用的特定扩展方法。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractEntityManagerFactoryBean.html#createNativeEntityManagerFactory()\">AbstractEntityManagerFactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractEntityManagerFactoryBean.html#createNativeEntityManagerFactory()\">AbstractEntityManagerFactoryBean</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Subclasses must implement this method to create the EntityManagerFactory\nthat will be returned by the <code>getObject()</code> method.",
+      "translation": "子类必须实现此方法以创建将由 `<code>getObject()</code>` 方法返回的 `EntityManagerFactory`。",
+      "count": 2
+    },
+    {
+      "source": "Return the JDBC DataSource that this EntityManagerFactory\nobtains its JDBC Connections from.",
+      "translation": "返回此 EntityManagerFactory 获取其 JDBC 连接的 JDBC DataSource。",
+      "count": 2
+    },
+    {
+      "source": "Return the PersistenceUnitInfo used to create this\nEntityManagerFactory, if the in-container API was used.",
+      "translation": "如果使用了容器内 API，则返回用于创建此 EntityManagerFactory 的 PersistenceUnitInfo。",
+      "count": 2
+    },
+    {
+      "source": "Specify the JDBC DataSource that the JPA persistence provider is supposed\nto use for accessing the database.",
+      "translation": "指定 JPA 持久化提供者用于访问数据库的 JDBC DataSource。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setPersistenceXmlLocation(java.lang.String)\"><code>setPersistenceXmlLocation(String)</code></a></li>\n<li><a href=\"AbstractEntityManagerFactoryBean.html#setJpaProperties(java.util.Properties)\"><code>AbstractEntityManagerFactoryBean.setJpaProperties(Properties)</code></a></li>\n<li><a href=\"AbstractEntityManagerFactoryBean.html#setJpaVendorAdapter(org.springframework.orm.jpa.JpaVendorAdapter)\"><code>AbstractEntityManagerFactoryBean.setJpaVendorAdapter(JpaVendorAdapter)</code></a></li>\n<li><a href=\"#setLoadTimeWeaver(org.springframework.instrument.classloading.LoadTimeWeaver)\"><code>setLoadTimeWeaver(LoadTimeWeaver)</code></a></li>\n<li><a href=\"#setDataSource(javax.sql.DataSource)\"><code>setDataSource(DataSource)</code></a></li>\n<li><a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\"><code>EntityManagerFactoryInfo</code></a></li>\n<li><a href=\"LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a></li>\n<li><a href=\"support/SharedEntityManagerBean.html\" title=\"class in org.springframework.orm.jpa.support\"><code>SharedEntityManagerBean</code></a></li>\n<li><code>PersistenceProvider.createContainerEntityManagerFactory(PersistenceUnitInfo, Map)</code></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setPersistenceXmlLocation(java.lang.String)\"><code>setPersistenceXmlLocation(String)</code></a></li>\n<li><a href=\"AbstractEntityManagerFactoryBean.html#setJpaProperties(java.util.Properties)\"><code>AbstractEntityManagerFactoryBean.setJpaProperties(Properties)</code></a></li>\n<li><a href=\"AbstractEntityManagerFactoryBean.html#setJpaVendorAdapter(org.springframework.orm.jpa.JpaVendorAdapter)\"><code>AbstractEntityManagerFactoryBean.setJpaVendorAdapter(JpaVendorAdapter)</code></a></li>\n<li><a href=\"#setLoadTimeWeaver(org.springframework.instrument.classloading.LoadTimeWeaver)\"><code>setLoadTimeWeaver(LoadTimeWeaver)</code></a></li>\n<li><a href=\"#setDataSource(javax.sql.DataSource)\"><code>setDataSource(DataSource)</code></a></li>\n<li><a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\"><code>EntityManagerFactoryInfo</code></a></li>\n<li><a href=\"LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a></li>\n<li><a href=\"support/SharedEntityManagerBean.html\" title=\"class in org.springframework.orm.jpa.support\"><code>SharedEntityManagerBean</code></a></li>\n<li><code>PersistenceProvider.createContainerEntityManagerFactory(PersistenceUnitInfo, Map)</code></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractEntityManagerFactoryBean.html#setPersistenceUnitName(java.lang.String)\">setPersistenceUnitName</a></code> in class <code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>",
+      "translation": "`<code><a href=\"AbstractEntityManagerFactoryBean.html#setPersistenceUnitName(java.lang.String)\">setPersistenceUnitName</a></code>` 类中的 `<code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/weaving/LoadTimeWeaverAware.html#setLoadTimeWeaver(org.springframework.instrument.classloading.LoadTimeWeaver)\">setLoadTimeWeaver</a></code> in interface <code><a href=\"../../context/weaving/LoadTimeWeaverAware.html\" title=\"interface in org.springframework.context.weaving\">LoadTimeWeaverAware</a></code>",
+      "translation": "`<code><a href=\"../../context/weaving/LoadTimeWeaverAware.html#setLoadTimeWeaver(org.springframework.instrument.classloading.LoadTimeWeaver)\">setLoadTimeWeaver</a></code>` 接口 `<code><a href=\"../../context/weaving/LoadTimeWeaverAware.html\" title=\"interface in org.springframework.context.weaving\">LoadTimeWeaverAware</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractEntityManagerFactoryBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in class <code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>",
+      "translation": "`<code><a href=\"AbstractEntityManagerFactoryBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 类中的 `<code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractEntityManagerFactoryBean.html#createNativeEntityManagerFactory()\">createNativeEntityManagerFactory</a></code> in class <code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>",
+      "translation": "`<code><a href=\"AbstractEntityManagerFactoryBean.html#createNativeEntityManagerFactory()\">createNativeEntityManagerFactory</a></code>` 类中的 `<code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractEntityManagerFactoryBean.html#getPersistenceUnitInfo()\">getPersistenceUnitInfo</a></code> in class <code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>",
+      "translation": "`<code><a href=\"AbstractEntityManagerFactoryBean.html#getPersistenceUnitInfo()\">getPersistenceUnitInfo</a></code>` 类中的 `<code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractEntityManagerFactoryBean.html#getPersistenceUnitName()\">getPersistenceUnitName</a></code> in class <code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>",
+      "translation": "`<code><a href=\"AbstractEntityManagerFactoryBean.html#getPersistenceUnitName()\">getPersistenceUnitName</a></code>` 类中的 `<code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractEntityManagerFactoryBean.html#getDataSource()\">getDataSource</a></code> in class <code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>",
+      "translation": "`<code><a href=\"AbstractEntityManagerFactoryBean.html#getDataSource()\">getDataSource</a></code>` 类中的 `<code><a href=\"AbstractEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\">AbstractEntityManagerFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>persistenceXmlLocation</code> - a Spring resource String\nidentifying the location of the <code>persistence.xml</code> file\nthat this LocalContainerEntityManagerFactoryBean should parse",
+      "translation": "`persistenceXmlLocation` - 一个 Spring 资源字符串，用于标识此 LocalContainerEntityManagerFactoryBean 应解析的 `persistence.xml` 文件的位置。",
+      "count": 2
+    },
+    {
+      "source": "<code>managedTypes</code> - the managed types",
+      "translation": "<code>managedTypes</code> - 托管类型",
+      "count": 2
+    },
+    {
+      "source": "<code>packagesToScan</code> - one or more base packages to search, analogous to\nSpring's component-scan configuration for regular Spring components",
+      "translation": "<code>packagesToScan</code> - 一个或多个要搜索的基础包，类似于 Spring 组件扫描配置中用于常规 Spring 组件的设置",
+      "count": 2
+    },
+    {
+      "source": "<code>managedClassNameFilter</code> - a predicate to filter entity classes",
+      "translation": "<code>managedClassNameFilter</code> - 用于过滤实体类的谓词",
+      "count": 2
+    },
+    {
+      "source": "<code>persistenceUnitManager</code> - the PersistenceUnitManager to obtain from",
+      "translation": "<code>persistenceUnitManager</code> - 用于获取的 PersistenceUnitManager。",
+      "count": 2
+    },
+    {
+      "source": "<code>emf</code> - the newly created EntityManagerFactory we are working with",
+      "translation": "<code>emf</code> - 我们正在使用的新创建的 EntityManagerFactory",
+      "count": 2
+    },
+    {
+      "source": "<code>pui</code> - the PersistenceUnitInfo used to configure the EntityManagerFactory",
+      "translation": "<pui</p> - 用于配置 EntityManagerFactory 的 PersistenceUnitInfo",
+      "count": 2
+    },
+    {
+      "source": "the chosen PersistenceUnitInfo",
+      "translation": "所选的 PersistenceUnitInfo",
+      "count": 2
+    },
+    {
+      "source": "If <code>getPersistenceUnitInfo()</code> returns non-null, the result of\n<code>getPersistenceUnitName()</code> must be equal to the value returned by\n<code>PersistenceUnitInfo.getPersistenceUnitName()</code>.",
+      "translation": "如果 `<code>getPersistenceUnitInfo()</code>` 返回非 null 值，则 `<code>getPersistenceUnitName()</code>` 的结果必须等于 `<code>PersistenceUnitInfo.getPersistenceUnitName()</code>` 返回的值。",
+      "count": 1
+    },
+    {
+      "source": "This might be a ResourcePatternResolver, which can be checked\nthrough <code>instanceof ResourcePatternResolver</code>. See also the\n<code>ResourcePatternUtils.getResourcePatternResolver</code> method.",
+      "translation": "这可能是一个 `ResourcePatternResolver`，可以通过 `<code>instanceof ResourcePatternResolver</code>` 进行检查。另请参阅 `<code>ResourcePatternUtils.getResourcePatternResolver</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback\nlike InitializingBean's <code>afterPropertiesSet</code> or a custom init-method.\nInvoked before ApplicationContextAware's <code>setApplicationContext</code>.",
+      "translation": "在普通 Bean 属性填充之后、但早于初始化回调（如 `InitializingBean` 的 `<code>afterPropertiesSet</code>` 或自定义的 init-method）之前被调用。在 `ApplicationContextAware` 的 `<code>setApplicationContext</code>` 之前被调用。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty.",
+      "translation": "默认实现为空。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">ResourceLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">ResourceLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitInfo()\">EntityManagerFactoryInfo</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitInfo()\">EntityManagerFactoryInfo</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitName()\">EntityManagerFactoryInfo</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitName()\">EntityManagerFactoryInfo</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"EntityManagerFactoryInfo.html#getDataSource()\">EntityManagerFactoryInfo</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"EntityManagerFactoryInfo.html#getDataSource()\">EntityManagerFactoryInfo</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Specify one or more mapping resources (equivalent to <code>&lt;mapping-file&gt;</code>\nentries in <code>persistence.xml</code>) for the default persistence unit.",
+      "translation": "为默认持久化单元指定一个或多个映射资源（相当于`persistence.xml` 中的 `<mapping-file>` 条目）。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the persistence unit used to create this\nEntityManagerFactory, or <code>null</code> if it is an unnamed default.",
+      "translation": "返回用于创建此 `EntityManagerFactory` 的持久化单元名称，如果它是未命名的默认单元，则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to use Spring-based scanning for entity classes in the classpath\ninstead of using JPA's standard scanning of jar files with <code>persistence.xml</code>\nmarkers in them.",
+      "translation": "设置是否在类路径中使用基于 Spring 的实体类扫描，而不是使用 JPA 对包含 `<code>persistence.xml</code>` 标记的 jar 文件的标准扫描。",
+      "count": 1
+    },
+    {
+      "source": "Set a local JPA 3.2 <code>PersistenceConfiguration</code> to use for this\npersistence unit.",
+      "translation": "为此持久化单元设置一个本地 JPA 3.2 `<code>PersistenceConfiguration`。",
+      "count": 1
+    },
+    {
+      "source": "Set the location of the <code>persistence.xml</code> file\nwe want to use.",
+      "translation": "设置要使用的 <code>persistence.xml</code> 文件的位置。",
+      "count": 1
+    },
+    {
+      "source": "Specify the JPA 2.0 shared cache mode for this persistence unit,\noverriding a value in <code>persistence.xml</code> if set.",
+      "translation": "为此持久化单元指定 JPA 2.0 共享缓存模式，如果 `<persistence.xml>` 中已设置值则进行覆盖。",
+      "count": 1
+    },
+    {
+      "source": "Specify the JPA 2.0 validation mode for this persistence unit,\noverriding a value in <code>persistence.xml</code> if set.",
+      "translation": "为此持久化单元指定 JPA 2.0 验证模式，如果 `<code>persistence.xml</code>` 中已设置值则进行覆盖。",
+      "count": 1
+    },
+    {
+      "source": "Determine the PersistenceUnitInfo to use for the EntityManagerFactory\ncreated by this bean.",
+      "translation": "确定此 Bean 创建的 EntityManagerFactory 要使用的 PersistenceUnitInfo。",
+      "count": 1
+    },
+    {
+      "source": "Hook method allowing subclasses to customize the EntityManagerFactory\nafter its creation via the PersistenceProvider.",
+      "translation": "允许子类在通过 PersistenceProvider 创建 EntityManagerFactory 之后对其进行自定义的钩子方法。",
+      "count": 1
+    },
+    {
+      "source": "Specify the Spring LoadTimeWeaver to use for class instrumentation according\nto the JPA class transformer contract.",
+      "translation": "根据 JPA 类转换器合同，指定用于类仪器化的 Spring LoadTimeWeaver。",
+      "count": 1
+    },
+    {
+      "source": "Set the PersistenceUnitManager to use for obtaining the JPA persistence unit\nthat this FactoryBean is supposed to build an EntityManagerFactory for.",
+      "translation": "设置用于获取此 FactoryBean 打算为其构建 EntityManagerFactory 的 JPA 持久化单元的 PersistenceUnitManager。",
+      "count": 1
+    },
+    {
+      "source": "Uses the specified persistence unit name as the name of the default\npersistence unit, if applicable.",
+      "translation": "如果适用，则使用指定的持久化单元名称作为默认持久化单元的名称。",
+      "count": 1
+    },
+    {
+      "source": "Set the PersistenceUnitPostProcessors to be applied to the\nPersistenceUnitInfo used for creating this EntityManagerFactory.",
+      "translation": "将用于创建此 EntityManagerFactory 的 PersistenceUnitInfo 所应用的 PersistenceUnitPostProcessors 设置好。",
+      "count": 1
+    },
+    {
+      "source": "Set a persistence unit root location for the default persistence unit.",
+      "translation": "为默认持久化单元设置持久化单元根位置。",
+      "count": 1
+    },
+    {
+      "source": "Set the ResourceLoader that this object runs in.",
+      "translation": "设置该对象运行的资源加载器。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code> in interface <code><a href=\"../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\">setResourceLoader</a></code>` 接口 `<code><a href=\"../../context/ResourceLoaderAware.html\" title=\"interface in org.springframework.context\">ResourceLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitInfo()\">getPersistenceUnitInfo</a></code> in interface <code><a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\">EntityManagerFactoryInfo</a></code>",
+      "translation": "`EntityManagerFactoryInfo` 接口中的 `<a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitInfo()\">getPersistenceUnitInfo</a>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitName()\">getPersistenceUnitName</a></code> in interface <code><a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\">EntityManagerFactoryInfo</a></code>",
+      "translation": "`EntityManagerFactoryInfo` 接口中的 `<a href=\"EntityManagerFactoryInfo.html#getPersistenceUnitName()\">getPersistenceUnitName</a>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"EntityManagerFactoryInfo.html#getDataSource()\">getDataSource</a></code> in interface <code><a href=\"EntityManagerFactoryInfo.html\" title=\"interface in org.springframework.orm.jpa\">EntityManagerFactoryInfo</a></code>",
+      "translation": "`EntityManagerFactoryInfo` 接口中的 `<a href=\"EntityManagerFactoryInfo.html#getDataSource()\">getDataSource</a>`",
+      "count": 1
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader object to be used by this object",
+      "translation": "<code>resourceLoader</code> - 此对象将使用的 ResourceLoader 对象",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.persistence.PersistenceException</code> - if the EntityManager cannot be created",
+      "translation": "<code>jakarta.persistence.PersistenceException</code> - 如果无法创建 EntityManager",
+      "count": 1
+    },
+    {
+      "source": "the PersistenceUnitInfo used to create this EntityManagerFactory,\nor <code>null</code> if the in-container contract was not used to\nconfigure the EntityManagerFactory",
+      "translation": "用于创建此 EntityManagerFactory 的 PersistenceUnitInfo，或者如果未使用容器内约定配置 EntityManagerFactory，则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the JDBC DataSource, or <code>null</code> if not known",
+      "translation": "JDBC 数据源，或如果未知则为<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson",
+      "translation": "Juergen Hoeller，Rod Johnson",
+      "count": 1
+    },
+    {
+      "source": "the EntityManagerFactory instance returned by this FactoryBean",
+      "translation": "此 FactoryBean 返回的 EntityManagerFactory 实例",
+      "count": 1
+    }
+  ]
+}

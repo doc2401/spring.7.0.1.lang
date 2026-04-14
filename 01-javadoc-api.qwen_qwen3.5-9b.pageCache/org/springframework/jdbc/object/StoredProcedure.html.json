@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 14:51:45",
+  "updated_at": "2026-04-14 14:51:45",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 51,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 2.04,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Create a new object wrapper for a stored procedure.",
+      "translation": "为存储过程创建一个新的对象包装器。",
+      "count": 4
+    },
+    {
+      "source": "<code>name</code> - the name of the stored procedure in the database",
+      "translation": "<code>name</code> - 数据库中存储过程的名称",
+      "count": 3
+    },
+    {
+      "source": "map of output params, keyed by name as in parameter declarations.\nOutput parameters will appear here, with their values after the\nstored procedure has been called.",
+      "translation": "输出参数映射，以参数声明中的名称作为键。调用存储过程后，输出参数将在此处显示其值。",
+      "count": 3
+    },
+    {
+      "source": "Parameters declared as <code>SqlParameter</code> and <code>SqlInOutParameter</code>\nwill always be used to provide input values. In addition to this, any parameter declared\nas <code>SqlOutParameter</code> where a non-null input value is provided will also be used\nas an input parameter.\n<b>Note: Calls to declareParameter must be made in the same order as\nthey appear in the database's stored procedure parameter list.</b>",
+      "translation": "声明为 <code>SqlParameter</code> 和 <code>SqlInOutParameter</code> 的参数将始终用于提供输入值。此外，任何声明为 <code>SqlOutParameter</code> 且提供了非空输入值的参数也将用作输入参数。\n<b>注意：调用 declareParameter 的顺序必须与数据库存储过程参数列表中的顺序一致。</b>",
+      "count": 2
+    },
+    {
+      "source": "The inherited <a href=\"RdbmsOperation.html#setSql(java.lang.String)\"><code>sql</code></a> property is the name of the stored procedure\nin the RDBMS.",
+      "translation": "继承的<a href=\"RdbmsOperation.html#setSql(java.lang.String)\"><code>sql</code></a>属性是 RDBMS 中存储过程的名称。",
+      "count": 2
+    },
+    {
+      "source": "Names are purely used to help mapping.",
+      "translation": "名称仅用于辅助映射。",
+      "count": 2
+    },
+    {
+      "source": "Allow use as a bean.",
+      "translation": "允许作为 Bean 使用。",
+      "count": 2
+    },
+    {
+      "source": "StoredProcedure parameter Maps are by default allowed to contain\nadditional entries that are not actually used as parameters.",
+      "translation": "存储过程参数映射默认允许包含未实际用作参数的额外条目。",
+      "count": 2
+    },
+    {
+      "source": "Execute the stored procedure.",
+      "translation": "执行存储过程。",
+      "count": 2
+    },
+    {
+      "source": "Execute the stored procedure with the provided parameter values. This is\na convenience method where the order of the passed in parameter values\nmust match the order that the parameters where declared in.",
+      "translation": "执行带有提供的参数值的存储过程。这是一个便捷方法，其中传入的参数值顺序必须与参数声明时的顺序一致。",
+      "count": 2
+    },
+    {
+      "source": "Execute the stored procedure. Subclasses should define a strongly typed\nexecute method (with a meaningful name) that invokes this method, populating\nthe input map and extracting typed values from the output map. Subclass\nexecute methods will often take domain objects as arguments and return values.\nAlternatively, they can return void.",
+      "translation": "执行存储过程。子类应定义一个强类型的 `execute` 方法（具有有意义的名称），该方法调用此方法，填充输入映射并从输出映射中提取强类型值。子类的 `execute` 方法通常将域对象作为参数接收并返回值，或者返回 void。",
+      "count": 2
+    },
+    {
+      "source": "Execute the stored procedure. Subclasses should define a strongly typed\nexecute method (with a meaningful name) that invokes this method, passing in\na ParameterMapper that will populate the input map.  This allows mapping database\nspecific features since the ParameterMapper has access to the Connection object.\nThe execute method is also responsible for extracting typed values from the output map.\nSubclass execute methods will often take domain objects as arguments and return values.\nAlternatively, they can return void.",
+      "translation": "执行存储过程。子类应定义一个强类型的 `execute` 方法（具有有意义的名称），该方法调用此方法，并传入一个 `ParameterMapper` 以填充输入映射。这允许根据数据库特定功能进行映射，因为 `ParameterMapper` 可以访问 `Connection` 对象。`execute` 方法还负责从输出映射中提取强类型值。子类的 `execute` 方法通常将域对象作为参数接收并返回值，或者返回 void。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"RdbmsOperation.html#allowsUnusedParameters()\">allowsUnusedParameters</a></code> in class <code><a href=\"RdbmsOperation.html\" title=\"class in org.springframework.jdbc.object\">RdbmsOperation</a></code>",
+      "translation": "`<code><a href=\"RdbmsOperation.html#allowsUnusedParameters()\">allowsUnusedParameters</a></code>` 类中的 `<code><a href=\"RdbmsOperation.html\" title=\"class in org.springframework.jdbc.object\">RdbmsOperation</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"RdbmsOperation.html#declareParameter(org.springframework.jdbc.core.SqlParameter)\">declareParameter</a></code> in class <code><a href=\"RdbmsOperation.html\" title=\"class in org.springframework.jdbc.object\">RdbmsOperation</a></code>",
+      "translation": "`RdbmsOperation` 类中的 `<a href=\"RdbmsOperation.html#declareParameter(org.springframework.jdbc.core.SqlParameter)\">declareParameter</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../dao/InvalidDataAccessApiUsageException.html\" title=\"class in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - if the parameter has no name, or if the\noperation is already compiled, and hence cannot be configured further",
+      "translation": "<code><a href=\"../../dao/InvalidDataAccessApiUsageException.html\" title=\"class in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - 如果参数没有名称，或者操作已经编译，因此无法进一步配置。",
+      "count": 2
+    },
+    {
+      "source": "<code>inParams</code> - variable number of input parameters. Output parameters should\nnot be included in this map. It is legal for values to be <code>null</code>, and this\nwill produce the correct behavior using a NULL argument to the stored procedure.",
+      "translation": "<code>inParams</code> - 可变数量的输入参数。输出参数不应包含在此映射中。值的类型为 <code>null</code> 是合法的，这将通过使用 NULL 参数调用存储过程产生正确的行为。",
+      "count": 2
+    },
+    {
+      "source": "<code>inParams</code> - map of input parameters, keyed by name as in parameter\ndeclarations. Output parameters need not (but can) be included in this map.\nIt is legal for map entries to be <code>null</code>, and this will produce the\ncorrect behavior using a NULL argument to the stored procedure.",
+      "translation": "<code>inParams</code> - 输入参数映射，键名与参数声明中的名称一致。输出参数不必（但可以）包含在此映射中。映射条目可以为 <code>null</code>，这将通过使用 NULL 参数调用存储过程产生正确的行为。",
+      "count": 2
+    },
+    {
+      "source": "<code>inParamMapper</code> - map of input parameters, keyed by name as in parameter\ndeclarations. Output parameters need not (but can) be included in this map.\nIt is legal for map entries to be <code>null</code>, and this will produce the correct\nbehavior using a NULL argument to the stored procedure.",
+      "translation": "<code>inParamMapper</code> - 输入参数映射，以名称为键，与参数声明一致。输出参数不必（但可以）包含在此映射中。映射条目可以为 <code>null</code>，这将通过使用 NULL 参数调用存储过程产生正确的行为。",
+      "count": 2
+    },
+    {
+      "source": "<code>ds</code> - the DataSource to use throughout the lifetime\nof this object to obtain connections",
+      "translation": "<code>ds</code> - 用于在整个对象生命周期中获取连接的 DataSource",
+      "count": 2
+    },
+    {
+      "source": "<code>jdbcTemplate</code> - the JdbcTemplate which wraps DataSource",
+      "translation": "<code>jdbcTemplate</code> - 封装 DataSource 的 JdbcTemplate。",
+      "count": 2
+    },
+    {
+      "source": "<code>param</code> - the parameter object",
+      "translation": "<code>param</code> - 参数对象",
+      "count": 2
+    },
+    {
+      "source": "map of output params, keyed by name as in parameter declarations.\nOutput parameters will appear here, with their values after the stored procedure\nhas been called.",
+      "translation": "输出参数映射，以参数声明中的名称作为键。调用存储过程后，输出参数将出现在此处，并显示其值。",
+      "count": 2
+    },
+    {
+      "source": "Declare a parameter.",
+      "translation": "声明一个参数。",
+      "count": 1
+    },
+    {
+      "source": "Execute the stored procedure with the provided parameter values.",
+      "translation": "使用提供的参数值执行存储过程。",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Thomas Risberg",
+      "translation": "Rod Johnson，Thomas Risberg",
+      "count": 1
+    }
+  ]
+}

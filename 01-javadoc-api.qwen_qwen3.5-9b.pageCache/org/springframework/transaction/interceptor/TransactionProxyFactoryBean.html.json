@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 17:33:15",
+  "updated_at": "2026-04-14 17:33:15",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 49,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6896551724137931,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "As of 4.2, this method adds <a href=\"TransactionalProxy.html\" title=\"interface in org.springframework.transaction.interceptor\"><code>TransactionalProxy</code></a> to the set of\nproxy interfaces in order to avoid re-processing of transaction metadata.",
+      "translation": "从 4.2 版本开始，此方法将 <a href=\"TransactionalProxy.html\" title=\"interface in org.springframework.transaction.interceptor\"><code>TransactionalProxy</code></a> 添加到代理接口集合中，以避免重复处理事务元数据。",
+      "count": 3
+    },
+    {
+      "source": "This callback is optional: If running in a BeanFactory and no transaction\nmanager has been set explicitly, a single matching bean of type\n<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> will be fetched from the BeanFactory.",
+      "translation": "此回调是可选的：如果在 BeanFactory 中运行且未显式设置事务管理器，则将从 BeanFactory 获取一个类型为 <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> 的单个匹配 bean。",
+      "count": 3
+    },
+    {
+      "source": "<strong>HISTORICAL NOTE:</strong> This class was originally designed to cover the\ntypical case of declarative transaction demarcation: namely, wrapping a singleton\ntarget object with a transactional proxy, proxying all the interfaces that the target\nimplements. However, in Spring versions 2.0 and beyond, the functionality provided here\nis superseded by the more convenient <code>tx:</code> XML namespace. See the\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#transaction-declarative\">declarative transaction management</a>\nsection of the Spring reference documentation to understand modern options for managing\ntransactions in Spring applications. For these reasons, <strong>users should favor\nthe <code>tx:</code> XML namespace as well as\nthe @<a href=\"../annotation/Transactional.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>Transactional</code></a>\nand @<a href=\"../annotation/EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>EnableTransactionManagement</code></a> annotations.</strong>",
+      "translation": "<strong>历史说明：</strong> 该类最初旨在涵盖声明式事务划分的一般情况：即用事务代理包装单例目标对象，并代理该目标实现的所有接口。然而，在 Spring 2.0 及更高版本中，此处提供的功能已被更便捷的 <code>tx:</code> XML 命名空间所取代。请参阅 Spring 参考文档中的<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#transaction-declarative\">声明式事务管理</a>部分，以了解在 Spring 应用程序中管理事务的现代选项。因此，<strong>用户应优先使用 <code>tx:</code> XML 命名空间以及 @<a href=\"../annotation/Transactional.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>Transactional</code></a> 和 @<a href=\"../annotation/EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>EnableTransactionManagement</code></a> 注解。</strong>",
+      "count": 2
+    },
+    {
+      "source": "If the \"transactionManager\" property is not set explicitly and this <a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nis running in a <a href=\"../../beans/factory/ListableBeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ListableBeanFactory</code></a>, a single matching bean of type\n<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> will be fetched from the <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.",
+      "translation": "如果未显式设置 \"transactionManager\" 属性，且此 <a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> 运行在 <a href=\"../../beans/factory/ListableBeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ListableBeanFactory</code></a> 中，则将从 <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 获取一个类型为 <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> 的匹配 bean。",
+      "count": 2
+    },
+    {
+      "source": "Internally, a <a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a> instance is used, but the user of this\nclass does not have to care. Optionally, a method pointcut can be specified\nto cause conditional invocation of the underlying <a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a>.",
+      "translation": "内部使用一个 `<a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a>` 实例，但该类的使用者无需关心。可选地，可以指定一个方法切入点（method pointcut），以引起对底层 `<a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a>` 的条件调用。",
+      "count": 2
+    },
+    {
+      "source": "In contrast to <a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a>, the transaction attributes are\nspecified as properties, with method names as keys and transaction attribute\ndescriptors as values. Method names are always applied to the target class.",
+      "translation": "与<a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a>相比，事务属性被指定为属性，其中方法名称作为键，事务属性描述符作为值。方法名称始终应用于目标类。",
+      "count": 2
+    },
+    {
+      "source": "The \"preInterceptors\" and \"postInterceptors\" properties can be set to add\nadditional interceptors to the mix, like\n<a href=\"../../aop/interceptor/PerformanceMonitorInterceptor.html\" title=\"class in org.springframework.aop.interceptor\"><code>PerformanceMonitorInterceptor</code></a>.",
+      "translation": "`preInterceptors` 和 `postInterceptors` 属性可以设置为添加额外的拦截器，例如 <a href=\"../../aop/interceptor/PerformanceMonitorInterceptor.html\" title=\"class in org.springframework.aop.interceptor\"><code>PerformanceMonitorInterceptor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>HINT:</b> This class is often used with parent / child bean definitions.\nTypically, you will define the transaction manager and default transaction\nattributes (for method name patterns) in an abstract parent bean definition,\nderiving concrete child bean definitions for specific target objects.\nThis reduces the per-bean definition effort to a minimum.",
+      "translation": "<b>提示：</b> 此类通常与父/子 Bean 定义配合使用。通常，您会在抽象父 Bean 定义中定义事务管理器以及默认的事务属性（针对方法名模式），并为特定目标对象派生出具体子 Bean 定义。这将最大限度地减少每个 Bean 定义的工作量。",
+      "count": 2
+    },
+    {
+      "source": "There are three main properties that need to be specified:",
+      "translation": "需要指定三个主要属性：",
+      "count": 2
+    },
+    {
+      "source": "Creates an advisor for this FactoryBean's TransactionInterceptor.",
+      "translation": "为此 FactoryBean 的 TransactionInterceptor 创建一个顾问。",
+      "count": 2
+    },
+    {
+      "source": "Set the default transaction manager. This will perform actual\ntransaction management: This class is just a way of invoking it.",
+      "translation": "设置默认事务管理器。这将执行实际的事务管理：该类仅是一种调用方式。",
+      "count": 2
+    },
+    {
+      "source": "Set a pointcut, i.e a bean that can cause conditional invocation\nof the TransactionInterceptor depending on method and attributes passed.\nNote: Additional interceptors are always invoked.",
+      "translation": "设置一个切点，即一个可根据传递的方法属性和属性条件触发 `TransactionInterceptor` 调用的 Bean。注意：其他拦截器始终会被调用。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>setTransactionManager(PlatformTransactionManager)</code></a></li>\n<li><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html#setTarget(java.lang.Object)\"><code>AbstractSingletonProxyFactoryBean.setTarget(Object)</code></a></li>\n<li><a href=\"#setTransactionAttributes(java.util.Properties)\"><code>setTransactionAttributes(Properties)</code></a></li>\n<li><a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a></li>\n<li><a href=\"../../aop/framework/ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.transaction.interceptor.TransactionProxyFactoryBean\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setTransactionManager(org.springframework.transaction.PlatformTransactionManager)\"><code>setTransactionManager(PlatformTransactionManager)</code></a></li>\n<li><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html#setTarget(java.lang.Object)\"><code>AbstractSingletonProxyFactoryBean.setTarget(Object)</code></a></li>\n<li><a href=\"#setTransactionAttributes(java.util.Properties)\"><code>setTransactionAttributes(Properties)</code></a></li>\n<li><a href=\"TransactionInterceptor.html\" title=\"class in org.springframework.transaction.interceptor\"><code>TransactionInterceptor</code></a></li>\n<li><a href=\"../../aop/framework/ProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\"><code>ProxyFactoryBean</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.transaction.interceptor.TransactionProxyFactoryBean\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "\"transactionManager\": the <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> implementation to use\n(for example, a <a href=\"../jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> instance)",
+      "translation": "\"transactionManager\": 要使用的<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>实现（例如，一个<a href=\"../jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>实例）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html#postProcessProxyFactory(org.springframework.aop.framework.ProxyFactory)\">postProcessProxyFactory</a></code> in class <code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\">AbstractSingletonProxyFactoryBean</a></code>",
+      "translation": "`<code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html#postProcessProxyFactory(org.springframework.aop.framework.ProxyFactory)\">postProcessProxyFactory</a></code>` 类中的 `<code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\">AbstractSingletonProxyFactoryBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "\"target\": the target object that a transactional proxy should be created for",
+      "translation": "\"<span style=\"color: #008000;\">target</span>：事务代理应为其创建的目标对象。\"",
+      "count": 2
+    },
+    {
+      "source": "\"transactionAttributes\": the transaction attributes (for example, propagation\nbehavior and \"readOnly\" flag) per target method name (or method name pattern)",
+      "translation": "\"transactionAttributes\"：每个目标方法名（或方法名模式）的事务属性（例如传播行为和\"readOnly\"标志）。",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Dmitriy Kopylenko, Rod Johnson, Chris Beams",
+      "translation": "Juergen Hoeller, Dmitriy Kopylenko, Rod Johnson, Chris Beams",
+      "count": 2
+    },
+    {
+      "source": "Note: Method names are always applied to the target class,\nno matter if defined in an interface or the class itself.",
+      "translation": "注意：无论方法是在接口中定义还是在类本身中定义，方法名始终应用于目标类。",
+      "count": 1
+    },
+    {
+      "source": "Internally, a NameMatchTransactionAttributeSource will be\ncreated from the given properties.",
+      "translation": "内部将根据给定的属性创建一个 NameMatchTransactionAttributeSource。",
+      "count": 1
+    },
+    {
+      "source": "Set a pointcut, i.e a bean that can cause conditional invocation\nof the TransactionInterceptor depending on method and attributes passed.",
+      "translation": "设置一个切点，即一个可以根据传递的方法属性和属性有条件地调用 TransactionInterceptor 的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "Set properties with method names as keys and transaction attribute\ndescriptors (parsed via TransactionAttributeEditor) as values:\nfor example, key = \"myMethod\", value = \"PROPAGATION_REQUIRED,readOnly\".",
+      "translation": "使用以方法名为键、事务属性描述符（通过 `TransactionAttributeEditor` 解析）为值的属性：例如，键 = \"myMethod\"，值 = \"PROPAGATION_REQUIRED,readOnly\"。",
+      "count": 1
+    },
+    {
+      "source": "Set the transaction attribute source which is used to find transaction\nattributes.",
+      "translation": "设置用于查找事务属性的事务属性源。",
+      "count": 1
+    },
+    {
+      "source": "Set the default transaction manager.",
+      "translation": "设置默认事务管理器。",
+      "count": 1
+    },
+    {
+      "source": "Set the transaction attribute source which is used to find transaction\nattributes. If specifying a String property value, a PropertyEditor\nwill create a MethodMapTransactionAttributeSource from the value.",
+      "translation": "设置用于查找事务属性的事务属性源。如果指定字符串属性值，PropertyEditor 将从该值创建一个 MethodMapTransactionAttributeSource。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html#createMainInterceptor()\">createMainInterceptor</a></code> in class <code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\">AbstractSingletonProxyFactoryBean</a></code>",
+      "translation": "`<code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html#createMainInterceptor()\">createMainInterceptor</a></code>` 类 `<code><a href=\"../../aop/framework/AbstractSingletonProxyFactoryBean.html\" title=\"class in org.springframework.aop.framework\">AbstractSingletonProxyFactoryBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>proxyFactory</code> - the AOP ProxyFactory about to be used",
+      "translation": "<code>proxyFactory</code> - 即将使用的 AOP ProxyFactory",
+      "count": 1
+    }
+  ]
+}

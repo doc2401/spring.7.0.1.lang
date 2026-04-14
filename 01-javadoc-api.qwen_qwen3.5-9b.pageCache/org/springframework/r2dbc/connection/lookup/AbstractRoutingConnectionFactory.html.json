@@ -1,0 +1,181 @@
+{
+  "created_at": "2026-04-14 16:14:04",
+  "updated_at": "2026-04-14 16:14:04",
+  "stats": {
+    "total_entries": 33,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 55,
+    "entries_with_hits": 33,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6666666666666667,
+    "usage_percentage": 0.0033000000000000004
+  },
+  "items": [
+    {
+      "source": "Set the <a href=\"ConnectionFactoryLookup.html\" title=\"interface in org.springframework.r2dbc.connection.lookup\"><code>ConnectionFactoryLookup</code></a> implementation to use for resolving\nconnection factory name Strings in the <a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> map.",
+      "translation": "将 `<a href=\"ConnectionFactoryLookup.html\" title=\"interface in org.springframework.r2dbc.connection.lookup\"><code>ConnectionFactoryLookup</code></a>` 实现设置为用于解析 `<a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a>` 映射中的连接工厂名称字符串。",
+      "count": 3
+    },
+    {
+      "source": "The mapped value can either be a corresponding <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>\ninstance or a connection factory name <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> (to be resolved via a\n<a href=\"#setConnectionFactoryLookup(org.springframework.r2dbc.connection.lookup.ConnectionFactoryLookup)\"><code>ConnectionFactoryLookup</code></a>).",
+      "translation": "映射值可以是相应的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 实例，或是一个连接工厂名称 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>（将通过 <a href=\"#setConnectionFactoryLookup(org.springframework.r2dbc.connection.lookup.ConnectionFactoryLookup)\"><code>ConnectionFactoryLookup</code></a> 进行解析）。",
+      "count": 2
+    },
+    {
+      "source": "This <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> will be used as target if none of the keyed\n<a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> match the\n<a href=\"#determineCurrentLookupKey()\"><code>current lookup key</code></a>.",
+      "translation": "如果没有任何一个带键的 <a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> 匹配 <a href=\"#determineCurrentLookupKey()\"><code>current lookup key</code></a>，则使用此 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 作为目标。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>true</code>, accepting lookup keys without a corresponding entry\nin the target <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> map - simply falling back to the default\n<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> in that case.",
+      "translation": "默认为 `<code>true</code>`，接受目标 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 映射中无对应条目的查找键——在这种情况下，直接回退到该 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 的默认值。",
+      "count": 2
+    },
+    {
+      "source": "Switch this flag to <code>false</code> if you would prefer the fallback to only\napply when no lookup key was emitted. Lookup keys without a <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>\nentry will then lead to an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>.",
+      "translation": "将此标志切换为 `<code>false</code>`，如果您希望回退仅在未发出查找键时应用。没有 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 条目的查找键将导致出现 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Calls to <a href=\"#getMetadata()\"><code>getMetadata()</code></a> are routed to the\n<a href=\"#setDefaultTargetConnectionFactory(java.lang.Object)\"><code>default ConnectionFactory</code></a>\nif configured.",
+      "translation": "对 `<a href=\"#getMetadata()\"><code>getMetadata()</code></a>` 的调用如果已配置，则路由到`<a href=\"#setDefaultTargetConnectionFactory(java.lang.Object)\"><code>default ConnectionFactory</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "The key can be of arbitrary type; this class implements the generic lookup\nprocess only. The concrete key representation will be handled by\n<a href=\"#resolveSpecifiedLookupKey(java.lang.Object)\"><code>resolveSpecifiedLookupKey(Object)</code></a> and <a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a>.",
+      "translation": "键可以是任意类型；该类仅实现通用的查找过程。具体的键表示将由<a href=\"#resolveSpecifiedLookupKey(java.lang.Object)\"><code>resolveSpecifiedLookupKey(Object)</code></a>和<a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a>处理。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation handles <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> instances\nand connection factory names (to be resolved via a\n<a href=\"#setConnectionFactoryLookup(org.springframework.r2dbc.connection.lookup.ConnectionFactoryLookup)\"><code>ConnectionFactoryLookup</code></a>).",
+      "translation": "默认实现处理 `<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>` 实例和连接工厂名称（通过\n<a href=\"#setConnectionFactoryLookup(org.springframework.r2dbc.connection.lookup.ConnectionFactoryLookup)\"><code>ConnectionFactoryLookup</code></a> 解析）。",
+      "count": 2
+    },
+    {
+      "source": "Allows to configure a default target <a href=\"#setDefaultTargetConnectionFactory(java.lang.Object)\"><code>ConnectionFactory</code></a> as a fallback.",
+      "translation": "允许配置默认目标 <a href=\"#setDefaultTargetConnectionFactory(java.lang.Object)\"><code>ConnectionFactory</code></a> 作为回退。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the current target <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>. Determines the\n<a href=\"#determineCurrentLookupKey()\"><code>current lookup key</code></a>, performs a lookup\nin the <a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> map,\nfalls back to the specified <a href=\"#setDefaultTargetConnectionFactory(java.lang.Object)\"><code>default\ntarget ConnectionFactory</code></a> if necessary.",
+      "translation": "获取当前的目标<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>。确定<a href=\"#determineCurrentLookupKey()\"><code>当前查找键</code></a>，在<a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a>映射中进行查找，必要时回退到指定的<a href=\"#setDefaultTargetConnectionFactory(java.lang.Object)\"><code>默认目标 ConnectionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the given lookup key object, as specified in the\n<a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> map,\ninto the actual lookup key to be used for matching with the\n<a href=\"#determineCurrentLookupKey()\"><code>current lookup key</code></a>.",
+      "translation": "解析在 <a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> 映射中指定的给定查找键对象，将其转换为用于与 <a href=\"#determineCurrentLookupKey()\"><code>current lookup key</code></a> 进行匹配的实际查找键。",
+      "count": 2
+    },
+    {
+      "source": "Delegates to <a href=\"#initialize()\"><code>initialize()</code></a>.",
+      "translation": "委托给<a href=\"#initialize()\"><code>initialize()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Determine the current lookup key. This will typically be implemented to check a\nsubscriber context. Allows for arbitrary keys. The returned key needs to match the\nstored lookup key type, as resolved by the <a href=\"#resolveSpecifiedLookupKey(java.lang.Object)\"><code>resolveSpecifiedLookupKey(Object)</code></a> method.",
+      "translation": "确定当前的查找键。这通常通过检查订户上下文来实现，并允许使用任意键。返回的键必须与由 `<a href=\"#resolveSpecifiedLookupKey(java.lang.Object)\"><code>resolveSpecifiedLookupKey(Object)</code></a>` 方法解析的存储查找键类型匹配。",
+      "count": 2
+    },
+    {
+      "source": "Initialize the internal state of this <code>AbstractRoutingConnectionFactory</code>\nby resolving the configured target ConnectionFactories.",
+      "translation": "通过解析配置的 target ConnectionFactories 来初始化此<code>AbstractRoutingConnectionFactory</code>的内部状态。",
+      "count": 2
+    },
+    {
+      "source": "<code>Mono</code> that emits the current <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> as\nper <a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a>",
+      "translation": "发出当前<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>的<code>Mono</code>，具体依据<a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>connectionFactory</code> - the connection factory value object as specified in the\n<a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> map",
+      "translation": "`connectionFactory` - 在 <a href=\"#setTargetConnectionFactories(java.util.Map)\"><code>targetConnectionFactories</code></a> 映射中指定的连接工厂值对象",
+      "count": 2
+    },
+    {
+      "source": "the resolved <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> (never <code>null</code>)",
+      "translation": "解析后的<code>ConnectionFactory</code>（永远不会为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the target ConnectionFactories have not\nbeen configured",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果尚未配置目标 ConnectionFactories",
+      "count": 2
+    },
+    {
+      "source": "<code>Mono</code> emitting the lookup key. May complete without emitting a value\nif no lookup key available",
+      "translation": "<code>Mono</code> 发出查找键。如果没有可用的查找键，可能会在未发出值的情况下完成",
+      "count": 2
+    },
+    {
+      "source": "Mark Paluch, Jens Schauder",
+      "translation": "Mark Paluch，Jens Schauder",
+      "count": 2
+    },
+    {
+      "source": "the lookup key as needed for matching.",
+      "translation": "根据匹配需要查找键。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation simply returns the given key as-is.",
+      "translation": "默认实现直接返回给定的键。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to apply a lenient fallback to the default <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>\nif no specific <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> could be found for the current lookup key.",
+      "translation": "指定是否对当前查找键无法找到特定的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 时，对默认 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 应用宽松的回退。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the current target <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>.",
+      "translation": "获取当前的目标 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the specified connection factory object into a\n<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> instance.",
+      "translation": "解析指定的连接工厂对象为`ConnectionFactory` 实例。",
+      "count": 1
+    },
+    {
+      "source": "Specify the default target <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>, if any.",
+      "translation": "指定默认目标 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>（如果有）。",
+      "count": 1
+    },
+    {
+      "source": "Specify the map of target <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactories</code></a>,\nwith the lookup key as key.",
+      "translation": "指定目标 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactories</code></a> 的映射，并将查找键作为键。",
+      "count": 1
+    },
+    {
+      "source": "Determine the current lookup key.",
+      "translation": "确定当前的查找键。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#create--\" title=\"class or interface in io.r2dbc.spi\">create</a></code> in interface <code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#create--\" title=\"class or interface in io.r2dbc.spi\">create</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#getMetadata--\" title=\"class or interface in io.r2dbc.spi\">getMetadata</a></code> in interface <code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#getMetadata--\" title=\"class or interface in io.r2dbc.spi\">getMetadata</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - in case of an unsupported value type",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 在遇到不支持的值类型时",
+      "count": 1
+    },
+    {
+      "source": "<code>lookupKey</code> - the lookup key object as specified by the user",
+      "translation": "<code>lookupKey</code> - 由用户指定的查找键对象",
+      "count": 1
+    }
+  ]
+}

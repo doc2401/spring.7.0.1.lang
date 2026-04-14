@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 19:53:30",
+  "updated_at": "2026-04-14 19:53:30",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5294117647058822,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "After a <code>DispatcherServlet</code> has received a request and has\ndone its work to resolve locales, and suchlike, it then tries\nto resolve a Controller, using a\n<a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a>.\nWhen a Controller has been found to handle the request, the\n<a href=\"#handleRequest(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\"><code>handleRequest</code></a>\nmethod of the located Controller will be invoked; the located Controller\nis then responsible for handling the actual request and — if applicable\n— returning an appropriate\n<a href=\"../ModelAndView.html\" title=\"class in org.springframework.web.servlet\"><code>ModelAndView</code></a>.\nSo actually, this method is the main entry point for the\n<a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>\nwhich delegates requests to controllers.",
+      "translation": "在 `<code>DispatcherServlet</code>` 接收到请求并完成了解析区域设置（locales）等工作后，它会尝试使用一个 <a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a> 来解析控制器。一旦找到能够处理该请求的控制器，所定位控制器的 <a href=\"#handleRequest(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\"><code>handleRequest</code></a> 方法将被调用；该控制器随后负责实际处理请求，并在适用时返回一个合适的 <a href=\"../ModelAndView.html\" title=\"class in org.springframework.web.servlet\"><code>ModelAndView</code></a>。因此，实际上，此方法是 <a href=\"../DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> 的主要入口点，它将请求委托给控制器处理。",
+      "count": 2
+    },
+    {
+      "source": "So basically any <i>direct</i> implementation of the <code>Controller</code> interface\njust handles HttpServletRequests and should return a ModelAndView, to be further\ninterpreted by the DispatcherServlet. Any additional functionality such as\noptional validation, form handling, etc. should be obtained through extending\n<a href=\"AbstractController.html\" title=\"class in org.springframework.web.servlet.mvc\"><code>AbstractController</code></a>\nor one of its subclasses.",
+      "translation": "因此，任何<i>直接</i>实现<code>Controller</code>接口的类仅处理HttpServletRequest并应返回一个ModelAndView，以便由DispatcherServlet进一步解释。任何额外功能（如可选验证、表单处理等）都应通过扩展<a href=\"AbstractController.html\" title=\"class in org.springframework.web.servlet.mvc\"><code>AbstractController</code></a>或其子类之一来获取。",
+      "count": 2
+    },
+    {
+      "source": "Controllers can use the <code>checkNotModified</code> methods on\n<a href=\"../../context/request/WebRequest.html\" title=\"interface in org.springframework.web.context.request\"><code>WebRequest</code></a> for HTTP caching\nsupport.",
+      "translation": "控制器可以使用 <code>checkNotModified</code> 方法在 <a href=\"../../context/request/WebRequest.html\" title=\"interface in org.springframework.web.context.request\"><code>WebRequest</code></a> 上实现 HTTP 缓存支持。",
+      "count": 2
+    },
+    {
+      "source": "Controllers can easily be tested by passing in mock objects for the\nHttpServletRequest and HttpServletResponse objects as parameters to the\n<a href=\"#handleRequest(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\"><code>handleRequest</code></a>\nmethod. As a convenience, Spring ships with a set of Servlet API mocks\nthat are suitable for testing any kind of web components, but are particularly\nsuitable for testing Spring web controllers. In contrast to a Struts Action,\nthere is no need to mock the ActionServlet or any other infrastructure;\nmocking HttpServletRequest and HttpServletResponse is sufficient.",
+      "translation": "可以通过将 `HttpServletRequest` 和 `ServletResponse` 对象的模拟对象作为参数传递给 <a href=\"#handleRequest(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\"><code>handleRequest</code></a> 方法，轻松测试控制器。作为一种便利措施，Spring 提供了一套适用于测试任何类型 Web 组件的 Servlet API 模拟对象，但特别适合测试 Spring Web 控制器。与 Struts Action 不同，无需模拟 ActionServlet 或任何其他基础设施；只需模拟 `HttpServletRequest` 和 `HttpServletResponse` 即可。",
+      "count": 2
+    },
+    {
+      "source": "Any implementation of the Controller interface should be a\n<i>reusable, thread-safe</i> class, capable of handling multiple\nHTTP requests throughout the lifecycle of an application. To be able to\nconfigure a Controller easily, Controller implementations are encouraged\nto be (and usually are) JavaBeans.",
+      "translation": "任何实现 `Controller` 接口的类都应该是<i>可重用且线程安全</i>的，能够在整个应用程序生命周期中处理多个 HTTP 请求。为了能够轻松配置 `Controller`，鼓励（并且通常也是）将 `Controller` 的实现设计为 JavaBeans。",
+      "count": 2
+    },
+    {
+      "source": "The Controller interface is explicitly designed to operate on HttpServletRequest\nand HttpServletResponse objects, just like an HttpServlet. It does not aim to\ndecouple itself from the Servlet API, in contrast to, for example, WebWork, JSF or Tapestry.\nInstead, the full power of the Servlet API is available, allowing Controllers to be\ngeneral-purpose: a Controller is able to not only handle web user interface\nrequests but also to process remoting protocols or to generate reports on demand.",
+      "translation": "Controller 接口被明确设计为像 HttpServlet 一样操作 HttpServletRequest 和 HttpServletResponse 对象。与 WebWork、JSF 或 Tapestry 等框架不同，它并不旨在与 Servlet API 解耦。相反，Servlet API 的全部功能均可使用，这使得 Controller 能够通用化：Controller 不仅能够处理 Web 用户界面请求，还可以处理远程协议或按需生成报告。",
+      "count": 2
+    },
+    {
+      "source": "If Controllers need to be aware of specific environment references, they can\nchoose to implement specific awareness interfaces, just like any other bean in a\nSpring (web) application context can do, for example:",
+      "translation": "如果 Controller 需要感知特定的环境引用，它们可以选择实现特定的感知接口，就像 Spring（Web）应用程序上下文中的任何其他 Bean 一样，例如：",
+      "count": 2
+    },
+    {
+      "source": "Such environment references can easily be passed in testing environments,\nthrough the corresponding setters defined in the respective awareness interfaces.\nIn general, it is recommended to keep the dependencies as minimal as possible:\nfor example, if all you need is resource loading, implement ResourceLoaderAware only.\nAlternatively, derive from the WebApplicationObjectSupport base class, which gives\nyou all those references through convenient accessors but requires an\nApplicationContext reference on initialization.",
+      "translation": "此类环境引用可以轻松地在测试环境中通过相应感知接口中定义的对应 setter 方法传入。通常建议尽可能保持依赖最小化：例如，如果您仅需资源加载功能，则只需实现 `ResourceLoaderAware` 接口。或者，您可以继承自 `WebApplicationObjectSupport` 基类，该类通过便捷的访问器提供所有这些引用，但需要在初始化时提供一个 `ApplicationContext` 引用。",
+      "count": 2
+    },
+    {
+      "source": "Notes on design and testing",
+      "translation": "设计与测试说明",
+      "count": 2
+    },
+    {
+      "source": "Process the request and return a ModelAndView object which the DispatcherServlet\nwill render. A <code>null</code> return value is not an error: it indicates that\nthis object completed request processing itself and that there is therefore no\nModelAndView to render.",
+      "translation": "返回一个由 `DispatcherServlet` 渲染的 `ModelAndView` 对象。<code>null</code> 返回值并非错误：它表示该对象自身已完成请求处理，因此无需渲染任何 `ModelAndView`。",
+      "count": 1
+    },
+    {
+      "source": "Process the request and return a ModelAndView object which the DispatcherServlet\nwill render.",
+      "translation": "返回一个由 DispatcherServlet 渲染的 ModelAndView 对象。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在发生错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - current HTTP response",
+      "translation": "<code>response</code> - 当前 HTTP 响应",
+      "count": 1
+    },
+    {
+      "source": "a ModelAndView to render, or <code>null</code> if handled directly",
+      "translation": "要渲染的 ModelAndView，或直接处理时为<code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个功能接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller",
+      "translation": "Rod Johnson，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

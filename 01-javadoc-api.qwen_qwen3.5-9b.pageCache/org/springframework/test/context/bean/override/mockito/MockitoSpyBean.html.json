@@ -1,0 +1,186 @@
+{
+  "created_at": "2026-04-14 16:45:07",
+  "updated_at": "2026-04-14 16:45:07",
+  "stats": {
+    "total_entries": 34,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 52,
+    "entries_with_hits": 34,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5294117647058822,
+    "usage_percentage": 0.0034
+  },
+  "items": [
+    {
+      "source": "<strong>WARNING</strong>: Using <code>@MockitoSpyBean</code> in conjunction with\n<code>@ContextHierarchy</code> can lead to undesirable results since each\n<code>@MockitoSpyBean</code> will be applied to all context hierarchy levels by default.\nTo ensure that a particular <code>@MockitoSpyBean</code> is applied to a single context\nhierarchy level, set the <a href=\"#contextName()\"><code>contextName</code></a> to match a\nconfigured <code>@ContextConfiguration</code>\n<a href=\"../../../ContextConfiguration.html#name()\"><code>name</code></a>.\nSee the Javadoc for <a href=\"../../../ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a>\nfor further details and examples.",
+      "translation": "<strong>警告</strong>：将 <code>@MockitoSpyBean</code> 与 <code>@ContextHierarchy</code> 结合使用可能会导致不理想的结果，因为每个 <code>@MockitoSpyBean</code> 默认会应用于所有上下文层次级别。要确保特定的 <code>@MockitoSpyBean</code> 仅应用于单个上下文层次级别，请将 <a href=\"#contextName()\"><code>contextName</code></a> 设置为与配置的 <code>@ContextConfiguration</code> <a href=\"../../../ContextConfiguration.html#name()\"><code>name</code></a> 匹配。有关更多详细信息和示例，请参阅 <a href=\"../../../ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@MockitoSpyBean</code> is declared on a field, the bean to spy is\ninferred from the type of the annotated field. If multiple candidates exist in\nthe <code>ApplicationContext</code>, a <code>@Qualifier</code> annotation can be declared\non the field to help disambiguate. In the absence of a <code>@Qualifier</code>\nannotation, the name of the annotated field will be used as a <em>fallback\nqualifier</em>. Alternatively, you can explicitly specify a bean name to spy\nby setting the <a href=\"#value()\"><code>value</code></a> or <a href=\"#name()\"><code>name</code></a> attribute. If a\nbean name is specified, it is required that a target bean with that name has\nbeen previously registered in the application context.",
+      "translation": "当在字段上声明 `<code>@MockitoSpyBean</code>` 时，要监视的 Bean 将从被注解字段的类型中推断得出。如果 `<code>ApplicationContext</code>` 中存在多个候选项，可以在字段上声明一个 `<code>@Qualifier</code>` 注解以帮助消除歧义。如果没有 `<code>@Qualifier</code>` 注解，将被注解字段的名称用作 <em>后备限定符</em>。或者，您可以通过设置 `<a href=\"#value()\"><code>value</code></a>` 或 `<a href=\"#name()\"><code>name</code></a>` 属性来显式指定要监视的 Bean 名称。如果指定了 Bean 名称，则要求该名称的目标 Bean 必须已在应用程序上下文中注册。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@MockitoSpyBean</code> is declared at the type level, the type of bean\n(or beans) to spy must be supplied via the <a href=\"#types()\"><code>types</code></a> attribute.\nIf multiple candidates exist in the <code>ApplicationContext</code>, you can\nexplicitly specify a bean name to spy by setting the <a href=\"#name()\"><code>name</code></a>\nattribute. Note, however, that the <code>types</code> attribute must contain a\nsingle type if an explicit bean <code>name</code> is configured.",
+      "translation": "当在类型级别声明 `<code>@MockitoSpyBean</code>` 时，必须通过 `<a href=\"#types()\"><code>types</code></a>` 属性提供要监视的 Bean（或 Beans）的类型。如果 `<code>ApplicationContext</code>` 中存在多个候选项，您可以通过设置 `<a href=\"#name()\"><code>name</code></a>` 属性显式指定要监视的 Bean 名称。但请注意，如果配置了显式的 Bean `<code>name</code>`，则 `<code>types</code>` 属性必须包含单个类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MockitoSpyBean</code> may be used as a <em>meta-annotation</em> to create\ncustom <em>composed annotations</em> — for example, to define common spy\nconfiguration in a single annotation that can be reused across a test suite.\n<code>@MockitoSpyBean</code> can also be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em>\nannotation at the type level — for example, to spy on several beans by\n<a href=\"#name()\"><code>name</code></a>.",
+      "translation": "<code>@MockitoSpyBean</code> 可用作 <em>元注解</em> 来创建自定义的 <em>组合注解</em>——例如，在单个注解中定义可在测试套件中重用的通用间谍配置。<code>@MockitoSpyBean</code> 也可用作类型级别的 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em>注解——例如，通过<a href=\"#name()\"><code>name</code></a>对多个 Bean 进行间谍监控。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong>: As stated in the documentation for Mockito, there are\ntimes when using <code>Mockito.when()</code> is inappropriate for stubbing a spy\n— for example, if calling a real method on a spy results in undesired\nside effects. To avoid such undesired side effects, consider using\n<code>Mockito.doReturn(...).when(spy)...</code>,\n<code>Mockito.doThrow(...).when(spy)...</code>,\n<code>Mockito.doNothing().when(spy)...</code>, and\nsimilar methods.",
+      "translation": "<strong>注意</strong>：正如 Mockito 文档中所指出的，在某些情况下，对 spy 使用 <code>Mockito.when()</code> 进行存根是不合适的——例如，如果对 spy 调用真实方法会导致不期望的副作用。为避免此类不期望的副作用，请考虑使用 <code>Mockito.doReturn(...).when(spy)...</code>、<code>Mockito.doThrow(...).when(spy)...</code>、<code>Mockito.doNothing().when(spy)...</code> 以及类似的方法。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong>: When creating a spy for a non-singleton bean, the\ncorresponding bean definition will be converted to a singleton. Consequently,\nif you create a spy for a prototype or scoped bean, the spy will be treated as\na singleton. Similarly, when creating a spy for a\n<a href=\"../../../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>, a spy will\nbe created for the object created by the <code>FactoryBean</code>, not for the\n<code>FactoryBean</code> itself.",
+      "translation": "<strong>注意</strong>：为非常量 Bean 创建代理时，相应的 Bean 定义将被转换为单例。因此，如果您为原型或作用域 Bean 创建代理，该代理将被视为单例。同样，当为<a href=\"../../../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>创建代理时，将为<code>FactoryBean</code>创建的对象（而非<code>FactoryBean</code>本身）创建代理。",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: <code>@MockitoSpyBean</code> cannot be used to spy on\na scoped proxy — for example, a bean annotated with\n<a href=\"../../../../../context/annotation/Scope.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)</code></a>. Any attempt to do so will\nfail with an exception.",
+      "translation": "<strong>警告</strong>：<code>@MockitoSpyBean</code> 不能用于创建 scoped proxy（例如，带有 <a href=\"../../../../../context/annotation/Scope.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)</code></a> 注解的 bean）的 spy。任何此类尝试都将导致异常失败。",
+      "count": 2
+    },
+    {
+      "source": "There are no restrictions on the visibility of a <code>@MockitoSpyBean</code> field.\nSuch fields can therefore be <code>public</code>, <code>protected</code>, package-private\n(default visibility), or <code>private</code> depending on the needs or coding\npractices of the project.",
+      "translation": "`@MockitoSpyBean` 字段的可见性没有限制。因此，这些字段可以是 `public`、`protected`、包私有（默认可见性）或 `private`，具体取决于项目的需求或编码实践。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MockitoSpyBean</code> fields and type-level <code>@MockitoSpyBean</code> declarations\nwill be inherited from an enclosing test class by default. See\n<a href=\"../../../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>\nfor details.",
+      "translation": "<code>@MockitoSpyBean</code> 字段和类型级别的 <code>@MockitoSpyBean</code> 声明默认将从外部测试类继承。有关详细信息，请参阅<a href=\"../../../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If left unspecified, the bean to spy is selected according to the\nconfigured <a href=\"#types()\"><code>types</code></a> or the annotated field's type, taking\nqualifiers into account if necessary. See the <a href=\"MockitoSpyBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\">class-level documentation</a> for details.",
+      "translation": "如果未指定，则根据配置的<a href=\"#types()\"><code>types</code></a>或注解字段的类型（如有必要则考虑限定符）来选择要监视的 Bean。有关详细信息，请参阅<a href=\"MockitoSpyBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.mockito\">类级别文档</a>。",
+      "count": 2
+    },
+    {
+      "source": "When <code>@MockitoSpyBean</code> also defines a <a href=\"#name()\"><code>name</code></a>, this\nattribute can only contain a single value.",
+      "translation": "当 `<code>@MockitoSpyBean</code>` 也定义了一个 <a href=\"#name()\"><code>name</code></a> 时，此属性只能包含单个值。",
+      "count": 2
+    },
+    {
+      "source": "A spy cannot be created for components which are known to the application\ncontext but are not beans — for example, components\n<a href=\"../../../../../beans/factory/config/ConfigurableListableBeanFactory.html#registerResolvableDependency(java.lang.Class,java.lang.Object)\"><code>registered directly</code></a> as resolvable dependencies.",
+      "translation": "无法为应用程序上下文中已知但不是 Bean 的组件创建间谍——例如，作为可解析依赖项<a href=\"../../../../../beans/factory/config/ConfigurableListableBeanFactory.html#registerResolvableDependency(java.lang.Class,java.lang.Object)\"><code>直接注册</code></a>的组件。",
+      "count": 2
+    },
+    {
+      "source": "The default is <a href=\"MockReset.html#AFTER\"><code>MockReset.AFTER</code></a> meaning that spies are automatically\nreset after each test method is invoked.",
+      "translation": "默认值为 `<a href=\"MockReset.html#AFTER\"><code>MockReset.AFTER</code></a>`，这意味着在调用每个测试方法后，间谍对象会自动重置。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MockitoSpyBean</code> can be applied in the following ways.",
+      "translation": "<code>@MockitoSpyBean</code> 可以按以下方式应用。",
+      "count": 2
+    },
+    {
+      "source": "Intended to be used when no other attributes are needed — for\nexample, <code>@MockitoSpyBean(\"customBeanName\")</code>.",
+      "translation": "用于不需要其他属性的情况——例如，<code>@MockitoSpyBean(\"customBeanName\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "Each type specified will result in a spy being created and registered\nwith the <code>ApplicationContext</code>.",
+      "translation": "每种指定的类型都将导致创建一个间谍并注册到 `<code>ApplicationContext</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to an empty string which indicates that this <code>@MockitoSpyBean</code>\nshould be applied to all application contexts.",
+      "translation": "默认为空字符串，表示此 `<code>@MockitoSpyBean</code>` 应应用于所有应用程序上下文。",
+      "count": 2
+    },
+    {
+      "source": "the types to spy",
+      "translation": "要监控的类型",
+      "count": 2
+    },
+    {
+      "source": "If a context name is configured, it must match a name configured via\n<code>@ContextConfiguration(name=...)</code>.",
+      "translation": "如果配置了上下文名称，它必须与通过 `<code>@ContextConfiguration(name=...)</code>` 配置的名称匹配。",
+      "count": 1
+    },
+    {
+      "source": "Defaults to none.",
+      "translation": "默认为无。",
+      "count": 1
+    },
+    {
+      "source": "Types must be omitted when the annotation is used on a field.",
+      "translation": "当注解用于字段时，必须省略类型。",
+      "count": 1
+    },
+    {
+      "source": "Alias for <a href=\"#name()\"><code>name</code></a>.",
+      "translation": "`<a href=\"#name()\"><code>name</code></a>` 的别名。",
+      "count": 1
+    },
+    {
+      "source": "The name of the context hierarchy level in which this <code>@MockitoSpyBean</code>\nshould be applied.",
+      "translation": "此 `<code>@MockitoSpyBean</code>` 应应用到的上下文层次结构级别的名称。",
+      "count": 1
+    },
+    {
+      "source": "Name of the bean to spy.",
+      "translation": "要监视的 Bean 名称。",
+      "count": 1
+    },
+    {
+      "source": "The reset mode to apply to the spied bean.",
+      "translation": "要应用于被监视 Bean 的重置模式。",
+      "count": 1
+    },
+    {
+      "source": "One or more types to spy.",
+      "translation": "一个或多个要监视的类型。",
+      "count": 1
+    },
+    {
+      "source": "On a non-static field in an enclosing class for a <code>@Nested</code> test class\nor in any class in the type hierarchy or enclosing class hierarchy above the\n<code>@Nested</code> test class.",
+      "translation": "在 `<code>@Nested</code>` 测试类的封闭类中的非静态字段，或在 `<code>@Nested</code>` 测试类上方的类型层次结构或封闭类层次结构中的任何类中。",
+      "count": 1
+    },
+    {
+      "source": "At the type level on an enclosing class for a <code>@Nested</code> test class\nor on any class or interface in the type hierarchy or enclosing class hierarchy\nabove the <code>@Nested</code> test class.",
+      "translation": "在 `<code>@Nested</code>` 测试类的封闭类类型级别上，或在 `<code>@Nested</code>` 测试类的类型层次结构或封闭类层次结构中位于其上方的任何类或接口上。",
+      "count": 1
+    },
+    {
+      "source": "On a non-static field in a test class or any of its superclasses.",
+      "translation": "在测试类或其任何超类的非静态字段上。",
+      "count": 1
+    },
+    {
+      "source": "At the type level on a test class or any superclass or implemented interface\nin the type hierarchy above the test class.",
+      "translation": "在测试类或其类型层次结构中位于该测试类之上的任何父类或实现的接口上的类型级别。",
+      "count": 1
+    },
+    {
+      "source": "Simon Baslé, Sam Brannen",
+      "translation": "Simon Baslé，Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "the reset mode",
+      "translation": "重置模式",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

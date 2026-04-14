@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-14 14:46:45",
+  "updated_at": "2026-04-14 14:46:45",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0434782608695654,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Create a new instance of <code>ShardingKeyDataSourceAdapter</code>, wrapping the\ngiven <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a>.",
+      "translation": "创建一个新的<code>ShardingKeyDataSourceAdapter</code>实例，包装给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\"><code>DataSource</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "The sharding key is obtained from the configured\n<a href=\"#setShardingKeyProvider(org.springframework.jdbc.datasource.ShardingKeyProvider)\"><code>ShardingKeyProvider</code></a>.",
+      "translation": "分片键从配置的 <a href=\"#setShardingKeyProvider(org.springframework.jdbc.datasource.ShardingKeyProvider)\"><code>ShardingKeyProvider</code></a> 中获取。",
+      "count": 3
+    },
+    {
+      "source": "Create a new instance of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ConnectionBuilder.html\" title=\"class or interface in java.sql\"><code>ConnectionBuilder</code></a> using the target <code>DataSource</code>'s\n<code>createConnectionBuilder()</code> method and set the appropriate sharding keys\nfrom the configured <a href=\"#setShardingKeyProvider(org.springframework.jdbc.datasource.ShardingKeyProvider)\"><code>ShardingKeyProvider</code></a>.",
+      "translation": "使用目标 `<code>DataSource</code>` 的`<code>createConnectionBuilder()</code>` 方法创建一个新的`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/ConnectionBuilder.html\" title=\"class or interface in java.sql\"><code>ConnectionBuilder</code></a>` 实例，并从配置的 `<a href=\"#setShardingKeyProvider(org.springframework.jdbc.datasource.ShardingKeyProvider)\"><code>ShardingKeyProvider</code></a>` 中设置适当的分片键。",
+      "count": 3
+    },
+    {
+      "source": "Set the <a href=\"ShardingKeyProvider.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ShardingKeyProvider</code></a> for this adapter.",
+      "translation": "为此适配器设置<a href=\"ShardingKeyProvider.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ShardingKeyProvider</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>dataSource</code> - the target <code>DataSource</code> to be wrapped",
+      "translation": "<code>dataSource</code> - 要包装的目标 <code>DataSource</code>",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if an error occurs while creating the connection",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果在创建连接时发生错误",
+      "count": 3
+    },
+    {
+      "source": "a <code>Connection</code> object representing a direct shard connection",
+      "translation": "一个代表直接分片连接的<code>Connection</code>对象",
+      "count": 3
+    },
+    {
+      "source": "The target <code>DataSource</code> must implement the <a href=\"#createConnectionBuilder()\"><code>createConnectionBuilder()</code></a> method;\notherwise, a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLFeatureNotSupportedException.html\" title=\"class or interface in java.sql\"><code>SQLFeatureNotSupportedException</code></a> will be thrown when attempting\nto acquire shard connections.",
+      "translation": "目标 `<code>DataSource` 必须实现<a href=\"#createConnectionBuilder()\"><code>createConnectionBuilder()</code></a>方法；否则，在尝试获取分片连接时，将抛出<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLFeatureNotSupportedException.html\" title=\"class or interface in java.sql\"><code>SQLFeatureNotSupportedException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This adapter needs to be configured with a <a href=\"ShardingKeyProvider.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ShardingKeyProvider</code></a> callback which is\nused to get the current sharding keys for every <code>#getConnection</code> call, for example:",
+      "translation": "此适配器需要配置一个 `<a href=\"ShardingKeyProvider.html\" title=\"interface in org.springframework.jdbc.datasource\"><code>ShardingKeyProvider</code></a>` 回调，用于获取每次 `<code>#getConnection</code>` 调用的当前分片键，例如：",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"DelegatingDataSource.html#createConnectionBuilder()\">createConnectionBuilder</a></code> in class <code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>",
+      "translation": "`<code><a href=\"DelegatingDataSource.html#createConnectionBuilder()\">createConnectionBuilder</a></code>` 类中的 `<code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>shardingKeyProvider</code> - the <code>ShardingKeyProvider</code> used to get the\nsharding keys",
+      "translation": "<code>shardingKeyProvider</code> - 用于获取分片键的 <code>ShardingKeyProvider</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if an error occurs while creating the ConnectionBuilder",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果在创建 ConnectionBuilder 时发生错误",
+      "count": 2
+    },
+    {
+      "source": "<code>username</code> - the database user on whose behalf the connection is being made",
+      "translation": "<code>username</code> - 代表其建立连接的数据库用户",
+      "count": 2
+    },
+    {
+      "source": "<code>password</code> - the user's password",
+      "translation": "<code>password</code> - 用户的密码",
+      "count": 2
+    },
+    {
+      "source": "Mohamed Lahyane (Anir), Juergen Hoeller",
+      "translation": "Mohamed Lahyane (Anir), Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "a ConnectionBuilder object representing a builder for direct shard connections",
+      "translation": "代表直接分片连接构建器的 ConnectionBuilder 对象",
+      "count": 2
+    },
+    {
+      "source": "Obtain a connection to the database shard using the provided sharding key\nand super sharding key (if available).",
+      "translation": "使用提供的分片键和超级分片键（如果可用）获取数据库分片的连接。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a connection to the database shard using the provided username and password,\nconsidering the sharding keys (if available) and the given credentials.",
+      "translation": "使用提供的用户名和密码，结合分片键（如果可用）和给定凭据，获取到数据库分片的连接。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection()\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"DelegatingDataSource.html#getConnection()\">getConnection</a></code> in class <code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>",
+      "translation": "`<code><a href=\"DelegatingDataSource.html#getConnection()\">getConnection</a></code>` 在类 `<code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection(java.lang.String,java.lang.String)\" title=\"class or interface in javax.sql\">getConnection</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#getConnection(java.lang.String,java.lang.String)\" title=\"class or interface in javax.sql\">getConnection</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"DelegatingDataSource.html#getConnection(java.lang.String,java.lang.String)\">getConnection</a></code> in class <code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>",
+      "translation": "`<code><a href=\"DelegatingDataSource.html#getConnection(java.lang.String,java.lang.String)\">getConnection</a></code>` 类中的 `<code><a href=\"DelegatingDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">DelegatingDataSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#createConnectionBuilder()\" title=\"class or interface in javax.sql\">createConnectionBuilder</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html#createConnectionBuilder()\" title=\"class or interface in javax.sql\">createConnectionBuilder</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/javax/sql/DataSource.html\" title=\"class or interface in javax.sql\">DataSource</a></code>`",
+      "count": 1
+    }
+  ]
+}

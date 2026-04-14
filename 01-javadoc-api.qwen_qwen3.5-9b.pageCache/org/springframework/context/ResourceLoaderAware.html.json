@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-04-14 12:04:23",
+  "updated_at": "2026-04-14 12:04:23",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 13,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4444444444444444,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "You typically need a <a href=\"../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a> when your application object has to\naccess a variety of file resources whose names are calculated. A good strategy is\nto make the object use a <a href=\"../core/io/DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>\nbut still implement <code>ResourceLoaderAware</code> to allow for overriding when\nrunning in an <code>ApplicationContext</code>. See\n<a href=\"support/ReloadableResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ReloadableResourceBundleMessageSource</code></a>\nfor an example.",
+      "translation": "通常情况下，当您的应用程序对象需要访问名称经过计算的各种文件资源时，需要一个<a href=\"../core/io/ResourceLoader.html\" title=\"interface in org.springframework.core.io\"><code>ResourceLoader</code></a>。一个良好的策略是让该对象使用<a href=\"../core/io/DefaultResourceLoader.html\" title=\"class in org.springframework.core.io\"><code>DefaultResourceLoader</code></a>，但同时还实现<code>ResourceLoaderAware</code>接口，以便在<code>ApplicationContext</code>中运行时允许进行覆盖。有关示例，请参阅<a href=\"support/ReloadableResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ReloadableResourceBundleMessageSource</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "A passed-in <code>ResourceLoader</code> can also be checked for the\n<a href=\"../core/io/support/ResourcePatternResolver.html\" title=\"interface in org.springframework.core.io.support\"><code>ResourcePatternResolver</code></a> interface\nand cast accordingly, in order to resolve resource patterns into arrays of\n<code>Resource</code> objects. This will always work when running in an ApplicationContext\n(since the context interface extends the ResourcePatternResolver interface). Use a\n<a href=\"../core/io/support/PathMatchingResourcePatternResolver.html\" title=\"class in org.springframework.core.io.support\"><code>PathMatchingResourcePatternResolver</code></a> as\ndefault; see also the <code>ResourcePatternUtils.getResourcePatternResolver</code> method.",
+      "translation": "传入的 `<code>ResourceLoader` 也可以检查其是否实现了<a href=\"../core/io/support/ResourcePatternResolver.html\" title=\"interface in org.springframework.core.io.support\"><code>ResourcePatternResolver</code></a>接口，并据此进行类型转换，以便将资源模式解析为 `<code>Resource` 对象数组。在 ApplicationContext 中运行时，此操作始终有效（因为上下文接口扩展了 ResourcePatternResolver 接口）。默认使用<a href=\"../core/io/support/PathMatchingResourcePatternResolver.html\" title=\"class in org.springframework.core.io.support\"><code>PathMatchingResourcePatternResolver</code></a>；另请参阅 `<code>ResourcePatternUtils.getResourcePatternResolver</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "Note that <a href=\"../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> dependencies can also\nbe exposed as bean properties of type <code>Resource</code> or <code>Resource[]</code>,\npopulated via Strings with automatic type conversion by the bean factory. This\nremoves the need for implementing any callback interface just for the purpose\nof accessing specific file resources.",
+      "translation": "请注意，`<a href=\"../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>` 依赖也可以作为类型为 `<code>Resource</code>` 或 `<code>Resource[]</code>` 的 Bean 属性暴露出来，由 Bean 工厂通过字符串自动进行类型转换填充。这消除了仅为访问特定文件资源而实现任何回调接口的需求。",
+      "count": 2
+    },
+    {
+      "source": "As an alternative to a <code>ResourcePatternResolver</code> dependency, consider\nexposing bean properties of type <code>Resource[]</code> array, populated via pattern\nStrings with automatic type conversion by the bean factory at binding time.",
+      "translation": "作为 `<code>ResourcePatternResolver`</code> 依赖的替代方案，可以考虑暴露类型为 `<code>Resource[]</code>` 数组的 Bean 属性，该数组通过模式字符串填充，并在绑定时间由 Bean 工厂自动进行类型转换。",
+      "count": 2
+    },
+    {
+      "source": "This might be a ResourcePatternResolver, which can be checked\nthrough <code>instanceof ResourcePatternResolver</code>. See also the\n<code>ResourcePatternUtils.getResourcePatternResolver</code> method.",
+      "translation": "这可能是一个 `ResourcePatternResolver`，可以通过 `<code>instanceof ResourcePatternResolver</code>` 进行检查。另请参阅 `<code>ResourcePatternUtils.getResourcePatternResolver</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback\nlike InitializingBean's <code>afterPropertiesSet</code> or a custom init-method.\nInvoked before ApplicationContextAware's <code>setApplicationContext</code>.",
+      "translation": "在普通 Bean 属性填充之后、但早于初始化回调（如 `InitializingBean` 的 `<code>afterPropertiesSet</code>` 或自定义的 init-method）之前被调用。在 `ApplicationContextAware` 的 `<code>setApplicationContext</code>` 之前被调用。",
+      "count": 1
+    },
+    {
+      "source": "Set the ResourceLoader that this object runs in.",
+      "translation": "设置该对象运行的资源加载器。",
+      "count": 1
+    },
+    {
+      "source": "<code>resourceLoader</code> - the ResourceLoader object to be used by this object",
+      "translation": "<code>resourceLoader</code> - 此对象将使用的 ResourceLoader 对象",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Chris Beams",
+      "translation": "Jürgen Hoeller，Chris Beams",
+      "count": 1
+    }
+  ]
+}

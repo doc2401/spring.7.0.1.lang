@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-04-14 12:10:55",
+  "updated_at": "2026-04-14 12:10:55",
+  "stats": {
+    "total_entries": 8,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 13,
+    "entries_with_hits": 8,
+    "entries_without_hits": 0,
+    "hit_rate": 1.625,
+    "usage_percentage": 0.0007999999999999999
+  },
+  "items": [
+    {
+      "source": "If Lazy is present on a <a href=\"Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a> class, this\nindicates that all <code>@Bean</code> methods within that <code>@Configuration</code>\nshould be lazily initialized. If <code>@Lazy</code> is present and <code>false</code> on a <code>@Bean</code>\nmethod within a <code>@Lazy</code>-annotated <code>@Configuration</code> class, this indicates\noverriding the 'default lazy' behavior and that the bean should be eagerly initialized.",
+      "translation": "如果 `<a href=\"Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a>` 类上存在`<code>Lazy</code>`，则表明该`<code>@Configuration</code>` 类中的所有`<code>@Bean</code>` 方法都应进行延迟初始化。如果`<code>@Lazy</code>` 存在于`<code>@Configuration</code>` 类中的`<code>@Bean</code>` 方法上且值为`false`，则表明覆盖了“默认延迟”行为，该 Bean 应被急切初始化。",
+      "count": 2
+    },
+    {
+      "source": "If this annotation is not present on a <code>@Component</code> or <code>@Bean</code> definition,\neager initialization will occur. If present and set to <code>true</code>, the <code>@Bean</code> or\n<code>@Component</code> will not be initialized until referenced by another bean or explicitly\nretrieved from the enclosing <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>. If present and set to <code>false</code>, the bean will be instantiated on\nstartup by bean factories that perform eager initialization of singletons.",
+      "translation": "如果该注解未出现在 `<code>@Component</code>` 或 `<code>@Bean</code>` 定义上，则会发生急切初始化。如果存在且设置为 `<code>true</code>`，则 `<code>@Bean</code>` 或 `<code>@Component</code>` 将在被另一个 bean 引用或从包围的 <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 显式检索之前不会被初始化。如果存在且设置为 `<code>false</code>`，则执行单例急切初始化的 bean 工厂将在启动时实例化该 bean。",
+      "count": 2
+    },
+    {
+      "source": "In addition to its role for component initialization, this annotation may also be placed\non injection points marked with <a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>Autowired</code></a>\nor <code>Inject</code>: In that context, it leads to the creation of a\nlazy-resolution proxy for the affected dependency, caching it on first access in case of\na singleton or re-resolving it on every access otherwise. This is an alternative to using\n<a href=\"../../beans/factory/ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a> or <code>Provider</code>.\nPlease note that such a lazy-resolution proxy will always be injected; if the target\ndependency does not exist, you will only be able to find out through an exception on\ninvocation. As a consequence, such an injection point results in unintuitive behavior\nfor optional dependencies. For a programmatic equivalent, allowing for lazy references\nwith more sophistication, consider <a href=\"../../beans/factory/ObjectProvider.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectProvider</code></a>.",
+      "translation": "除了用于组件初始化之外，此注解还可以放置在带有<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>Autowired</code></a>或<code>Inject</code>的注入点上：在此上下文中，它会为受影响的依赖创建延迟解析代理，在单例情况下于首次访问时缓存该代理，否则每次访问时重新解析。这是使用<a href=\"../../beans/factory/ObjectFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectFactory</code></a>或<code>Provider</code>的替代方案。请注意，此类延迟解析代理将始终被注入；如果目标依赖不存在，您只能通过调用时抛出异常来发现这一点。因此，此类注入点会导致可选依赖的行为不符合直觉。对于程序化等效实现，允许更复杂的延迟引用，请考虑使用<a href=\"../../beans/factory/ObjectProvider.html\" title=\"interface in org.springframework.beans.factory\"><code>ObjectProvider</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "May be used on any class directly or indirectly annotated with <a href=\"../../stereotype/Component.html\" title=\"annotation interface in org.springframework.stereotype\"><code>@Component</code></a> or on methods annotated with\n<a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a>.",
+      "translation": "可用于直接或间接带有 <a href=\"../../stereotype/Component.html\" title=\"annotation interface in org.springframework.stereotype\"><code>@Component</code></a> 注解的任何类，或带有 <a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a> 注解的方法。",
+      "count": 2
+    },
+    {
+      "source": "Whether lazy initialization should occur.",
+      "translation": "是否应进行懒加载初始化。",
+      "count": 2
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller",
+      "translation": "Chris Beams，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

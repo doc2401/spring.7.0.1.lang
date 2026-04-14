@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 14:35:08",
+  "updated_at": "2026-04-14 14:35:08",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5294117647058822,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Create a new <code>SimplePropertyRowMapper</code>.",
+      "translation": "创建一个新的<code>SimplePropertyRowMapper</code>。",
+      "count": 4
+    },
+    {
+      "source": "This is a flexible alternative to <a href=\"DataClassRowMapper.html\" title=\"class in org.springframework.jdbc.core\"><code>DataClassRowMapper</code></a> and\n<a href=\"BeanPropertyRowMapper.html\" title=\"class in org.springframework.jdbc.core\"><code>BeanPropertyRowMapper</code></a> for scenarios where no specific customization\nand no pre-defined property mappings are needed.",
+      "translation": "这是 `<a href=\"DataClassRowMapper.html\" title=\"class in org.springframework.jdbc.core\"><code>DataClassRowMapper</code></a>` 和 `<a href=\"BeanPropertyRowMapper.html\" title=\"class in org.springframework.jdbc.core\"><code>BeanPropertyRowMapper</code></a>` 的一种灵活替代方案，适用于无需特定自定义且无需预定义属性映射的场景。",
+      "count": 2
+    },
+    {
+      "source": "In terms of its fallback property discovery algorithm, this class is similar to\n<a href=\"namedparam/SimplePropertySqlParameterSource.html\" title=\"class in org.springframework.jdbc.core.namedparam\"><code>SimplePropertySqlParameterSource</code></a>\nand is similarly used for <a href=\"simple/JdbcClient.html\" title=\"interface in org.springframework.jdbc.core.simple\"><code>JdbcClient</code></a>.",
+      "translation": "在回退属性发现算法方面，该类与<a href=\"namedparam/SimplePropertySqlParameterSource.html\" title=\"class in org.springframework.jdbc.core.namedparam\"><code>SimplePropertySqlParameterSource</code></a>类似，并同样用于<a href=\"simple/JdbcClient.html\" title=\"interface in org.springframework.jdbc.core.simple\"><code>JdbcClient</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "When combining a data class constructor with setter methods, any property\nmapped successfully via a constructor argument will not be mapped additionally\nvia a corresponding setter method or field mapping. This means that constructor\narguments take precedence over property setter methods which in turn take\nprecedence over direct field mappings.",
+      "translation": "当将数据类构造函数与 setter 方法结合使用时，任何通过构造函数参数成功映射的属性，都不会再通过对应的 setter 方法或字段映射进行额外映射。这意味着构造函数参数的优先级高于属性 setter 方法，而后者又高于直接字段映射。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">mapRow</a></code> in interface <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.jdbc.core\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in SimplePropertyRowMapper\">T</a>&gt;</code>",
+      "translation": "`<a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">mapRow</a>` 接口 `<code><a href=\"RowMapper.html\" title=\"interface in org.springframework.jdbc.core\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in SimplePropertyRowMapper\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>conversionService</code> - a <a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a> for binding\nJDBC values to bean properties",
+      "translation": "<code>conversionService</code> - 一个用于将 JDBC 值绑定到 Bean 属性的<a href=\"../../core/convert/ConversionService.html\" title=\"interface in org.springframework.core.convert\"><code>ConversionService</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>mappedClass</code> - the class that each row should be mapped to",
+      "translation": "<code>mappedClass</code> - 每行应映射到的类",
+      "count": 2
+    },
+    {
+      "source": "To facilitate mapping between columns and properties that don't have matching\nnames, try using underscore-separated column aliases in the SQL statement like\n<code>\"select fname as first_name from customer\"</code>, where <code>first_name</code>\ncan be mapped to a <code>setFirstName(String)</code> method in the target class.",
+      "translation": "为了解决列名与属性名不匹配时的映射问题，请在 SQL 语句中使用下划线分隔的列别名，例如 `<code>\"select fname as first_name from customer\"</code>`，其中 `<code>first_name</code>` 可以映射到目标类中的 `<code>setFirstName(String)</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">RowMapper</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RowMapper.html#mapRow(java.sql.ResultSet,int)\">RowMapper</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Implementations must implement this method to map each row of data in the\n<code>ResultSet</code>. This method should not call <code>next()</code> on the\n<code>ResultSet</code>; it is only supposed to map values of the current row.",
+      "translation": "实现类必须实现此方法，以映射 `<code>ResultSet`</code> 中的每一行数据。此方法不应调用 `<code>ResultSet`</code> 的 `next()`；它仅用于映射当前行的值。",
+      "count": 1
+    },
+    {
+      "source": "Implementations must implement this method to map each row of data in the\n<code>ResultSet</code>.",
+      "translation": "实现必须实现此方法，以映射 <code>ResultSet</code> 中的每一行数据。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the result type</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 结果类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>rs</code> - the <code>ResultSet</code> to map (pre-initialized for the current row)",
+      "translation": "<code>rs</code> - 要映射的 <code>ResultSet</code>（已针对当前行预初始化）",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if an SQLException is encountered while getting\ncolumn values (that is, there's no need to catch SQLException)",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 如果在获取列值时遇到 SQLException（即无需捕获 SQLException）。",
+      "count": 1
+    },
+    {
+      "source": "<code>rowNumber</code> - the number of the current row",
+      "translation": "<code>rowNumber</code> - 当前行的行号",
+      "count": 1
+    },
+    {
+      "source": "the result object for the current row (may be <code>null</code>)",
+      "translation": "当前行的结果对象（可能为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

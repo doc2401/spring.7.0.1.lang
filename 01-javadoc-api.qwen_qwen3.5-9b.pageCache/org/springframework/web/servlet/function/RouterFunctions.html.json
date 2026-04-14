@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-04-14 19:47:35",
+  "updated_at": "2026-04-14 19:47:35",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 84,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7872340425531914,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "a router function that routes to resources",
+      "translation": "一个将请求路由到资源的路由器函数。",
+      "count": 4
+    },
+    {
+      "source": "Name of the request attribute that contains the matching pattern, as a\n<a href=\"../../util/pattern/PathPattern.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPattern</code></a>.",
+      "translation": "包含匹配模式（作为 <a href=\"../../util/pattern/PathPattern.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPattern</code></a>）的请求属性名称。",
+      "count": 3
+    },
+    {
+      "source": "Name of the request attribute that contains the <a href=\"ServerRequest.html\" title=\"interface in org.springframework.web.servlet.function\"><code>ServerRequest</code></a>.",
+      "translation": "包含<a href=\"ServerRequest.html\" title=\"interface in org.springframework.web.servlet.function\"><code>ServerRequest</code></a>的请求属性名称。",
+      "count": 3
+    },
+    {
+      "source": "<code>headersConsumer</code> - provides access to the HTTP headers for served resources",
+      "translation": "<code>headersConsumer</code> - 提供对已服务资源的 HTTP 头部的访问权限。",
+      "count": 3
+    },
+    {
+      "source": "<code>pattern</code> - the pattern to match",
+      "translation": "<code>pattern</code> - 要匹配的图案",
+      "count": 3
+    },
+    {
+      "source": "<code>location</code> - the location directory relative to which resources should be resolved",
+      "translation": "<code>location</code> - 用于解析资源的资源目录的相对位置",
+      "count": 3
+    },
+    {
+      "source": "For instance, the following example routes GET requests for \"/user\" to the\n<code>listUsers</code> method in <code>userController</code>:",
+      "translation": "例如，以下示例将针对\"/user\"的 GET 请求路由到`userController`中的`listUsers`方法：",
+      "count": 2
+    },
+    {
+      "source": "For instance, the following example first creates a composed route that\nresolves to <code>listUsers</code> for a GET, and <code>createUser</code> for a POST.\nThis composed route then gets nested with a \"/user\" path predicate,\nso that GET requests for \"/user\" will list users, and POST request for\n\"/user\" will create a new user.",
+      "translation": "例如，以下示例首先创建一个组合路由，该路由针对 GET 请求解析为 `<code>listUsers</code>`，针对 POST 请求解析为 `<code>createUser</code>`。然后，该组合路由与 \"/user\" 路径谓词进行嵌套，使得对 \"/user\" 的 GET 请求将列出用户，而 POST 请求将创建新用户。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Main entry point to Spring's functional WebMvc framework.</strong>\nExposes routing functionality, such as to <a href=\"#route()\">create</a> a\n<code>RouterFunction</code> using a discoverable builder-style API, to\n<a href=\"#route(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.HandlerFunction)\">create</a> a\n<code>RouterFunction</code> given a <code>RequestPredicate</code> and\n<code>HandlerFunction</code>, and to do further\n<a href=\"#nest(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.RouterFunction)\">subrouting</a> on an\nexisting routing function.",
+      "translation": "<strong>Spring 功能型 WebMvc 框架的主要入口点。</strong>\n提供路由功能，例如使用可发现的构建器风格 API <a href=\"#route()\">创建</a>\n<code>RouterFunction</code>，在给定 <code>RequestPredicate</code> 和\n<code>HandlerFunction</code> 时 <a href=\"#route(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.HandlerFunction)\">创建</a>\n<code>RouterFunction</code>，以及对现有路由函数执行进一步的\n<a href=\"#nest(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.RouterFunction)\">子路由</a>。",
+      "count": 2
+    },
+    {
+      "source": "Changes the <a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a> on the given\n<a href=\"RouterFunction.html\" title=\"interface in org.springframework.web.servlet.function\">router function</a>. This method can be used to\nchange the <code>PathPatternParser</code> properties from the defaults.\nFor instance to change\n<a href=\"../../util/pattern/PathPatternParser.html#setCaseSensitive(boolean)\">case sensitivity</a>.",
+      "translation": "更改给定<a href=\"RouterFunction.html\" title=\"interface in org.springframework.web.servlet.function\">路由函数</a>上的<code>PathPatternParser</code>。此方法可用于更改<code>PathPatternParser</code>的默认属性。例如，可以更改<a href=\"../../util/pattern/PathPatternParser.html#setCaseSensitive(boolean)\">大小写敏感性</a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the resource lookup function used by\n<a href=\"#resources(java.lang.String,org.springframework.core.io.Resource)\"><code>resources(String, Resource)</code></a>. The returned function can be\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html#andThen(java.util.function.Function)\" title=\"class or interface in java.util.function\">composed</a> on. For instance to\nreturn a default resource when the lookup function does not match:\n<pre class=\"code\">Optional&lt;Resource&gt; defaultResource = Optional.of(new ClassPathResource(\"index.html\"));\n\nFunction&lt;ServerRequest, Optional&lt;Resource&gt;&gt; lookupFunction =\n    RouterFunctions.resourceLookupFunction(\"/resources/**\", new FileUrlResource(\"public-resources/\"))\n        .andThen(resource -&gt; resource.or(() -&gt; defaultResource));\n\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resources(lookupFunction);\n</pre>",
+      "translation": "返回由<a href=\"#resources(java.lang.String,org.springframework.core.io.Resource)\"><code>resources(String, Resource)</code></a>使用的资源查找函数。返回的函数可以<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html#andThen(java.util.function.Function)\" title=\"class or interface in java.util.function\">组合</a>。例如，当查找函数不匹配时返回默认资源：\n<pre class=\"code\">Optional&lt;Resource&gt; defaultResource = Optional.of(new ClassPathResource(\"index.html\"));\n\nFunction&lt;ServerRequest, Optional&lt;Resource&gt;&gt; lookupFunction =\n    RouterFunctions.resourceLookupFunction(\"/resources/**\", new FileUrlResource(\"public-resources/\"))\n        .andThen(resource -&gt; resource.or(() -&gt; defaultResource));\n\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resources(lookupFunction);\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "Route to resources using the provided lookup function. If the lookup\nfunction provides a <a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> for the given request, it will be\nit will be exposed using a <a href=\"HandlerFunction.html\" title=\"interface in org.springframework.web.servlet.function\"><code>HandlerFunction</code></a> that handles\nGET, HEAD, and OPTIONS requests.",
+      "translation": "使用提供的查找函数路由到资源。如果该查找函数为给定请求提供了<a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>，则它将使用一个处理 GET、HEAD 和 OPTIONS 请求的<a href=\"HandlerFunction.html\" title=\"interface in org.springframework.web.servlet.function\"><code>HandlerFunction</code></a>进行暴露。",
+      "count": 2
+    },
+    {
+      "source": "Route to resources using the provided lookup function. If the lookup function provides a\n<a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> for the given request, it will be it will be exposed using a\n<a href=\"HandlerFunction.html\" title=\"interface in org.springframework.web.servlet.function\"><code>HandlerFunction</code></a> that handles GET, HEAD, and OPTIONS requests.",
+      "translation": "使用提供的查找函数路由到资源。如果该查找函数为给定请求提供了 `<a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>`，则它将使用一个处理 GET、HEAD 和 OPTIONS 请求的 `<a href=\"HandlerFunction.html\" title=\"interface in org.springframework.web.servlet.function\"><code>HandlerFunction</code></a>` 将其暴露出来。",
+      "count": 2
+    },
+    {
+      "source": "Changes the <a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a> on the given\n<a href=\"RouterFunction.html\" title=\"interface in org.springframework.web.servlet.function\">router function</a>.",
+      "translation": "更改给定 <a href=\"RouterFunction.html\" title=\"interface in org.springframework.web.servlet.function\">路由函数</a> 上的 <a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Route requests that match the given predicate to the given resource.\nFor instance:\n<pre class=\"code\">Resource resource = new ClassPathResource(\"static/index.html\");\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resource(path(\"/api/**\").negate(), resource);\n</pre>",
+      "translation": "将匹配给定谓词的请求路由到给定的资源。\n例如：\n<pre class=\"code\">Resource resource = new ClassPathResource(\"static/index.html\");\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resource(path(\"/api/**\").negate(), resource);\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "Route requests that match the given pattern to resources relative to the\ngiven root location. For instance:\n<pre class=\"code\">Resource location = new FileUrlResource(\"public-resources/\");\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resources(\"/resources/**\", location);\n</pre>",
+      "translation": "将匹配给定模式的请求路由到相对于给定根位置的资源。例如：\n<pre class=\"code\">Resource location = new FileUrlResource(\"public-resources/\");\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resources(\"/resources/**\", location);\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "Name of the request attribute that contains the URI\ntemplates map, mapping variable names to values.",
+      "translation": "包含 URI 模板映射（将变量名映射到值）的请求属性名称。",
+      "count": 2
+    },
+    {
+      "source": "Route requests that match the given predicate to the given resource.",
+      "translation": "将匹配给定谓词的请求路由到给定资源。",
+      "count": 2
+    },
+    {
+      "source": "Route requests that match the given pattern to resources relative to the\ngiven root location.",
+      "translation": "将匹配给定模式的请求路由到相对于给定根位置的资源。",
+      "count": 2
+    },
+    {
+      "source": "Route to resources using the provided lookup function.",
+      "translation": "使用提供的查找函数路由到资源。",
+      "count": 2
+    },
+    {
+      "source": "Offers a discoverable way to create router functions through a builder-style interface.",
+      "translation": "提供了一种可通过构建器风格接口创建路由器函数的可发现方式。",
+      "count": 2
+    },
+    {
+      "source": "<code>lookupFunction</code> - the function to provide a <a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>",
+      "translation": "<code>lookupFunction</code> - 用于提供 <a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> 的函数",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"nest(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.RouterFunction)-type-param-T\"><code>T</code> - the type of response returned by the handler function</span>",
+      "translation": "<span id=\"nest(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.RouterFunction)-type-param-T\"><code>T</code> - 处理函数返回的响应类型</span>",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"changeParser(org.springframework.web.servlet.function.RouterFunction,org.springframework.web.util.pattern.PathPatternParser)-type-param-T\"><code>T</code> - the type of response returned by the handler function</span>",
+      "translation": "<span id=\"changeParser(org.springframework.web.servlet.function.RouterFunction,org.springframework.web.util.pattern.PathPatternParser)-type-param-T\"><code>T</code> - 处理函数返回的响应类型</span>",
+      "count": 2
+    },
+    {
+      "source": "<code>predicate</code> - the predicate to test",
+      "translation": "<code>predicate</code> - 用于测试的谓词",
+      "count": 2
+    },
+    {
+      "source": "<code>routerFunction</code> - the nested router function to delegate to if the predicate applies",
+      "translation": "<code>routerFunction</code> - 如果谓词适用，则委托给此嵌套路由函数。",
+      "count": 2
+    },
+    {
+      "source": "<code>predicate</code> - the predicate to match",
+      "translation": "<code>predicate</code> - 用于匹配的谓词",
+      "count": 2
+    },
+    {
+      "source": "<code>resource</code> - the resources to serve",
+      "translation": "<code>resource</code> - 要提供的资源",
+      "count": 2
+    },
+    {
+      "source": "<code>parser</code> - the parser to change to",
+      "translation": "<code>parser</code> - 要更改的解析器",
+      "count": 2
+    },
+    {
+      "source": "a router function that routes to a resource",
+      "translation": "一个将请求路由到资源的路由器函数",
+      "count": 2
+    },
+    {
+      "source": "Returns the resource lookup function used by\n<a href=\"#resources(java.lang.String,org.springframework.core.io.Resource)\"><code>resources(String, Resource)</code></a>.",
+      "translation": "返回由 `<a href=\"#resources(java.lang.String,org.springframework.core.io.Resource)\"><code>resources(String, Resource)</code></a>` 使用的资源查找函数。",
+      "count": 1
+    },
+    {
+      "source": "Route requests that match the given predicate to the given resource.\nFor instance:\n<pre class=\"code\">Resource resource = new ClassPathResource(\"static/index.html\")\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resource(path(\"/api/**\").negate(), resource);\n</pre>",
+      "translation": "将匹配给定谓词的请求路由到给定资源。\n例如：\n<pre class=\"code\">Resource resource = new ClassPathResource(\"static/index.html\")\nRouterFunction&lt;ServerResponse&gt; resources = RouterFunctions.resource(path(\"/api/**\").negate(), resource);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Represents a discoverable builder for router functions.",
+      "translation": "表示路由器函数的可发现构建器。",
+      "count": 1
+    },
+    {
+      "source": "Receives notifications from the logical structure of router functions.",
+      "translation": "接收来自路由器函数逻辑结构的通知。",
+      "count": 1
+    },
+    {
+      "source": "Route to the given router function if the given request predicate applies.",
+      "translation": "如果给定的请求谓词适用，则路由到给定的路由器函数。",
+      "count": 1
+    },
+    {
+      "source": "Route to the given handler function if the given request predicate applies.",
+      "translation": "如果给定的请求谓词适用，则路由到给定的处理函数。",
+      "count": 1
+    },
+    {
+      "source": "a router function that routes to <code>handlerFunction</code> if\n<code>predicate</code> evaluates to <code>true</code>",
+      "translation": "一个路由函数，如果 `<code>predicate</code>` 求值为 `<code>true</code>`，则路由到 `<code>handlerFunction</code>`。",
+      "count": 1
+    },
+    {
+      "source": "a router function that routes to <code>routerFunction</code> if\n<code>predicate</code> evaluates to <code>true</code>",
+      "translation": "一个路由函数，如果 `<code>predicate</code>` 求值为 `<code>true</code>`，则路由到 `<code>routerFunction</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"route(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.HandlerFunction)-type-param-T\"><code>T</code> - the type of response returned by the handler function</span>",
+      "translation": "<span id=\"route(org.springframework.web.servlet.function.RequestPredicate,org.springframework.web.servlet.function.HandlerFunction)-type-param-T\"><code>T</code> - 由处理函数返回的响应类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>handlerFunction</code> - the handler function to route to if the predicate applies",
+      "translation": "<code>handlerFunction</code> - 如果谓词适用，则路由到的处理函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>routerFunction</code> - the router function to change the parser in",
+      "translation": "<code>routerFunction</code> - 用于更改解析器的路由函数。",
+      "count": 1
+    },
+    {
+      "source": "Arjen Poutsma, Sebastien Deleuze, Rossen Stoyanchev",
+      "translation": "Arjen Poutsma, Sebastien Deleuze, Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "a router function builder",
+      "translation": "路由器函数构建器",
+      "count": 1
+    },
+    {
+      "source": "the default resource lookup function for the given parameters.",
+      "translation": "给定参数的默认资源查找函数。",
+      "count": 1
+    },
+    {
+      "source": "the change router function",
+      "translation": "更改路由函数",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

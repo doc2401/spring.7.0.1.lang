@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-04-14 15:40:48",
+  "updated_at": "2026-04-14 15:40:48",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 46,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 2.4210526315789473,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "Send a message to the given user.",
+      "translation": "向给定的用户发送消息。",
+      "count": 6
+    },
+    {
+      "source": "<code>user</code> - the user that should receive the message (must not be <code>null</code>)",
+      "translation": "<code>user</code> - 应接收消息的用户（不能为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>destination</code> - the destination to send the message to (must not be <code>null</code>)",
+      "translation": "<code>destination</code> - 消息发送的目标（不能为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>payload</code> - the payload to send (may be <code>null</code>)",
+      "translation": "<code>payload</code> - 要发送的负载（可为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "<code>payload</code> - the payload to send",
+      "translation": "<code>payload</code> - 要发送的负载",
+      "count": 3
+    },
+    {
+      "source": "<code>postProcessor</code> - a postProcessor to post-process or modify the created message",
+      "translation": "<code>postProcessor</code> - 一个用于后处理或修改已创建消息的 postProcessor。",
+      "count": 3
+    },
+    {
+      "source": "If the map already contains the key\n<a href=\"../support/NativeMessageHeaderAccessor.html#NATIVE_HEADERS\"><code>\"nativeHeaders\"</code></a>\nor was prepared with\n<a href=\"SimpMessageHeaderAccessor.html\" title=\"class in org.springframework.messaging.simp\"><code>SimpMessageHeaderAccessor</code></a>\nthen the headers are used directly. A common expected case is providing a\ncontent type (to influence the message conversion) and native headers.\nThis may be done as follows:",
+      "translation": "如果映射中已包含键\n<a href=\"../support/NativeMessageHeaderAccessor.html#NATIVE_HEADERS\"><code>\"nativeHeaders\"</code></a>\n，或者已通过\n<a href=\"SimpMessageHeaderAccessor.html\" title=\"class in org.springframework.messaging.simp\"><code>SimpMessageHeaderAccessor</code></a>\n进行准备，则直接使用这些标头。一个常见的预期用例是提供内容类型（以影响消息转换）和原生标头。可以按如下方式操作：",
+      "count": 2
+    },
+    {
+      "source": "For more on user destinations see\n<a href=\"user/UserDestinationResolver.html\" title=\"interface in org.springframework.messaging.simp.user\"><code>UserDestinationResolver</code></a>.",
+      "translation": "有关用户目标的更多信息，请参阅 <a href=\"user/UserDestinationResolver.html\" title=\"interface in org.springframework.messaging.simp.user\"><code>UserDestinationResolver</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Generally it is expected the user is the one authenticated with the\nWebSocket session (or by extension the user authenticated with the\nhandshake request that started the session). However if the session is\nnot authenticated, it is also possible to pass the session id (if known)\nin place of the user name. Keep in mind though that in that scenario,\nyou must use one of the overloaded methods that accept headers making sure the\n<a href=\"SimpMessageHeaderAccessor.html#setSessionId(java.lang.String)\"><code>sessionId</code></a> header has been set accordingly.",
+      "translation": "通常预期用户是 WebSocket 会话的认证方（或者更广泛地说，是发起该会话的握手请求的认证方）。然而，如果会话未进行认证，也可以将已知的会话 ID 作为用户名传入。不过请注意，在这种情况下，您必须使用接受标头的重载方法之一，并确保已正确设置<a href=\"SimpMessageHeaderAccessor.html#setSessionId(java.lang.String)\"><code>sessionId</code></a>标头。",
+      "count": 2
+    },
+    {
+      "source": "By default headers are interpreted as native headers (for example, STOMP) and\nare saved under a special key in the resulting Spring\n<a href=\"../Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a>. In effect when the\nmessage leaves the application, the provided headers are included with it\nand delivered to the destination (for example, the STOMP client or broker).",
+      "translation": "默认情况下，标头被解释为原生标头（例如 STOMP），并保存在生成的 Spring <a href=\"../Message.html\" title=\"interface in org.springframework.messaging\"><code>Message</code></a> 的特殊键下。实际上，当消息离开应用程序时，提供的标头会随其一起包含在内并传递到目标位置（例如 STOMP 客户端或代理）。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> if the <code>MessageHeaders</code> are mutable as in\nthe above example, implementations of this interface should take notice and\nupdate the headers in the same instance (rather than copy or re-create it)\nand then set it immutable before sending the final message.",
+      "translation": "<strong>注意：</strong> 如果 <code>MessageHeaders</code> 是可变的（如上例所示），此接口的实现应予以注意，并在同一实例中更新这些标头（而不是复制或重新创建它），然后在发送最终消息之前将其设置为不可变。",
+      "count": 2
+    },
+    {
+      "source": "See <a href=\"../core/MessageSendingOperations.html#convertAndSend(D,java.lang.Object,java.util.Map)\"><code>MessageSendingOperations.convertAndSend(Object, Object, java.util.Map)</code></a> for important\nnotes regarding the input headers.",
+      "translation": "有关输入标头的注意事项，请参阅 <a href=\"../core/MessageSendingOperations.html#convertAndSend(D,java.lang.Object,java.util.Map)\"><code>MessageSendingOperations.convertAndSend(Object, Object, java.util.Map)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>headers</code> - the message headers (may be <code>null</code>)",
+      "translation": "<code>headers</code> - 消息头（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>user</code> - the user that should receive the message.",
+      "translation": "<code>user</code> - 应接收消息的用户。",
+      "count": 2
+    },
+    {
+      "source": "<code>destination</code> - the destination to send the message to.",
+      "translation": "<code>destination</code> - 消息发送的目标。",
+      "count": 2
+    },
+    {
+      "source": "<code>user</code> - the user that should receive the message",
+      "translation": "<code>user</code> - 应接收该消息的用户",
+      "count": 2
+    },
+    {
+      "source": "<code>destination</code> - the destination to send the message to",
+      "translation": "<code>destination</code> - 发送消息的目标地址",
+      "count": 2
+    },
+    {
+      "source": "<code>headers</code> - the message headers",
+      "translation": "<code>headers</code> - 消息头",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

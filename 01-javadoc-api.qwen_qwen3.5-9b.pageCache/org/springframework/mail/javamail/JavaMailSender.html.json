@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 15:23:28",
+  "updated_at": "2026-04-14 15:23:28",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 59,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9666666666666666,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "<code><a href=\"../MailAuthenticationException.html\" title=\"class in org.springframework.mail\">MailAuthenticationException</a></code> - in case of authentication failure",
+      "translation": "<code><a href=\"../MailAuthenticationException.html\" title=\"class in org.springframework.mail\">MailAuthenticationException</a></code> - 在认证失败的情况下",
+      "count": 4
+    },
+    {
+      "source": "<code><a href=\"../MailSendException.html\" title=\"class in org.springframework.mail\">MailSendException</a></code> - in case of failure when sending the message",
+      "translation": "<code><a href=\"../MailSendException.html\" title=\"class in org.springframework.mail\">MailSendException</a></code> - 在发送邮件失败时",
+      "count": 3
+    },
+    {
+      "source": "<code><a href=\"../MailSendException.html\" title=\"class in org.springframework.mail\">MailSendException</a></code> - in case of failure when sending a message",
+      "translation": "<code><a href=\"../MailSendException.html\" title=\"class in org.springframework.mail\">MailSendException</a></code> - 在发送邮件失败时",
+      "count": 3
+    },
+    {
+      "source": "the new MimeMessage instance",
+      "translation": "新的 MimeMessage 实例",
+      "count": 3
+    },
+    {
+      "source": "A JavaMailSender client is not as easy to test as a plain\n<a href=\"../MailSender.html\" title=\"interface in org.springframework.mail\"><code>MailSender</code></a> client, but still straightforward\ncompared to traditional JavaMail code: Just let <a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>\nreturn a plain <code>MimeMessage</code> created with a\n<code>Session.getInstance(new Properties())</code> call, and check the passed-in\nmessages in your mock implementations of the various <code>send</code> methods.",
+      "translation": "JavaMailSender 客户端不像普通的<a href=\"../MailSender.html\" title=\"interface in org.springframework.mail\"><code>MailSender</code></a>客户端那样易于测试，但与传统 JavaMail 代码相比仍然很简单：只需让<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>返回一个使用<code>Session.getInstance(new Properties())</code>调用创建的普通<code>MimeMessage</code>，并在各种<code>send</code>方法的模拟实现中检查传入的消息。",
+      "count": 2
+    },
+    {
+      "source": "The recommended way of using this interface is the <a href=\"MimeMessagePreparator.html\" title=\"interface in org.springframework.mail.javamail\"><code>MimeMessagePreparator</code></a>\nmechanism, possibly using a <a href=\"MimeMessageHelper.html\" title=\"class in org.springframework.mail.javamail\"><code>MimeMessageHelper</code></a> for populating the message.\nSee <a href=\"MimeMessageHelper.html\" title=\"class in org.springframework.mail.javamail\"><code>MimeMessageHelper's javadoc</code></a> for an example.",
+      "translation": "使用此接口的推荐方式是采用 `<a href=\"MimeMessagePreparator.html\" title=\"interface in org.springframework.mail.javamail\"><code>MimeMessagePreparator</code></a>` 机制，可能还会使用 `<a href=\"MimeMessageHelper.html\" title=\"class in org.springframework.mail.javamail\"><code>MimeMessageHelper</code></a>` 来填充消息。有关示例，请参阅 `<a href=\"MimeMessageHelper.html\" title=\"class in org.springframework.mail.javamail\"><code>MimeMessageHelper 的 javadoc</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Clients should talk to the mail sender through this interface if they need\nmail functionality beyond <a href=\"../SimpleMailMessage.html\" title=\"class in org.springframework.mail\"><code>SimpleMailMessage</code></a>.\nThe production implementation is <a href=\"JavaMailSenderImpl.html\" title=\"class in org.springframework.mail.javamail\"><code>JavaMailSenderImpl</code></a>; for testing,\nmocks can be created based on this interface. Clients will typically receive\nthe JavaMailSender reference through dependency injection.",
+      "translation": "如果客户端需要通过此接口获取超出 <a href=\"../SimpleMailMessage.html\" title=\"class in org.springframework.mail\"><code>SimpleMailMessage</code></a> 范围的邮件功能，则应与邮件发送器进行通信。生产环境中的实现为 <a href=\"JavaMailSenderImpl.html\" title=\"class in org.springframework.mail.javamail\"><code>JavaMailSenderImpl</code></a>；对于测试，可以基于此接口创建模拟对象。客户端通常通过依赖注入接收 JavaMailSender 引用。",
+      "count": 2
+    },
+    {
+      "source": "Alternative way to prepare MimeMessage instances, instead of\n<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a> and <a href=\"#send(jakarta.mail.internet.MimeMessage)\"><code>send(MimeMessage)</code></a> calls.\nTakes care of proper exception conversion.",
+      "translation": "准备 MimeMessage 实例的另一种方式，而不是使用<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>和<a href=\"#send(jakarta.mail.internet.MimeMessage)\"><code>send(MimeMessage)</code></a>调用。它负责正确的异常转换。",
+      "count": 2
+    },
+    {
+      "source": "Alternative way to prepare MimeMessage instances, instead of\n<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a> and <a href=\"#send(jakarta.mail.internet.MimeMessage...)\"><code>send(MimeMessage[])</code></a> calls.\nTakes care of proper exception conversion.",
+      "translation": "另一种准备 MimeMessage 实例的方法，而不是使用<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>和<a href=\"#send(jakarta.mail.internet.MimeMessage...)\"><code>send(MimeMessage[])</code></a>调用。它负责正确处理异常转换。",
+      "count": 2
+    },
+    {
+      "source": "The entire JavaMail <code>Session</code> management is abstracted\nby the JavaMailSender. Client code should not deal with a Session in any way,\nrather leave the entire JavaMail configuration and resource handling to the\nJavaMailSender implementation. This also increases testability.",
+      "translation": "整个 JavaMail `<code>Session</code>` 管理由 `JavaMailSender` 抽象。客户端代码不应以任何方式处理 Session，而应将整个 JavaMail 配置和资源处理交由 `JavaMailSender` 实现。这也提高了可测试性。",
+      "count": 2
+    },
+    {
+      "source": "Send the given JavaMail MIME message.\nThe message needs to have been created with <a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>.",
+      "translation": "发送给定的 JavaMail MIME 消息。该消息必须使用<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>创建。",
+      "count": 2
+    },
+    {
+      "source": "Send the given array of JavaMail MIME messages in batch.\nThe messages need to have been created with <a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>.",
+      "translation": "批量发送给定的 JavaMail MIME 消息数组。这些消息必须使用<a href=\"#createMimeMessage()\"><code>createMimeMessage()</code></a>创建。",
+      "count": 2
+    },
+    {
+      "source": "Create a new JavaMail MimeMessage for the underlying JavaMail Session\nof this sender, using the given input stream as the message source.",
+      "translation": "为此发送者创建一个新的 JavaMail MimeMessage，使用给定的输入流作为消息源，该消息基于此发送者的底层 JavaMail Session。",
+      "count": 2
+    },
+    {
+      "source": "Create a new JavaMail MimeMessage for the underlying JavaMail Session\nof this sender. Needs to be called to create MimeMessage instances\nthat can be prepared by the client and passed to send(MimeMessage).",
+      "translation": "为此发送者创建底层 JavaMail Session 的新 JavaMail MimeMessage。需要调用此方法来创建可由客户端准备并传递给 send(MimeMessage) 的 MimeMessage 实例。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MailParseException.html\" title=\"class in org.springframework.mail\">MailParseException</a></code> - in case of message creation failure",
+      "translation": "<code><a href=\"../MailParseException.html\" title=\"class in org.springframework.mail\">MailParseException</a></code> - 在消息创建失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MailPreparationException.html\" title=\"class in org.springframework.mail\">MailPreparationException</a></code> - in case of failure when preparing the message",
+      "translation": "<code><a href=\"../MailPreparationException.html\" title=\"class in org.springframework.mail\">MailPreparationException</a></code> - 在准备消息时发生失败的情况",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MailParseException.html\" title=\"class in org.springframework.mail\">MailParseException</a></code> - in case of failure when parsing the message",
+      "translation": "<code><a href=\"../MailParseException.html\" title=\"class in org.springframework.mail\">MailParseException</a></code> - 在解析消息失败时",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MailPreparationException.html\" title=\"class in org.springframework.mail\">MailPreparationException</a></code> - in case of failure when preparing a message",
+      "translation": "<code><a href=\"../MailPreparationException.html\" title=\"class in org.springframework.mail\">MailPreparationException</a></code> - 在准备消息时发生失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MailParseException.html\" title=\"class in org.springframework.mail\">MailParseException</a></code> - in case of failure when parsing a message",
+      "translation": "<code><a href=\"../MailParseException.html\" title=\"class in org.springframework.mail\">MailParseException</a></code> - 在解析消息时发生失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>contentStream</code> - the raw MIME input stream for the message",
+      "translation": "<code>contentStream</code> - 消息的原始 MIME 输入流",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeMessage</code> - message to send",
+      "translation": "<code>mimeMessage</code> - 要发送的消息",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeMessages</code> - messages to send",
+      "translation": "<code>mimeMessages</code> - 要发送的消息",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeMessagePreparator</code> - the preparator to use",
+      "translation": "<code>mimeMessagePreparator</code> - 要使用的准备器",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeMessagePreparators</code> - the preparator to use",
+      "translation": "<code>mimeMessagePreparators</code> - 要使用的准备器",
+      "count": 2
+    },
+    {
+      "source": "Create a new JavaMail MimeMessage for the underlying JavaMail Session\nof this sender.",
+      "translation": "为此发件人的底层 JavaMail Session 创建一个新的 JavaMail MimeMessage。",
+      "count": 1
+    },
+    {
+      "source": "Send the given JavaMail MIME message.",
+      "translation": "发送给定的 JavaMail MIME 消息。",
+      "count": 1
+    },
+    {
+      "source": "Send the given array of JavaMail MIME messages in batch.",
+      "translation": "批量发送给定的 JavaMail MIME 消息数组。",
+      "count": 1
+    },
+    {
+      "source": "Send the JavaMail MIME message prepared by the given MimeMessagePreparator.",
+      "translation": "发送由给定的 MimeMessagePreparator 准备的 JavaMail MIME 消息。",
+      "count": 1
+    },
+    {
+      "source": "Send the JavaMail MIME messages prepared by the given MimeMessagePreparators.",
+      "translation": "发送由给定的 MimeMessagePreparators 准备的 JavaMail MIME 消息。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

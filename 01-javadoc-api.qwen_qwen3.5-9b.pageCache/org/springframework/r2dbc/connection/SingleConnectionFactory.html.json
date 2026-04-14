@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 16:12:50",
+  "updated_at": "2026-04-14 16:12:50",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 53,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7666666666666666,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "Note that at shutdown, someone should close the underlying\n<code>Connection</code> via the <code>close()</code> method. Client code will\nnever call close on the <code>Connection</code> handle if it is\nSmartConnectionFactory-aware (for example, uses\n<a href=\"ConnectionFactoryUtils.html#releaseConnection(io.r2dbc.spi.Connection,io.r2dbc.spi.ConnectionFactory)\"><code>ConnectionFactoryUtils.releaseConnection(Connection, ConnectionFactory)</code></a>).",
+      "translation": "注意，在关闭时，应通过 `close()` 方法关闭底层的 `<code>Connection</code>`。如果客户端代码是 SmartConnectionFactory-aware（例如，使用<a href=\"ConnectionFactoryUtils.html#releaseConnection(io.r2dbc.spi.Connection,io.r2dbc.spi.ConnectionFactory)\"><code>ConnectionFactoryUtils.releaseConnection(Connection, ConnectionFactory)</code></a>），则永远不会调用 `close()` 关闭 `<code>Connection</code>` 句柄。",
+      "count": 2
+    },
+    {
+      "source": "This is primarily intended for testing and pipelining usage of connections.\nFor example, it enables easy testing outside an application server for code\nthat expects to work on a <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>.\nNote that this implementation does not act as a connection pool-like utility.\nConnection pooling requires a pooling <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> such as one from\n<code>r2dbc-pool</code>.",
+      "translation": "这主要用于测试和连接管道的使用。例如，它使得在应用程序服务器之外轻松测试期望与<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>一起工作的代码变得容易。请注意，此实现并不充当连接池工具。连接池需要一个池化<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>，例如来自<code>r2dbc-pool</code>的实例。",
+      "count": 2
+    },
+    {
+      "source": "If client code will call <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html#close--\" title=\"class or interface in io.r2dbc.spi\"><code>Connection.close()</code></a> in the\nassumption of a pooled <code>Connection</code>, like when using persistence tools,\nset \"suppressClose\" to <code>true</code>. This will return a close-suppressing\nproxy instead of the physical Connection.",
+      "translation": "如果客户端代码在假设使用连接池（例如在使用持久化工具时）的情况下调用 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html#close--\" title=\"class or interface in io.r2dbc.spi\"><code>Connection.close()</code></a>，请将 \"suppressClose\" 设置为 <code>true</code>。这将返回一个抑制关闭的代理对象，而不是物理连接。",
+      "count": 2
+    },
+    {
+      "source": "As this bean implements <a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a>, a bean factory will automatically\ninvoke this on destruction of its cached singletons.",
+      "translation": "由于该 Bean 实现了<a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\"><code>DisposableBean</code></a>接口，因此当销毁其缓存的单例时，Bean 工厂会自动调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>SingleConnectionFactory</code> with a given <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>\nand <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactoryMetadata.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactoryMetadata</code></a>.",
+      "translation": "创建一个新的 <code>SingleConnectionFactory</code>，给定一个 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> 和 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactoryMetadata.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactoryMetadata</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the returned <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> will be a close-suppressing proxy\nor the physical <code>Connection</code>.",
+      "translation": "返回指示返回的<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>是否为关闭抑制代理还是物理<code>Connection</code>。",
+      "count": 2
+    },
+    {
+      "source": "Set whether the returned <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> should be a close-suppressing proxy\nor the physical <code>Connection</code>.",
+      "translation": "设置返回的<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>应为抑制关闭的代理还是物理<code>Connection</code>。",
+      "count": 2
+    },
+    {
+      "source": "Prepare the <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> before using it.\nApplies <a href=\"#getAutoCommitValue()\">auto-commit</a> settings if configured.",
+      "translation": "在开始使用之前，请准备<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>。\n如果已配置，则应用<a href=\"#getAutoCommitValue()\">自动提交</a>设置。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the returned <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>'s \"autoCommit\" setting should\nbe overridden.",
+      "translation": "返回是否应覆盖返回的<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>的\"autoCommit\"设置。",
+      "count": 2
+    },
+    {
+      "source": "Wrap the given <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> with a proxy that delegates every method call to it\nbut suppresses close calls.",
+      "translation": "用代理包装给定的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>，该代理将每个方法调用委托给它，但抑制关闭调用。",
+      "count": 2
+    },
+    {
+      "source": "Set whether the returned <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>'s \"autoCommit\" setting should\nbe overridden.",
+      "translation": "设置是否应覆盖返回的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> 的 \"autoCommit\" 设置。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>SingleConnectionFactory</code> using an R2DBC connection URL.",
+      "translation": "使用 R2DBC 连接 URL 创建一个新的<code>SingleConnectionFactory</code>。",
+      "count": 2
+    },
+    {
+      "source": "Constructor for bean-style configuration.",
+      "translation": "用于 Bean 风格配置的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Reset the underlying shared Connection, to be reinitialized on next access.",
+      "translation": "重置底层的共享连接，以便在下次访问时重新初始化。",
+      "count": 2
+    },
+    {
+      "source": "<code>suppressClose</code> - <code>true</code> if the <code>Connection</code> should be wrapped\nwith a <code>Connection</code> that suppresses <code>close()</code> calls (to allow\nfor normal <code>close()</code> usage in applications that expect a pooled\n<code>Connection</code>)",
+      "translation": "<code>suppressClose</code> - 如果应将 <code>Connection</code> 包装为抑制 <code>close()</code> 调用的 <code>Connection</code>（以允许在期望池化 <code>Connection</code> 的应用程序中进行正常的 <code>close()</code> 使用），则为 <code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>suppressClose</code> - if the returned <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> should be a\nclose-suppressing proxy or the physical <code>Connection</code>",
+      "translation": "<code>suppressClose</code> - 如果返回的<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>应为关闭抑制代理或物理<code>Connection</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"DelegatingConnectionFactory.html#create()\">create</a></code> in class <code><a href=\"DelegatingConnectionFactory.html\" title=\"class in org.springframework.r2dbc.connection\">DelegatingConnectionFactory</a></code>",
+      "translation": "`<code><a href=\"DelegatingConnectionFactory.html#create()\">create</a></code>` 在类 `<code><a href=\"DelegatingConnectionFactory.html\" title=\"class in org.springframework.r2dbc.connection\">DelegatingConnectionFactory</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>url</code> - the R2DBC URL to use for accessing <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> discovery",
+      "translation": "<code>url</code> - 用于访问 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 发现的 R2DBC URL",
+      "count": 2
+    },
+    {
+      "source": "<code>metadata</code> - <code>ConnectionFactory</code> metadata to be associated with\nthis <code>ConnectionFactory</code>",
+      "translation": "<code>metadata</code> - 与此 <code>ConnectionFactory</code> 关联的 <code>ConnectionFactory</code> 元数据",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - underlying target <code>Connection</code>",
+      "translation": "<code>target</code> - 底层目标 <code>Connection</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>connection</code> - the requested <code>Connection</code>",
+      "translation": "<code>connection</code> - 请求的 <code>Connection</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code> - the original <code>Connection</code> to wrap",
+      "translation": "<code>target</code> - 要包装的原始 <code>Connection</code>",
+      "count": 2
+    },
+    {
+      "source": "the prepared <code>Connection</code>",
+      "translation": "已准备的<code>Connection</code>",
+      "count": 2
+    },
+    {
+      "source": "Close the underlying <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>.",
+      "translation": "关闭底层的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Prepare the <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> before using it.",
+      "translation": "在使用之前，请准备 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#create--\" title=\"class or interface in io.r2dbc.spi\">create</a></code> in interface <code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#create--\" title=\"class or interface in io.r2dbc.spi\">create</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "the \"autoCommit\" value, or <code>null</code> if none to be applied",
+      "translation": "\"autoCommit\" 值，或为 null（表示不应用任何设置）。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "the wrapped Connection",
+      "translation": "被包装的 Connection",
+      "count": 1
+    }
+  ]
+}

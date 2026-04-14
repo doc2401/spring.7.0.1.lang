@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-04-14 18:44:49",
+  "updated_at": "2026-04-14 18:44:49",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 41,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5769230769230769,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "State-changing HTTP methods and other HTTP conditional request headers such as\n<code>If-Match</code> and <code>If-Unmodified-Since</code> are outside the scope of this filter.\nPlease consider using <a href=\"../context/request/ServletWebRequest.html#checkNotModified(java.lang.String,long)\"><code>ServletWebRequest.checkNotModified(String, long)</code></a> instead.",
+      "translation": "状态变更的 HTTP 方法以及其他 HTTP 条件请求头（如`If-Match`和`If-Unmodified-Since`）不在该过滤器范围内。请考虑改用<a href=\"../context/request/ServletWebRequest.html#checkNotModified(java.lang.String,long)\"><code>ServletWebRequest.checkNotModified(String, long)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Since the ETag is based on the response content, the response\n(for example, a <a href=\"../servlet/View.html\" title=\"interface in org.springframework.web.servlet\"><code>View</code></a>) is still rendered.\nAs such, this filter only saves bandwidth, not server performance.",
+      "translation": "由于 ETag 基于响应内容，因此响应（例如一个<a href=\"../servlet/View.html\" title=\"interface in org.springframework.web.servlet\"><code>View</code></a>）仍然会被渲染。因此，此过滤器仅节省带宽，而非服务器性能。",
+      "count": 2
+    },
+    {
+      "source": "Should be configured using an <code>&lt;init-param&gt;</code> for parameter name\n\"writeWeakETag\" in the filter definition in <code>web.xml</code>.",
+      "translation": "应使用 `<init-param>` 在 `web.xml` 中的过滤器定义里配置参数名称为 \"writeWeakETag\"。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> This method must be called before the response\nis written to in order for the entire response content to be written\nwithout caching.",
+      "translation": "<strong>注意：</strong> 必须在向响应写入之前调用此方法，以确保整个响应内容能够无缓存地写入。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation generates an MD5 hash.",
+      "translation": "默认实现生成一个 MD5 哈希值。",
+      "count": 2
+    },
+    {
+      "source": "Whether an ETag should be calculated for the given request and response\nexchange. By default, this is <code>true</code> if all the following match:\n<ul>\n<li>Response is not committed.</li>\n<li>Response status codes is in the <code>2xx</code> series.</li>\n<li>Request method is a GET.</li>\n<li>Response Cache-Control header does not contain \"no-store\" (or is not present at all).</li>\n</ul>",
+      "translation": "是否应为给定的请求和响应交换计算 ETag。默认情况下，如果满足以下所有条件，则为 <code>true</code>：\n<ul>\n<li>响应未提交。</li>\n<li>响应状态码属于 <code>2xx</code> 系列。</li>\n<li>请求方法为 GET。</li>\n<li>响应 Cache-Control 头不包含 \"no-store\"（或根本不存在）。</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "The default value is <code>false</code> so that the filter may delay the generation\nof an ETag until the last asynchronously dispatched thread.",
+      "translation": "默认值为 `<code>false</code>`，以便过滤器可以将 ETag 的生成延迟到最后一个异步调度的线程。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the ETag value written to the response should be weak, as per RFC 7232.",
+      "translation": "返回根据 RFC 7232，写入响应的 ETag 值是否应为弱验证。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if eligible for ETag generation, <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示符合生成 ETag 的条件，否则为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>responseStatusCode</code> - the HTTP response status code",
+      "translation": "<code>responseStatusCode</code> - HTTP 响应状态码",
+      "count": 2
+    },
+    {
+      "source": "<code>inputStream</code> - the response body",
+      "translation": "<code>inputStream</code> - 响应正文",
+      "count": 2
+    },
+    {
+      "source": "<code>inputStream</code> - the response body as an InputStream",
+      "translation": "<code>inputStream</code> - 作为 InputStream 的响应正文",
+      "count": 2
+    },
+    {
+      "source": "<code>isWeak</code> - whether the generated ETag should be weak",
+      "translation": "<code>isWeak</code> - 生成的 ETag 是否为弱 ETag",
+      "count": 2
+    },
+    {
+      "source": "Arjen Poutsma, Rossen Stoyanchev, Brian Clozel, Juergen Hoeller",
+      "translation": "Arjen Poutsma，Rossen Stoyanchev，Brian Clozel，Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "the ETag header value",
+      "translation": "ETag 标头值",
+      "count": 2
+    },
+    {
+      "source": "Provides HttpServletRequest and HttpServletResponse arguments instead of the\ndefault ServletRequest and ServletResponse ones.",
+      "translation": "提供 HttpServletRequest 和 HttpServletResponse 参数，而不是默认的 ServletRequest 和 ServletResponse。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Same contract as for <code>doFilter</code>, but guaranteed to be\njust invoked once per request within a single request thread.",
+      "translation": "与<code>doFilter</code>相同的合同，但保证在单个请求线程中每个请求仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "This method can be used to suppress the content caching response wrapper\nof the ShallowEtagHeaderFilter.",
+      "translation": "此方法可用于抑制 ShallowEtagHeaderFilter 的内容缓存响应包装器。",
+      "count": 1
+    },
+    {
+      "source": "Generate the ETag header value from the given response body byte array.",
+      "translation": "生成给定响应体字节数组的 ETag 标头值。",
+      "count": 1
+    },
+    {
+      "source": "Whether an ETag should be calculated for the given request and response\nexchange.",
+      "translation": "是否应为给定的请求和响应交换计算 ETag。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the ETag value written to the response should be weak, as per RFC 7232.",
+      "translation": "设置是否按照 RFC 7232 将弱 ETag 值写入响应。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code>` 在类 `<code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterInternal</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`doFilterInternal` 在类 `<a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a>` 中。",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the HTTP request",
+      "translation": "<code>request</code> - HTTP 请求",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - the HTTP response",
+      "translation": "<code>response</code> - HTTP 响应",
+      "count": 1
+    }
+  ]
+}

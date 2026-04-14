@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-04-14 12:38:36",
+  "updated_at": "2026-04-14 12:38:36",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 35,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9444444444444444,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "Get the adapter for the given reactive type.",
+      "translation": "获取给定反应式类型的适配器。",
+      "count": 3
+    },
+    {
+      "source": "the corresponding adapter, or <code>null</code> if none available",
+      "translation": "对应的适配器，或者如果没有可用则为<code>null</code>",
+      "count": 3
+    },
+    {
+      "source": "By default, depending on classpath availability, adapters are registered for Reactor\n(including <code>CompletableFuture</code> and <code>Flow.Publisher</code> adapters), RxJava 3,\nKotlin Coroutines' <code>Deferred</code> (bridged via Reactor) and SmallRye Mutiny 1.x/2.x.\nIf Reactor is not present, a simple <code>Flow.Publisher</code> bridge will be registered.",
+      "translation": "默认情况下，根据类路径的可用性，会注册以下适配器的支持：Reactor（包括 `<code>CompletableFuture</code>` 和 `<code>Flow.Publisher</code>` 适配器）、RxJava 3、Kotlin Coroutines 的 `<code>Deferred</code>`（通过 Reactor 桥接）以及 SmallRye Mutiny 1.x/2.x。如果不存在 Reactor，将注册一个简单的 `<code>Flow.Publisher</code>` 桥接。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> We highly recommend passing a long-lived, pre-configured\n<code>ReactiveAdapterRegistry</code> instance for customization purposes.\nThis accessor is only meant as a fallback for code paths that want to\nfall back on a default instance if one isn't provided.",
+      "translation": "<b>注意：</b> 我们强烈建议传递一个长生命周期的、预配置的<code>ReactiveAdapterRegistry</code>实例，以便进行自定义。此访问器仅作为回退机制，用于那些希望在未提供实例时回退到默认实例的代码路径。",
+      "count": 2
+    },
+    {
+      "source": "This variant registers the new adapter after existing adapters.\nIt will be matched for the exact reactive type if no earlier adapter was\nregistered for the specific type, and it will be matched for assignability\nin a second pass if no earlier adapter had an assignable type before.",
+      "translation": "此变体在现有适配器之后注册新适配器。如果没有为特定类型注册过更早的适配器，它将针对精确的反应式类型进行匹配；如果在此之前没有更早的适配器具有可赋值类型，它将在第二次遍历中针对可赋值性进行匹配。",
+      "count": 2
+    },
+    {
+      "source": "This variant registers the new adapter first, effectively overriding\nany previously registered adapters for the same reactive type. This allows\nfor overriding existing adapters, in particular default adapters.",
+      "translation": "此变体首先注册新适配器，从而覆盖同一反应式类型之前注册的任意现有适配器。这允许覆盖现有适配器，特别是默认适配器。",
+      "count": 2
+    },
+    {
+      "source": "Note that existing adapters for specific types will still match before\nan assignability match with the new adapter. In order to override all\nexisting matches, a new reactive type adapter needs to be registered\nfor every specific type, not relying on subtype assignability matches.",
+      "translation": "请注意，针对特定类型的现有适配器仍会在与新适配器的可赋值匹配之前进行匹配。若要覆盖所有现有匹配，必须为每个特定类型注册一个新的反应式类型适配器，而不能依赖子类型可赋值匹配。",
+      "count": 2
+    },
+    {
+      "source": "Register a reactive type along with functions to adapt to and from a\nReactive Streams <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a>.",
+      "translation": "注册一个反应式类型，并附带用于适配和从 Reactive Streams <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a> 转换的函数。",
+      "count": 2
+    },
+    {
+      "source": "Create a registry and auto-register default adapters.",
+      "translation": "创建注册表并自动注册默认适配器。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the registry has any adapters.",
+      "translation": "返回注册表是否包含任何适配器。",
+      "count": 2
+    },
+    {
+      "source": "Get the adapter for the given reactive type. Or if a \"source\" object is\nprovided, its actual type is used instead.",
+      "translation": "获取给定反应式类型的适配器。或者，如果提供了“源”对象，则使用其实际类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>reactiveType</code> - the reactive type\n(may be <code>null</code> if a concrete source object is given)",
+      "translation": "<code>reactiveType</code> - 反应式类型\n（如果提供了具体的源对象，则可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>source</code> - an instance of the reactive type\n(i.e. to adapt from; may be <code>null</code> if the reactive type is specified)",
+      "translation": "<code>source</code> - 反应式类型的实例（即用于适配的类型；如果指定了反应式类型，则可能为`null`）",
+      "count": 2
+    },
+    {
+      "source": "the shared <code>ReactiveAdapterRegistry</code> instance",
+      "translation": "共享的<code>ReactiveAdapterRegistry</code> 实例",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev, Sebastien Deleuze, Juergen Hoeller",
+      "translation": "Rossen Stoyanchev，Sebastien Deleuze，Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "<code>BlockHoundIntegration</code> for spring-core classes.",
+      "translation": "用于 spring-core 类的 <code>BlockHoundIntegration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return a shared default <code>ReactiveAdapterRegistry</code> instance,\nlazily building it once needed.",
+      "translation": "返回一个共享的默认<code>ReactiveAdapterRegistry</code>实例，并在需要时懒加载构建。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

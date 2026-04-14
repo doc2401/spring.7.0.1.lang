@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-04-14 15:46:01",
+  "updated_at": "2026-04-14 15:46:01",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 45,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6071428571428572,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "In effect, <code>TcpConnectionHandler</code> and <code>TcpConnection</code> are the\ncontracts that any subclass must adapt to while using <a href=\"StompEncoder.html\" title=\"class in org.springframework.messaging.simp.stomp\"><code>StompEncoder</code></a>\nand <a href=\"StompDecoder.html\" title=\"class in org.springframework.messaging.simp.stomp\"><code>StompDecoder</code></a> to encode and decode STOMP messages.",
+      "translation": "实际上，<code>TcpConnectionHandler</code> 和 <code>TcpConnection</code> 是任何子类在使用 <a href=\"StompEncoder.html\" title=\"class in org.springframework.messaging.simp.stomp\"><code>StompEncoder</code></a> 和 <a href=\"StompDecoder.html\" title=\"class in org.springframework.messaging.simp.stomp\"><code>StompDecoder</code></a> 对 STOMP 消息进行编码和解码时必须适配的接口。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can connect over WebSocket or TCP using any library. When creating\na new connection, a subclass can create an instance of <a href=\"DefaultStompSession.html\" title=\"class in org.springframework.messaging.simp.stomp\"><code>DefaultStompSession</code></a>\nwhich implements <a href=\"../../tcp/TcpConnectionHandler.html\" title=\"interface in org.springframework.messaging.tcp\"><code>TcpConnectionHandler</code></a>\nwhose lifecycle methods the subclass must then invoke.",
+      "translation": "子类可以使用任何库通过 WebSocket 或 TCP 进行连接。在创建新连接时，子类可以创建一个 <a href=\"DefaultStompSession.html\" title=\"class in org.springframework.messaging.simp.stomp\"><code>DefaultStompSession</code></a> 实例，该实例实现了 <a href=\"../../tcp/TcpConnectionHandler.html\" title=\"interface in org.springframework.messaging.tcp\"><code>TcpConnectionHandler</code></a>，子类随后必须调用其生命周期方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns <code>false</code> if <a href=\"#setDefaultHeartbeat(long%5B%5D)\"><code>defaultHeartbeat</code></a>\nis set to \"0,0\", and <code>true</code> otherwise.",
+      "translation": "如果 `<a href=\"#setDefaultHeartbeat(long%5B%5D)\"><code>defaultHeartbeat</code></a>` 设置为\"0,0\"，则返回`false`；否则返回`true`。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> that a heartbeat is sent only in case of\ninactivity, i.e. when no other messages are sent. This can present a\nchallenge when using an external broker since messages with a non-broker\ndestination represent activity but aren't actually forwarded to the broker.\nIn that case you can configure a `TaskScheduler` through the\n<a href=\"../config/StompBrokerRelayRegistration.html\" title=\"class in org.springframework.messaging.simp.config\"><code>StompBrokerRelayRegistration</code></a>\nwhich ensures a heartbeat is forwarded to the broker also when only\nmessages with a non-broker destination are sent.",
+      "translation": "<strong>注意：</strong> 心跳仅在无活动（即未发送其他消息）时发送。在使用外部代理时，这可能会带来挑战，因为发往非代理目的地的消息代表有活动发生，但实际上并未转发给代理。在这种情况下，您可以通过 <a href=\"../config/StompBrokerRelayRegistration.html\" title=\"class in org.springframework.messaging.simp.config\"><code>StompBrokerRelayRegistration</code></a> 配置一个 `TaskScheduler`，以确保即使仅发送发往非代理目的地的消息时，心跳也会被转发给代理。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> Some transports have built-in support to work\nwith heartbeats and therefore do not require a TaskScheduler.\nReceipts however, if needed, do require a TaskScheduler to be configured.",
+      "translation": "<strong>注意：</strong> 某些传输方式内置了对心跳的支持，因此不需要配置 TaskScheduler。然而，如果需要收据，则必须配置 TaskScheduler。",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to \"10000,10000\" but subclasses may override\nthat default and for example set it to \"0,0\" if they require a\nTaskScheduler to be configured first.",
+      "translation": "默认情况下，该值设置为 \"10000,10000\"，但子类可以覆盖此默认值；例如，如果它们需要首先配置 TaskScheduler，则可以将其设置为 \"0,0\"。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../converter/MessageConverter.html\" title=\"interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> to use to convert the payload of incoming\nand outgoing messages to and from <code>byte[]</code> based on object type\nand the \"content-type\" header.",
+      "translation": "设置用于根据对象类型和\"content-type\"标头将传入和传出消息的负载转换为`byte[]` 的<a href=\"../../converter/MessageConverter.html\" title=\"interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured <a href=\"../../converter/MessageConverter.html\" title=\"interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>.",
+      "translation": "返回配置的<a href=\"../../converter/MessageConverter.html\" title=\"interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured default heart-beat value (never <code>null</code>).",
+      "translation": "返回配置的默认心跳值（永远不为<code>null</code>）。",
+      "count": 2
+    },
+    {
+      "source": "Factory method for create and configure a new session.",
+      "translation": "用于创建和配置新会话的工厂方法。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured receipt time limit.",
+      "translation": "返回配置的收据时间限制。",
+      "count": 2
+    },
+    {
+      "source": "The configured TaskScheduler.",
+      "translation": "已配置的 TaskScheduler。",
+      "count": 2
+    },
+    {
+      "source": "Further initialize the StompHeaders, for example setting the heart-beat\nheader if necessary.",
+      "translation": "进一步初始化 StompHeaders，例如在必要时设置心跳（heart-beat）头。",
+      "count": 2
+    },
+    {
+      "source": "<code>heartbeat</code> - the value for the CONNECT \"heart-beat\" header",
+      "translation": "<code>heartbeat</code> - CONNECT 请求中 \"heart-beat\" 头的值",
+      "count": 2
+    },
+    {
+      "source": "<code>connectHeaders</code> - the headers to modify",
+      "translation": "<code>connectHeaders</code> - 要修改的标头",
+      "count": 2
+    },
+    {
+      "source": "the created session",
+      "translation": "创建的会话",
+      "count": 2
+    },
+    {
+      "source": "the modified headers",
+      "translation": "修改后的标头",
+      "count": 2
+    },
+    {
+      "source": "By default, <a href=\"../../converter/SimpleMessageConverter.html\" title=\"class in org.springframework.messaging.converter\"><code>SimpleMessageConverter</code></a> is configured.",
+      "translation": "默认情况下，已配置了<a href=\"../../converter/SimpleMessageConverter.html\" title=\"class in org.springframework.messaging.converter\"><code>SimpleMessageConverter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "By default, this is not set.",
+      "translation": "默认情况下，此项未设置。",
+      "count": 1
+    },
+    {
+      "source": "By default set to 15,000 (15 seconds).",
+      "translation": "默认设置为 15,000（15 秒）。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether heartbeats are enabled.",
+      "translation": "确定是否启用了心跳。",
+      "count": 1
+    },
+    {
+      "source": "Configure the default value for the \"heart-beat\" header of the STOMP\nCONNECT frame.",
+      "translation": "配置 STOMP CONNECT 帧中\"heart-beat\"标头的默认值。",
+      "count": 1
+    },
+    {
+      "source": "Configure the number of milliseconds before a receipt is considered expired.",
+      "translation": "配置收据被视为过期的毫秒数。",
+      "count": 1
+    },
+    {
+      "source": "Configure a scheduler to use for heartbeats and for receipt tracking.",
+      "translation": "配置用于心跳和接收跟踪的调度器。",
+      "count": 1
+    },
+    {
+      "source": "<code>messageConverter</code> - the message converter to use",
+      "translation": "<code>messageConverter</code> - 要使用的消息转换器",
+      "count": 1
+    },
+    {
+      "source": "<code>connectHeaders</code> - headers for the STOMP CONNECT frame",
+      "translation": "<code>connectHeaders</code> - STOMP CONNECT 帧的标头",
+      "count": 1
+    },
+    {
+      "source": "<code>handler</code> - the handler for the STOMP session",
+      "translation": "<code>handler</code> - STOMP 会话的处理程序",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

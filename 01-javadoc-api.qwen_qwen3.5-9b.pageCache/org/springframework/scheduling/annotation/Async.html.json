@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-04-14 16:19:15",
+  "updated_at": "2026-04-14 16:19:15",
+  "stats": {
+    "total_entries": 10,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 16,
+    "entries_with_hits": 10,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6,
+    "usage_percentage": 0.001
+  },
+  "items": [
+    {
+      "source": "A <code>Future</code> handle returned from the proxy will be an actual asynchronous\n<code>(Completable)Future</code> that can be used to track the result of the\nasynchronous method execution. However, since the target method needs to implement\nthe same signature, it will have to return a temporary <code>Future</code> handle that\njust passes a value after computation in the execution thread: typically through\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html#completedFuture(U)\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture.completedFuture(Object)</code></a>. The\nprovided value will be exposed to the caller through the actual asynchronous\n<code>Future</code> handle at runtime.",
+      "translation": "代理返回的 `<code>Future</code>` 句柄将是一个实际的异步 `<code>(Completable)Future</code>`，可用于跟踪异步方法执行的结果。然而，由于目标方法需要实现相同的签名，它必须返回一个临时的 `<code>Future</code>` 句柄，该句柄仅在执行线程中完成计算后传递值：通常通过 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html#completedFuture(U)\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture.completedFuture(Object)</code></a> 实现。提供的值将在运行时通过实际的异步 `<code>Future</code>` 句柄暴露给调用者。",
+      "count": 2
+    },
+    {
+      "source": "In terms of target method signatures, any parameter types are supported.\nHowever, the return type is constrained to either <code>void</code> or\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a>. In the latter case, you may declare the\nmore specific <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> type which allows\nfor richer interaction with the asynchronous task and for immediate composition\nwith further processing steps.",
+      "translation": "在目标方法签名方面，支持任何参数类型。然而，返回类型仅限于 <code>void</code> 或\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html\" title=\"class or interface in java.util.concurrent\"><code>Future</code></a>。在后一种情况下，您可以声明更具体的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>CompletableFuture</code></a> 类型，该类型允许与异步任务进行更丰富的交互，并能够立即与后续处理步骤组合。",
+      "count": 2
+    },
+    {
+      "source": "May be used to determine the target executor to be used when executing\nthe asynchronous operation(s), matching the qualifier value (or the bean\nname) of a specific <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> or\n<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>\nbean definition.",
+      "translation": "可能用于确定执行异步操作时要使用的目标执行器，匹配特定 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> 或 <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a> bean 定义的限定符值（或 bean 名称）。",
+      "count": 2
+    },
+    {
+      "source": "Can also be used at the type level, in which case all the type's methods are\nconsidered as asynchronous. Note, however, that <code>@Async</code> is not supported\non methods declared within a\n<a href=\"../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a> class.",
+      "translation": "也可以在类型级别使用，此时该类型的所有方法均被视为异步。但请注意，<code>@Async</code> 不支持在 <a href=\"../../context/annotation/Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a> 类中声明的方法上使用。",
+      "count": 2
+    },
+    {
+      "source": "When specified in a class-level <code>@Async</code> annotation, indicates that the\ngiven executor should be used for all methods within the class. Method-level use\nof <code>Async#value</code> always overrides any qualifier value configured at\nthe class level.",
+      "translation": "在类级别的 `<code>@Async</code>` 注解中指定时，表示应使用给定的执行器来运行该类中的所有方法。方法级别使用 `<code>Async#value</code>` 始终会覆盖在类级别配置的任意限定符值。",
+      "count": 2
+    },
+    {
+      "source": "The qualifier value will be resolved dynamically if supplied as a SpEL\nexpression (for example, <code>\"#{environment['myExecutor']}\"</code>) or a\nproperty placeholder (for example, <code>\"${my.app.myExecutor}\"</code>).",
+      "translation": "如果提供的是 SpEL 表达式（例如，<code>\"#{environment['myExecutor']}\"</code>）或属性占位符（例如，<code>\"${my.app.myExecutor}\"</code>），限定符值将动态解析。",
+      "count": 2
+    },
+    {
+      "source": "A qualifier value for the specified asynchronous operation(s).",
+      "translation": "指定异步操作的限定符值。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Chris Beams",
+      "translation": "Jürgen Hoeller，Chris Beams",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

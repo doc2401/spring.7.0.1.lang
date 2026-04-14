@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 12:35:21",
+  "updated_at": "2026-04-14 12:35:21",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 29,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9333333333333333,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "as of 6.2.13: not necessary anymore due to <a href=\"#getMostSpecificMethod(java.lang.reflect.Method,java.lang.Class)\"><code>getMostSpecificMethod(Method, Class)</code></a>",
+      "translation": "自 6.2.13 版本起：由于存在<a href=\"#getMostSpecificMethod(java.lang.reflect.Method,java.lang.Class)\"><code>getMostSpecificMethod(Method, Class)</code></a>，已不再必要。",
+      "count": 3
+    },
+    {
+      "source": "Given a synthetic <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html#isBridge()\" title=\"class or interface in java.lang.reflect\"><code>bridge Method</code></a> returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>\nbeing bridged. A bridge method may be created by the compiler when extending a\nparameterized type whose methods have parameterized arguments. During runtime\ninvocation the bridge <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> may be invoked and/or used via reflection.\nWhen attempting to locate annotations on <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Methods</code></a>, it is wise to check\nfor bridge <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Methods</code></a> as appropriate and find the bridged <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>.",
+      "translation": "给定一个合成<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html#isBridge()\" title=\"class or interface in java.lang.reflect\"><code>bridge Method</code></a>，它返回被桥接的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>。当扩展具有参数化参数的泛型类型时，编译器可能会创建桥接方法。在运行时调用期间，可以通过反射调用和/或使用该桥接<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>。在尝试定位<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Methods</code></a>上的注解时，适当检查桥接<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Methods</code></a>并找到被桥接的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>是明智的。",
+      "count": 2
+    },
+    {
+      "source": "It is safe to call this method passing in a non-bridge <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> instance.\nIn such a case, the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> instance is returned directly to the caller.\nCallers are <strong>not</strong> required to check for bridging before calling this method.",
+      "translation": "传入非桥接<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>实例调用此方法是安全的。在这种情况下，提供的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>实例将直接返回给调用者。调用方在调用此方法前<strong>无需</strong>检查桥接情况。",
+      "count": 2
+    },
+    {
+      "source": "This is effectively a combination of <a href=\"../util/ClassUtils.html#getMostSpecificMethod(java.lang.reflect.Method,java.lang.Class)\"><code>ClassUtils.getMostSpecificMethod(Method, Class)</code></a>\nand <a href=\"#findBridgedMethod(java.lang.reflect.Method)\"><code>findBridgedMethod(Method)</code></a>, resolving the original method even if no bridge\nmethod has been generated at the same class hierarchy level (a known difference\nbetween the Eclipse compiler and regular javac).",
+      "translation": "这实际上是 <a href=\"../util/ClassUtils.html#getMostSpecificMethod(java.lang.reflect.Method,java.lang.Class)\"><code>ClassUtils.getMostSpecificMethod(Method, Class)</code></a> 和 <a href=\"#findBridgedMethod(java.lang.reflect.Method)\"><code>findBridgedMethod(Method)</code></a> 的组合，即使在同一类层次结构级别上未生成桥接方法，也会解析原始方法（这是 Eclipse 编译器与常规 javac 之间的一个已知差异）。",
+      "count": 2
+    },
+    {
+      "source": "See <a href=\"https://java.sun.com/docs/books/jls/third_edition/html/expressions.html#15.12.4.5\">\nThe Java Language Specification</a> for more details on the use of bridge methods.",
+      "translation": "有关桥接方法使用的更多详细信息，请参阅<a href=\"https://java.sun.com/docs/books/jls/third_edition/html/expressions.html#15.12.4.5\">Java 语言规范</a>。",
+      "count": 2
+    },
+    {
+      "source": "Compare the signatures of the bridge method and the method which it bridges. If\nthe parameter and return types are the same, it is a 'visibility' bridge method\nintroduced in Java 6 to fix <a href=\"https://bugs.openjdk.org/browse/JDK-6342411\">\nJDK-6342411</a>.",
+      "translation": "比较桥接方法与它所桥接的方法的签名。如果参数和返回类型相同，则这是一个在 Java 6 中引入以修复 <a href=\"https://bugs.openjdk.org/browse/JDK-6342411\">JDK-6342411</a> 的“可见性”桥接方法。",
+      "count": 2
+    },
+    {
+      "source": "<code>bridgeMethod</code> - the method to introspect against its declaring class",
+      "translation": "<code>bridgeMethod</code> - 要对其声明类进行内省的方法",
+      "count": 2
+    },
+    {
+      "source": "<code>bridgeMethod</code> - the method to introspect against the given target class",
+      "translation": "<code>bridgeMethod</code> - 要针对给定目标类进行内省的方法",
+      "count": 2
+    },
+    {
+      "source": "<code>targetClass</code> - the target class to find the most specific method on",
+      "translation": "<code>targetClass</code> - 要查找最具体方法的目标类",
+      "count": 2
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller, Phillip Webb",
+      "translation": "Rob Harrop, Juergen Hoeller, Phillip Webb",
+      "count": 2
+    },
+    {
+      "source": "the original method (either the bridged method or the passed-in method\nif no more specific one could be found)",
+      "translation": "原始方法（如果找不到更具体的方法，则为桥接方法或传入的方法）",
+      "count": 2
+    },
+    {
+      "source": "the most specific method corresponding to the given bridge method\n(can be the original method if no more specific one could be found)",
+      "translation": "与给定桥接方法最具体的对应方法（如果找不到更具体的方法，则为原始方法）",
+      "count": 2
+    },
+    {
+      "source": "whether signatures match as described",
+      "translation": "签名是否如所述匹配",
+      "count": 2
+    },
+    {
+      "source": "Find the local original method for the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>bridge Method</code></a>.",
+      "translation": "查找为提供的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>bridge 方法</code></a>指定的本地原始方法。",
+      "count": 1
+    },
+    {
+      "source": "Determine the most specific method for the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>bridge Method</code></a>\nin the given class hierarchy, even if not available on the local declaring class.",
+      "translation": "确定给定类层次结构中最具体的方法，即使该方法在本地声明类中不可用，也适用于提供的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>bridge Method</code></a>。",
+      "count": 1
+    }
+  ]
+}

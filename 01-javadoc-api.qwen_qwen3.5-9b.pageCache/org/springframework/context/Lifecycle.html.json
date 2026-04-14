@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-04-14 12:03:49",
+  "updated_at": "2026-04-14 12:03:49",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 17,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2142857142857142,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "Note that the present <code>Lifecycle</code> interface is only supported on\n<b>top-level singleton beans</b>. On any other component, the <code>Lifecycle</code>\ninterface will remain undetected and hence ignored. Also, note that the extended\n<a href=\"SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> interface provides sophisticated integration with the\napplication context's startup and shutdown phases.",
+      "translation": "请注意，当前的 <code>Lifecycle</code> 接口仅支持<b>顶层单例 Bean</b>。在其他任何组件上，<code>Lifecycle</code> 接口将保持未被检测到的状态，因此会被忽略。此外，请注意扩展的<a href=\"SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>接口提供了与应用程序上下文启动和关闭阶段的复杂集成。",
+      "count": 2
+    },
+    {
+      "source": "Can be used for direct invocations or for management operations via JMX.\nIn the latter case, the <a href=\"../jmx/export/MBeanExporter.html\" title=\"class in org.springframework.jmx.export\"><code>MBeanExporter</code></a>\nwill typically be defined with an\n<a href=\"../jmx/export/assembler/InterfaceBasedMBeanInfoAssembler.html\" title=\"class in org.springframework.jmx.export.assembler\"><code>InterfaceBasedMBeanInfoAssembler</code></a>,\nrestricting the visibility of activity-controlled components to the Lifecycle\ninterface.",
+      "translation": "可用于直接调用或通过 JMX 执行管理操作。在后一种情况下，通常将 <a href=\"../jmx/export/MBeanExporter.html\" title=\"class in org.springframework.jmx.export\"><code>MBeanExporter</code></a> 与一个 <a href=\"../jmx/export/assembler/InterfaceBasedMBeanInfoAssembler.html\" title=\"class in org.springframework.jmx.export.assembler\"><code>InterfaceBasedMBeanInfoAssembler</code></a> 一起定义，从而将受生命周期控制的组件的活动可见性限制在 Lifecycle 接口。",
+      "count": 2
+    },
+    {
+      "source": "Can be implemented by both components (typically a Spring bean defined in a\nSpring context) and containers  (typically a Spring <a href=\"ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>\nitself). Containers will propagate start/stop signals to all components that\napply within each container, for example, for a stop/restart scenario at runtime.",
+      "translation": "可由两个组件实现（通常是在 Spring 上下文中定义的 Spring Bean），也可由容器实现（通常是 Spring <a href=\"ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> 本身）。容器会将启动/停止信号传播到每个容器中适用的所有组件，例如用于运行时的停止/重启场景。",
+      "count": 2
+    },
+    {
+      "source": "In the case of a container, this will return <code>true</code> only if <i>all</i>\ncomponents that apply are currently running.",
+      "translation": "对于容器而言，仅当所有适用的组件当前都在运行时，此方法才返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Note that this stop notification is not guaranteed to come before destruction:\nOn regular shutdown, <code>Lifecycle</code> beans will first receive a stop notification\nbefore the general destruction callbacks are being propagated; however, on hot\nrefresh during a context's lifetime or on aborted refresh attempts, a given bean's\ndestroy method will be called without any consideration of stop signals upfront.",
+      "translation": "请注意，此停止通知并不保证在销毁之前发出：\n在常规关闭过程中，<code>Lifecycle</code> 圈会先接收停止通知，然后再传播通用的销毁回调；然而，在上下文生命周期期间的热刷新或中止的刷新尝试中，给定 bean 的销毁方法将在不考虑任何预先停止信号的情况下被调用。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is already running.",
+      "translation": "如果组件已经在运行，则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate a hard start signal to all\ncomponents that apply, even to non-auto-startup components.",
+      "translation": "对于容器而言，这将向所有适用的组件传播硬启动信号，即使包括非自动启动的组件。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is not running (not started yet).",
+      "translation": "如果组件尚未运行（尚未启动），则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate the stop signal to all components\nthat apply.",
+      "translation": "对于容器，这将向所有适用的组件传播停止信号。",
+      "count": 1
+    },
+    {
+      "source": "Check whether this component is currently running.",
+      "translation": "检查该组件当前是否正在运行。",
+      "count": 1
+    },
+    {
+      "source": "Start this component.",
+      "translation": "启动此组件。",
+      "count": 1
+    },
+    {
+      "source": "Stop this component, typically in a synchronous fashion, such that the component is\nfully stopped upon return of this method.",
+      "translation": "停止此组件，通常以同步方式执行，使得该方法返回时组件已完全停止。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    }
+  ]
+}

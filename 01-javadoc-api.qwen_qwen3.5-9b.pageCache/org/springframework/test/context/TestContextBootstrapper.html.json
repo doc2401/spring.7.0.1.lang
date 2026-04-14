@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-04-14 16:39:48",
+  "updated_at": "2026-04-14 16:39:48",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 57,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0357142857142856,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "Build the <a href=\"TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a> for the <a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a>\nassociated with this bootstrapper.",
+      "translation": "为与此引导器关联的<code>BootstrapContext</code><a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\">接口</a>构建<code>TestContext</code><a href=\"TestContext.html\" title=\"interface in org.springframework.test.context\">接口</a>。",
+      "count": 3
+    },
+    {
+      "source": "Get the <a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a> associated with this bootstrapper.",
+      "translation": "获取与此引导器关联的<code>BootstrapContext</code><a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\">接口</a>。",
+      "count": 3
+    },
+    {
+      "source": "Set the <a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a> to be used by this bootstrapper.",
+      "translation": "将 `<a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a>` 设置为此引导器所用。",
+      "count": 3
+    },
+    {
+      "source": "If a bootstrapper is not explicitly configured via <code>@BootstrapWith</code>,\neither the <a href=\"support/DefaultTestContextBootstrapper.html\" title=\"class in org.springframework.test.context.support\"><code>DefaultTestContextBootstrapper</code></a> or the\n<a href=\"web/WebTestContextBootstrapper.html\" title=\"class in org.springframework.test.context.web\"><code>WebTestContextBootstrapper</code></a> will be used, depending on the presence of\n<a href=\"web/WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a>.",
+      "translation": "如果未通过 `<code>@BootstrapWith</code>` 显式配置引导器，则会根据是否存在 `<a href=\"web/WebAppConfiguration.html\" title=\"annotation interface in org.springframework.test.context.web\"><code>@WebAppConfiguration</code></a>` 使用 `<a href=\"support/DefaultTestContextBootstrapper.html\" title=\"class in org.springframework.test.context.support\"><code>DefaultTestContextBootstrapper</code></a>` 或 `<a href=\"web/WebTestContextBootstrapper.html\" title=\"class in org.springframework.test.context.web\"><code>WebTestContextBootstrapper</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "If <a href=\"TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a> is not\n<em>present</em> on the test class in the <code>BootstrapContext</code>,\n<em>default</em> listeners should be returned. Furthermore, default\nlisteners must be sorted using\n<a href=\"../../core/annotation/AnnotationAwareOrderComparator.html\" title=\"class in org.springframework.core.annotation\"><code>AnnotationAwareOrderComparator</code></a>.",
+      "translation": "如果 `BootstrapContext` 中的测试类上不存在 `<a href=\"TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a>`，则应返回默认监听器。此外，必须使用 <a href=\"../../core/annotation/AnnotationAwareOrderComparator.html\" title=\"class in org.springframework.core.annotation\"><code>AnnotationAwareOrderComparator</code></a> 对默认监听器进行排序。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"TestExecutionListeners.html#inheritListeners()\"><code>inheritListeners</code></a>\nflag of <a href=\"TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a> must be\ntaken into consideration. Specifically, if the <code>inheritListeners</code>\nflag is set to <code>true</code>, listeners declared for a given test class must\nbe appended to the end of the list of listeners declared in superclasses\nor enclosing classes.",
+      "translation": "`<a href=\"TestExecutionListeners.html#inheritListeners()\"><code>inheritListeners</code></a>` 标志的 `<a href=\"TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a>` 必须予以考虑。具体而言，如果 `<code>inheritListeners</code>` 标志设置为 `<code>true</code>`，则为给定测试类声明的监听器必须附加到父类或封装类中声明的监听器列表末尾。",
+      "count": 2
+    },
+    {
+      "source": "A <code>TestContextBootstrapper</code> is used by the <a href=\"TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a> to\n<a href=\"#getTestExecutionListeners()\">get the TestExecutionListeners</a> for the\ncurrent test and to <a href=\"#buildTestContext()\">build the TestContext</a> that\nit manages.",
+      "translation": "`<code>TestContextBootstrapper</code>` 由 `<a href=\"TestContextManager.html\" title=\"class in org.springframework.test.context\"><code>TestContextManager</code></a>` 使用，用于获取当前测试的 `<a href=\"#getTestExecutionListeners()\">TestExecutionListeners</a>`，并构建其管理的 `<a href=\"#buildTestContext()\">TestContext</a>`。",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: this SPI will likely change in the future in\norder to accommodate new requirements. Implementers are therefore strongly encouraged\n<strong>not</strong> to implement this interface directly but rather to <em>extend</em>\n<a href=\"support/AbstractTestContextBootstrapper.html\" title=\"class in org.springframework.test.context.support\"><code>AbstractTestContextBootstrapper</code></a> or one of its concrete subclasses instead.",
+      "translation": "<strong>警告</strong>：此 SPI 未来可能会发生变化，以满足新的需求。因此，强烈建议实现者不要直接实现此接口，而是扩展<a href=\"support/AbstractTestContextBootstrapper.html\" title=\"class in org.springframework.test.context.support\"><code>AbstractTestContextBootstrapper</code></a>或其具体子类之一。",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations are free to determine what comprises the\nset of default listeners. However, by default, the Spring TestContext\nFramework will use the\n<a href=\"../../core/io/support/SpringFactoriesLoader.html\" title=\"class in org.springframework.core.io.support\"><code>SpringFactoriesLoader</code></a>\nmechanism to look up all <code>TestExecutionListener</code> class names\nconfigured in all <code>META-INF/spring.factories</code> files on the classpath.",
+      "translation": "具体实现可以自由决定默认监听器的组成。然而，默认情况下，Spring TestContext 框架将使用<a href=\"../../core/io/support/SpringFactoriesLoader.html\" title=\"class in org.springframework.core.io.support\"><code>SpringFactoriesLoader</code></a>机制来查找类路径上所有<code>META-INF/spring.factories</code>文件中配置的<code>TestExecutionListener</code>类名。",
+      "count": 2
+    },
+    {
+      "source": "Note that the implementation of <a href=\"#buildTestContext()\"><code>buildTestContext()</code></a> should\ntypically delegate to this method when constructing the <code>TestContext</code>.",
+      "translation": "注意，<a href=\"#buildTestContext()\"><code>buildTestContext()</code></a> 的实现通常应在构建 <code>TestContext</code> 时委托给此方法。",
+      "count": 2
+    },
+    {
+      "source": "A custom bootstrapping strategy can be configured for a test class (or\ntest class hierarchy) via <a href=\"BootstrapWith.html\" title=\"annotation interface in org.springframework.test.context\"><code>@BootstrapWith</code></a>, either\ndirectly or as a meta-annotation.",
+      "translation": "可以通过 `<a href=\"BootstrapWith.html\" title=\"annotation interface in org.springframework.test.context\"><code>@BootstrapWith</code></a>` 为测试类（或测试类层次结构）配置自定义引导策略，该注解可以直接使用，也可以作为元注解使用。",
+      "count": 2
+    },
+    {
+      "source": "When determining which <a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a> to use for a given test\nclass, the following algorithm should be used:",
+      "translation": "在确定给定测试类应使用哪个<a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>时，应采用以下算法：",
+      "count": 2
+    },
+    {
+      "source": "Implementations must take the following into account when building the\nmerged configuration:",
+      "translation": "实现必须在构建合并配置时考虑以下因素：",
+      "count": 2
+    },
+    {
+      "source": "Consult the Javadoc for the aforementioned annotations for details on\nthe required semantics.",
+      "translation": "请查阅上述注解的 Javadoc 以获取有关所需语义的详细信息。",
+      "count": 2
+    },
+    {
+      "source": "Get a list of newly instantiated <a href=\"TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListeners</code></a>\nfor the test class in the <a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a> associated with this bootstrapper.",
+      "translation": "获取此引导程序关联的<a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a>中测试类的新实例化<a href=\"TestExecutionListener.html\" title=\"interface in org.springframework.test.context\"><code>TestExecutionListeners</code></a>列表。",
+      "count": 2
+    },
+    {
+      "source": "Build the <a href=\"MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\">merged context configuration</a>\nfor the test class in the <a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a> associated with this\nbootstrapper.",
+      "translation": "为此引导器关联的 <a href=\"BootstrapContext.html\" title=\"interface in org.springframework.test.context\"><code>BootstrapContext</code></a> 中的测试类构建<a href=\"MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\">合并上下文配置</a>。",
+      "count": 2
+    },
+    {
+      "source": "Context hierarchies declared via <a href=\"ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a>\nand <a href=\"ContextConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextConfiguration</code></a>",
+      "translation": "通过 `<a href=\"ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a>` 和 `<a href=\"ContextConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextConfiguration</code></a>` 声明的上下文层次结构",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\">Context initializers</a> declared via <a href=\"ContextConfiguration.html#initializers()\"><code>ContextConfiguration.initializers()</code></a>",
+      "translation": "<a href=\"../../context/ApplicationContextInitializer.html\" title=\"interface in org.springframework.context\">上下文初始化器</a> 通过 <a href=\"ContextConfiguration.html#initializers()\"><code>ContextConfiguration.initializers()</code></a> 声明",
+      "count": 2
+    },
+    {
+      "source": "If a <code>ContextLoader</code> class has been explicitly declared via\n<a href=\"ContextConfiguration.html#loader()\"><code>ContextConfiguration.loader()</code></a>, use it.",
+      "translation": "如果已通过<a href=\"ContextConfiguration.html#loader()\"><code>ContextConfiguration.loader()</code></a>显式声明了<code>ContextLoader</code>类，则使用它。",
+      "count": 2
+    },
+    {
+      "source": "a new <a href=\"TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a>, never <code>null</code>",
+      "translation": "一个新的<a href=\"TestContext.html\" title=\"interface in org.springframework.test.context\"><code>TestContext</code></a>，永远不为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Active bean definition profiles declared via <a href=\"ActiveProfiles.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ActiveProfiles</code></a>",
+      "translation": "通过 `<a href=\"ActiveProfiles.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ActiveProfiles</code></a>` 声明的主动 Bean 定义配置文件。",
+      "count": 2
+    },
+    {
+      "source": "Test property sources declared via <a href=\"TestPropertySource.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestPropertySource</code></a>",
+      "translation": "通过 `<a href=\"TestPropertySource.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestPropertySource</code></a>` 声明的测试属性源",
+      "count": 2
+    },
+    {
+      "source": "Otherwise, concrete implementations are free to determine which\n<code>ContextLoader</code> class to use as a default.",
+      "translation": "否则，具体实现可以自由决定使用哪个 `<code>ContextLoader</code>` 类作为默认值。",
+      "count": 2
+    },
+    {
+      "source": "the merged context configuration, never <code>null</code>",
+      "translation": "合并后的上下文配置，永远不为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "a list of <code>TestExecutionListener</code> instances",
+      "translation": "一个<code>TestExecutionListener</code>实例列表",
+      "count": 2
+    },
+    {
+      "source": "Implementation Notes",
+      "translation": "实现说明",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations must provide a <code>public</code> no-args constructor.",
+      "translation": "具体实现必须提供一个<code>public</code>无参构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    }
+  ]
+}

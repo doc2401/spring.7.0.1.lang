@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-04-14 16:38:18",
+  "updated_at": "2026-04-14 16:38:18",
+  "stats": {
+    "total_entries": 31,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 54,
+    "entries_with_hits": 31,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7419354838709677,
+    "usage_percentage": 0.0031000000000000003
+  },
+  "items": [
+    {
+      "source": "<code>SmartContextLoader</code> does not support deprecated <a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a> methods.",
+      "translation": "<code>SmartContextLoader</code> 不支持已过时的<a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>方法。",
+      "count": 3
+    },
+    {
+      "source": "The <code>SmartContextLoader</code> SPI supersedes the <a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a> SPI\nintroduced in Spring 2.5: a <code>SmartContextLoader</code> can choose to process\nresource locations, component classes, or a combination of both. Furthermore, a\n<code>SmartContextLoader</code> can configure the context that it\n<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\">loads</a> based on any\nproperties available in the provided <a href=\"MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>.\nFor example, active bean definition profiles can be configured for the context\nbased on <a href=\"MergedContextConfiguration.html#getActiveProfiles()\"><code>MergedContextConfiguration.getActiveProfiles()</code></a>.",
+      "translation": "`SmartContextLoader` SPI 取代了 Spring 2.5 中引入的<a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a> SPI：一个<code>SmartContextLoader</code>可以选择处理资源位置、组件类，或两者的组合。此外，一个<code>SmartContextLoader</code>可以根据提供的<a href=\"MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>中可用的任何属性来配置其<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\">加载</a>的上下文。例如，可以根据<a href=\"MergedContextConfiguration.html#getActiveProfiles()\"><code>MergedContextConfiguration.getActiveProfiles()</code></a>为上下文配置活动的 Bean 定义配置文件。",
+      "count": 2
+    },
+    {
+      "source": "Clients of a <code>SmartContextLoader</code> should call\n<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration()</code></a> prior to calling\n<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext()</code></a>. This gives a\n<code>SmartContextLoader</code> the opportunity to provide custom support for\nmodifying resource locations or detecting default resource locations or\ndefault configuration classes. The results of\n<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration()</code></a> should be merged for all classes in the\nhierarchy of the root test class and then supplied to\n<a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext()</code></a>.",
+      "translation": "`SmartContextLoader` 的客户端应在调用 <a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext()</code></a> 之前，先调用 <a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration()</code></a>。这为 `SmartContextLoader` 提供了机会，以提供对修改资源位置、检测默认资源位置或默认配置类的自定义支持。<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration()</code></a> 的结果应合并根测试类层次结构中所有类的结果，然后传递给 <a href=\"#loadContext(org.springframework.test.context.MergedContextConfiguration)\"><code>loadContext()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note</b>: a <code>SmartContextLoader</code> must <em>preemptively</em>\nverify that a generated or detected default actually exists before setting\nthe corresponding <code>locations</code> or <code>classes</code> property in the\nsupplied <code>ContextConfigurationAttributes</code>. Consequently, leaving the\n<code>locations</code> or <code>classes</code> property empty signals that this\n<code>SmartContextLoader</code> was not able to generate or detect defaults.",
+      "translation": "<b>注意</b>：<code>SmartContextLoader</code> 必须在设置提供的 <code>ContextConfigurationAttributes</code> 中相应的 <code>locations</code> 或 <code>classes</code> 属性之前，<em>预先</em> 验证生成的或检测到的默认值是否确实存在。因此，将 <code>locations</code> 或 <code>classes</code> 属性留空表示该 <code>SmartContextLoader</code> 无法生成或检测默认值。",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations may choose to <em>modify</em> the <code>locations</code>\nor <code>classes</code> in the supplied <code>ContextConfigurationAttributes</code>,\n<em>generate</em> default configuration locations, or <em>detect</em>\ndefault configuration classes if the supplied values are <code>null</code>\nor empty.",
+      "translation": "具体实现可以选择修改提供的`ContextConfigurationAttributes`中的`locations`或`classes`，<em>生成</em>默认配置位置，或在提供的值为`null`或空时<em>检测</em>默认配置类。",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations should register annotation configuration\nprocessors with bean factories of\n<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>application contexts</code></a> loaded by this\n<code>SmartContextLoader</code>. Beans will therefore automatically be\ncandidates for annotation-based dependency injection using\n<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>,\n<code>@Resource</code>, and\n<code>@Inject</code>. In addition, concrete implementations\nshould perform the following actions.",
+      "translation": "具体实现应注册注解配置处理器，以向由本 <code>SmartContextLoader</code> 加载的<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>application contexts</code></a>的 bean 工厂注册。因此，bean 将自动成为基于注解的依赖注入（使用<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>、<code>@Resource</code>和<code>@Inject</code>）的候选者。此外，具体实现还应执行以下操作。",
+      "count": 2
+    },
+    {
+      "source": "See the Javadoc for <a href=\"ContextConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextConfiguration</code></a>\nfor a definition of <em>component classes</em>.",
+      "translation": "请参阅<a href=\"ContextConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@ContextConfiguration</code></a>的 Javadoc，以了解<em>组件类</em>的定义。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.0, any exception thrown while attempting to\nload an <code>ApplicationContext</code> should be wrapped in a\n<a href=\"ContextLoadException.html\" title=\"class in org.springframework.test.context\"><code>ContextLoadException</code></a>. Concrete implementations should therefore\ncontain a try-catch block similar to the following.",
+      "translation": "自 Spring Framework 6.0 起，在尝试加载 <code>ApplicationContext</code> 时抛出的任何异常都应被包装在<a href=\"ContextLoadException.html\" title=\"class in org.springframework.test.context\"><code>ContextLoadException</code></a>中。因此，具体实现应包含如下所示的 try-catch 块。",
+      "count": 2
+    },
+    {
+      "source": "NOTE: As of Spring Framework 6.0, <code>SmartContextLoader</code> no longer\nsupports methods defined in the <code>ContextLoader</code> SPI.",
+      "translation": "注意：自 Spring Framework 6.0 起，<code>SmartContextLoader</code> 不再支持在 <code>ContextLoader</code> SPI 中定义的方法。",
+      "count": 2
+    },
+    {
+      "source": "Spring provides the following <code>SmartContextLoader</code> implementations.",
+      "translation": "Spring 提供以下<code>SmartContextLoader</code>实现。",
+      "count": 2
+    },
+    {
+      "source": "Load a new <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> based on the supplied\n<a href=\"MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>, configure the context, and return the\ncontext in a fully <em>refreshed</em> state.",
+      "translation": "加载一个新的基于提供的<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>的<a href=\"MergedContextConfiguration.html\" title=\"class in org.springframework.test.context\"><code>MergedContextConfiguration</code></a>，配置上下文，并返回一个完全<em>刷新</em>状态的上下文。",
+      "count": 2
+    },
+    {
+      "source": "<code>SmartContextLoader</code> does not support deprecated <a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a> methods.\nCall <a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration(ContextConfigurationAttributes)</code></a> instead.",
+      "translation": "<code>SmartContextLoader</code> 不支持已过时的<a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>ContextLoader</code></a>方法。请调用<a href=\"#processContextConfiguration(org.springframework.test.context.ContextConfigurationAttributes)\"><code>processContextConfiguration(ContextConfigurationAttributes)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Process the <a href=\"ContextConfigurationAttributes.html\" title=\"class in org.springframework.test.context\"><code>ContextConfigurationAttributes</code></a> for a given test class.",
+      "translation": "处理给定测试类的<code>ContextConfigurationAttributes</code><a href=\"ContextConfigurationAttributes.html\" title=\"class in org.springframework.test.context\">。</a>",
+      "count": 2
+    },
+    {
+      "source": "Add test <a href=\"../../core/env/PropertySource.html\" title=\"class in org.springframework.core.env\"><code>PropertySources</code></a>\nto the <code>Environment</code> (see\n<a href=\"MergedContextConfiguration.html#getPropertySourceLocations()\"><code>MergedContextConfiguration.getPropertySourceLocations()</code></a>,\n<a href=\"MergedContextConfiguration.html#getPropertySourceProperties()\"><code>MergedContextConfiguration.getPropertySourceProperties()</code></a>, and\n<a href=\"support/TestPropertySourceUtils.html\" title=\"class in org.springframework.test.context.support\"><code>TestPropertySourceUtils</code></a>).",
+      "translation": "添加测试 <a href=\"../../core/env/PropertySource.html\" title=\"class in org.springframework.core.env\"><code>PropertySources</code></a> 到 <code>Environment</code>（参见\n<a href=\"MergedContextConfiguration.html#getPropertySourceLocations()\"><code>MergedContextConfiguration.getPropertySourceLocations()</code></a>，\n<a href=\"MergedContextConfiguration.html#getPropertySourceProperties()\"><code>MergedContextConfiguration.getPropertySourceProperties()</code></a>，以及\n<a href=\"support/TestPropertySourceUtils.html\" title=\"class in org.springframework.test.context.support\"><code>TestPropertySourceUtils</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Set the active bean definition profiles in the context's\n<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> (see\n<a href=\"MergedContextConfiguration.html#getActiveProfiles()\"><code>MergedContextConfiguration.getActiveProfiles()</code></a>).",
+      "translation": "在上下文的 <a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> 中设置活动的 Bean 定义配置文件（参见 <a href=\"MergedContextConfiguration.html#getActiveProfiles()\"><code>MergedContextConfiguration.getActiveProfiles()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ContextLoader.html#processLocations(java.lang.Class,java.lang.String...)\">processLocations</a></code> in interface <code><a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>",
+      "translation": "`<code><a href=\"ContextLoader.html#processLocations(java.lang.Class,java.lang.String...)\">processLocations</a></code>` 接口 `<code><a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ContextLoader.html#loadContext(java.lang.String...)\">loadContext</a></code> in interface <code><a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>",
+      "translation": "`<code><a href=\"ContextLoader.html#loadContext(java.lang.String...)\">loadContext</a></code>` 接口 `<code><a href=\"ContextLoader.html\" title=\"interface in org.springframework.test.context\">ContextLoader</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "Set the parent <code>ApplicationContext</code> if appropriate (see\n<a href=\"MergedContextConfiguration.html#getParent()\"><code>MergedContextConfiguration.getParent()</code></a>).",
+      "translation": "如果适用，请设置父级 `<code>ApplicationContext</code>`（参见<a href=\"MergedContextConfiguration.html#getParent()\"><code>MergedContextConfiguration.getParent()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Register a JVM shutdown hook for the <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>. Unless\nthe context gets closed early, all context instances will be automatically\nclosed on JVM shutdown. This allows for freeing of external resources held\nby beans within the context — for example, temporary files.",
+      "translation": "为 `<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>` 注册一个 JVM 关闭钩子。除非上下文被提前关闭，否则所有上下文实例将在 JVM 关闭时自动关闭。这可以释放由上下文中 bean 持有的外部资源——例如临时文件。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ContextLoadException.html\" title=\"class in org.springframework.test.context\">ContextLoadException</a></code> - if context loading failed",
+      "translation": "<code><a href=\"ContextLoadException.html\" title=\"class in org.springframework.test.context\">ContextLoadException</a></code> - 如果上下文加载失败",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - in this implementation",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code>` - 在此实现中",
+      "count": 2
+    },
+    {
+      "source": "a new application context",
+      "translation": "一个新的应用程序上下文",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations must provide a <code>public</code> no-args constructor.",
+      "translation": "具体实现必须提供一个<code>public</code>无参构造函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>locations</code> - the unmodified locations to use for loading the\napplication context (can be <code>null</code> or empty)",
+      "translation": "<code>locations</code> - 用于加载应用程序上下文的未修改位置（可以为 <code>null</code> 或为空）",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if context loading failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 如果上下文加载失败",
+      "count": 1
+    },
+    {
+      "source": "<code>configAttributes</code> - the context configuration attributes to process",
+      "translation": "<code>configAttributes</code> - 要处理的上下文配置属性",
+      "count": 1
+    },
+    {
+      "source": "<code>mergedConfig</code> - the merged context configuration to use to load the\napplication context",
+      "translation": "<code>mergedConfig</code> - 用于加载应用上下文的合并上下文配置",
+      "count": 1
+    },
+    {
+      "source": "<code>clazz</code> - the class with which the locations are associated: used to\ndetermine how to process the supplied locations",
+      "translation": "<code>clazz</code> - 与这些位置关联的类：用于确定如何处理提供的这些位置。",
+      "count": 1
+    },
+    {
+      "source": "<code>locations</code> - the resource locations to use to load the application context",
+      "translation": "<code>locations</code> - 用于加载应用程序上下文的资源位置",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "an array of application context resource locations",
+      "translation": "应用程序上下文资源位置的数组",
+      "count": 1
+    }
+  ]
+}

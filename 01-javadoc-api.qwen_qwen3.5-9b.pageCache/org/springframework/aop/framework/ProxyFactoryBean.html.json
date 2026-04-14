@@ -1,0 +1,306 @@
+{
+  "created_at": "2026-04-14 10:25:35",
+  "updated_at": "2026-04-14 10:25:35",
+  "stats": {
+    "total_entries": 58,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 79,
+    "entries_with_hits": 58,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3620689655172413,
+    "usage_percentage": 0.0058
+  },
+  "items": [
+    {
+      "source": "<a href=\"../../../aopalliance/intercept/MethodInterceptor.html\" title=\"interface in org.aopalliance.intercept\"><code>MethodInterceptors</code></a> and\n<a href=\"../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisors</code></a> are identified by a list of bean\nnames in the current bean factory, specified through the \"interceptorNames\" property.\nThe last entry in the list can be the name of a target bean or a\n<a href=\"../TargetSource.html\" title=\"interface in org.springframework.aop\"><code>TargetSource</code></a>; however, it is normally preferable\nto use the \"targetName\"/\"target\"/\"targetSource\" properties instead.",
+      "translation": "<a href=\"../../../aopalliance/intercept/MethodInterceptor.html\" title=\"interface in org.aopalliance.intercept\"><code>MethodInterceptors</code></a> 和 <a href=\"../Advisor.html\" title=\"interface in org.springframework.aop\"><code>Advisors</code></a> 通过当前 Bean 工厂中的 Bean 名称列表进行标识，该列表由 \"interceptorNames\" 属性指定。列表中的最后一个条目可以是目标 Bean 的名称或一个 <a href=\"../TargetSource.html\" title=\"interface in org.springframework.aop\"><code>TargetSource</code></a>；然而，通常更推荐使用 \"targetName\"/\"target\"/\"targetSource\" 属性。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: Specifying a target bean as final name in the \"interceptorNames\"\nlist is deprecated and will be removed in a future Spring version.</b>\nUse the <a href=\"#setTargetName(java.lang.String)\"><code>\"targetName\"</code></a> property instead.",
+      "translation": "<b>注意：在 \"interceptorNames\" 列表中指定目标 bean 的最终名称已弃用，将在未来的 Spring 版本中移除。</b>请使用 <a href=\"#setTargetName(java.lang.String)\"><code>\"targetName\"</code></a> 属性代替。",
+      "count": 2
+    },
+    {
+      "source": "Global interceptors and advisors can be added at the factory level. The specified\nones are expanded in an interceptor list where an \"xxx*\" entry is included in the\nlist, matching the given prefix with the bean names — for example, \"global*\"\nwould match both \"globalBean1\" and \"globalBean2\"; whereas, \"*\" would match all\ndefined interceptors. The matching interceptors get applied according to their\nreturned order value, if they implement the <a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>\ninterface.",
+      "translation": "全局拦截器和顾问可以在工厂级别添加。指定的那些会在拦截器列表中展开，如果列表中包含 \"xxx*\" 条目，则会与 bean 名称匹配给定的前缀——例如，\"global*\" 将匹配 \"globalBean1\" 和 \"globalBean2\"；而 \"*\" 将匹配所有定义的拦截器。匹配的拦截器将根据其返回的顺序值应用（如果它们实现了 <a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> 接口）。",
+      "count": 2
+    },
+    {
+      "source": "It's possible to cast a proxy obtained from this factory to <a href=\"Advised.html\" title=\"interface in org.springframework.aop.framework\"><code>Advised</code></a>,\nor to obtain the ProxyFactoryBean reference and programmatically manipulate it.\nThis won't work for existing prototype references, which are independent. However,\nit will work for prototypes subsequently obtained from the factory. Changes to\ninterception will work immediately on singletons (including existing references).\nHowever, to change interfaces or a target it's necessary to obtain a new instance\nfrom the factory. This means that singleton instances obtained from the factory\ndo not have the same object identity. However, they do have the same interceptors\nand target, and changing any reference will change all objects.",
+      "translation": "可以将从此工厂获取的代理强制转换为 <a href=\"Advised.html\" title=\"interface in org.springframework.aop.framework\"><code>Advised</code></a>，或者获取 ProxyFactoryBean 引用并对其进行程序化操作。这不适用于现有的原型引用，因为它们相互独立。但是，对于随后从工厂获取的原型，此方法有效。对拦截器的更改会立即在单例（包括现有引用）上生效。然而，若要更改接口或目标，则必须从工厂获取新实例。这意味着从工厂获取的单例实例不具有相同的对象身份。但是，它们具有相同的拦截器和目标，更改任何引用都会更改所有对象。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation uses a <code>getProxy</code> call with\nthe factory's bean class loader. Can be overridden to specify a\ncustom class loader.",
+      "translation": "默认实现使用工厂的类加载器调用 `<code>getProxy</code>`。可以重写该方法以指定自定义类加载器。",
+      "count": 2
+    },
+    {
+      "source": "Creates a JDK proxy when proxy interfaces are given, and a CGLIB proxy for the\nactual target class if not. Note that the latter will only work if the target class\ndoes not have final methods, as a dynamic subclass will be created at runtime.",
+      "translation": "当给定代理接口时，会创建 JDK 代理；否则，将为实际的目标类创建 CGLIB 代理。请注意，后者仅在目标类不包含 final 方法时才有效，因为运行时将创建一个动态子类。",
+      "count": 2
+    },
+    {
+      "source": "This is essentially equivalent to the \"setInterfaces\" method,\nbut mirrors TransactionProxyFactoryBean's \"setProxyInterfaces\".",
+      "translation": "这本质上与\"setInterfaces\"方法等效，但镜像了 TransactionProxyFactoryBean 的\"setProxyInterfaces\"。",
+      "count": 2
+    },
+    {
+      "source": "The referenced beans should be of type Interceptor, Advisor or Advice\nThe last entry in the list can be the name of any bean in the factory.\nIf it's neither an Advice nor an Advisor, a new SingletonTargetSource\nis added to wrap it. Such a target bean cannot be used if the \"target\"\nor \"targetSource\" or \"targetName\" property is set, in which case the\n\"interceptorNames\" array must contain only Advice/Advisor bean names.",
+      "translation": "引用的 Bean 应为 Interceptor、Advisor 或 Advice 类型。列表中的最后一个条目可以是工厂中任意 Bean 的名称。如果它既不是 Advice 也不是 Advisor，则会添加一个新的 SingletonTargetSource 来包装它。如果设置了\"target\"、\"targetSource\"或\"targetName\"属性，则不能使用此类目标 Bean；在这种情况下，\"interceptorNames\"数组必须仅包含 Advice/Advisor Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "You can also specify a target object or a TargetSource object\ndirectly, via the \"target\"/\"targetSource\" property, respectively.",
+      "translation": "您也可以通过各自的 \"target\"/\"targetSource\" 属性直接指定目标对象或 TargetSource 对象。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\". Turn this flag off to create a CGLIB\nproxy for the full target class if no interfaces specified.",
+      "translation": "默认值为\"true\"。关闭此标志可为未指定接口的完整目标类创建 CGLIB 代理。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"ProxyConfig.html#setFrozen(boolean)\">ProxyConfig</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"ProxyConfig.html#setFrozen(boolean)\">ProxyConfig</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return a proxy. Invoked when clients obtain beans from this factory bean.\nCreate an instance of the AOP proxy to be returned by this factory.\nThe instance will be cached for a singleton, and create on each call to\n<code>getObject()</code> for a proxy.",
+      "translation": "返回代理。当客户端从此工厂 Bean 获取 Bean 时调用。\n创建此工厂要返回的 AOP 代理实例。\n对于单例，该实例将被缓存；对于 `getObject()` 调用的每个请求，将创建一个代理。",
+      "count": 2
+    },
+    {
+      "source": "This suffix in a value in an interceptor list indicates to expand globals.",
+      "translation": "拦截器列表中的值后缀指示展开全局变量。",
+      "count": 2
+    },
+    {
+      "source": "Blow away and recache singleton on an advice change.",
+      "translation": "在建议变更时清除并重新缓存单例。",
+      "count": 2
+    },
+    {
+      "source": "Set the value of the singleton property. Governs whether this factory\nshould always return the same proxy instance (which implies the same target)\nor whether it should return a new prototype instance, which implies that\nthe target and interceptors may be new instances also, if they are obtained\nfrom prototype bean definitions. This allows for fine control of\nindependence/uniqueness in the object graph.",
+      "translation": "设置单例属性的值。控制此工厂是否应始终返回相同的代理实例（这意味着相同的目标），还是返回一个新的原型实例，这意味着如果它们是从原型 Bean 定义中获取的，则目标和拦截器也可能是新实例。这允许对对象图中的独立性/唯一性进行精细控制。",
+      "count": 2
+    },
+    {
+      "source": "Return the type of the proxy. Will check the singleton instance if\nalready created, else fall back to the proxy interface (in case of just\na single one), the target bean type, or the TargetSource's target class.",
+      "translation": "返回代理的类型。如果已创建单例实例，则进行检查；否则回退到代理接口（如果是单个的话）、目标 Bean 类型或 TargetSource 的目标类。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ProxyConfig.html#setFrozen(boolean)\">setFrozen</a></code> in class <code><a href=\"ProxyConfig.html\" title=\"class in org.springframework.aop.framework\">ProxyConfig</a></code>",
+      "translation": "`<code><a href=\"ProxyConfig.html#setFrozen(boolean)\">setFrozen</a></code>` 在类 `<code><a href=\"ProxyConfig.html\" title=\"class in org.springframework.aop.framework\">ProxyConfig</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ProxyCreatorSupport.html#adviceChanged()\">adviceChanged</a></code> in class <code><a href=\"ProxyCreatorSupport.html\" title=\"class in org.springframework.aop.framework\">ProxyCreatorSupport</a></code>",
+      "translation": "`<code><a href=\"ProxyCreatorSupport.html#adviceChanged()\">adviceChanged</a></code>` 在类 `<code><a href=\"ProxyCreatorSupport.html\" title=\"class in org.springframework.aop.framework\">ProxyCreatorSupport</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>aopProxy</code> - the prepared AopProxy instance to get the proxy from",
+      "translation": "<aopProxy> - 用于获取代理的已准备 AopProxy 实例",
+      "count": 2
+    },
+    {
+      "source": "a fresh AOP proxy reflecting the current state of this factory",
+      "translation": "一个反映该工厂当前状态的新鲜 AOP 代理。",
+      "count": 2
+    },
+    {
+      "source": "the proxy object to expose",
+      "translation": "要暴露的代理对象",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b> 此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口可以通过其<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a>方法明确指示独立实例。未实现此扩展接口的普通<a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>实现，如果<code>isSingleton()</code>实现返回 <code>false</code>，则假定其始终返回独立实例。",
+      "count": 1
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "When a config is frozen, no advice changes can be made. This is\nuseful for optimization, and useful when we don't want callers to\nbe able to manipulate configuration after casting to Advised.",
+      "translation": "当配置被冻结时，无法进行任何建议（advice）更改。这对于优化很有用，并且在我们不希望调用者在转换为 Advised 后操纵配置时也很有用。",
+      "count": 1
+    },
+    {
+      "source": "Default is the bean ClassLoader, i.e. the ClassLoader used by the\ncontaining BeanFactory for loading all bean classes. This can be\noverridden here for specific proxies.",
+      "translation": "默认值为 Bean ClassLoader，即包含该 BeanFactory 用于加载所有 Bean 类的 ClassLoader。此处可针对特定代理进行覆盖。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Return a proxy.",
+      "translation": "返回代理。",
+      "count": 1
+    },
+    {
+      "source": "Return the type of the proxy.",
+      "translation": "返回代理的类型。",
+      "count": 1
+    },
+    {
+      "source": "Return the proxy object to expose.",
+      "translation": "返回要公开的代理对象。",
+      "count": 1
+    },
+    {
+      "source": "Specify the AdvisorAdapterRegistry to use.",
+      "translation": "指定要使用的 AdvisorAdapterRegistry。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to autodetect proxy interfaces if none specified.",
+      "translation": "设置是否在没有指定代理接口时自动检测代理接口。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Set whether this config should be frozen.",
+      "translation": "设置是否冻结此配置。",
+      "count": 1
+    },
+    {
+      "source": "Set the list of Advice/Advisor bean names.",
+      "translation": "设置 Advice/Advisor 豆名称列表。",
+      "count": 1
+    },
+    {
+      "source": "Set the ClassLoader to generate the proxy class in.",
+      "translation": "将 ClassLoader 设置为生成代理类的类加载器。",
+      "count": 1
+    },
+    {
+      "source": "Set the names of the interfaces we're proxying.",
+      "translation": "设置我们要代理的接口的名称。",
+      "count": 1
+    },
+    {
+      "source": "Set the value of the singleton property.",
+      "translation": "设置单例属性的值。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the target bean.",
+      "translation": "设置目标 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Specify the AdvisorAdapterRegistry to use.\nDefault is the global AdvisorAdapterRegistry.",
+      "translation": "指定要使用的 AdvisorAdapterRegistry。默认值为全局 AdvisorAdapterRegistry。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> 接口 <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller",
+      "translation": "Rod Johnson，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

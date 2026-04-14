@@ -1,0 +1,341 @@
+{
+  "created_at": "2026-04-14 16:24:51",
+  "updated_at": "2026-04-14 16:24:51",
+  "stats": {
+    "total_entries": 65,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 93,
+    "entries_with_hits": 65,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4307692307692308,
+    "usage_percentage": 0.0065
+  },
+  "items": [
+    {
+      "source": "The default configuration is a core pool size of 1, with unlimited max pool size\nand unlimited queue capacity. This is roughly equivalent to\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newSingleThreadExecutor()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newSingleThreadExecutor()</code></a>, sharing a single\nthread for all tasks. Setting <a href=\"#setQueueCapacity(int)\"><code>\"queueCapacity\"</code></a> to 0 mimics\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newCachedThreadPool()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newCachedThreadPool()</code></a>, with immediate scaling\nof threads in the pool to a potentially very high number. Consider also setting a\n<a href=\"#setMaxPoolSize(int)\"><code>\"maxPoolSize\"</code></a> at that point, as well as possibly a higher\n<a href=\"#setCorePoolSize(int)\"><code>\"corePoolSize\"</code></a> (see also the\n<a href=\"#setAllowCoreThreadTimeOut(boolean)\"><code>\"allowCoreThreadTimeOut\"</code></a> mode of scaling).",
+      "translation": "默认配置的核心线程池大小为 1，最大线程池大小和队列容量均为无限。这大致相当于\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newSingleThreadExecutor()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newSingleThreadExecutor()</code></a>，即所有任务共享单个线程。将 <a href=\"#setQueueCapacity(int)\"><code>\"queueCapacity\"</code></a> 设置为 0 可模拟\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html#newCachedThreadPool()\" title=\"class or interface in java.util.concurrent\"><code>Executors.newCachedThreadPool()</code></a>，线程池中的线程会立即扩展至可能非常高的数量。在此情况下，还应考虑设置 <a href=\"#setMaxPoolSize(int)\"><code>\"maxPoolSize\"</code></a>，以及可能需要更高的 <a href=\"#setCorePoolSize(int)\"><code>\"corePoolSize\"</code></a>（另请参阅\n<a href=\"#setAllowCoreThreadTimeOut(boolean)\"><code>\"allowCoreThreadTimeOut\"</code></a> 扩展模式）。",
+      "count": 2
+    },
+    {
+      "source": "For an alternative, you may set up a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a> instance directly\nusing constructor injection, or use a factory method definition that points to the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html\" title=\"class or interface in java.util.concurrent\"><code>Executors</code></a> class.\n<b>This is strongly recommended in particular for common <code>@Bean</code> methods in\nconfiguration classes, where this <code>FactoryBean</code> variant would force you to\nreturn the <code>FactoryBean</code> type instead of the actual <code>Executor</code> type.</b>",
+      "translation": "作为替代方案，您可以直接使用构造函数注入设置一个<code>ThreadPoolExecutor</code>实例，或使用指向<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html\" title=\"class or interface in java.util.concurrent\"><code>Executors</code></a>类的工厂方法定义。\n<b>对于配置类中常见的<code>@Bean</code>方法，特别强烈推荐使用此方法，因为这种<code>FactoryBean</code>变体将迫使您返回<code>FactoryBean</code>类型，而不是实际的<code>Executor</code>类型。</b>",
+      "count": 2
+    },
+    {
+      "source": "Called from <a href=\"ExecutorConfigurationSupport.html#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>ExecutorConfigurationSupport.onApplicationEvent(ContextClosedEvent)</code></a> if no\nindications for a late shutdown have been determined, that is, if the\n<a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose</code></a> and\n<a href=\"ExecutorConfigurationSupport.html#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a>\nflags have not been set.",
+      "translation": "由 <a href=\"ExecutorConfigurationSupport.html#onApplicationEvent(org.springframework.context.event.ContextClosedEvent)\"><code>ExecutorConfigurationSupport.onApplicationEvent(ContextClosedEvent)</code></a> 调用，前提是未检测到延迟关闭的迹象，即如果尚未设置 <a href=\"ExecutorConfigurationSupport.html#setAcceptTasksAfterContextClose(boolean)\"><code>\"acceptTasksAfterContextClose\"</code></a> 和 <a href=\"ExecutorConfigurationSupport.html#setWaitForTasksToCompleteOnShutdown(boolean)\"><code>\"waitForTasksToCompleteOnShutdown\"</code></a> 标志。",
+      "count": 2
+    },
+    {
+      "source": "If you need a timing-based <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>\ninstead, consider <a href=\"ScheduledExecutorFactoryBean.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorFactoryBean</code></a>.",
+      "translation": "如果您需要基于定时器的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>，请考虑使用<a href=\"ScheduledExecutorFactoryBean.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorFactoryBean</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation creates a standard <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>.\nCan be overridden to provide custom <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a> subclasses.",
+      "translation": "默认实现会创建一个标准的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>。可以重写它以提供自定义的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a>子类。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\".\nSee <a href=\"ThreadPoolTaskExecutor.html#setStrictEarlyShutdown(boolean)\"><code>ThreadPoolTaskExecutor.setStrictEarlyShutdown(boolean)</code></a> for details.",
+      "translation": "默认值为\"false\"。有关详细信息，请参阅<a href=\"ThreadPoolTaskExecutor.html#setStrictEarlyShutdown(boolean)\"><code>ThreadPoolTaskExecutor.setStrictEarlyShutdown(boolean)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation calls <a href=\"ExecutorConfigurationSupport.html#initiateShutdown()\"><code>ExecutorConfigurationSupport.initiateShutdown()</code></a>.",
+      "translation": "默认实现调用<a href=\"ExecutorConfigurationSupport.html#initiateShutdown()\"><code>ExecutorConfigurationSupport.initiateShutdown()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Any positive value will lead to a LinkedBlockingQueue instance;\nany other value will lead to a SynchronousQueue instance.",
+      "translation": "任何正值将导致创建一个 LinkedBlockingQueue 实例；任何其他值将导致创建一个 SynchronousQueue 实例。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\".",
+      "translation": "默认值为\"false\"。",
+      "count": 2
+    },
+    {
+      "source": "A LinkedBlockingQueue instance will be created for a positive\ncapacity value; a SynchronousQueue else.",
+      "translation": "对于正容量值，将创建一个 LinkedBlockingQueue 实例；否则，将创建一个 SynchronousQueue。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">ExecutorConfigurationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">ExecutorConfigurationSupport</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Early shutdown signal: do not trigger further tasks, let existing tasks complete\nbefore hitting the actual destruction step in the <a href=\"ExecutorConfigurationSupport.html#shutdown()\"><code>ExecutorConfigurationSupport.shutdown()</code></a> method.",
+      "translation": "早期关闭信号：不要触发更多任务，让现有任务在到达<a href=\"ExecutorConfigurationSupport.html#shutdown()\"><code>ExecutorConfigurationSupport.shutdown()</code></a>方法中的实际销毁步骤之前完成。",
+      "count": 2
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's maximum pool size.\nDefault is <code>Integer.MAX_VALUE</code>.",
+      "translation": "设置 ThreadPoolExecutor 的最大池大小。默认值为<code>Integer.MAX_VALUE</code>。",
+      "count": 2
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's core pool size.\nDefault is 1.",
+      "translation": "设置 ThreadPoolExecutor 的核心线程池大小。默认值为 1。",
+      "count": 2
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's keep-alive seconds.\nDefault is 60.",
+      "translation": "设置 ThreadPoolExecutor 的存活时间（秒）。默认值为 60。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\">ExecutorService</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\">ExecutorService</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\">ExecutorService</a>&gt;</code>",
+      "translation": "`<a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\">ExecutorService</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\">ExecutorService</a>&gt;</code>",
+      "translation": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> 接口 <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\">ExecutorService</a>&gt;</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">initiateEarlyShutdown</a></code> in class <code><a href=\"ExecutorConfigurationSupport.html\" title=\"class in org.springframework.scheduling.concurrent\">ExecutorConfigurationSupport</a></code>",
+      "translation": "`ExecutorConfigurationSupport` 类中的 `<a href=\"ExecutorConfigurationSupport.html#initiateEarlyShutdown()\">initiateEarlyShutdown</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code>threadFactory</code> - the ThreadFactory to use",
+      "translation": "<code>threadFactory</code> - 要使用的 ThreadFactory",
+      "count": 2
+    },
+    {
+      "source": "<code>rejectedExecutionHandler</code> - the RejectedExecutionHandler to use",
+      "translation": "<code>rejectedExecutionHandler</code> - 要使用的 RejectedExecutionHandler",
+      "count": 2
+    },
+    {
+      "source": "<code>corePoolSize</code> - the specified core pool size",
+      "translation": "<code>corePoolSize</code> - 指定的核心线程池大小",
+      "count": 2
+    },
+    {
+      "source": "<code>maxPoolSize</code> - the specified maximum pool size",
+      "translation": "<code>maxPoolSize</code> - 指定的最大连接池大小",
+      "count": 2
+    },
+    {
+      "source": "<code>keepAliveSeconds</code> - the specified keep-alive time in seconds",
+      "translation": "<code>keepAliveSeconds</code> - 指定的保持连接时间（秒）",
+      "count": 2
+    },
+    {
+      "source": "<code>queue</code> - the BlockingQueue to use",
+      "translation": "<code>queue</code> - 要使用的阻塞队列",
+      "count": 2
+    },
+    {
+      "source": "<code>queueCapacity</code> - the specified queue capacity",
+      "translation": "<code>queueCapacity</code> - 指定的队列容量",
+      "count": 2
+    },
+    {
+      "source": "a new ThreadPoolExecutor instance",
+      "translation": "一个新的 ThreadPoolExecutor 实例",
+      "count": 2
+    },
+    {
+      "source": "the BlockingQueue instance",
+      "translation": "BlockingQueue 实例",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b> 此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口可以通过其<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a>方法明确指示独立实例。未实现此扩展接口的普通<a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>实现，如果<code>isSingleton()</code>实现返回 <code>false</code>，则假定其始终返回独立实例。",
+      "count": 1
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "As with a <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，这支持单例和原型两种设计模式。",
+      "count": 1
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的 <a href=\"../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "Default is \"false\", exposing the raw executor as bean reference.\nSwitch this flag to \"true\" to strictly prevent clients from\nmodifying the executor's configuration.",
+      "translation": "默认为 \"false\"，将原始执行器暴露为 Bean 引用。将此标志切换为 \"true\" 以严格防止客户端修改执行器的配置。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">ExecutorConfigurationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">ExecutorConfigurationSupport</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> instance.\nCalled by <code>afterPropertiesSet</code>.",
+      "translation": "创建 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>` 实例。\n由 `<code>afterPropertiesSet</code>` 调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create a new instance of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a> or a subclass thereof.",
+      "translation": "创建 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ThreadPoolExecutor</code></a> 或其子类的新实例。",
+      "count": 1
+    },
+    {
+      "source": "Create the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> instance.",
+      "translation": "创建目标 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Create the BlockingQueue to use for the ThreadPoolExecutor.",
+      "translation": "创建用于 ThreadPoolExecutor 的 BlockingQueue。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to allow core threads to time out.",
+      "translation": "指定是否允许核心线程超时。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's core pool size.",
+      "translation": "设置 ThreadPoolExecutor 的核心池大小。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether this FactoryBean should expose an unconfigurable\ndecorator for the created executor.",
+      "translation": "指定此 FactoryBean 是否应为创建的 Executor 暴露一个不可配置的装饰器。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's keep-alive seconds.",
+      "translation": "设置 ThreadPoolExecutor 的存活时间（秒）。",
+      "count": 1
+    },
+    {
+      "source": "Set the ThreadPoolExecutor's maximum pool size.",
+      "translation": "设置 ThreadPoolExecutor 的最大池大小。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to start all core threads, causing them to idly wait for work.",
+      "translation": "指定是否启动所有核心线程，使它们空闲等待工作。",
+      "count": 1
+    },
+    {
+      "source": "Set the capacity for the ThreadPoolExecutor's BlockingQueue.",
+      "translation": "设置 ThreadPoolExecutor 的 BlockingQueue 容量。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to initiate an early shutdown signal on context close,\ndisposing all idle threads and rejecting further task submissions.",
+      "translation": "指定是否在上下文关闭时启动提前关闭信号，从而终止所有空闲线程并拒绝进一步的任务提交。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">initializeExecutor</a></code> in class <code><a href=\"ExecutorConfigurationSupport.html\" title=\"class in org.springframework.scheduling.concurrent\">ExecutorConfigurationSupport</a></code>",
+      "translation": "`ExecutorConfigurationSupport` 类中的<a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">initializeExecutor</a>",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "a new ExecutorService instance",
+      "translation": "一个新的 ExecutorService 实例",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    }
+  ]
+}

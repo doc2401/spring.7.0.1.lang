@@ -1,0 +1,471 @@
+{
+  "created_at": "2026-04-14 16:07:03",
+  "updated_at": "2026-04-14 16:07:03",
+  "stats": {
+    "total_entries": 91,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 149,
+    "entries_with_hits": 91,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6373626373626373,
+    "usage_percentage": 0.0091
+  },
+  "items": [
+    {
+      "source": "In case of no unit name specified in the annotation, the specified value\nfor the <a href=\"#setDefaultPersistenceUnitName(java.lang.String)\"><code>default persistence unit</code></a>\nwill be taken (by default, the value mapped to the empty String),\nor simply the single persistence unit if there is only one.",
+      "translation": "如果注解中未指定单元名称，将采用为 <a href=\"#setDefaultPersistenceUnitName(java.lang.String)\"><code>默认持久化单元</code></a> 指定的值（默认情况下为空字符串映射的值），或者如果只有一个持久化单元时，则直接使用该单元。",
+      "count": 4
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean",
+      "translation": "<code>beanName</code> - 豆子的名称",
+      "count": 4
+    },
+    {
+      "source": "This is mainly intended for use in a Jakarta EE environment, with all\nlookup driven by the standard JPA annotations, and all EntityManager\nreferences obtained from JNDI. No separate EntityManagerFactory bean\ndefinitions are necessary in such a scenario, and all EntityManager\nhandling is done by the Jakarta EE server itself.",
+      "translation": "这主要用于 Jakarta EE 环境，所有查找均由标准的 JPA 注解驱动，所有 EntityManager 引用均从 JNDI 获取。在此类场景中，无需单独的 EntityManagerFactory Bean 定义，所有 EntityManager 处理均由 Jakarta EE 服务器本身完成。",
+      "count": 3
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - if there is no such EntityManagerFactory in the context",
+      "translation": "<code><a href=\"../../../beans/factory/NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - 如果上下文中不存在该 EntityManagerFactory",
+      "count": 3
+    },
+    {
+      "source": "<code>unitName</code> - the name of the persistence unit",
+      "translation": "<code>unitName</code> - 持久化单元的名称",
+      "count": 3
+    },
+    {
+      "source": "This is mainly intended for lookups in the application context,\nindicating the target persistence unit name (typically matching\nthe bean name), but also applies to lookups in the\n<a href=\"#setPersistenceUnits(java.util.Map)\"><code>\"persistenceUnits\"</code></a> /\n<a href=\"#setPersistenceContexts(java.util.Map)\"><code>\"persistenceContexts\"</code></a> /\n<a href=\"#setExtendedPersistenceContexts(java.util.Map)\"><code>\"extendedPersistenceContexts\"</code></a> map,\navoiding the need for duplicated mappings for the empty String there.",
+      "translation": "这主要用于在应用程序上下文中查找，指示目标持久化单元名称（通常与 bean 名称匹配），同时也适用于在<a href=\"#setPersistenceUnits(java.util.Map)\"><code>\"persistenceUnits\"</code></a> /<a href=\"#setPersistenceContexts(java.util.Map)\"><code>\"persistenceContexts\"</code></a> /<a href=\"#setExtendedPersistenceContexts(java.util.Map)\"><code>\"extendedPersistenceContexts\"</code></a> 映射中查找，从而避免在那里为空字符串创建重复的映射。",
+      "count": 2
+    },
+    {
+      "source": "If you prefer the Jakarta EE server's own EntityManager handling, specify entries\nin this post-processor's <a href=\"#setPersistenceContexts(java.util.Map)\"><code>\"persistenceContexts\" map</code></a>\n(or <a href=\"#setExtendedPersistenceContexts(java.util.Map)\"><code>\"extendedPersistenceContexts\" map</code></a>,\ntypically with matching <code>persistence-context-ref</code> entries in the\nJakarta EE deployment descriptor. For example:",
+      "translation": "如果您更喜欢 Jakarta EE 服务器自身的 EntityManager 处理，请在此后处理器的<a href=\"#setPersistenceContexts(java.util.Map)\"><code>\"persistenceContexts\" map</code></a>（或<a href=\"#setExtendedPersistenceContexts(java.util.Map)\"><code>\"extendedPersistenceContexts\" map</code></a>）中指定条目，通常与 Jakarta EE 部署描述符中的匹配<code>persistence-context-ref</code>条目对应。例如：",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: In general, do not inject EXTENDED EntityManagers into STATELESS beans,\ni.e. do not use <code>@PersistenceContext</code> with type <code>EXTENDED</code> in\nSpring beans defined with scope 'singleton' (Spring's default scope).</b>\nExtended EntityManagers are <i>not</i> thread-safe, hence they must not be used\nin concurrently accessed beans (which Spring-managed singletons usually are).",
+      "translation": "<b>注意：通常不要将扩展的实体管理器注入到无状态 Bean 中，即不要在定义为 'singleton'（Spring 默认作用域）的 Spring Bean 中使用类型为 <code>EXTENDED</code> 的 <code>@PersistenceContext</code>。</b>\n扩展的实体管理器不是线程安全的，因此不能在并发访问的 Bean 中使用（Spring 管理的单例通常属于此类）。",
+      "count": 2
+    },
+    {
+      "source": "This post-processor will inject sub-interfaces of <code>EntityManagerFactory</code>\nand <code>EntityManager</code> if the annotated fields or methods are declared as such.\nThe actual type will be verified early, with the exception of a shared (\"transactional\")\n<code>EntityManager</code> reference, where type mismatches might be detected as late\nas on the first actual invocation.",
+      "translation": "此后置处理器将在注解的字段或方法声明为相应类型时，注入 <code>EntityManagerFactory</code> 和 <code>EntityManager</code> 的子接口。实际类型将尽早进行验证，但共享（“事务性”）<code>EntityManager</code> 引用除外，其类型不匹配可能直到第一次实际调用时才被发现。",
+      "count": 2
+    },
+    {
+      "source": "This post-processor can either obtain EntityManagerFactory beans defined\nin the Spring application context (the default), or obtain EntityManagerFactory\nreferences from JNDI (\"persistence unit references\"). In the bean case,\nthe persistence unit name will be matched against the actual deployed unit,\nwith the bean name used as fallback unit name if no deployed name found.\nTypically, Spring's <a href=\"../LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a>\nwill be used for setting up such EntityManagerFactory beans. Alternatively,\nsuch beans may also be obtained from JNDI, for example, using the <code>jee:jndi-lookup</code>\nXML configuration element (with the bean name matching the requested unit name).\nIn both cases, the post-processor definition will look as simple as this:",
+      "translation": "此后置处理器可以获取 Spring 应用程序上下文中定义的 EntityManagerFactory Bean（默认方式），或者从 JNDI 获取 EntityManagerFactory 引用（“持久化单元引用”）。在 Bean 的情况下，持久化单元名称将与实际部署的单元进行匹配；如果未找到已部署的名称，则使用 Bean 名称作为后备单元名称。通常，将使用 Spring 的 <a href=\"../LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a> 来设置此类 EntityManagerFactory Bean。或者，也可以从 JNDI 获取此类 Bean，例如使用 <code>jee:jndi-lookup</code> XML 配置元素（其中 Bean 名称与请求的单元名称匹配）。在这两种情况下，后置处理器的定义都将非常简单，如下所示：",
+      "count": 2
+    },
+    {
+      "source": "Note: In the present implementation, PersistenceAnnotationBeanPostProcessor\nonly supports <code>@PersistenceUnit</code> and <code>@PersistenceContext</code>\nwith the \"unitName\" attribute, or no attribute at all (for the default unit).\nIf those annotations are present with the \"name\" attribute at the class level,\nthey will simply be ignored, since those only serve as deployment hint\n(as per the Jakarta EE specification).",
+      "translation": "注意：在当前实现中，PersistenceAnnotationBeanPostProcessor 仅支持带有 \"unitName\" 属性或没有任何属性（用于默认单元）的 `<code>@PersistenceUnit</code>` 和 `<code>@PersistenceContext</code>`。如果在类级别存在带有 \"name\" 属性的这些注解，它们将被直接忽略，因为这些注解仅作为部署提示（根据 Jakarta EE 规范）。",
+      "count": 2
+    },
+    {
+      "source": "JNDI names specified here should refer to <code>persistence-context-ref</code>\nentries in the Jakarta EE deployment descriptors, matching the target persistence unit\nand being set up with persistence context type <code>Transaction</code>.",
+      "translation": "此处指定的 JNDI 名称应引用 Jakarta EE 部署描述符中的 `<persistence-context-ref>` 条目，该条目需匹配目标持久化单元，并配置为持久化上下文类型 `<code>Transaction</code>`。",
+      "count": 2
+    },
+    {
+      "source": "JNDI names specified here should refer to <code>persistence-context-ref</code>\nentries in the Jakarta EE deployment descriptors, matching the target persistence unit\nand being set up with persistence context type <code>Extended</code>.",
+      "translation": "此处指定的 JNDI 名称应引用 Jakarta EE 部署描述符中的 `<persistence-context-ref>` 条目，该条目需匹配目标持久化单元，并配置为持久化上下文类型 `<code>Extended</code>`。",
+      "count": 2
+    },
+    {
+      "source": "JNDI names specified here should refer to <code>persistence-unit-ref</code>\nentries in the Jakarta EE deployment descriptor, matching the target persistence unit.",
+      "translation": "此处指定的 JNDI 名称应引用与目标持久化单元匹配的 Jakarta EE 部署描述符中的 `<persistence-unit-ref>` 条目。",
+      "count": 2
+    },
+    {
+      "source": "If no corresponding \"persistenceContexts\"/\"extendedPersistenceContexts\"\nare specified, <code>@PersistenceContext</code> will be resolved to\nEntityManagers built on top of the EntityManagerFactory defined here.\nNote that those will be Spring-managed EntityManagers, which implement\ntransaction synchronization based on Spring's facilities.\nIf you prefer the Jakarta EE server's own EntityManager handling,\nspecify corresponding \"persistenceContexts\"/\"extendedPersistenceContexts\".",
+      "translation": "如果未指定相应的 \"persistenceContexts\"/\"extendedPersistenceContexts\"，<code>@PersistenceContext</code> 将解析为基于此处定义的 EntityManagerFactory 构建的 EntityManagers。请注意，这些是由 Spring 管理的 EntityManagers，它们实现了基于 Spring 设施的事务同步。如果您更喜欢 Jakarta EE 服务器自身的 EntityManager 处理，请指定相应的 \"persistenceContexts\"/\"extendedPersistenceContexts\"。",
+      "count": 2
+    },
+    {
+      "source": "Note: A default PersistenceAnnotationBeanPostProcessor will be registered\nby the \"context:annotation-config\" and \"context:component-scan\" XML tags.\nRemove or turn off the default annotation configuration there if you intend\nto specify a custom PersistenceAnnotationBeanPostProcessor bean definition.",
+      "translation": "注意：默认情况下，`context:annotation-config` 和 `context:component-scan` XML 标签将注册一个默认的 `PersistenceAnnotationBeanPostProcessor`。如果您打算指定自定义的 `PersistenceAnnotationBeanPostProcessor` Bean 定义，请移除或禁用那里的默认注解配置。",
+      "count": 2
+    },
+    {
+      "source": "This is mainly intended for use in a Jakarta EE environment, with all lookup\ndriven by the standard JPA annotations, and all EntityManagerFactory\nreferences obtained from JNDI. No separate EntityManagerFactory bean\ndefinitions are necessary in such a scenario.",
+      "translation": "这主要用于 Jakarta EE 环境，所有查找均由标准的 JPA 注解驱动，且所有 `EntityManagerFactory` 引用均从 JNDI 获取。在此类场景中，无需单独的 `EntityManagerFactory` Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "Default is to check for a single EntityManagerFactory bean\nin the Spring application context, if any. If there are multiple\nsuch factories, either specify this default persistence unit name\nor explicitly refer to named persistence units in your annotations.",
+      "translation": "默认情况下，会检查 Spring 应用程序上下文中是否存在单个 `EntityManagerFactory` Bean。如果存在多个此类工厂，请指定此默认持久化单元名称，或在注解中显式引用命名持久化单元。",
+      "count": 2
+    },
+    {
+      "source": "Called for EntityManagerFactory and EntityManager lookup\nwhen JNDI names are mapped for specific persistence units.",
+      "translation": "当 JNDI 名称针对特定持久化单元进行映射时，会调用 EntityManagerFactory 和 EntityManager 的查找。",
+      "count": 2
+    },
+    {
+      "source": "Process the given <a href=\"../../../beans/factory/support/RegisteredBean.html\" title=\"class in org.springframework.beans.factory.support\"><code>RegisteredBean</code></a> instance ahead-of-time and\nreturn a contribution or <code>null</code>.",
+      "translation": "提前处理给定的<a href=\"../../../beans/factory/support/RegisteredBean.html\" title=\"class in org.springframework.beans.factory.support\"><code>RegisteredBean</code></a>实例，并返回贡献对象或<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">MergedBeanDefinitionPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">BeanRegistrationAotProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">BeanRegistrationAotProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#postProcessBeforeDestruction(java.lang.Object,java.lang.String)\">DestructionAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#postProcessBeforeDestruction(java.lang.Object,java.lang.String)\">DestructionAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#requiresDestruction(java.lang.Object)\">DestructionAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#requiresDestruction(java.lang.Object)\">DestructionAwareBeanPostProcessor</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Find a single default EntityManagerFactory in the Spring application context.",
+      "translation": "在 Spring 应用程序上下文中查找单个默认的 EntityManagerFactory。",
+      "count": 2
+    },
+    {
+      "source": "Find an EntityManagerFactory with the given name in the current Spring\napplication context, falling back to a single default EntityManagerFactory\n(if any) in case of no unit name specified.",
+      "translation": "在当前 Spring 应用程序上下文中查找给定名称的 EntityManagerFactory，如果未指定单元名称，则回退到单个默认 EntityManagerFactory（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Find an EntityManagerFactory with the given name in the current\nSpring application context.",
+      "translation": "在当前 Spring 应用程序上下文中查找具有给定名称的 EntityManagerFactory。",
+      "count": 2
+    },
+    {
+      "source": "Return a specified persistence context for the given unit name, as defined\nthrough the \"persistenceContexts\" (or \"extendedPersistenceContexts\") map.",
+      "translation": "返回通过\"persistenceContexts\"（或\"extendedPersistenceContexts\"）映射定义的给定单元名称的指定持久化上下文。",
+      "count": 2
+    },
+    {
+      "source": "Return a specified persistence unit for the given unit name,\nas defined through the \"persistenceUnits\" map.",
+      "translation": "返回通过\"persistenceUnits\"映射定义的给定单元名称的指定持久化单元。",
+      "count": 2
+    },
+    {
+      "source": "Post-process the given merged bean definition for the specified bean.",
+      "translation": "对指定 Bean 的合并后的 Bean 定义进行后处理。",
+      "count": 2
+    },
+    {
+      "source": "Set the JNDI environment to use for JNDI lookups.",
+      "translation": "设置用于 JNDI 查找的 JNDI 环境。",
+      "count": 2
+    },
+    {
+      "source": "Set the JNDI template to use for JNDI lookups.",
+      "translation": "设置用于 JNDI 查找的 JNDI 模板。",
+      "count": 2
+    },
+    {
+      "source": "Set whether the lookup occurs in a Jakarta EE container, i.e. if the prefix\n\"java:comp/env/\" needs to be added if the JNDI name doesn't already\ncontain it. PersistenceAnnotationBeanPostProcessor's default is \"true\".",
+      "translation": "设置是否在 Jakarta EE 容器中执行查找，即如果 JNDI 名称中尚未包含该前缀，是否需要添加\"java:comp/env/\"。PersistenceAnnotationBeanPostProcessor 的默认值为\"true\"。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">postProcessMergedBeanDefinition</a></code> in interface <code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#postProcessMergedBeanDefinition(org.springframework.beans.factory.support.RootBeanDefinition,java.lang.Class,java.lang.String)\">postProcessMergedBeanDefinition</a></code>` 接口 `<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">resetBeanDefinition</a></code> in interface <code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html#resetBeanDefinition(java.lang.String)\">resetBeanDefinition</a></code>` 接口 `<code><a href=\"../../../beans/factory/support/MergedBeanDefinitionPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\">MergedBeanDefinitionPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">processAheadOfTime</a></code> in interface <code><a href=\"../../../beans/factory/aot/BeanRegistrationAotProcessor.html\" title=\"interface in org.springframework.beans.factory.aot\">BeanRegistrationAotProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\">processAheadOfTime</a></code>` 接口 `<code><a href=\"../../../beans/factory/aot/BeanRegistrationAotProcessor.html\" title=\"interface in org.springframework.beans.factory.aot\">BeanRegistrationAotProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#postProcessBeforeDestruction(java.lang.Object,java.lang.String)\">postProcessBeforeDestruction</a></code> in interface <code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">DestructionAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#postProcessBeforeDestruction(java.lang.Object,java.lang.String)\">postProcessBeforeDestruction</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">DestructionAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#requiresDestruction(java.lang.Object)\">requiresDestruction</a></code> in interface <code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">DestructionAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#requiresDestruction(java.lang.Object)\">requiresDestruction</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">DestructionAwareBeanPostProcessor</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if <a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#postProcessBeforeDestruction(java.lang.Object,java.lang.String)\"><code>DestructionAwareBeanPostProcessor.postProcessBeforeDestruction(Object, String)</code></a> is supposed to\nbe called for this bean instance eventually, or <code>false</code> if not needed",
+      "translation": "如果最终需要调用<a href=\"../../../beans/factory/config/DestructionAwareBeanPostProcessor.html#postProcessBeforeDestruction(java.lang.Object,java.lang.String)\"><code>DestructionAwareBeanPostProcessor.postProcessBeforeDestruction(Object, String)</code></a>，则返回<code>true</code>；否则返回<code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>unitName</code> - the name of the persistence unit (may be <code>null</code> or empty)",
+      "translation": "<code>unitName</code> - 持久化单元的名称（可为 <code>null</code> 或空）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - if there is no single EntityManagerFactory in the context",
+      "translation": "<code><a href=\"../../../beans/factory/NoSuchBeanDefinitionException.html\" title=\"class in org.springframework.beans.factory\">NoSuchBeanDefinitionException</a></code> - 如果上下文中没有唯一的 EntityManagerFactory",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if the JNDI lookup failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 如果 JNDI 查找失败",
+      "count": 2
+    },
+    {
+      "source": "the corresponding EntityManagerFactory,\nor <code>null</code> if none found",
+      "translation": "对应的 EntityManagerFactory，\n如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>extended</code> - whether to obtain an extended persistence context",
+      "translation": "<code>extended</code> - 是否获取扩展持久化上下文",
+      "count": 2
+    },
+    {
+      "source": "the corresponding EntityManager, or <code>null</code> if none found",
+      "translation": "对应的 EntityManager，或者如果未找到则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>requestingBeanName</code> - the name of the requesting bean",
+      "translation": "<code>requestingBeanName</code> - 请求 Bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>unitName</code> - the name of the persistence unit (never empty)",
+      "translation": "<code>unitName</code> - 持久化单元的名称（永不为空）",
+      "count": 2
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller, Stephane Nicoll, Phillip Webb",
+      "translation": "Rod Johnson、Juergen Hoeller、Stephane Nicoll 和 Phillip Webb",
+      "count": 2
+    },
+    {
+      "source": "the EntityManagerFactory",
+      "translation": "EntityManagerFactory",
+      "count": 2
+    },
+    {
+      "source": "the default EntityManagerFactory",
+      "translation": "默认 EntityManagerFactory",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>true</code>. If a pre-5 implementation\nof <code>DestructionAwareBeanPostProcessor</code> does not provide a concrete\nimplementation of this method, Spring silently assumes <code>true</code> as well.",
+      "translation": "默认实现返回<code>true</code>。如果 5 版本之前的<DestructionAwareBeanPostProcessor>实现未提供此方法的具象实现，Spring 也会静默地假设其为<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "Higher values are interpreted as lower priority. As a consequence,\nthe object with the lowest value has the highest priority (somewhat\nanalogous to Servlet <code>load-on-startup</code> values).",
+      "translation": "较高的值被解释为较低的优先级。因此，具有最低值的对象具有最高的优先级（类似于 Servlet 的 `<code>load-on-startup</code>` 值）。",
+      "count": 1
+    },
+    {
+      "source": "If the given instance isn't relevant to the processor, it should return a\n<code>null</code> contribution.",
+      "translation": "如果给定的实例与处理器不相关，则应返回一个 `<code>null</code>` 贡献。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns the given <code>pvs</code> as-is.",
+      "translation": "默认实现原样返回给定的<code>pvs</code>。",
+      "count": 1
+    },
+    {
+      "source": "Like DisposableBean's <code>destroy</code> and a custom destroy method, this\ncallback will only apply to beans which the container fully manages the\nlifecycle for. This is usually the case for singletons and scoped beans.",
+      "translation": "与 `DisposableBean` 的 `<code>destroy</code>` 方法和自定义销毁方法类似，此回调仅适用于容器完全管理生命周期的 Bean。通常，单例和作用域 Bean 都属于这种情况。",
+      "count": 1
+    },
+    {
+      "source": "Same order values will result in arbitrary sort positions for the\naffected objects.",
+      "translation": "相同的顺序值将导致受影响的对象具有任意的排序位置。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation is empty.",
+      "translation": "默认实现为空。",
+      "count": 1
+    },
+    {
+      "source": "Processors are free to use any techniques they like to analyze the given\ninstance. Most typically use reflection to find fields or methods to use\nin the contribution. Contributions typically generate source code or\nresource files that can be used when the AOT optimized application runs.",
+      "translation": "处理器可以自由使用任何技术来分析给定的实例。大多数情况下，它们使用反射来查找用于贡献的字段或方法。贡献通常会生成源代码或资源文件，这些文件可在 AOT 优化后的应用程序运行时使用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/Ordered.html#getOrder()\">Ordered</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">InstantiationAwareBeanPostProcessor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Specify the default persistence unit name, to be used in case\nof no unit name specified in an <code>@PersistenceUnit</code> /\n<code>@PersistenceContext</code> annotation.",
+      "translation": "指定默认持久化单元名称，以便在 `<code>@PersistenceUnit</code>` / `<code>@PersistenceContext</code>` 注解中未指定单元名称时使用。",
+      "count": 1
+    },
+    {
+      "source": "Specify the <i>extended</i> persistence contexts for EntityManager lookups,\nas a Map from persistence unit name to persistence context JNDI name\n(which needs to resolve to an EntityManager instance).",
+      "translation": "指定用于 EntityManager 查找的<i>扩展</i>持久化上下文，作为从持久化单元名称到持久化上下文 JNDI 名称（需要解析为 EntityManager 实例）的 Map。",
+      "count": 1
+    },
+    {
+      "source": "Specify the <i>transactional</i> persistence contexts for EntityManager lookups,\nas a Map from persistence unit name to persistence context JNDI name\n(which needs to resolve to an EntityManager instance).",
+      "translation": "指定用于 EntityManager 查找的<i>事务性</i>持久化上下文，作为从持久化单元名称到持久化上下文 JNDI 名称（需要解析为 EntityManager 实例）的 Map。",
+      "count": 1
+    },
+    {
+      "source": "Get the order value of this object.",
+      "translation": "获取该对象的订单值。",
+      "count": 1
+    },
+    {
+      "source": "Perform a JNDI lookup for the given resource by name.",
+      "translation": "通过名称执行给定资源的 JNDI 查找。",
+      "count": 1
+    },
+    {
+      "source": "Apply this BeanPostProcessor to the given bean instance before its\ndestruction, for example, invoking custom destruction callbacks.",
+      "translation": "将此 BeanPostProcessor 应用于给定的 Bean 实例，以便在其销毁之前执行操作，例如调用自定义的销毁回调。",
+      "count": 1
+    },
+    {
+      "source": "Post-process the given property values before the factory applies them\nto the given bean.",
+      "translation": "在工厂将属性值应用到给定 Bean 之前，对给定的属性值进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the given bean instance requires destruction by this\npost-processor.",
+      "translation": "确定此后置处理器是否需要销毁给定的 Bean 实例。",
+      "count": 1
+    },
+    {
+      "source": "A notification that the bean definition for the specified name has been reset,\nand that this post-processor should clear any metadata for the affected bean.",
+      "translation": "指定名称的 Bean 定义已被重置的通知，且此后置处理器应清除受影响 Bean 的任何元数据。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Specify the persistence units for EntityManagerFactory lookups,\nas a Map from persistence unit name to persistence unit JNDI name\n(which needs to resolve to an EntityManagerFactory instance).",
+      "translation": "指定 EntityManagerFactory 查找的持久化单元，作为从持久化单元名称到持久化单元 JNDI 名称（需要解析为 EntityManagerFactory 实例）的 Map。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the lookup occurs in a Jakarta EE container, i.e.",
+      "translation": "设置是否在 Jakarta EE 容器中执行查找，即",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code> in interface <code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html#postProcessProperties(org.springframework.beans.PropertyValues,java.lang.Object,java.lang.String)\">postProcessProperties</a></code>` 接口 `<code><a href=\"../../../beans/factory/config/InstantiationAwareBeanPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\">InstantiationAwareBeanPostProcessor</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>pvs</code> - the property values that the factory is about to apply (never <code>null</code>)",
+      "translation": "<code>pvs</code> - 工厂即将应用的属性值（永远不为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code>beanDefinition</code> - the merged bean definition for the bean",
+      "translation": "<code>beanDefinition</code> - 该 Bean 的合并后的 Bean 定义",
+      "count": 1
+    },
+    {
+      "source": "<code>beanType</code> - the actual type of the managed bean instance",
+      "translation": "<code>beanType</code> - 托管 Bean 实例的实际类型",
+      "count": 1
+    },
+    {
+      "source": "<code>registeredBean</code> - the registered bean to process",
+      "translation": "<code>registeredBean</code> - 要处理的已注册 Bean",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance created, but whose properties have not yet been set",
+      "translation": "<code>bean</code> - 已创建但属性尚未设置的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "the actual property values to apply to the given bean (can be the passed-in\nPropertyValues instance), or <code>null</code> to skip property population",
+      "translation": "要应用于给定 Bean 的实际属性值（可以是传入的 `PropertyValues` 实例），或 `<code>null</code>` 以跳过属性填充。",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance to be destroyed",
+      "translation": "<code>bean</code> - 待销毁的 Bean 实例",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - the bean instance to check",
+      "translation": "<code>bean</code> - 要检查的 bean 实例",
+      "count": 1
+    },
+    {
+      "source": "<code>jndiName</code> - the JNDI name to look up",
+      "translation": "<code>jndiName</code> - 要查找的 JNDI 名称",
+      "count": 1
+    },
+    {
+      "source": "<code>requiredType</code> - the required type of the object",
+      "translation": "<code>requiredType</code> - 对象的必需类型",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    },
+    {
+      "source": "the obtained object",
+      "translation": "获取的对象",
+      "count": 1
+    }
+  ]
+}

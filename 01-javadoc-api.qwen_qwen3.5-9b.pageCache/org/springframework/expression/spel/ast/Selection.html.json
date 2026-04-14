@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 13:36:55",
+  "updated_at": "2026-04-14 13:36:55",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 27,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.588235294117647,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Null-safe selection is supported via the <code>'?.?'</code> operator. For example,\n<code>'names?.?[#this.length &gt; 5]'</code> will evaluate to <code>null</code> if <code>names</code>\nis <code>null</code> and will otherwise evaluate to a sequence containing the names\nwhose length is greater than 5. As of Spring Framework 7.0, null-safe selection\nalso applies when performing selection on an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a> target. For example,\nif <code>names</code> is of type <code>Optional&lt;List&lt;String&gt;&gt;</code>, the expression\n<code>'names?.?[#this.length &gt; 5]'</code> will evaluate to <code>null</code> if <code>names</code>\nis <code>null</code> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#isEmpty()\" title=\"class or interface in java.util\"><code>empty</code></a> and will otherwise evaluate\nto a sequence containing the names whose lengths are greater than 5, effectively\n<code>names.get().stream().filter(s -&gt; s.length() &gt; 5).toList()</code>.",
+      "translation": "Null-safe selection 通过 <code>'?.?'</code> 运算符支持。例如，<code>'names?.?[#this.length > 5]'</code> 如果 <code>names</code> 为 <code>null</code> 则求值为 <code>null</code>，否则求值为包含长度大于 5 的姓名的序列。自 Spring Framework 7.0 起，对 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\"><code>Optional</code></a> 目标执行选择时，也适用 null-safe selection。例如，如果 <code>names</code> 的类型为 <code>Optional&lt;List&lt;String&gt;&gt;</code>，表达式 <code>'names?.?[#this.length > 5]'</code> 如果 <code>names</code> 为 <code>null</code> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#isEmpty()\" title=\"class or interface in java.util\"><code>empty</code></a>，则求值为 <code>null</code>；否则求值为包含长度大于 5 的姓名的序列，实际上等同于 <code>names.get().stream().filter(s -> s.length() > 5).toList()</code>。",
+      "count": 2
+    },
+    {
+      "source": "For example, <code>{1,2,3,4,5,6,7,8,9,10}.?[#isEven(#this)]</code> evaluates\nto <code>[2, 4, 6, 8, 10]</code>.",
+      "translation": "例如，<code>{1,2,3,4,5,6,7,8,9,10}.?[#isEven(#this)]</code> 评估结果为 <code>[2, 4, 6, 8, 10]</code>。",
+      "count": 2
+    },
+    {
+      "source": "Basically a subset of the input data is returned based on the evaluation of\nthe expression supplied as selection criteria.",
+      "translation": "基本上，根据作为选择条件的表达式评估结果，返回输入数据的子集。",
+      "count": 2
+    },
+    {
+      "source": "All items (<code>?[]</code>).",
+      "translation": "所有项目（<code>?[]</code>）。",
+      "count": 2
+    },
+    {
+      "source": "The first item (<code>^[]</code>).",
+      "translation": "第一个项目（<code>^[]</code>）。",
+      "count": 2
+    },
+    {
+      "source": "The last item (<code>$[]</code>).",
+      "translation": "最后一个项目（<code>$[]</code>）。",
+      "count": 2
+    },
+    {
+      "source": "Does this node represent a null-safe selection operation?",
+      "translation": "此节点是否代表一个空安全的选择操作？",
+      "count": 2
+    },
+    {
+      "source": "Return the string form of this AST node.",
+      "translation": "返回此 AST 节点的字符串形式。",
+      "count": 2
+    },
+    {
+      "source": "Andy Clement, Mark Fisher, Sam Brannen, Juergen Hoeller",
+      "translation": "Andy Clement，Mark Fisher，Sam Brannen，Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "Null-safe Selection",
+      "translation": "空安全选择",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../SpelNode.html#toStringAST()\">SpelNode</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../SpelNode.html#toStringAST()\">SpelNode</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SpelNodeImpl.html#isNullSafe()\">isNullSafe</a></code> in class <code><a href=\"SpelNodeImpl.html\" title=\"class in org.springframework.expression.spel.ast\">SpelNodeImpl</a></code>",
+      "translation": "`<code><a href=\"SpelNodeImpl.html#isNullSafe()\">isNullSafe</a></code>` 类中的 `<code><a href=\"SpelNodeImpl.html\" title=\"class in org.springframework.expression.spel.ast\">SpelNodeImpl</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SpelNodeImpl.html#getValueInternal(org.springframework.expression.spel.ExpressionState)\">getValueInternal</a></code> in class <code><a href=\"SpelNodeImpl.html\" title=\"class in org.springframework.expression.spel.ast\">SpelNodeImpl</a></code>",
+      "translation": "`<code><a href=\"SpelNodeImpl.html#getValueInternal(org.springframework.expression.spel.ExpressionState)\">getValueInternal</a></code>` 类中的 `<code><a href=\"SpelNodeImpl.html\" title=\"class in org.springframework.expression.spel.ast\">SpelNodeImpl</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SpelNodeImpl.html#getValueRef(org.springframework.expression.spel.ExpressionState)\">getValueRef</a></code> in class <code><a href=\"SpelNodeImpl.html\" title=\"class in org.springframework.expression.spel.ast\">SpelNodeImpl</a></code>",
+      "translation": "`<code><a href=\"SpelNodeImpl.html#getValueRef(org.springframework.expression.spel.ExpressionState)\">getValueRef</a></code>` 在类 `<code><a href=\"SpelNodeImpl.html\" title=\"class in org.springframework.expression.spel.ast\">SpelNodeImpl</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if this node is the target of a null-safe operation",
+      "translation": "<code>true</code> 如果此节点是空安全操作的目标。",
+      "count": 1
+    },
+    {
+      "source": "the string form",
+      "translation": "字符串形式",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

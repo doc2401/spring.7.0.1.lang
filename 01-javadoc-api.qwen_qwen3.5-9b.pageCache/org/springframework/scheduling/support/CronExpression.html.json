@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-04-14 16:29:52",
+  "updated_at": "2026-04-14 16:29:52",
+  "stats": {
+    "total_entries": 48,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 91,
+    "entries_with_hits": 48,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8958333333333333,
+    "usage_percentage": 0.0048000000000000004
+  },
+  "items": [
+    {
+      "source": "<code>CronExpression</code> instances are created through <a href=\"#parse(java.lang.String)\"><code>parse(String)</code></a>;\nthe next match is determined with <a href=\"#next(T)\"><code>next(Temporal)</code></a>.",
+      "translation": "`CronExpression` 实例通过 `<a href=\"#parse(java.lang.String)\"><code>parse(String)</code></a>` 创建；下一个匹配项由 `<a href=\"#next(T)\"><code>next(Temporal)</code></a>` 确定。",
+      "count": 2
+    },
+    {
+      "source": "Supports a Quartz day-of-month/week field with an L/# expression. Follows\ncommon cron conventions in every other respect, including 0-6 for SUN-SAT\n(plus 7 for SUN as well). Note that Quartz deviates from the day-of-week\nconvention in cron through 1-7 for SUN-SAT whereas Spring strictly follows\ncron even in combination with the optional Quartz-specific L/# expressions.",
+      "translation": "支持带有 L/# 表达式的 Quartz 日/周字段。除遵循常见的 cron 约定外（包括 0-6 表示周日到周六，外加 7 也表示周日），请注意 Quartz 在日/周字段的约定上与 cron 不同，采用 1-7 表示周日到周六；而 Spring 即使在结合可选的 Quartz 专用 L/# 表达式时，也严格遵循 cron 约定。",
+      "count": 2
+    },
+    {
+      "source": "The following rules apply:",
+      "translation": "适用以下规则：",
+      "count": 2
+    },
+    {
+      "source": "Example expressions:",
+      "translation": "示例表达式：",
+      "count": 2
+    },
+    {
+      "source": "The following macros are also supported.",
+      "translation": "还支持以下宏。",
+      "count": 2
+    },
+    {
+      "source": "Calculate the next <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html\" title=\"class or interface in java.time.temporal\"><code>Temporal</code></a> that matches this expression.",
+      "translation": "计算下一个与此表达式匹配的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/temporal/Temporal.html\" title=\"class or interface in java.time.temporal\"><code>Temporal</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return the expression string used to create this <code>CronExpression</code>.",
+      "translation": "返回用于创建此 `<code>CronExpression</code>` 的表达式字符串。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the given string represents a valid cron expression.",
+      "translation": "判断给定字符串是否为有效的 Cron 表达式。",
+      "count": 2
+    },
+    {
+      "source": "The \"day of month\" and \"day of week\" fields can contain a\n<code>L</code>-character, which stands for \"last\", and has a different meaning\nin each field:\n<ul>\n<li>\nIn the \"day of month\" field, <code>L</code> stands for \"the last day of the\nmonth\". If followed by an negative offset (i.e. <code>L-n</code>), it means\n\"<code>n</code>th-to-last day of the month\". If followed by <code>W</code> (i.e.\n<code>LW</code>), it means \"the last weekday of the month\".\n</li>\n<li>\nIn the \"day of week\" field, <code>dL</code> or <code>DDDL</code> stands for\n\"the last day of week <code>d</code> (or <code>DDD</code>) in the month\".\n</li>\n</ul>",
+      "translation": "“月中的日期”和“星期几”字段可以包含一个 `<code>L</code>` 字符，该字符代表“最后”，但在每个字段中具有不同的含义：\n<ul>\n<li>\n在“月中的日期”字段中，<code>L</code> 代表“当月的最后一天”。如果后面跟有负偏移量（即 <code>L-n</code>），则表示“当月倒数第 <code>n</code> 天”。如果后面跟有 <code>W</code>（即 <code>LW</code>），则表示“当月的最后一个工作日”。\n</li>\n<li>\n在“星期几”字段中，<code>dL</code> 或 <code>DDDL</code> 代表“当月最后一周的 <code>d</code>（或 <code>DDD</code>）天”。\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "The \"day of month\" field can be <code>nW</code>, which stands for \"the nearest\nweekday to day of the month <code>n</code>\".\nIf <code>n</code> falls on Saturday, this yields the Friday before it.\nIf <code>n</code> falls on Sunday, this yields the Monday after,\nwhich also happens if <code>n</code> is <code>1</code> and falls on a Saturday\n(i.e. <code>1W</code> stands for \"the first weekday of the month\").",
+      "translation": "\"日\"字段可以是 `<code>nW</code>`，表示“最接近月中的第 `<code>n`</code> 天的工作日”。如果 `<code>n</code>` 是星期六，则指其前一个星期五。如果 `<code>n</code>` 是星期日，则指其后一个星期一；这也适用于当 `<code>n</code>` 为 `1` 且是星期六的情况（即 `<code>1W</code>` 表示“该月的第一个工作日”）。",
+      "count": 2
+    },
+    {
+      "source": "The \"day of week\" field can be <code>d#n</code> (or <code>DDD#n</code>), which\nstands for \"the <code>n</code>-th day of week <code>d</code> (or <code>DDD</code>) in\nthe month\".",
+      "translation": "\"星期\"字段可以是 `<code>d#n</code>`（或 `<code>DDD#n</code>`），表示“该月的第 `<code>n</code>` 个星期 `<code>d</code>`（或 `<code>DDD</code>`）”。",
+      "count": 2
+    },
+    {
+      "source": "<code>\"@yearly\"</code> (or <code>\"@annually\"</code>) to run un once a year, i.e. <code>\"0 0 0 1 1 *\"</code>",
+      "translation": "`<code>\"@yearly\"</code>`（或 `<code>\"@annually\"</code>`）用于每年运行一次，即 `<code>\"0 0 0 1 1 *\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>\"@daily\"</code> (or <code>\"@midnight\"</code>) to run once a day, i.e. <code>\"0 0 0 * * *\"</code>",
+      "translation": "`\"@daily\"`（或 `\"@midnight\"`）每天运行一次，即 `\"0 0 0 * * *\"`。",
+      "count": 2
+    },
+    {
+      "source": "A field may be an asterisk (<code>*</code>), which always stands for\n\"first-last\". For the \"day of the month\" or \"day of the week\" fields, a\nquestion mark (<code>?</code>) may be used instead of an asterisk.",
+      "translation": "字段可以是星号（<code>*</code>），始终代表“首尾”。对于“月份中的日期”或“星期中的日期”字段，可以使用问号（<code>?</code>）代替星号。",
+      "count": 2
+    },
+    {
+      "source": "Following a range (or <code>*</code>) with <code>/n</code> specifies\nthe interval of the number's value through the range.",
+      "translation": "跟随范围（或 `<code>*</code>`）的 `<code>/n</code>` 指定了该范围内数值值的间隔。",
+      "count": 2
+    },
+    {
+      "source": "<code>\"@monthly\"</code> to run once a month, i.e. <code>\"0 0 0 1 * *\"</code>",
+      "translation": "`\"@monthly\"` 每月运行一次，即 `<code>\"0 0 0 1 * *\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>\"@weekly\"</code> to run once a week, i.e. <code>\"0 0 0 * * 0\"</code>",
+      "translation": "<code>\"@weekly\"</code> 每周运行一次，即 <code>\"0 0 0 * * 0\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>\"@hourly\"</code> to run once an hour, i.e. <code>\"0 0 * * * *\"</code>",
+      "translation": "`\"@hourly\"` 每小时运行一次，即 `<code>\"0 0 * * * *\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - in the expression does not conform to\nthe cron format",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 表达式不符合 cron 格式",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"next(T)-type-param-T\"><code>T</code> - the type of temporal</span>",
+      "translation": "<span id=\"next(T)-type-param-T\"><code>T</code> - 时间序列的类型</span>",
+      "count": 2
+    },
+    {
+      "source": "Ranges of numbers are expressed by two numbers separated with a hyphen\n(<code>-</code>). The specified range is inclusive.",
+      "translation": "数字范围由两个用连字符（<code>-</code>）分隔的数字表示。指定的范围包含边界值。",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 * * * *\"</code> = the top of every hour of every day",
+      "translation": "<code>\"0 0 * * * *\"</code> = 每天每小时的整点",
+      "count": 2
+    },
+    {
+      "source": "<code>\"*/10 * * * * *\"</code> = every ten seconds",
+      "translation": "<code>\"*/10 * * * * *\"</code> = 每十秒",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 8-10 * * *\"</code> = 8, 9 and 10 o'clock of every day",
+      "translation": "<code>\"0 0 8-10 * * *\"</code> = 每天 8、9 和 10 点",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 6,19 * * *\"</code> = 6:00 AM and 7:00 PM every day",
+      "translation": "<code>\"0 0 6,19 * * *\"</code> = 每天上午 6:00 和晚上 7:00",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0/30 8-10 * * *\"</code> = 8:00, 8:30, 9:00, 9:30, 10:00 and 10:30 every day",
+      "translation": "<code>\"0 0/30 8-10 * * *\"</code> = 每天 8:00、8:30、9:00、9:30、10:00 和 10:30",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 9-17 * * MON-FRI\"</code> = on the hour nine-to-five weekdays",
+      "translation": "<code>\"0 0 9-17 * * MON-FRI\"</code> = 周一至周五的九点到五点整点",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 25 12 ?\"</code> = every Christmas Day at midnight",
+      "translation": "<code>\"0 0 0 25 12 ?\"</code> = 每年圣诞节午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 L * *\"</code> = last day of the month at midnight",
+      "translation": "<code>\"0 0 0 L * *\"</code> = 每月最后一天的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 L-3 * *\"</code> = third-to-last day of the month at midnight",
+      "translation": "<code>\"0 0 0 L-3 * *\"</code> = 每月倒数第三天的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 1W * *\"</code> = first weekday of the month at midnight",
+      "translation": "<code>\"0 0 0 1W * *\"</code> = 每月第一个工作日的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 LW * *\"</code> = last weekday of the month at midnight",
+      "translation": "<code>\"0 0 0 LW * *\"</code> = 每月最后一个工作日的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 * * 5L\"</code> = last Friday of the month at midnight",
+      "translation": "<code>\"0 0 0 * * 5L\"</code> = 每月最后一个星期五的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 * * THUL\"</code> = last Thursday of the month at midnight",
+      "translation": "<code>\"0 0 0 * * THUL\"</code> = 每月最后一个星期四的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 ? * 5#2\"</code> = the second Friday in the month at midnight",
+      "translation": "<code>\"0 0 0 ? * 5#2\"</code> = 每月第二个星期五的午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>\"0 0 0 ? * MON#1\"</code> = the first Monday in the month at midnight",
+      "translation": "<code>\"0 0 0 ? * MON#1\"</code> = 每月的第一个星期一在午夜",
+      "count": 2
+    },
+    {
+      "source": "<code>expression</code> - the expression string to parse",
+      "translation": "<code>expression</code> - 要解析的表达式字符串",
+      "count": 2
+    },
+    {
+      "source": "the parsed <code>CronExpression</code> object",
+      "translation": "解析后的 `<code>CronExpression</code>` 对象",
+      "count": 2
+    },
+    {
+      "source": "<code>expression</code> - the expression to evaluate",
+      "translation": "<code>expression</code> - 要评估的表达式",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the given expression is a valid cron expression",
+      "translation": "<code>true</code> 如果给定的表达式是有效的 Cron 表达式。",
+      "count": 2
+    },
+    {
+      "source": "<code>temporal</code> - the seed value",
+      "translation": "<code>temporal</code> - 种子值",
+      "count": 2
+    },
+    {
+      "source": "the next temporal that matches this expression, or <code>null</code>\nif no such temporal can be found",
+      "translation": "下一个匹配此表达式的时区，或者如果找不到这样的时区则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "English names can also be used for the \"month\" and \"day of week\" fields.\nUse the first three letters of the particular day or month (case does not\nmatter).",
+      "translation": "\"月\"和\"星期\"字段也可以使用英文名称。使用特定日期或月份的前三个字母（大小写无关紧要）。",
+      "count": 2
+    },
+    {
+      "source": "Parse the given\n<a href=\"https://www.manpagez.com/man/5/crontab/\">crontab expression</a>\nstring into a <code>CronExpression</code>.",
+      "translation": "解析给定的<code>CronExpression</code><a href=\"https://www.manpagez.com/man/5/crontab/\">crontab 表达式</a>字符串。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Arjen Poutsma",
+      "translation": "Arjen Poutsma",
+      "count": 1
+    }
+  ]
+}

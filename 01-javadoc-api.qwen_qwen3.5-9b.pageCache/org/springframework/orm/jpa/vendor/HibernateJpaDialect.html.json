@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-04-14 16:08:06",
+  "updated_at": "2026-04-14 16:08:06",
+  "stats": {
+    "total_entries": 48,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 70,
+    "entries_with_hits": 48,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4583333333333333,
+    "usage_percentage": 0.0048000000000000004
+  },
+  "items": [
+    {
+      "source": "<code>jakarta.persistence.PersistenceException</code> - if thrown by JPA methods",
+      "translation": "<code>jakarta.persistence.PersistenceException</code> - 如果由 JPA 方法抛出",
+      "count": 3
+    },
+    {
+      "source": "As of 6.1, also applied to <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/TransactionException.html\" title=\"class or interface in org.hibernate\"><code>TransactionException</code></a> translation\nwith a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\"><code>SQLException</code></a> root cause (where Hibernate does not translate itself\nat all), overriding Spring's default <a href=\"../../../jdbc/support/SQLExceptionSubclassTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLExceptionSubclassTranslator</code></a> there.",
+      "translation": "自 6.1 版本起，也适用于具有 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\"><code>SQLException</code></a>` 根本原因的 `<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/TransactionException.html\" title=\"class or interface in org.hibernate\"><code>TransactionException</code></a>`（Hibernate 在此处完全不自行转换），并在那里覆盖 Spring 的默认 `<a href=\"../../../jdbc/support/SQLExceptionSubclassTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLExceptionSubclassTranslator</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\". If you turn this flag off, JPA transaction management\nwill not support per-transaction isolation levels anymore. It will not call\n<code>Connection.setReadOnly(true)</code> for read-only transactions anymore either.\nIf this flag is turned off, no cleanup of a JDBC Connection is required after\na transaction, since no Connection settings will get modified.",
+      "translation": "默认为 \"true\"。如果将此标志关闭，JPA 事务管理将不再支持每事务隔离级别。它也不再为只读事务调用 `<code>Connection.setReadOnly(true)</code>`。如果关闭此标志，则事务后无需清理 JDBC 连接，因为不会修改任何连接设置。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> The default behavior in terms of read-only handling changed\nin Spring 4.1, propagating the read-only status to the JDBC Connection now,\nanalogous to other Spring transaction managers. This may have the effect\nthat you're running into read-only enforcement now where previously write\naccess has accidentally been tolerated: Please revise your transaction\ndeclarations accordingly, removing invalid read-only markers if necessary.",
+      "translation": "<b>注意：</b>Spring 4.1 中关于只读处理的默认行为已更改，现在会将只读状态传播到 JDBC Connection，类似于其他 Spring 事务管理器。这可能会导致您遇到之前意外容忍写入访问而现在被强制执行的只读限制：请相应地修订您的事务声明，如有必要，移除无效的只读标记。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaDialect.html#prepareTransaction(jakarta.persistence.EntityManager,boolean,java.lang.String)\">JpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaDialect.html#prepareTransaction(jakarta.persistence.EntityManager,boolean,java.lang.String)\">JpaDialect</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../DefaultJpaDialect.html#cleanupTransaction(java.lang.Object)\">DefaultJpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../DefaultJpaDialect.html#cleanupTransaction(java.lang.Object)\">DefaultJpaDialect</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../DefaultJpaDialect.html#translateExceptionIfPossible(java.lang.RuntimeException)\">DefaultJpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../DefaultJpaDialect.html#translateExceptionIfPossible(java.lang.RuntimeException)\">DefaultJpaDialect</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\"><code>JpaDialect</code></a> implementation for Hibernate.\nCompatible with Hibernate ORM 7.x.",
+      "translation": "针对 Hibernate 的 <a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\"><code>JpaDialect</code></a> 实现。与 Hibernate ORM 7.x 兼容。",
+      "count": 2
+    },
+    {
+      "source": "This implementation does nothing, since the default <code>beginTransaction</code>\nimplementation does not require any cleanup.",
+      "translation": "此实现什么都不做，因为默认的 `<code>beginTransaction</code>` 实现不需要任何清理。",
+      "count": 2
+    },
+    {
+      "source": "This implementation always returns <code>null</code>,\nindicating that no JDBC Connection can be provided.",
+      "translation": "此实现始终返回<code>null</code>，表示无法提供 JDBC 连接。",
+      "count": 2
+    },
+    {
+      "source": "This implementation delegates to EntityManagerFactoryUtils.",
+      "translation": "此实现委托给 EntityManagerFactoryUtils。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"HibernateJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\"><code>HibernateJpaVendorAdapter</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html#setHibernateFlushMode(org.hibernate.FlushMode)\" title=\"class or interface in org.hibernate\"><code>Session.setHibernateFlushMode(FlushMode)</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Transaction.html#setTimeout(int)\" title=\"class or interface in org.hibernate\"><code>Transaction.setTimeout(int)</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.orm.jpa.vendor.HibernateJpaDialect\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"HibernateJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\"><code>HibernateJpaVendorAdapter</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Session.html#setHibernateFlushMode(org.hibernate.FlushMode)\" title=\"class or interface in org.hibernate\"><code>Session.setHibernateFlushMode(FlushMode)</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/Transaction.html#setTimeout(int)\" title=\"class or interface in org.hibernate\"><code>Transaction.setTimeout(int)</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.orm.jpa.vendor.HibernateJpaDialect\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code>exceptionTranslator</code> - the <a href=\"../../../jdbc/support/SQLExceptionTranslator.html\" title=\"interface in org.springframework.jdbc.support\"><code>SQLExceptionTranslator</code></a> to delegate to, or\n<code>null</code> for none. By default, a <a href=\"../../../jdbc/support/SQLExceptionSubclassTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLExceptionSubclassTranslator</code></a> will\nbe used for <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/TransactionException.html\" title=\"class or interface in org.hibernate\"><code>TransactionException</code></a> translation as of 6.1;\nthis can be reverted to pre-6.1 behavior through setting <code>null</code> here.",
+      "translation": "`exceptionTranslator` - 要委托的 `<a href=\"../../../jdbc/support/SQLExceptionTranslator.html\" title=\"interface in org.springframework.jdbc.support\"><code>SQLExceptionTranslator</code></a>`，或为无时设为 `<code>null</code>`。默认情况下，自 6.1 版本起，将使用 `<a href=\"../../../jdbc/support/SQLExceptionSubclassTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLExceptionSubclassTranslator</code></a>` 来翻译 `<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/TransactionException.html\" title=\"class or interface in org.hibernate\"><code>TransactionException</code></a>`；可通过在此处设置 `<code>null</code>` 恢复至 6.1 之前的行为。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../JpaDialect.html#prepareTransaction(jakarta.persistence.EntityManager,boolean,java.lang.String)\">prepareTransaction</a></code> in interface <code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>",
+      "translation": "`<code><a href=\"../JpaDialect.html#prepareTransaction(jakarta.persistence.EntityManager,boolean,java.lang.String)\">prepareTransaction</a></code>` 接口 `<code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#prepareTransaction(jakarta.persistence.EntityManager,boolean,java.lang.String)\">prepareTransaction</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#prepareTransaction(jakarta.persistence.EntityManager,boolean,java.lang.String)\">prepareTransaction</a></code>` 类中的 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../JpaDialect.html#cleanupTransaction(java.lang.Object)\">cleanupTransaction</a></code> in interface <code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>",
+      "translation": "`<code><a href=\"../JpaDialect.html#cleanupTransaction(java.lang.Object)\">cleanupTransaction</a></code>` 接口 `<code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#cleanupTransaction(java.lang.Object)\">cleanupTransaction</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#cleanupTransaction(java.lang.Object)\">cleanupTransaction</a></code>` 类中的 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#translateExceptionIfPossible(java.lang.RuntimeException)\">translateExceptionIfPossible</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#translateExceptionIfPossible(java.lang.RuntimeException)\">translateExceptionIfPossible</a></code>` 在类 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by JDBC methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 如果由 JDBC 方法抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>entityManager</code> - the EntityManager to begin a JPA transaction on",
+      "translation": "<code>entityManager</code> - 用于开始 JPA 事务的 EntityManager。",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Costin Leau",
+      "translation": "Juergen Hoeller，Costin Leau",
+      "count": 2
+    },
+    {
+      "source": "Applied to any detected <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\"><code>SQLException</code></a> root cause of a Hibernate\n<a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/JDBCException.html\" title=\"class or interface in org.hibernate\"><code>JDBCException</code></a>, overriding Hibernate's own <code>SQLException</code> translation\n(which is based on a Hibernate Dialect for a specific target database).",
+      "translation": "适用于任何检测到的由 Hibernate `<code>JDBCException</code>` 的根源原因导致的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\"><code>SQLException</code></a>`，从而覆盖 Hibernate 自身的 `<code>SQLException</code>` 转换（该转换基于特定目标数据库的 Hibernate Dialect）。",
+      "count": 1
+    },
+    {
+      "source": "This implementation does not return any transaction data Object, since there\nis no state to be kept for a standard JPA transaction. Hence, subclasses do not\nhave to care about the return value (<code>null</code>) of this implementation\nand are free to return their own transaction data Object.",
+      "translation": "此实现不返回任何事务数据对象，因为标准 JPA 事务无需保留状态。因此，子类不必关心此实现的返回值（`null`），并可自由返回自己的事务数据对象。",
+      "count": 1
+    },
+    {
+      "source": "An implementation can apply the read-only flag as flush mode. In that case,\na transaction data object can be returned that holds the previous flush mode\n(and possibly other data), to be reset in <code>cleanupTransaction</code>.",
+      "translation": "实现可以将只读标志作为刷新模式应用。在这种情况下，可以返回一个事务数据对象，该对象保存之前的刷新模式（以及可能的其他数据），以便在 `<code>cleanupTransaction</code>` 中重置。",
+      "count": 1
+    },
+    {
+      "source": "Implementations can also use the Spring transaction name to optimize for\nspecific data access use cases (effectively using the current transaction\nname as use case identifier).",
+      "translation": "实现也可以使用 Spring 事务名称来针对特定的数据访问用例进行优化（有效地将当前事务名称用作用例标识符）。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">DefaultJpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">DefaultJpaDialect</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">DefaultJpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">DefaultJpaDialect</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "This implementation invokes the standard JPA <code>Transaction.begin</code>\nmethod.",
+      "translation": "此实现调用标准的 JPA `<code>Transaction.begin</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Prepare a JPA transaction, applying the specified semantics.",
+      "translation": "准备一个 JPA 事务，应用指定的语义。",
+      "count": 1
+    },
+    {
+      "source": "Set the JDBC exception translator for Hibernate exception translation purposes.",
+      "translation": "为 Hibernate 异常转换目的设置 JDBC 异常转换器。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to prepare the underlying JDBC Connection of a transactional\nHibernate Session, that is, whether to apply a transaction-specific\nisolation level and/or the transaction's read-only flag to the underlying\nJDBC Connection.",
+      "translation": "设置是否准备事务性 Hibernate Session 的底层 JDBC 连接，即是否将特定于事务的隔离级别和/或事务的只读标志应用于底层 JDBC 连接。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code> in interface <code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>",
+      "translation": "`<code><a href=\"../JpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code>` 接口 `<code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code>` 类中的 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "an arbitrary object that holds transaction data, if any\n(to be passed into <a href=\"../JpaDialect.html#cleanupTransaction(java.lang.Object)\"><code>JpaDialect.cleanupTransaction(Object)</code></a>). May implement the\n<a href=\"../../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a> interface.",
+      "translation": "一个持有事务数据（如果有）的任意对象（将传入 <a href=\"../JpaDialect.html#cleanupTransaction(java.lang.Object)\"><code>JpaDialect.cleanupTransaction(Object)</code></a>）。可能实现<a href=\"../../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a>接口。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code> in interface <code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>",
+      "translation": "`<code><a href=\"../JpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code>` 接口 `<code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code>` 在类 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../dao/support/PersistenceExceptionTranslator.html#translateExceptionIfPossible(java.lang.RuntimeException)\">translateExceptionIfPossible</a></code> in interface <code><a href=\"../../../dao/support/PersistenceExceptionTranslator.html\" title=\"interface in org.springframework.dao.support\">PersistenceExceptionTranslator</a></code>",
+      "translation": "`<code><a href=\"../../../dao/support/PersistenceExceptionTranslator.html#translateExceptionIfPossible(java.lang.RuntimeException)\">translateExceptionIfPossible</a></code>` 接口中的 `<code><a href=\"../../../dao/support/PersistenceExceptionTranslator.html\" title=\"interface in org.springframework.dao.support\">PersistenceExceptionTranslator</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of invalid arguments",
+      "translation": "<code><a href=\"../../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在参数无效的情况下",
+      "count": 1
+    },
+    {
+      "source": "a handle for the Connection, to be passed into <code>releaseJdbcConnection</code>,\nor <code>null</code> if no JDBC Connection can be retrieved",
+      "translation": "用于传递给 `<code>releaseJdbcConnection</code>` 的 `Connection` 句柄，或者如果无法获取 JDBC 连接则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>definition</code> - the Spring transaction definition that defines semantics",
+      "translation": "<code>definition</code> - 定义语义的 Spring 事务定义。",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the transaction is supposed to be read-only",
+      "translation": "<code>readOnly</code> - 该事务是否应为只读",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the transaction (if any)",
+      "translation": "<code>name</code> - 事务的名称（如果有）",
+      "count": 1
+    },
+    {
+      "source": "<code>transactionData</code> - arbitrary object that holds transaction data, if any\n(as returned by beginTransaction or prepareTransaction)",
+      "translation": "<code>transactionData</code> - 包含事务数据的任意对象（如有），即由 beginTransaction 或 prepareTransaction 返回的数据",
+      "count": 1
+    },
+    {
+      "source": "<code>entityManager</code> - the current JPA EntityManager",
+      "translation": "<code>entityManager</code> - 当前的 JPA EntityManager",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the Connection is only needed for read-only purposes",
+      "translation": "<code>readOnly</code> - 该连接是否仅用于只读目的",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - a RuntimeException to translate",
+      "translation": "<code>ex</code> - 一个用于翻译的 RuntimeException。",
+      "count": 1
+    },
+    {
+      "source": "the corresponding DataAccessException (or <code>null</code> if the\nexception could not be translated, as in this case it may result from\nuser code rather than from an actual persistence problem)",
+      "translation": "相应的 DataAccessException（或者如果无法转换该异常，则为<code>null</code>，因为在这种情况下，它可能是由用户代码而非实际的持久化问题引起的）",
+      "count": 1
+    },
+    {
+      "source": "an arbitrary object that holds transaction data, if any\n(to be passed into cleanupTransaction)",
+      "translation": "一个持有事务数据（如果有）的任意对象（将传递给 cleanupTransaction）",
+      "count": 1
+    }
+  ]
+}

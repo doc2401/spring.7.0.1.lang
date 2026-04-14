@@ -1,0 +1,276 @@
+{
+  "created_at": "2026-04-14 18:43:02",
+  "updated_at": "2026-04-14 18:43:02",
+  "stats": {
+    "total_entries": 52,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 98,
+    "entries_with_hits": 52,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8846153846153846,
+    "usage_percentage": 0.0052
+  },
+  "items": [
+    {
+      "source": "Extracts the message payload portion of the message created by\n<a href=\"#createMessage(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)\"><code>createMessage(HttpServletRequest, String, String)</code></a> when\n<a href=\"#isIncludePayload()\"><code>isIncludePayload()</code></a> returns true.",
+      "translation": "提取由 <a href=\"#createMessage(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)\"><code>createMessage(HttpServletRequest, String, String)</code></a> 创建的消息中的消息负载部分，当 <a href=\"#isIncludePayload()\"><code>isIncludePayload()</code></a> 返回 true 时。",
+      "count": 3
+    },
+    {
+      "source": "The configured <a href=\"#setHeaderPredicate(java.util.function.Predicate)\"><code>headerPredicate</code></a>.",
+      "translation": "配置的<a href=\"#setHeaderPredicate(java.util.function.Predicate)\"><code>headerPredicate</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "The configured <a href=\"#setQueryParamPredicate(java.util.function.Predicate)\"><code>queryParamPredicate</code></a>.",
+      "translation": "配置的<a href=\"#setQueryParamPredicate(java.util.function.Predicate)\"><code>queryParamPredicate</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 3
+    },
+    {
+      "source": "Subclasses are passed the message to write to the log in the <code>beforeRequest</code> and\n<code>afterRequest</code> methods. By default, only the URI of the request is logged. However,\nsetting the <code>includeQueryString</code> property to <code>true</code> will cause the query string of\nthe request to be included also; this can be further extended through <code>includeClientInfo</code>\nand <code>includeHeaders</code>. The payload (body content) of the request can be logged via the\n<code>includePayload</code> flag: Note that this will only log the part of the payload which has\nactually been read, not necessarily the entire body of the request.",
+      "translation": "子类在 <code>beforeRequest</code> 和 <code>afterRequest</code> 方法中接收到要写入日志的消息。默认情况下，仅记录请求的 URI。但是，将 <code>includeQueryString</code> 属性设置为 <code>true</code> 会导致同时包含请求的查询字符串；这可以通过 <code>includeClientInfo</code> 和 <code>includeHeaders</code> 进一步扩展。请求的有效负载（主体内容）可以通过 <code>includePayload</code> 标志进行记录：请注意，这将仅记录实际读取的部分有效负载，而不一定是请求的整个主体。",
+      "count": 2
+    },
+    {
+      "source": "Prefixes and suffixes for the before and after messages can be configured using the\n<code>beforeMessagePrefix</code>, <code>afterMessagePrefix</code>, <code>beforeMessageSuffix</code> and\n<code>afterMessageSuffix</code> properties.",
+      "translation": "`beforeMessagePrefix`、`afterMessagePrefix`、`beforeMessageSuffix` 和 `afterMessageSuffix` 属性可用于配置 before 和 after 消息的前缀和后缀。",
+      "count": 2
+    },
+    {
+      "source": "If <code>includeQueryString</code> is <code>true</code>, then the inner part\nof the log message will take the form <code>request_uri?query_string</code>;\notherwise the message will simply be of the form <code>request_uri</code>.",
+      "translation": "如果 `<code>includeQueryString</code>` 为 `<code>true</code>`，则日志消息的内部部分将采用 `<code>request_uri?query_string</code>` 的形式；否则，消息将简单地采用 `<code>request_uri</code>` 的形式。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses should override the <code>beforeRequest(HttpServletRequest, String)</code> and\n<code>afterRequest(HttpServletRequest, String)</code> methods to perform the actual logging\naround the request.",
+      "translation": "子类应重写 `beforeRequest(HttpServletRequest, String)` 和 `afterRequest(HttpServletRequest, String)` 方法，以在请求周围执行实际的日志记录。",
+      "count": 2
+    },
+    {
+      "source": "Should be configured using an <code>&lt;init-param&gt;</code> for parameter name\n\"includeQueryString\" in the filter definition in <code>web.xml</code>.",
+      "translation": "应使用 `<init-param>` 在 `web.xml` 中的过滤器定义里配置参数名称为 \"includeQueryString\"。",
+      "count": 2
+    },
+    {
+      "source": "Should be configured using an <code>&lt;init-param&gt;</code> for parameter name\n\"includeClientInfo\" in the filter definition in <code>web.xml</code>.",
+      "translation": "应使用 `<init-param>` 在 `web.xml` 中的过滤器定义里配置参数名称为 \"includeClientInfo\" 的参数。",
+      "count": 2
+    },
+    {
+      "source": "Should be configured using an <code>&lt;init-param&gt;</code> for parameter name\n\"includeHeaders\" in the filter definition in <code>web.xml</code>.",
+      "translation": "应使用 `<init-param>` 在 `web.xml` 中的过滤器定义里配置参数名称为 \"includeHeaders\"。",
+      "count": 2
+    },
+    {
+      "source": "Should be configured using an <code>&lt;init-param&gt;</code> for parameter name\n\"includePayload\" in the filter definition in <code>web.xml</code>.",
+      "translation": "应使用 `<init-param>` 在 `web.xml` 中的过滤器定义里配置参数名称为 \"includePayload\"。",
+      "count": 2
+    },
+    {
+      "source": "The predicate will be applied once per query parameter name. Thus, if\nthere are multiple values for the same query parameter name, the logged query\nstring will contain fewer <code>name=value</code> mappings than the one returned by\n<code>HttpServletRequest.getQueryString()</code>.",
+      "translation": "谓词将针对每个查询参数名称应用一次。因此，如果同一查询参数名称有多个值，记录的查询字符串中将包含的 `<code>name=value</code>` 映射少于 <code>HttpServletRequest.getQueryString()</code> 返回的映射。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation always returns <code>true</code>. Subclasses may\noverride this with a log level check.",
+      "translation": "默认实现始终返回<code>true</code>。子类可以使用日志级别检查来覆盖此行为。",
+      "count": 2
+    },
+    {
+      "source": "By default this is not set, in which case all query parameters are logged.",
+      "translation": "默认情况下未设置此选项，此时将记录所有查询参数。",
+      "count": 2
+    },
+    {
+      "source": "By default this is not set, in which case all headers are logged.",
+      "translation": "默认情况下未设置此选项，此时将记录所有标头。",
+      "count": 2
+    },
+    {
+      "source": "The final message is composed of the inner part as described and\nthe supplied prefix and suffix.",
+      "translation": "最终消息由所述的内文部分以及提供的开头和结尾组成。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether to call the <a href=\"#beforeRequest(jakarta.servlet.http.HttpServletRequest,java.lang.String)\"><code>beforeRequest(HttpServletRequest, String)</code></a>/<a href=\"#afterRequest(jakarta.servlet.http.HttpServletRequest,java.lang.String)\"><code>afterRequest(HttpServletRequest, String)</code></a>\nmethods for the current request, i.e.",
+      "translation": "确定是否为当前请求调用 <a href=\"#beforeRequest(jakarta.servlet.http.HttpServletRequest,java.lang.String)\"><code>beforeRequest(HttpServletRequest, String)</code></a>/<a href=\"#afterRequest(jakarta.servlet.http.HttpServletRequest,java.lang.String)\"><code>afterRequest(HttpServletRequest, String)</code></a> 方法，即",
+      "count": 2
+    },
+    {
+      "source": "Configure a predicate for selecting which headers should be logged if\n<a href=\"#setIncludeHeaders(boolean)\"><code>setIncludeHeaders(boolean)</code></a> is set to <code>true</code>.",
+      "translation": "配置一个谓词，用于选择要记录的标头；如果 `<a href=\"#setIncludeHeaders(boolean)\"><code>setIncludeHeaders(boolean)</code></a>` 设置为 `<code>true</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Configure a predicate for selecting which query parameters should be logged\nif <a href=\"#setIncludeQueryString(boolean)\"><code>setIncludeQueryString(boolean)</code></a> is set to <code>true</code>.",
+      "translation": "如果将<a href=\"#setIncludeQueryString(boolean)\"><code>setIncludeQueryString(boolean)</code></a>设置为<code>true</code>，则配置一个谓词以选择应记录哪些查询参数。",
+      "count": 2
+    },
+    {
+      "source": "The default value prepended to the log message written <i>after</i> a request is\nprocessed.",
+      "translation": "请求处理后写入的日志消息前添加的默认值为。",
+      "count": 2
+    },
+    {
+      "source": "The default value appended to the log message written <i>after</i> a request is\nprocessed.",
+      "translation": "请求处理后写入日志消息时附加的默认值为。",
+      "count": 2
+    },
+    {
+      "source": "The default value prepended to the log message written <i>before</i> a request is\nprocessed.",
+      "translation": "在请求处理之前写入日志消息时，会追加默认值。",
+      "count": 2
+    },
+    {
+      "source": "The default value appended to the log message written <i>before</i> a request is\nprocessed.",
+      "translation": "在请求处理之前写入日志消息时附加的默认值为",
+      "count": 2
+    },
+    {
+      "source": "Concrete subclasses should implement this method to write a log message\n<i>after</i> the request is processed.",
+      "translation": "具体子类应实现此方法，在请求处理<i>之后</i>写入日志消息。",
+      "count": 2
+    },
+    {
+      "source": "Concrete subclasses should implement this method to write a log message\n<i>before</i> the request is processed.",
+      "translation": "具体子类应在处理请求<i>之前</i>实现此方法以写入日志消息。",
+      "count": 2
+    },
+    {
+      "source": "Set the value that should be prepended to the log message written\n<i>after</i> a request is processed.",
+      "translation": "设置应在请求处理后写入的日志消息前添加的值。",
+      "count": 2
+    },
+    {
+      "source": "Set the value that should be appended to the log message written\n<i>after</i> a request is processed.",
+      "translation": "设置要在请求处理后写入的日志消息后追加的值。",
+      "count": 2
+    },
+    {
+      "source": "Set the value that should be prepended to the log message written\n<i>before</i> a request is processed.",
+      "translation": "设置要在处理请求<i>之前</i>写入日志消息前添加的值。",
+      "count": 2
+    },
+    {
+      "source": "Set the value that should be appended to the log message written\n<i>before</i> a request is processed.",
+      "translation": "设置要在处理请求<i>之前</i>写入的日志消息后追加的值。",
+      "count": 2
+    },
+    {
+      "source": "Forwards the request to the next filter in the chain and delegates down to the subclasses\nto perform the actual request logging both before and after the request is processed.",
+      "translation": "将请求转发到链中的下一个过滤器，并委托给子类在请求处理之前和之后执行实际的请求日志记录。",
+      "count": 2
+    },
+    {
+      "source": "Return the maximum length of the payload body to be included in the log message.",
+      "translation": "返回要包含在日志消息中的负载体的最大长度。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the client address and session id should be included in the\nlog message.",
+      "translation": "返回是否应在日志消息中包含客户端地址和会话 ID。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the request headers should be included in the log message.",
+      "translation": "返回是否应将请求头包含在日志消息中。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the request payload (body) should be included in the log message.",
+      "translation": "返回是否应将请求负载（body）包含在日志消息中。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the query string should be included in the log message.",
+      "translation": "返回是否应将查询字符串包含在日志消息中。",
+      "count": 2
+    },
+    {
+      "source": "The default value is \"false\" so that the filter may log a \"before\" message\nat the start of request processing and an \"after\" message at the end from\nwhen the last asynchronously dispatched thread is exiting.",
+      "translation": "默认值为 \"false\"，以便过滤器可以在请求处理的开始处记录一条 \"before\" 消息，并在最后一个异步调度的线程退出时结束处记录一条 \"after\" 消息。",
+      "count": 2
+    },
+    {
+      "source": "Set the maximum length of the payload body to be included in the log message.\nDefault is 50 characters.",
+      "translation": "设置日志消息中包含的负载体最大长度。默认值为 50 个字符。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the before/after method should get called;\n<code>false</code> otherwise",
+      "translation": "<code>true</code> 表示应调用 before/after 方法；否则为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>queryParamPredicate</code> - the predicate to use",
+      "translation": "<code>queryParamPredicate</code> - 要使用的谓词",
+      "count": 2
+    },
+    {
+      "source": "<code>headerPredicate</code> - the predicate to use",
+      "translation": "<code>headerPredicate</code> - 要使用的谓词",
+      "count": 2
+    },
+    {
+      "source": "<code>message</code> - the message to log",
+      "translation": "<code>message</code> - 要记录的日志消息",
+      "count": 2
+    },
+    {
+      "source": "Create a log message for the given request, prefix and suffix.",
+      "translation": "为给定的请求创建带有前缀和后缀的日志消息。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the client address and session id should be included in the\nlog message.",
+      "translation": "设置是否将客户端地址和会话 ID 包含在日志消息中。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the request headers should be included in the log message.",
+      "translation": "设置是否将请求头包含在日志消息中。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the request payload (body) should be included in the log message.",
+      "translation": "设置是否将请求负载（正文）包含在日志消息中。",
+      "count": 1
+    },
+    {
+      "source": "Set whether the query string should be included in the log message.",
+      "translation": "设置是否将查询字符串包含在日志消息中。",
+      "count": 1
+    },
+    {
+      "source": "Set the maximum length of the payload body to be included in the log message.",
+      "translation": "设置日志消息中包含的负载体最大长度。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code>` 在类 `<code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterInternal</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`doFilterInternal` 在类 `<a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a>` 中。",
+      "count": 1
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller, Rossen Stoyanchev",
+      "translation": "Rob Harrop, Juergen Hoeller, Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

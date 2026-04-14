@@ -1,0 +1,176 @@
+{
+  "created_at": "2026-04-14 16:01:06",
+  "updated_at": "2026-04-14 16:01:06",
+  "stats": {
+    "total_entries": 32,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 50,
+    "entries_with_hits": 32,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5625,
+    "usage_percentage": 0.0031999999999999997
+  },
+  "items": [
+    {
+      "source": "<code>jakarta.persistence.PersistenceException</code> - if thrown by JPA methods",
+      "translation": "<code>jakarta.persistence.PersistenceException</code> - 如果由 JPA 方法抛出",
+      "count": 4
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by JDBC methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 如果由 JDBC 方法抛出",
+      "count": 3
+    },
+    {
+      "source": "This method also allows for exposing savepoint capabilities if supported by\nthe persistence provider, through returning an Object that implements Spring's\n<a href=\"../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a> interface.\n<a href=\"JpaTransactionManager.html\" title=\"class in org.springframework.orm.jpa\"><code>JpaTransactionManager</code></a> will use this capability if needed.",
+      "translation": "此方法还允许通过返回一个实现了 Spring 的<a href=\"../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a>接口的对象来暴露保存点功能，前提是持久化提供者支持该功能。<a href=\"JpaTransactionManager.html\" title=\"class in org.springframework.orm.jpa\"><code>JpaTransactionManager</code></a>将在需要时使用此功能。",
+      "count": 2
+    },
+    {
+      "source": "In general, it is recommended to derive from <a href=\"DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\"><code>DefaultJpaDialect</code></a> instead\nof implementing this interface directly. This allows for inheriting common behavior\n(present and future) from DefaultJpaDialect, only overriding specific hooks to\nplug in concrete vendor-specific behavior.",
+      "translation": "通常建议从<a href=\"DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\"><code>DefaultJpaDialect</code></a>派生，而不是直接实现此接口。这样可以继承来自 DefaultJpaDialect 的通用行为（包括当前和未来的行为），只需覆盖特定的钩子以插入具体的供应商特定行为即可。",
+      "count": 2
+    },
+    {
+      "source": "An implementation can configure the JPA Transaction object and then\ninvoke <code>begin</code>, or invoke a special begin method that takes,\nfor example, an isolation level.",
+      "translation": "实现可以配置 JPA 事务对象，然后调用<code>begin</code>，或者调用一个特殊的开始方法，该方法接受例如隔离级别等参数。",
+      "count": 2
+    },
+    {
+      "source": "An implementation can apply the read-only flag as flush mode. In that case,\na transaction data object can be returned that holds the previous flush mode\n(and possibly other data), to be reset in <code>cleanupTransaction</code>.\nIt may also apply the read-only flag and isolation level to the underlying\nJDBC Connection before beginning the transaction.",
+      "translation": "实现可以将只读标志作为刷新模式应用。在这种情况下，可以返回一个事务数据对象，该对象保存之前的刷新模式（可能还有其他数据），以便在 `<code>cleanupTransaction</code>` 中重置。它也可以在开始事务之前将只读标志和隔离级别应用到底层 JDBC 连接。",
+      "count": 2
+    },
+    {
+      "source": "In a simple case where the returned Connection will be auto-closed with the\nEntityManager or can be released via the Connection object itself, an\nimplementation can return a SimpleConnectionHandle that just contains the\nConnection. If some other object is needed in <code>releaseJdbcConnection</code>,\nan implementation should use a special handle that references that other object.",
+      "translation": "在返回的 `Connection` 将随 `EntityManager` 自动关闭或通过 `Connection` 对象本身释放的简单情况下，实现可以返回仅包含 `Connection` 的 `SimpleConnectionHandle`。如果 `<code>releaseJdbcConnection</code>` 需要其他对象，则实现应使用引用该其他对象的特殊句柄。",
+      "count": 2
+    },
+    {
+      "source": "An implementation might simply do nothing, if the Connection returned\nby <code>getJdbcConnection</code> will be implicitly closed when the JPA\ntransaction completes or when the EntityManager is closed.",
+      "translation": "实现可能什么都不做，如果 `<code>getJdbcConnection</code>` 返回的 `Connection` 会在 JPA 事务完成或 `EntityManager` 关闭时被隐式关闭。",
+      "count": 2
+    },
+    {
+      "source": "Implementations can also use the Spring transaction name, as exposed by the\npassed-in TransactionDefinition, to optimize for specific data access use cases\n(effectively using the current transaction name as use case identifier).",
+      "translation": "实现也可以使用传入的 `TransactionDefinition` 所暴露的 Spring 事务名称，以针对特定的数据访问用例进行优化（实际上将当前事务名称用作用例标识符）。",
+      "count": 2
+    },
+    {
+      "source": "An implementation can, for example, reset read-only flag and\nisolation level of the underlying JDBC Connection. Furthermore,\nan exposed data access use case can be reset here.",
+      "translation": "实现可以重置底层 JDBC 连接的只读标志和隔离级别。此外，在此处还可以重置暴露的数据访问用例。",
+      "count": 2
+    },
+    {
+      "source": "This strategy is necessary as JPA does not provide a standard way to retrieve\nthe underlying JDBC Connection (due to the fact that a JPA implementation might not\nwork with a relational database at all).",
+      "translation": "此策略是必要的，因为 JPA 不提供获取底层 JDBC 连接的标准方式（由于 JPA 实现可能根本不与关系型数据库配合工作）。",
+      "count": 2
+    },
+    {
+      "source": "Implementations are encouraged to return an unwrapped Connection object, i.e.\nthe Connection as they got it from the connection pool. This makes it easier for\napplication code to get at the underlying native JDBC Connection, like an\nOracleConnection, which is sometimes necessary for LOB handling etc. We assume\nthat calling code knows how to properly handle the returned Connection object.",
+      "translation": "实现建议返回未包装的 Connection 对象，即从连接池中获取的连接。这使得应用程序代码更容易访问底层的原生 JDBC 连接（例如 OracleConnection），这在处理 LOB 等场景时有时是必要的。我们假设调用代码知道如何正确处理返回的 Connection 对象。",
+      "count": 2
+    },
+    {
+      "source": "an arbitrary object that holds transaction data, if any\n(to be passed into <a href=\"#cleanupTransaction(java.lang.Object)\"><code>cleanupTransaction(Object)</code></a>). May implement the\n<a href=\"../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a> interface.",
+      "translation": "一个持有事务数据（如果有）的任意对象（将传入 <a href=\"#cleanupTransaction(java.lang.Object)\"><code>cleanupTransaction(Object)</code></a>）。可能实现<a href=\"../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a>接口。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityManager</code> - the EntityManager to begin a JPA transaction on",
+      "translation": "<code>entityManager</code> - 用于开始 JPA 事务的 EntityManager。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityManager</code> - the current JPA EntityManager",
+      "translation": "<code>entityManager</code> - 当前的 JPA EntityManager",
+      "count": 2
+    },
+    {
+      "source": "An implementation can apply the read-only flag as flush mode. In that case,\na transaction data object can be returned that holds the previous flush mode\n(and possibly other data), to be reset in <code>cleanupTransaction</code>.",
+      "translation": "实现可以将只读标志作为刷新模式应用。在这种情况下，可以返回一个事务数据对象，该对象保存之前的刷新模式（以及可能的其他数据），以便在 `<code>cleanupTransaction</code>` 中重置。",
+      "count": 1
+    },
+    {
+      "source": "Implementations can also use the Spring transaction name to optimize for\nspecific data access use cases (effectively using the current transaction\nname as use case identifier).",
+      "translation": "实现也可以使用 Spring 事务名称来针对特定的数据访问用例进行优化（有效地将当前事务名称用作用例标识符）。",
+      "count": 1
+    },
+    {
+      "source": "Release the given JDBC Connection, which has originally been retrieved\nvia <code>getJdbcConnection</code>.",
+      "translation": "释放通过<code>getJdbcConnection</code>获取的给定 JDBC 连接。",
+      "count": 1
+    },
+    {
+      "source": "Begin the given JPA transaction, applying the semantics specified by the\ngiven Spring transaction definition (in particular, an isolation level\nand a timeout).",
+      "translation": "启动给定的 JPA 事务，并应用由给定的 Spring 事务定义指定的语义（特别是隔离级别和超时时间）。",
+      "count": 1
+    },
+    {
+      "source": "Clean up the transaction via the given transaction data.",
+      "translation": "通过给定的事务数据清理事务。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the JDBC Connection that the given JPA EntityManager uses underneath,\nif accessing a relational database.",
+      "translation": "如果访问关系型数据库，获取给定 JPA EntityManager 底层使用的 JDBC Connection。",
+      "count": 1
+    },
+    {
+      "source": "Prepare a JPA transaction, applying the specified semantics.",
+      "translation": "准备一个 JPA 事务，应用指定的语义。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of invalid arguments",
+      "translation": "<code><a href=\"../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在参数无效的情况下",
+      "count": 1
+    },
+    {
+      "source": "a handle for the Connection, to be passed into <code>releaseJdbcConnection</code>,\nor <code>null</code> if no JDBC Connection can be retrieved",
+      "translation": "用于传递给 `<code>releaseJdbcConnection</code>` 的 `Connection` 句柄，或者如果无法获取 JDBC 连接则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>definition</code> - the Spring transaction definition that defines semantics",
+      "translation": "<code>definition</code> - 定义语义的 Spring 事务定义。",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the transaction is supposed to be read-only",
+      "translation": "<code>readOnly</code> - 该事务是否应为只读",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the transaction (if any)",
+      "translation": "<code>name</code> - 事务的名称（如果有）",
+      "count": 1
+    },
+    {
+      "source": "<code>transactionData</code> - arbitrary object that holds transaction data, if any\n(as returned by beginTransaction or prepareTransaction)",
+      "translation": "<code>transactionData</code> - 包含事务数据的任意对象（如有），即由 beginTransaction 或 prepareTransaction 返回的数据",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the Connection is only needed for read-only purposes",
+      "translation": "<code>readOnly</code> - 该连接是否仅用于只读目的",
+      "count": 1
+    },
+    {
+      "source": "<code>conHandle</code> - the JDBC Connection handle to release",
+      "translation": "<code>conHandle</code> - 要释放的 JDBC 连接句柄",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson",
+      "translation": "Juergen Hoeller，Rod Johnson",
+      "count": 1
+    },
+    {
+      "source": "an arbitrary object that holds transaction data, if any\n(to be passed into cleanupTransaction)",
+      "translation": "一个持有事务数据（如果有）的任意对象（将传递给 cleanupTransaction）",
+      "count": 1
+    }
+  ]
+}

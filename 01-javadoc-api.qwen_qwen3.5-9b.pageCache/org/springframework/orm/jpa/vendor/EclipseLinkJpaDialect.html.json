@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-04-14 16:07:43",
+  "updated_at": "2026-04-14 16:07:43",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 43,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6538461538461537,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "<b>NOTE: This dialect supports custom isolation levels with limitations.</b>\nConsistent isolation level handling is only guaranteed when all Spring\ntransaction definitions specify a concrete isolation level and when using the\ndefault isolation level with non-readOnly and non-lazy transactions; see the\n<a href=\"#setLazyDatabaseTransaction(boolean)\"><code>\"lazyDatabaseTransaction\" javadoc</code></a> for details.\nInternal locking happens for transaction isolation management in EclipseLink's\nDatabaseLogin, at the granularity of the <code>EclipseLinkJpaDialect</code> instance;\nfor independent persistence units with different target databases, use distinct\n<code>EclipseLinkJpaDialect</code> instances in order to minimize the locking impact.",
+      "translation": "<b>注意：此方言支持具有限制性的自定义隔离级别。</b>\n一致的隔离级别处理仅在以下情况下得到保证：所有 Spring 事务定义都指定了具体的隔离级别，并且在使用默认隔离级别与非 readOnly 和非 lazy 事务时；有关详细信息，请参阅 <a href=\"#setLazyDatabaseTransaction(boolean)\"><code>\"lazyDatabaseTransaction\" javadoc</code></a>。内部锁定发生在 EclipseLink 的 DatabaseLogin 中，用于管理事务隔离，粒度为 <code>EclipseLinkJpaDialect</code> 实例；对于具有不同目标数据库的独立持久化单元，请使用不同的 <code>EclipseLinkJpaDialect</code> 实例，以最大限度地减少锁定影响。",
+      "count": 2
+    },
+    {
+      "source": "By default, this dialect acquires an early EclipseLink transaction with an\nearly JDBC Connection for non-read-only transactions. This allows for mixing\nJDBC and JPA operations in the same transaction, with cross visibility of\ntheir impact. If this is not needed, set the \"lazyDatabaseTransaction\" flag to\n<code>true</code> or consistently declare all affected transactions as read-only.\nThis will reliably avoid early JDBC Connection retrieval and therefore keep\nEclipseLink in shared cache mode.",
+      "translation": "默认情况下，该方言为非只读事务获取早期的 EclipseLink 事务和早期 JDBC 连接。这允许在同一事务中混合使用 JDBC 和 JPA 操作，并相互可见其影响。如果不需要此功能，请将\"lazyDatabaseTransaction\"标志设置为<code>true</code>，或始终声明所有受影响的事务为只读。这将可靠地避免获取早期的 JDBC 连接，从而保持 EclipseLink 处于共享缓存模式。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: Lazy database transactions are not guaranteed to work reliably\nin combination with custom isolation levels. Use read-only as well as this\nlazy flag with care. If other transactions use custom isolation levels,\nit is not recommended to use read-only and lazy transactions at all.</b>\nOtherwise, you may see non-default isolation levels used during read-only\nor lazy access. If this is not acceptable, don't use read-only and lazy\nnext to custom isolation levels in potentially concurrent transactions.",
+      "translation": "<b>注意：懒数据库事务与自定义隔离级别组合使用时，不能保证可靠运行。请谨慎使用只读模式以及此懒标志。如果其他事务使用了自定义隔离级别，则不建议在任何情况下使用只读和懒事务。</b>否则，在只读或懒访问期间可能会看到非默认的隔离级别。如果这不可接受，请勿在可能存在并发的事务中，将只读和懒事务与自定义隔离级别一起使用。",
+      "count": 2
+    },
+    {
+      "source": "By default, read-only transactions are started lazily but regular\nnon-read-only transactions are started early. This allows for reusing the\nsame JDBC Connection throughout an entire EclipseLink transaction, for\nenforced isolation and consistent visibility with JDBC access code working\non the same DataSource.",
+      "translation": "默认情况下，只读事务是懒启动的，而常规非只读事务则提前启动。这允许在整个 EclipseLink 事务中重用同一个 JDBC Connection，从而强制实现隔离性，并确保与在相同 DataSource 上工作的 JDBC 访问代码具有一致的可见性。",
+      "count": 2
+    },
+    {
+      "source": "Switch this flag to \"true\" to enforce a lazy database transaction begin\neven for non-read-only transactions, allowing access to EclipseLink's\nshared cache and following EclipseLink's connection mode configuration,\nassuming that isolation and visibility at the JDBC level are less important.",
+      "translation": "将此标志设置为\"true\"，即使对于非只读事务也强制启用懒式数据库事务开始，从而允许访问 EclipseLink 的共享缓存并遵循 EclipseLink 的连接模式配置，前提是假设 JDBC 级别的隔离性和可见性不那么重要。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">DefaultJpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">DefaultJpaDialect</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">DefaultJpaDialect</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">DefaultJpaDialect</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "This implementation always returns <code>null</code>,\nindicating that no JDBC Connection can be provided.",
+      "translation": "此实现始终返回<code>null</code>，表示无法提供 JDBC 连接。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setLazyDatabaseTransaction(boolean)\"><code>setLazyDatabaseTransaction(boolean)</code></a></li>\n<li><a href=\"../../../jdbc/datasource/LazyConnectionDataSourceProxy.html\" title=\"class in org.springframework.jdbc.datasource\"><code>LazyConnectionDataSourceProxy</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.orm.jpa.vendor.EclipseLinkJpaDialect\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setLazyDatabaseTransaction(boolean)\"><code>setLazyDatabaseTransaction(boolean)</code></a></li>\n<li><a href=\"../../../jdbc/datasource/LazyConnectionDataSourceProxy.html\" title=\"class in org.springframework.jdbc.datasource\"><code>LazyConnectionDataSourceProxy</code></a></li>\n<li><a href=\"../../../../../serialized-form.html#org.springframework.orm.jpa.vendor.EclipseLinkJpaDialect\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../JpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code> in interface <code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>",
+      "translation": "`<code><a href=\"../JpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code>` 接口 `<code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#beginTransaction(jakarta.persistence.EntityManager,org.springframework.transaction.TransactionDefinition)\">beginTransaction</a></code>` 类中的 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "an arbitrary object that holds transaction data, if any\n(to be passed into <a href=\"../JpaDialect.html#cleanupTransaction(java.lang.Object)\"><code>JpaDialect.cleanupTransaction(Object)</code></a>). May implement the\n<a href=\"../../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a> interface.",
+      "translation": "一个持有事务数据（如果有）的任意对象（将传入 <a href=\"../JpaDialect.html#cleanupTransaction(java.lang.Object)\"><code>JpaDialect.cleanupTransaction(Object)</code></a>）。可能实现<a href=\"../../../transaction/SavepointManager.html\" title=\"interface in org.springframework.transaction\"><code>SavepointManager</code></a>接口。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../JpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code> in interface <code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>",
+      "translation": "`<code><a href=\"../JpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code>` 接口 `<code><a href=\"../JpaDialect.html\" title=\"interface in org.springframework.orm.jpa\">JpaDialect</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code> in class <code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>",
+      "translation": "`<code><a href=\"../DefaultJpaDialect.html#getJdbcConnection(jakarta.persistence.EntityManager,boolean)\">getJdbcConnection</a></code>` 在类 `<code><a href=\"../DefaultJpaDialect.html\" title=\"class in org.springframework.orm.jpa\">DefaultJpaDialect</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by JDBC methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 如果由 JDBC 方法抛出",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of invalid arguments",
+      "translation": "<code><a href=\"../../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在参数无效的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>jakarta.persistence.PersistenceException</code> - if thrown by JPA methods",
+      "translation": "<code>jakarta.persistence.PersistenceException</code> - 如果由 JPA 方法抛出",
+      "count": 2
+    },
+    {
+      "source": "This implementation does not return any transaction data Object, since there\nis no state to be kept for a standard JPA transaction. Hence, subclasses do not\nhave to care about the return value (<code>null</code>) of this implementation\nand are free to return their own transaction data Object.",
+      "translation": "此实现不返回任何事务数据对象，因为标准 JPA 事务无需保留状态。因此，子类不必关心此实现的返回值（`null`），并可自由返回自己的事务数据对象。",
+      "count": 1
+    },
+    {
+      "source": "This implementation invokes the standard JPA <code>Transaction.begin</code>\nmethod.",
+      "translation": "此实现调用标准的 JPA `<code>Transaction.begin</code>` 方法。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to lazily start a database resource transaction within a\nSpring-managed EclipseLink transaction.",
+      "translation": "在 Spring 管理的 EclipseLink 事务中，设置是否懒启动数据库资源事务。",
+      "count": 1
+    },
+    {
+      "source": "a handle for the Connection, to be passed into <code>releaseJdbcConnection</code>,\nor <code>null</code> if no JDBC Connection can be retrieved",
+      "translation": "用于传递给 `<code>releaseJdbcConnection</code>` 的 `Connection` 句柄，或者如果无法获取 JDBC 连接则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityManager</code> - the EntityManager to begin a JPA transaction on",
+      "translation": "<code>entityManager</code> - 用于开始 JPA 事务的 EntityManager。",
+      "count": 1
+    },
+    {
+      "source": "<code>definition</code> - the Spring transaction definition that defines semantics",
+      "translation": "<code>definition</code> - 定义语义的 Spring 事务定义。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityManager</code> - the current JPA EntityManager",
+      "translation": "<code>entityManager</code> - 当前的 JPA EntityManager",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the Connection is only needed for read-only purposes",
+      "translation": "<code>readOnly</code> - 该连接是否仅用于只读目的",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    }
+  ]
+}

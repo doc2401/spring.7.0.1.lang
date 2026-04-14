@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-04-14 14:46:09",
+  "updated_at": "2026-04-14 14:46:09",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7777777777777777,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "If not specified, the target DataSource's default will be used.\nNote that a transaction-specific isolation value will always override\nany isolation setting specified at the DataSource level.",
+      "translation": "如果未指定，将使用目标 DataSource 的默认值。请注意，事务特定的隔离级别设置将始终覆盖在 DataSource 级别指定的任何隔离设置。",
+      "count": 3
+    },
+    {
+      "source": "<b>WARNING:</b> This adapter simply calls\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#setTransactionIsolation(int)\" title=\"class or interface in java.sql\"><code>Connection.setTransactionIsolation(int)</code></a> and/or\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#setReadOnly(boolean)\" title=\"class or interface in java.sql\"><code>Connection.setReadOnly(boolean)</code></a> for every Connection obtained from it.\nIt does, however, <i>not</i> reset those settings; it rather expects the target\nDataSource to perform such resetting as part of its connection pool handling.\n<b>Make sure that the target DataSource properly cleans up such transaction state.</b>",
+      "translation": "<b>警告：</b> 此适配器仅对从其获取的每个 Connection 调用\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#setTransactionIsolation(int)\" title=\"class or interface in java.sql\"><code>Connection.setTransactionIsolation(int)</code></a> 和/或\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html#setReadOnly(boolean)\" title=\"class or interface in java.sql\"><code>Connection.setReadOnly(boolean)</code></a>。\n然而，它并不会重置这些设置；相反，它期望目标 DataSource 将其连接池处理的一部分作为此类重置操作。\n<b>请确保目标 DataSource 能够正确清理此类事务状态。</b>",
+      "count": 2
+    },
+    {
+      "source": "Inherits the capability to apply specific user credentials from its superclass\n<a href=\"UserCredentialsDataSourceAdapter.html\" title=\"class in org.springframework.jdbc.datasource\"><code>UserCredentialsDataSourceAdapter</code></a>; see the latter's javadoc for details\non that functionality (for example, <a href=\"UserCredentialsDataSourceAdapter.html#setCredentialsForCurrentThread(java.lang.String,java.lang.String)\"><code>UserCredentialsDataSourceAdapter.setCredentialsForCurrentThread(String, String)</code></a>).",
+      "translation": "继承自其父类<a href=\"UserCredentialsDataSourceAdapter.html\" title=\"class in org.springframework.jdbc.datasource\"><code>UserCredentialsDataSourceAdapter</code></a>应用特定用户凭据的能力；有关该功能的详细信息，请参阅后者的 Javadoc（例如，<a href=\"UserCredentialsDataSourceAdapter.html#setCredentialsForCurrentThread(java.lang.String,java.lang.String)\"><code>UserCredentialsDataSourceAdapter.setCredentialsForCurrentThread(String, String)</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Can be used to proxy a target JNDI DataSource that does not have the\ndesired isolation level (and user credentials) configured. Client code\ncan work with this DataSource as usual, not worrying about such settings.",
+      "translation": "可用于代理未配置所需隔离级别（以及用户凭据）的目标 JNDI DataSource。客户端代码可按常规方式使用该 DataSource，无需关心此类设置。",
+      "count": 2
+    },
+    {
+      "source": "Specify the default isolation level to use for Connection retrieval,\naccording to the JDBC <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a> constants\n(equivalent to the corresponding Spring\n<a href=\"../../transaction/TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a> constants).",
+      "translation": "指定用于连接获取的默认隔离级别，依据 JDBC <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java.sql/Connection.html\" title=\"class or interface in java.sql\"><code>Connection</code></a> 常量（相当于相应的 Spring\n<a href=\"../../transaction/TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a> 常量）。",
+      "count": 2
+    },
+    {
+      "source": "Set the default isolation level by the name of the corresponding constant\nin <a href=\"../../transaction/TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a> —\nfor example, <code>\"ISOLATION_SERIALIZABLE\"</code>.",
+      "translation": "通过设置 `<a href=\"../../transaction/TransactionDefinition.html\" title=\"interface in org.springframework.transaction\"><code>TransactionDefinition</code></a>` 中相应常量的名称来指定默认隔离级别——例如，`\"ISOLATION_SERIALIZABLE\"`。",
+      "count": 2
+    },
+    {
+      "source": "Return the statically specified isolation level,\nor <code>null</code> if none.",
+      "translation": "返回静态指定的隔离级别，如果没有则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Applies the current isolation level value and read-only flag\nto the returned Connection.",
+      "translation": "将当前的隔离级别值和只读标志应用于返回的 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Determine the current isolation level: either the transaction's\nisolation level or a statically defined isolation level.",
+      "translation": "确定当前的隔离级别：即事务的隔离级别或静态定义的隔离级别。",
+      "count": 2
+    },
+    {
+      "source": "Determine the current read-only flag: by default,\nthe transaction's read-only hint.",
+      "translation": "确定当前的只读标志：默认为事务的只读提示。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"UserCredentialsDataSourceAdapter.html#doGetConnection(java.lang.String,java.lang.String)\">doGetConnection</a></code> in class <code><a href=\"UserCredentialsDataSourceAdapter.html\" title=\"class in org.springframework.jdbc.datasource\">UserCredentialsDataSourceAdapter</a></code>",
+      "translation": "`<code><a href=\"UserCredentialsDataSourceAdapter.html#doGetConnection(java.lang.String,java.lang.String)\">doGetConnection</a></code>` 在类 `<code><a href=\"UserCredentialsDataSourceAdapter.html\" title=\"class in org.springframework.jdbc.datasource\">UserCredentialsDataSourceAdapter</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "the current isolation level, or <code>null</code> if none",
+      "translation": "当前的隔离级别，或者如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "whether there is a read-only hint for the current scope",
+      "translation": "当前作用域是否存在只读提示",
+      "count": 2
+    },
+    {
+      "source": "<code>constantName</code> - name of the constant",
+      "translation": "<code>constantName</code> - 常量的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>username</code> - the username to use",
+      "translation": "<code>username</code> - 要使用的用户名",
+      "count": 1
+    },
+    {
+      "source": "<code>password</code> - the password to use",
+      "translation": "<code>password</code> - 要使用的密码",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sam Brannen",
+      "translation": "Juergen Hoeller, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "the Connection",
+      "translation": "连接",
+      "count": 1
+    }
+  ]
+}

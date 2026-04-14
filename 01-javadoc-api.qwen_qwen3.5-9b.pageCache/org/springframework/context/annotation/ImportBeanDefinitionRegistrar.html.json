@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-04-14 12:10:27",
+  "updated_at": "2026-04-14 12:10:27",
+  "stats": {
+    "total_entries": 12,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 23,
+    "entries_with_hits": 12,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9166666666666667,
+    "usage_percentage": 0.0012000000000000001
+  },
+  "items": [
+    {
+      "source": "Note that <a href=\"../../beans/factory/support/BeanDefinitionRegistryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistryPostProcessor</code></a> types may <em>not</em> be\nregistered here, due to lifecycle constraints related to <code>@Configuration</code>\nclass processing.",
+      "translation": "请注意，由于与 `<code>@Configuration</code>` 类处理相关的生活周期限制，<a href=\"../../beans/factory/support/BeanDefinitionRegistryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistryPostProcessor</code></a> 类型可能无法在此注册。",
+      "count": 3
+    },
+    {
+      "source": "Along with <code>@Configuration</code> and <a href=\"ImportSelector.html\" title=\"interface in org.springframework.context.annotation\"><code>ImportSelector</code></a>, classes of this type\nmay be provided to the @<a href=\"Import.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Import</code></a> annotation (or may also be returned from an\n<code>ImportSelector</code>).",
+      "translation": "与 `<code>@Configuration</code>` 和 <a href=\"ImportSelector.html\" title=\"interface in org.springframework.context.annotation\"><code>ImportSelector</code></a> 一起，此类类的实例可以提供给 `@<a href=\"Import.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>Import</code></a>` 注解（或者也可以从 `<code>ImportSelector</code>` 返回）。",
+      "count": 2
+    },
+    {
+      "source": "An <a href=\"ImportBeanDefinitionRegistrar.html\" title=\"interface in org.springframework.context.annotation\"><code>ImportBeanDefinitionRegistrar</code></a> may implement any of the following\n<a href=\"../../beans/factory/Aware.html\" title=\"interface in org.springframework.beans.factory\"><code>Aware</code></a> interfaces, and their respective\nmethods will be called prior to <a href=\"#registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata,org.springframework.beans.factory.support.BeanDefinitionRegistry,org.springframework.beans.factory.support.BeanNameGenerator)\"><code>registerBeanDefinitions(AnnotationMetadata, BeanDefinitionRegistry, BeanNameGenerator)</code></a>:",
+      "translation": "`ImportBeanDefinitionRegistrar` 接口可以实现以下任意一个 `<a href=\"../../beans/factory/Aware.html\" title=\"interface in org.springframework.beans.factory\"><code>Aware</code></a>` 接口，其相应的方法将在调用 `<a href=\"#registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata,org.springframework.beans.factory.support.BeanDefinitionRegistry,org.springframework.beans.factory.support.BeanNameGenerator)\"><code>registerBeanDefinitions(AnnotationMetadata, BeanDefinitionRegistry, BeanNameGenerator)</code></a>` 之前被调用：",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to\n<a href=\"#registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata,org.springframework.beans.factory.support.BeanDefinitionRegistry)\"><code>registerBeanDefinitions(AnnotationMetadata, BeanDefinitionRegistry)</code></a>.",
+      "translation": "默认实现委托给 <a href=\"#registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata,org.springframework.beans.factory.support.BeanDefinitionRegistry)\"><code>registerBeanDefinitions(AnnotationMetadata, BeanDefinitionRegistry)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, the class may provide a single constructor with one or more of\nthe following supported parameter types:",
+      "translation": "或者，该类可以提供一个构造函数，包含以下支持的一个或多个参数类型：",
+      "count": 2
+    },
+    {
+      "source": "See implementations and associated unit tests for usage examples.",
+      "translation": "查看实现和相关的单元测试以获取使用示例。",
+      "count": 2
+    },
+    {
+      "source": "Register bean definitions as necessary based on the given annotation metadata of\nthe importing <code>@Configuration</code> class.",
+      "translation": "根据导入的 `<code>@Configuration</code>` 类的注解元数据，注册必要的 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "<code>importBeanNameGenerator</code> - the bean name generator strategy for imported beans:\n<a href=\"ConfigurationClassPostProcessor.html#IMPORT_BEAN_NAME_GENERATOR\"><code>ConfigurationClassPostProcessor.IMPORT_BEAN_NAME_GENERATOR</code></a> by default, or a\nuser-provided one if <a href=\"ConfigurationClassPostProcessor.html#setBeanNameGenerator(org.springframework.beans.factory.support.BeanNameGenerator)\"><code>ConfigurationClassPostProcessor.setBeanNameGenerator(BeanNameGenerator)</code></a>\nhas been set. In the latter case, the passed-in strategy will be the same used for\ncomponent scanning in the containing application context (otherwise, the default\ncomponent-scan naming strategy is <a href=\"AnnotationBeanNameGenerator.html#INSTANCE\"><code>AnnotationBeanNameGenerator.INSTANCE</code></a>).",
+      "translation": "<code>importBeanNameGenerator</code> - 导入 Bean 的 Bean 名称生成器策略：默认为<a href=\"ConfigurationClassPostProcessor.html#IMPORT_BEAN_NAME_GENERATOR\"><code>ConfigurationClassPostProcessor.IMPORT_BEAN_NAME_GENERATOR</code></a>，或者如果已设置<a href=\"ConfigurationClassPostProcessor.html#setBeanNameGenerator(org.springframework.beans.factory.support.BeanNameGenerator)\"><code>ConfigurationClassPostProcessor.setBeanNameGenerator(BeanNameGenerator)</code></a>，则为用户提供的生成器。在后一种情况下，传入的策略将与包含应用程序上下文中组件扫描使用的策略相同（否则，默认的组件扫描命名策略为<a href=\"AnnotationBeanNameGenerator.html#INSTANCE\"><code>AnnotationBeanNameGenerator.INSTANCE</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>importingClassMetadata</code> - annotation metadata of the importing class",
+      "translation": "<code>importingClassMetadata</code> - 导入类的注解元数据",
+      "count": 2
+    },
+    {
+      "source": "<code>registry</code> - current bean definition registry",
+      "translation": "<code>registry</code> - 当前 Bean 定义注册表",
+      "count": 2
+    },
+    {
+      "source": "The default implementation is empty.",
+      "translation": "默认实现为空。",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller",
+      "translation": "Chris Beams，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

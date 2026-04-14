@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 14:52:37",
+  "updated_at": "2026-04-14 14:52:37",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 39,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.56,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "This implementation attempts to use the <a href=\"SQLExceptionTranslator.html\" title=\"interface in org.springframework.jdbc.support\"><code>SQLExceptionTranslator</code></a>,\nfalling back to a <a href=\"../../transaction/TransactionSystemException.html\" title=\"class in org.springframework.transaction\"><code>TransactionSystemException</code></a>.",
+      "translation": "此实现尝试使用<a href=\"SQLExceptionTranslator.html\" title=\"interface in org.springframework.jdbc.support\"><code>SQLExceptionTranslator</code></a>，并回退到<a href=\"../../transaction/TransactionSystemException.html\" title=\"class in org.springframework.transaction\"><code>TransactionSystemException</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <code>JdbcTransactionManager</code> instance.",
+      "translation": "创建一个新的<code>JdbcTransactionManager</code> 实例。",
+      "count": 3
+    },
+    {
+      "source": "Analogous to <code>HibernateTransactionManager</code> and <code>JpaTransactionManager</code>,\nthis transaction manager may throw <a href=\"../../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a> from <a href=\"../../transaction/support/AbstractPlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\"><code>AbstractPlatformTransactionManager.commit(TransactionStatus)</code></a>\nand possibly also from <a href=\"../../transaction/support/AbstractPlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\"><code>AbstractPlatformTransactionManager.rollback(TransactionStatus)</code></a>. Calling code should be prepared for handling\nsuch exceptions next to <a href=\"../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\"><code>TransactionException</code></a>,\nwhich is generally sensible since <code>TransactionSynchronization</code> implementations\nmay also throw such exceptions in their <code>flush</code> and <code>beforeCommit</code> phases.",
+      "translation": "类似于 `<code>HibernateTransactionManager</code>` 和 `<code>JpaTransactionManager</code>`，此事务管理器可能会从 `<a href=\"../../transaction/support/AbstractPlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\"><code>AbstractPlatformTransactionManager.commit(TransactionStatus)</code></a>` 抛出 `<a href=\"../../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a>`，也可能从 `<a href=\"../../transaction/support/AbstractPlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\"><code>AbstractPlatformTransactionManager.rollback(TransactionStatus)</code></a>` 抛出。调用代码应准备好在 `<a href=\"../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\"><code>TransactionException</code></a>` 旁边处理此类异常，因为这是合理的，因为 `<code>TransactionSynchronization</code>` 实现也可能在其 `<code>flush</code>` 和 `<code>beforeCommit</code>` 阶段抛出此类异常。",
+      "count": 2
+    },
+    {
+      "source": "Exception translation is specifically relevant for commit steps in serializable\ntransactions (for example, on Postgres) where concurrency failures may occur late on commit.\nThis allows for throwing <a href=\"../../dao/ConcurrencyFailureException.html\" title=\"class in org.springframework.dao\"><code>ConcurrencyFailureException</code></a> to\ncallers instead of <a href=\"../../transaction/TransactionSystemException.html\" title=\"class in org.springframework.transaction\"><code>TransactionSystemException</code></a>.",
+      "translation": "异常翻译对于可序列化事务中的提交步骤特别相关（例如在 Postgres 上），因为并发失败可能在提交时晚些时候发生。这允许向调用者抛出 <a href=\"../../dao/ConcurrencyFailureException.html\" title=\"class in org.springframework.dao\"><code>ConcurrencyFailureException</code></a>，而不是 <a href=\"../../transaction/TransactionSystemException.html\" title=\"class in org.springframework.transaction\"><code>TransactionSystemException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify the database product name for the <code>DataSource</code> that this\ntransaction manager operates on.\nThis allows for initializing a <a href=\"SQLErrorCodeSQLExceptionTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLErrorCodeSQLExceptionTranslator</code></a> without\nobtaining a <code>Connection</code> from the <code>DataSource</code> to get the meta-data.",
+      "translation": "指定此事务管理器操作的 `<code>DataSource</code>` 的数据库产品名称。这允许在无需从 `<code>DataSource</code> 获取 `<code>Connection</code>` 以获取元数据的情况下，初始化一个 <a href=\"SQLErrorCodeSQLExceptionTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLErrorCodeSQLExceptionTranslator</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>JdbcTransactionManager</code> instance.\nA <code>DataSource</code> has to be set to be able to use it.",
+      "translation": "创建一个新的<code>JdbcTransactionManager</code>实例。\n必须设置一个<code>DataSource</code>才能使用它。",
+      "count": 2
+    },
+    {
+      "source": "Eagerly initialize the exception translator, if demanded,\ncreating a default one for the specified DataSource if none set.",
+      "translation": "如果要求，则急切地初始化异常转换器；如果未设置，则为指定的 DataSource 创建一个默认转换器。",
+      "count": 2
+    },
+    {
+      "source": "Return the exception translator to use for this instance,\ncreating a default if necessary.",
+      "translation": "返回此实例使用的异常转换器，必要时创建默认转换器。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to lazily initialize the SQLExceptionTranslator for this transaction manager.",
+      "translation": "返回是否应延迟初始化此事务管理器的 SQLExceptionTranslator。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"../datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a></li>\n<li><a href=\"../datasource/DataSourceTransactionManager.html#setDataSource(javax.sql.DataSource)\"><code>DataSourceTransactionManager.setDataSource(DataSource)</code></a></li>\n<li><a href=\"#setExceptionTranslator(org.springframework.jdbc.support.SQLExceptionTranslator)\"><code>setExceptionTranslator(SQLExceptionTranslator)</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.jdbc.support.JdbcTransactionManager\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"../datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a></li>\n<li><a href=\"../datasource/DataSourceTransactionManager.html#setDataSource(javax.sql.DataSource)\"><code>DataSourceTransactionManager.setDataSource(DataSource)</code></a></li>\n<li><a href=\"#setExceptionTranslator(org.springframework.jdbc.support.SQLExceptionTranslator)\"><code>setExceptionTranslator(SQLExceptionTranslator)</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.jdbc.support.JdbcTransactionManager\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../datasource/DataSourceTransactionManager.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in class <code><a href=\"../datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\">DataSourceTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../datasource/DataSourceTransactionManager.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 在类 `<code><a href=\"../datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\">DataSourceTransactionManager</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../datasource/DataSourceTransactionManager.html#translateException(java.lang.String,java.sql.SQLException)\">translateException</a></code> in class <code><a href=\"../datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\">DataSourceTransactionManager</a></code>",
+      "translation": "`<code><a href=\"../datasource/DataSourceTransactionManager.html#translateException(java.lang.String,java.sql.SQLException)\">translateException</a></code>` 在类 `<code><a href=\"../datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\">DataSourceTransactionManager</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "A <a href=\"SQLErrorCodeSQLExceptionTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLErrorCodeSQLExceptionTranslator</code></a> used by default if a user-provided\n`sql-error-codes.xml` file has been found in the root of the classpath. Otherwise,\n<a href=\"SQLExceptionSubclassTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLExceptionSubclassTranslator</code></a> serves as the default translator as of 6.0.",
+      "translation": "默认情况下，如果用户在类路径根目录中找到了 `sql-error-codes.xml` 文件，则使用 `<a href=\"SQLErrorCodeSQLExceptionTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLErrorCodeSQLExceptionTranslator</code></a>`；否则，自 6.0 版本起，`<a href=\"SQLExceptionSubclassTranslator.html\" title=\"class in org.springframework.jdbc.support\"><code>SQLExceptionSubclassTranslator</code></a>` 作为默认转换器。",
+      "count": 1
+    },
+    {
+      "source": "Early initialization just applies if <code>afterPropertiesSet()</code> is called.",
+      "translation": "早期初始化仅在调用<code>afterPropertiesSet()</code>时生效。",
+      "count": 1
+    },
+    {
+      "source": "Specify the database product name for the <code>DataSource</code> that this\ntransaction manager operates on.",
+      "translation": "指定此事务管理器操作的<code>DataSource</code>的数据库产品名称。",
+      "count": 1
+    },
+    {
+      "source": "Set the exception translator for this transaction manager.",
+      "translation": "为此事务管理器设置异常转换器。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to lazily initialize the SQLExceptionTranslator for this transaction manager,\non first encounter of an SQLException.",
+      "translation": "设置是否在此事务管理器首次遇到 SQLException 时懒加载初始化 SQLExceptionTranslator。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "the translated exception to throw, either a\n<a href=\"../../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a> or a\n<a href=\"../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\"><code>TransactionException</code></a>",
+      "translation": "要抛出的异常，即 `<a href=\"../../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a>` 或 `<a href=\"../../transaction/TransactionException.html\" title=\"class in org.springframework.transaction\"><code>TransactionException</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>dataSource</code> - the JDBC DataSource to manage transactions for",
+      "translation": "<code>dataSource</code> - 用于管理事务的 JDBC DataSource。",
+      "count": 1
+    },
+    {
+      "source": "<code>dbName</code> - the database product name that identifies the error codes entry",
+      "translation": "<code>dbName</code> - 标识错误代码条目的数据库产品名称",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - the task description (commit or rollback)",
+      "translation": "<code>task</code> - 任务描述（提交或回滚）",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the SQLException thrown from commit/rollback",
+      "translation": "<code>ex</code> - 由 commit/rollback 抛出的 SQLException",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Sebastien Deleuze",
+      "translation": "Juergen Hoeller，Sebastien Deleuze",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 16:50:22",
+  "updated_at": "2026-04-14 16:50:22",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 29,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9333333333333333,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "NOTE: <code>ApplicationEvents</code> is registered with the <code>ApplicationContext</code> as a\n<a href=\"../../../beans/factory/config/ConfigurableListableBeanFactory.html#registerResolvableDependency(java.lang.Class,java.lang.Object)\">resolvable dependency</a> which is scoped to the lifecycle of the current test method.\nConsequently, <code>ApplicationEvents</code> cannot be accessed outside the lifecycle of a\ntest method and cannot be <code>@Autowired</code> into the constructor of a test class.",
+      "translation": "NOTE: `<code>ApplicationEvents</code>` 已作为<a href=\"../../../beans/factory/config/ConfigurableListableBeanFactory.html#registerResolvableDependency(java.lang.Class,java.lang.Object)\">可解析依赖项</a>注册到 `<code>ApplicationContext</code>`，其作用域仅限于当前测试方法的生命周期。因此，`<code>ApplicationEvents</code>` 无法在测试方法的生命周期之外访问，也不能通过 `@Autowired` 注入到测试类的构造函数中。",
+      "count": 2
+    },
+    {
+      "source": "Subsequent calls to <a href=\"#stream()\"><code>stream()</code></a> or <a href=\"#stream(java.lang.Class)\"><code>stream(Class)</code></a> will\nonly include events recorded since this method was invoked.",
+      "translation": "对 `<a href=\"#stream()\"><code>stream()</code></a>` 或 `<a href=\"#stream(java.lang.Class)\"><code>stream(Class)</code></a>` 的后续调用将仅包含自调用此方法以来记录的事件。",
+      "count": 2
+    },
+    {
+      "source": "To use <code>ApplicationEvents</code> in your tests, do the following.",
+      "translation": "要在测试中使用<code>ApplicationEvents</code>，请执行以下操作。",
+      "count": 2
+    },
+    {
+      "source": "Stream all application events that were fired during test execution.",
+      "translation": "流式传输测试执行期间触发所有应用程序事件。",
+      "count": 2
+    },
+    {
+      "source": "Stream all application events or event payloads of the given type that\nwere fired during test execution.",
+      "translation": "流式传输在测试执行期间触发给定类型的所有应用程序事件或事件负载。",
+      "count": 2
+    },
+    {
+      "source": "With JUnit Jupiter, declare a parameter of type <code>ApplicationEvents</code>\nin a <code>@Test</code>, <code>@BeforeEach</code>, or <code>@AfterEach</code> method. Since\n<code>ApplicationEvents</code> is scoped to the lifecycle of the current test method,\nthis is the recommended approach.",
+      "translation": "使用 JUnit Jupiter，在 `<code>@Test`、`<code>@BeforeEach` 或 `<code>@AfterEach` 方法中声明一个类型为 `<code>ApplicationEvents</code>` 的参数。由于 `<code>ApplicationEvents</code>` 的范围仅限于当前测试方法的生命周期，因此这是推荐的方法。",
+      "count": 2
+    },
+    {
+      "source": "Ensure that the <a href=\"ApplicationEventsTestExecutionListener.html\" title=\"class in org.springframework.test.context.event\"><code>ApplicationEventsTestExecutionListener</code></a> is\nregistered. Note, however, that it is registered by default and only needs\nto be manually registered if you have custom configuration via\n<a href=\"../TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a>\nthat does not include the default listeners.",
+      "translation": "确保已注册 <a href=\"ApplicationEventsTestExecutionListener.html\" title=\"class in org.springframework.test.context.event\"><code>ApplicationEventsTestExecutionListener</code></a>。不过请注意，它默认已注册，仅在通过 <a href=\"../TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a> 进行自定义配置且未包含默认监听器时，才需要手动注册。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, you can annotate a field of type <code>ApplicationEvents</code> with\n<a href=\"../../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a> and\nuse that instance of <code>ApplicationEvents</code> in your test and lifecycle methods.",
+      "translation": "或者，您可以使用<a href=\"../../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>注解类型为<code>ApplicationEvents</code>的字段，并在您的测试和生命周期方法中使用该<code>ApplicationEvents</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "Ensure that your test class is annotated or meta-annotated with\n<a href=\"RecordApplicationEvents.html\" title=\"annotation interface in org.springframework.test.context.event\"><code>@RecordApplicationEvents</code></a>.",
+      "translation": "确保您的测试类被 `<a href=\"RecordApplicationEvents.html\" title=\"annotation interface in org.springframework.test.context.event\"><code>@RecordApplicationEvents</code></a>` 注解或元注解。",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"stream(java.lang.Class)-type-param-T\"><code>T</code> - the event type</span>",
+      "translation": "<span id=\"stream(java.lang.Class)-type-param-T\"><code>T</code> - 事件类型</span>",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the type of events or payloads to stream; never <code>null</code>",
+      "translation": "<code>type</code> - 要流式传输的事件或负载的类型；永远不为 <code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "Sam Brannen, Oliver Drotbohm",
+      "translation": "Sam Brannen，Oliver Drotbohm",
+      "count": 2
+    },
+    {
+      "source": "a stream of all application events",
+      "translation": "所有应用程序事件的流",
+      "count": 2
+    },
+    {
+      "source": "a stream of all application events or event payloads of the\nspecified type",
+      "translation": "指定类型的所有应用程序事件或事件负载流",
+      "count": 2
+    },
+    {
+      "source": "Clear all application events recorded by this <code>ApplicationEvents</code> instance.",
+      "translation": "清除此<code>ApplicationEvents</code>实例记录的所有应用程序事件。",
+      "count": 1
+    }
+  ]
+}

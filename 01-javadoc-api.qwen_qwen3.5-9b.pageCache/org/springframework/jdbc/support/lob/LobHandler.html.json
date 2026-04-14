@@ -1,0 +1,176 @@
+{
+  "created_at": "2026-04-14 14:56:22",
+  "updated_at": "2026-04-14 14:56:22",
+  "stats": {
+    "total_entries": 32,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 81,
+    "entries_with_hits": 32,
+    "entries_without_hits": 0,
+    "hit_rate": 2.53125,
+    "usage_percentage": 0.0031999999999999997
+  },
+  "items": [
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - if thrown by JDBC methods",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"java.sql 中的类或接口\">SQLException</a></code> - 如果由 JDBC 方法抛出",
+      "count": 10
+    },
+    {
+      "source": "<code>rs</code> - the ResultSet to retrieve the content from",
+      "translation": "<code>rs</code> - 用于检索内容的 ResultSet",
+      "count": 10
+    },
+    {
+      "source": "<code>columnName</code> - the column name to use",
+      "translation": "<code>columnName</code> - 要使用的列名",
+      "count": 5
+    },
+    {
+      "source": "<code>columnIndex</code> - the column index to use",
+      "translation": "<code>columnIndex</code> - 要使用的列索引",
+      "count": 5
+    },
+    {
+      "source": "Most databases/drivers should be able to work with <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>,\nwhich by default delegates to JDBC's direct accessor methods, avoiding the\n<code>java.sql.Blob</code> and <code>java.sql.Clob</code> API completely.\n<a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a> can also be configured to access LOBs using\n<code>PreparedStatement.setBlob/setClob</code> (for example, for PostgreSQL), through\nsetting the <a href=\"DefaultLobHandler.html#setWrapAsLob(boolean)\"><code>\"wrapAsLob\"</code></a> property.",
+      "translation": "大多数数据库/驱动程序应该能够与<a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>配合使用，它默认委托给 JDBC 的直接访问器方法，完全避免使用<code>java.sql.Blob</code>和<code>java.sql.Clob</code> API。<a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>也可以通过设置<a href=\"DefaultLobHandler.html#setWrapAsLob(boolean)\"><code>\"wrapAsLob\"</code></a>属性，配置为使用<code>PreparedStatement.setBlob/setClob</code>访问 LOB（例如用于 PostgreSQL）。",
+      "count": 2
+    },
+    {
+      "source": "<b>Summarizing the recommended options (for actual LOB fields):</b>",
+      "translation": "<b>总结推荐选项（针对实际的 LOB 字段）：</b>",
+      "count": 2
+    },
+    {
+      "source": "Provides accessor methods for BLOBs and CLOBs, and acts as factory for\nLobCreator instances, to be used as sessions for creating BLOBs or CLOBs.\nLobCreators are typically instantiated for each statement execution or for\neach transaction; they are not thread-safe because they might track\nallocated database resources in order to free them after execution.",
+      "translation": "提供用于访问 BLOB 和 CLOB 的访问器方法，并充当 LobCreator 实例的工厂，这些实例将用作创建 BLOB 或 CLOB 的会话。LobCreators 通常针对每个语句执行或每个事务进行实例化；它们不是线程安全的，因为它们可能会跟踪已分配的数据库资源以便在执行后释放。",
+      "count": 2
+    },
+    {
+      "source": "Of course, you need to declare different field types for each database.\nIn Oracle, any binary content needs to go into a BLOB, and all character content\nbeyond 4000 bytes needs to go into a CLOB. In MySQL, there is no notion of a\nCLOB type but rather a LONGTEXT type that behaves like a VARCHAR. For complete\nportability, use a LobHandler for fields that might typically require LOBs on\nsome database because of the field size (take Oracle's numbers as a guideline).",
+      "translation": "当然，您需要为每个数据库声明不同的字段类型。在 Oracle 中，任何二进制内容都必须存入 BLOB，而所有超过 4000 字节的字符内容必须存入 CLOB。在 MySQL 中，没有 CLOB 类型的概念，而是使用行为类似于 VARCHAR 的 LONGTEXT 类型。为了实现完全的可移植性，请使用 `LobHandler` 来处理那些因字段大小而在某些数据库中可能需要 LOB 的字段（以 Oracle 的数字作为指导）。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as bytes from the given ResultSet.\nMight simply invoke <code>ResultSet.getBytes</code> or work with\n<code>ResultSet.getBlob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中作为字节检索该列。\n可能只需调用 `<code>ResultSet.getBytes</code>`，或者根据数据库和驱动程序使用 `<code>ResultSet.getBlob</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as binary stream from the given ResultSet.\nMight simply invoke <code>ResultSet.getBinaryStream</code> or work with\n<code>ResultSet.getBlob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中检索该列作为二进制流。根据数据库和驱动程序，可能只需调用 `<code>ResultSet.getBinaryStream</code>` 或处理 `<code>ResultSet.getBlob</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as String from the given ResultSet.\nMight simply invoke <code>ResultSet.getString</code> or work with\n<code>ResultSet.getClob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中检索该列作为 String。根据数据库和驱动程序，可能只需调用 `<code>ResultSet.getString</code>`，或使用 `<code>ResultSet.getClob</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as ASCII stream from the given ResultSet.\nMight simply invoke <code>ResultSet.getAsciiStream</code> or work with\n<code>ResultSet.getClob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中检索指定的列作为 ASCII 流。\n具体是调用 `<code>ResultSet.getAsciiStream</code>` 还是使用 `<code>ResultSet.getClob</code>`，取决于数据库和驱动程序。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as character stream from the given ResultSet.\nMight simply invoke <code>ResultSet.getCharacterStream</code> or work with\n<code>ResultSet.getClob</code>, depending on the database and driver.",
+      "translation": "从给定的 ResultSet 中获取给定列作为字符流。\n根据数据库和驱动程序，可能只需调用 `<code>ResultSet.getCharacterStream</code>` 或使用 `<code>ResultSet.getClob</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as binary stream from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中检索指定列作为二进制流。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as bytes from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中获取该列的字节。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as ASCII stream from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中检索指定的列作为 ASCII 流。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as character stream from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中获取给定列作为字符流。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the given column as String from the given ResultSet.",
+      "translation": "从给定的 ResultSet 中检索该列作为 String。",
+      "count": 2
+    },
+    {
+      "source": "<b>JDBC 4.0 driver (including Oracle 11g driver):</b> Use <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>,\npotentially with <code>streamAsLob=true</code> if your database driver requires that\nhint when populating a LOB field. Fall back to <code>createTemporaryLob=true</code>\nif you happen to run into LOB size limitations with your (Oracle) database setup.",
+      "translation": "<b>JDBC 4.0 驱动程序（包括 Oracle 11g 驱动程序）：</b> 使用<a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>，如果您的数据库驱动程序在填充 LOB 字段时需要该提示，则可能需要设置<code>streamAsLob=true</code>。如果您碰巧遇到（Oracle）数据库设置的 LOB 大小限制，请回退到使用<code>createTemporaryLob=true</code>。",
+      "count": 2
+    },
+    {
+      "source": "<b>PostgreSQL:</b> Configure <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a> with <code>wrapAsLob=true</code>,\nand use that LobHandler to access OID columns (but not BYTEA) in your database tables.",
+      "translation": "<b>PostgreSQL：</b> 配置 <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>，设置 <code>wrapAsLob=true</code>，并使用该 LobHandler 访问数据库表中的 OID 列（但不包括 BYTEA）。",
+      "count": 2
+    },
+    {
+      "source": "<b>Oracle 10g driver:</b> Use <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a> with standard setup.\nOn Oracle 10.1, set the \"SetBigStringTryClob\" connection property; as of Oracle 10.2,\nDefaultLobHandler should work with standard setup out of the box.",
+      "translation": "<b>Oracle 10g 驱动程序：</b> 使用标准配置配合 <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>。\n在 Oracle 10.1 上，请设置 \"SetBigStringTryClob\" 连接属性；从 Oracle 10.2 开始，\nDefaultLobHandler 应能使用标准配置开箱即用。",
+      "count": 2
+    },
+    {
+      "source": "For all other database drivers (and for non-LOB fields that might potentially\nturn into LOBs on some databases): Simply use a plain <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>.",
+      "translation": "对于所有其他数据库驱动程序（以及可能在某些数据库中潜在地转换为 LOB 的非 LOB 字段）：只需使用普通的 <a href=\"DefaultLobHandler.html\" title=\"class in org.springframework.jdbc.support.lob\"><code>DefaultLobHandler</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "the content as byte array, or <code>null</code> in case of SQL NULL",
+      "translation": "将内容作为字节数组，或在 SQL NULL 的情况下为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "the content as binary stream, or <code>null</code> in case of SQL NULL",
+      "translation": "以二进制流形式返回内容，或者在 SQL NULL 的情况下返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "the content as String, or <code>null</code> in case of SQL NULL",
+      "translation": "将内容作为 String，或者在 SQL NULL 的情况下为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "the content as ASCII stream, or <code>null</code> in case of SQL NULL",
+      "translation": "以 ASCII 流形式，或在 SQL NULL 的情况下为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "the content as character stream",
+      "translation": "作为字符流的内容。",
+      "count": 2
+    },
+    {
+      "source": "as of 6.2, in favor of <a href=\"../../core/support/SqlBinaryValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlBinaryValue</code></a>\nand <a href=\"../../core/support/SqlCharacterValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlCharacterValue</code></a>",
+      "translation": "自 6.2 版本起，推荐使用<a href=\"../../core/support/SqlBinaryValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlBinaryValue</code></a>和<a href=\"../../core/support/SqlCharacterValue.html\" title=\"class in org.springframework.jdbc.core.support\"><code>SqlCharacterValue</code></a>",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a> instance, i.e.",
+      "translation": "创建一个新的<a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a>实例，即",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a> instance, i.e. a session for creating BLOBs\nand CLOBs. Needs to be closed after the created LOBs are not needed anymore -\ntypically after statement execution or transaction completion.",
+      "translation": "创建一个新的 <a href=\"LobCreator.html\" title=\"interface in org.springframework.jdbc.support.lob\"><code>LobCreator</code></a> 实例，即用于创建 BLOB 和 CLOB 的会话。在不再需要创建的 LOB 后必须关闭它——通常在语句执行或事务完成后。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the new LobCreator instance",
+      "translation": "新的 LobCreator 实例",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-04-14 16:08:19",
+  "updated_at": "2026-04-14 16:08:19",
+  "stats": {
+    "total_entries": 48,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 66,
+    "entries_with_hits": 48,
+    "entries_without_hits": 0,
+    "hit_rate": 1.375,
+    "usage_percentage": 0.0048000000000000004
+  },
+  "items": [
+    {
+      "source": "<code>database</code> - the target database",
+      "translation": "<code>database</code> - 目标数据库",
+      "count": 3
+    },
+    {
+      "source": "Exposes Hibernate's persistence provider and Hibernate's Session as extended\nEntityManager interface, and adapts <a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\"><code>AbstractJpaVendorAdapter</code></a>'s common\nconfiguration settings. Also supports the detection of annotated packages (through\n<a href=\"../persistenceunit/SmartPersistenceUnitInfo.html#getManagedPackages()\"><code>SmartPersistenceUnitInfo.getManagedPackages()</code></a>),\nfor example, containing Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/annotations/FilterDef.html\" title=\"class or interface in org.hibernate.annotations\"><code>FilterDef</code></a> annotations,\nalong with Spring-driven entity scanning which requires no <code>persistence.xml</code>\n(<a href=\"../LocalContainerEntityManagerFactoryBean.html#setPackagesToScan(java.lang.String...)\"><code>LocalContainerEntityManagerFactoryBean.setPackagesToScan(String...)</code></a>).",
+      "translation": "暴露 Hibernate 的持久化提供程序和 Hibernate 的 Session 作为扩展的 EntityManager 接口，并适配 <a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\"><code>AbstractJpaVendorAdapter</code></a> 的通用配置设置。此外，还支持通过 <a href=\"../persistenceunit/SmartPersistenceUnitInfo.html#getManagedPackages()\"><code>SmartPersistenceUnitInfo.getManagedPackages()</code></a> 检测包含 Hibernate <a class=\"external-link\" href=\"https://docs.hibernate.org/orm/5.6/javadocs/org/hibernate/annotations/FilterDef.html\" title=\"class or interface in org.hibernate.annotations\"><code>FilterDef</code></a> 注解的包，以及无需 <code>persistence.xml</code> 的 Spring 驱动的实体扫描（<a href=\"../LocalContainerEntityManagerFactoryBean.html#setPackagesToScan(java.lang.String...)\"><code>LocalContainerEntityManagerFactoryBean.setPackagesToScan(String...)</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<b>A note about <code>HibernateJpaVendorAdapter</code> vs native Hibernate settings:</b>\nSome settings on this adapter may conflict with native Hibernate configuration rules\nor custom Hibernate properties. For example, specify either <a href=\"AbstractJpaVendorAdapter.html#setDatabase(org.springframework.orm.jpa.vendor.Database)\"><code>AbstractJpaVendorAdapter.setDatabase(Database)</code></a> or\nHibernate's \"hibernate.dialect_resolvers\" property, not both. Also, be careful about\nHibernate's connection release mode: This adapter prefers <code>ON_CLOSE</code> behavior,\naligned with <a href=\"HibernateJpaDialect.html#setPrepareConnection(boolean)\"><code>HibernateJpaDialect.setPrepareConnection(boolean)</code></a>, at least for non-JTA\nscenarios; you may override this through corresponding native Hibernate properties.",
+      "translation": "<b>关于 <code>HibernateJpaVendorAdapter</code> 与原生 Hibernate 设置的说明：</b>\n此适配器上的某些设置可能与原生 Hibernate 配置规则或自定义 Hibernate 属性冲突。例如，请指定以下两者之一：<a href=\"AbstractJpaVendorAdapter.html#setDatabase(org.springframework.orm.jpa.vendor.Database)\"><code>AbstractJpaVendorAdapter.setDatabase(Database)</code></a> 或 Hibernate 的 \"hibernate.dialect_resolvers\" 属性，而不能同时使用。此外，请注意 Hibernate 的连接释放模式：此适配器首选 <code>ON_CLOSE</code> 行为，与 <a href=\"HibernateJpaDialect.html#setPrepareConnection(boolean)\"><code>HibernateJpaDialect.setPrepareConnection(boolean)</code></a> 一致，至少在非 JTA 场景中；您可以通过相应的原生 Hibernate 属性覆盖此设置。",
+      "count": 2
+    },
+    {
+      "source": "See <a href=\"HibernateJpaDialect.html#setPrepareConnection(boolean)\"><code>HibernateJpaDialect.setPrepareConnection(boolean)</code></a> for details.\nThis is just a convenience flag passed through to <code>HibernateJpaDialect</code>.",
+      "translation": "有关详细信息，请参阅<a href=\"HibernateJpaDialect.html#setPrepareConnection(boolean)\"><code>HibernateJpaDialect.setPrepareConnection(boolean)</code></a>。这只是一个传递给<code>HibernateJpaDialect</code>的便捷标志。",
+      "count": 2
+    },
+    {
+      "source": "On Hibernate 5.1+, this flag remains <code>true</code> by default like against\nprevious Hibernate versions. The vendor adapter manually enforces Hibernate's\nnew connection handling mode <code>DELAYED_ACQUISITION_AND_HOLD</code> in that case\nunless a user-specified connection handling mode property indicates otherwise;\nswitch this flag to <code>false</code> to avoid that interference.",
+      "translation": "在 Hibernate 5.1+ 中，此标志默认保持为 `<code>true</code>`，与之前的 Hibernate 版本一致。在此情况下，供应商适配器会手动强制使用 Hibernate 的新连接处理模式 `<code>DELAYED_ACQUISITION_AND_HOLD</code>`，除非用户指定的连接处理模式属性另有指示；将此项标志切换为 `<code>false</code>` 以避免此类干扰。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: For a persistence unit with transaction type JTA, for example, on WebLogic,\nthe connection release mode will never be altered from its provider default,\ni.e. not be forced to <code>DELAYED_ACQUISITION_AND_HOLD</code> by this flag.</b>\nAlternatively, set Hibernate's \"hibernate.connection.handling_mode\"\nproperty to \"DELAYED_ACQUISITION_AND_RELEASE_AFTER_TRANSACTION\" or even\n\"DELAYED_ACQUISITION_AND_RELEASE_AFTER_STATEMENT\" in such a scenario.",
+      "translation": "<b>注意：对于事务类型为 JTA 的持久化单元（例如在 WebLogic 上），连接释放模式将永远不会从其提供程序默认值更改，即不会被此标志强制设置为 <code>DELAYED_ACQUISITION_AND_HOLD</code>。</b>或者，在此类场景中，将 Hibernate 的 \"hibernate.connection.handling_mode\" 属性设置为 \"DELAYED_ACQUISITION_AND_RELEASE_AFTER_TRANSACTION\" 甚至 \"DELAYED_ACQUISITION_AND_RELEASE_AFTER_STATEMENT\"。",
+      "count": 2
+    },
+    {
+      "source": "Note that there might be further JPA properties defined on the\nEntityManagerFactory bean, which might potentially override individual\nJPA property values specified here.",
+      "translation": "请注意，可能在 EntityManagerFactory 豆子上定义了进一步的 JPA 属性，这些属性可能会覆盖此处指定的各个 JPA 属性值。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation covers the common built-in dialects.",
+      "translation": "默认实现涵盖了常见的内置方言。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation covers the common community dialect for Derby.",
+      "translation": "默认实现涵盖了 Derby 的通用社区方言。",
+      "count": 2
+    },
+    {
+      "source": "Return the vendor-specific JpaDialect implementation for this\nprovider, or <code>null</code> if there is none.",
+      "translation": "返回此提供者的特定于厂商的 JpaDialect 实现，如果没有则返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Return the vendor-specific persistence provider.",
+      "translation": "返回特定于供应商的持久性提供者。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJpaVendorAdapter.html#getPersistenceProviderRootPackage()\">getPersistenceProviderRootPackage</a></code> in class <code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"AbstractJpaVendorAdapter.html#getPersistenceProviderRootPackage()\">getPersistenceProviderRootPackage</a></code>` 类中的 `<code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJpaVendorAdapter.html#getJpaPropertyMap(jakarta.persistence.spi.PersistenceUnitInfo)\">getJpaPropertyMap</a></code> in class <code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"AbstractJpaVendorAdapter.html#getJpaPropertyMap(jakarta.persistence.spi.PersistenceUnitInfo)\">getJpaPropertyMap</a></code>` 类中的 `<code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractJpaVendorAdapter.html#getEntityManagerFactoryInterface()\">getEntityManagerFactoryInterface</a></code> in class <code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"AbstractJpaVendorAdapter.html#getEntityManagerFactoryInterface()\">getEntityManagerFactoryInterface</a></code>` 类中的 `<code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "the Hibernate database dialect class, or <code>null</code> if none found",
+      "translation": "Hibernate 数据库方言类，或者如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "the Hibernate database dialect class name, or <code>null</code> if none found",
+      "translation": "Hibernate 数据库方言类名，如果未找到则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "a Map of JPA properties, as accepted by the standard JPA bootstrap\nfacilities, or an empty Map if there are no properties to expose",
+      "translation": "一个由标准 JPA 引导设施接受的 JPA 属性 Map，或者如果没有要暴露的属性则为空 Map。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This variant will only be invoked in case of Jakarta EE style\ncontainer bootstrapping where a <code>PersistenceUnitInfo</code> is present\n(i.e. <a href=\"../LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a>). In case of simple\nJava SE style bootstrapping via <code>Persistence</code>\n(i.e. <a href=\"../LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a>), the parameter-less\n<a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\"><code>JpaVendorAdapter.getJpaPropertyMap()</code></a> variant will be called directly.",
+      "translation": "<b>注意：</b>此变体仅在 Jakarta EE 风格的容器引导且存在 <code>PersistenceUnitInfo</code> 的情况下被调用（即 <a href=\"../LocalContainerEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalContainerEntityManagerFactoryBean</code></a>）。对于通过 <code>Persistence</code> 进行的简单 Java SE 风格引导（即 <a href=\"../LocalEntityManagerFactoryBean.html\" title=\"class in org.springframework.orm.jpa\"><code>LocalEntityManagerFactoryBean</code></a>），将直接调用无参数的 <a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\"><code>JpaVendorAdapter.getJpaPropertyMap()</code></a> 变体。",
+      "count": 1
+    },
+    {
+      "source": "This implementation delegates to <a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\"><code>JpaVendorAdapter.getJpaPropertyMap()</code></a> for\nnon-unit-dependent properties. Effectively, this PersistenceUnitInfo-based\nvariant only needs to be implemented if there is an actual need to react\nto unit-specific characteristics such as the transaction type.",
+      "translation": "此实现将非单元依赖属性的委托给 <a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\"><code>JpaVendorAdapter.getJpaPropertyMap()</code></a>。实际上，只有当确实需要响应单元特定特性（例如事务类型）时，才需要实现这种基于 PersistenceUnitInfo 的变体。",
+      "count": 1
+    },
+    {
+      "source": "If the provider does not offer any EntityManagerFactory extensions,\nthe adapter should simply return the standard\n<code>EntityManagerFactory</code> class here.",
+      "translation": "如果提供者不提供任何 EntityManagerFactory 扩展，适配器应在此处简单地返回标准的 `<code>EntityManagerFactory`</code> 类。",
+      "count": 1
+    },
+    {
+      "source": "If the provider does not offer any EntityManager extensions,\nthe adapter should simply return the standard\n<code>EntityManager</code> class here.",
+      "translation": "如果提供者不提供任何 EntityManager 扩展，适配器应在此处简单地返回标准的`EntityManager`类。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getPersistenceProvider()\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getPersistenceProvider()\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getPersistenceProviderRootPackage()\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getPersistenceProviderRootPackage()\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap(jakarta.persistence.spi.PersistenceUnitInfo)\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap(jakarta.persistence.spi.PersistenceUnitInfo)\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getJpaDialect()\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getJpaDialect()\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getEntityManagerFactoryInterface()\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getEntityManagerFactoryInterface()\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../JpaVendorAdapter.html#getEntityManagerInterface()\">JpaVendorAdapter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../JpaVendorAdapter.html#getEntityManagerInterface()\">JpaVendorAdapter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Determine the Hibernate database dialect class for the given target database.",
+      "translation": "确定给定目标数据库的 Hibernate 数据库方言类。",
+      "count": 1
+    },
+    {
+      "source": "Determine the Hibernate database dialect class name for the given target database.",
+      "translation": "确定给定目标数据库的 Hibernate 数据库方言类名。",
+      "count": 1
+    },
+    {
+      "source": "Return the vendor-specific EntityManagerFactory interface\nthat the EntityManagerFactory proxy is supposed to implement.",
+      "translation": "返回 EntityManagerFactory 代理应该实现的特定于供应商的 EntityManagerFactory 接口。",
+      "count": 1
+    },
+    {
+      "source": "Return the vendor-specific EntityManager interface\nthat this provider's EntityManagers will implement.",
+      "translation": "返回此提供者中的 EntityManager 将实现的特定于供应商的 EntityManager 接口。",
+      "count": 1
+    },
+    {
+      "source": "Return a Map of vendor-specific JPA properties,\ntypically based on settings in this JpaVendorAdapter instance.",
+      "translation": "返回一个包含特定于供应商的 JPA 属性的 Map，通常基于此 JpaVendorAdapter 实例中的设置。",
+      "count": 1
+    },
+    {
+      "source": "Return a Map of vendor-specific JPA properties for the given persistence\nunit, typically based on settings in this JpaVendorAdapter instance.",
+      "translation": "返回给定持久化单元的供应商特定 JPA 属性的 Map，通常基于此 JpaVendorAdapter 实例中的设置。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the persistence provider's root package\n(for example, \"oracle.toplink.essentials\").",
+      "translation": "返回持久化提供程序的根包名称（例如，\"oracle.toplink.essentials\"）。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to prepare the underlying JDBC Connection of a transactional\nHibernate Session, that is, whether to apply a transaction-specific\nisolation level and/or the transaction's read-only flag to the underlying\nJDBC Connection.",
+      "translation": "设置是否准备事务性 Hibernate Session 的底层 JDBC 连接，即是否将特定于事务的隔离级别和/或事务的只读标志应用于底层 JDBC 连接。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the persistence provider's root package\n(for example, \"oracle.toplink.essentials\"). Will be used for\nexcluding provider classes from temporary class overriding.",
+      "translation": "返回持久化提供程序根包名称（例如，\"oracle.toplink.essentials\"）。将用于从临时类覆盖中排除提供程序类。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaVendorAdapter.html#getPersistenceProviderRootPackage()\">getPersistenceProviderRootPackage</a></code> in interface <code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"../JpaVendorAdapter.html#getPersistenceProviderRootPackage()\">getPersistenceProviderRootPackage</a></code>` 接口 `<code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap(jakarta.persistence.spi.PersistenceUnitInfo)\">getJpaPropertyMap</a></code> in interface <code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap(jakarta.persistence.spi.PersistenceUnitInfo)\">getJpaPropertyMap</a></code>` 接口 `<code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\">getJpaPropertyMap</a></code> in interface <code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"../JpaVendorAdapter.html#getJpaPropertyMap()\">getJpaPropertyMap</a></code>` 接口 `<code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractJpaVendorAdapter.html#getJpaPropertyMap()\">getJpaPropertyMap</a></code> in class <code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"AbstractJpaVendorAdapter.html#getJpaPropertyMap()\">getJpaPropertyMap</a></code>` 类中的 `<code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaVendorAdapter.html#getJpaDialect()\">getJpaDialect</a></code> in interface <code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"../JpaVendorAdapter.html#getJpaDialect()\">getJpaDialect</a></code>` 接口 `<code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractJpaVendorAdapter.html#getJpaDialect()\">getJpaDialect</a></code> in class <code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"AbstractJpaVendorAdapter.html#getJpaDialect()\">getJpaDialect</a></code>` 类中的 `<code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaVendorAdapter.html#getEntityManagerFactoryInterface()\">getEntityManagerFactoryInterface</a></code> in interface <code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"../JpaVendorAdapter.html#getEntityManagerFactoryInterface()\">getEntityManagerFactoryInterface</a></code>` 接口 `<code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../JpaVendorAdapter.html#getEntityManagerInterface()\">getEntityManagerInterface</a></code> in interface <code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"../JpaVendorAdapter.html#getEntityManagerInterface()\">getEntityManagerInterface</a></code>` 接口 `<code><a href=\"../JpaVendorAdapter.html\" title=\"interface in org.springframework.orm.jpa\">JpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractJpaVendorAdapter.html#getEntityManagerInterface()\">getEntityManagerInterface</a></code> in class <code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>",
+      "translation": "`<code><a href=\"AbstractJpaVendorAdapter.html#getEntityManagerInterface()\">getEntityManagerInterface</a></code>` 类中的 `<code><a href=\"AbstractJpaVendorAdapter.html\" title=\"class in org.springframework.orm.jpa.vendor\">AbstractJpaVendorAdapter</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code>pui</code> - the PersistenceUnitInfo for the current persistence unit",
+      "translation": "<pui</p> - 当前持久化单元的 PersistenceUnitInfo",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson",
+      "translation": "Juergen Hoeller，Rod Johnson",
+      "count": 1
+    }
+  ]
+}

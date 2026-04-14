@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 16:13:09",
+  "updated_at": "2026-04-14 16:13:09",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 30,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "Wraps the given <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> with a proxy that delegates every method call\nto it but delegates <code>close()</code> calls to <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a>.",
+      "translation": "包装给定的<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>，使用一个代理来委托所有方法调用给它，但将<code>close()</code> 调用委托给<a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"TransactionAwareConnectionFactoryProxy.html\" title=\"class in org.springframework.r2dbc.connection\"><code>TransactionAwareConnectionFactoryProxy</code></a>.",
+      "translation": "创建一个新的<a href=\"TransactionAwareConnectionFactoryProxy.html\" title=\"class in org.springframework.r2dbc.connection\"><code>TransactionAwareConnectionFactoryProxy</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Delegates to <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a> for automatically participating\nin Spring-managed transactions.",
+      "translation": "委托给<a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a>以自动参与由 Spring 管理的事务。",
+      "count": 3
+    },
+    {
+      "source": "Delegates to <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a> for automatically participating\nin thread-bound transactions, for example managed by <a href=\"R2dbcTransactionManager.html\" title=\"class in org.springframework.r2dbc.connection\"><code>R2dbcTransactionManager</code></a>.\n<a href=\"#create()\"><code>create()</code></a> calls and <code>close</code> calls on returned <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>\nwill behave properly within a transaction, i.e. always operate on the\ntransactional Connection. If not within a transaction, normal <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>\nbehavior applies.",
+      "translation": "委托给 <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a> 以自动参与线程绑定的事务，例如由 <a href=\"R2dbcTransactionManager.html\" title=\"class in org.springframework.r2dbc.connection\"><code>R2dbcTransactionManager</code></a> 管理的事务。<a href=\"#create()\"><code>create()</code></a> 调用以及对返回的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> 执行的 <code>close</code> 调用将在事务内正确运行，即始终在事务性 Connection 上操作。如果不在事务内，则应用正常的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 行为。",
+      "count": 2
+    },
+    {
+      "source": "<b>Make sure that <a href=\"TransactionAwareConnectionFactoryProxy.html\" title=\"class in org.springframework.r2dbc.connection\"><code>TransactionAwareConnectionFactoryProxy</code></a> is the outermost\n<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> of a chain of <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> proxies/adapters.</b>\n<a href=\"TransactionAwareConnectionFactoryProxy.html\" title=\"class in org.springframework.r2dbc.connection\"><code>TransactionAwareConnectionFactoryProxy</code></a> can delegate either directly to the\ntarget connection pool or to some intermediary proxy/adapter.",
+      "translation": "<b>请确保 <a href=\"TransactionAwareConnectionFactoryProxy.html\" title=\"class in org.springframework.r2dbc.connection\"><code>TransactionAwareConnectionFactoryProxy</code></a> 是连接工厂链中最外层的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>。</b>\n<a href=\"TransactionAwareConnectionFactoryProxy.html\" title=\"class in org.springframework.r2dbc.connection\"><code>TransactionAwareConnectionFactoryProxy</code></a> 可以直接委托给目标连接池，也可以委托给某些中间代理/适配器。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> proxy needs to return wrapped\n<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>s in order to handle close calls properly.\nUse <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Wrapped.html#unwrap--\" title=\"class or interface in io.r2dbc.spi\"><code>Wrapped.unwrap()</code></a> to retrieve the native R2DBC Connection.",
+      "translation": "<b>注意：</b>此 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 代理需要返回包装后的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>s，以便正确处理关闭调用。请使用 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Wrapped.html#unwrap--\" title=\"class or interface in io.r2dbc.spi\"><code>Wrapped.unwrap()</code></a> 获取原生的 R2DBC Connection。",
+      "count": 2
+    },
+    {
+      "source": "Data access code that should remain unaware of Spring's data access\nsupport can work with this proxy to seamlessly participate in\nSpring-managed transactions.\nNote that the transaction manager, for example <a href=\"R2dbcTransactionManager.html\" title=\"class in org.springframework.r2dbc.connection\"><code>R2dbcTransactionManager</code></a>,\nstill needs to work with the underlying <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>,\n<i>not</i> with this proxy.",
+      "translation": "能够保持对 Spring 数据访问支持无知的数据访问代码，可以通过此代理无缝参与由 Spring 管理的事务。请注意，事务管理器（例如 <a href=\"R2dbcTransactionManager.html\" title=\"class in org.springframework.r2dbc.connection\"><code>R2dbcTransactionManager</code></a>）仍然需要与底层的 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 配合工作，<i>而不是</i>与此代理配合。",
+      "count": 2
+    },
+    {
+      "source": "This proxy allows data access code to work with the plain R2DBC API. However,\nif possible, use Spring's <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a> or <code>DatabaseClient</code>\nto get transaction participation even without a proxy for the target\n<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>, avoiding the need to define such a proxy in the first place.",
+      "translation": "此代理允许数据访问代码与普通的 R2DBC API 配合工作。然而，如果可能，请使用 Spring 的 <a href=\"ConnectionFactoryUtils.html\" title=\"class in org.springframework.r2dbc.connection\"><code>ConnectionFactoryUtils</code></a> 或 <code>DatabaseClient</code> 来获取事务参与功能，即使目标 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 没有代理也是如此，从而避免首先定义此类代理。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetConnectionFactory</code> - the <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> that the <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> came from",
+      "translation": "<code>targetConnectionFactory</code> - 该 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a> 是 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> 的来源",
+      "count": 2
+    },
+    {
+      "source": "<code>targetConnectionFactory</code> - the target <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>",
+      "translation": "<code>targetConnectionFactory</code> - 目标 <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\"><code>ConnectionFactory</code></a>",
+      "count": 2
+    },
+    {
+      "source": "a transactional <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a> if any, a new one else.",
+      "translation": "如果存在事务性<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>，则使用它；否则创建一个新的。",
+      "count": 2
+    },
+    {
+      "source": "the wrapped <a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>.",
+      "translation": "被包装的<a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/Connection.html\" title=\"class or interface in io.r2dbc.spi\"><code>Connection</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#create--\" title=\"class or interface in io.r2dbc.spi\">create</a></code> in interface <code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html#create--\" title=\"class or interface in io.r2dbc.spi\">create</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://r2dbc.io/spec/1.0.0.RELEASE/api/io/r2dbc/spi/ConnectionFactory.html\" title=\"class or interface in io.r2dbc.spi\">ConnectionFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"DelegatingConnectionFactory.html#create()\">create</a></code> in class <code><a href=\"DelegatingConnectionFactory.html\" title=\"class in org.springframework.r2dbc.connection\">DelegatingConnectionFactory</a></code>",
+      "translation": "`<code><a href=\"DelegatingConnectionFactory.html#create()\">create</a></code>` 在类 `<code><a href=\"DelegatingConnectionFactory.html\" title=\"class in org.springframework.r2dbc.connection\">DelegatingConnectionFactory</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl",
+      "translation": "Mark Paluch，Christoph Strobl",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "created_at": "2026-04-14 17:39:05",
+  "updated_at": "2026-04-14 17:39:05",
+  "stats": {
+    "total_entries": 41,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 45,
+    "entries_with_hits": 41,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0975609756097562,
+    "usage_percentage": 0.0041
+  },
+  "items": [
+    {
+      "source": "Also implements the <a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> interface to enable the execution\norder of synchronizations to be controlled declaratively. The default\n<a href=\"#getOrder()\"><code>order</code></a> is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>, indicating\nlate execution; return a lower value for earlier execution.",
+      "translation": "还实现了<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>接口，以支持通过声明方式控制同步的执行顺序。默认的<a href=\"#getOrder()\"><code>order</code></a>值为<a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>，表示延迟执行；返回较小的值可实现更早执行。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#getOrder()\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#getOrder()\">TransactionSynchronization</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Flush the underlying session to the datastore, if applicable:\nfor example, a Hibernate/JPA session.",
+      "translation": "刷新底层会话到数据存储区（如果适用）：例如，Hibernate/JPA 会话。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> The transaction will have been committed already, but the\ntransactional resources might still be active and accessible. As a consequence,\nany data access code triggered at this point will still \"participate\" in the\noriginal transaction, allowing to perform some cleanup (with no commit following\nanymore!), unless it explicitly declares that it needs to run in a separate\ntransaction. Hence: <b>Use <code>PROPAGATION_REQUIRES_NEW</code> for any\ntransactional operation that is called from here.</b>",
+      "translation": "<b>注意：</b> 事务可能已经提交，但事务性资源可能仍然处于活动状态并可访问。因此，在此时触发的任何数据访问代码仍会“参与”原始事务，从而允许执行一些清理操作（而不再进行提交！），除非它明确声明需要在独立的事务中运行。因此：<b>对于从此处调用的任何事务性操作，请使用 <code>PROPAGATION_REQUIRES_NEW</code>。</b>",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> The transaction will have been committed or rolled back already,\nbut the transactional resources might still be active and accessible. As a\nconsequence, any data access code triggered at this point will still \"participate\"\nin the original transaction, allowing to perform some cleanup (with no commit\nfollowing anymore!), unless it explicitly declares that it needs to run in a\nseparate transaction. Hence: <b>Use <code>PROPAGATION_REQUIRES_NEW</code>\nfor any transactional operation that is called from here.</b>",
+      "translation": "<b>注意：</b>此时事务可能已经提交或回滚，但事务性资源可能仍然处于活动状态并可访问。因此，在此时触发的任何数据访问代码仍会“参与”原始事务，从而允许执行一些清理操作（而不再进行后续提交！），除非它明确声明需要在独立的事务中运行。因此：<b>对于从此处调用的任何事务性操作，请使用 <code>PROPAGATION_REQUIRES_NEW</code>。</b>",
+      "count": 1
+    },
+    {
+      "source": "Default is <a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>.",
+      "translation": "默认值为 `<a href=\"../../core/Ordered.html#LOWEST_PRECEDENCE\"><code>Ordered.LOWEST_PRECEDENCE</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "This method will be invoked after <code>beforeCommit</code>, even when\n<code>beforeCommit</code> threw an exception. This callback allows for\nclosing resources before transaction completion, for any outcome.",
+      "translation": "此方法将在 `<code>beforeCommit</code>` 之后被调用，即使 `<code>beforeCommit</code>` 抛出了异常。此回调允许在事务完成前的任何结果下关闭资源。",
+      "count": 1
+    },
+    {
+      "source": "This callback does <i>not</i> mean that the transaction will actually be committed.\nA rollback decision can still occur after this method has been called. This callback\nis rather meant to perform work that's only relevant if a commit still has a chance\nto happen, such as flushing SQL statements to the database.",
+      "translation": "此回调并不意味着事务实际上会被提交。在此方法调用之后仍可能发生回滚决策。此回调主要用于执行仅在提交仍有发生机会时才相关的工作，例如将 SQL 语句刷新到数据库。",
+      "count": 1
+    },
+    {
+      "source": "Note that exceptions will get propagated to the commit caller and cause a\nrollback of the transaction.",
+      "translation": "注意，异常将传播到提交调用者并导致事务回滚。",
+      "count": 1
+    },
+    {
+      "source": "Can, for example, commit further operations that are supposed to follow on a successful\ncommit of the main transaction, like confirmation messages or emails.",
+      "translation": "例如，可以提交应在主事务成功提交后执行的进一步操作，如确认消息或电子邮件。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#suspend()\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#suspend()\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#resume()\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#resume()\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#flush()\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#flush()\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#beforeCommit(boolean)\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#beforeCommit(boolean)\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#beforeCompletion()\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#beforeCompletion()\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#afterCommit()\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#afterCommit()\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"TransactionSynchronization.html#afterCompletion(int)\">TransactionSynchronization</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"TransactionSynchronization.html#afterCompletion(int)\">TransactionSynchronization</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "as of 5.3, in favor of the default methods on the\n<a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\"><code>TransactionSynchronization</code></a> interface",
+      "translation": "自 5.3 版本起，优先使用 <a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\"><code>TransactionSynchronization</code></a> 接口上的默认方法。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after transaction commit.",
+      "translation": "事务提交后调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after transaction commit/rollback.",
+      "translation": "在事务提交/回滚后调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked before transaction commit (before \"beforeCompletion\").",
+      "translation": "在事务提交之前调用（在\"beforeCompletion\"之前）。",
+      "count": 1
+    },
+    {
+      "source": "Invoked before transaction commit/rollback.",
+      "translation": "事务提交/回滚前调用。",
+      "count": 1
+    },
+    {
+      "source": "Return the execution order for this transaction synchronization.",
+      "translation": "返回此事务同步的执行顺序。",
+      "count": 1
+    },
+    {
+      "source": "Resume this synchronization.",
+      "translation": "恢复此同步。",
+      "count": 1
+    },
+    {
+      "source": "Suspend this synchronization.",
+      "translation": "挂起此同步。",
+      "count": 1
+    },
+    {
+      "source": "Suspend this synchronization.\nSupposed to unbind resources from TransactionSynchronizationManager if managing any.",
+      "translation": "挂起此同步。如果管理任何资源，则应从 TransactionSynchronizationManager 解绑这些资源。",
+      "count": 1
+    },
+    {
+      "source": "Resume this synchronization.\nSupposed to rebind resources to TransactionSynchronizationManager if managing any.",
+      "translation": "恢复此同步。如果管理任何资源，应重新绑定到 TransactionSynchronizationManager。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code> in interface <code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>",
+      "translation": "`<code><a href=\"../../core/Ordered.html#getOrder()\">getOrder</a></code>` 接口 `<code><a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\">Ordered</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#suspend()\">suspend</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#suspend()\">suspend</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#resume()\">resume</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#resume()\">resume</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html#flush()\" title=\"class or interface in java.io\">flush</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html\" title=\"class or interface in java.io\">Flushable</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html#flush()\" title=\"class or interface in java.io\">flush</a></code>` 接口 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Flushable.html\" title=\"class or interface in java.io\">Flushable</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#flush()\">flush</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#flush()\">flush</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#beforeCommit(boolean)\">beforeCommit</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#beforeCommit(boolean)\">beforeCommit</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#beforeCompletion()\">beforeCompletion</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#beforeCompletion()\">beforeCompletion</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#afterCommit()\">afterCommit</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#afterCommit()\">afterCommit</a></code>` 在接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TransactionSynchronization.html#afterCompletion(int)\">afterCompletion</a></code> in interface <code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>",
+      "translation": "`<code><a href=\"TransactionSynchronization.html#afterCompletion(int)\">afterCompletion</a></code>` 接口 `<code><a href=\"TransactionSynchronization.html\" title=\"interface in org.springframework.transaction.support\">TransactionSynchronization</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>status</code> - completion status according to the <code>STATUS_*</code> constants",
+      "translation": "<code>status</code> - 根据 <code>STATUS_*</code> 常量确定的完成状态",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - whether the transaction is defined as read-only transaction",
+      "translation": "<code>readOnly</code> - 事务是否定义为只读事务",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the order value",
+      "translation": "订单金额",
+      "count": 1
+    }
+  ]
+}

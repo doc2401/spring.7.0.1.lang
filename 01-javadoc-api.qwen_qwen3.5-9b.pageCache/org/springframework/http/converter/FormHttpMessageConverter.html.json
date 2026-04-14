@@ -1,0 +1,366 @@
+{
+  "created_at": "2026-04-14 14:13:37",
+  "updated_at": "2026-04-14 14:13:37",
+  "stats": {
+    "total_entries": 70,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 111,
+    "entries_with_hits": 70,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5857142857142856,
+    "usage_percentage": 0.006999999999999999
+  },
+  "items": [
+    {
+      "source": "Return the <a href=\"#setPartConverters(java.util.List)\">configured converters</a> for MIME\nparts.",
+      "translation": "返回 MIME 部分的<a href=\"#setPartConverters(java.util.List)\">配置转换器</a>。",
+      "count": 3
+    },
+    {
+      "source": "By default, <code>\"multipart/form-data\"</code> is used as the content type when\n<a href=\"#write(org.springframework.util.MultiValueMap,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">writing</a> multipart data. It is also possible to write\nmultipart data using other multipart subtypes such as <code>\"multipart/mixed\"</code>\nand <code>\"multipart/related\"</code>, as long as the multipart subtype is registered\nas a <a href=\"#getSupportedMediaTypes()\">supported media type</a> <em>and</em> the\ndesired multipart subtype is specified as the content type when\n<a href=\"#write(org.springframework.util.MultiValueMap,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">writing</a> the multipart data. Note that <code>\"multipart/mixed\"</code>\nis registered as a supported media type by default.",
+      "translation": "默认情况下，在<a href=\"#write(org.springframework.util.MultiValueMap,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">写入</a>多部分数据时，使用`\"multipart/form-data\"`作为内容类型。也可以使用其他多部分子类型（如`\"multipart/mixed\"`和`\"multipart/related\"`）来写入多部分数据，前提是已将该多部分子类型注册为<a href=\"#getSupportedMediaTypes()\">支持的内容类型</a> <em>并且</em>在<a href=\"#write(org.springframework.util.MultiValueMap,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">写入</a>多部分数据时指定了所需的多部分子类型作为内容类型。请注意，`\"multipart/mixed\"`默认已注册为支持的内容类型。",
+      "count": 2
+    },
+    {
+      "source": "When writing multipart data, this converter uses other\n<a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverters</code></a> to write the respective\nMIME parts. By default, basic converters are registered for byte array,\n<code>String</code>, and <code>Resource</code>. These can be overridden via\n<a href=\"#setPartConverters(java.util.List)\"><code>setPartConverters(List)</code></a> or augmented via <a href=\"#addPartConverter(org.springframework.http.converter.HttpMessageConverter)\"><code>addPartConverter(HttpMessageConverter)</code></a>.",
+      "translation": "在编写多部分数据时，此转换器使用其他<a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverters</code></a>来编写相应的 MIME 部分。默认情况下，已为字节数组、<code>String</code>和<code>Resource</code>注册了基本转换器。这些可以通过<a href=\"#setPartConverters(java.util.List)\"><code>setPartConverters(List)</code></a>进行覆盖，或通过<a href=\"#addPartConverter(org.springframework.http.converter.HttpMessageConverter)\"><code>addPartConverter(HttpMessageConverter)</code></a>进行扩展。",
+      "count": 2
+    },
+    {
+      "source": "In other words, this converter can read and write the\n<code>\"application/x-www-form-urlencoded\"</code> media type as\n<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\"><code>MultiValueMap&lt;String, String&gt;</code></a>, and it can also\nwrite (but not read) the <code>\"multipart/form-data\"</code> and\n<code>\"multipart/mixed\"</code> media types as\n<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\"><code>MultiValueMap&lt;String, Object&gt;</code></a>.",
+      "translation": "换句话说，此转换器可以读写 <code>\"application/x-www-form-urlencoded\"</code> 媒体类型作为 <a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\"><code>MultiValueMap&lt;String, String&gt;</code></a>，并且它也可以写入（但不能读取）<code>\"multipart/form-data\"</code> 和 <code>\"multipart/mixed\"</code> 媒体类型作为 <a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\"><code>MultiValueMap&lt;String, Object&gt;</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "As of 5.0, this is also used for part headers including\n<code>Content-Disposition</code> (and its filename parameter) unless (the mutually\nexclusive) <a href=\"#setMultipartCharset(java.nio.charset.Charset)\"><code>multipartCharset</code></a> is also set, in\nwhich case part headers are encoded as ASCII and <i>filename</i> is encoded\nwith the <code>encoded-word</code> syntax from RFC 2047.",
+      "translation": "自 5.0 版本起，此功能也用于部分头信息（包括`Content-Disposition`及其文件名参数），除非同时设置了（互斥的）<a href=\"#setMultipartCharset(java.nio.charset.Charset)\"><code>multipartCharset</code></a>；在这种情况下，部分头信息将编码为 ASCII，而<i>filename</i>则使用 RFC 2047 中的`encoded-word`语法进行编码。",
+      "count": 2
+    },
+    {
+      "source": "As of 5.0 by default part headers, including <code>Content-Disposition</code>\n(and its filename parameter) will be encoded based on the setting of\n<a href=\"#setCharset(java.nio.charset.Charset)\"><code>setCharset(Charset)</code></a> or <code>UTF-8</code> by default.",
+      "translation": "自 5.0 版本起，默认情况下，部分头（包括 `<code>Content-Disposition`（及其文件名参数））将根据<a href=\"#setCharset(java.nio.charset.Charset)\"><code>setCharset(Charset)</code></a>的设置或默认的`UTF-8`进行编码。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <a href=\"../../core/io/Resource.html#getFilename()\"><code>Resource.getFilename()</code></a> if the part is a\n<code>Resource</code>, and <code>null</code> in other cases. Can be overridden in subclasses.",
+      "translation": "默认实现如果该部分为`Resource`，则返回<a href=\"../../core/io/Resource.html#getFilename()\"><code>Resource.getFilename()</code></a>，否则返回<code>null</code>。可在子类中重写此方法。",
+      "count": 2
+    },
+    {
+      "source": "The supplied <code>MediaType</code> objects will be appended to the list\nof <a href=\"#getSupportedMediaTypes()\">supported MediaType objects</a>.",
+      "translation": "提供的 `<code>MediaType</code>` 对象将被追加到<a href=\"#getSupportedMediaTypes()\">支持的 MediaType 对象</a>列表中。",
+      "count": 2
+    },
+    {
+      "source": "This implementation delegates to\n<a href=\"../../util/MimeTypeUtils.html#generateMultipartBoundary()\"><code>MimeTypeUtils.generateMultipartBoundary()</code></a>.",
+      "translation": "此实现委托给 <a href=\"../../util/MimeTypeUtils.html#generateMultipartBoundary()\"><code>MimeTypeUtils.generateMultipartBoundary()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The following snippet shows how to submit an HTML form using the\n<code>\"multipart/form-data\"</code> content type.",
+      "translation": "以下代码片段展示了如何使用 `\"multipart/form-data\"` 内容类型提交 HTML 表单。",
+      "count": 2
+    },
+    {
+      "source": "The following snippet shows how to do a file upload using the\n<code>\"multipart/form-data\"</code> content type.",
+      "translation": "以下代码片段展示了如何使用 `\"multipart/form-data\"` 内容类型进行文件上传。",
+      "count": 2
+    },
+    {
+      "source": "The following snippet shows how to do a file upload using the\n<code>\"multipart/mixed\"</code> content type.",
+      "translation": "以下代码片段展示了如何使用 `\"multipart/mixed\"` 内容类型进行文件上传。",
+      "count": 2
+    },
+    {
+      "source": "The following snippet shows how to do a file upload using the\n<code>\"multipart/related\"</code> content type.",
+      "translation": "以下代码片段展示了如何使用 `\"multipart/related\"` 内容类型进行文件上传。",
+      "count": 2
+    },
+    {
+      "source": "Some methods in this class were inspired by\n<code>org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity</code>.",
+      "translation": "此类中的一些方法受 `<code>org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity</code>` 的启发。",
+      "count": 2
+    },
+    {
+      "source": "As of 4.3, this is also used as the default charset for the conversion\nof text bodies in a multipart request.",
+      "translation": "自 4.3 版本起，这也用作多部分请求中文本主体转换的默认字符集。",
+      "count": 2
+    },
+    {
+      "source": "Return an <a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a> for the given part Object.",
+      "translation": "返回给定部分对象的<a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set the list of <a href=\"../MediaType.html\" title=\"class in org.springframework.http\"><code>MediaType</code></a> objects supported by this converter.",
+      "translation": "设置此转换器支持的 <a href=\"../MediaType.html\" title=\"class in org.springframework.http\"><code>MediaType</code></a> 对象列表。",
+      "count": 2
+    },
+    {
+      "source": "Return the content type used to write forms, either the given content type\nor otherwise <code>application/x-www-form-urlencoded</code>.",
+      "translation": "返回用于写入表单的内容类型，即给定的内容类型，否则为 `<code>application/x-www-form-urlencoded</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The default charset used by the converter.",
+      "translation": "转换器使用的默认字符集。",
+      "count": 2
+    },
+    {
+      "source": "Indicates whether the given class can be read by this converter.",
+      "translation": "指示该转换器是否可以读取给定的类。",
+      "count": 2
+    },
+    {
+      "source": "Indicates whether the given class can be written by this converter.",
+      "translation": "指示该转换器是否可以写入给定类。",
+      "count": 2
+    },
+    {
+      "source": "Read an object of the given type from the given input message, and returns it.",
+      "translation": "从给定的输入消息中读取给定类型的对象，并返回它。",
+      "count": 2
+    },
+    {
+      "source": "Write a given object to the given output message.",
+      "translation": "将给定对象写入给定的输出消息中。",
+      "count": 2
+    },
+    {
+      "source": "Set the message body converters to use. These converters are used to\nconvert objects to MIME parts.",
+      "translation": "设置要使用的消息正文转换器。这些转换器用于将对象转换为 MIME 部分。",
+      "count": 2
+    },
+    {
+      "source": "Add a message body converter. Such a converter is used to convert objects\nto MIME parts.",
+      "translation": "添加消息正文转换器。此类转换器用于将对象转换为 MIME 部分。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"HttpMessageConverter.html#getSupportedMediaTypes()\">getSupportedMediaTypes</a></code> in interface <code><a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code>",
+      "translation": "`HttpMessageConverter` 接口中的 `<a href=\"HttpMessageConverter.html#getSupportedMediaTypes()\">getSupportedMediaTypes</a>` 方法，其类型为 `<code><a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"HttpMessageConverter.html#canRead(java.lang.Class,org.springframework.http.MediaType)\">canRead</a></code> in interface <code><a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code>",
+      "translation": "`canRead` 在接口 `<a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code> 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\">canWrite</a></code> in interface <code><a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code>",
+      "translation": "`canWrite` 在接口 `<a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code> 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"HttpMessageConverter.html#read(java.lang.Class,org.springframework.http.HttpInputMessage)\">read</a></code> in interface <code><a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code>",
+      "translation": "`read` 在接口 `<a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code> 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"HttpMessageConverter.html#write(T,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">write</a></code> in interface <code><a href=\"HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">HttpMessageConverter</a>&lt;<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;&gt;</code>",
+      "translation": "`HttpMessageConverter` 接口中 `<a href=\"HttpMessageConverter.html#write(T,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">write</a>` 方法，其泛型类型为 `<a href=\"../../util/MultiValueMap.html\" title=\"interface in org.springframework.util\">MultiValueMap</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>,<wbr/>?&gt;</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>map</code> - the object to write to the output message. The type of this object must have previously been\npassed to the <a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\"><code>canWrite</code></a> method of this interface, which must have returned <code>true</code>.",
+      "translation": "<code>map</code> - 要写入输出消息的对象。该对象的类型必须此前已传递给此接口的<a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\"><code>canWrite</code></a>方法，且该方法必须返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>contentType</code> - the content type passed to <a href=\"#write(org.springframework.util.MultiValueMap,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\"><code>write(MultiValueMap, MediaType, HttpOutputMessage)</code></a>, or <code>null</code>",
+      "translation": "<code>contentType</code> - 传递给<a href=\"#write(org.springframework.util.MultiValueMap,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\"><code>write(MultiValueMap, MediaType, HttpOutputMessage)</code></a>的内容类型，或为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "the part Object itself it is an <a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a>,\nor a newly built <a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a> wrapper for that part",
+      "translation": "该部分本身是一个 `<a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a>`，或者是为该部分新构建的 `<a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a>` 包装器。",
+      "count": 2
+    },
+    {
+      "source": "<code>part</code> - the part to return an <a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a> for",
+      "translation": "<code>part</code> - 要返回 <a href=\"../HttpEntity.html\" title=\"class in org.springframework.http\"><code>HttpEntity</code></a> 的部分",
+      "count": 2
+    },
+    {
+      "source": "<code>supportedMediaTypes</code> - a var-args list of <code>MediaType</code> objects to add",
+      "translation": "<code>supportedMediaTypes</code> - 要添加的 <code>MediaType</code> 对象的变长参数列表",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of I/O errors",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 在发生 I/O 错误时",
+      "count": 2
+    },
+    {
+      "source": "<code>part</code> - the part to determine the file name for",
+      "translation": "<code>part</code> - 用于确定文件名的部分",
+      "count": 2
+    },
+    {
+      "source": "the filename, or <code>null</code> if not known",
+      "translation": "文件名，或未知时为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "Arjen Poutsma, Rossen Stoyanchev, Juergen Hoeller, Sam Brannen",
+      "translation": "Arjen Poutsma, Rossen Stoyanchev, Juergen Hoeller, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "Multipart Data",
+      "translation": "多部分数据",
+      "count": 2
+    },
+    {
+      "source": "By default this is set to \"UTF-8\".",
+      "translation": "默认情况下，该值设置为\"UTF-8\"。",
+      "count": 1
+    },
+    {
+      "source": "Return the list of media types supported by this converter. The list may\nnot apply to every possible target element type and calls to this method\nshould typically be guarded via <a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\"><code>canWrite(clazz, null</code></a>. The list may also exclude MIME types supported\nonly for a specific class. Alternatively, use\n<a href=\"HttpMessageConverter.html#getSupportedMediaTypes(java.lang.Class)\"><code>HttpMessageConverter.getSupportedMediaTypes(Class)</code></a> for a more precise list.",
+      "translation": "返回此转换器支持的媒体类型列表。该列表可能不适用于所有可能的目标元素类型，因此调用此方法时通常应通过 <a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\"><code>canWrite(clazz, null</code></a> 进行保护。该列表也可能仅排除特定类支持的 MIME 类型。或者，使用 <a href=\"HttpMessageConverter.html#getSupportedMediaTypes(java.lang.Class)\"><code>HttpMessageConverter.getSupportedMediaTypes(Class)</code></a> 获取更精确的列表。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"HttpMessageConverter.html#canRead(java.lang.Class,org.springframework.http.MediaType)\">HttpMessageConverter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"HttpMessageConverter.html#canRead(java.lang.Class,org.springframework.http.MediaType)\">HttpMessageConverter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\">HttpMessageConverter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\">HttpMessageConverter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"HttpMessageConverter.html#read(java.lang.Class,org.springframework.http.HttpInputMessage)\">HttpMessageConverter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"HttpMessageConverter.html#read(java.lang.Class,org.springframework.http.HttpInputMessage)\">HttpMessageConverter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"HttpMessageConverter.html#write(T,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">HttpMessageConverter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"HttpMessageConverter.html#write(T,org.springframework.http.MediaType,org.springframework.http.HttpOutputMessage)\">HttpMessageConverter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Add <a href=\"../MediaType.html\" title=\"class in org.springframework.http\"><code>MediaType</code></a> objects to be supported by this converter.",
+      "translation": "添加 `<a href=\"../MediaType.html\" title=\"class in org.springframework.http\"><code>MediaType</code></a>` 对象以支持此转换器。",
+      "count": 1
+    },
+    {
+      "source": "Set the default character set to use for reading and writing form data when\nthe request or response <code>Content-Type</code> header does not explicitly\nspecify it.",
+      "translation": "设置默认字符集，用于在请求或响应的 `<code>Content-Type</code>` 标头未显式指定时读取和写入表单数据。",
+      "count": 1
+    },
+    {
+      "source": "Add a message body converter.",
+      "translation": "添加消息正文转换器。",
+      "count": 1
+    },
+    {
+      "source": "Generate a multipart boundary.",
+      "translation": "生成多部分边界。",
+      "count": 1
+    },
+    {
+      "source": "Return the filename of the given multipart part.",
+      "translation": "返回给定多部分部分的文件名。",
+      "count": 1
+    },
+    {
+      "source": "Return the list of media types supported by this converter.",
+      "translation": "返回此转换器支持的媒体类型列表。",
+      "count": 1
+    },
+    {
+      "source": "Set the character set to use when writing multipart data to encode file\nnames.",
+      "translation": "设置用于编写多部分数据时编码文件名的字符集。",
+      "count": 1
+    },
+    {
+      "source": "Set the message body converters to use.",
+      "translation": "设置要使用的消息体转换器。",
+      "count": 1
+    },
+    {
+      "source": "<code>contentType</code> - the content type to use when writing. May be <code>null</code> to indicate that the\ndefault content type of the converter must be used. If not <code>null</code>, this media type must have\npreviously been passed to the <a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\"><code>canWrite</code></a> method of this interface, which must have\nreturned <code>true</code>.",
+      "translation": "<code>contentType</code> - 写入时使用的内容类型。若为 <code>null</code>，表示必须使用转换器默认的内容类型。若非 <code>null</code>，此媒体类型必须已先前传递给该接口的 <a href=\"HttpMessageConverter.html#canWrite(java.lang.Class,org.springframework.http.MediaType)\"><code>canWrite</code></a> 方法，且该方法必须返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>clazz</code> - the type of object to return. This type must have previously been passed to the\n<a href=\"HttpMessageConverter.html#canRead(java.lang.Class,org.springframework.http.MediaType)\"><code>canRead</code></a> method of this interface, which must have returned <code>true</code>.",
+      "translation": "<code>clazz</code> - 要返回的对象类型。此类型必须先前已传递给该接口的<a href=\"HttpMessageConverter.html#canRead(java.lang.Class,org.springframework.http.MediaType)\"><code>canRead</code></a>方法，且该方法必须返回<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>mediaType</code> - the media type to read (can be <code>null</code> if not specified);\ntypically the value of a <code>Content-Type</code> header.",
+      "translation": "`mediaType` - 要读取的媒体类型（如果未指定，可以为 `null`）；通常是 `<code>Content-Type</code>` 标头的值。",
+      "count": 1
+    },
+    {
+      "source": "<code>mediaType</code> - the media type to write (can be <code>null</code> if not specified);\ntypically the value of an <code>Accept</code> header.",
+      "translation": "`mediaType` - 要写入的媒体类型（如果未指定，可以为 `<code>null</code>`）；通常是 `<code>Accept</code>` 头的值。",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if readable; <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示可读；否则为 <code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if writable; <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示可写；否则为 <code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"HttpMessageNotReadableException.html\" title=\"class in org.springframework.http.converter\">HttpMessageNotReadableException</a></code> - in case of conversion errors",
+      "translation": "<code><a href=\"HttpMessageNotReadableException.html\" title=\"class in org.springframework.http.converter\">HttpMessageNotReadableException</a></code> - 在转换错误时",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"HttpMessageNotWritableException.html\" title=\"class in org.springframework.http.converter\">HttpMessageNotWritableException</a></code> - in case of conversion errors",
+      "translation": "<code><a href=\"HttpMessageNotWritableException.html\" title=\"class in org.springframework.http.converter\">HttpMessageNotWritableException</a></code> - 在转换错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>clazz</code> - the class to test for readability",
+      "translation": "<code>clazz</code> - 要测试可读性的类",
+      "count": 1
+    },
+    {
+      "source": "<code>clazz</code> - the class to test for writability",
+      "translation": "<code>clazz</code> - 要测试可写性的类",
+      "count": 1
+    },
+    {
+      "source": "<code>inputMessage</code> - the HTTP input message to read from",
+      "translation": "<code>inputMessage</code> - 要读取的 HTTP 输入消息",
+      "count": 1
+    },
+    {
+      "source": "<code>outputMessage</code> - the message to write to",
+      "translation": "<code>outputMessage</code> - 要写入的消息。",
+      "count": 1
+    },
+    {
+      "source": "the list of supported media types",
+      "translation": "支持的媒体类型列表",
+      "count": 1
+    },
+    {
+      "source": "the converted object",
+      "translation": "已转换的对象",
+      "count": 1
+    },
+    {
+      "source": "the content type to use",
+      "translation": "要使用的 Content-Type",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

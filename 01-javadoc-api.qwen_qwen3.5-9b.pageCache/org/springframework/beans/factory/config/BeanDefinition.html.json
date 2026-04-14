@@ -1,0 +1,376 @@
+{
+  "created_at": "2026-04-14 11:16:32",
+  "updated_at": "2026-04-14 11:16:32",
+  "stats": {
+    "total_entries": 72,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 123,
+    "entries_with_hits": 72,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7083333333333333,
+    "usage_percentage": 0.0072
+  },
+  "items": [
+    {
+      "source": "Note that extended bean factories might support further scopes.",
+      "translation": "注意，扩展的 BeanFactory 可能支持更多的作用域。",
+      "count": 3
+    },
+    {
+      "source": "The returned instance can be modified during bean factory post-processing.",
+      "translation": "返回的实例可以在 Bean 工厂后处理期间被修改。",
+      "count": 3
+    },
+    {
+      "source": "This is just a minimal interface: The main intention is to allow a\n<a href=\"BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanFactoryPostProcessor</code></a> to introspect and modify property values\nand other bean metadata.",
+      "translation": "这只是一个最小接口：主要目的是允许一个 <a href=\"BeanFactoryPostProcessor.html\" title=\"interface in org.springframework.beans.factory.config\"><code>BeanFactoryPostProcessor</code></a> 检查并修改属性值和其他 Bean 元数据。",
+      "count": 2
+    },
+    {
+      "source": "Note that this does not have to be the actual class name used at runtime, in\ncase of a child definition overriding/inheriting the class name from its parent.\nAlso, this may just be the class that a factory method is called on, or it may\neven be empty in case of a factory bean reference that a method is called on.\nHence, do <i>not</i> consider this to be the definitive bean type at runtime but\nrather only use it for parsing purposes at the individual bean definition level.",
+      "translation": "请注意，在子定义覆盖或继承其父类的类名的情况下，这不必是运行时实际使用的真实类名。此外，这可能只是工厂方法被调用的类，或者在调用方法的工厂 Bean 引用为空时，它甚至可能是空的。因此，请勿将此视为运行时的最终 Bean 类型，而仅将其用于单个 Bean 定义级别的解析目的。",
+      "count": 2
+    },
+    {
+      "source": "If <code>false</code>, the bean will get instantiated on startup by bean\nfactories that perform eager initialization of singletons.",
+      "translation": "如果为<code>false</code>，则单例的 Bean 工厂将在启动时执行单例的急切初始化。",
+      "count": 2
+    },
+    {
+      "source": "If this value is <code>true</code> for exactly one bean among multiple\nmatching candidates, it will serve as a tie-breaker.",
+      "translation": "如果此值在多个匹配候选项中恰好对一个 Bean 为 `<code>true</code>`，它将作为决胜手段。",
+      "count": 2
+    },
+    {
+      "source": "If this value is <code>true</code> for all beans but one among multiple\nmatching candidates, the remaining bean will be selected.",
+      "translation": "如果此值在所有匹配候选项中除一个之外的所有 Bean 上都为 `<code>true</code>`，则选择剩余的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "This will be <code>null</code> for static factory methods which will\nbe derived from the bean class instead.",
+      "translation": "这将对于从 Bean 类派生的静态工厂方法为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The class name can be modified during bean factory post-processing,\ntypically replacing the original class name with a parsed variant of it.",
+      "translation": "类名可以在 Bean 工厂后处理期间进行修改，通常是用其解析后的变体替换原始类名。",
+      "count": 2
+    },
+    {
+      "source": "Note that dependencies are normally expressed through bean properties or\nconstructor arguments. This property should just be necessary for other kinds\nof dependencies like statics (*ugh*) or database preparation on startup.",
+      "translation": "请注意，依赖通常通过 Bean 属性或构造函数参数来表达。此属性应仅用于其他类型的依赖（例如静态类 [*ugh*]）或在启动时进行数据库准备。",
+      "count": 2
+    },
+    {
+      "source": "Note that this flag is designed to only affect type-based autowiring.\nIt does not affect explicit references by name, which will get resolved even\nif the specified bean is not marked as an autowire candidate. As a consequence,\nautowiring by name will nevertheless inject a bean if the name matches.",
+      "translation": "请注意，此标志仅影响基于类型的自动装配。它不会影响通过名称进行的显式引用；即使指定的 Bean 未标记为自动装配候选者，这些引用仍会被解析。因此，按名称进行自动装配时，只要名称匹配，就会注入一个 Bean。",
+      "count": 2
+    },
+    {
+      "source": "A factory bean name is only necessary for instance-based factory methods.\nFor static factory methods, the method will be derived from the bean class.",
+      "translation": "工厂 Bean 名称仅对基于实例的工厂方法而言是必需的。对于静态工厂方法，该方法将从 Bean 类中推导得出。",
+      "count": 2
+    },
+    {
+      "source": "This is typically fully resolved on a runtime-merged bean definition\nbut not necessarily on a configuration-time definition instance.",
+      "translation": "这通常在运行时合并的 Bean 定义上完全解析，但在配置时间定义实例上则不一定。",
+      "count": 2
+    },
+    {
+      "source": "Allows for retrieving the decorated bean definition, if any.",
+      "translation": "允许获取装饰的 Bean 定义（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Note that this method returns the immediate originator. Iterate through the\noriginator chain to find the original BeanDefinition as defined by the user.",
+      "translation": "注意，此方法返回的是直接发起者。请遍历发起者链以找到用户定义的原始 BeanDefinition。",
+      "count": 2
+    },
+    {
+      "source": "Role hint indicating that a <code>BeanDefinition</code> is a supporting\npart of some larger configuration, typically an outer\n<a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>.\n<code>SUPPORT</code> beans are considered important enough to be aware\nof when looking more closely at a particular\n<a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>,\nbut not when looking at the overall configuration of an application.",
+      "translation": "指示 `<code>BeanDefinition` 是某个更大配置的支持部分的角色提示，通常是外部 <a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>。当更仔细地查看特定的 <a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a> 时，`<code>SUPPORT</code>` 类型的 Bean 被认为足够重要需要留意，但在查看应用程序的整体配置时则不需要。",
+      "count": 2
+    },
+    {
+      "source": "Role hint indicating that a <code>BeanDefinition</code> is a supporting\npart of some larger configuration, typically an outer\n<a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>.",
+      "translation": "指示 `<code>BeanDefinition` 是某个更大配置的支持部分的角色提示，通常是外部 <a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Role hint indicating that a <code>BeanDefinition</code> is providing an\nentirely background role and has no relevance to the end-user. This hint is\nused when registering beans that are completely part of the internal workings\nof a <a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>.",
+      "translation": "指示 `<code>BeanDefinition` 提供完全后台角色且与最终用户无关的角色提示。此提示用于注册完全属于 `<a href=\"../parsing/ComponentDefinition.html\" title=\"interface in org.springframework.beans.factory.parsing\"><code>ComponentDefinition</code></a>` 内部工作机制的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Set the role hint for this <code>BeanDefinition</code>. The role hint\nprovides the frameworks as well as tools an indication of\nthe role and importance of a particular <code>BeanDefinition</code>.",
+      "translation": "为此 `<code>BeanDefinition</code>` 设置角色提示。该角色提示为框架及工具提供关于特定 `<code>BeanDefinition</code>` 的角色和重要性的指示。",
+      "count": 2
+    },
+    {
+      "source": "Get the role hint for this <code>BeanDefinition</code>. The role hint\nprovides the frameworks as well as tools an indication of\nthe role and importance of a particular <code>BeanDefinition</code>.",
+      "translation": "获取此<code>BeanDefinition</code>的角色提示。角色提示为框架以及工具提供有关特定<code>BeanDefinition</code>的角色和重要性的指示。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the current target scope for this bean,\nor <code>null</code> if not known yet.",
+      "translation": "返回此 Bean 的当前目标作用域名称，如果尚不清楚则返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this a <b>Prototype</b>, with an independent instance\nreturned for each call.",
+      "translation": "返回这是否为<b>原型</b>，每次调用时都返回一个独立的实例。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this a <b>Singleton</b>, with a single, shared instance\nreturned on all calls.",
+      "translation": "返回这是否为<b>Singleton</b>，即所有调用均返回单个共享实例。",
+      "count": 2
+    },
+    {
+      "source": "Role hint indicating that a <code>BeanDefinition</code> is a major part\nof the application. Typically corresponds to a user-defined bean.",
+      "translation": "指示 `<code>BeanDefinition` 是应用程序主要组成部分的角色提示。通常对应于用户定义的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Return the bean names that this bean depends on.",
+      "translation": "返回此 Bean 所依赖的 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "Return a human-readable description of this bean definition.",
+      "translation": "返回该 Bean 定义的易读描述。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the destroy method.",
+      "translation": "返回销毁方法的名称。",
+      "count": 2
+    },
+    {
+      "source": "Return a factory method, if any.",
+      "translation": "返回工厂方法（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the initializer method.",
+      "translation": "返回初始化方法的名称。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the parent definition of this bean definition, if any.",
+      "translation": "返回该 Bean 定义的父定义名称（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Return a description of the resource that this bean definition\ncame from (for the purpose of showing context in case of errors).",
+      "translation": "返回该 Bean 定义来源资源的描述（用于在出现错误时显示上下文）。",
+      "count": 2
+    },
+    {
+      "source": "Return if there are constructor argument values defined for this bean.",
+      "translation": "如果为此 Bean 定义了构造函数参数值，则返回。",
+      "count": 2
+    },
+    {
+      "source": "Return if there are property values defined for this bean.",
+      "translation": "如果该 Bean 定义了属性值，则返回。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this bean is \"abstract\", that is, not meant to be instantiated\nitself but rather just serving as parent for concrete child bean definitions.",
+      "translation": "返回该 Bean 是否为“抽象”的，即不打算直接实例化它，而是仅作为具体子 Bean 定义的父类。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this bean is a candidate for getting autowired into some other bean.",
+      "translation": "返回此 Bean 是否为其他 Bean 进行自动注入的候选者。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this bean is a fallback autowire candidate.",
+      "translation": "返回该 Bean 是否为回退自动装配候选者。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this bean is a primary autowire candidate.",
+      "translation": "返回该 Bean 是否为主要的自动装配候选者。",
+      "count": 2
+    },
+    {
+      "source": "Set a human-readable description of this bean definition.",
+      "translation": "为此 Bean 定义设置一个人类可读的描述。",
+      "count": 2
+    },
+    {
+      "source": "Set the name of the destroy method.",
+      "translation": "设置销毁方法的名称。",
+      "count": 2
+    },
+    {
+      "source": "Set the name of the initializer method.",
+      "translation": "设置初始化方法的名称。",
+      "count": 2
+    },
+    {
+      "source": "Set the name of the parent definition of this bean definition, if any.",
+      "translation": "设置此 Bean 定义的父定义名称（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Override the target scope of this bean, specifying a new scope name.",
+      "translation": "覆盖此 Bean 的目标作用域，指定一个新的作用域名称。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this bean should be lazily initialized, i.e. not\neagerly instantiated on startup. Only applicable to a singleton bean.",
+      "translation": "返回该 Bean 是否应延迟初始化，即不在启动时立即实例化。仅适用于单例 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Specify a factory method, if any. This method will be invoked with\nconstructor arguments, or with no arguments if none are specified.\nThe method will be invoked on the specified factory bean, if any,\nor otherwise as a static method on the local bean class.",
+      "translation": "指定工厂方法（如有）。此方法将使用构造函数参数调用，或者如果未指定任何参数则不带参数调用。该方法将在指定的工厂 Bean（如有）上调用，否则作为本地 Bean 类的静态方法进行调用。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setScope(java.lang.String)\"><code>setScope(String)</code></a></li>\n<li><a href=\"ConfigurableBeanFactory.html#SCOPE_SINGLETON\"><code>ConfigurableBeanFactory.SCOPE_SINGLETON</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.beans.factory.config.BeanDefinition.SCOPE_SINGLETON\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setScope(java.lang.String)\"><code>setScope(String)</code></a></li>\n<li><a href=\"ConfigurableBeanFactory.html#SCOPE_SINGLETON\"><code>ConfigurableBeanFactory.SCOPE_SINGLETON</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.beans.factory.config.BeanDefinition.SCOPE_SINGLETON\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setScope(java.lang.String)\"><code>setScope(String)</code></a></li>\n<li><a href=\"ConfigurableBeanFactory.html#SCOPE_PROTOTYPE\"><code>ConfigurableBeanFactory.SCOPE_PROTOTYPE</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setScope(java.lang.String)\"><code>setScope(String)</code></a></li>\n<li><a href=\"ConfigurableBeanFactory.html#SCOPE_PROTOTYPE\"><code>ConfigurableBeanFactory.SCOPE_PROTOTYPE</code></a></li>\n<li><a href=\"../../../../../constant-values.html#org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "the resolvable type (potentially <a href=\"../../../core/ResolvableType.html#NONE\"><code>ResolvableType.NONE</code></a>)",
+      "translation": "可解析类型（可能是<a href=\"../../../core/ResolvableType.html#NONE\"><code>ResolvableType.NONE</code></a>）",
+      "count": 2
+    },
+    {
+      "source": "the ConstructorArgumentValues object (never <code>null</code>)",
+      "translation": "构造函数参数值对象（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "the MutablePropertyValues object (never <code>null</code>)",
+      "translation": "`MutablePropertyValues` 对象（永远不为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "Role hint indicating that a <code>BeanDefinition</code> is a major part\nof the application.",
+      "translation": "指示 `<code>BeanDefinition` 是应用程序主要组成部分的角色提示。",
+      "count": 1
+    },
+    {
+      "source": "Role hint indicating that a <code>BeanDefinition</code> is providing an\nentirely background role and has no relevance to the end-user.",
+      "translation": "指示 `<code>BeanDefinition` 提供完全后台角色且与最终用户无关的角色提示。",
+      "count": 1
+    },
+    {
+      "source": "Return the originating BeanDefinition, or <code>null</code> if none.",
+      "translation": "返回原始 BeanDefinition，如果没有则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Get the role hint for this <code>BeanDefinition</code>.",
+      "translation": "获取此<code>BeanDefinition</code>的角色提示。",
+      "count": 1
+    },
+    {
+      "source": "Set the role hint for this <code>BeanDefinition</code>.",
+      "translation": "为此 `<code>BeanDefinition</code>` 设置角色提示。",
+      "count": 1
+    },
+    {
+      "source": "Scope identifier for the standard prototype scope: \"prototype\".",
+      "translation": "标准原型作用域的标识符：\"prototype\"。",
+      "count": 1
+    },
+    {
+      "source": "Scope identifier for the standard singleton scope: \"singleton\".",
+      "translation": "标准单例作用域的 Scope 标识符：\"singleton\"。",
+      "count": 1
+    },
+    {
+      "source": "Return the current bean class name of this bean definition.",
+      "translation": "返回该 Bean 定义的当前 Bean 类名。",
+      "count": 1
+    },
+    {
+      "source": "Return the constructor argument values for this bean.",
+      "translation": "返回该 Bean 的构造函数参数值。",
+      "count": 1
+    },
+    {
+      "source": "Return the factory bean name, if any.",
+      "translation": "返回工厂 Bean 名称（如果有）。",
+      "count": 1
+    },
+    {
+      "source": "Return the property values to be applied to a new instance of the bean.",
+      "translation": "返回要应用于新 Bean 实例的属性值。",
+      "count": 1
+    },
+    {
+      "source": "Return a resolvable type for this bean definition,\nbased on the bean class or other specific metadata.",
+      "translation": "根据 Bean 类或其他特定元数据，为该 Bean 定义返回一个可解析的类型。",
+      "count": 1
+    },
+    {
+      "source": "Return whether this bean should be lazily initialized, i.e.",
+      "translation": "返回该 Bean 是否应延迟初始化，即",
+      "count": 1
+    },
+    {
+      "source": "Set whether this bean is a candidate for getting autowired into some other bean.",
+      "translation": "设置此 Bean 是否为候选者，以便被自动注入到其他 Bean 中。",
+      "count": 1
+    },
+    {
+      "source": "Specify the bean class name of this bean definition.",
+      "translation": "指定该 Bean 定义的 Bean 类名。",
+      "count": 1
+    },
+    {
+      "source": "Set the names of the beans that this bean depends on being initialized.",
+      "translation": "设置此 Bean 所依赖的 Bean 初始化名称。",
+      "count": 1
+    },
+    {
+      "source": "Specify the factory bean to use, if any.",
+      "translation": "指定要使用的工厂 Bean（如有）。",
+      "count": 1
+    },
+    {
+      "source": "Specify a factory method, if any.",
+      "translation": "指定工厂方法（如有）。",
+      "count": 1
+    },
+    {
+      "source": "Set whether this bean is a fallback autowire candidate.",
+      "translation": "设置该 Bean 是否为回退自动装配候选者。",
+      "count": 1
+    },
+    {
+      "source": "Set whether this bean should be lazily initialized.",
+      "translation": "设置该 Bean 是否应延迟初始化。",
+      "count": 1
+    },
+    {
+      "source": "Set whether this bean is a primary autowire candidate.",
+      "translation": "设置该 Bean 是否为主要的自动装配候选者。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rob Harrop",
+      "translation": "Juergen Hoeller, Rob Harrop",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

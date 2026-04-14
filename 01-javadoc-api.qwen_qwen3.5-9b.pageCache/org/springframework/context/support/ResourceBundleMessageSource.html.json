@@ -1,0 +1,281 @@
+{
+  "created_at": "2026-04-14 12:33:14",
+  "updated_at": "2026-04-14 12:33:14",
+  "stats": {
+    "total_entries": 53,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 92,
+    "entries_with_hits": 53,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7358490566037736,
+    "usage_percentage": 0.0053
+  },
+  "items": [
+    {
+      "source": "The default implementation returns a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PropertyResourceBundle.html\" title=\"class or interface in java.util\"><code>PropertyResourceBundle</code></a>.",
+      "translation": "默认实现返回一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PropertyResourceBundle.html\" title=\"class or interface in java.util\"><code>PropertyResourceBundle</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "the fully loaded bundle",
+      "translation": "完全加载的包",
+      "count": 3
+    },
+    {
+      "source": "On the classpath, bundle resources will be read with the locally configured\n<a href=\"AbstractResourceBasedMessageSource.html#setDefaultEncoding(java.lang.String)\"><code>encoding</code></a>: by default, ISO-8859-1; consider switching\nthis to UTF-8, or to <code>null</code> for the platform default encoding. On the JDK 9+\nmodule path where locally provided <code>ResourceBundle.Control</code> handles are not\nsupported, this MessageSource always falls back to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ResourceBundle.html#getBundle(java.lang.String)\" title=\"class or interface in java.util\"><code>ResourceBundle.getBundle(String)</code></a>\nretrieval with the platform default encoding: UTF-8 with a ISO-8859-1 fallback on\nJDK 9+ (configurable through the \"java.util.PropertyResourceBundle.encoding\" system\nproperty). Note that <a href=\"#loadBundle(java.io.Reader)\"><code>loadBundle(Reader)</code></a>/<a href=\"#loadBundle(java.io.InputStream)\"><code>loadBundle(InputStream)</code></a>\nwon't be called in this case either, effectively ignoring overrides in subclasses.\nConsider implementing a JDK 9 <code>java.util.spi.ResourceBundleProvider</code> instead.",
+      "translation": "在类路径上，将使用本地配置的<a href=\"AbstractResourceBasedMessageSource.html#setDefaultEncoding(java.lang.String)\"><code>encoding</code></a>读取捆绑资源；默认值为 ISO-8859-1；请考虑将其切换为 UTF-8，或切换为<code>null</code>以使用平台默认编码。在 JDK 9+ 的模块路径上，由于不支持本地提供的<code>ResourceBundle.Control</code>处理器，此 MessageSource 始终回退到<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ResourceBundle.html#getBundle(java.lang.String)\" title=\"class or interface in java.util\"><code>ResourceBundle.getBundle(String)</code></a>检索，使用平台默认编码：JDK 9+ 上为 UTF-8（带有 ISO-8859-1 回退），可通过\"java.util.PropertyResourceBundle.encoding\"系统属性配置。请注意，在这种情况下也不会调用<a href=\"#loadBundle(java.io.Reader)\"><code>loadBundle(Reader)</code></a>/<a href=\"#loadBundle(java.io.InputStream)\"><code>loadBundle(InputStream)</code></a>，从而实际上忽略了子类中的覆盖实现。请考虑改为实现 JDK 9 的<code>java.util.spi.ResourceBundleProvider</code>。",
+      "count": 2
+    },
+    {
+      "source": "This will be called in case of a <a href=\"AbstractResourceBasedMessageSource.html#setDefaultEncoding(java.lang.String)\"><code>\"defaultEncoding\"</code></a>,\nincluding <a href=\"ResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ResourceBundleMessageSource</code></a>'s default ISO-8859-1 encoding.\nNote that this method can only be called with a <code>ResourceBundle.Control</code>:\nWhen running on the JDK 9+ module path where such control handles are not\nsupported, any overrides in custom subclasses will effectively get ignored.",
+      "translation": "在遇到 `<a href=\"AbstractResourceBasedMessageSource.html#setDefaultEncoding(java.lang.String)\"><code>\"defaultEncoding\"</code></a>`（包括 <a href=\"ResourceBundleMessageSource.html\" title=\"class in org.springframework.context.support\"><code>ResourceBundleMessageSource</code></a> 的默认 ISO-8859-1 编码）时，将调用此方法。请注意，此方法只能使用 <code>ResourceBundle.Control</code> 进行调用：在 JDK 9+ 模块路径上运行时，由于不支持此类控制处理器，自定义子类中的任何重写都将实际上被忽略。",
+      "count": 2
+    },
+    {
+      "source": "Default is the containing BeanFactory's\n<a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\"><code>bean ClassLoader</code></a>,\nor the default ClassLoader determined by\n<a href=\"../../util/ClassUtils.html#getDefaultClassLoader()\"><code>ClassUtils.getDefaultClassLoader()</code></a>\nif not running within a BeanFactory.",
+      "translation": "默认值为包含的 `BeanFactory` 的 <a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\"><code>bean ClassLoader</code></a>，或者如果不在 `BeanFactory` 中运行，则为 <a href=\"../../util/ClassUtils.html#getDefaultClassLoader()\"><code>ClassUtils.getDefaultClassLoader()</code></a> 确定的默认 ClassLoader。",
+      "count": 2
+    },
+    {
+      "source": "This will only be called with <a href=\"AbstractResourceBasedMessageSource.html#setDefaultEncoding(java.lang.String)\"><code>\"defaultEncoding\"</code></a>\nset to <code>null</code>, explicitly enforcing the platform default encoding\n(which is UTF-8 with a ISO-8859-1 fallback on JDK 9+ but configurable\nthrough the \"java.util.PropertyResourceBundle.encoding\" system property).\nNote that this method can only be called with a <code>ResourceBundle.Control</code>:\nWhen running on the JDK 9+ module path where such control handles are not\nsupported, any overrides in custom subclasses will effectively get ignored.",
+      "translation": "这将仅在 `<a href=\"AbstractResourceBasedMessageSource.html#setDefaultEncoding(java.lang.String)\"><code>\"defaultEncoding\"</code></a>` 设置为 <code>null</code> 时调用，从而显式强制使用平台默认编码（在 JDK 9+ 中默认为 UTF-8，带有 ISO-8859-1 回退机制，但可通过 \"java.util.PropertyResourceBundle.encoding\" 系统属性进行配置）。请注意，此方法仅可接受 <code>ResourceBundle.Control</code>：当在支持此类控制处理器的 JDK 9+ 模块路径上运行时，自定义子类中的任何重写都将实际上被忽略。",
+      "count": 2
+    },
+    {
+      "source": "The basenames follow <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ResourceBundle.html\" title=\"class or interface in java.util\"><code>ResourceBundle</code></a> conventions: essentially,\na fully-qualified classpath location. If it doesn't contain a package qualifier\n(such as <code>org.mypackage</code>), it will be resolved from the classpath root.\nNote that the JDK's standard ResourceBundle treats dots as package separators:\nThis means that \"test.theme\" is effectively equivalent to \"test/theme\".",
+      "translation": "基名遵循<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ResourceBundle.html\" title=\"class or interface in java.util\"><code>ResourceBundle</code></a>约定：本质上，这是一个完全限定的类路径位置。如果它不包含包限定符（例如<code>org.mypackage</code>），则将从类路径根目录解析。请注意，JDK 的标准 ResourceBundle 将点视为包分隔符：这意味着\"test.theme\"实际上等同于\"test/theme\"。",
+      "count": 2
+    },
+    {
+      "source": "As of 4.2, the default implementation checks <code>containsKey</code>\nbefore it attempts to call <code>getString</code> (which would require\ncatching <code>MissingResourceException</code> for key not found).",
+      "translation": "自 4.2 版本起，默认实现会在尝试调用<code>getString</code>（这需要捕获键未找到的<code>MissingResourceException</code>）之前先检查<code>containsKey</code>。",
+      "count": 2
+    },
+    {
+      "source": "This MessageSource caches both the accessed ResourceBundle instances and\nthe generated MessageFormats for each message. It also implements rendering of\nno-arg messages without MessageFormat, as supported by the AbstractMessageSource\nbase class. The caching provided by this MessageSource is significantly faster\nthan the built-in caching of the <code>java.util.ResourceBundle</code> class.",
+      "translation": "此 MessageSource 缓存了已访问的 ResourceBundle 实例以及为每个消息生成的 MessageFormats。它还实现了无需 MessageFormat 的无参消息渲染，这得到了 AbstractMessageSource 基类的支持。此 MessageSource 提供的缓存速度显著快于 <code>java.util.ResourceBundle</code> 类的内置缓存。",
+      "count": 2
+    },
+    {
+      "source": "Default is the containing BeanFactory's bean ClassLoader.",
+      "translation": "默认值为包含的 BeanFactory 的 bean ClassLoader。",
+      "count": 2
+    },
+    {
+      "source": "Obtain the resource bundle for the given basename and Locale.",
+      "translation": "获取给定基本名称和区域设置的资源包。",
+      "count": 2
+    },
+    {
+      "source": "Return a MessageFormat for the given bundle and code,\nfetching already generated MessageFormats from the cache.",
+      "translation": "为给定的资源包和代码返回一个 MessageFormat，并从缓存中获取已生成的 MessageFormat。",
+      "count": 2
+    },
+    {
+      "source": "Return a ResourceBundle for the given basename and Locale,\nfetching already generated ResourceBundle from the cache.",
+      "translation": "返回给定基本名称和区域的资源包，从缓存中获取已生成的资源包。",
+      "count": 2
+    },
+    {
+      "source": "Resolves the given message code as key in the registered resource bundles,\nusing a cached MessageFormat instance per message code.",
+      "translation": "使用每个消息代码对应的缓存 MessageFormat 实例，将给定的消息代码作为键解析在已注册的资源包中。",
+      "count": 2
+    },
+    {
+      "source": "Resolves the given message code as key in the registered resource bundles,\nreturning the value found in the bundle as-is (without MessageFormat parsing).",
+      "translation": "将给定的消息代码作为键在已注册的资源包中解析，并以原样返回资源包中找到的值（不进行 MessageFormat 解析）。",
+      "count": 2
+    },
+    {
+      "source": "Show the configuration of this MessageSource.",
+      "translation": "显示此 MessageSource 的配置。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/MissingResourceException.html\" title=\"class or interface in java.util\">MissingResourceException</a></code> - if no matching bundle could be found",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/MissingResourceException.html\" title=\"class or interface in java.util\">MissingResourceException</a></code> - 如果找不到匹配的包",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of I/O failure",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 在发生 I/O 故障时",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/MissingResourceException.html\" title=\"class or interface in java.util\">MissingResourceException</a></code> - if thrown by the ResourceBundle",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/MissingResourceException.html\" title=\"class or interface in java.util\">MissingResourceException</a></code> - 如果由 ResourceBundle 抛出",
+      "count": 2
+    },
+    {
+      "source": "<code>code</code> - the code of the message to resolve",
+      "translation": "<code>code</code> - 要解析的消息的代码",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the locale to resolve the code for\n(subclasses are encouraged to support internationalization)",
+      "translation": "<code>locale</code> - 用于解析代码的区域设置（鼓励子类支持国际化）",
+      "count": 2
+    },
+    {
+      "source": "<code>basename</code> - the basename of the ResourceBundle",
+      "translation": "<code>basename</code> - 资源包的文件名",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the Locale to find the ResourceBundle for",
+      "translation": "<code>locale</code> - 用于查找资源包的 Locale",
+      "count": 2
+    },
+    {
+      "source": "the resulting ResourceBundle, or <code>null</code> if none\nfound for the given basename and Locale",
+      "translation": "生成的资源包，或者如果未找到给定基本名称和区域设置的资源包，则为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>basename</code> - the basename to look for",
+      "translation": "<code>basename</code> - 要查找的基名",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the Locale to look for",
+      "translation": "<code>locale</code> - 要查找的区域设置",
+      "count": 2
+    },
+    {
+      "source": "<code>reader</code> - the reader for the target resource",
+      "translation": "<code>reader</code> - 目标资源的读取器",
+      "count": 2
+    },
+    {
+      "source": "<code>inputStream</code> - the input stream for the target resource",
+      "translation": "<code>inputStream</code> - 目标资源的输入流",
+      "count": 2
+    },
+    {
+      "source": "<code>bundle</code> - the ResourceBundle to work on",
+      "translation": "<code>bundle</code> - 要操作的资源包",
+      "count": 2
+    },
+    {
+      "source": "<code>code</code> - the message code to retrieve",
+      "translation": "<code>code</code> - 要检索的消息代码",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the Locale to use to build the MessageFormat",
+      "translation": "<code>locale</code> - 用于构建 MessageFormat 的区域设置。",
+      "count": 2
+    },
+    {
+      "source": "the resulting MessageFormat, or <code>null</code> if no message\ndefined for the given code",
+      "translation": "生成的 MessageFormat，或者如果未为给定代码定义消息，则为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>bundle</code> - the ResourceBundle to perform the lookup in",
+      "translation": "<code>bundle</code> - 要执行查找的 ResourceBundle",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key to look up",
+      "translation": "<code>key</code> - 要查找的键",
+      "count": 2
+    },
+    {
+      "source": "the associated value, or <code>null</code> if none",
+      "translation": "关联的值，或者如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller, Qimiao Chen",
+      "translation": "Rod Johnson，Juergen Hoeller，Qimiao Chen",
+      "count": 2
+    },
+    {
+      "source": "the corresponding ResourceBundle",
+      "translation": "对应的 ResourceBundle",
+      "count": 2
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "Can be overridden in subclasses.",
+      "translation": "可在子类中重写。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Efficiently retrieve the String value for the specified key,\nor return <code>null</code> if not found.",
+      "translation": "高效检索指定键的 String 值，若未找到则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the ClassLoader to load resource bundles with.",
+      "translation": "返回用于加载资源包的 ClassLoader。",
+      "count": 1
+    },
+    {
+      "source": "Load a property-based resource bundle from the given input stream,\npicking up the default properties encoding on JDK 9+.",
+      "translation": "从给定的输入流加载基于属性的资源包，在 JDK 9+ 上自动获取默认属性编码。",
+      "count": 1
+    },
+    {
+      "source": "Load a property-based resource bundle from the given reader.",
+      "translation": "从给定的读取器加载基于属性的资源包。",
+      "count": 1
+    },
+    {
+      "source": "Set the ClassLoader to load resource bundles with.",
+      "translation": "将 ClassLoader 设置为用于加载资源包。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageSource.html#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\">resolveCodeWithoutArguments</a></code> in class <code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageSource.html#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\">resolveCodeWithoutArguments</a></code>` 类中的 `<code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractMessageSource.html#resolveCode(java.lang.String,java.util.Locale)\">resolveCode</a></code> in class <code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>",
+      "translation": "`<code><a href=\"AbstractMessageSource.html#resolveCode(java.lang.String,java.util.Locale)\">resolveCode</a></code>` 类中的 `<code><a href=\"AbstractMessageSource.html\" title=\"class in org.springframework.context.support\">AbstractMessageSource</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "the message String, or <code>null</code> if not found",
+      "translation": "消息字符串，如果未找到则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the MessageFormat for the message, or <code>null</code> if not found",
+      "translation": "消息的 MessageFormat，如果未找到则为<code>null</code>",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "created_at": "2026-04-14 12:28:54",
+  "updated_at": "2026-04-14 12:28:54",
+  "stats": {
+    "total_entries": 72,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 121,
+    "entries_with_hits": 72,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6805555555555556,
+    "usage_percentage": 0.0072
+  },
+  "items": [
+    {
+      "source": "<code>locale</code> - the locale in which to do the lookup",
+      "translation": "<code>locale</code> - 执行查找的本地化环境",
+      "count": 5
+    },
+    {
+      "source": "<code>code</code> - the code to lookup up, such as 'calculator.noRateSet'",
+      "translation": "<code>code</code> - 要查找的代码，例如 'calculator.noRateSet'",
+      "count": 3
+    },
+    {
+      "source": "<code>args</code> - array of arguments that will be filled in for params\nwithin the message",
+      "translation": "<code>args</code> - 用于填充消息中参数的参数数组",
+      "count": 3
+    },
+    {
+      "source": "the resolved message, or <code>null</code> if not found",
+      "translation": "已解析的消息，或如果未找到则为<code>null</code>",
+      "count": 3
+    },
+    {
+      "source": "Subclasses must implement the abstract <a href=\"#resolveCode(java.lang.String,java.util.Locale)\"><code>resolveCode(String, Locale)</code></a>\nmethod. For efficient resolution of messages without arguments, the\n<a href=\"#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\"><code>resolveCodeWithoutArguments(String, Locale)</code></a> method should be overridden\nas well, resolving messages without a MessageFormat being involved.",
+      "translation": "子类必须实现抽象的 <a href=\"#resolveCode(java.lang.String,java.util.Locale)\"><code>resolveCode(String, Locale)</code></a> 方法。为了高效地解析不带参数的消息，还应重写 <a href=\"#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\"><code>resolveCodeWithoutArguments(String, Locale)</code></a> 方法，以在不涉及 MessageFormat 的情况下解析消息。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation <i>does</i> use MessageFormat, through\ndelegating to the <a href=\"#resolveCode(java.lang.String,java.util.Locale)\"><code>resolveCode(String, Locale)</code></a> method. Subclasses are encouraged\nto replace this with optimized resolution.",
+      "translation": "默认实现<i>确实</i>使用 MessageFormat，通过委托给<a href=\"#resolveCode(java.lang.String,java.util.Locale)\"><code>resolveCode(String, Locale)</code></a>方法。鼓励子类用优化的解析方式替换此实现。",
+      "count": 2
+    },
+    {
+      "source": "<b>Subclasses are encouraged to provide optimized resolution\nfor messages without arguments, not involving MessageFormat.</b>\nSee the <a href=\"#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\"><code>resolveCodeWithoutArguments(String, Locale)</code></a> javadoc for details.",
+      "translation": "<b>鼓励子类为不涉及 MessageFormat 的无参数消息提供优化的解析。</b>有关详细信息，请参阅 <a href=\"#resolveCodeWithoutArguments(java.lang.String,java.util.Locale)\"><code>resolveCodeWithoutArguments(String, Locale)</code></a> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "May also link to an externally defined Properties object, for example, defined\nthrough a <a href=\"../../beans/factory/config/PropertiesFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>PropertiesFactoryBean</code></a>.",
+      "translation": "也可以链接到外部定义的 Properties 对象，例如通过<a href=\"../../beans/factory/config/PropertiesFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>PropertiesFactoryBean</code></a>定义的对象。",
+      "count": 2
+    },
+    {
+      "source": "Note: In case of a MessageSourceResolvable with multiple codes\n(like a FieldError) and a MessageSource that has a parent MessageSource,\ndo <i>not</i> activate \"useCodeAsDefaultMessage\" in the <i>parent</i>:\nElse, you'll get the first code returned as message by the parent,\nwithout attempts to check further codes.",
+      "translation": "注意：对于具有多个代码的 MessageSourceResolvable（例如 FieldError）以及具有父 MessageSource 的 MessageSource，请勿在<i>父</i> MessageSource 中激活\"useCodeAsDefaultMessage\"；否则，您将获得由父 MessageSource 返回的第一个代码作为消息，而不会尝试检查其他代码。",
+      "count": 2
+    },
+    {
+      "source": "To be able to work with \"useCodeAsDefaultMessage\" turned on in the parent,\nAbstractMessageSource and AbstractApplicationContext contain special checks\nto delegate to the internal <a href=\"#getMessageInternal(java.lang.String,java.lang.Object%5B%5D,java.util.Locale)\"><code>getMessageInternal(String, Object[], Locale)</code></a> method if available.\nIn general, it is recommended to just use \"useCodeAsDefaultMessage\" during\ndevelopment and not rely on it in production in the first place, though.",
+      "translation": "要在父级中启用\"useCodeAsDefaultMessage\"，AbstractMessageSource 和 AbstractApplicationContext 包含特殊检查，如果可用则委托到内部<a href=\"#getMessageInternal(java.lang.String,java.lang.Object%5B%5D,java.util.Locale)\"><code>getMessageInternal(String, Object[], Locale)</code></a>方法。不过，通常建议在开发期间仅使用\"useCodeAsDefaultMessage\"，而不应在生产环境中依赖它。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, consider overriding the <a href=\"#getDefaultMessage(org.springframework.context.MessageSourceResolvable,java.util.Locale)\"><code>getDefaultMessage(MessageSourceResolvable, Locale)</code></a>\nmethod to return a custom fallback message for an unresolvable code.",
+      "translation": "或者，考虑重写<a href=\"#getDefaultMessage(org.springframework.context.MessageSourceResolvable,java.util.Locale)\"><code>getDefaultMessage(MessageSourceResolvable, Locale)</code></a>方法，以返回不可解析代码的自定义后备消息。",
+      "count": 2
+    },
+    {
+      "source": "Default is to return the code itself if \"useCodeAsDefaultMessage\" is activated,\nor return no fallback else. In case of no fallback, the caller will usually\nreceive a <code>NoSuchMessageException</code> from <code>getMessage</code>.",
+      "translation": "默认情况下，如果激活了\"useCodeAsDefaultMessage\"，则返回代码本身；否则不返回任何回退值。如果没有回退值，调用方通常会从`getMessage` 收到一个 `<code>NoSuchMessageException</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note:</b> By default, message texts are only parsed through\nMessageFormat if arguments have been passed in for the message. In case\nof no arguments, message texts will be returned as-is. As a consequence,\nyou should only use MessageFormat escaping for messages with actual\narguments, and keep all other messages unescaped. If you prefer to\nescape all messages, set the \"alwaysUseMessageFormat\" flag to \"true\".",
+      "translation": "<b>注意：</b> 默认情况下，仅当消息已传入参数时，消息文本才会通过 MessageFormat 进行解析。如果没有参数，消息文本将原样返回。因此，您应只为包含实际参数的消息使用 MessageFormat 转义，而保持其他所有消息未转义。如果您希望转义所有消息，请将 \"alwaysUseMessageFormat\" 标志设置为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "This implementation fully renders the default message if available,\nor just returns the plain default message <code>String</code> if the primary\nmessage code is being used as a default message.",
+      "translation": "此实现会完整渲染默认消息（如果可用），或者当主消息代码被用作默认消息时，仅返回纯文本的默认消息 `<code>String</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Unfortunately, <code>java.text.MessageFormat</code> is not implemented\nin an efficient fashion. In particular, it does not detect that a message\npattern doesn't contain argument placeholders in the first place. Therefore,\nit is advisable to circumvent MessageFormat for messages without arguments.",
+      "translation": "不幸的是，`java.text.MessageFormat` 的实现效率不高。特别是，它无法检测消息模式本身是否包含参数占位符。因此，建议对于不含参数的消息，避免使用 MessageFormat。",
+      "count": 2
+    },
+    {
+      "source": "Supports not only MessageSourceResolvables as primary messages\nbut also resolution of message arguments that are in turn\nMessageSourceResolvables themselves.",
+      "translation": "不仅支持将 MessageSourceResolvables 作为主要消息，还支持解析本身为 MessageSourceResolvables 的消息参数。",
+      "count": 2
+    },
+    {
+      "source": "This class does not implement caching of messages per code, thus\nsubclasses can dynamically change messages over time. Subclasses are\nencouraged to cache their messages in a modification-aware fashion,\nallowing for hot deployment of updated messages.",
+      "translation": "该类未实现按代码缓存消息，因此子类可以随时间动态更改消息。鼓励子类以感知修改的方式缓存其消息，从而支持更新消息的热部署。",
+      "count": 2
+    },
+    {
+      "source": "Allows for messages to have MessageSourceResolvables as arguments.",
+      "translation": "允许消息具有 MessageSourceResolvables 作为参数。",
+      "count": 2
+    },
+    {
+      "source": "Returns a MessageFormat instance rather than a message String,\nto allow for appropriate caching of MessageFormats in subclasses.",
+      "translation": "返回一个 MessageFormat 实例而不是消息字符串，以便在子类中适当缓存 MessageFormat。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../HierarchicalMessageSource.html#setParentMessageSource(org.springframework.context.MessageSource)\">HierarchicalMessageSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../HierarchicalMessageSource.html#setParentMessageSource(org.springframework.context.MessageSource)\">HierarchicalMessageSource</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../HierarchicalMessageSource.html#getParentMessageSource()\">HierarchicalMessageSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../HierarchicalMessageSource.html#getParentMessageSource()\">HierarchicalMessageSource</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Resolve the given code and arguments as message in the given Locale,\nreturning <code>null</code> if not found. Does <i>not</i> fall back to\nthe code as default message. Invoked by <code>getMessage</code> methods.",
+      "translation": "在给定的区域设置中解析给定的代码和参数作为消息，如果未找到则返回<code>null</code>。不会将代码回退为默认消息。由<code>getMessage</code>方法调用。",
+      "count": 2
+    },
+    {
+      "source": "Try to retrieve the given message from the parent <code>MessageSource</code>, if any.",
+      "translation": "尝试从父级<code>MessageSource</code>（如果有）检索给定的消息。",
+      "count": 2
+    },
+    {
+      "source": "Return the parent of this MessageSource, or <code>null</code> if none.",
+      "translation": "返回此 MessageSource 的父对象，如果没有则返回 <code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Return a Properties object defining locale-independent common messages, if any.",
+      "translation": "返回一个定义本地化无关的通用消息（如果有）的 Properties 对象。",
+      "count": 2
+    },
+    {
+      "source": "Try to resolve the message.",
+      "translation": "尝试解决该消息。",
+      "count": 2
+    },
+    {
+      "source": "Set the parent that will be used to try to resolve messages\nthat this object can't resolve.",
+      "translation": "设置将用于尝试解析此对象无法解析的消息的父级。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../HierarchicalMessageSource.html#setParentMessageSource(org.springframework.context.MessageSource)\">setParentMessageSource</a></code> in interface <code><a href=\"../HierarchicalMessageSource.html\" title=\"interface in org.springframework.context\">HierarchicalMessageSource</a></code>",
+      "translation": "`<code><a href=\"../HierarchicalMessageSource.html#setParentMessageSource(org.springframework.context.MessageSource)\">setParentMessageSource</a></code>` 接口 `<code><a href=\"../HierarchicalMessageSource.html\" title=\"interface in org.springframework.context\">HierarchicalMessageSource</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../HierarchicalMessageSource.html#getParentMessageSource()\">getParentMessageSource</a></code> in interface <code><a href=\"../HierarchicalMessageSource.html\" title=\"interface in org.springframework.context\">HierarchicalMessageSource</a></code>",
+      "translation": "`<code><a href=\"../HierarchicalMessageSource.html#getParentMessageSource()\">getParentMessageSource</a></code>` 接口 `<code><a href=\"../HierarchicalMessageSource.html\" title=\"interface in org.springframework.context\">HierarchicalMessageSource</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MessageSourceSupport.html#resolveArguments(java.lang.Object%5B%5D,java.util.Locale)\">resolveArguments</a></code> in class <code><a href=\"MessageSourceSupport.html\" title=\"class in org.springframework.context.support\">MessageSourceSupport</a></code>",
+      "translation": "`<code><a href=\"MessageSourceSupport.html#resolveArguments(java.lang.Object%5B%5D,java.util.Locale)\">resolveArguments</a></code>` 类中的 `<code><a href=\"MessageSourceSupport.html\" title=\"class in org.springframework.context.support\">MessageSourceSupport</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>args</code> - an array of arguments that will be filled in for params within\nthe message (params look like \"{0}\", \"{1,date}\", \"{2,time}\" within a message),\nor <code>null</code> if none",
+      "translation": "`args` - 一个数组，其中包含要在消息中的参数内填充的实参（在消息中，参数看起来像\"{0}\"、\"{1,date}\"、\"{2,time}\"），或者如果没有则为 `null`。",
+      "count": 2
+    },
+    {
+      "source": "<code>code</code> - the message code to look up, for example, 'calculator.noRateSet'.\nMessageSource users are encouraged to base message names on qualified class\nor package names, avoiding potential conflicts and ensuring maximum clarity.",
+      "translation": "`<code>code</code>` - 要查找的消息代码，例如 'calculator.noRateSet'。建议 MessageSource 用户基于限定类名或包名来构建消息名称，以避免潜在的冲突并确保最大清晰度。",
+      "count": 2
+    },
+    {
+      "source": "<code>resolvable</code> - the value object to resolve a default message for",
+      "translation": "<code>resolvable</code> - 用于解析默认消息的值对象",
+      "count": 2
+    },
+    {
+      "source": "the default message, or <code>null</code> if none",
+      "translation": "默认消息，或者如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>code</code> - the message code that we couldn't resolve\nand that we didn't receive an explicit default message for",
+      "translation": "<code>code</code> - 无法解析的消息代码，且未收到明确的默认消息。",
+      "count": 2
+    },
+    {
+      "source": "the default message to use, or <code>null</code> if none",
+      "translation": "要使用的默认消息，或者如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>args</code> - array of arguments for a message",
+      "translation": "<code>args</code> - 消息的参数数组",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the locale to resolve through",
+      "translation": "<code>locale</code> - 要解析的本地化环境。",
+      "count": 2
+    },
+    {
+      "source": "<code>code</code> - the code of the message to resolve",
+      "translation": "<code>code</code> - 要解析的消息的代码",
+      "count": 2
+    },
+    {
+      "source": "<code>locale</code> - the locale to resolve the code for\n(subclasses are encouraged to support internationalization)",
+      "translation": "<code>locale</code> - 用于解析代码的区域设置（鼓励子类支持国际化）",
+      "count": 2
+    },
+    {
+      "source": "the message String, or <code>null</code> if not found",
+      "translation": "消息字符串，如果未找到则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "the MessageFormat for the message, or <code>null</code> if not found",
+      "translation": "消息的 MessageFormat，如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "an array of arguments with any MessageSourceResolvables resolved",
+      "translation": "包含已解析的任意 MessageSourceResolvables 的参数数组",
+      "count": 2
+    },
+    {
+      "source": "NOTE: We must throw a <code>NoSuchMessageException</code> on this method\nsince at the time of calling this method we aren't able to determine if the\n<code>defaultMessage</code> property of the resolvable is <code>null</code> or not.",
+      "translation": "NOTE: 我们必须在该方法上抛出 <code>NoSuchMessageException</code>，因为在调用此方法时，我们无法确定可解析对象的 <code>defaultMessage</code> 属性是否为 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.lang.String,java.util.Locale)\">MessageSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.lang.String,java.util.Locale)\">MessageSource</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.util.Locale)\">MessageSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.util.Locale)\">MessageSource</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../MessageSource.html#getMessage(org.springframework.context.MessageSourceResolvable,java.util.Locale)\">MessageSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../MessageSource.html#getMessage(org.springframework.context.MessageSourceResolvable,java.util.Locale)\">MessageSource</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Get a default message for the given <code>MessageSourceResolvable</code>.",
+      "translation": "获取给定<code>MessageSourceResolvable</code>的默认消息。",
+      "count": 1
+    },
+    {
+      "source": "Try to resolve the message using all the attributes contained within the\n<code>MessageSourceResolvable</code> argument that was passed in.",
+      "translation": "尝试使用传入的 `<code>MessageSourceResolvable</code>` 参数中包含的所有属性来解析该消息。",
+      "count": 1
+    },
+    {
+      "source": "Resolve the given code and arguments as message in the given Locale,\nreturning <code>null</code> if not found.",
+      "translation": "在给定的区域设置中解析给定的代码和参数作为消息，如果未找到则返回<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return a fallback default message for the given code, if any.",
+      "translation": "如果存在，则为给定代码返回一个回退默认消息。",
+      "count": 1
+    },
+    {
+      "source": "Return whether to use the message code as default message instead of\nthrowing a NoSuchMessageException.",
+      "translation": "返回是否使用消息代码作为默认消息，而不是抛出 NoSuchMessageException。",
+      "count": 1
+    },
+    {
+      "source": "Searches through the given array of objects, finds any MessageSourceResolvable\nobjects and resolves them.",
+      "translation": "在给定的对象数组中搜索，查找任何 MessageSourceResolvable 对象并解析它们。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses must implement this method to resolve a message.",
+      "translation": "子类必须实现此方法以解析消息。",
+      "count": 1
+    },
+    {
+      "source": "Subclasses can override this method to resolve a message without arguments\nin an optimized fashion, i.e.",
+      "translation": "子类可以重写此方法以优化方式解析不带参数的消息，即",
+      "count": 1
+    },
+    {
+      "source": "Specify locale-independent common messages, with the message code as key\nand the full message String (may contain argument placeholders) as value.",
+      "translation": "指定与区域无关的通用消息，以消息代码作为键，以完整消息字符串（可包含参数占位符）作为值。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to use the message code as default message instead of\nthrowing a NoSuchMessageException.",
+      "translation": "设置是否使用消息代码作为默认消息，而不是抛出 NoSuchMessageException。",
+      "count": 1
+    },
+    {
+      "source": "Try to resolve the message. Return default message if no message was found.",
+      "translation": "尝试解析该消息。如果未找到消息，则返回默认消息。",
+      "count": 1
+    },
+    {
+      "source": "Try to resolve the message. Treat as an error if the message can't be found.",
+      "translation": "尝试解析该消息。如果找不到该消息，则将其视为错误。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.lang.String,java.util.Locale)\">getMessage</a></code> in interface <code><a href=\"../MessageSource.html\" title=\"interface in org.springframework.context\">MessageSource</a></code>",
+      "translation": "`<code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.lang.String,java.util.Locale)\">getMessage</a></code>` 接口 `<code><a href=\"../MessageSource.html\" title=\"interface in org.springframework.context\">MessageSource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.util.Locale)\">getMessage</a></code> in interface <code><a href=\"../MessageSource.html\" title=\"interface in org.springframework.context\">MessageSource</a></code>",
+      "translation": "`<code><a href=\"../MessageSource.html#getMessage(java.lang.String,java.lang.Object%5B%5D,java.util.Locale)\">getMessage</a></code>` 接口 `<code><a href=\"../MessageSource.html\" title=\"interface in org.springframework.context\">MessageSource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../MessageSource.html#getMessage(org.springframework.context.MessageSourceResolvable,java.util.Locale)\">getMessage</a></code> in interface <code><a href=\"../MessageSource.html\" title=\"interface in org.springframework.context\">MessageSource</a></code>",
+      "translation": "`<code><a href=\"../MessageSource.html#getMessage(org.springframework.context.MessageSourceResolvable,java.util.Locale)\">getMessage</a></code>` 接口 `<code><a href=\"../MessageSource.html\" title=\"interface in org.springframework.context\">MessageSource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../NoSuchMessageException.html\" title=\"class in org.springframework.context\">NoSuchMessageException</a></code> - if no corresponding message was found\n(and no default message was provided by the <code>MessageSourceResolvable</code>)",
+      "translation": "<code><a href=\"../NoSuchMessageException.html\" title=\"class in org.springframework.context\">NoSuchMessageException</a></code> - 如果未找到相应的消息（且 <code>MessageSourceResolvable</code> 未提供默认消息）",
+      "count": 1
+    },
+    {
+      "source": "<code>parent</code> - the parent MessageSource that will be used to\nresolve messages that this object can't resolve.\nMay be <code>null</code>, in which case no further resolution is possible.",
+      "translation": "<code>parent</code> - 用于解析此对象无法解析的消息的父 MessageSource。  \n可为 `<code>null</code>`，在这种情况下无法进行进一步解析。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../NoSuchMessageException.html\" title=\"class in org.springframework.context\">NoSuchMessageException</a></code> - if no corresponding message was found",
+      "translation": "<code><a href=\"../NoSuchMessageException.html\" title=\"class in org.springframework.context\">NoSuchMessageException</a></code> - 如果未找到对应的消息",
+      "count": 1
+    },
+    {
+      "source": "the resolved message (never <code>null</code> since even a\n<code>MessageSourceResolvable</code>-provided default message needs to be non-null)",
+      "translation": "已解析的消息（永远不会为 `<code>null</code>`，因为即使是由 `<code>MessageSourceResolvable</code>` 提供的默认消息也必须是非空的）",
+      "count": 1
+    },
+    {
+      "source": "<code>defaultMessage</code> - a default message to return if the lookup fails",
+      "translation": "<code>defaultMessage</code> - 如果查找失败则返回的默认消息",
+      "count": 1
+    },
+    {
+      "source": "the resolved message if the lookup was successful, otherwise\nthe default message passed as a parameter (which may be <code>null</code>)",
+      "translation": "如果查找成功，则返回解析后的消息；否则，返回作为参数传递的默认消息（该消息可能为 `<code>null</code>`）。",
+      "count": 1
+    },
+    {
+      "source": "the resolved message (never <code>null</code>)",
+      "translation": "已解析的消息（永远不为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>resolvable</code> - the value object storing attributes required to resolve a message\n(may include a default message)",
+      "translation": "<code>resolvable</code> - 存储解析消息所需属性的值对象（可能包含默认消息）",
+      "count": 1
+    },
+    {
+      "source": "<code>locale</code> - the current locale",
+      "translation": "<code>locale</code> - 当前区域设置",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Rod Johnson",
+      "translation": "Juergen Hoeller，Rod Johnson",
+      "count": 1
+    }
+  ]
+}

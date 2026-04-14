@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 17:02:55",
+  "updated_at": "2026-04-14 17:02:55",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Invoking this method will <em>not</em> end the current transaction.\nRather, the value of this flag will be used to determine whether\nthe current test-managed transaction should be rolled back or committed\nonce it is <a href=\"#end()\">ended</a>.",
+      "translation": "调用此方法将<em>不会</em>结束当前事务。相反，该标志的值将用于确定一旦当前测试管理的事务<a href=\"#end()\">结束</a>后，是回滚还是提交。",
+      "count": 3
+    },
+    {
+      "source": "Immediately force a <em>commit</em> or <em>rollback</em> of the\ncurrent test-managed transaction, according to the\n<a href=\"#isFlaggedForRollback()\">rollback flag</a>.",
+      "translation": "立即根据<a href=\"#isFlaggedForRollback()\">回滚标志</a>强制提交或回滚当前测试管理的事务。",
+      "count": 3
+    },
+    {
+      "source": "Determine whether the current test-managed transaction has been\n<a href=\"#flagForRollback()\">flagged for rollback</a> or\n<a href=\"#flagForCommit()\">flagged for commit</a>.",
+      "translation": "确定当前由测试管理的交易是否已\n<a href=\"#flagForRollback()\">标记为回滚</a> 或\n<a href=\"#flagForCommit()\">标记为提交</a>。",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no transaction is active for the current test",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果当前测试没有激活的事务",
+      "count": 3
+    },
+    {
+      "source": "Support for <code>TestTransaction</code> is automatically available whenever\nthe <code>TransactionalTestExecutionListener</code> is enabled. Note that the\n<code>TransactionalTestExecutionListener</code> is typically enabled by default,\nbut it can also be manually enabled via the\n<a href=\"../TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a> annotation.",
+      "translation": "对 `<code>TestTransaction`</code> 的支持在启用 `<code>TransactionalTestExecutionListener`</code> 时自动可用。请注意，`<code>TransactionalTestExecutionListener`</code> 通常默认启用，但也可以通过 `<a href=\"../TestExecutionListeners.html\" title=\"annotation interface in org.springframework.test.context\"><code>@TestExecutionListeners</code></a>` 注解手动启用。",
+      "count": 2
+    },
+    {
+      "source": "Consult the javadocs for <a href=\"TransactionalTestExecutionListener.html\" title=\"class in org.springframework.test.context.transaction\"><code>TransactionalTestExecutionListener</code></a>\nfor a detailed explanation of <em>test-managed transactions</em>.",
+      "translation": "请查阅 `<a href=\"TransactionalTestExecutionListener.html\" title=\"class in org.springframework.test.context.transaction\"><code>TransactionalTestExecutionListener</code></a>` 的 javadocs，以获取有关<em>测试管理的交易</em>的详细解释。",
+      "count": 2
+    },
+    {
+      "source": "Only call this method if <a href=\"#end()\"><code>end()</code></a> has been called or if no\ntransaction has been previously started.",
+      "translation": "仅当已调用<a href=\"#end()\"><code>end()</code></a>或尚未启动任何事务时，才调用此方法。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether a test-managed transaction is currently <em>active</em>.",
+      "translation": "确定当前是否有一个由测试管理的<em>活动</em>事务。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the current test-managed transaction is flagged\nto be rolled back; <code>false</code> if the current test-managed transaction\nis flagged to be committed",
+      "translation": "如果当前测试管理的交易被标记为回滚，则为`true`；如果被标记为提交，则为`false`。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if a transaction is not active for the\ncurrent test",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果当前测试没有激活事务",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the transaction context could not be\nretrieved or if a transaction is already active for the current test",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果无法检索事务上下文，或者当前测试已存在活动事务",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the transaction context could not be\nretrieved or if a transaction is not active for the current test",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果无法获取事务上下文，或者当前测试没有活动的事务",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if a test-managed transaction is currently active",
+      "translation": "<code>true</code> 表示当前存在由测试管理的活动事务。",
+      "count": 2
+    },
+    {
+      "source": "Flag the current test-managed transaction for <em>commit</em>.",
+      "translation": "标记当前由测试管理的交易以进行<em>提交</em>。",
+      "count": 1
+    },
+    {
+      "source": "Flag the current test-managed transaction for <em>rollback</em>.",
+      "translation": "标记当前测试管理的交易以进行<em>回滚</em>。",
+      "count": 1
+    },
+    {
+      "source": "Start a new test-managed transaction.",
+      "translation": "启动一个新的由测试管理的事务。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    }
+  ]
+}

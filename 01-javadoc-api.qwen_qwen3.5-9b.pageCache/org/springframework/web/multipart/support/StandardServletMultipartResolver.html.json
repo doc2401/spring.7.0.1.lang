@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-14 18:53:01",
+  "updated_at": "2026-04-14 18:53:01",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 36,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 1.565217391304348,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "<b>Note:</b> In order to use Servlet container based multipart parsing,\nyou need to mark the affected servlet with a \"multipart-config\" section in\n<code>web.xml</code>, or with a <code>MultipartConfigElement</code>\nin programmatic servlet registration, or (in case of a custom servlet class)\npossibly with a <code>MultipartConfig</code> annotation\non your servlet class. Configuration settings such as maximum sizes or storage\nlocations need to be applied at that servlet registration level; a Servlet\ncontainer does not allow for them to be set at the MultipartResolver level.",
+      "translation": "<b>注意：</b> 若要使用基于 Servlet 容器的多部分解析，您需要通过在 <code>web.xml</code> 中标记受影响的 servlet 的 \"multipart-config\" 部分，或在程序化注册 servlet 时使用 <code>MultipartConfigElement</code>，或者（对于自定义 servlet 类）可能在您的 servlet 类上使用 <code>MultipartConfig</code> 注解来配置。诸如最大大小或存储位置等配置设置需要在该 servlet 注册级别应用；Servlet 容器不允许在 MultipartResolver 级别设置这些内容。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", trying to process any request with a \"multipart/\"\ncontent type as far as the underlying Servlet container supports it\n(which works on, for example, Tomcat but not on Jetty). For consistent portability\nand in particular for consistent custom handling of non-form multipart\nrequest types outside of Spring's <a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> mechanism,\nswitch this flag to \"true\": Only \"multipart/form-data\" requests will be\nwrapped with a <a href=\"../MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a> then; other kinds of\nrequests will be left as-is, allowing for custom processing in user code.",
+      "translation": "默认为 \"false\"，尝试处理任何具有 \"multipart/\" 内容类型的请求，前提是底层 Servlet 容器支持该功能（例如在 Tomcat 上有效，但在 Jetty 上无效）。为了实现一致的移植性，特别是为了在 Spring 的 <a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> 机制之外对非表单 multipart 请求类型进行一致的处理，请将此标志切换为 \"true\"：此后仅将 \"multipart/form-data\" 请求包装为 <a href=\"../MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>；其他类型的请求将保持原样，以便在用户代码中进行自定义处理。",
+      "count": 2
+    },
+    {
+      "source": "This resolver variant uses your Servlet container's multipart parser as-is,\npotentially exposing the application to container implementation differences.\nAlso, see this resolver's configuration option for\n<a href=\"#setStrictServletCompliance(boolean)\">strict Servlet compliance</a>, narrowing the\napplicability of Spring's <a href=\"../MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a> to form data only.",
+      "translation": "此解析器变体直接使用您的 Servlet 容器中的多部分解析器，可能会使应用程序暴露于容器实现差异的风险之下。此外，请参阅此解析器的<a href=\"#setStrictServletCompliance(boolean)\">严格 Servlet 合规性</a>配置选项，将 Spring 的 <a href=\"../MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a> 接口适用范围限制为仅表单数据。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", resolving the multipart elements immediately, throwing\ncorresponding exceptions at the time of the <a href=\"#resolveMultipart(jakarta.servlet.http.HttpServletRequest)\"><code>resolveMultipart(HttpServletRequest)</code></a> call.\nSwitch this to \"true\" for lazy multipart parsing, throwing parse exceptions\nonce the application attempts to obtain multipart files or parameters.",
+      "translation": "默认为 \"false\"，会立即解析多部分元素，并在调用 <a href=\"#resolveMultipart(jakarta.servlet.http.HttpServletRequest)\"><code>resolveMultipart(HttpServletRequest)</code></a> 时抛出相应的异常。将其切换为 \"true\" 以启用懒式多部分解析，仅在应用程序尝试获取多部分文件或参数时抛出解析异常。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../MultipartResolver.html#isMultipart(jakarta.servlet.http.HttpServletRequest)\">MultipartResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../MultipartResolver.html#isMultipart(jakarta.servlet.http.HttpServletRequest)\">MultipartResolver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../MultipartResolver.html#resolveMultipart(jakarta.servlet.http.HttpServletRequest)\">MultipartResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../MultipartResolver.html#resolveMultipart(jakarta.servlet.http.HttpServletRequest)\">MultipartResolver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../MultipartResolver.html#cleanupMultipart(org.springframework.web.multipart.MultipartHttpServletRequest)\">MultipartResolver</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../MultipartResolver.html#cleanupMultipart(org.springframework.web.multipart.MultipartHttpServletRequest)\">MultipartResolver</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Parse the given HTTP request into multipart files and parameters,\nand wrap the request inside a\n<a href=\"../MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>\nobject that provides access to file descriptors and makes contained\nparameters accessible via the standard ServletRequest methods.",
+      "translation": "将给定的 HTTP 请求解析为多部分文件和参数，并将该请求封装在`<a href=\"../MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>`对象中，该对象提供对文件描述符的访问，并通过标准的 ServletRequest 方法使包含的参数可访问。",
+      "count": 2
+    },
+    {
+      "source": "Clean up any resources used for the multipart handling,\nlike a storage for the uploaded files.",
+      "translation": "清理用于多部分处理的任何资源，例如上传文件的存储。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MultipartResolver.html#isMultipart(jakarta.servlet.http.HttpServletRequest)\">isMultipart</a></code> in interface <code><a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\">MultipartResolver</a></code>",
+      "translation": "`<code><a href=\"../MultipartResolver.html#isMultipart(jakarta.servlet.http.HttpServletRequest)\">isMultipart</a></code>` 接口 `<code><a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\">MultipartResolver</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MultipartResolver.html#resolveMultipart(jakarta.servlet.http.HttpServletRequest)\">resolveMultipart</a></code> in interface <code><a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\">MultipartResolver</a></code>",
+      "translation": "`<code><a href=\"../MultipartResolver.html#resolveMultipart(jakarta.servlet.http.HttpServletRequest)\">resolveMultipart</a></code>` 接口 `<code><a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\">MultipartResolver</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MultipartResolver.html#cleanupMultipart(org.springframework.web.multipart.MultipartHttpServletRequest)\">cleanupMultipart</a></code> in interface <code><a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\">MultipartResolver</a></code>",
+      "translation": "`<code><a href=\"../MultipartResolver.html#cleanupMultipart(org.springframework.web.multipart.MultipartHttpServletRequest)\">cleanupMultipart</a></code>` 接口 `<code><a href=\"../MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\">MultipartResolver</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../MultipartException.html\" title=\"class in org.springframework.web.multipart\">MultipartException</a></code> - if the servlet request is not multipart, or if\nimplementation-specific problems are encountered (such as exceeding file size limits)",
+      "translation": "<code><a href=\"../MultipartException.html\" title=\"class in org.springframework.web.multipart\">MultipartException</a></code> - 如果 Servlet 请求不是多部分，或者遇到实现特定的问题（例如超过文件大小限制）时。",
+      "count": 2
+    },
+    {
+      "source": "Will typically check for content type \"multipart/form-data\", but the actually\naccepted requests might depend on the capabilities of the resolver implementation.",
+      "translation": "通常将检查内容类型为\"multipart/form-data\"，但实际接受的请求可能取决于解析器实现的功能。",
+      "count": 1
+    },
+    {
+      "source": "Determine if the given request contains multipart content.",
+      "translation": "判断给定请求是否包含多部分内容。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to resolve the multipart request lazily at the time of\nfile or parameter access.",
+      "translation": "设置是否在访问文件或参数时懒式解析多部分请求。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether this resolver should strictly comply with the Servlet\nspecification, only kicking in for \"multipart/form-data\" requests.",
+      "translation": "指定此解析器是否应严格遵循 Servlet 规范，仅针对 \"multipart/form-data\" 请求生效。",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the servlet request to be evaluated",
+      "translation": "<code>request</code> - 待评估的 Servlet 请求",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the servlet request to wrap (must be of a multipart content type)",
+      "translation": "<code>request</code> - 要包装的 Servlet 请求（必须是多部分内容类型）",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the request to clean up resources for",
+      "translation": "<code>request</code> - 用于清理资源的请求",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the request contains multipart content",
+      "translation": "请求是否包含多部分内容",
+      "count": 1
+    },
+    {
+      "source": "the wrapped servlet request",
+      "translation": "被包装的 Servlet 请求",
+      "count": 1
+    }
+  ]
+}

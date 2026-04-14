@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-14 14:46:00",
+  "updated_at": "2026-04-14 14:46:00",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 42,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 1.826086956521739,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Create a new DriverManagerDataSource with the given JDBC URL,\nnot specifying a username or password for JDBC access.",
+      "translation": "使用给定的 JDBC URL 创建一个新的 DriverManagerDataSource，不指定用于 JDBC 访问的用户名或密码。",
+      "count": 4
+    },
+    {
+      "source": "<code>url</code> - the JDBC URL to use for accessing the DriverManager",
+      "translation": "<code>url</code> - 用于访问 DriverManager 的 JDBC URL。",
+      "count": 3
+    },
+    {
+      "source": "This <code>DriverManagerDataSource</code> class was originally designed alongside\n<a href=\"https://commons.apache.org/proper/commons-dbcp\">Apache Commons DBCP</a>\nand <a href=\"https://sourceforge.net/projects/c3p0\">C3P0</a>, featuring bean-style\n<code>BasicDataSource</code>/<code>ComboPooledDataSource</code> classes with configuration\nproperties for local resource setups. For a modern JDBC connection pool, consider\n<a href=\"https://github.com/brettwooldridge/HikariCP\">HikariCP</a> instead,\nexposing a corresponding <code>HikariDataSource</code> instance to the application.",
+      "translation": "该 `<code>DriverManagerDataSource</code>` 类最初是与<a href=\"https://commons.apache.org/proper/commons-dbcp\">Apache Commons DBCP</a>和<a href=\"https://sourceforge.net/projects/c3p0\">C3P0</a>一起设计的，具有针对本地资源设置的 bean 风格 `<code>BasicDataSource</code>`/`<code>ComboPooledDataSource</code>` 类及其配置属性。对于现代 JDBC 连接池，请考虑使用<a href=\"https://github.com/brettwooldridge/HikariCP\">HikariCP</a>，并向应用程序暴露相应的 `<code>HikariDataSource</code>` 实例。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: DriverManagerDataSource is primarily intended for accessing\n<i>pre-registered</i> JDBC drivers.</b> If you need to register a new driver,\nconsider using <a href=\"SimpleDriverDataSource.html\" title=\"class in org.springframework.jdbc.datasource\"><code>SimpleDriverDataSource</code></a> instead. Alternatively, consider\ninitializing the JDBC driver yourself before instantiating this DataSource.\nThe \"driverClassName\" property is mainly preserved for backwards compatibility,\nas well as for migrating between Commons DBCP and this DataSource.",
+      "translation": "<b>注意：DriverManagerDataSource 主要用于访问<i>已预注册</i>的 JDBC 驱动程序。</b> 如果您需要注册新的驱动程序，请考虑改用 <a href=\"SimpleDriverDataSource.html\" title=\"class in org.springframework.jdbc.datasource\"><code>SimpleDriverDataSource</code></a>。或者，在实例化此 DataSource 之前自行初始化 JDBC 驱动程序。\n\"driverClassName\" 属性主要用于向后兼容，以及用于在 Commons DBCP 与此 DataSource 之间进行迁移。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: Within special class loading environments such as OSGi, this class\nis effectively superseded by <a href=\"SimpleDriverDataSource.html\" title=\"class in org.springframework.jdbc.datasource\"><code>SimpleDriverDataSource</code></a> due to general class\nloading issues with the JDBC DriverManager that be resolved through direct Driver\nusage (which is exactly what SimpleDriverDataSource does).</b>",
+      "translation": "<b>注意：在 OSGi 等特殊类加载环境中，由于 JDBC DriverManager 存在通用的类加载问题，该类实际上已被 <a href=\"SimpleDriverDataSource.html\" title=\"class in org.springframework.jdbc.datasource\"><code>SimpleDriverDataSource</code></a> 所取代；这些问题可通过直接使用 Driver 来解决（这正是 SimpleDriverDataSource 所做的）。</b>",
+      "count": 2
+    },
+    {
+      "source": "In a Jakarta EE container, it is recommended to use a JNDI DataSource provided by\nthe container. Such a DataSource can be exposed as a DataSource bean in a Spring\nApplicationContext via <a href=\"../../jndi/JndiObjectFactoryBean.html\" title=\"class in org.springframework.jndi\"><code>JndiObjectFactoryBean</code></a>,\nfor seamless switching to and from a local DataSource bean like this class.\nFor tests, you can then either set up a mock JNDI environment through complete\nsolutions from third parties such as <a href=\"https://github.com/h-thurow/Simple-JNDI\">Simple-JNDI</a>,\nor switch the bean definition to a local DataSource (which is simpler and thus recommended).",
+      "translation": "在 Jakarta EE 容器中，建议使用由容器提供的 JNDI DataSource。此类 DataSource 可以通过 `<a href=\"../../jndi/JndiObjectFactoryBean.html\" title=\"class in org.springframework.jndi\"><code>JndiObjectFactoryBean</code></a>` 作为 Spring `ApplicationContext` 中的 DataSource bean 暴露出来，以便与本地 DataSource bean（如该类）之间无缝切换。对于测试，您可以选择通过第三方完整解决方案（例如 <a href=\"https://github.com/h-thurow/Simple-JNDI\">Simple-JNDI</a>）设置模拟 JNDI 环境，或者将 bean 定义切换到本地 DataSource（后者更简单，因此推荐）。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This class is not an actual connection pool; it does not actually\npool Connections.</b> It just serves as simple replacement for a full-blown\nconnection pool, implementing the same standard interface, but creating new\nConnections on every call.",
+      "translation": "<b>注意：此类并非真正的连接池；它实际上并不对 Connection 进行池化。</b> 它仅作为一个全功能连接池的简单替代品，实现了相同的标准接口，但在每次调用时都会创建新的 Connection。",
+      "count": 2
+    },
+    {
+      "source": "Useful for test or standalone environments outside a Jakarta EE container, either\nas a DataSource bean in a corresponding ApplicationContext or in conjunction with\na simple JNDI environment. Pool-assuming <code>Connection.close()</code> calls will\nsimply close the Connection, so any DataSource-aware persistence code should work.",
+      "translation": "适用于 Jakarta EE 容器之外的测试或独立环境，既可以作为对应 ApplicationContext 中的 DataSource  bean，也可以与简单的 JNDI 环境配合使用。由于该连接池假设 `Connection.close()` 调用将直接关闭 Connection，因此任何支持 DataSource 的持久化代码均可正常工作。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"AbstractDriverBasedDataSource.html#getConnectionFromDriver(java.util.Properties)\">AbstractDriverBasedDataSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"AbstractDriverBasedDataSource.html#getConnectionFromDriver(java.util.Properties)\">AbstractDriverBasedDataSource</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Constructor for bean-style configuration.",
+      "translation": "用于 Bean 风格配置的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Create a new DriverManagerDataSource with the given standard\nDriverManager parameters.",
+      "translation": "使用给定的标准 DriverManager 参数创建一个新的 DriverManagerDataSource。",
+      "count": 2
+    },
+    {
+      "source": "Getting a Connection using the nasty static from DriverManager is extracted\ninto a protected method to allow for easy unit testing.",
+      "translation": "使用 `DriverManager` 中那个讨厌的静态方法获取连接已被提取到一个受保护的方法中，以便于进行单元测试。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractDriverBasedDataSource.html#getConnectionFromDriver(java.util.Properties)\">getConnectionFromDriver</a></code> in class <code><a href=\"AbstractDriverBasedDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">AbstractDriverBasedDataSource</a></code>",
+      "translation": "`<code><a href=\"AbstractDriverBasedDataSource.html#getConnectionFromDriver(java.util.Properties)\">getConnectionFromDriver</a></code>` 类中的 `<code><a href=\"AbstractDriverBasedDataSource.html\" title=\"class in org.springframework.jdbc.datasource\">AbstractDriverBasedDataSource</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>username</code> - the JDBC username to use for accessing the DriverManager",
+      "translation": "<code>username</code> - 用于访问 DriverManager 的 JDBC 用户名。",
+      "count": 2
+    },
+    {
+      "source": "<code>password</code> - the JDBC password to use for accessing the DriverManager",
+      "translation": "<code>password</code> - 用于访问 DriverManager 的 JDBC 密码。",
+      "count": 2
+    },
+    {
+      "source": "<code>conProps</code> - the JDBC connection properties",
+      "translation": "<code>conProps</code> - JDBC 连接属性",
+      "count": 2
+    },
+    {
+      "source": "Template method to be implemented by subclasses.",
+      "translation": "由子类实现的模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a Connection using the given properties.",
+      "translation": "使用给定属性获取连接。",
+      "count": 1
+    },
+    {
+      "source": "Set the JDBC driver class name.",
+      "translation": "设置 JDBC 驱动程序类名。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - in case of failure",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/SQLException.html\" title=\"class or interface in java.sql\">SQLException</a></code> - 在发生失败时",
+      "count": 1
+    },
+    {
+      "source": "<code>props</code> - the merged connection properties",
+      "translation": "<code>props</code> - 合并后的连接属性",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the obtained Connection",
+      "translation": "获取到的 Connection",
+      "count": 1
+    }
+  ]
+}

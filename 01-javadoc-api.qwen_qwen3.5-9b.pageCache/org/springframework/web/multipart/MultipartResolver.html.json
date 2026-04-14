@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 18:51:45",
+  "updated_at": "2026-04-14 18:51:45",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 33,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9411764705882353,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Parse the given HTTP request into multipart files and parameters,\nand wrap the request inside a\n<a href=\"MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>\nobject that provides access to file descriptors and makes contained\nparameters accessible via the standard ServletRequest methods.",
+      "translation": "解析给定的 HTTP 请求为多部分文件和参数，并将该请求包装在`<a href=\"MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>`对象中，该对象提供对文件描述符的访问，并通过标准的 ServletRequest 方法使包含的参数可访问。",
+      "count": 3
+    },
+    {
+      "source": "If a <a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> detects a\nmultipart request, it will resolve it via the configured <a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a>\nand pass on a wrapped <code>HttpServletRequest</code>. Controllers\ncan then cast their given request to the <a href=\"MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>\ninterface, which allows for access to any <a href=\"MultipartFile.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartFiles</code></a>.\nNote that this cast is only supported in case of an actual multipart request.",
+      "translation": "如果 `<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>` 检测到多部分请求，它将通过配置的 `<a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a>` 解析该请求，并传递一个包装后的 `<code>HttpServletRequest</code>`。控制器随后可以将给定的请求强制转换为 `<a href=\"MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequest</code></a>` 接口，从而可以访问任何 `<a href=\"MultipartFile.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartFiles</code></a>`。请注意，此强制转换仅在真正的多部分请求中才受支持。",
+      "count": 2
+    },
+    {
+      "source": "As an alternative to using a <a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> with a\n<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>,\na <a href=\"support/MultipartFilter.html\" title=\"class in org.springframework.web.multipart.support\"><code>MultipartFilter</code></a> can be\nregistered in <code>web.xml</code>. It will delegate to a corresponding\n<a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> bean in the root application context. This is mainly\nintended for applications that do not use Spring's own web MVC framework.",
+      "translation": "作为使用带有 <a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> 的 <a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a> 的替代方案，可以在 <code>web.xml</code> 中注册一个 <a href=\"support/MultipartFilter.html\" title=\"class in org.springframework.web.multipart.support\"><code>MultipartFilter</code></a>。它将委托给根应用程序上下文中的相应 <a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a>  bean。这主要是为不使用 Spring 自身 Web MVC 框架的应用程序设计的。",
+      "count": 2
+    },
+    {
+      "source": "There is no default resolver implementation used for Spring\n<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlets</code></a>,\nas an application might choose to parse its multipart requests itself. To define\nan implementation, create a bean with the id \"multipartResolver\" in a\n<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet's</code></a>\napplication context. Such a resolver gets applied to all requests handled\nby that <a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>.",
+      "translation": "Spring `<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlets</code></a>` 没有使用默认的解析器实现，因为应用程序可能会选择自行解析其多部分请求。要定义一个实现，请在 `<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet's</code></a>` 的应用上下文中创建一个 id 为 \"multipartResolver\" 的 bean。这样的解析器将应用于该 `<a href=\"../servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>` 处理的所有请求。",
+      "count": 2
+    },
+    {
+      "source": "Note: There is hardly ever a need to access the <a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a>\nitself from application code. It will simply do its work behind the scenes,\nmaking <a href=\"MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequests</code></a>\navailable to controllers.",
+      "translation": "注意：几乎不需要在应用程序代码中直接访问<a href=\"MultipartResolver.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartResolver</code></a>本身。它将在幕后自动完成工作，为控制器提供<a href=\"MultipartHttpServletRequest.html\" title=\"interface in org.springframework.web.multipart\"><code>MultipartHttpServletRequests</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Spring provides the following concrete implementation:",
+      "translation": "Spring 提供以下具体实现：",
+      "count": 2
+    },
+    {
+      "source": "Will typically check for content type \"multipart/form-data\", but the actually\naccepted requests might depend on the capabilities of the resolver implementation.",
+      "translation": "通常将检查内容类型为\"multipart/form-data\"，但实际接受的请求可能取决于解析器实现的功能。",
+      "count": 2
+    },
+    {
+      "source": "Clean up any resources used for the multipart handling,\nlike a storage for the uploaded files.",
+      "translation": "清理用于多部分处理的任何资源，例如上传文件的存储。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"support/StandardServletMultipartResolver.html\" title=\"class in org.springframework.web.multipart.support\"><code>StandardServletMultipartResolver</code></a>\nfor the Servlet Part API",
+      "translation": "<a href=\"support/StandardServletMultipartResolver.html\" title=\"class in org.springframework.web.multipart.support\"><code>StandardServletMultipartResolver</code></a>用于 Servlet 部分 API。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MultipartException.html\" title=\"class in org.springframework.web.multipart\">MultipartException</a></code> - if the servlet request is not multipart, or if\nimplementation-specific problems are encountered (such as exceeding file size limits)",
+      "translation": "`<a href=\"MultipartException.html\" title=\"class in org.springframework.web.multipart\">MultipartException</a>` - 如果 Servlet 请求不是多部分，或者遇到实现特定的问题（例如超过文件大小限制）时。",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the servlet request to be evaluated",
+      "translation": "<code>request</code> - 待评估的 Servlet 请求",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the servlet request to wrap (must be of a multipart content type)",
+      "translation": "<code>request</code> - 要包装的 Servlet 请求（必须是多部分内容类型）",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the request to clean up resources for",
+      "translation": "<code>request</code> - 用于清理资源的请求",
+      "count": 2
+    },
+    {
+      "source": "whether the request contains multipart content",
+      "translation": "请求是否包含多部分内容",
+      "count": 2
+    },
+    {
+      "source": "the wrapped servlet request",
+      "translation": "被包装的 Servlet 请求",
+      "count": 2
+    },
+    {
+      "source": "Determine if the given request contains multipart content.",
+      "translation": "判断给定请求是否包含多部分内容。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Trevor D. Cook",
+      "translation": "Jürgen Hoeller，Trevor D. Cook",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "created_at": "2026-04-14 15:15:27",
+  "updated_at": "2026-04-14 15:15:27",
+  "stats": {
+    "total_entries": 111,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 206,
+    "entries_with_hits": 111,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8558558558558558,
+    "usage_percentage": 0.0111
+  },
+  "items": [
+    {
+      "source": "as of 6.1, in favor of the <a href=\"#setAutodetect(boolean)\"><code>\"autodetect\" flag</code></a>",
+      "translation": "自 6.1 版本起，推荐使用<a href=\"#setAutodetect(boolean)\"><code>\"autodetect\" 标志</code></a>。",
+      "count": 12
+    },
+    {
+      "source": "Set the <a href=\"NotificationListenerBean.html\" title=\"class in org.springframework.jmx.export\"><code>NotificationListenerBeans</code></a>\ncontaining the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html\" title=\"class or interface in javax.management\"><code>NotificationListeners</code></a>\nthat will be registered with the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>.",
+      "translation": "设置包含将注册到 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html\" title=\"class or interface in javax.management\"><code>NotificationListeners</code></a> 的 <a href=\"NotificationListenerBean.html\" title=\"class in org.springframework.jmx.export\"><code>NotificationListenerBeans</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "This callback is only required for resolution of bean names in the\n<a href=\"#setBeans(java.util.Map)\"><code>\"beans\"</code></a> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> and for\nauto-detection of MBeans (in the latter case, a\n<code>ListableBeanFactory</code> is required).",
+      "translation": "此回调仅在解析 `<a href=\"#setBeans(java.util.Map)\"><code>\"beans\"</code></a> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 中的 Bean 名称以及自动检测 MBeans（在后一种情况下，需要 `<code>ListableBeanFactory</code>`）时是必需的。",
+      "count": 3
+    },
+    {
+      "source": "<code>managedResource</code> - the resource to expose via JMX",
+      "translation": "<code>managedResource</code> - 要通过 JMX 暴露的资源",
+      "count": 3
+    },
+    {
+      "source": "The key of each entry in the <code>Map</code> is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>\nrepresentation of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> or the bean\nname of the MBean the listener should be registered for. Specifying an\nasterisk (<code>*</code>) for a key will cause the listener to be\nassociated with all MBeans registered by this class at startup time.",
+      "translation": "<code>Map</code> 中每个条目的键是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> 形式的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> 或 MBean 的 bean 名称，监听器应为此 MBean 注册。为键指定星号（<code>*</code>）将导致该监听器与此类在启动时注册的所有 MBean 关联。",
+      "count": 2
+    },
+    {
+      "source": "The value of each entry is the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html\" title=\"class or interface in javax.management\"><code>NotificationListener</code></a> to register. For more\nadvanced options such as registering\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationFilter.html\" title=\"class or interface in javax.management\"><code>NotificationFilters</code></a> and\nhandback objects see <a href=\"#setNotificationListeners(org.springframework.jmx.export.NotificationListenerBean...)\"><code>setNotificationListeners(NotificationListenerBean[])</code></a>.",
+      "translation": "每个条目的值是用于注册的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html\" title=\"class or interface in javax.management\"><code>NotificationListener</code></a>`。对于更高级的选项，例如注册 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationFilter.html\" title=\"class or interface in javax.management\"><code>NotificationFilters</code></a>` 和回传对象，请参阅 `<a href=\"#setNotificationListeners(org.springframework.jmx.export.NotificationListenerBean...)\"><code>setNotificationListeners(NotificationListenerBean[])</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "This method is responsible for deciding <strong>how</strong> a bean\nshould be exposed to the <code>MBeanServer</code>. Specifically, if the\nsupplied <code>mapValue</code> is the name of a bean that is configured\nfor lazy initialization, then a proxy to the resource is registered with\nthe <code>MBeanServer</code> so that the lazy load behavior is\nhonored. If the bean is already an MBean then it will be registered\ndirectly with the <code>MBeanServer</code> without any intervention. For\nall other beans or bean names, the resource itself is registered with\nthe <code>MBeanServer</code> directly.",
+      "translation": "此方法负责决定如何将 Bean 暴露给 `<code>MBeanServer</code>`。具体而言，如果提供的 `<code>mapValue</code>` 是配置为延迟初始化的 Bean 的名称，则会向 `<code>MBeanServer</code>` 注册该资源的代理，以遵循延迟加载行为。如果 Bean 已经是 MBean，则将其直接注册到 `<code>MBeanServer</code>`，无需任何干预。对于所有其他 Bean 或 Bean 名称，资源本身将直接注册到 `<code>MBeanServer</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The default value is <code>true</code>, exposing a <a href=\"SpringModelMBean.html\" title=\"class in org.springframework.jmx.export\"><code>SpringModelMBean</code></a>\nwhich performs thread context ClassLoader management. Switch this flag off to\nexpose a standard JMX <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/modelmbean/RequiredModelMBean.html\" title=\"class or interface in javax.management.modelmbean\"><code>RequiredModelMBean</code></a>.",
+      "translation": "默认值为 `<code>true</code>`，会暴露一个执行线程上下文 ClassLoader 管理的 <a href=\"SpringModelMBean.html\" title=\"class in org.springframework.jmx.export\"><code>SpringModelMBean</code></a>。关闭此标志以暴露标准的 JMX <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/modelmbean/RequiredModelMBean.html\" title=\"class or interface in javax.management.modelmbean\"><code>RequiredModelMBean</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Each bean is exposed to the <code>MBeanServer</code> via a\n<code>ModelMBean</code>. The actual implementation of the\n<code>ModelMBean</code> interface used depends on the implementation of\nthe <code>ModelMBeanProvider</code> interface that is configured. By\ndefault, the <code>RequiredModelMBean</code> class that is supplied with\nall JMX implementations is used.",
+      "translation": "每个 Bean 都通过一个 `<code>ModelMBean</code>` 暴露给 `<code>MBeanServer</code>`。实际使用的 `<code>ModelMBean</code>` 接口实现取决于配置的 `<code>ModelMBeanProvider</code>` 接口的实现。默认情况下，使用随所有 JMX 实现提供的 `<code>RequiredModelMBean</code>` 类。",
+      "count": 2
+    },
+    {
+      "source": "A list of <a href=\"MBeanExporterListener.html\" title=\"interface in org.springframework.jmx.export\"><code>MBeanExporterListeners</code></a> can be registered\nvia the <a href=\"#setListeners(org.springframework.jmx.export.MBeanExporterListener...)\"><code>listeners</code></a> property, allowing\napplication code to be notified of MBean registration and unregistration events.",
+      "translation": "可以注册一个 `<a href=\"MBeanExporterListener.html\" title=\"interface in org.springframework.jmx.export\"><code>MBeanExporterListeners</code></a>` 列表，通过 `<a href=\"#setListeners(org.springframework.jmx.export.MBeanExporterListener...)\"><code>listeners</code></a>` 属性实现，从而允许应用程序代码接收 MBean 注册和注销事件的通知。",
+      "count": 2
+    },
+    {
+      "source": "If the bean implements the <code>SelfNaming</code> interface, then the\n<code>ObjectName</code> will be retrieved using <code>SelfNaming.getObjectName()</code>.\nOtherwise, the configured <code>ObjectNamingStrategy</code> is used.",
+      "translation": "如果该 Bean 实现了 `<code>SelfNaming</code>` 接口，则使用 `<code>SelfNaming.getObjectName()</code>` 获取 `<code>ObjectName</code>`。否则，将使用配置的 `<code>ObjectNamingStrategy</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"../support/JmxUtils.html#isMBean(java.lang.Class)\"><code>JmxUtils.isMBean(Class)</code></a>,\nwhich checks for <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html\" title=\"class or interface in javax.management\"><code>DynamicMBean</code></a> classes as well\nas classes with corresponding \"*MBean\" interface (Standard MBeans)\nor corresponding \"*MXBean\" interface (Java MXBeans).",
+      "translation": "默认实现委托给 <a href=\"../support/JmxUtils.html#isMBean(java.lang.Class)\"><code>JmxUtils.isMBean(Class)</code></a>，该方法会检查是否为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html\" title=\"class or interface in javax.management\"><code>DynamicMBean</code></a> 类，以及具有相应 \"*MBean\" 接口（标准 MBeans）或相应 \"*MXBean\" 接口（Java MXBeans）的类。",
+      "count": 2
+    },
+    {
+      "source": "Please note that if an <a href=\"MBeanExporterListener.html\" title=\"interface in org.springframework.jmx.export\"><code>MBeanExporterListener</code></a> throws a (runtime)\nexception when notified, this will essentially interrupt the notification process\nand any remaining listeners that have yet to be notified will not (obviously)\nreceive the <a href=\"MBeanExporterListener.html#mbeanRegistered(javax.management.ObjectName)\"><code>MBeanExporterListener.mbeanRegistered(javax.management.ObjectName)</code></a>\ncallback.",
+      "translation": "请注意，如果 `<a href=\"MBeanExporterListener.html\" title=\"interface in org.springframework.jmx.export\"><code>MBeanExporterListener</code></a>` 在收到通知时抛出（运行时）异常，这实际上会中断通知过程，任何尚未收到通知的剩余监听器显然将不会接收到 <a href=\"MBeanExporterListener.html#mbeanRegistered(javax.management.ObjectName)\"><code>MBeanExporterListener.mbeanRegistered(javax.management.ObjectName)</code></a> 回调。",
+      "count": 2
+    },
+    {
+      "source": "Please note that if an <a href=\"MBeanExporterListener.html\" title=\"interface in org.springframework.jmx.export\"><code>MBeanExporterListener</code></a> throws a (runtime)\nexception when notified, this will essentially interrupt the notification process\nand any remaining listeners that have yet to be notified will not (obviously)\nreceive the <a href=\"MBeanExporterListener.html#mbeanUnregistered(javax.management.ObjectName)\"><code>MBeanExporterListener.mbeanUnregistered(javax.management.ObjectName)</code></a>\ncallback.",
+      "translation": "请注意，如果 `<a href=\"MBeanExporterListener.html\" title=\"interface in org.springframework.jmx.export\"><code>MBeanExporterListener</code></a>` 在收到通知时抛出（运行时）异常，这实际上会中断通知过程，任何尚未收到通知的剩余监听器显然将不会接收到 <a href=\"MBeanExporterListener.html#mbeanUnregistered(javax.management.ObjectName)\"><code>MBeanExporterListener.mbeanUnregistered(javax.management.ObjectName)</code></a> 回调。",
+      "count": 2
+    },
+    {
+      "source": "The management interface produced for each bean is dependent on the\n<code>MBeanInfoAssembler</code> implementation being used. The\n<code>ObjectName</code> given to each bean is dependent on the\nimplementation of the <code>ObjectNamingStrategy</code> interface being used.",
+      "translation": "为每个 Bean 生成的管理接口取决于所使用的 `<code>MBeanInfoAssembler</code>` 实现。分配给每个 Bean 的 `<code>ObjectName</code>` 取决于所使用的 `<code>ObjectNamingStrategy</code>` 接口的实现。",
+      "count": 2
+    },
+    {
+      "source": "If a bean does not implement one of the JMX management interfaces, MBeanExporter\nwill create the management information using the supplied <a href=\"assembler/MBeanInfoAssembler.html\" title=\"interface in org.springframework.jmx.export.assembler\"><code>MBeanInfoAssembler</code></a>.",
+      "translation": "如果某个 Bean 未实现 JMX 管理接口之一，MBeanExporter 将使用提供的 <a href=\"assembler/MBeanInfoAssembler.html\" title=\"interface in org.springframework.jmx.export.assembler\"><code>MBeanInfoAssembler</code></a> 创建管理信息。",
+      "count": 2
+    },
+    {
+      "source": "The String keys are the basis for the creation of JMX object names.\nBy default, a JMX <code>ObjectName</code> will be created straight\nfrom the given key. This can be customized through specifying a\ncustom <code>NamingStrategy</code>.",
+      "translation": "String 键是创建 JMX 对象名的基础。默认情况下，JMX <code>ObjectName</code> 将直接从给定的键创建。可以通过指定自定义的 <code>NamingStrategy</code> 来定制此行为。",
+      "count": 2
+    },
+    {
+      "source": "This method is called to obtain a <code>ModelMBean</code> instance to\nuse when registering a bean. This method is called once per bean during the\nregistration phase and must return a new instance of <code>ModelMBean</code>",
+      "translation": "此方法用于在注册 Bean 时获取一个<code>ModelMBean</code>实例。在注册阶段，此方法会为每个 Bean 调用一次，并且必须返回一个新的<code>ModelMBean</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "This feature is turned off by default. Explicitly specify\n<code>true</code> here to enable auto-detection.",
+      "translation": "此功能默认处于关闭状态。请在此处显式指定 `<code>true</code>` 以启用自动检测。",
+      "count": 2
+    },
+    {
+      "source": "The passed-in assembler can optionally implement the\n<code>AutodetectCapableMBeanInfoAssembler</code> interface, which enables it\nto participate in the exporter's MBean auto-detection process.",
+      "translation": "传入的装配器可以可选地实现`AutodetectCapableMBeanInfoAssembler`接口，使其能够参与导出器的 MBean 自动检测过程。",
+      "count": 2
+    },
+    {
+      "source": "The default value is <code>true</code>.",
+      "translation": "默认值为<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "If a bean implements one of the JMX management interfaces, MBeanExporter can\nsimply register the MBean with the server through its auto-detection process.",
+      "translation": "如果某个 Bean 实现了 JMX 管理接口之一，MBeanExporter 可以通过其自动检测过程简单地将该 MBean 注册到服务器。",
+      "count": 2
+    },
+    {
+      "source": "This exporter is compatible with MBeans as well as MXBeans.",
+      "translation": "该导出器同时兼容 MBeans 和 MXBeans。",
+      "count": 2
+    },
+    {
+      "source": "Both bean instances and bean names are allowed as values.\nBean instances are typically linked in through bean references.\nBean names will be resolved as beans in the current factory, respecting\nlazy-init markers (that is, not triggering initialization of such beans).",
+      "translation": "bean 实例和 bean 名称都允许作为值。\nbean 实例通常通过 bean 引用链接进来。\nbean 名称将在当前工厂中解析为 bean，并尊重懒加载标记（即不会触发此类 bean 的初始化）。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", respecting lazy-init flags on bean definitions.\nSwitch this to \"true\" in order to search lazy-init beans as well,\nincluding FactoryBean-produced objects that haven't been initialized yet.",
+      "translation": "默认为\"false\"，尊重 Bean 定义上的懒初始化标志。将此选项切换为\"true\"以搜索懒初始化的 Bean，包括尚未初始化的 FactoryBean 生成的对象。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation builds a JMX 1.2 StandardMBean\nfor the target's MBean/MXBean interface in case of an AOP proxy,\ndelegating the interface's management operations to the proxy.",
+      "translation": "默认实现会在存在 AOP 代理的情况下，为目标对象的 MBean/MXBean 接口构建一个 JMX 1.2 StandardMBean，并将接口的管理操作委托给代理。",
+      "count": 2
+    },
+    {
+      "source": "Indicates whether Spring should ensure that <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectNames</code></a>\ngenerated by the configured <a href=\"naming/ObjectNamingStrategy.html\" title=\"interface in org.springframework.jmx.export.naming\"><code>ObjectNamingStrategy</code></a> for\nruntime-registered MBeans (<a href=\"#registerManagedResource(java.lang.Object)\"><code>registerManagedResource(Object)</code></a>) should get\nmodified: to ensure uniqueness for every instance of a managed <code>Class</code>.",
+      "translation": "指示 Spring 是否应确保由配置的<a href=\"naming/ObjectNamingStrategy.html\" title=\"interface in org.springframework.jmx.export.naming\"><code>ObjectNamingStrategy</code></a>为运行时注册的 MBeans（<a href=\"#registerManagedResource(java.lang.Object)\"><code>registerManagedResource(Object)</code></a>）生成的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectNames</code></a>进行修改：以确保每个受管理的<code>Class</code>实例的唯一性。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object)\">MBeanExportOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object)\">MBeanExportOperations</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object,javax.management.ObjectName)\">MBeanExportOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object,javax.management.ObjectName)\">MBeanExportOperations</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"MBeanExportOperations.html#unregisterManagedResource(javax.management.ObjectName)\">MBeanExportOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"MBeanExportOperations.html#unregisterManagedResource(javax.management.ObjectName)\">MBeanExportOperations</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Register an individual bean with the <a href=\"../support/MBeanRegistrationSupport.html#setServer(javax.management.MBeanServer)\"><code>MBeanServer</code></a>.",
+      "translation": "使用 `<a href=\"../support/MBeanRegistrationSupport.html#setServer(javax.management.MBeanServer)\"><code>MBeanServer</code></a>` 注册单个 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Auto-detection mode indicating that only the <a href=\"assembler/MBeanInfoAssembler.html\" title=\"interface in org.springframework.jmx.export.assembler\"><code>MBeanInfoAssembler</code></a> should be able\nto autodetect beans.",
+      "translation": "自动检测模式，表示只有 `<a href=\"assembler/MBeanInfoAssembler.html\" title=\"interface in org.springframework.jmx.export.assembler\"><code>MBeanInfoAssembler</code></a>` 能够自动检测 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Set the implementation of the <code>ObjectNamingStrategy</code> interface\nto use for this exporter. Default is a <code>KeyNamingStrategy</code>.",
+      "translation": "为此导出器设置 `ObjectNamingStrategy` 接口的实现。默认值为 `KeyNamingStrategy`。",
+      "count": 2
+    },
+    {
+      "source": "Register the supplied resource with JMX. If the resource is not a valid MBean already,\nSpring will generate a management interface for it. The exact interface generated will\ndepend on the implementation and its configuration. This call also generates an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> for the managed resource and returns this to the caller.",
+      "translation": "将提供的资源注册到 JMX。如果该资源本身不是有效的 MBean，Spring 将为它生成一个管理接口。生成的确切接口取决于实现及其配置。此调用还会为受管资源生成一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>，并将其返回给调用者。",
+      "count": 2
+    },
+    {
+      "source": "Unregisters all beans that this exported has exposed via JMX\nwhen the enclosing <code>ApplicationContext</code> is destroyed.",
+      "translation": "卸载此导出通过 JMX 暴露的所有 Bean，当包围的 `<code>ApplicationContext</code>` 被销毁时。",
+      "count": 2
+    },
+    {
+      "source": "Set the <code>MBeanExporterListener</code>s that should be notified\nof MBean registration and unregistration events.",
+      "translation": "设置应通知 MBean 注册和注销事件的 `<code>MBeanExporterListener</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Add the name of bean that should be excluded from auto-detection.",
+      "translation": "添加应排除在自动检测之外的 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "Kick off bean registration automatically after the regular singleton instantiation phase.",
+      "translation": "在常规单例实例化阶段之后，自动启动 Bean 注册。",
+      "count": 2
+    },
+    {
+      "source": "Creates an MBean that is configured with the appropriate management\ninterface for the supplied managed resource.",
+      "translation": "创建具有为提供的受管资源配置的适当管理接口的 MBean。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the specified bean definition should be considered as lazy-init.",
+      "translation": "返回指定的 Bean 定义是否应被视为懒加载。",
+      "count": 2
+    },
+    {
+      "source": "Register the supplied resource with JMX.",
+      "translation": "将提供的资源注册到 JMX。",
+      "count": 2
+    },
+    {
+      "source": "Set the list of names for beans that should be excluded from auto-detection.",
+      "translation": "设置应排除在自动检测之外的 Bean 的名称列表。",
+      "count": 2
+    },
+    {
+      "source": "Remove the specified MBean from the underlying MBeanServer registry.",
+      "translation": "从底层 MBeanServer 注册表中删除指定的 MBean。",
+      "count": 2
+    },
+    {
+      "source": "Auto-detection mode indicating that no auto-detection should be used.",
+      "translation": "自动检测模式指示不应使用自动检测。",
+      "count": 2
+    },
+    {
+      "source": "Auto-detection mode indicating that only valid MBeans should be autodetected.",
+      "translation": "自动检测模式，指示仅应自动检测有效的 MBean。",
+      "count": 2
+    },
+    {
+      "source": "Auto-detection mode indicating that all auto-detection mechanisms should be used.",
+      "translation": "自动检测模式，指示应使用所有自动检测机制。",
+      "count": 2
+    },
+    {
+      "source": "Set the auto-detection mode to use by name.",
+      "translation": "通过名称设置要使用的自动检测模式。",
+      "count": 2
+    },
+    {
+      "source": "Set the auto-detection mode to use.",
+      "translation": "设置要使用的自动检测模式。",
+      "count": 2
+    },
+    {
+      "source": "Register the supplied resource with JMX. If the resource is not a valid MBean already,\nSpring will generate a management interface for it. The exact interface generated will\ndepend on the implementation and its configuration.",
+      "translation": "将提供的资源注册到 JMX。如果该资源本身不是有效的 MBean，Spring 将为它生成一个管理接口。生成的具体接口取决于实现及其配置。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the supplied value is not resolvable\nto one of the <code>AUTODETECT_</code> constants or is <code>null</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果提供的值无法解析为 <code>AUTODETECT_</code> 常量之一，或者为 <code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object)\">registerManagedResource</a></code> in interface <code><a href=\"MBeanExportOperations.html\" title=\"interface in org.springframework.jmx.export\">MBeanExportOperations</a></code>",
+      "translation": "`<code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object)\">registerManagedResource</a></code>` 接口 `<code><a href=\"MBeanExportOperations.html\" title=\"interface in org.springframework.jmx.export\">MBeanExportOperations</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MBeanExportException.html\" title=\"class in org.springframework.jmx.export\">MBeanExportException</a></code> - if Spring is unable to generate an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>\nor register the MBean",
+      "translation": "<code><a href=\"MBeanExportException.html\" title=\"class in org.springframework.jmx.export\">MBeanExportException</a></code> - 如果 Spring 无法生成 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> 或注册 MBean",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object,javax.management.ObjectName)\">registerManagedResource</a></code> in interface <code><a href=\"MBeanExportOperations.html\" title=\"interface in org.springframework.jmx.export\">MBeanExportOperations</a></code>",
+      "translation": "`<code><a href=\"MBeanExportOperations.html#registerManagedResource(java.lang.Object,javax.management.ObjectName)\">registerManagedResource</a></code>` 接口 `<code><a href=\"MBeanExportOperations.html\" title=\"interface in org.springframework.jmx.export\">MBeanExportOperations</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MBeanExportOperations.html#unregisterManagedResource(javax.management.ObjectName)\">unregisterManagedResource</a></code> in interface <code><a href=\"MBeanExportOperations.html\" title=\"interface in org.springframework.jmx.export\">MBeanExportOperations</a></code>",
+      "translation": "`<code><a href=\"MBeanExportOperations.html#unregisterManagedResource(javax.management.ObjectName)\">unregisterManagedResource</a></code>` 接口 `<code><a href=\"MBeanExportOperations.html\" title=\"interface in org.springframework.jmx.export\">MBeanExportOperations</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/MBeanRegistrationSupport.html#onRegister(javax.management.ObjectName)\">onRegister</a></code> in class <code><a href=\"../support/MBeanRegistrationSupport.html\" title=\"class in org.springframework.jmx.support\">MBeanRegistrationSupport</a></code>",
+      "translation": "`<code><a href=\"../support/MBeanRegistrationSupport.html#onRegister(javax.management.ObjectName)\">onRegister</a></code>` 在类 `<code><a href=\"../support/MBeanRegistrationSupport.html\" title=\"class in org.springframework.jmx.support\">MBeanRegistrationSupport</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../support/MBeanRegistrationSupport.html#onUnregister(javax.management.ObjectName)\">onUnregister</a></code> in class <code><a href=\"../support/MBeanRegistrationSupport.html\" title=\"class in org.springframework.jmx.support\">MBeanRegistrationSupport</a></code>",
+      "translation": "`<code><a href=\"../support/MBeanRegistrationSupport.html#onUnregister(javax.management.ObjectName)\">onUnregister</a></code>` 在类 `<code><a href=\"../support/MBeanRegistrationSupport.html\" title=\"class in org.springframework.jmx.support\">MBeanRegistrationSupport</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the supplied value is not\none of the <code>AUTODETECT_</code> constants",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果提供的值不是 <code>AUTODETECT_</code> 常量之一",
+      "count": 2
+    },
+    {
+      "source": "<code>objectName</code> - the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> under which to expose the resource",
+      "translation": "<code>objectName</code> - 在此资源下暴露资源的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>objectName</code> - the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> of the resource to remove",
+      "translation": "<code>objectName</code> - 要删除的资源的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MalformedObjectNameException.html\" title=\"class or interface in javax.management\">MalformedObjectNameException</a></code> - if the retrieved <code>ObjectName</code> is malformed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MalformedObjectNameException.html\" title=\"class or interface in javax.management\">MalformedObjectNameException</a></code> - 如果检索到的 <code>ObjectName</code> 格式不正确",
+      "count": 2
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a> under which the resource was exposed",
+      "translation": "资源暴露所在的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html\" title=\"class or interface in javax.management\"><code>ObjectName</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MBeanExportException.html\" title=\"class in org.springframework.jmx.export\">MBeanExportException</a></code> - if Spring is unable to register the MBean",
+      "translation": "<code><a href=\"MBeanExportException.html\" title=\"class in org.springframework.jmx.export\">MBeanExportException</a></code> - 如果 Spring 无法注册 MBean",
+      "count": 2
+    },
+    {
+      "source": "<code>mapValue</code> - the value configured for this bean in the beans map;\nmay be either the <code>String</code> name of a bean, or the bean itself",
+      "translation": "<code>mapValue</code> - 此 Bean 在 Beans Map 中配置的值；可以是 Bean 的 <code>String</code> 名称，也可以是 Bean 本身。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MBeanExportException.html\" title=\"class in org.springframework.jmx.export\">MBeanExportException</a></code> - if the export failed",
+      "translation": "<code><a href=\"MBeanExportException.html\" title=\"class in org.springframework.jmx.export\">MBeanExportException</a></code> - 如果导出失败",
+      "count": 2
+    },
+    {
+      "source": "<code>bean</code> - the name of the bean in the <code>BeanFactory</code>",
+      "translation": "<code>bean</code> - BeanFactory 中 bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanException.html\" title=\"class or interface in javax.management\">MBeanException</a></code> - if creation of the ModelMBean failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanException.html\" title=\"class or interface in javax.management\">MBeanException</a></code> - 如果 ModelMBean 的创建失败",
+      "count": 2
+    },
+    {
+      "source": "<code>objectName</code> - the <code>ObjectName</code> of the registered MBean",
+      "translation": "<code>objectName</code> - 已注册 MBean 的 <code>ObjectName</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>objectName</code> - the <code>ObjectName</code> of the unregistered MBean",
+      "translation": "<code>objectName</code> - 未注册的 MBean 的 <code>ObjectName</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>beans</code> - a Map with JMX names as keys and bean instances or bean names\nas values",
+      "translation": "<code>beans</code> - 一个以 JMX 名称为键、以 Bean 实例或 Bean 名称为值的 Map。",
+      "count": 2
+    },
+    {
+      "source": "<code>beanFactory</code> - the bean factory that is supposed to contain the bean definition",
+      "translation": "<code>beanFactory</code> - 应该包含该 Bean 定义的 Bean Factory",
+      "count": 2
+    },
+    {
+      "source": "<code>beanKey</code> - the key associated with this bean in the beans map",
+      "translation": "<code>beanKey</code> - 此 bean 在 beans 映射中关联的键",
+      "count": 2
+    },
+    {
+      "source": "the <code>ObjectName</code> under which the resource was registered",
+      "translation": "注册该资源的 <code>ObjectName</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>beanKey</code> - the key associated with the bean in the beans map",
+      "translation": "<code>beanKey</code> - beans 映射中与 bean 关联的键",
+      "count": 2
+    },
+    {
+      "source": "the <code>ObjectName</code> for the supplied bean",
+      "translation": "供 Bean 使用的 <code>ObjectName</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>beanClass</code> - the bean class to analyze",
+      "translation": "<code>beanClass</code> - 要分析的 Bean 类",
+      "count": 2
+    },
+    {
+      "source": "<code>bean</code> - the original bean instance",
+      "translation": "<code>bean</code> - 原始 bean 实例",
+      "count": 2
+    },
+    {
+      "source": "the adapted MBean, or <code>null</code> if not possible",
+      "translation": "适配后的 MBean，或者如果不可用则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>managedResource</code> - the resource that is to be exported as an MBean",
+      "translation": "<code>managedResource</code> - 要作为 MBean 导出的资源",
+      "count": 2
+    },
+    {
+      "source": "<code>beanKey</code> - the key associated with the managed bean",
+      "translation": "<code>beanKey</code> - 与托管 Bean 关联的键",
+      "count": 2
+    },
+    {
+      "source": "a new instance of a class that implements <code>ModelMBean</code>",
+      "translation": "一个实现了<code>ModelMBean</code>的类的实例。",
+      "count": 2
+    },
+    {
+      "source": "Rob Harrop, Juergen Hoeller, Rick Evans, Mark Fisher, Stephane Nicoll, Sam Brannen",
+      "translation": "Rob Harrop, Juergen Hoeller, Rick Evans, Mark Fisher, Stephane Nicoll, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "whether the class qualifies as an MBean",
+      "translation": "该类是否合格为 MBean",
+      "count": 2
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "Set the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html\" title=\"class or interface in javax.management\"><code>NotificationListeners</code></a> to register\nwith the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>.",
+      "translation": "将 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html\" title=\"class or interface in javax.management\"><code>NotificationListeners</code></a>` 设置为向 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>` 注册。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Register the defined beans with the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>.",
+      "translation": "将定义的 bean 注册到 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanServer.html\" title=\"class or interface in javax.management\"><code>MBeanServer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Supply a <code>Map</code> of beans to be registered with the JMX\n<code>MBeanServer</code>.",
+      "translation": "提供要注册到 JMX `<code>MBeanServer</code>` 的 Bean 的 `<code>Map</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether the managed resource should be exposed on the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html#getContextClassLoader()\" title=\"class or interface in java.lang\"><code>thread context ClassLoader</code></a> before\nallowing any invocations on the MBean to occur.",
+      "translation": "指示是否应在允许对 MBean 进行任何调用之前，将托管资源暴露于<code>线程上下文类加载器</code>上。",
+      "count": 1
+    },
+    {
+      "source": "Create an instance of a class that implements <code>ModelMBean</code>.",
+      "translation": "创建一个实现了<code>ModelMBean</code>的类的实例。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the <code>ObjectName</code> for a bean.",
+      "translation": "获取 Bean 的<code>ObjectName</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the implementation of the <code>MBeanInfoAssembler</code> interface to use\nfor this exporter.",
+      "translation": "为此导出器设置用于实现 `<code>MBeanInfoAssembler</code>` 接口的实例。",
+      "count": 1
+    },
+    {
+      "source": "Set the implementation of the <code>ObjectNamingStrategy</code> interface\nto use for this exporter.",
+      "translation": "为此导出器设置用于的<code>ObjectNamingStrategy</code>接口的实现。",
+      "count": 1
+    },
+    {
+      "source": "Build an adapted MBean for the given bean instance, if possible.",
+      "translation": "如果可能，为给定的 Bean 实例构建一个适配的 MBean。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the given bean class qualifies as an MBean as-is.",
+      "translation": "确定给定的 Bean 类是否直接符合 MBean 的资格。",
+      "count": 1
+    },
+    {
+      "source": "Called when an MBean is registered.",
+      "translation": "当 MBean 注册时调用。",
+      "count": 1
+    },
+    {
+      "source": "Called when an MBean is unregistered.",
+      "translation": "当 MBean 注销时调用。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to allow eager initialization of candidate beans\nwhen auto-detecting MBeans in the Spring application context.",
+      "translation": "指定是否允许在 Spring 应用程序上下文中自动检测 MBean 时进行候选 Bean 的急切初始化。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to autodetect MBeans in the bean factory that this exporter\nruns in.",
+      "translation": "设置是否自动检测此导出器所在的 Bean 工厂中的 MBeans。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/SmartInitializingSingleton.html#afterSingletonsInstantiated()\">afterSingletonsInstantiated</a></code> in interface <code><a href=\"../../beans/factory/SmartInitializingSingleton.html\" title=\"interface in org.springframework.beans.factory\">SmartInitializingSingleton</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/SmartInitializingSingleton.html#afterSingletonsInstantiated()\">afterSingletonsInstantiated</a></code>` 接口 `<code><a href=\"../../beans/factory/SmartInitializingSingleton.html\" title=\"interface in org.springframework.beans.factory\">SmartInitializingSingleton</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean to check",
+      "translation": "<code>beanName</code> - 要检查的 Bean 的名称",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "created_at": "2026-04-14 12:22:09",
+  "updated_at": "2026-04-14 12:22:09",
+  "stats": {
+    "total_entries": 59,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 104,
+    "entries_with_hits": 59,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7627118644067796,
+    "usage_percentage": 0.0059
+  },
+  "items": [
+    {
+      "source": "a Collection of ApplicationListeners",
+      "translation": "一个 ApplicationListeners 集合",
+      "count": 3
+    },
+    {
+      "source": "whether the given listener should be included in the candidates\nfor the given event type",
+      "translation": "给定监听器是否应包含在给定事件类型的候选项中",
+      "count": 3
+    },
+    {
+      "source": "The default implementation detects the <a href=\"SmartApplicationListener.html\" title=\"interface in org.springframework.context.event\"><code>SmartApplicationListener</code></a>\nand <a href=\"GenericApplicationListener.html\" title=\"interface in org.springframework.context.event\"><code>GenericApplicationListener</code></a> interfaces. In case of a standard\n<a href=\"../ApplicationListener.html\" title=\"interface in org.springframework.context\"><code>ApplicationListener</code></a>, a <a href=\"GenericApplicationListenerAdapter.html\" title=\"class in org.springframework.context.event\"><code>GenericApplicationListenerAdapter</code></a>\nwill be used to introspect the generically declared type of the target listener.",
+      "translation": "默认实现会检测 `<a href=\"SmartApplicationListener.html\" title=\"interface in org.springframework.context.event\"><code>SmartApplicationListener</code></a>` 和 `<a href=\"GenericApplicationListener.html\" title=\"interface in org.springframework.context.event\"><code>GenericApplicationListener</code></a>` 接口。对于标准的 `<a href=\"../ApplicationListener.html\" title=\"interface in org.springframework.context\"><code>ApplicationListener</code></a>`，将使用 `<a href=\"GenericApplicationListenerAdapter.html\" title=\"class in org.springframework.context.event\"><code>GenericApplicationListenerAdapter</code></a>` 来检查目标监听器泛型声明的类型。",
+      "count": 2
+    },
+    {
+      "source": "Implementing ApplicationEventMulticaster's actual <a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent)\"><code>ApplicationEventMulticaster.multicastEvent(ApplicationEvent)</code></a> method\nis left to subclasses. <a href=\"SimpleApplicationEventMulticaster.html\" title=\"class in org.springframework.context.event\"><code>SimpleApplicationEventMulticaster</code></a> simply multicasts\nall events to all registered listeners, invoking them in the calling thread by\ndefault. Alternative implementations could be more sophisticated in those respects.",
+      "translation": "实现 `ApplicationEventMulticaster` 的实际 <a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent)\"><code>ApplicationEventMulticaster.multicastEvent(ApplicationEvent)</code></a> 方法留给子类。`<code>SimpleApplicationEventMulticaster</code>` 简单地将所有事件广播给所有已注册的监听器，默认情况下在调用线程中执行它们。替代实现可以在这些方面更加复杂。",
+      "count": 2
+    },
+    {
+      "source": "If this method returns <code>true</code> for a given listener as a first pass,\nthe listener instance will get retrieved and fully evaluated through a\n<a href=\"#supportsEvent(org.springframework.context.ApplicationListener,org.springframework.core.ResolvableType,java.lang.Class)\"><code>supportsEvent(ApplicationListener, ResolvableType, Class)</code></a> call afterwards.",
+      "translation": "如果此方法对某个监听器作为第一遍返回 `<code>true</code>`，则将在随后通过一个<a href=\"#supportsEvent(org.springframework.context.ApplicationListener,org.springframework.core.ResolvableType,java.lang.Class)\"><code>supportsEvent(ApplicationListener, ResolvableType, Class)</code></a>调用检索并完全评估该监听器实例。",
+      "count": 2
+    },
+    {
+      "source": "Note: This just applies to bean name registrations, not to\nprogrammatically registered <code>ApplicationListener</code> instances.",
+      "translation": "注意：这仅适用于 Bean 名称注册，不适用于程序化注册的 `<code>ApplicationListener</code>` 实例。",
+      "count": 2
+    },
+    {
+      "source": "Doesn't permit multiple instances of the same listener by default,\nas it keeps listeners in a linked Set. The collection class used to hold\nApplicationListener objects can be overridden through the \"collectionClass\"\nbean property.",
+      "translation": "默认情况下，不允许存在多个相同的监听器实例，因为它将监听器保存在一个链接集合中。用于存储 ApplicationListener 对象的集合类可以通过\"collectionClass\"bean 属性进行覆盖。",
+      "count": 2
+    },
+    {
+      "source": "Note: This just applies to instance registrations, not to listeners\nregistered by bean name.",
+      "translation": "注意：此规则仅适用于实例注册，不适用于通过 Bean 名称注册的监听器。",
+      "count": 2
+    },
+    {
+      "source": "After a remove call, the multicaster will perform no action\non event notification until new listeners are registered.",
+      "translation": "在调用 remove 后，多播器将在注册新监听器之前，不会执行任何事件通知操作。",
+      "count": 2
+    },
+    {
+      "source": "Remove all matching listeners from the set of registered\n<code>ApplicationListener</code> instances (which includes adapter classes\nsuch as <a href=\"ApplicationListenerMethodAdapter.html\" title=\"class in org.springframework.context.event\"><code>ApplicationListenerMethodAdapter</code></a>, for example, for annotated\n<a href=\"EventListener.html\" title=\"annotation interface in org.springframework.context.event\"><code>EventListener</code></a> methods).",
+      "translation": "从已注册的 `<code>ApplicationListener`</code> 实例集合中移除所有匹配的监听器（其中包括适配器类，例如用于带有注解的 <a href=\"EventListener.html\" title=\"annotation interface in org.springframework.context.event\"><code>EventListener</code></a> 方法的 <a href=\"ApplicationListenerMethodAdapter.html\" title=\"class in org.springframework.context.event\"><code>ApplicationListenerMethodAdapter</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#addApplicationListener(org.springframework.context.ApplicationListener)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#addApplicationListener(org.springframework.context.ApplicationListener)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#addApplicationListenerBean(java.lang.String)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#addApplicationListenerBean(java.lang.String)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#removeApplicationListener(org.springframework.context.ApplicationListener)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListener(org.springframework.context.ApplicationListener)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBean(java.lang.String)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBean(java.lang.String)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#removeApplicationListeners(java.util.function.Predicate)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListeners(java.util.function.Predicate)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBeans(java.util.function.Predicate)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBeans(java.util.function.Predicate)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#removeAllListeners()\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#removeAllListeners()\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Remove all matching listener beans from the set of registered\nlistener bean names (referring to bean classes which in turn\nimplement the <a href=\"../ApplicationListener.html\" title=\"interface in org.springframework.context\"><code>ApplicationListener</code></a> interface directly).",
+      "translation": "从已注册的监听器 Bean 名称集合中移除所有匹配的监听器 Bean（指直接实现<a href=\"../ApplicationListener.html\" title=\"interface in org.springframework.context\"><code>ApplicationListener</code></a>接口的 Bean 类）。",
+      "count": 2
+    },
+    {
+      "source": "Add a listener to be notified of all events.",
+      "translation": "添加一个监听器以接收所有事件的通知。",
+      "count": 2
+    },
+    {
+      "source": "Add a listener bean to be notified of all events.",
+      "translation": "添加一个监听器 Bean 以接收所有事件的通知。",
+      "count": 2
+    },
+    {
+      "source": "Return a Collection containing all ApplicationListeners.",
+      "translation": "返回包含所有 ApplicationListener 的集合。",
+      "count": 2
+    },
+    {
+      "source": "Remove a listener from the notification list.",
+      "translation": "从通知列表中移除监听器。",
+      "count": 2
+    },
+    {
+      "source": "Remove a listener bean from the notification list.",
+      "translation": "从通知列表中移除监听器 Bean。",
+      "count": 2
+    },
+    {
+      "source": "Return a Collection of ApplicationListeners matching the given\nevent type. Non-matching listeners get excluded early.",
+      "translation": "返回与给定事件类型匹配的 ApplicationListeners 集合。不匹配的监听器会被提前排除。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#addApplicationListener(org.springframework.context.ApplicationListener)\">addApplicationListener</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#addApplicationListener(org.springframework.context.ApplicationListener)\">addApplicationListener</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#addApplicationListenerBean(java.lang.String)\">addApplicationListenerBean</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#addApplicationListenerBean(java.lang.String)\">addApplicationListenerBean</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListener(org.springframework.context.ApplicationListener)\">removeApplicationListener</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListener(org.springframework.context.ApplicationListener)\">removeApplicationListener</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBean(java.lang.String)\">removeApplicationListenerBean</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBean(java.lang.String)\">removeApplicationListenerBean</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListeners(java.util.function.Predicate)\">removeApplicationListeners</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListeners(java.util.function.Predicate)\">removeApplicationListeners</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBeans(java.util.function.Predicate)\">removeApplicationListenerBeans</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#removeApplicationListenerBeans(java.util.function.Predicate)\">removeApplicationListenerBeans</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ApplicationEventMulticaster.html#removeAllListeners()\">removeAllListeners</a></code> in interface <code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>",
+      "translation": "`<code><a href=\"ApplicationEventMulticaster.html#removeAllListeners()\">removeAllListeners</a></code>` 接口 `<code><a href=\"ApplicationEventMulticaster.html\" title=\"interface in org.springframework.context.event\">ApplicationEventMulticaster</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>predicate</code> - the predicate to identify listener instances to remove,\nfor example, checking <a href=\"SmartApplicationListener.html#getListenerId()\"><code>SmartApplicationListener.getListenerId()</code></a>",
+      "translation": "`predicate` - 用于标识要移除的监听器实例的谓词，例如检查<a href=\"SmartApplicationListener.html#getListenerId()\"><code>SmartApplicationListener.getListenerId()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>listener</code> - the listener to add",
+      "translation": "<code>listener</code> - 要添加的监听器",
+      "count": 2
+    },
+    {
+      "source": "<code>listenerBeanName</code> - the name of the listener bean to add",
+      "translation": "<code>listenerBeanName</code> - 要添加的监听器 Bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>listenerBeanName</code> - the name of the listener bean to remove",
+      "translation": "<code>listenerBeanName</code> - 要移除的监听器 Bean 的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>predicate</code> - the predicate to identify listener bean names to remove",
+      "translation": "<code>predicate</code> - 用于标识要移除的监听器 Bean 名称的谓词",
+      "count": 2
+    },
+    {
+      "source": "<code>event</code> - the event to be propagated. Allows for excluding\nnon-matching listeners early, based on cached matching information.",
+      "translation": "<code>event</code> - 要传播的事件。允许基于缓存的匹配信息，尽早排除不匹配的监听器。",
+      "count": 2
+    },
+    {
+      "source": "<code>eventType</code> - the event type",
+      "translation": "<code>eventType</code> - 事件类型",
+      "count": 2
+    },
+    {
+      "source": "<code>listenerType</code> - the listener's type as determined by the BeanFactory",
+      "translation": "<code>listenerType</code> - 由 BeanFactory 确定的监听器类型",
+      "count": 2
+    },
+    {
+      "source": "<code>eventType</code> - the event type to check",
+      "translation": "<code>eventType</code> - 要检查的事件类型",
+      "count": 2
+    },
+    {
+      "source": "<code>listener</code> - the target listener to check",
+      "translation": "<code>listener</code> - 要检查的目标监听器",
+      "count": 2
+    },
+    {
+      "source": "<code>eventType</code> - the event type to check against",
+      "translation": "<code>eventType</code> - 要检查的事件类型",
+      "count": 2
+    },
+    {
+      "source": "<code>sourceType</code> - the source type to check against",
+      "translation": "<code>sourceType</code> - 要检查的源类型",
+      "count": 2
+    },
+    {
+      "source": "Invoked <i>after</i> the population of normal bean properties but\n<i>before</i> an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nmethod or a custom init-method.",
+      "translation": "在普通 Bean 属性填充后<i>之后</i>但初始化回调（如\n<a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\"><code>InitializingBean's</code></a>\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\n方法或自定义 init-method）之前<i>之前</i>调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">BeanClassLoaderAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the bean <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>class loader</code></a> to\na bean instance.",
+      "translation": "向 Bean 实例提供 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>类加载器</code></a> 的回调。",
+      "count": 1
+    },
+    {
+      "source": "Return a Collection of ApplicationListeners matching the given\nevent type.",
+      "translation": "返回与给定事件类型匹配的 ApplicationListeners 集合。",
+      "count": 1
+    },
+    {
+      "source": "Remove all listeners registered with this multicaster.",
+      "translation": "移除与此多播器注册的所有监听器。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "Filter a listener early through checking its generically declared event\ntype before trying to instantiate it.",
+      "translation": "通过检查其泛型声明的事件类型，在尝试实例化之前尽早过滤监听器。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether the given listener supports the given event.",
+      "translation": "确定给定的监听器是否支持给定事件。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code> in interface <code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanClassLoaderAware.html#setBeanClassLoader(java.lang.ClassLoader)\">setBeanClassLoader</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanClassLoaderAware.html\" title=\"interface in org.springframework.beans.factory\">BeanClassLoaderAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>classLoader</code> - the owning class loader",
+      "translation": "<code>classLoader</code> - 拥有者类加载器",
+      "count": 1
+    },
+    {
+      "source": "<code>listener</code> - the listener to remove",
+      "translation": "<code>listener</code> - 要移除的监听器",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Stephane Nicoll",
+      "translation": "Juergen Hoeller, Stephane Nicoll",
+      "count": 1
+    }
+  ]
+}

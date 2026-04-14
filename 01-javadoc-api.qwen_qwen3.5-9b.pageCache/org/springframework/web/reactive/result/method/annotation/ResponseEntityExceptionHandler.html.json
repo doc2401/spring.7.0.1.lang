@@ -1,0 +1,246 @@
+{
+  "created_at": "2026-04-14 19:17:46",
+  "updated_at": "2026-04-14 19:17:46",
+  "stats": {
+    "total_entries": 46,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 159,
+    "entries_with_hits": 46,
+    "entries_without_hits": 0,
+    "hit_rate": 3.4565217391304346,
+    "usage_percentage": 0.0046
+  },
+  "items": [
+    {
+      "source": "<code>ex</code> - the exception to handle",
+      "translation": "<code>ex</code> - 要处理的异常",
+      "count": 14
+    },
+    {
+      "source": "<code>status</code> - the status code to use for the response",
+      "translation": "<code>status</code> - 用于响应的状态码",
+      "count": 14
+    },
+    {
+      "source": "<code>exchange</code> - the current request and response",
+      "translation": "<code>exchange</code> - 当前请求和响应",
+      "count": 14
+    },
+    {
+      "source": "a <code>Mono</code> with the <code>ResponseEntity</code> for the response",
+      "translation": "带有用于响应的 <code>ResponseEntity</code> 的 <code>Mono</code>",
+      "count": 13
+    },
+    {
+      "source": "<code>headers</code> - the headers to use for the response",
+      "translation": "<code>headers</code> - 用于响应的标头",
+      "count": 13
+    },
+    {
+      "source": "This method delegates to <a href=\"#handleExceptionInternal(java.lang.Exception,java.lang.Object,org.springframework.http.HttpHeaders,org.springframework.http.HttpStatusCode,org.springframework.web.server.ServerWebExchange)\"><code>handleExceptionInternal(Exception, Object, HttpHeaders, HttpStatusCode, ServerWebExchange)</code></a>.",
+      "translation": "此方法委托给 <a href=\"#handleExceptionInternal(java.lang.Exception,java.lang.Object,org.springframework.http.HttpHeaders,org.springframework.http.HttpStatusCode,org.springframework.web.server.ServerWebExchange)\"><code>handleExceptionInternal(Exception, Object, HttpHeaders, HttpStatusCode, ServerWebExchange)</code></a>。",
+      "count": 12
+    },
+    {
+      "source": "Convenience method to create a <a href=\"../../../../../http/ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a> for any exception\nthat doesn't implement <a href=\"../../../../ErrorResponse.html\" title=\"interface in org.springframework.web\"><code>ErrorResponse</code></a>, also performing a\n<a href=\"../../../../../context/MessageSource.html\" title=\"interface in org.springframework.context\"><code>MessageSource</code></a> lookup for the \"detail\" field.",
+      "translation": "用于为任何未实现 <a href=\"../../../../ErrorResponse.html\" title=\"interface in org.springframework.web\"><code>ErrorResponse</code></a> 的异常创建 <a href=\"../../../../../http/ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a> 的便捷方法，同时还会对 \"detail\" 字段执行 <a href=\"../../../../../context/MessageSource.html\" title=\"interface in org.springframework.context\"><code>MessageSource</code></a> 查找。",
+      "count": 3
+    },
+    {
+      "source": "Get the <a href=\"../../../../../context/MessageSource.html\" title=\"interface in org.springframework.context\"><code>MessageSource</code></a> that this exception handler uses.",
+      "translation": "获取此异常处理器使用的<a href=\"../../../../../context/MessageSource.html\" title=\"interface in org.springframework.context\"><code>MessageSource</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>body</code> - the body to use for the response",
+      "translation": "<code>body</code> - 用于响应的主体",
+      "count": 3
+    },
+    {
+      "source": "Convenient as a base class of an <a href=\"../../../../bind/annotation/ControllerAdvice.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@ControllerAdvice</code></a>\nfor global exception handling in an application. Subclasses can override\nindividual methods that handle a specific exception, override\n<a href=\"#handleExceptionInternal(java.lang.Exception,java.lang.Object,org.springframework.http.HttpHeaders,org.springframework.http.HttpStatusCode,org.springframework.web.server.ServerWebExchange)\"><code>handleExceptionInternal(Exception, Object, HttpHeaders, HttpStatusCode, ServerWebExchange)</code></a> to override common handling of all exceptions,\nor override <a href=\"#createResponseEntity(java.lang.Object,org.springframework.http.HttpHeaders,org.springframework.http.HttpStatusCode,org.springframework.web.server.ServerWebExchange)\"><code>createResponseEntity(Object, HttpHeaders, HttpStatusCode, ServerWebExchange)</code></a> to intercept the final step of creating\nthe <a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a> from the selected HTTP status code, headers, and body.",
+      "translation": "作为在应用程序中处理全局异常的<a href=\"../../../../bind/annotation/ControllerAdvice.html\" title=\"annotation interface in org.springframework.web.bind.annotation\"><code>@ControllerAdvice</code></a>基类，使用十分方便。子类可以重写处理特定异常的各个方法，重写<a href=\"#handleExceptionInternal(java.lang.Exception,java.lang.Object,org.springframework.http.HttpHeaders,org.springframework.http.HttpStatusCode,org.springframework.web.server.ServerWebExchange)\"><code>handleExceptionInternal(Exception, Object, HttpHeaders, HttpStatusCode, ServerWebExchange)</code></a>以覆盖所有异常的共同处理逻辑，或者重写<a href=\"#createResponseEntity(java.lang.Object,org.springframework.http.HttpHeaders,org.springframework.http.HttpStatusCode,org.springframework.web.server.ServerWebExchange)\"><code>createResponseEntity(Object, HttpHeaders, HttpStatusCode, ServerWebExchange)</code></a>以拦截从选定的 HTTP 状态码、标头和正文创建<a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a>的最后一步。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation does the following:",
+      "translation": "默认实现执行以下操作：",
+      "count": 2
+    },
+    {
+      "source": "Create the <a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a> to use from the given body, headers,\nand statusCode. Subclasses can override this method to inspect and possibly\nmodify the body, headers, or statusCode, for example, to re-create an instance of\n<a href=\"../../../../../http/ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a> as an extension of <a href=\"../../../../../http/ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a>.",
+      "translation": "创建<a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a>以使用给定的 body、headers 和 statusCode。子类可以重写此方法来检查和可能修改 body、headers 或 statusCode，例如，重新创建一个<a href=\"../../../../../http/ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a>实例作为对<a href=\"../../../../../http/ProblemDetail.html\" title=\"class in org.springframework.http\"><code>ProblemDetail</code></a>的扩展。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../../../context/MessageSourceAware.html#setMessageSource(org.springframework.context.MessageSource)\">MessageSourceAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../../../context/MessageSourceAware.html#setMessageSource(org.springframework.context.MessageSource)\">MessageSourceAware</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Create the <a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a> to use from the given body, headers,\nand statusCode.",
+      "translation": "创建<a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a>，使用给定的正文、标头和状态码。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of any <a href=\"../../../../ErrorResponseException.html\" title=\"class in org.springframework.web\"><code>ErrorResponseException</code></a>.",
+      "translation": "自定义对任何<code>ErrorResponseException</code> 的处理。",
+      "count": 2
+    },
+    {
+      "source": "Internal handler method that all others in this class delegate to, for\ncommon handling, and for the creation of a <a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a>.",
+      "translation": "此内部处理程序方法供本类中的其他所有方法委托使用，用于通用处理以及创建<a href=\"../../../../../http/ResponseEntity.html\" title=\"class in org.springframework.http\"><code>ResponseEntity</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../method/annotation/HandlerMethodValidationException.html\" title=\"class in org.springframework.web.method.annotation\"><code>HandlerMethodValidationException</code></a>.",
+      "translation": "自定义对 `<a href=\"../../../../method/annotation/HandlerMethodValidationException.html\" title=\"class in org.springframework.web.method.annotation\"><code>HandlerMethodValidationException</code></a>` 的处理方式。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/MethodNotAllowedException.html\" title=\"class in org.springframework.web.server\"><code>MethodNotAllowedException</code></a>.",
+      "translation": "自定义对 `<a href=\"../../../../server/MethodNotAllowedException.html\" title=\"class in org.springframework.web.server\"><code>MethodNotAllowedException</code></a>` 的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../../validation/method/MethodValidationException.html\" title=\"class in org.springframework.validation.method\"><code>MethodValidationException</code></a>.",
+      "translation": "自定义对 `<a href=\"../../../../../validation/method/MethodValidationException.html\" title=\"class in org.springframework.validation.method\"><code>MethodValidationException</code></a>` 的处理方式。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/MissingRequestValueException.html\" title=\"class in org.springframework.web.server\"><code>MissingRequestValueException</code></a>.",
+      "translation": "自定义对<a href=\"../../../../server/MissingRequestValueException.html\" title=\"class in org.springframework.web.server\"><code>MissingRequestValueException</code></a>的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/NotAcceptableStatusException.html\" title=\"class in org.springframework.web.server\"><code>NotAcceptableStatusException</code></a>.",
+      "translation": "自定义对<a href=\"../../../../server/NotAcceptableStatusException.html\" title=\"class in org.springframework.web.server\"><code>NotAcceptableStatusException</code></a>的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of any <a href=\"../../../../server/ResponseStatusException.html\" title=\"class in org.springframework.web.server\"><code>ResponseStatusException</code></a>.",
+      "translation": "自定义对任何<code>ResponseStatusException</code> 的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/ServerErrorException.html\" title=\"class in org.springframework.web.server\"><code>ServerErrorException</code></a>.",
+      "translation": "自定义对 `<a href=\"../../../../server/ServerErrorException.html\" title=\"class in org.springframework.web.server\"><code>ServerErrorException</code></a>` 的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/ServerWebInputException.html\" title=\"class in org.springframework.web.server\"><code>ServerWebInputException</code></a>.",
+      "translation": "自定义对 `<a href=\"../../../../server/ServerWebInputException.html\" title=\"class in org.springframework.web.server\"><code>ServerWebInputException</code></a>` 的处理方式。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/UnsatisfiedRequestParameterException.html\" title=\"class in org.springframework.web.server\"><code>UnsatisfiedRequestParameterException</code></a>.",
+      "translation": "自定义对<a href=\"../../../../server/UnsatisfiedRequestParameterException.html\" title=\"class in org.springframework.web.server\"><code>UnsatisfiedRequestParameterException</code></a>的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../server/UnsupportedMediaTypeStatusException.html\" title=\"class in org.springframework.web.server\"><code>UnsupportedMediaTypeStatusException</code></a>.",
+      "translation": "自定义对<a href=\"../../../../server/UnsupportedMediaTypeStatusException.html\" title=\"class in org.springframework.web.server\"><code>UnsupportedMediaTypeStatusException</code></a>的处理。",
+      "count": 2
+    },
+    {
+      "source": "Customize the handling of <a href=\"../../../../bind/support/WebExchangeBindException.html\" title=\"class in org.springframework.web.bind.support\"><code>WebExchangeBindException</code></a>.",
+      "translation": "自定义对 `<a href=\"../../../../bind/support/WebExchangeBindException.html\" title=\"class in org.springframework.web.bind.support\"><code>WebExchangeBindException</code></a>` 的处理方式。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../../../../context/MessageSource.html\" title=\"interface in org.springframework.context\"><code>MessageSource</code></a> that this object runs in.",
+      "translation": "设置此对象运行的<a href=\"../../../../../context/MessageSource.html\" title=\"interface in org.springframework.context\"><code>MessageSource</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Common logger for use in subclasses.",
+      "translation": "用于子类的公共日志记录器。",
+      "count": 2
+    },
+    {
+      "source": "Handle all exceptions raised within Spring WebFlux handling of the request.",
+      "translation": "处理 Spring WebFlux 在请求处理过程中抛出的所有异常。",
+      "count": 2
+    },
+    {
+      "source": "extract the <a href=\"../../../../ErrorResponse.html#getBody()\"><code>body</code></a> from\n<a href=\"../../../../ErrorResponse.html\" title=\"interface in org.springframework.web\"><code>ErrorResponse</code></a> exceptions, if the <code>body</code> is <code>null</code>.",
+      "translation": "从<code>ErrorResponse</code><a href=\"../../../../ErrorResponse.html\" title=\"interface in org.springframework.web\">接口</a>的<a href=\"../../../../ErrorResponse.html#getBody()\"><code>body</code></a>提取异常，如果<code>body</code>为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>detailMessageCode</code> - the code to use to look up the \"detail\" field\nthrough a <code>MessageSource</code>; if <code>null</code> then\n<a href=\"../../../../ErrorResponse.html#getDefaultDetailMessageCode(java.lang.Class,java.lang.String)\"><code>ErrorResponse.getDefaultDetailMessageCode(Class, String)</code></a> is used\nto determine the default message code to use",
+      "translation": "<code>detailMessageCode</code> - 用于通过 <code>MessageSource</code> 查找 \"detail\" 字段的代码；如果为 <code>null</code>，则使用<a href=\"../../../../ErrorResponse.html#getDefaultDetailMessageCode(java.lang.Class,java.lang.String)\"><code>ErrorResponse.getDefaultDetailMessageCode(Class, String)</code></a>来确定要使用的默认消息代码",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../../../context/MessageSourceAware.html#setMessageSource(org.springframework.context.MessageSource)\">setMessageSource</a></code> in interface <code><a href=\"../../../../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\">MessageSourceAware</a></code>",
+      "translation": "`<a href=\"../../../../../context/MessageSourceAware.html#setMessageSource(org.springframework.context.MessageSource)\">setMessageSource</a>` 接口 `<code><a href=\"../../../../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\">MessageSourceAware</a></code>` 中的方法",
+      "count": 2
+    },
+    {
+      "source": "a <code>Mono</code> with the created <code>ResponseEntity</code>",
+      "translation": "一个包含已创建的 <code>ResponseEntity</code> 的 <code>Mono</code>",
+      "count": 2
+    },
+    {
+      "source": "return <code>null</code> if response is already committed",
+      "translation": "如果响应已提交，则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "set the <code>\"jakarta.servlet.error.exception\"</code> request attribute\nif the response status is 500 (INTERNAL_SERVER_ERROR).",
+      "translation": "如果响应状态为 500（INTERNAL_SERVER_ERROR），请设置请求属性 `<code>\"jakarta.servlet.error.exception\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>exchange</code> - the current request-response",
+      "translation": "<code>exchange</code> - 当前请求 - 响应",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - the exception being handled",
+      "translation": "<code>ex</code> - 正在处理的异常",
+      "count": 2
+    },
+    {
+      "source": "<code>status</code> - the status to associate with the exception",
+      "translation": "<code>status</code> - 要与异常关联的状态",
+      "count": 2
+    },
+    {
+      "source": "<code>defaultDetail</code> - default value for the \"detail\" field",
+      "translation": "<code>defaultDetail</code> - \"detail\" 字段的默认值",
+      "count": 2
+    },
+    {
+      "source": "<code>detailMessageArguments</code> - the arguments to go with the detailMessageCode",
+      "translation": "<code>detailMessageArguments</code> - 与 detailMessageCode 配合使用的参数",
+      "count": 2
+    },
+    {
+      "source": "the created <code>ProblemDetail</code> instance",
+      "translation": "创建的<code>ProblemDetail</code>实例",
+      "count": 2
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init\ncallback like InitializingBean's afterPropertiesSet or a custom init-method.\nInvoked before ApplicationContextAware's setApplicationContext.",
+      "translation": "在普通 Bean 属性填充之后、但早于初始化回调（如 InitializingBean 的 afterPropertiesSet 或自定义 init-method）之前被调用。在 ApplicationContextAware 的 setApplicationContext 之前被调用。",
+      "count": 1
+    },
+    {
+      "source": "<code>messageSource</code> - message source to be used by this object",
+      "translation": "<code>messageSource</code> - 此对象将使用的消息源",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

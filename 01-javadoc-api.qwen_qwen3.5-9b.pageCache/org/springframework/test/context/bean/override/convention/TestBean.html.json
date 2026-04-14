@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 16:44:16",
+  "updated_at": "2026-04-14 16:44:16",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 52,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7333333333333334,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "<strong>WARNING</strong>: Using <code>@TestBean</code> in conjunction with\n<code>@ContextHierarchy</code> can lead to undesirable results since each\n<code>@TestBean</code> will be applied to all context hierarchy levels by default.\nTo ensure that a particular <code>@TestBean</code> is applied to a single context\nhierarchy level, set the <a href=\"#contextName()\"><code>contextName</code></a> to match a\nconfigured <code>@ContextConfiguration</code>\n<a href=\"../../../ContextConfiguration.html#name()\"><code>name</code></a>.\nSee the Javadoc for <a href=\"../../../ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a>\nfor further details and examples.",
+      "translation": "<strong>警告</strong>：将 <code>@TestBean</code> 与 <code>@ContextHierarchy</code> 结合使用可能会导致不理想的结果，因为每个 <code>@TestBean</code> 默认会应用于所有上下文层次级别。要确保特定的 <code>@TestBean</code> 仅应用于单个上下文层次级别，请将 <a href=\"#contextName()\"><code>contextName</code></a> 设置为与配置的 <code>@ContextConfiguration</code> 的<a href=\"../../../ContextConfiguration.html#name()\"><code>name</code></a> 匹配。有关更多详细信息和示例，请参阅 <a href=\"../../../ContextHierarchy.html\" title=\"annotation interface in org.springframework.test.context\"><code>@ContextHierarchy</code></a> 的 Javadoc。",
+      "count": 2
+    },
+    {
+      "source": "By default, the bean to override is inferred from the type of the annotated\nfield. If multiple candidates exist, a <code>@Qualifier</code> annotation can be\nused to help disambiguate. In the absence of a <code>@Qualifier</code> annotation,\nthe name of the annotated field will be used as a fallback qualifier.\nAlternatively, you can explicitly specify a bean name to replace by setting the\n<a href=\"#value()\"><code>value</code></a> or <a href=\"#name()\"><code>name</code></a> attribute.",
+      "translation": "默认情况下，要覆盖的 Bean 是从已注解字段的类型推断出来的。如果存在多个候选项，可以使用 `<code>@Qualifier</code>` 注解来帮助消除歧义。如果没有 `<code>@Qualifier</code>` 注解，则使用已注解字段的名称作为后备限定符。或者，您可以通过设置 <a href=\"#value()\"><code>value</code></a> 或 <a href=\"#name()\"><code>name</code></a> 属性来显式指定要替换的 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong>: When overriding a non-singleton bean, the non-singleton\nbean will be replaced with a singleton bean corresponding to the value returned\nfrom the <code>@TestBean</code> factory method, and the corresponding bean definition\nwill be converted to a singleton. Consequently, if you override a prototype or\nscoped bean, it will be treated as a singleton. Similarly, when overriding a bean\ncreated by a <a href=\"../../../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>,\nthe <code>FactoryBean</code> will be replaced with a singleton bean corresponding to\nthe value returned from the <code>@TestBean</code> factory method.",
+      "translation": "<strong>注意</strong>：在覆盖非单例 Bean 时，该非单例 Bean 将被替换为与从 <code>@TestBean</code> 工厂方法返回的值相对应的单例 Bean，并且相应的 Bean 定义将转换为单例。因此，如果您覆盖原型或作用域 Bean，它将被视为单例。同样地，在覆盖由 <a href=\"../../../../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> 创建的 Bean 时，<code>FactoryBean</code> 将被替换为与从 <code>@TestBean</code> 工厂方法返回的值相对应的单例 Bean。",
+      "count": 2
+    },
+    {
+      "source": "A bean will be created if a corresponding bean does not exist. However, if\nyou would like for the test to fail when a corresponding bean does not exist,\nyou can set the <a href=\"#enforceOverride()\"><code>enforceOverride</code></a> attribute to <code>true</code>\n— for example,  <code>@TestBean(enforceOverride = true)</code>.",
+      "translation": "如果不存在对应的 Bean，则会创建一个 Bean。但是，如果您希望在不存在对应 Bean 时使测试失败，可以将 `<a href=\"#enforceOverride()\"><code>enforceOverride</code></a>` 属性设置为 `<code>true</code>`——例如，`<code>@TestBean(enforceOverride = true)</code>`。",
+      "count": 2
+    },
+    {
+      "source": "The instance is created from a zero-argument static factory method whose\nreturn type is compatible with the annotated field. The factory method can be\ndeclared directly in the class which declares the <code>@TestBean</code> field or\nwithin the type hierarchy above that class, including implemented interfaces.\nIf the <code>@TestBean</code> field is declared in a nested test class, the enclosing\nclass hierarchy is also searched. Alternatively, a factory method in an external\nclass can be referenced via its fully-qualified method name following the syntax\n<code>&lt;fully-qualified class name&gt;#&lt;method name&gt;</code> — for example,\n<code>@TestBean(methodName = \"org.example.TestUtils#createCustomerRepository\")</code>.",
+      "translation": "该实例由一个无参数静态工厂方法创建，其返回类型与已注解的字段兼容。该工厂方法可以直接在声明 `<code>@TestBean</code>` 字段的类中定义，也可以在该类的类型层次结构中定义，包括实现的接口。如果 `<code>@TestBean</code>` 字段是在嵌套测试类中声明的，则也会搜索其外部类层次结构。或者，可以通过完全限定方法名引用外部类中的工厂方法，语法为 `<code>&lt;fully-qualified class name&gt;#&lt;method name&gt;</code>` —— 例如，`<code>@TestBean(methodName = \"org.example.TestUtils#createCustomerRepository\")</code>`。",
+      "count": 2
+    },
+    {
+      "source": "In the example above, the <code>repository</code> bean is replaced by the\ninstance generated by the <code>repository()</code> method. Not only is the\noverridden instance injected into the <code>repository</code> field, but it is\nalso replaced in the <code>BeanFactory</code> so that other injection points for\nthat bean use the overridden bean instance.",
+      "translation": "在上面的示例中，`<code>repository</code>`  Bean 被由 `<code>repository()</code>` 方法生成的实例所替换。不仅重写的实例被注入到 `<code>repository</code>` 字段中，而且它也在 `<code>BeanFactory</code>` 中被替换，以便该 Bean 的其他注入点使用重写后的 Bean 实例。",
+      "count": 2
+    },
+    {
+      "source": "There are no restrictions on the visibility of <code>@TestBean</code> fields or\nfactory methods. Such fields and methods can therefore be <code>public</code>,\n<code>protected</code>, package-private (default visibility), or <code>private</code>\ndepending on the needs or coding practices of the project.",
+      "translation": "`@TestBean` 字段或工厂方法的可见性没有限制。因此，这些字段和方法可以是 `public`、`protected`、包私有（默认可见性）或 `private`，具体取决于项目的需求或编码实践。",
+      "count": 2
+    },
+    {
+      "source": "<code>@TestBean</code> fields will be inherited from an enclosing test class by default. See\n<a href=\"../../../NestedTestConfiguration.html\" title=\"annotation interface in org.springframework.test.context\"><code>@NestedTestConfiguration</code></a>\nfor details.",
+      "translation": "`@TestBean` 字段默认将从其封闭的测试类继承。有关详细信息，请参阅 <a href=\"../../../NestedTestConfiguration.html\" title=\"org.springframework.test.context 中的注解接口\"><code>@NestedTestConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If left unspecified, the name of the factory method will be detected\nbased either on the name of the <code>@TestBean</code> field or the <a href=\"#name()\"><code>name</code></a>\nof the bean.",
+      "translation": "如果未指定，工厂方法名将根据 `<code>@TestBean</code>` 字段的名称或 bean 的<a href=\"#name()\"><code>name</code></a>进行推断。",
+      "count": 2
+    },
+    {
+      "source": "A search will be performed to find the factory method in the class in\nwhich the <code>@TestBean</code> field is declared, in one of its superclasses,\nor in any implemented interfaces. If the <code>@TestBean</code> field is declared\nin a nested test class, the enclosing class hierarchy will also be searched.",
+      "translation": "将执行搜索以在声明 `<code>@TestBean</code>` 字段的类、其任一父类或任何实现的接口中查找工厂方法。如果 `<code>@TestBean</code>` 字段是在嵌套测试类中声明的，则还将搜索其外部类层次结构。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, a factory method in an external class can be referenced\nvia its fully-qualified method name following the syntax\n<code>&lt;fully-qualified class name&gt;#&lt;method name&gt;</code> — for example,\n<code>@TestBean(methodName = \"org.example.TestUtils#createCustomerRepository\")</code>.",
+      "translation": "或者，可以通过其完全限定方法名引用外部类中的工厂方法，语法为 `<code>&lt;fully-qualified class name&gt;#&lt;method name&gt;</code>`——例如，`<code>@TestBean(methodName = \"org.example.TestUtils#createCustomerRepository\")</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Intended to be used when no other attributes are needed — for\nexample, <code>@TestBean(\"customBeanName\")</code>.",
+      "translation": "用于无需其他属性的情况——例如，<code>@TestBean(\"customBeanName\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "If left unspecified, the bean to override is selected according to\nthe annotated field's type, taking qualifiers into account if necessary.\nSee the <a href=\"TestBean.html\" title=\"annotation interface in org.springframework.test.context.bean.override.convention\">class-level documentation</a> for details.",
+      "translation": "如果未指定，将根据注解字段的类型选择要覆盖的 Bean，如有必要则考虑限定符。有关详细信息，请参阅<a href=\"TestBean.html\" title=\"org.springframework.test.context.bean.override.convention 中的注解接口\">类级别文档</a>。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to an empty string which indicates that this <code>@TestBean</code>\nshould be applied to all application contexts.",
+      "translation": "默认为空字符串，表示应将此 `<code>@TestBean</code>` 应用于所有应用程序上下文。",
+      "count": 2
+    },
+    {
+      "source": "If a context name is configured, it must match a name configured via\n<code>@ContextConfiguration(name=...)</code>.",
+      "translation": "如果配置了上下文名称，它必须与通过 `<code>@ContextConfiguration(name=...)</code>` 配置的名称匹配。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to <code>false</code> which means that a bean will be created if a\ncorresponding bean does not exist.",
+      "translation": "默认为<code>false</code>，这意味着如果不存在对应的 bean，将创建一个 bean。",
+      "count": 2
+    },
+    {
+      "source": "Set to <code>true</code> to cause an exception to be thrown if a corresponding\nbean does not exist.",
+      "translation": "设置为<code>true</code>，以便在找不到对应的 bean 时抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "The factory method is deduced as follows.",
+      "translation": "工厂方法推导如下。",
+      "count": 2
+    },
+    {
+      "source": "Consider the following example.",
+      "translation": "考虑以下示例。",
+      "count": 2
+    },
+    {
+      "source": "To make things more explicit, the bean and method names can be set,\nas shown in the following example.",
+      "translation": "为了使说明更加明确，可以设置 Bean 和方法名称，如下例所示。",
+      "count": 2
+    },
+    {
+      "source": "If the <a href=\"#methodName()\"><code>methodName</code></a> is specified, Spring looks for a static\nmethod with that name.",
+      "translation": "如果指定了 `<a href=\"#methodName()\"><code>methodName</code></a>`，Spring 会查找具有该名称的静态方法。",
+      "count": 2
+    },
+    {
+      "source": "If a method name is not specified, Spring looks for exactly one static method\nwhose name is either the name of the annotated field or the <a href=\"#name()\"><code>name</code></a>\nof the bean (if specified).",
+      "translation": "如果未指定方法名称，Spring 会查找恰好一个静态方法，其名称为已注解字段的名称或（如果指定）bean 的<a href=\"#name()\"><code>name</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#name()\"><code>name()</code></a>.",
+      "translation": "`<a href=\"#name()\"><code>name()</code></a>` 的别名。",
+      "count": 1
+    },
+    {
+      "source": "The name of the context hierarchy level in which this <code>@TestBean</code>\nshould be applied.",
+      "translation": "此 `<code>@TestBean</code>` 应应用到的上下文层次结构级别的名称。",
+      "count": 1
+    },
+    {
+      "source": "Whether to require the existence of the bean being overridden.",
+      "translation": "是否要求被覆盖的 Bean 必须存在。",
+      "count": 1
+    },
+    {
+      "source": "Name of the static factory method that will be used to instantiate the bean\nto override.",
+      "translation": "用于覆盖以实例化该 Bean 的静态工厂方法名称。",
+      "count": 1
+    },
+    {
+      "source": "Name of the bean to override.",
+      "translation": "要覆盖的 Bean 名称。",
+      "count": 1
+    },
+    {
+      "source": "Simon Baslé, Stephane Nicoll, Sam Brannen",
+      "translation": "Simon Baslé, Stephane Nicoll, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

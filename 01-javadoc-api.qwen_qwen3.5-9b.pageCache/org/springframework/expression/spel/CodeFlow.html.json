@@ -1,0 +1,641 @@
+{
+  "created_at": "2026-04-14 13:35:05",
+  "updated_at": "2026-04-14 13:35:05",
+  "stats": {
+    "total_entries": 125,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 241,
+    "entries_with_hits": 125,
+    "entries_without_hits": 0,
+    "hit_rate": 1.928,
+    "usage_percentage": 0.0125
+  },
+  "items": [
+    {
+      "source": "Determine the appropriate boxing instruction for a specific type (if it needs\nboxing) and insert the instruction into the supplied visitor.",
+      "translation": "确定特定类型所需的装箱指令（如果需要装箱），并将其插入到提供的访问者中。",
+      "count": 4
+    },
+    {
+      "source": "<code>methodVisitor</code> - the ASM <a href=\"../../asm/MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a> into which code should\nbe generated",
+      "translation": "`<code>methodVisitor</code>` - 应生成代码的 ASM `<a href=\"../../asm/MethodVisitor.html\" title=\"class in org.springframework.asm\"><code>MethodVisitor</code></a>`",
+      "count": 3
+    },
+    {
+      "source": "<code>argument</code> - a <a href=\"SpelNode.html\" title=\"interface in org.springframework.expression.spel\"><code>SpelNode</code></a> that represents an argument to a method\nor constructor",
+      "translation": "<code>argument</code> - 一个代表方法或构造函数参数的<a href=\"SpelNode.html\" title=\"interface in org.springframework.expression.spel\"><code>SpelNode</code></a>",
+      "count": 3
+    },
+    {
+      "source": "<code>mv</code> - the method visitor into which the load instruction should be inserted",
+      "translation": "`mv` - 应插入加载指令的方法访问者",
+      "count": 3
+    },
+    {
+      "source": "<code>mv</code> - the method visitor into which instructions should be inserted",
+      "translation": "`mv` - 要插入指令的方法访问者",
+      "count": 3
+    },
+    {
+      "source": "<code>stackDescriptor</code> - the descriptor of the type on top of the stack",
+      "translation": "<code>stackDescriptor</code> - 栈顶类型的描述符",
+      "count": 3
+    },
+    {
+      "source": "<code>descriptor</code> - type descriptor",
+      "translation": "<code>descriptor</code> - 类型描述符",
+      "count": 3
+    },
+    {
+      "source": "<code>descriptor</code> - the descriptor for a type",
+      "translation": "<code>descriptor</code> - 类型的描述符",
+      "count": 3
+    },
+    {
+      "source": "<code>mv</code> - the method visitor for the new instructions",
+      "translation": "<code>mv</code> - 用于新指令的方法访问器",
+      "count": 3
+    },
+    {
+      "source": "<code>mv</code> - where to insert the bytecode",
+      "translation": "<code>mv</code> - 插入字节码的位置",
+      "count": 3
+    },
+    {
+      "source": "a String signature descriptor (for example, \"(ILjava/lang/String;)V\")",
+      "translation": "一个字符串签名描述符（例如，\"(ILjava/lang/String;)V\"）",
+      "count": 3
+    },
+    {
+      "source": "Delegates to <a href=\"#generateCodeForArgument(org.springframework.asm.MethodVisitor,org.springframework.expression.spel.SpelNode,java.lang.String)\"><code>generateCodeForArgument(MethodVisitor, SpelNode, String)</code></a>\nwith the <a href=\"#toDescriptor(java.lang.Class)\">descriptor</a> for\nthe supplied <code>requiredType</code>.",
+      "translation": "委托给<a href=\"#generateCodeForArgument(org.springframework.asm.MethodVisitor,org.springframework.expression.spel.SpelNode,java.lang.String)\"><code>generateCodeForArgument(MethodVisitor, SpelNode, String)</code></a>，并使用提供的<code>requiredType</code>的<a href=\"#toDescriptor(java.lang.Class)\">descriptor</a>。",
+      "count": 2
+    },
+    {
+      "source": "Use this method when a node in the AST will be used as an argument for\na constructor or method invocation. For example, if you wish to invoke a\nmethod with an <code>indexNode</code> that must be of type <code>int</code> for the\nactual method invocation within bytecode, you would call\n<code>codeFlow.generateCodeForArgument(methodVisitor, indexNode, int.class)</code>.",
+      "translation": "当 AST 中的节点将用作构造函数或方法调用的参数时，请使用此方法。例如，如果您希望调用一个方法，且该方法的实际字节码调用需要 <code>indexNode</code> 为 <code>int</code> 类型，则您会调用<code>codeFlow.generateCodeForArgument(methodVisitor, indexNode, int.class)</code>。",
+      "count": 2
+    },
+    {
+      "source": "Use this method when a node in the AST will be used as an argument for\na constructor or method invocation. For example, if you wish to invoke a\nmethod with an <code>indexNode</code> that must be of type <code>int</code> for the\nactual method invocation within bytecode, you would call\n<code>codeFlow.generateCodeForArgument(methodVisitor, indexNode, \"I\")</code>.",
+      "translation": "当 AST 中的节点将用作构造函数或方法调用的参数时，请使用此方法。例如，如果您希望调用一个方法，且该方法的实际字节码调用需要 <code>indexNode</code> 为 <code>int</code> 类型，则应调用<code>codeFlow.generateCodeForArgument(methodVisitor, indexNode, \"I\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "This method also performs any boxing, unboxing, or check-casting\nnecessary to ensure that the type of the argument on the stack matches the\nsupplied <code>requiredType</code>.",
+      "translation": "此方法还会执行任何必要的装箱、拆箱或检查转换，以确保栈上参数的类型与提供的<code>requiredType</code>匹配。",
+      "count": 2
+    },
+    {
+      "source": "This method also performs any boxing, unboxing, or check-casting\nnecessary to ensure that the type of the argument on the stack matches the\nsupplied <code>requiredTypeDesc</code>.",
+      "translation": "此方法还会执行任何必要的装箱、拆箱或检查转换，以确保栈上参数的类型与提供的<code>requiredTypeDesc</code>匹配。",
+      "count": 2
+    },
+    {
+      "source": "Records intermediate compilation state as the bytecode is generated.",
+      "translation": "记录中间编译状态，即在生成字节码时进行记录。",
+      "count": 2
+    },
+    {
+      "source": "Also includes various bytecode generation helper functions.",
+      "translation": "还包含各种字节码生成辅助函数。",
+      "count": 2
+    },
+    {
+      "source": "Assumes at least one of the types is in boxed form (i.e. single char descriptor).",
+      "translation": "假设至少有一种类型采用装箱形式（即单个字符描述符）。",
+      "count": 2
+    },
+    {
+      "source": "The instruction to use varies depending on whether the type is a\nprimitive or reference type.",
+      "translation": "该指令的使用方式取决于类型是基本类型还是引用类型。",
+      "count": 2
+    },
+    {
+      "source": "For example, from an Integer to a double, just need to call 'Number.doubleValue()'\nbut from an int to a double, need to use the bytecode 'i2d'.",
+      "translation": "例如，从 `Integer` 到 `double`，只需调用 `'Number.doubleValue()'`；但从 `int` 到 `double`，则需使用字节码 `'i2d'`。",
+      "count": 2
+    },
+    {
+      "source": "Construct a new <code>CodeFlow</code> for the given class.",
+      "translation": "为给定的类构建一个新的<code>CodeFlow</code>。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the descriptor is for a primitive type or <code>void</code>.",
+      "translation": "确定描述符是用于基本类型还是<code>void</code>。",
+      "count": 2
+    },
+    {
+      "source": "Determine the descriptor for an object instance (or <code>null</code>).",
+      "translation": "确定对象实例（或<code>null</code>）的描述符。",
+      "count": 2
+    },
+    {
+      "source": "Determine the appropriate T tag to use for the NEWARRAY bytecode.",
+      "translation": "确定用于 NEWARRAY 字节码的适当 T 标签。",
+      "count": 2
+    },
+    {
+      "source": "Called after the main expression evaluation method has been generated, this\nmethod will call back any registered FieldAdders or ClinitAdders to add any\nextra information to the class representing the compiled expression.",
+      "translation": "在生成主表达式评估方法之后调用此方法，该方法将回调任何已注册的 FieldAdder 或 ClinitAdder，以向表示编译后表达式的类添加任何额外信息。",
+      "count": 2
+    },
+    {
+      "source": "Generate bytecode that loads the supplied argument onto the stack.",
+      "translation": "生成将提供的参数加载到栈上的字节码。",
+      "count": 2
+    },
+    {
+      "source": "Insert any necessary numeric conversion bytecodes based upon what is on the\nstack and the desired target type.",
+      "translation": "根据栈上的内容和目标类型，插入任何必要的数值转换字节码。",
+      "count": 2
+    },
+    {
+      "source": "Insert the appropriate CHECKCAST instruction for the supplied descriptor.",
+      "translation": "插入与提供的描述符相匹配的适当 CHECKCAST 指令。",
+      "count": 2
+    },
+    {
+      "source": "Create the optimal instruction for loading a number on the stack.",
+      "translation": "创建将数字加载到堆栈上的最佳指令。",
+      "count": 2
+    },
+    {
+      "source": "Insert any necessary cast and value call to convert from a boxed type to a\nprimitive value.",
+      "translation": "插入必要的类型转换和值调用，以将装箱类型转换为基本类型值。",
+      "count": 2
+    },
+    {
+      "source": "For numbers, use the appropriate method on the number to convert it to the primitive type requested.",
+      "translation": "对于数字，请使用该数字上的适当方法将其转换为请求的原始类型。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the descriptor is for a boolean primitive or boolean reference type.",
+      "translation": "确定描述符是针对布尔原始类型还是布尔引用类型。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the given number is to be considered as an integer\nfor the purposes of a numeric operation at the bytecode level.",
+      "translation": "确定给定的数字在字节码级别的数值运算中是否应被视为整数。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the descriptor is for a primitive array (for example, \"[[I\").",
+      "translation": "确定描述符是否为基本类型数组（例如，\"[[I\"）。",
+      "count": 2
+    },
+    {
+      "source": "Return if the supplied array type has a core component reference type.",
+      "translation": "如果提供的数组类型具有核心组件引用类型，则返回。",
+      "count": 2
+    },
+    {
+      "source": "Return the descriptor for the item currently on top of the stack (in the current scope).",
+      "translation": "返回当前作用域中栈顶项的描述符。",
+      "count": 2
+    },
+    {
+      "source": "Push the bytecode to load the EvaluationContext (the second parameter passed to\nthe compiled expression method).",
+      "translation": "将字节码推送到加载 EvaluationContext（传递给编译后的表达式方法的第二个参数）。",
+      "count": 2
+    },
+    {
+      "source": "Record the descriptor for the most recently evaluated expression element.",
+      "translation": "记录最近评估的表达式元素的描述符。",
+      "count": 2
+    },
+    {
+      "source": "Register a ClinitAdder which will add code to the static\ninitializer in the generated class to support the code\nproduced by an AST node's primary generateCode() method.",
+      "translation": "注册一个 ClinitAdder，它将在生成的类的静态初始化器中添加代码，以支持由 AST 节点的主要 `generateCode()` 方法产生的代码。",
+      "count": 2
+    },
+    {
+      "source": "Register a FieldAdder which will add a new field to the generated\nclass to support the code produced by an AST node's primary\ngenerateCode() method.",
+      "translation": "注册一个 FieldAdder，它将在生成的类中添加一个新字段，以支持由 AST 节点的主 generateCode() 方法产生的代码。",
+      "count": 2
+    },
+    {
+      "source": "Create an array of descriptors from an array of classes.",
+      "translation": "从类数组创建描述符数组。",
+      "count": 2
+    },
+    {
+      "source": "Convert a type descriptor to the single character primitive descriptor.",
+      "translation": "将类型描述符转换为单字符基本类型描述符。",
+      "count": 2
+    },
+    {
+      "source": "If the codeflow shows the last expression evaluated to java.lang.Boolean then\ninsert the necessary instructions to unbox that to a boolean primitive.",
+      "translation": "如果代码流显示最后一个表达式求值为 `java.lang.Boolean`，则插入必要的指令将其拆箱为基本类型 `boolean`。",
+      "count": 2
+    },
+    {
+      "source": "Push the byte code to load the target (i.e. what was passed as the first argument\nto CompiledExpression.getValue(target, context))",
+      "translation": "将字节码推送到栈上以加载目标（即作为 `CompiledExpression.getValue(target, context)` 的第一个参数传递的内容）。",
+      "count": 2
+    },
+    {
+      "source": "Enter a new compilation scope, usually due to nested expression evaluation. For\nexample when the arguments for a method invocation expression are being evaluated,\neach argument will be evaluated in a new scope.",
+      "translation": "输入新的编译作用域，通常是由于嵌套表达式求值所致。例如，当对方法调用表达式的参数进行求值时，每个参数将在一个新的作用域中进行求值。",
+      "count": 2
+    },
+    {
+      "source": "Exit a compilation scope, usually after a nested expression has been evaluated. For\nexample after an argument for a method invocation has been evaluated this method\nreturns us to the previous (outer) scope.",
+      "translation": "退出编译作用域，通常在嵌套表达式求值之后。例如，在方法调用的参数求值之后，该方法将我们返回到之前的（外层）作用域。",
+      "count": 2
+    },
+    {
+      "source": "Create the JVM signature descriptor for a method. This consists of the descriptors\nfor the method parameters surrounded with parentheses, followed by the\ndescriptor for the return type. Note the descriptors here are JVM descriptors,\nunlike the other descriptor forms the compiler is using which do not include the\ntrailing semicolon.",
+      "translation": "创建方法的 JVM 签名描述符。这由方法参数的描述符（用括号括起来）后跟返回类型的描述符组成。请注意，这里的描述符是 JVM 描述符，不同于编译器使用的其他描述符形式，后者不包含尾随分号。",
+      "count": 2
+    },
+    {
+      "source": "Create the JVM signature descriptor for a constructor. This consists of the\ndescriptors for the constructor parameters surrounded with parentheses, followed by\nthe descriptor for the return type, which is always \"V\". Note the\ndescriptors here are JVM descriptors, unlike the other descriptor forms the\ncompiler is using which do not include the trailing semicolon.",
+      "translation": "创建构造函数的 JVM 签名描述符。它由构造函数参数的描述符用括号包围，后跟返回类型的描述符（始终为\"V\"）。请注意，这里的描述符是 JVM 描述符，不同于编译器使用的其他不包含尾随分号的描述符形式。",
+      "count": 2
+    },
+    {
+      "source": "Determine the JVM descriptor for a specified class. Unlike the other descriptors\nused in the compilation process, this is the one the JVM wants, so this one\nincludes any necessary trailing semicolon (for example, Ljava/lang/String; rather than\nLjava/lang/String)",
+      "translation": "确定指定类的 JVM 描述符。与编译过程中使用的其他描述符不同，这是 JVM 所需的描述符，因此它包含任何必要的尾随分号（例如，使用 `Ljava/lang/String;` 而不是 `Ljava/lang/String`）。",
+      "count": 2
+    },
+    {
+      "source": "Determine if the supplied descriptor is for a supported number type or boolean. The\ncompilation process only (currently) supports certain number types. These are\ndouble, float, long and int.",
+      "translation": "确定提供的描述符是否为支持的数字类型或布尔类型。编译过程（目前）仅支持某些数字类型，这些类型包括 double、float、long 和 int。",
+      "count": 2
+    },
+    {
+      "source": "Determine if the supplied descriptor is for a supported number. The compilation\nprocess only (currently) supports certain number types. These are double, float,\nlong and int.",
+      "translation": "确定提供的描述符是否针对支持的数字。编译过程目前仅支持某些数字类型，包括 double、float、long 和 int。",
+      "count": 2
+    },
+    {
+      "source": "Deduce the descriptor for a type. Descriptors are like JVM type names but missing the\ntrailing ';' so for Object the descriptor is \"Ljava/lang/Object\" for int it is \"I\".",
+      "translation": "推导类型的描述符。描述符类似于 JVM 类型名称，但缺少尾部的分号；因此对于 `Object`，描述符为 `\"Ljava/lang/Object\"`，对于 `int` 则为 `\"I\"`。",
+      "count": 2
+    },
+    {
+      "source": "Create an array of descriptors representing the parameter types for the supplied\nmethod. Returns a zero sized array if there are no parameters.",
+      "translation": "创建表示所提供方法的参数类型的描述符数组。如果没有参数，则返回零大小的数组。",
+      "count": 2
+    },
+    {
+      "source": "Create an array of descriptors representing the parameter types for the supplied\nconstructor. Returns a zero sized array if there are no parameters.",
+      "translation": "创建描述符数组，表示所提供构造函数的参数类型。如果没有参数，则返回零大小数组。",
+      "count": 2
+    },
+    {
+      "source": "Produce the correct bytecode to build an array. The opcode to use and the\nsignature to pass along with the opcode can vary depending on the signature\nof the array type.",
+      "translation": "生成构建数组的正确字节码。所使用的操作码以及随操作码传递的签名会根据数组类型的签名而有所不同。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if it is an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Short.html\" title=\"class or interface in java.lang\"><code>Short</code></a>, or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Byte.html\" title=\"class or interface in java.lang\"><code>Byte</code></a>",
+      "translation": "<code>true</code> 如果它是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Short.html\" title=\"class or interface in java.lang\"><code>Short</code></a> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Byte.html\" title=\"class or interface in java.lang\"><code>Byte</code></a>",
+      "count": 2
+    },
+    {
+      "source": "<code>classWriter</code> - the corresponding ASM <code>ClassWriter</code>",
+      "translation": "<code>classWriter</code> - 对应的 ASM <code>ClassWriter</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - an object (possibly <code>null</code>)",
+      "translation": "<code>value</code> - 一个对象（可能为 <code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if a primitive type or <code>void</code>",
+      "translation": "<code>true</code> 如果为基本类型或<code>void</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>className</code> - the name of the class",
+      "translation": "<code>className</code> - 类的名称",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - type descriptor for most recently evaluated element",
+      "translation": "<code>descriptor</code> - 最近评估元素的类型描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>mv</code> - the method visitor into which new instructions should be inserted",
+      "translation": "`mv` - 用于插入新指令的方法访问者",
+      "count": 2
+    },
+    {
+      "source": "<code>requiredType</code> - the required type for the argument when invoking the\ncorresponding constructor or method",
+      "translation": "<code>requiredType</code> - 调用相应构造函数或方法时参数的必需类型",
+      "count": 2
+    },
+    {
+      "source": "<code>requiredTypeDesc</code> - a descriptor for the required type for the argument\nwhen invoking the corresponding constructor or method",
+      "translation": "<code>requiredTypeDesc</code> - 调用相应构造函数或方法时，参数所需类型的描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>ch</code> - the primitive type desired as output",
+      "translation": "<code>ch</code> - 期望作为输出的基本类型",
+      "count": 2
+    },
+    {
+      "source": "<code>targetDescriptor</code> - the primitive type desired as output",
+      "translation": "<code>targetDescriptor</code> - 期望作为输出的基本类型",
+      "count": 2
+    },
+    {
+      "source": "<code>mv</code> - the method visitor into which instructions should be placed",
+      "translation": "`mv` - 应放置指令的方法访问者",
+      "count": 2
+    },
+    {
+      "source": "<code>targetDescriptor</code> - the (primitive) descriptor of the target type",
+      "translation": "<code>targetDescriptor</code> - 目标类型的（基本）描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>stackDescriptor</code> - the descriptor of the operand on top of the stack",
+      "translation": "<code>stackDescriptor</code> - 栈顶操作数的描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>ctor</code> - the constructor",
+      "translation": "<code>ctor</code> - 构造函数",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - a class",
+      "translation": "<code>clazz</code> - 一个类",
+      "count": 2
+    },
+    {
+      "source": "the type descriptor for the object\n(descriptor is \"Ljava/lang/Object\" for <code>null</code> value)",
+      "translation": "对象的类型描述符（对于<code>null</code>值，描述符为\"Ljava/lang/Object\"）",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the descriptor is boolean compatible",
+      "translation": "<code>true</code> 如果描述符是布尔兼容的",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the descriptor for a possible primitive array",
+      "translation": "<code>descriptor</code> - 可能的基本类型数组的描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the descriptor a primitive array",
+      "translation": "<code>true</code> 如果描述符是一个基本类型数组。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if it is possible to get (via boxing) from one descriptor to the other",
+      "translation": "<code>true</code> 表示可以通过装箱从一个描述符获取到另一个。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the descriptor is for a supported numeric type or boolean",
+      "translation": "<code>true</code> 如果描述符是针对支持的数值类型或布尔值。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the descriptor is for a supported numeric type",
+      "translation": "<code>true</code> 如果描述符是针对支持的数值类型",
+      "count": 2
+    },
+    {
+      "source": "<code>number</code> - the number to check",
+      "translation": "<code>number</code> - 要检查的数字",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - a descriptor for a type that should have a primitive representation",
+      "translation": "<code>descriptor</code> - 一种应具有一种基本类型表示的类型的描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>mv</code> - the method visitor into which the instruction should be inserted",
+      "translation": "`mv` - 应插入指令的方法访问者",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the descriptor of the type to cast to",
+      "translation": "<code>descriptor</code> - 要转换的目标类型的描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>descriptor</code> - the descriptor of a type that may or may not need boxing",
+      "translation": "<code>descriptor</code> - 一种可能需要或不需要装箱的类型描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>ch</code> - the descriptor of the type that might need boxing",
+      "translation": "<code>ch</code> - 可能需要装箱的类型描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the type (may be primitive) for which to determine the descriptor",
+      "translation": "<code>type</code> - 用于确定描述符的类型（可能是基本类型）。",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - a Method",
+      "translation": "<code>method</code> - 一个方法",
+      "count": 2
+    },
+    {
+      "source": "<code>ctor</code> - a Constructor",
+      "translation": "<code>ctor</code> - 构造函数",
+      "count": 2
+    },
+    {
+      "source": "<code>types</code> - the input array of classes",
+      "translation": "<code>types</code> - 输入类数组",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the value to be loaded",
+      "translation": "<code>value</code> - 要加载的值",
+      "count": 2
+    },
+    {
+      "source": "<code>arrayComponentType</code> - the component type of the array",
+      "translation": "<code>arrayComponentType</code> - 数组的组件类型",
+      "count": 2
+    },
+    {
+      "source": "<code>arrayType</code> - the array primitive component type",
+      "translation": "<code>arrayType</code> - 数组基本组件类型",
+      "count": 2
+    },
+    {
+      "source": "<code>mv</code> - the method visitor into which code should be inserted",
+      "translation": "`mv` - 应插入代码的方法访问者",
+      "count": 2
+    },
+    {
+      "source": "<code>arrayType</code> - the type of the array",
+      "translation": "<code>arrayType</code> - 数组的类型",
+      "count": 2
+    },
+    {
+      "source": "<code>mv</code> - the method visitor when instructions should be appended",
+      "translation": "`mv` - 指令应追加时的方法访问者",
+      "count": 2
+    },
+    {
+      "source": "<code>stackDescriptor</code> - a descriptor of the operand on the stack",
+      "translation": "<code>stackDescriptor</code> - 栈上操作数的描述符",
+      "count": 2
+    },
+    {
+      "source": "<code>targetDescriptor</code> - a primitive type descriptor",
+      "translation": "<code>targetDescriptor</code> - 一个基本类型描述符",
+      "count": 2
+    },
+    {
+      "source": "the JVM descriptor for the class",
+      "translation": "类的 JVM 描述符",
+      "count": 2
+    },
+    {
+      "source": "the single character descriptor for a primitive input descriptor",
+      "translation": "原始输入描述符的单字符描述符",
+      "count": 2
+    },
+    {
+      "source": "the descriptor",
+      "translation": "描述符",
+      "count": 2
+    },
+    {
+      "source": "a String array of descriptors, one entry for each method parameter",
+      "translation": "一个描述符字符串数组，每个条目对应一个方法参数。",
+      "count": 2
+    },
+    {
+      "source": "a String array of descriptors, one entry for each constructor parameter",
+      "translation": "一个描述符字符串数组，每个构造函数参数对应一个条目。",
+      "count": 2
+    },
+    {
+      "source": "an array of descriptors",
+      "translation": "描述符数组",
+      "count": 2
+    },
+    {
+      "source": "the T tag to use for NEWARRAY",
+      "translation": "用于 NEWARRAY 的 T 标签",
+      "count": 2
+    },
+    {
+      "source": "Interface used to generate <code>clinit</code> static initializer blocks.",
+      "translation": "用于生成<code>clinit</code>静态初始化块的接口。",
+      "count": 1
+    },
+    {
+      "source": "Interface used to generate fields.",
+      "translation": "用于生成字段的接口。",
+      "count": 1
+    },
+    {
+      "source": "Determine whether boxing/unboxing can get from one type to the other.",
+      "translation": "确定装箱/拆箱是否可以从一种类型转换到另一种类型。",
+      "count": 1
+    },
+    {
+      "source": "Create the JVM signature descriptor for a constructor.",
+      "translation": "为构造函数创建 JVM 签名描述符。",
+      "count": 1
+    },
+    {
+      "source": "Create the JVM signature descriptor for a method.",
+      "translation": "为方法创建 JVM 签名描述符。",
+      "count": 1
+    },
+    {
+      "source": "Enter a new compilation scope, usually due to nested expression evaluation.",
+      "translation": "输入新的编译范围，通常是由于嵌套表达式求值导致的。",
+      "count": 1
+    },
+    {
+      "source": "Exit a compilation scope, usually after a nested expression has been evaluated.",
+      "translation": "退出编译作用域，通常在嵌套表达式求值之后。",
+      "count": 1
+    },
+    {
+      "source": "Produce appropriate bytecode to store a stack item in an array.",
+      "translation": "生成适当的字节码以将栈项存储到数组中。",
+      "count": 1
+    },
+    {
+      "source": "Produce the correct bytecode to build an array.",
+      "translation": "生成构建数组的正确字节码。",
+      "count": 1
+    },
+    {
+      "source": "For use in mathematical operators, handles converting from a (possibly boxed)\nnumber on the stack to a primitive numeric type.",
+      "translation": "用于数学运算符，处理将栈上的（可能是装箱的）数字转换为原始数值类型。",
+      "count": 1
+    },
+    {
+      "source": "Determine if the supplied descriptor is for a supported number.",
+      "translation": "判断提供的描述符是否对应支持的数字。",
+      "count": 1
+    },
+    {
+      "source": "Determine if the supplied descriptor is for a supported number type or boolean.",
+      "translation": "确定提供的描述符是否为支持的数字类型或布尔值。",
+      "count": 1
+    },
+    {
+      "source": "Push the byte code to load the target (i.e.",
+      "translation": "推送字节码以加载目标（即",
+      "count": 1
+    },
+    {
+      "source": "Deduce the descriptor for a type.",
+      "translation": "推导类型的描述符。",
+      "count": 1
+    },
+    {
+      "source": "Determine the JVM descriptor for a specified class.",
+      "translation": "确定指定类的 JVM 描述符。",
+      "count": 1
+    },
+    {
+      "source": "Create an array of descriptors representing the parameter types for the supplied\nconstructor.",
+      "translation": "创建描述符数组，表示所提供构造函数的参数类型。",
+      "count": 1
+    },
+    {
+      "source": "Create an array of descriptors representing the parameter types for the supplied\nmethod.",
+      "translation": "创建描述符数组，表示所提供方法的参数类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - the method",
+      "translation": "<code>method</code> - 方法",
+      "count": 1
+    },
+    {
+      "source": "<code>size</code> - the size of the array",
+      "translation": "<code>size</code> - 数组的大小",
+      "count": 1
+    },
+    {
+      "source": "Andy Clement, Juergen Hoeller, Sam Brannen",
+      "translation": "Andy Clement，Juergen Hoeller，Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

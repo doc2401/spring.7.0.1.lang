@@ -1,0 +1,406 @@
+{
+  "created_at": "2026-04-14 20:05:04",
+  "updated_at": "2026-04-14 20:05:04",
+  "stats": {
+    "total_entries": 78,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 123,
+    "entries_with_hits": 78,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5769230769230769,
+    "usage_percentage": 0.0078
+  },
+  "items": [
+    {
+      "source": "use of <a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a> and <a href=\"../../util/UrlPathHelper.html\" title=\"class in org.springframework.web.util\"><code>UrlPathHelper</code></a> is deprecated\nfor use at runtime in web modules in favor of parsed patterns with\n<a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a>.",
+      "translation": "使用 `<a href=\"../../../util/PathMatcher.html\" title=\"interface in org.springframework.util\"><code>PathMatcher</code></a>` 和 `<a href=\"../../util/UrlPathHelper.html\" title=\"class in org.springframework.web.util\"><code>UrlPathHelper</code></a>` 已弃用，在 Web 模块中运行时建议使用通过 `<a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a>` 解析的模式。",
+      "count": 4
+    },
+    {
+      "source": "Return the <a href=\"#setMediaTypes(java.util.Map)\"><code>configured</code></a> media types.",
+      "translation": "返回<a href=\"#setMediaTypes(java.util.Map)\"><code>configured</code></a>媒体类型。",
+      "count": 3
+    },
+    {
+      "source": "This request handler may also be configured with a\n<a href=\"#setResourceResolvers(java.util.List)\"><code>resourcesResolver</code></a> and\n<a href=\"#setResourceTransformers(java.util.List)\"><code>resourceTransformer</code></a> chains to support\narbitrary resolution and transformation of resources being served. By default,\na <a href=\"PathResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>PathResourceResolver</code></a> simply finds resources based on the configured\n\"locations\". An application can configure additional resolvers and transformers\nsuch as the <a href=\"VersionResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>VersionResourceResolver</code></a> which can resolve and prepare URLs\nfor resources with a version in the URL.",
+      "translation": "此请求处理器还可配置`resourcesResolver`和`resourceTransformer`链，以支持对正在提供的资源进行任意解析和转换。默认情况下，<a href=\"PathResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>PathResourceResolver</code></a> 仅根据配置的“位置”查找资源。应用程序可以配置额外的解析器和转换器，例如<a href=\"VersionResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>VersionResourceResolver</code></a>，该解析器可以解析并准备 URL 中包含版本号的资源的 URL。",
+      "count": 2
+    },
+    {
+      "source": "Finds the requested resource under one of the configured locations.\nIf the resource does not exist, <a href=\"NoResourceFoundException.html\" title=\"class in org.springframework.web.servlet.resource\"><code>NoResourceFoundException</code></a> is raised.\nIf the resource exists, the request will be checked for the presence of the\n<code>Last-Modified</code> header, and its value will be compared against the last-modified\ntimestamp of the given resource, returning a <code>304</code> status code if the\n<code>Last-Modified</code> value is greater. If the resource is newer than the\n<code>Last-Modified</code> value, or the header is not present, the content resource\nof the resource will be written to the response with caching headers\nset to expire one year in the future.",
+      "translation": "在配置的各个位置之一中查找请求的资源。如果该资源不存在，则抛出 <a href=\"NoResourceFoundException.html\" title=\"class in org.springframework.web.servlet.resource\"><code>NoResourceFoundException</code></a>。如果该资源存在，将检查请求中是否存在 <code>Last-Modified</code> 标头，并将其值与给定资源的最后修改时间戳进行比较；如果 <code>Last-Modified</code> 的值更大，则返回 <code>304</code> 状态码。如果资源比 <code>Last-Modified</code> 的值更新，或者该标头不存在，则将资源的内容写入响应，并设置缓存标头使其在一年后过期。",
+      "count": 2
+    },
+    {
+      "source": "By default <a href=\"PathResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>PathResourceResolver</code></a> is configured. If using this property,\nit is recommended to add <a href=\"PathResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>PathResourceResolver</code></a> as the last resolver.",
+      "translation": "默认情况下，已配置了<a href=\"PathResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>PathResourceResolver</code></a>。如果使用此属性，建议将<a href=\"PathResourceResolver.html\" title=\"class in org.springframework.web.servlet.resource\"><code>PathResourceResolver</code></a>添加为最后一个解析器。",
+      "count": 2
+    },
+    {
+      "source": "For <a href=\"../../../core/io/UrlResource.html\" title=\"class in org.springframework.core.io\"><code>URL-based resources</code></a>\n(for example, files, HTTP URLs, etc.) this method supports a special prefix to\nindicate the charset associated with the URL so that relative paths\nappended to it can be encoded correctly, for example\n<code>\"[charset=Windows-31J]https://example.org/path\"</code>.",
+      "translation": "对于<a href=\"../../../core/io/UrlResource.html\" title=\"class in org.springframework.core.io\"><code>基于 URL 的资源</code></a>（例如文件、HTTP URL 等），此方法支持一个特殊前缀，用于指示与 URL 关联的字符集，以便正确编码附加到该 URL 的相对路径，例如<code>\"[charset=Windows-31J]https://example.org/path\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> The list of locations may be filtered to exclude\nthose that don't actually exist, and therefore the list returned from this\nmethod may be a subset of all given locations. See <a href=\"#setOptimizeLocations(boolean)\"><code>setOptimizeLocations(boolean)</code></a>.",
+      "translation": "<strong>注意：</strong> 位置列表可被过滤以排除那些实际上不存在的位置，因此此方法返回的列表可能是所有给定位置的子集。请参阅 <a href=\"#setOptimizeLocations(boolean)\"><code>setOptimizeLocations(boolean)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Use of this method is typically not necessary since mappings are\notherwise determined via\n<code>ServletContext.getMimeType(String)</code> or via\n<a href=\"../../../http/MediaTypeFactory.html#getMediaType(org.springframework.core.io.Resource)\"><code>MediaTypeFactory.getMediaType(Resource)</code></a>.",
+      "translation": "通常不需要使用此方法，因为映射关系是通过 <code>ServletContext.getMimeType(String)</code> 或 <a href=\"../../../http/MediaTypeFactory.html#getMediaType(org.springframework.core.io.Resource)\"><code>MediaTypeFactory.getMediaType(Resource)</code></a> 确定的。",
+      "count": 2
+    },
+    {
+      "source": "This function should return a String that will be used as an argument in\n<a href=\"../../context/request/ServletWebRequest.html#checkNotModified(java.lang.String)\"><code>ServletWebRequest.checkNotModified(String)</code></a>, or <code>null</code> if no value\ncan be generated for the given resource.",
+      "translation": "此函数应返回一个 String，该 String 将作为参数传递给<a href=\"../../context/request/ServletWebRequest.html#checkNotModified(java.lang.String)\"><code>ServletWebRequest.checkNotModified(String)</code></a>；如果无法为给定资源生成值，则返回<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "The properties <a href=\"#setLocations(java.util.List)\">\"locations\"</a> and\n<a href=\"#setLocationValues(java.util.List)\">\"locationValues\"</a> accept locations from which\nstatic resources can be served by this handler. This can be relative to the\nroot of the web application, or from the classpath, for example,\n\"classpath:/META-INF/public-web-resources/\", allowing convenient packaging\nand serving of resources such as .js, .css, and others in jar files.",
+      "translation": "属性 `<a href=\"#setLocations(java.util.List)\">\"locations\"</a>` 和 `<a href=\"#setLocationValues(java.util.List)\">\"locationValues\"</a>` 接受此处理器可从中提供静态资源的资源位置。这些位置可以相对于 Web 应用程序的根目录，也可以来自类路径，例如 `\"classpath:/META-INF/public-web-resources/\"`，从而允许方便地在 jar 文件中打包并提供诸如 .js、.css 等其他资源。",
+      "count": 2
+    },
+    {
+      "source": "This handler also properly evaluates the <code>Last-Modified</code> header\n(if present) so that a <code>304</code> status code will be returned as appropriate,\navoiding unnecessary overhead for resources that are already cached by the client.",
+      "translation": "该处理器还会正确评估 `<Last-Modified>` 响应头（如果存在），以便在适当时返回 `<code>304`</code> 状态码，从而避免对客户端已缓存的资源产生不必要的开销。",
+      "count": 2
+    },
+    {
+      "source": "Note that the returned list is fully initialized only after\ninitialization via <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>.",
+      "translation": "注意，返回的列表仅在通过<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>初始化后才完全初始化。",
+      "count": 2
+    },
+    {
+      "source": "By default a <a href=\"../../../http/converter/ResourceHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceHttpMessageConverter</code></a> will be configured.",
+      "translation": "默认情况下，将配置一个<a href=\"../../../http/converter/ResourceHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceHttpMessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "By default a <a href=\"../../../http/converter/ResourceRegionHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceRegionHttpMessageConverter</code></a> will be configured.",
+      "translation": "默认情况下，将配置一个<a href=\"../../../http/converter/ResourceRegionHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceRegionHttpMessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "By default this is not set in which allows cross-origin requests.",
+      "translation": "默认情况下，该选项未设置，从而允许跨域请求。",
+      "count": 2
+    },
+    {
+      "source": "This option is enabled by default and should be turned off if the metadata\nof the static files should be ignored.",
+      "translation": "此选项默认启用，如果应忽略静态文件的元数据，则需将其关闭。",
+      "count": 2
+    },
+    {
+      "source": "Determine the media type for the given request and the resource matched\nto it. This implementation tries to determine the MediaType using one of\nthe following lookups based on the resource filename and its path\nextension:\n<ol>\n<li><code>ServletContext.getMimeType(String)</code>\n</li><li><a href=\"#getMediaTypes()\"><code>getMediaTypes()</code></a>\n</li><li><a href=\"../../../http/MediaTypeFactory.html#getMediaType(java.lang.String)\"><code>MediaTypeFactory.getMediaType(String)</code></a>\n</li></ol>",
+      "translation": "确定给定请求及其匹配资源的媒体类型。此实现尝试根据资源文件名及其路径扩展名，使用以下查找之一来确定 MediaType：\n<ol>\n<li><code>ServletContext.getMimeType(String)</code>\n</li><li><a href=\"#getMediaTypes()\"><code>getMediaTypes()</code></a>\n</li><li><a href=\"../../../http/MediaTypeFactory.html#getMediaType(java.lang.String)\"><code>MediaTypeFactory.getMediaType(String)</code></a>\n</li></ol>",
+      "count": 2
+    },
+    {
+      "source": "Return the configured <code>List</code> of <code>Resource</code> locations including\nboth String-based locations provided via\n<a href=\"#setLocationValues(java.util.List)\"><code>setLocationValues</code></a> and pre-resolved\n<code>Resource</code> locations provided via <a href=\"#setLocations(java.util.List)\"><code>setLocations</code></a>.",
+      "translation": "返回配置的 `<code>List</code>` 的 `<code>Resource</code>` 位置，包括通过<a href=\"#setLocationValues(java.util.List)\"><code>setLocationValues</code></a>提供的基于字符串的位置和通过<a href=\"#setLocations(java.util.List)\"><code>setLocations</code></a>提供的预解析的 `<code>Resource</code>` 位置。",
+      "count": 2
+    },
+    {
+      "source": "Look for a <code>PathResourceResolver</code> among the configured resource\nresolvers and set its <code>allowedLocations</code> property (if empty) to\nmatch the <a href=\"#setLocations(java.util.List)\"><code>locations</code></a> configured on this class.",
+      "translation": "在已配置的资源解析器中查找一个<code>PathResourceResolver</code>，并将其<code>allowedLocations</code>属性（如果为空）设置为与在此类上配置的<a href=\"#setLocations(java.util.List)\"><code>locations</code></a>相匹配。",
+      "count": 2
+    },
+    {
+      "source": "Set whether we should look at the <a href=\"../../../core/io/Resource.html#lastModified()\"><code>Resource.lastModified()</code></a> when\nserving resources and use this information to drive <code>\"Last-Modified\"</code>\nHTTP response headers.",
+      "translation": "设置是否在提供资源时查看<a href=\"../../../core/io/Resource.html#lastModified()\"><code>Resource.lastModified()</code></a>，并使用此信息来驱动<code>\"Last-Modified\"</code>HTTP 响应头。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../context/EmbeddedValueResolverAware.html#setEmbeddedValueResolver(org.springframework.util.StringValueResolver)\">EmbeddedValueResolverAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../context/EmbeddedValueResolverAware.html#setEmbeddedValueResolver(org.springframework.util.StringValueResolver)\">EmbeddedValueResolverAware</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return whether the <a href=\"../../../core/io/Resource.html#lastModified()\"><code>Resource.lastModified()</code></a> information is used\nto drive HTTP responses when serving static resources.",
+      "translation": "返回是否使用<a href=\"../../../core/io/Resource.html#lastModified()\"><code>Resource.lastModified()</code></a>信息来驱动静态资源的 HTTP 响应。",
+      "count": 2
+    },
+    {
+      "source": "Add mappings between file extensions, extracted from the filename of a\nstatic <a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>, and corresponding media type to set on the\nresponse.",
+      "translation": "在静态<a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>的filename中提取文件扩展名，并将其与要在响应上设置的相应媒体类型进行映射。",
+      "count": 2
+    },
+    {
+      "source": "Configure the <a href=\"../../../http/converter/ResourceHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceHttpMessageConverter</code></a> to use.",
+      "translation": "配置要使用的<a href=\"../../../http/converter/ResourceHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceHttpMessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Configure the <a href=\"../../../http/converter/ResourceRegionHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceRegionHttpMessageConverter</code></a> to use.",
+      "translation": "配置要使用的<a href=\"../../../http/converter/ResourceRegionHttpMessageConverter.html\" title=\"class in org.springframework.http.converter\"><code>ResourceRegionHttpMessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Configure the list of <a href=\"ResourceResolver.html\" title=\"interface in org.springframework.web.servlet.resource\"><code>ResourceResolvers</code></a> to use.",
+      "translation": "配置要使用的<a href=\"ResourceResolver.html\" title=\"interface in org.springframework.web.servlet.resource\"><code>ResourceResolvers</code></a>列表。",
+      "count": 2
+    },
+    {
+      "source": "Configure the list of <a href=\"ResourceTransformer.html\" title=\"interface in org.springframework.web.servlet.resource\"><code>ResourceTransformers</code></a> to use.",
+      "translation": "配置要使用的<a href=\"ResourceTransformer.html\" title=\"interface in org.springframework.web.servlet.resource\"><code>ResourceTransformers</code></a>列表。",
+      "count": 2
+    },
+    {
+      "source": "Return the specified CORS configuration.",
+      "translation": "返回指定的 CORS 配置。",
+      "count": 2
+    },
+    {
+      "source": "Return the HTTP ETag generator function to be used when serving resources.",
+      "translation": "返回用于提供资源时的 HTTP ETag 生成函数。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured resource converter.",
+      "translation": "返回配置的资源转换器。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured resource region converter.",
+      "translation": "返回配置的资源区域转换器。",
+      "count": 2
+    },
+    {
+      "source": "Return the list of configured resource resolvers.",
+      "translation": "返回已配置的资源解析器列表。",
+      "count": 2
+    },
+    {
+      "source": "Return the list of configured resource transformers.",
+      "translation": "返回已配置的资源转换器列表。",
+      "count": 2
+    },
+    {
+      "source": "Return whether to optimize the specified locations through an existence\ncheck on startup, filtering non-existing directories upfront so that\nthey do not have to be checked on every resource access.",
+      "translation": "返回是否通过启动时的存在性检查来优化指定位置，预先过滤不存在的目录，以便在每次资源访问时不必进行检查。",
+      "count": 2
+    },
+    {
+      "source": "Set the StringValueResolver to use for resolving embedded definition values.",
+      "translation": "设置用于解析嵌入定义值的 StringValueResolver。",
+      "count": 2
+    },
+    {
+      "source": "Configure locations to serve resources from as pre-resourced Resource's.",
+      "translation": "配置位置以作为预资源化的资源提供资源。",
+      "count": 2
+    },
+    {
+      "source": "Set headers on the given servlet response.\nCalled for GET requests as well as HEAD requests.",
+      "translation": "在指定的 Servlet 响应上设置请求头。此方法同时适用于 GET 请求和 HEAD 请求。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../context/EmbeddedValueResolverAware.html#setEmbeddedValueResolver(org.springframework.util.StringValueResolver)\">setEmbeddedValueResolver</a></code> in interface <code><a href=\"../../../context/EmbeddedValueResolverAware.html\" title=\"interface in org.springframework.context\">EmbeddedValueResolverAware</a></code>",
+      "translation": "`<a href=\"../../../context/EmbeddedValueResolverAware.html#setEmbeddedValueResolver(org.springframework.util.StringValueResolver)\">setEmbeddedValueResolver</a>` 接口 `<code><a href=\"../../../context/EmbeddedValueResolverAware.html\" title=\"interface in org.springframework.context\">EmbeddedValueResolverAware</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of errors while setting the headers",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - 在设置标头时发生错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code>response</code> - current servlet response",
+      "translation": "<code>response</code> - 当前 Servlet 响应",
+      "count": 2
+    },
+    {
+      "source": "<code>mediaType</code> - the resource's media type",
+      "translation": "<code>mediaType</code> - 资源的媒体类型",
+      "count": 2
+    },
+    {
+      "source": "Keith Donald, Jeremy Grelle, Juergen Hoeller, Arjen Poutsma, Brian Clozel, Rossen Stoyanchev",
+      "translation": "Keith Donald，Jeremy Grelle，Juergen Hoeller，Arjen Poutsma，Brian Clozel，Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "For example, {<code>\"/\"</code>, <code>\"classpath:/META-INF/public-web-resources/\"</code>}\nallows resources to be served both from the web application root and\nfrom any JAR on the classpath that contains a\n<code>/META-INF/public-web-resources/</code> directory, with resources in the\nweb application root taking precedence.",
+      "translation": "例如，{`\"/\"`, `\"classpath:/META-INF/public-web-resources/\"`} 允许资源既从 Web 应用程序根目录提供，也从包含 `<code>/META-INF/public-web-resources/</code>` 目录的类路径上的任何 JAR 中提供，其中 Web 应用程序根目录中的资源具有优先权。",
+      "count": 1
+    },
+    {
+      "source": "The default is <code>false</code>, for defensiveness against zip files\nwithout directory entries which are unable to expose the existence of\na directory upfront. Switch this flag to <code>true</code> for optimized\naccess in case of a consistent jar layout with directory entries.",
+      "translation": "默认值为 `<code>false</code>`，这是为了防御性地处理那些无法提前暴露目录存在的、缺少目录条目的 zip 文件。如果 jar 布局一致且包含目录条目，请将此标志切换为 `<code>true</code>` 以优化访问速度。",
+      "count": 1
+    },
+    {
+      "source": "By default, this method delegates to <a href=\"ResourceHandlerUtils.html#normalizeInputPath(java.lang.String)\"><code>ResourceHandlerUtils.normalizeInputPath(String)</code></a>.",
+      "translation": "默认情况下，此方法委托给<a href=\"ResourceHandlerUtils.html#normalizeInputPath(java.lang.String)\"><code>ResourceHandlerUtils.normalizeInputPath(String)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "By default no transformers are configured for use.",
+      "translation": "默认情况下，未配置任何用于使用的转换器。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "By default, this method does not perform any validations.",
+      "translation": "默认情况下，此方法不执行任何验证。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Invoked after <a href=\"ResourceHandlerUtils.html#isInvalidPath(java.lang.String)\"><code>ResourceHandlerUtils.isInvalidPath(String)</code></a>\nto allow subclasses to perform further validation.",
+      "translation": "在调用<a href=\"ResourceHandlerUtils.html#isInvalidPath(java.lang.String)\"><code>ResourceHandlerUtils.isInvalidPath(String)</code></a>之后被触发，以允许子类执行进一步的验证。",
+      "count": 1
+    },
+    {
+      "source": "Configure a generator function that will be used to create the ETag information,\ngiven a <a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a> that is about to be written to the response.",
+      "translation": "配置一个生成器函数，用于在即将向响应写入的<a href=\"../../../core/io/Resource.html\" title=\"interface in org.springframework.core.io\"><code>Resource</code></a>的基础上创建 ETag 信息。",
+      "count": 1
+    },
+    {
+      "source": "Provide a reference to the <a href=\"../../util/UrlPathHelper.html\" title=\"class in org.springframework.web.util\"><code>UrlPathHelper</code></a> used to map requests to\nstatic resources. This helps to derive information about the lookup path\nsuch as whether it is decoded or not.",
+      "translation": "提供对用于将请求映射到静态资源的<a href=\"../../util/UrlPathHelper.html\" title=\"class in org.springframework.web.util\"><code>UrlPathHelper</code></a>的引用。这有助于获取查找路径的相关信息，例如它是否已解码。",
+      "count": 1
+    },
+    {
+      "source": "The configured <a href=\"../../util/UrlPathHelper.html\" title=\"class in org.springframework.web.util\"><code>UrlPathHelper</code></a>.",
+      "translation": "配置的<a href=\"../../util/UrlPathHelper.html\" title=\"class in org.springframework.web.util\"><code>UrlPathHelper</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Determine the media type for the given request and the resource matched\nto it.",
+      "translation": "确定给定请求及其匹配资源的媒体类型。",
+      "count": 1
+    },
+    {
+      "source": "Processes a resource request.",
+      "translation": "处理资源请求。",
+      "count": 1
+    },
+    {
+      "source": "Process the given resource path.",
+      "translation": "处理给定的资源路径。",
+      "count": 1
+    },
+    {
+      "source": "Specify the CORS configuration for resources served by this handler.",
+      "translation": "为此处理程序提供的资源指定 CORS 配置。",
+      "count": 1
+    },
+    {
+      "source": "Set headers on the given servlet response.",
+      "translation": "在指定的 Servlet 响应上设置标头。",
+      "count": 1
+    },
+    {
+      "source": "Configure String-based locations to serve resources from.",
+      "translation": "配置基于字符串的位置以提供资源。",
+      "count": 1
+    },
+    {
+      "source": "Set whether to optimize the specified locations through an existence\ncheck on startup, filtering non-existing directories upfront so that\nthey do not have to be checked on every resource access.",
+      "translation": "设置是否在启动时通过存在性检查优化指定位置，预先过滤不存在的目录，以便在每次资源访问时无需进行检查。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../cors/CorsConfigurationSource.html#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\">getCorsConfiguration</a></code> in interface <code><a href=\"../../cors/CorsConfigurationSource.html\" title=\"interface in org.springframework.web.cors\">CorsConfigurationSource</a></code>",
+      "translation": "`<code><a href=\"../../cors/CorsConfigurationSource.html#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\">getCorsConfiguration</a></code>` 接口 `<code><a href=\"../../cors/CorsConfigurationSource.html\" title=\"interface in org.springframework.web.cors\">CorsConfigurationSource</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../HttpRequestHandler.html#handleRequest(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\">handleRequest</a></code> in interface <code><a href=\"../../HttpRequestHandler.html\" title=\"interface in org.springframework.web\">HttpRequestHandler</a></code>",
+      "translation": "`<code><a href=\"../../HttpRequestHandler.html#handleRequest(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\">handleRequest</a></code>` 接口 `<code><a href=\"../../HttpRequestHandler.html\" title=\"interface in org.springframework.web\">HttpRequestHandler</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code>` 在类 `<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "the associated <a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>, or <code>null</code> if none",
+      "translation": "关联的<a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>，或若无则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in the event of misconfiguration (such as failure to set an\nessential property) or if initialization fails for any other reason",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在配置错误（例如未设置必需属性）或因任何其他原因导致初始化失败的情况下",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code> - in case of I/O errors",
+      "translation": "`<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html\" title=\"class or interface in java.io\">IOException</a></code>` - 在发生 I/O 错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>resource</code> - the identified resource (never <code>null</code>)",
+      "translation": "<code>resource</code> - 已识别的资源（永远不会为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>mediaTypes</code> - media type mappings",
+      "translation": "<code>mediaTypes</code> - 媒体类型映射",
+      "count": 1
+    },
+    {
+      "source": "<code>etagGenerator</code> - the HTTP ETag generator function to use.",
+      "translation": "`etagGenerator` - 要使用的 HTTP ETag 生成函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - current HTTP response",
+      "translation": "<code>response</code> - 当前 HTTP 响应",
+      "count": 1
+    },
+    {
+      "source": "<code>jakarta.servlet.ServletException</code> - in case of general errors",
+      "translation": "<code>jakarta.servlet.ServletException</code> - 在出现一般错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 1
+    },
+    {
+      "source": "<code>resource</code> - the resource to check",
+      "translation": "<code>resource</code> - 要检查的资源",
+      "count": 1
+    },
+    {
+      "source": "the corresponding media type, or <code>null</code> if none found",
+      "translation": "对应的媒体类型，如果未找到则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "the HTTP ETag generator function",
+      "translation": "HTTP ETag 生成函数",
+      "count": 1
+    }
+  ]
+}

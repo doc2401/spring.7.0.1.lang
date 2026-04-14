@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-04-14 18:44:03",
+  "updated_at": "2026-04-14 18:44:03",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 60,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7142857142857142,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "You can also configure the ForwardedHeaderFilter with <a href=\"#setRemoveOnly(boolean)\"><code>removeOnly</code></a>,\nin which case it removes but does not use the headers.",
+      "translation": "您也可以使用<a href=\"#setRemoveOnly(boolean)\"><code>removeOnly</code></a>配置 ForwardedHeaderFilter，在这种情况下，它会移除但不使用这些标头。",
+      "count": 2
+    },
+    {
+      "source": "Note that although a filter can be mapped to handle specific dispatcher\ntypes via <code>web.xml</code> or in Java through the <code>ServletContext</code>,\nservlet containers may enforce different defaults with respect to\ndispatcher types. This flag enforces the design intent of the filter.",
+      "translation": "注意，尽管可以通过 `<code>web.xml` 将过滤器映射到处理特定分发器类型，或通过 Java 中的 <code>ServletContext</code> 进行配置，但 servlet 容器可能会针对分发器类型强制执行不同的默认设置。此标志强制实施过滤器的设计意图。",
+      "count": 2
+    },
+    {
+      "source": "By default, if this property is set to false, in which case calls to\n<code>HttpServletResponse.sendRedirect(String)</code> are overridden in order\nto turn relative into absolute URLs, also taking into account forwarded\nheaders.",
+      "translation": "默认情况下，如果将此属性设置为 false，则调用`HttpServletResponse.sendRedirect(String)` 将被覆盖，以将相对 URL 转换为绝对 URL，同时考虑转发头。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation always returns <code>false</code>.",
+      "translation": "默认实现始终返回<code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "Sub-classes may use this method to filter such nested ERROR dispatches\nand re-apply wrapping on the request or response. <code>ThreadLocal</code>\ncontext, if any, should still be active as we are still nested within\nthe filter chain.",
+      "translation": "子类可以使用此方法过滤此类嵌套的 ERROR 分发，并在请求或响应上重新应用包装。`ThreadLocal`上下文（如果有）仍然应该处于活动状态，因为我们仍处于过滤器链的嵌套中。",
+      "count": 2
+    },
+    {
+      "source": "There are security considerations for forwarded headers since an application\ncannot know if the headers were added by a proxy, as intended, or by a malicious\nclient. This is why a proxy at the boundary of trust should be configured to\nremove untrusted Forwarded headers that come from the outside.",
+      "translation": "由于应用程序无法确定这些标头是由代理按预期添加的，还是由恶意客户端添加的，因此对于转发标头存在安全注意事项。这就是为什么应在信任边界处的代理被配置为移除来自外部的不可信 Forwarded 标头的原因。",
+      "count": 2
+    },
+    {
+      "source": "The default return value is \"true\", which means the filter will not be\ninvoked during subsequent async dispatches. If \"false\", the filter will\nbe invoked during async dispatches with the same guarantees of being\ninvoked only once during a request within a single thread.",
+      "translation": "默认返回值为\"true\"，这意味着在随后的异步分发中不会调用该过滤器。如果为\"false\"，则会在异步分发中调用该过滤器，并保证在单个线程的请求中仅被调用一次。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#shouldNotFilter(jakarta.servlet.http.HttpServletRequest)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#shouldNotFilter(jakarta.servlet.http.HttpServletRequest)\">OncePerRequestFilter</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">OncePerRequestFilter</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">OncePerRequestFilter</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#doFilterNestedErrorDispatch(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#doFilterNestedErrorDispatch(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Use this property to enable relative redirects as explained in\n<a href=\"RelativeRedirectFilter.html\" title=\"class in org.springframework.web.filter\"><code>RelativeRedirectFilter</code></a>, and also using the same response wrapper\nas that filter does, or if both are configured, only one will wrap.",
+      "translation": "使用此属性启用相对重定向，具体说明请参考 <a href=\"RelativeRedirectFilter.html\" title=\"class in org.springframework.web.filter\"><code>RelativeRedirectFilter</code></a>，并且使用该过滤器使用的相同响应包装器；或者如果两者都配置了，则只有一个会进行包装。",
+      "count": 2
+    },
+    {
+      "source": "Whether to filter error dispatches such as when the servlet container\nprocesses and error mapped in <code>web.xml</code>. The default return value\nis \"true\", which means the filter will not be invoked in case of an error\ndispatch.",
+      "translation": "是否过滤错误分发（例如当 Servlet 容器处理 `<web.xml>` 中映射的错误时）。默认返回值为\"true\"，这意味着在错误分发的情况下不会调用该过滤器。",
+      "count": 2
+    },
+    {
+      "source": "Format the request for logging purposes including HTTP method and URL.",
+      "translation": "用于日志记录目的的请求格式应包含 HTTP 方法和 URL。",
+      "count": 2
+    },
+    {
+      "source": "Enables mode in which any \"Forwarded\" or \"X-Forwarded-*\" headers are\nremoved only and the information in them ignored.",
+      "translation": "启用仅移除任何“Forwarded”或\"X-Forwarded-*\"标头并忽略其内容的模式。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7239\">https://tools.ietf.org/html/rfc7239</a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/web/webmvc/filters.html#filters-forwarded-headers\">Forwarded Headers</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://tools.ietf.org/html/rfc7239\">https://tools.ietf.org/html/rfc7239</a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/web/webmvc/filters.html#filters-forwarded-headers\">Forwarded Headers</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilter(jakarta.servlet.http.HttpServletRequest)\">shouldNotFilter</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"OncePerRequestFilter.html#shouldNotFilter(jakarta.servlet.http.HttpServletRequest)\">shouldNotFilter</a></code>` 在类 `<code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">shouldNotFilterErrorDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`OncePerRequestFilter` 类中的 `<a href=\"OncePerRequestFilter.html#shouldNotFilterErrorDispatch()\">shouldNotFilterErrorDispatch</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#doFilterNestedErrorDispatch(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterNestedErrorDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`OncePerRequestFilter` 类中的 `<a href=\"OncePerRequestFilter.html#doFilterNestedErrorDispatch(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterNestedErrorDispatch</a>`",
+      "count": 2
+    },
+    {
+      "source": "<code>removeOnly</code> - whether to discard and ignore forwarded headers",
+      "translation": "<code>removeOnly</code> - 是否丢弃并忽略转发标头",
+      "count": 2
+    },
+    {
+      "source": "<code>relativeRedirects</code> - whether to use relative redirects",
+      "translation": "<code>relativeRedirects</code> - 是否使用相对重定向",
+      "count": 2
+    },
+    {
+      "source": "whether the given request should <i>not</i> be filtered",
+      "translation": "是否不应过滤给定的请求",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the request to format",
+      "translation": "<code>request</code> - 要格式化的请求",
+      "count": 2
+    },
+    {
+      "source": "the String to display, never empty or <code>null</code>",
+      "translation": "要显示的 String，绝不能为空或<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev, Eddú Meléndez, Rob Winch, Brian Clozel, Mengqi Xu",
+      "translation": "Rossen Stoyanchev，Eddú Meléndez，Rob Winch，Brian Clozel，Mengqi Xu",
+      "count": 2
+    },
+    {
+      "source": "Provides HttpServletRequest and HttpServletResponse arguments instead of the\ndefault ServletRequest and ServletResponse ones.",
+      "translation": "提供 HttpServletRequest 和 HttpServletResponse 参数，而不是默认的 ServletRequest 和 ServletResponse。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">OncePerRequestFilter</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Same contract as for <code>doFilter</code>, but guaranteed to be\njust invoked once per request within a single request thread.",
+      "translation": "与<code>doFilter</code>相同的合同，但保证在单个请求线程中每个请求仅被调用一次。",
+      "count": 1
+    },
+    {
+      "source": "Can be overridden in subclasses for custom filtering control,\nreturning <code>true</code> to avoid filtering of the given request.",
+      "translation": "可在子类中重写以进行自定义过滤控制，返回 `<code>true</code>` 以避免过滤给定的请求。",
+      "count": 1
+    },
+    {
+      "source": "The dispatcher type <code>jakarta.servlet.DispatcherType.ASYNC</code> means a\nfilter can be invoked in more than one thread over the course of a single\nrequest.",
+      "translation": "<code>jakarta.servlet.DispatcherType.ASYNC</code> 类型的分发器意味着在单个请求期间，过滤器可以在多个线程中被调用。",
+      "count": 1
+    },
+    {
+      "source": "Whether to filter error dispatches such as when the servlet container\nprocesses and error mapped in <code>web.xml</code>.",
+      "translation": "是否过滤错误分发，例如当 Servlet 容器处理 `<web.xml>` 中映射的错误时。",
+      "count": 1
+    },
+    {
+      "source": "Typically an ERROR dispatch happens after the REQUEST dispatch completes,\nand the filter chain starts anew.",
+      "translation": "通常，ERROR 分发会在 REQUEST 分发完成后发生，并且过滤器链会重新开始。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`<code><a href=\"OncePerRequestFilter.html#shouldNotFilterAsyncDispatch()\">shouldNotFilterAsyncDispatch</a></code>` 在类 `<code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"OncePerRequestFilter.html#doFilterInternal(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.FilterChain)\">doFilterInternal</a></code> in class <code><a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a></code>",
+      "translation": "`doFilterInternal` 在类 `<a href=\"OncePerRequestFilter.html\" title=\"class in org.springframework.web.filter\">OncePerRequestFilter</a>` 中。",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 1
+    }
+  ]
+}

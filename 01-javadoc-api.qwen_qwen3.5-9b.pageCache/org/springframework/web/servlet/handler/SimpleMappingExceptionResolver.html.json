@@ -1,0 +1,276 @@
+{
+  "created_at": "2026-04-14 19:51:47",
+  "updated_at": "2026-04-14 19:51:47",
+  "stats": {
+    "total_entries": 52,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 97,
+    "entries_with_hits": 52,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8653846153846154,
+    "usage_percentage": 0.0052
+  },
+  "items": [
+    {
+      "source": "<code>ex</code> - the exception that got thrown during handler execution",
+      "translation": "<code>ex</code> - 在处理器执行期间抛出的异常",
+      "count": 5
+    },
+    {
+      "source": "<code>viewName</code> - the name of the error view",
+      "translation": "<code>viewName</code> - 错误视图的名称",
+      "count": 4
+    },
+    {
+      "source": "Note that this error code will only get applied in case of a top-level request.\nIt will not be set for an include request, since the HTTP status cannot be modified\nfrom within an include.",
+      "translation": "注意，此错误代码仅在顶级请求中应用。由于无法从包含请求内部修改 HTTP 状态，因此不会为包含请求设置该代码。",
+      "count": 3
+    },
+    {
+      "source": "Determine the view name for the given exception, first checking against the\n<a href=\"#setExcludedExceptions(java.lang.Class...)\"><code>\"excludedExecptions\"</code></a>, then searching the\n<a href=\"#setExceptionMappings(java.util.Properties)\"><code>\"exceptionMappings\"</code></a>, and finally using the\n<a href=\"#setDefaultErrorView(java.lang.String)\"><code>\"defaultErrorView\"</code></a> as a fallback.",
+      "translation": "确定给定异常对应的视图名称，首先检查 `<a href=\"#setExcludedExceptions(java.lang.Class...)\"><code>\"excludedExecptions\"</code></a>`，然后搜索 `<a href=\"#setExceptionMappings(java.util.Properties)\"><code>\"exceptionMappings\"</code></a>`，最后使用 `<a href=\"#setDefaultErrorView(java.lang.String)\"><code>\"defaultErrorView\"</code></a>` 作为后备。",
+      "count": 3
+    },
+    {
+      "source": "An alternative to <a href=\"#setStatusCodes(java.util.Properties)\"><code>setStatusCodes(Properties)</code></a> for use with\nJava-based configuration.",
+      "translation": "用于基于 Java 配置的 `<a href=\"#setStatusCodes(java.util.Properties)\"><code>setStatusCodes(Properties)</code></a>` 的替代方案。",
+      "count": 3
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 3
+    },
+    {
+      "source": "the ModelAndView instance",
+      "translation": "`ModelAndView` 实例",
+      "count": 3
+    },
+    {
+      "source": "The default implementation returns the status code for the given view name (specified through the\n<a href=\"#setStatusCodes(java.util.Properties)\"><code>statusCodes</code></a> property), or falls back to the\n<a href=\"#setDefaultStatusCode(int)\"><code>defaultStatusCode</code></a> if there is no match.",
+      "translation": "默认实现返回给定视图名称（通过 <a href=\"#setStatusCodes(java.util.Properties)\"><code>statusCodes</code></a> 属性指定）的状态码，如果没有匹配项，则回退到 <a href=\"#setDefaultStatusCode(int)\"><code>defaultStatusCode</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"#getModelAndView(java.lang.String,java.lang.Exception)\"><code>getModelAndView(String, Exception)</code></a>.",
+      "translation": "默认实现委托给<a href=\"#getModelAndView(java.lang.String,java.lang.Exception)\"><code>getModelAndView(String, Exception)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The exception class name can be a substring, with no wildcard support\nat present. For example, a value of \"ServletException\" would match\n<code>jakarta.servlet.ServletException</code> and subclasses.",
+      "translation": "异常类名目前可以是子字符串，不支持通配符。例如，值为 \"ServletException\" 将匹配 <code>jakarta.servlet.ServletException</code> 及其子类。",
+      "count": 2
+    },
+    {
+      "source": "<b>NB:</b> Consider carefully how specific the pattern is and whether\nto include package information (which isn't mandatory). For example,\n\"Exception\" will match nearly anything and will probably hide other rules.\n\"java.lang.Exception\" would be correct if \"Exception\" was meant to define\na rule for all checked exceptions. With more unique exception names such\nas \"BaseBusinessException\" there's no need to use a fully-qualified class name.",
+      "translation": "<b>注意：</b>请仔细考虑模式的特异性，以及是否包含包信息（这不是强制性的）。例如，\"Exception\" 几乎会匹配任何内容，可能会掩盖其他规则。如果 \"Exception\" 旨在为所有受检异常定义规则，那么使用 \"java.lang.Exception\" 才是正确的。对于像 \"BaseBusinessException\" 这样更具体的异常名称，则无需使用完全限定类名。",
+      "count": 2
+    },
+    {
+      "source": "This can be either set to a different attribute name or to <code>null</code>\nfor not exposing an exception attribute at all.",
+      "translation": "这可以设置为不同的属性名，或设置为 `<code>null</code>` 以完全不暴露异常属性。",
+      "count": 2
+    },
+    {
+      "source": "Error views are analogous to error page JSPs, but can be used with any kind of\nexception including any checked one, with fine-granular mappings for specific handlers.",
+      "translation": "错误视图类似于错误页面 JSP，但可与任何类型的异常（包括受检异常）一起使用，并支持针对特定处理程序进行细粒度映射。",
+      "count": 2
+    },
+    {
+      "source": "If not specified, the default status code will be applied.",
+      "translation": "如果未指定，将应用默认状态码。",
+      "count": 2
+    },
+    {
+      "source": "If not specified, no status code will be applied, either leaving this to the\ncontroller or view, or keeping the servlet engine's default of 200 (OK).",
+      "translation": "如果未指定，则不会应用任何状态码，要么将其留给控制器或视图处理，要么保留 Servlet 引擎的默认值 200（OK）。",
+      "count": 2
+    },
+    {
+      "source": "0 means ex matches exactly. Returns -1 if there's no match.\nOtherwise, returns depth. Lowest depth wins.",
+      "translation": "0 表示精确匹配。如果没有匹配项，则返回 -1。否则，返回深度。深度越低越优先。",
+      "count": 2
+    },
+    {
+      "source": "Override this in a custom subclass to customize this behavior.",
+      "translation": "在自定义子类中覆盖此方法以定制此行为。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation adds the specified exception attribute.\nCan be overridden in subclasses.",
+      "translation": "默认实现会添加指定的异常属性。可在子类中重写。",
+      "count": 2
+    },
+    {
+      "source": "Returns the HTTP status codes provided via <a href=\"#setStatusCodes(java.util.Properties)\"><code>setStatusCodes(Properties)</code></a>.",
+      "translation": "返回通过<a href=\"#setStatusCodes(java.util.Properties)\"><code>setStatusCodes(Properties)</code></a>提供的 HTTP 状态码。",
+      "count": 2
+    },
+    {
+      "source": "Returns the HTTP status codes provided via <a href=\"#setStatusCodes(java.util.Properties)\"><code>setStatusCodes(Properties)</code></a>.\nKeys are view names; values are status codes.",
+      "translation": "返回通过<a href=\"#setStatusCodes(java.util.Properties)\"><code>setStatusCodes(Properties)</code></a>提供的 HTTP 状态码。键为视图名称；值为状态码。",
+      "count": 2
+    },
+    {
+      "source": "The default name of the exception attribute: \"exception\".",
+      "translation": "异常属性的默认名称：\"exception\"。",
+      "count": 2
+    },
+    {
+      "source": "Apply the specified HTTP status code to the given response, if possible (that is,\nif not executing within an include request).",
+      "translation": "如果可能（即不在包含请求中执行），将指定的 HTTP 状态码应用于给定的响应。",
+      "count": 2
+    },
+    {
+      "source": "Find a matching view name in the given exception mappings.",
+      "translation": "在给定的异常映射中找到匹配的视图名称。",
+      "count": 2
+    },
+    {
+      "source": "Set one or more exceptions to be excluded from the exception mappings.\nExcluded exceptions are checked first and if one of them equals the actual\nexception, the exception will remain unresolved.",
+      "translation": "设置一个或多个要从异常映射中排除的异常。\n首先检查被排除的异常，如果其中有一个与实际的异常相等，则该异常将保持未解析状态。",
+      "count": 2
+    },
+    {
+      "source": "<code>defaultStatusCode</code> - the HTTP status code value, for example 500\n(<code>HttpServletResponse.SC_INTERNAL_SERVER_ERROR</code>) or 404 (<code>HttpServletResponse.SC_NOT_FOUND</code>)",
+      "translation": "`defaultStatusCode` - HTTP 状态码值，例如 500（`HttpServletResponse.SC_INTERNAL_SERVER_ERROR`）或 404（`HttpServletResponse.SC_NOT_FOUND`）。",
+      "count": 2
+    },
+    {
+      "source": "<code>mappings</code> - exception patterns (can also be fully-qualified class names)\nas keys, and error view names as values",
+      "translation": "<code>mappings</code> - 异常模式（也可以是完全限定类名）作为键，错误视图名称作为值",
+      "count": 2
+    },
+    {
+      "source": "<code>excludedExceptions</code> - one or more excluded exception types",
+      "translation": "<code>excludedExceptions</code> - 一个或多个被排除的异常类型",
+      "count": 2
+    },
+    {
+      "source": "<code>response</code> - current HTTP response",
+      "translation": "<code>response</code> - 当前 HTTP 响应",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - current HTTP request (useful for obtaining metadata)",
+      "translation": "<code>request</code> - 当前 HTTP 请求（可用于获取元数据）",
+      "count": 2
+    },
+    {
+      "source": "the resolved view name, or <code>null</code> if excluded or none found",
+      "translation": "解析后的视图名称，或者如果已排除或未找到则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>exceptionMappings</code> - mappings between exception class names and error view names",
+      "translation": "<code>exceptionMappings</code> - 异常类名与错误视图名称之间的映射关系",
+      "count": 2
+    },
+    {
+      "source": "the view name, or <code>null</code> if none found",
+      "translation": "视图名称，或者如果未找到则为<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "the HTTP status code to use, or <code>null</code> for the servlet container's default\n(200 in case of a standard error view)",
+      "translation": "要使用的 HTTP 状态码，或为 Servlet 容器的默认值（对于标准错误视图为 200）的`<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>statusCode</code> - the status code to apply",
+      "translation": "<code>statusCode</code> - 要应用的状态码",
+      "count": 2
+    },
+    {
+      "source": "Juergen Hoeller, Arjen Poutsma, Rossen Stoyanchev",
+      "translation": "Juergen Hoeller, Arjen Poutsma, Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "May be overridden in subclasses, in order to apply specific exception checks.\nNote that this template method will be invoked <i>after</i> checking whether this\nresolved applies (\"mappedHandlers\" etc), so an implementation may simply proceed\nwith its actual exception handling.",
+      "translation": "可在子类中重写，以应用特定的异常检查。请注意，此模板方法将在检查此解析是否适用（如 \"mappedHandlers\" 等）之后被调用，因此实现可以直接进行实际的异常处理。",
+      "count": 1
+    },
+    {
+      "source": "Default is none.",
+      "translation": "默认值为无。",
+      "count": 1
+    },
+    {
+      "source": "Determine the HTTP status code to apply for the given error view.",
+      "translation": "确定给定错误视图应使用的 HTTP 状态码。",
+      "count": 1
+    },
+    {
+      "source": "Actually resolve the given exception that got thrown during on handler execution,\nreturning a ModelAndView that represents a specific error page if appropriate.",
+      "translation": "实际上解决在处理器执行期间抛出的给定异常，如果适当的话，返回一个代表特定错误页面的 ModelAndView。",
+      "count": 1
+    },
+    {
+      "source": "Return the depth to the superclass matching.",
+      "translation": "返回与父类匹配的深度。",
+      "count": 1
+    },
+    {
+      "source": "Return a ModelAndView for the given view name and exception.",
+      "translation": "返回给定视图名称和异常的 ModelAndView。",
+      "count": 1
+    },
+    {
+      "source": "Return a ModelAndView for the given request, view name and exception.",
+      "translation": "为给定的请求、视图名称和异常返回一个 ModelAndView。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the default error view.",
+      "translation": "设置默认错误视图的名称。",
+      "count": 1
+    },
+    {
+      "source": "Set the default HTTP status code that this exception resolver will apply\nif it resolves an error view and if there is no status code mapping defined.",
+      "translation": "设置此异常解析器在解析错误视图且未定义状态码映射时要应用的默认 HTTP 状态码。",
+      "count": 1
+    },
+    {
+      "source": "Set the name of the model attribute as which the exception should be exposed.",
+      "translation": "将模型属性的名称设置为应暴露异常的属性。",
+      "count": 1
+    },
+    {
+      "source": "Set the mappings between exception class names and error view names.",
+      "translation": "设置异常类名与错误视图名之间的映射关系。",
+      "count": 1
+    },
+    {
+      "source": "Set one or more exceptions to be excluded from the exception mappings.",
+      "translation": "设置一个或多个要从异常映射中排除的异常。",
+      "count": 1
+    },
+    {
+      "source": "Set the HTTP status code that this exception resolver will apply for a given\nresolved error view.",
+      "translation": "设置此异常解析器针对给定解析错误视图将应用的 HTTP 状态码。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractHandlerExceptionResolver.html#doResolveException(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.Object,java.lang.Exception)\">doResolveException</a></code> in class <code><a href=\"AbstractHandlerExceptionResolver.html\" title=\"class in org.springframework.web.servlet.handler\">AbstractHandlerExceptionResolver</a></code>",
+      "translation": "`<code><a href=\"AbstractHandlerExceptionResolver.html#doResolveException(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.Object,java.lang.Exception)\">doResolveException</a></code>` 在类 `<code><a href=\"AbstractHandlerExceptionResolver.html\" title=\"class in org.springframework.web.servlet.handler\">AbstractHandlerExceptionResolver</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>handler</code> - the executed handler, or <code>null</code> if none chosen at the time\nof the exception (for example, if multipart resolution failed)",
+      "translation": "<code>handler</code> - 已执行的处理器，或者如果在异常发生当时未选择任何处理器（例如，多部分解析失败）则为 <code>null</code>",
+      "count": 1
+    },
+    {
+      "source": "a corresponding <code>ModelAndView</code> to forward to,\nor <code>null</code> for default processing in the resolution chain",
+      "translation": "一个用于转发的对应 `<code>ModelAndView</code>`，或为解析链中的默认处理而设置的 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

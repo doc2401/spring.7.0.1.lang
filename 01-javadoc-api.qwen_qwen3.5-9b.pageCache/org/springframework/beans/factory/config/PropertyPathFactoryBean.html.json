@@ -1,0 +1,226 @@
+{
+  "created_at": "2026-04-14 11:20:04",
+  "updated_at": "2026-04-14 11:20:04",
+  "stats": {
+    "total_entries": 42,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 56,
+    "entries_with_hits": 42,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3333333333333333,
+    "usage_percentage": 0.0042
+  },
+  "items": [
+    {
+      "source": "While this FactoryBean will often be used for singleton targets,\nthe invoked getters for the property path might return a new object\nfor each call, so we have to assume that we're not returning the\nsame object for each <a href=\"#getObject()\"><code>getObject()</code></a> call.",
+      "translation": "虽然此 FactoryBean 通常用于单例目标，但针对属性路径调用的 getter 可能会为每次调用返回一个新对象，因此我们必须假设我们不会为每个 `<a href=\"#getObject()\"><code>getObject()</code></a>` 调用返回同一个对象。",
+      "count": 3
+    },
+    {
+      "source": "The target object can be specified directly or via a bean name.",
+      "translation": "目标对象可以直接指定或通过 Bean 名称指定。",
+      "count": 2
+    },
+    {
+      "source": "Usage examples:",
+      "translation": "使用示例：",
+      "count": 2
+    },
+    {
+      "source": "If you are using Spring 2.0 and XML Schema support in your configuration file(s),\nyou can also use the following style of configuration for property path access.\n(See also the appendix entitled 'XML Schema-based configuration' in the Spring\nreference manual for more examples.)",
+      "translation": "如果您在配置文件中使用了 Spring 2.0 和 XML Schema 支持，也可以使用以下风格的配置来访问属性路径。（另请参阅 Spring 参考手册中题为“基于 XML Schema 的配置”的附录以获取更多示例。）",
+      "count": 2
+    },
+    {
+      "source": "Note: This is not necessary for directly specified target objects\nor singleton target beans, where the type can be determined through\nintrospection. Just specify this in case of a prototype target,\nprovided that you need matching by type (for example, for autowiring).",
+      "translation": "注意：对于直接指定的目标对象或单例目标 Bean，由于可以通过内省确定其类型，因此不需要这样做。仅在原型目标的情况下指定此项（例如用于自动装配），前提是您需要按类型进行匹配。",
+      "count": 2
+    },
+    {
+      "source": "Specify the property path to apply to the target.",
+      "translation": "指定要应用于目标的属性路径。",
+      "count": 2
+    },
+    {
+      "source": "Specify a target object to apply the property path to.\nAlternatively, specify a target bean name.",
+      "translation": "指定要应用属性路径的目标对象。或者，指定目标 Bean 名称。",
+      "count": 2
+    },
+    {
+      "source": "Specify the name of a target bean to apply the property path to.\nAlternatively, specify a target object directly.",
+      "translation": "指定要应用属性路径的目标 Bean 名称。或者，直接指定目标对象。",
+      "count": 2
+    },
+    {
+      "source": "The bean name of this PropertyPathFactoryBean will be interpreted\nas \"beanName.property\" pattern, if neither \"targetObject\" nor\n\"targetBeanName\" nor \"propertyPath\" have been specified.\nThis allows for concise bean definitions with just an id/name.",
+      "translation": "如果未指定\"targetObject\"、\"targetBeanName\"或\"propertyPath\"，此 PropertyPathFactoryBean 的 Bean 名称将被解释为\"beanName.property\"模式。这允许仅使用 id/名称即可定义简洁的 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "<code>targetObject</code> - a target object, for example a bean reference\nor an inner bean",
+      "translation": "<code>targetObject</code> - 目标对象，例如 Bean 引用或内部 Bean",
+      "count": 2
+    },
+    {
+      "source": "<code>targetBeanName</code> - the bean name to be looked up in the\ncontaining bean factory (for example, \"testBean\")",
+      "translation": "<code>targetBeanName</code> - 要在包含的 Bean 工厂中查找的 Bean 名称（例如，\"testBean\"）",
+      "count": 2
+    },
+    {
+      "source": "<code>propertyPath</code> - the property path, potentially nested\n(for example, \"age\" or \"spouse.age\")",
+      "translation": "<code>propertyPath</code> - 属性路径，可能为嵌套路径（例如，\"age\"或\"spouse.age\"）",
+      "count": 2
+    },
+    {
+      "source": "<code>resultType</code> - the result type, for example \"java.lang.Integer\"",
+      "translation": "<code>resultType</code> - 结果类型，例如 \"java.lang.Integer\"",
+      "count": 2
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after the population of normal bean properties\nbut before an initialization callback such as\n<a href=\"../InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a> or a custom init-method.",
+      "translation": "在普通 Bean 属性填充之后，但在初始化回调（例如 <a href=\"../InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。",
+      "count": 1
+    },
+    {
+      "source": "As with a <a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"../BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，它支持单例和原型这两种设计模式。",
+      "count": 1
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"../FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的<a href=\"../FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">BeanFactoryAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "Callback that supplies the owning factory to a bean instance.",
+      "translation": "向 Bean 实例提供其所属工厂的回调。",
+      "count": 1
+    },
+    {
+      "source": "The bean name of this PropertyPathFactoryBean will be interpreted\nas \"beanName.property\" pattern, if neither \"targetObject\" nor\n\"targetBeanName\" nor \"propertyPath\" have been specified.",
+      "translation": "如果未指定“targetObject”、“targetBeanName”或“propertyPath”，则该 PropertyPathFactoryBean 的 bean 名称将被解释为“beanName.property”模式。",
+      "count": 1
+    },
+    {
+      "source": "Specify the type of the result from evaluating the property path.",
+      "translation": "指定评估属性路径后结果结果的类型。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of a target bean to apply the property path to.",
+      "translation": "指定要应用属性路径的目标 Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Specify a target object to apply the property path to.",
+      "translation": "指定目标对象以应用属性路径。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<code><a href=\"../FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "<code><a href=\"../FactoryBean.html#isSingleton()\">isSingleton</a></code> 接口 <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../BeanNameAware.html#setBeanName(java.lang.String)\">setBeanName</a></code> in interface <code><a href=\"../BeanNameAware.html\" title=\"interface in org.springframework.beans.factory\">BeanNameAware</a></code>",
+      "translation": "`<code><a href=\"../BeanNameAware.html#setBeanName(java.lang.String)\">setBeanName</a></code>` 接口 `<code><a href=\"../BeanNameAware.html\" title=\"interface in org.springframework.beans.factory\">BeanNameAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code> in interface <code><a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "`<code><a href=\"../BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\">setBeanFactory</a></code>` 接口 `<code><a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - the name of the bean in the factory.\nNote that this name is the actual bean name used in the factory, which may\ndiffer from the originally specified name: in particular for inner bean\nnames, the actual bean name might have been made unique through appending\n\"#...\" suffixes. Use the <a href=\"../BeanFactoryUtils.html#originalBeanName(java.lang.String)\"><code>BeanFactoryUtils.originalBeanName(String)</code></a>\nmethod to extract the original bean name (without suffix), if desired.",
+      "translation": "<code>beanName</code> - 工厂中 Bean 的名称。请注意，此名称是工厂中实际使用的 Bean 名称，可能与最初指定的名称不同：特别是对于内部 Bean 名称，实际 Bean 名称可能已通过追加\"#...\"后缀使其唯一化。如需提取原始 Bean 名称（不带后缀），请使用<a href=\"../BeanFactoryUtils.html#originalBeanName(java.lang.String)\"><code>BeanFactoryUtils.originalBeanName(String)</code></a>方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>beanFactory</code> - owning BeanFactory (never <code>null</code>).\nThe bean can immediately call methods on the factory.",
+      "translation": "<code>beanFactory</code> - 拥有该 Bean 的 BeanFactory（永远不会为 <code>null</code>）。\n该 Bean 可以立即调用工厂上的方法。",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    }
+  ]
+}

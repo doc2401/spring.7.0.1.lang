@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-04-14 19:51:06",
+  "updated_at": "2026-04-14 19:51:06",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 95,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 2.021276595744681,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "<span class=\"deprecated-label\">Deprecated, for removal: This API element is subject to removal in a future version.</span>",
+      "translation": "<span class=\"deprecated-label\">已弃用，即将移除：此 API 元素将在未来版本中移除。</span>",
+      "count": 14
+    },
+    {
+      "source": "Return <code>true</code> if all <a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a> beans\n<a href=\"../HandlerMapping.html#usesPathPatterns()\"><code>use parsed PathPatterns</code></a>,\nand <code>false</code> if any don't.",
+      "translation": "如果所有 `<a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a>` bean 都<a href=\"../HandlerMapping.html#usesPathPatterns()\"><code>使用解析后的 PathPatterns</code></a>，则返回 `<code>true</code>`；否则返回 `<code>false</code>`。",
+      "count": 3
+    },
+    {
+      "source": "Find the <a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a> that would handle the given request and\nreturn a <a href=\"MatchableHandlerMapping.html\" title=\"interface in org.springframework.web.servlet.handler\"><code>MatchableHandlerMapping</code></a> to use for path matching.",
+      "translation": "查找将处理给定请求的<a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a>，并返回一个用于路径匹配的<a href=\"MatchableHandlerMapping.html\" title=\"interface in org.springframework.web.servlet.handler\"><code>MatchableHandlerMapping</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Find the matching <a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a> for the request, and invoke the\nhandler it returns as a <a href=\"../../cors/PreFlightRequestHandler.html\" title=\"interface in org.springframework.web.cors\"><code>PreFlightRequestHandler</code></a>.",
+      "translation": "查找匹配的 <a href=\"../HandlerMapping.html\" title=\"interface in org.springframework.web.servlet\"><code>HandlerMapping</code></a> 以处理请求，并调用其返回的作为 <a href=\"../../cors/PreFlightRequestHandler.html\" title=\"interface in org.springframework.web.cors\"><code>PreFlightRequestHandler</code></a> 的处理程序。",
+      "count": 3
+    },
+    {
+      "source": "Use of this component incurs the performance overhead of mapping the\nrequest, and should not be repeated multiple times per request.\n<a href=\"#createCacheFilter()\"><code>createCacheFilter()</code></a> exposes a Filter to cache the results.\nApplications that rely on Spring Security don't need to deploy this Filter\nsince Spring Security doe that. However, other custom security layers, used\nin place of Spring Security that use this component should deploy the cache\nFilter with requirements described in the Javadoc for the method.",
+      "translation": "使用此组件会产生映射请求的性能开销，因此不应在每次请求中重复多次调用。<a href=\"#createCacheFilter()\"><code>createCacheFilter()</code></a> 提供了一个用于缓存结果的 Filter。依赖 Spring Security 的应用程序无需部署此 Filter，因为 Spring Security 已自行完成该工作。然而，其他用作 Spring Security 替代方案的自定义安全层若使用此组件，则应按照该方法 Javadoc 中所述的要求部署缓存 Filter。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong> Applications that rely on Spring Security do\nnot use this component directly and should not deploy the filter instead\nallowing Spring Security to do it. Other custom security layers used in\nplace of Spring Security that also rely on <code>HandlerMappingIntrospector</code>\nshould deploy this filter ahead of other filters where lookups are\nperformed, and should also make sure the filter is configured to handle\nall dispatcher types.",
+      "translation": "<strong>注意：</strong> 依赖 Spring Security 的应用程序不应直接使用此组件，也不应部署该过滤器，而应让 Spring Security 自行处理。其他用于替代 Spring Security 且同样依赖 <code>HandlerMappingIntrospector</code> 的自定义安全层，应在执行查找的其他过滤器之前部署此过滤器，并确保该过滤器已配置为处理所有调度器类型。",
+      "count": 2
+    },
+    {
+      "source": "Provides the following methods:",
+      "translation": "提供以下方法：",
+      "count": 2
+    },
+    {
+      "source": "Note that this is primarily an SPI to allow Spring Security\nto align its pattern matching with the same pattern matching that would be\nused in Spring MVC for a given request, in order to avoid security issues.",
+      "translation": "请注意，这主要是一个 SPI，以便 Spring Security 能够将其模式匹配与在给定请求中用于 Spring MVC 的模式匹配保持一致，以避免安全问题。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is set to 2048.",
+      "translation": "默认情况下，该值设置为 2048。",
+      "count": 2
+    },
+    {
+      "source": "Perform a lookup and save the <a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a> as a request attribute.\nThis method can be invoked from a filter before subsequent calls to\n<a href=\"#getMatchableHandlerMapping(jakarta.servlet.http.HttpServletRequest)\"><code>getMatchableHandlerMapping(HttpServletRequest)</code></a> and\n<a href=\"#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\"><code>getCorsConfiguration(HttpServletRequest)</code></a> to avoid repeated lookups.",
+      "translation": "将 `<a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>` 作为请求属性保存。此方法可在过滤器中调用，在随后调用<a href=\"#getMatchableHandlerMapping(jakarta.servlet.http.HttpServletRequest)\"><code>getMatchableHandlerMapping(HttpServletRequest)</code></a>和<a href=\"#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\"><code>getCorsConfiguration(HttpServletRequest)</code></a>之前执行，以避免重复查找。",
+      "count": 2
+    },
+    {
+      "source": "in favor of using just <a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a>; when\n<a href=\"#allHandlerMappingsUsePathPatternParser()\"><code>allHandlerMappingsUsePathPatternParser()</code></a> returns true, it is sufficient\nto use that to align with handler mappings.",
+      "translation": "倾向于仅使用 <a href=\"../../util/pattern/PathPatternParser.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPatternParser</code></a>；当<a href=\"#allHandlerMappingsUsePathPatternParser()\"><code>allHandlerMappingsUsePathPatternParser()</code></a>返回 true 时，使用该值即可与处理器映射保持一致。",
+      "count": 2
+    },
+    {
+      "source": "<code>Filter</code> that looks up the <code>MatchableHandlerMapping</code> and\n<a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a> for the request proactively before delegating\nto the rest of the chain, caching the result in a request attribute, and\nrestoring it after the chain returns.",
+      "translation": "用于在委托给链的其余部分之前，主动查找请求的 <code>MatchableHandlerMapping</code> 和 <a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a> 的 <code>Filter</code>，并将结果缓存在请求属性中，在链返回后恢复它。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../cors/CorsConfigurationSource.html#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\">CorsConfigurationSource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../cors/CorsConfigurationSource.html#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\">CorsConfigurationSource</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Return a <a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a> based on the incoming request.",
+      "translation": "返回一个基于传入请求的<a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Restore a previous <a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>.",
+      "translation": "还原之前的<a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Perform a lookup and save the <a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a> as a request attribute.",
+      "translation": "将其作为请求属性保存并查找 `<a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Set a limit on the maximum number of security patterns passed into\n<a href=\"MatchableHandlerMapping.html#match(jakarta.servlet.http.HttpServletRequest,java.lang.String)\"><code>MatchableHandlerMapping.match(HttpServletRequest, String)</code></a> at runtime to cache.",
+      "translation": "在运行时设置限制，以缓存传入到 <a href=\"MatchableHandlerMapping.html#match(jakarta.servlet.http.HttpServletRequest,java.lang.String)\"><code>MatchableHandlerMapping.match(HttpServletRequest, String)</code></a> 的安全模式的最大数量。",
+      "count": 2
+    },
+    {
+      "source": "Restore a previous <a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>. This method can be invoked from\na filter after delegating to the rest of the chain.",
+      "translation": "还原之前的<a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>。此方法可以在委托给其余链之后从过滤器中调用。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured or detected <code>HandlerMapping</code>s.",
+      "translation": "返回已配置或检测到的<code>HandlerMapping</code>。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured limit on security patterns to cache.",
+      "translation": "返回用于缓存安全模式的配置限制。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../cors/PreFlightRequestHandler.html#handlePreFlight(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\">handlePreFlight</a></code> in interface <code><a href=\"../../cors/PreFlightRequestHandler.html\" title=\"interface in org.springframework.web.cors\">PreFlightRequestHandler</a></code>",
+      "translation": "`<code><a href=\"../../cors/PreFlightRequestHandler.html#handlePreFlight(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)\">handlePreFlight</a></code>` 接口 `<code><a href=\"../../cors/PreFlightRequestHandler.html\" title=\"interface in org.springframework.web.cors\">PreFlightRequestHandler</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the matching HandlerMapping is not an\ninstance of <a href=\"MatchableHandlerMapping.html\" title=\"interface in org.springframework.web.servlet.handler\"><code>MatchableHandlerMapping</code></a>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果匹配的 HandlerMapping 不是 <a href=\"MatchableHandlerMapping.html\" title=\"interface in org.springframework.web.servlet.handler\"><code>MatchableHandlerMapping</code></a> 的实例",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../cors/CorsConfigurationSource.html#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\">getCorsConfiguration</a></code> in interface <code><a href=\"../../cors/CorsConfigurationSource.html\" title=\"interface in org.springframework.web.cors\">CorsConfigurationSource</a></code>",
+      "translation": "`<code><a href=\"../../cors/CorsConfigurationSource.html#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\">getCorsConfiguration</a></code>` 接口 `<code><a href=\"../../cors/CorsConfigurationSource.html\" title=\"interface in org.springframework.web.cors\">CorsConfigurationSource</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#getMatchableHandlerMapping(jakarta.servlet.http.HttpServletRequest)\"><code>getMatchableHandlerMapping(HttpServletRequest)</code></a> — obtain a <code>HandlerMapping</code>\nto check request-matching criteria against.",
+      "translation": "<a href=\"#getMatchableHandlerMapping(jakarta.servlet.http.HttpServletRequest)\"><code>getMatchableHandlerMapping(HttpServletRequest)</code></a> — 获取一个<code>HandlerMapping</code>以检查请求匹配条件。",
+      "count": 2
+    },
+    {
+      "source": "the associated <a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>, or <code>null</code> if none",
+      "translation": "关联的<a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>，或若无则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\"><code>getCorsConfiguration(HttpServletRequest)</code></a> — obtain the CORS configuration for the\nrequest.",
+      "translation": "<a href=\"#getCorsConfiguration(jakarta.servlet.http.HttpServletRequest)\"><code>getCorsConfiguration(HttpServletRequest)</code></a> — 获取请求的 CORS 配置。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../NoHandlerFoundException.html\" title=\"class in org.springframework.web.servlet\">NoHandlerFoundException</a></code> - if no handler matches the request",
+      "translation": "<code><a href=\"../NoHandlerFoundException.html\" title=\"class in org.springframework.web.servlet\">NoHandlerFoundException</a></code> - 如果没有处理器匹配请求",
+      "count": 2
+    },
+    {
+      "source": "the previous <a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>, if there is one from a parent dispatch",
+      "translation": "之前的 `<a href=\"HandlerMappingIntrospector.CachedResult.html\" title=\"class in org.springframework.web.servlet.handler\"><code>HandlerMappingIntrospector.CachedResult</code></a>`（如果存在来自父级分发的结果），",
+      "count": 2
+    },
+    {
+      "source": "the resolved <code>MatchableHandlerMapping</code>, or <code>null</code>",
+      "translation": "解析后的<code>MatchableHandlerMapping</code>，或<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if any of the HandlerMapping's raise an exception",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 如果任何 HandlerMapping 抛出异常",
+      "count": 2
+    },
+    {
+      "source": "<code>patternCacheLimit</code> - the limit to use",
+      "translation": "<code>patternCacheLimit</code> - 要使用的限制",
+      "count": 2
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 2
+    },
+    {
+      "source": "the Filter instance to use",
+      "translation": "要使用的 Filter 实例",
+      "count": 2
+    },
+    {
+      "source": "Invoked after population of normal bean properties but before an init callback such\nas <a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>\nor a custom init-method. Invoked after <a href=\"../../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>,\n<a href=\"../../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> and\n<a href=\"../../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>, if applicable.",
+      "translation": "在普通 Bean 属性填充之后、但在初始化回调（例如 <a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\"><code>InitializingBean.afterPropertiesSet()</code></a>）或自定义 init-method 之前调用。在 <a href=\"../../../context/ResourceLoaderAware.html#setResourceLoader(org.springframework.core.io.ResourceLoader)\"><code>ResourceLoaderAware.setResourceLoader(ResourceLoader)</code></a>、<a href=\"../../../context/ApplicationEventPublisherAware.html#setApplicationEventPublisher(org.springframework.context.ApplicationEventPublisher)\"><code>ApplicationEventPublisherAware.setApplicationEventPublisher(ApplicationEventPublisher)</code></a> 和 <a href=\"../../../context/MessageSourceAware.html\" title=\"interface in org.springframework.context\"><code>MessageSourceAware</code></a>（如果适用）之后调用。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "Container for a <a href=\"MatchableHandlerMapping.html\" title=\"interface in org.springframework.web.servlet.handler\"><code>MatchableHandlerMapping</code></a> and <a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>\nfor a given request matched by dispatcher type and requestURI.",
+      "translation": "用于给定请求的容器，该请求由分派类型和 requestURI 匹配，包含 <a href=\"MatchableHandlerMapping.html\" title=\"interface in org.springframework.web.servlet.handler\"><code>MatchableHandlerMapping</code></a> 和 <a href=\"../../cors/CorsConfiguration.html\" title=\"class in org.springframework.web.cors\"><code>CorsConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../../../beans/factory/BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">ApplicationContextAware</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Set the ApplicationContext that this object runs in.",
+      "translation": "设置此对象运行的 ApplicationContext。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code> in interface <code><a href=\"../../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "`setApplicationContext` 在接口 `<a href=\"../../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a>` 中。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>applicationContext</code> - the ApplicationContext object to be used by this object",
+      "translation": "<code>applicationContext</code> - 此对象将使用的 ApplicationContext 对象",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - current HTTP request",
+      "translation": "<code>request</code> - 当前 HTTP 请求",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - current HTTP response",
+      "translation": "<code>response</code> - 当前 HTTP 响应",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

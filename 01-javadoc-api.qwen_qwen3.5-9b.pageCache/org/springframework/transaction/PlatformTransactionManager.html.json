@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 17:25:57",
+  "updated_at": "2026-04-14 17:25:57",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 48,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.92,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "<code>status</code> - object returned by the <code>getTransaction</code> method",
+      "translation": "<code>status</code> - 由 <code>getTransaction</code> 方法返回的对象",
+      "count": 3
+    },
+    {
+      "source": "<code><a href=\"IllegalTransactionStateException.html\" title=\"class in org.springframework.transaction\">IllegalTransactionStateException</a></code> - if the given transaction\nis already completed (that is, committed or rolled back)",
+      "translation": "<code><a href=\"IllegalTransactionStateException.html\" title=\"class in org.springframework.transaction\">IllegalTransactionStateException</a></code> - 如果给定的事务已经完成（即已提交或回滚）",
+      "count": 3
+    },
+    {
+      "source": "Depending on the concrete transaction manager setup, <code>commit</code>\nmay propagate <a href=\"../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a> as well,\neither from before-commit flushes or from the actual commit step.",
+      "translation": "根据具体的事务管理器配置，<code>commit</code> 也可能传播 <a href=\"../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a>，无论是来自提交前刷新还是实际提交步骤。",
+      "count": 2
+    },
+    {
+      "source": "Depending on the concrete transaction manager setup, <code>rollback</code>\nmay propagate <a href=\"../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a> as well.",
+      "translation": "具体事务管理器配置不同，<code>rollback</code> 也可能传播 <a href=\"../dao/DataAccessException.html\" title=\"class in org.springframework.dao\"><code>DataAccessException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "For implementors, it is recommended to derive from the provided\n<a href=\"support/AbstractPlatformTransactionManager.html\" title=\"class in org.springframework.transaction.support\"><code>AbstractPlatformTransactionManager</code></a>\nclass, which pre-implements the defined propagation behavior and takes care\nof transaction synchronization handling. Subclasses have to implement\ntemplate methods for specific states of the underlying transaction,\nfor example: begin, suspend, resume, commit.",
+      "translation": "对于实现者，建议从提供的<a href=\"support/AbstractPlatformTransactionManager.html\" title=\"class in org.springframework.transaction.support\"><code>AbstractPlatformTransactionManager</code></a>类派生，该类已预实现了定义的传播行为，并负责事务同步处理。子类必须为底层事务的特定状态（例如：开始、挂起、恢复、提交）实现模板方法。",
+      "count": 2
+    },
+    {
+      "source": "A classic implementation of this strategy interface is\n<a href=\"jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>. However,\nin common single-resource scenarios, Spring's specific transaction managers\nfor example, JDBC, JPA, JMS are preferred choices.",
+      "translation": "这种策略接口的一个经典实现是<a href=\"jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a>。然而，在常见的单资源场景中，Spring 专用的事务管理器（例如 JDBC、JPA、JMS）通常是更优的选择。",
+      "count": 2
+    },
+    {
+      "source": "<b>Do not call rollback on a transaction if commit threw an exception.</b>\nThe transaction will already have been completed and cleaned up when commit\nreturns, even in case of a commit exception. Consequently, a rollback call\nafter commit failure will lead to an IllegalTransactionStateException.",
+      "translation": "<b>如果提交抛出异常，请勿在事务上调用回滚。</b>\n即使发生提交异常，当提交返回时，事务也已完成并清理。因此，在提交失败后调用回滚将导致 IllegalTransactionStateException。",
+      "count": 2
+    },
+    {
+      "source": "Note that parameters like isolation level or timeout will only be applied\nto new transactions, and thus be ignored when participating in active ones.",
+      "translation": "请注意，诸如隔离级别或超时之类的参数仅适用于新事务，因此在参与活跃事务时将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "Furthermore, not all transaction definition settings will be supported\nby every transaction manager: A proper transaction manager implementation\nshould throw an exception when unsupported settings are encountered.",
+      "translation": "此外，并非所有事务定义设置都能被每个事务管理器支持：适当的事务管理器实现应在遇到不支持的设置时抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "An exception to the above rule is the read-only flag, which should be\nignored if no explicit read-only mode is supported. Essentially, the\nread-only flag is just a hint for potential optimization.",
+      "translation": "上述规则的一个例外是只读标志，如果未支持显式的只读模式，则应忽略该标志。本质上，只读标志仅是对潜在优化的提示。",
+      "count": 2
+    },
+    {
+      "source": "If the transaction wasn't a new one, omit the commit for proper\nparticipation in the surrounding transaction. If a previous transaction\nhas been suspended to be able to create a new one, resume the previous\ntransaction after committing the new one.",
+      "translation": "如果该事务不是新事务，则省略提交操作以正确参与周围的事务。如果之前已挂起一个事务以便创建新事务，则在提交新事务后恢复之前的事务。",
+      "count": 2
+    },
+    {
+      "source": "Note that when the commit call completes, no matter if normally or\nthrowing an exception, the transaction must be fully completed and\ncleaned up. No rollback call should be expected in such a case.",
+      "translation": "请注意，无论 `commit` 调用是正常完成还是抛出异常，事务都必须完全完成并清理。在这种情况下，不应期望有回滚调用。",
+      "count": 2
+    },
+    {
+      "source": "If the transaction wasn't a new one, just set it rollback-only for proper\nparticipation in the surrounding transaction. If a previous transaction\nhas been suspended to be able to create a new one, resume the previous\ntransaction after rolling back the new one.",
+      "translation": "如果该事务不是新事务，则将其设置为仅回滚状态，以便正确参与周围的事务。如果之前已挂起一个事务以创建新事务，则在回滚新事务后恢复之前的事务。",
+      "count": 2
+    },
+    {
+      "source": "<code>definition</code> - the TransactionDefinition instance (can be <code>null</code> for defaults),\ndescribing propagation behavior, isolation level, timeout etc.",
+      "translation": "<code>definition</code> - 事务定义实例（默认值可为 <code>null</code>），描述传播行为、隔离级别、超时时间等。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - in case of lookup, creation, or system errors",
+      "translation": "<code><a href=\"TransactionException.html\" title=\"class in org.springframework.transaction\">TransactionException</a></code> - 在查找、创建或系统错误的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"IllegalTransactionStateException.html\" title=\"class in org.springframework.transaction\">IllegalTransactionStateException</a></code> - if the given transaction definition\ncannot be executed (for example, if a currently active transaction is in\nconflict with the specified propagation behavior)",
+      "translation": "<code><a href=\"IllegalTransactionStateException.html\" title=\"class in org.springframework.transaction\">IllegalTransactionStateException</a></code> - 如果给定的事务定义无法执行（例如，当前活动的事务与指定的传播行为冲突）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"UnexpectedRollbackException.html\" title=\"class in org.springframework.transaction\">UnexpectedRollbackException</a></code> - in case of an unexpected rollback\nthat the transaction coordinator initiated",
+      "translation": "<code><a href=\"UnexpectedRollbackException.html\" title=\"class in org.springframework.transaction\">UnexpectedRollbackException</a></code> - 在事务协调器发起的意外回滚的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"HeuristicCompletionException.html\" title=\"class in org.springframework.transaction\">HeuristicCompletionException</a></code> - in case of a transaction failure\ncaused by a heuristic decision on the side of the transaction coordinator",
+      "translation": "<code><a href=\"HeuristicCompletionException.html\" title=\"class in org.springframework.transaction\">HeuristicCompletionException</a></code> - 在由事务协调器侧的启发式决策导致的事务失败的情况下",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"TransactionSystemException.html\" title=\"class in org.springframework.transaction\">TransactionSystemException</a></code> - in case of commit or system errors\n(typically caused by fundamental resource failures)",
+      "translation": "<code><a href=\"TransactionSystemException.html\" title=\"class in org.springframework.transaction\">TransactionSystemException</a></code> - 在提交或系统错误时（通常由基本资源故障引起）",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"TransactionSystemException.html\" title=\"class in org.springframework.transaction\">TransactionSystemException</a></code> - in case of rollback or system errors\n(typically caused by fundamental resource failures)",
+      "translation": "<code><a href=\"TransactionSystemException.html\" title=\"class in org.springframework.transaction\">TransactionSystemException</a></code> - 在回滚或系统错误时（通常由基本资源故障引起）",
+      "count": 2
+    },
+    {
+      "source": "transaction status object representing the new or current transaction",
+      "translation": "代表新事务或当前事务的事务状态对象",
+      "count": 2
+    },
+    {
+      "source": "Commit the given transaction, with regard to its status.",
+      "translation": "提交给定事务，根据其状态进行处理。",
+      "count": 1
+    },
+    {
+      "source": "Return a currently active transaction or create a new one, according to\nthe specified propagation behavior.",
+      "translation": "根据指定的传播行为返回当前活动的事务或创建新的事务。",
+      "count": 1
+    },
+    {
+      "source": "Perform a rollback of the given transaction.",
+      "translation": "回滚给定的事务。",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller",
+      "translation": "Rod Johnson，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

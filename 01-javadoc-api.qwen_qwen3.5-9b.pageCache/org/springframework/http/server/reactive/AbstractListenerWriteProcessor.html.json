@@ -1,0 +1,186 @@
+{
+  "created_at": "2026-04-14 14:24:25",
+  "updated_at": "2026-04-14 14:24:25",
+  "stats": {
+    "total_entries": 34,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 55,
+    "entries_with_hits": 34,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6176470588235294,
+    "usage_percentage": 0.0034
+  },
+  "items": [
+    {
+      "source": "Invoked when writing is possible, either in the same thread after a check\nvia <a href=\"#isWritePossible()\"><code>isWritePossible()</code></a>, or as a callback from the underlying\ncontainer.",
+      "translation": "在通过<a href=\"#isWritePossible()\"><code>isWritePossible()</code></a>进行检查后，同一线程中写入可能时，或者作为底层容器的回调被调用。",
+      "count": 3
+    },
+    {
+      "source": "<strong>Note:</strong> Sub-classes are responsible for releasing any\ndata buffer associated with the item, once fully written, if pooled\nbuffers apply to the underlying container.",
+      "translation": "<strong>注意：</strong> 如果底层容器适用缓冲池，子类必须负责在完全写入后释放与该项目关联的任何数据缓冲区。",
+      "count": 2
+    },
+    {
+      "source": "Specifically a base class for writing to the HTTP response body with\nServlet non-blocking I/O as well for writing WebSocket\nmessages through the Jakarta WebSocket API (JSR-356), and Jetty.",
+      "translation": "具体是一个用于通过 Servlet 非阻塞 I/O 写入 HTTP 响应体，以及通过 Jakarta WebSocket API（JSR-356）和 Jetty 写入 WebSocket 消息的基类。",
+      "count": 2
+    },
+    {
+      "source": "Defaults to no-op.",
+      "translation": "默认为空操作。",
+      "count": 2
+    },
+    {
+      "source": "Cancel the upstream \"write\" Publisher only, for example due to\nServlet container error/completion notifications. This should usually\nbe followed up with a call to either <a href=\"#onError(java.lang.Throwable)\"><code>onError(Throwable)</code></a> or\n<a href=\"#onComplete()\"><code>onComplete()</code></a> to notify the downstream chain, that is unless\ncancellation came from downstream.",
+      "translation": "仅取消上游的\"write\"Publisher，例如由于 Servlet 容器错误或完成通知。通常应随后调用 <a href=\"#onError(java.lang.Throwable)\"><code>onError(Throwable)</code></a> 或 <a href=\"#onComplete()\"><code>onComplete()</code></a> 以通知下游链，除非取消是由下游触发的。",
+      "count": 2
+    },
+    {
+      "source": "Template method invoked after a data item to write is received via\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onNext(T)\" title=\"class or interface in org.reactivestreams\"><code>Subscriber.onNext(Object)</code></a>. The default implementation saves the\ndata item for writing once that is possible.",
+      "translation": "在通过 `<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onNext(T)\" title=\"class or interface in org.reactivestreams\"><code>Subscriber.onNext(Object)</code></a>` 接收到要写入的数据项后，会调用模板方法。默认实现会在可能时保存该数据项以供写入。",
+      "count": 2
+    },
+    {
+      "source": "Special logger for debugging Reactive Streams signals.",
+      "translation": "用于调试 Reactive Streams 信号的专用日志记录器。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance with the given log prefix.",
+      "translation": "使用给定的日志前缀创建实例。",
+      "count": 2
+    },
+    {
+      "source": "Invoked after any error (either from the upstream write Publisher, or\nfrom I/O operations to the underlying server) and cancellation\nto discard in-flight data that was in\nthe process of being written when the error took place.",
+      "translation": "在发生任何错误（无论是来自上游写入 Publisher 还是来自到底层服务器的 I/O 操作）以及取消时调用，以丢弃在错误发生时正在写入过程中的飞行数据。",
+      "count": 2
+    },
+    {
+      "source": "Get the configured log prefix.",
+      "translation": "获取配置的日志前缀。",
+      "count": 2
+    },
+    {
+      "source": "Whether writing is possible.",
+      "translation": "是否可写入。",
+      "count": 2
+    },
+    {
+      "source": "Whether the given data item has any content to write.\nIf false the item is not written.",
+      "translation": "给定数据项是否有要写入的内容。如果为 false，则不写入该数据项。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onSubscribe(org.reactivestreams.Subscription)\" title=\"class or interface in org.reactivestreams\">onSubscribe</a></code> in interface <code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onSubscribe(org.reactivestreams.Subscription)\" title=\"class or interface in org.reactivestreams\">onSubscribe</a>` 接口 `<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onNext(T)\" title=\"class or interface in org.reactivestreams\">onNext</a></code> in interface <code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onNext(T)\" title=\"class or interface in org.reactivestreams\">onNext</a></code> 在接口 `<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onError(java.lang.Throwable)\" title=\"class or interface in org.reactivestreams\">onError</a></code> in interface <code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onError(java.lang.Throwable)\" title=\"class or interface in org.reactivestreams\">onError</a>` 在接口 `<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onComplete()\" title=\"class or interface in org.reactivestreams\">onComplete</a></code> in interface <code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onComplete()\" title=\"class or interface in org.reactivestreams\">onComplete</a></code> 在接口 `<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\">Subscriber</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\">subscribe</a></code> in interface <code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\">Publisher</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\">subscribe</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\">Publisher</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerWriteProcessor\">T</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> if the current data item was written completely and\na new item requested, or <code>false</code> if it was written partially and\nwe'll need more write callbacks before it is fully written",
+      "translation": "如果当前数据项已完全写入并请求了新项，则返回`true`；否则返回`false`，表示该数据项仅部分写入，在完全写入之前需要更多的写入回调。",
+      "count": 2
+    },
+    {
+      "source": "<code>data</code> - the item to write",
+      "translation": "<code>data</code> - 要写入的项目",
+      "count": 2
+    },
+    {
+      "source": "<code>data</code> - the data to be released",
+      "translation": "<code>data</code> - 待发布的数据",
+      "count": 2
+    },
+    {
+      "source": "The default implementation is a no-op.",
+      "translation": "默认实现是一个空操作。",
+      "count": 1
+    },
+    {
+      "source": "Template method invoked after a data item to write is received via\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onNext(T)\" title=\"class or interface in org.reactivestreams\"><code>Subscriber.onNext(Object)</code></a>.",
+      "translation": "在通过 `<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html#onNext(T)\" title=\"class or interface in org.reactivestreams\"><code>Subscriber.onNext(Object)</code></a>` 接收要写入的数据项后，调用模板方法。",
+      "count": 1
+    },
+    {
+      "source": "Cancel the upstream \"write\" Publisher only, for example due to\nServlet container error/completion notifications.",
+      "translation": "仅取消上游“写入”发布器，例如由于 Servlet 容器错误或完成通知。",
+      "count": 1
+    },
+    {
+      "source": "Whether the given data item has any content to write.",
+      "translation": "给定数据项是否有要写入的内容。",
+      "count": 1
+    },
+    {
+      "source": "Completion signal from the upstream, write Publisher.",
+      "translation": "上游的完成信号，写入发布者 (Publisher)。",
+      "count": 1
+    },
+    {
+      "source": "Error signal from the upstream, write Publisher.",
+      "translation": "上游写入 Publisher 的错误信号。",
+      "count": 1
+    },
+    {
+      "source": "Write the given item.",
+      "translation": "请写出该项目。",
+      "count": 1
+    },
+    {
+      "source": "Invoked after onComplete or onError notification.",
+      "translation": "在 `onComplete` 或 `onError` 通知之后被调用。",
+      "count": 1
+    },
+    {
+      "source": "Invoked when an I/O error occurs during a write.",
+      "translation": "在写入期间发生 I/O 错误时调用。",
+      "count": 1
+    },
+    {
+      "source": "Error signal from the upstream, write Publisher. This is also used by\nsubclasses to delegate error notifications from the container.",
+      "translation": "来自上游写入发布者的错误信号。子类也使用此机制来委托容器的错误通知。",
+      "count": 1
+    },
+    {
+      "source": "Completion signal from the upstream, write Publisher. This is also used\nby subclasses to delegate completion notifications from the container.",
+      "translation": "来自上游的完成信号，由 Publisher 写入。子类也使用此机制来委托容器的完成通知。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the type of element signaled to the <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\"><code>Subscriber</code></a></span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Subscriber.html\" title=\"class or interface in org.reactivestreams\"><code>Subscriber</code></a> 接收到的元素类型</span>",
+      "count": 1
+    },
+    {
+      "source": "Arjen Poutsma, Violeta Georgieva, Rossen Stoyanchev",
+      "translation": "Arjen Poutsma, Violeta Georgieva, Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

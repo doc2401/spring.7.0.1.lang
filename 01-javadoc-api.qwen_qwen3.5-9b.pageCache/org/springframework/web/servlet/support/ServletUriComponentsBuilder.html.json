@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 20:07:02",
+  "updated_at": "2026-04-14 20:07:02",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9583333333333333,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "Same as <a href=\"#fromContextPath(jakarta.servlet.http.HttpServletRequest)\"><code>fromContextPath(HttpServletRequest)</code></a> except the\nrequest is obtained through <a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>.",
+      "translation": "与<a href=\"#fromContextPath(jakarta.servlet.http.HttpServletRequest)\"><code>fromContextPath(HttpServletRequest)</code></a>相同，但请求是通过<a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>获取的。",
+      "count": 3
+    },
+    {
+      "source": "Same as <a href=\"#fromRequest(jakarta.servlet.http.HttpServletRequest)\"><code>fromRequest(HttpServletRequest)</code></a> except the\nrequest is obtained through <a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>.",
+      "translation": "与<a href=\"#fromRequest(jakarta.servlet.http.HttpServletRequest)\"><code>fromRequest(HttpServletRequest)</code></a>相同，但请求是通过<a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>获取的。",
+      "count": 3
+    },
+    {
+      "source": "Same as <a href=\"#fromRequestUri(jakarta.servlet.http.HttpServletRequest)\"><code>fromRequestUri(HttpServletRequest)</code></a> except the\nrequest is obtained through <a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>.",
+      "translation": "与<a href=\"#fromRequestUri(jakarta.servlet.http.HttpServletRequest)\"><code>fromRequestUri(HttpServletRequest)</code></a>相同，只是通过<a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>获取请求。",
+      "count": 3
+    },
+    {
+      "source": "Same as <a href=\"#fromServletMapping(jakarta.servlet.http.HttpServletRequest)\"><code>fromServletMapping(HttpServletRequest)</code></a> except the\nrequest is obtained through <a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>.",
+      "translation": "与<a href=\"#fromServletMapping(jakarta.servlet.http.HttpServletRequest)\"><code>fromServletMapping(HttpServletRequest)</code></a>相同，只是通过<a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>获取请求。",
+      "count": 3
+    },
+    {
+      "source": "Obtain current request through <a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>.",
+      "translation": "通过 `<a href=\"../../context/request/RequestContextHolder.html\" title=\"class in org.springframework.web.context.request\"><code>RequestContextHolder</code></a>` 获取当前请求。",
+      "count": 3
+    },
+    {
+      "source": "<strong>Note:</strong> As of 5.1, methods in this class do not extract\n<code>\"Forwarded\"</code> and <code>\"X-Forwarded-*\"</code> headers that specify the\nclient-originated address. Please, use\n<a href=\"../../filter/ForwardedHeaderFilter.html\" title=\"class in org.springframework.web.filter\"><code>ForwardedHeaderFilter</code></a>, or similar from the underlying server, to extract\nand use such headers, or to discard them.",
+      "translation": "<strong>注意：</strong> 从 5.1 版本开始，此类的不再提取指定客户端源地址的<code>\"Forwarded\"</code>和<code>\"X-Forwarded-*\"</code>标头。请使用底层服务器提供的<a href=\"../../filter/ForwardedHeaderFilter.html\" title=\"class in org.springframework.web.filter\"><code>ForwardedHeaderFilter</code></a>或类似组件来提取和使用这些标头，或者丢弃它们。",
+      "count": 2
+    },
+    {
+      "source": "If the servlet is mapped by name, for example, <code>\"/main/*\"</code>, the path\nwill end with \"/main\". If the servlet is mapped otherwise, for example,\n<code>\"/\"</code> or <code>\"*.do\"</code>, the result will be the same as\nif calling <a href=\"#fromContextPath(jakarta.servlet.http.HttpServletRequest)\"><code>fromContextPath(HttpServletRequest)</code></a>.",
+      "translation": "如果 Servlet 通过名称映射，例如 `\"/main/*\"`，则路径将以 \"/main\" 结尾。如果 Servlet 以其他方式映射，例如 `\"/\"` 或 `\"*.do\"`，结果将与调用 <a href=\"#fromContextPath(jakarta.servlet.http.HttpServletRequest)\"><code>fromContextPath(HttpServletRequest)</code></a> 相同。",
+      "count": 2
+    },
+    {
+      "source": "Remove any path extension from the <code>requestURI</code>. This method must be invoked before any calls to <a href=\"../../util/UriComponentsBuilder.html#path(java.lang.String)\"><code>UriComponentsBuilder.path(String)</code></a>\nor <a href=\"../../util/UriComponentsBuilder.html#pathSegment(java.lang.String...)\"><code>UriComponentsBuilder.pathSegment(String...)</code></a>.\n<pre>GET http://www.foo.example/rest/books/6.json\n\nServletUriComponentsBuilder builder = ServletUriComponentsBuilder.fromRequestUri(this.request);\nString ext = builder.removePathExtension();\nString uri = builder.path(\"/pages/1.{ext}\").buildAndExpand(ext).toUriString();\nassertEquals(\"http://www.foo.example/rest/books/6/pages/1.json\", result);\n</pre>",
+      "translation": "从 `<code>requestURI</code>` 中移除路径扩展。此方法必须在调用任何 <a href=\"../../util/UriComponentsBuilder.html#path(java.lang.String)\"><code>UriComponentsBuilder.path(String)</code></a> 或 <a href=\"../../util/UriComponentsBuilder.html#pathSegment(java.lang.String...)\"><code>UriComponentsBuilder.pathSegment(String...)</code></a> 之前执行。\n<pre>GET http://www.foo.example/rest/books/6.json\n\nServletUriComponentsBuilder builder = ServletUriComponentsBuilder.fromRequestUri(this.request);\nString ext = builder.removePathExtension();\nString uri = builder.path(\"/pages/1.{ext}\").buildAndExpand(ext).toUriString();\nassertEquals(\"http://www.foo.example/rest/books/6/pages/1.json\", result);\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"../../util/UriComponentsBuilder.html#cloneBuilder()\">UriComponentsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"../../util/UriComponentsBuilder.html#cloneBuilder()\">UriComponentsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Clone this <code>UriComponentsBuilder</code>.",
+      "translation": "克隆这个<code>UriComponentsBuilder</code>。",
+      "count": 2
+    },
+    {
+      "source": "Create a deep copy of the given ServletUriComponentsBuilder.",
+      "translation": "创建给定 ServletUriComponentsBuilder 的深拷贝。",
+      "count": 2
+    },
+    {
+      "source": "Prepare a builder from the host, port, scheme, and context path of the\ngiven HttpServletRequest.",
+      "translation": "从给定的 HttpServletRequest 的宿主、端口、方案和上下文路径准备一个构建器。",
+      "count": 2
+    },
+    {
+      "source": "Prepare a builder by copying the scheme, host, port, path, and\nquery string of an HttpServletRequest.",
+      "translation": "通过复制 HttpServletRequest 的 scheme、host、port、path 和 query string 来准备一个构建器。",
+      "count": 2
+    },
+    {
+      "source": "Prepare a builder from the host, port, scheme, and path (but not the query)\nof the HttpServletRequest.",
+      "translation": "从 `HttpServletRequest` 的 host、port、scheme 和 path（不包括查询参数）准备一个构建器。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../util/UriComponentsBuilder.html#cloneBuilder()\">cloneBuilder</a></code> in class <code><a href=\"../../util/UriComponentsBuilder.html\" title=\"class in org.springframework.web.util\">UriComponentsBuilder</a></code>",
+      "translation": "`<code><a href=\"../../util/UriComponentsBuilder.html#cloneBuilder()\">cloneBuilder</a></code>` 在类 `<code><a href=\"../../util/UriComponentsBuilder.html\" title=\"class in org.springframework.web.util\">UriComponentsBuilder</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>other</code> - the other builder to copy from",
+      "translation": "<code>other</code> - 要复制的另一个构建器",
+      "count": 2
+    },
+    {
+      "source": "the removed path extension for possible re-use, or <code>null</code>",
+      "translation": "移除的路径扩展名以供可能重用，或<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "the cloned <code>UriComponentsBuilder</code> object",
+      "translation": "克隆的<code>UriComponentsBuilder</code>对象",
+      "count": 2
+    },
+    {
+      "source": "Remove any path extension from the <code>requestURI</code>.",
+      "translation": "从<code>requestURI</code>中移除路径扩展名。",
+      "count": 1
+    },
+    {
+      "source": "Default constructor.",
+      "translation": "默认构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Prepare a builder from the host, port, scheme, context path, and\nservlet mapping of the given HttpServletRequest.",
+      "translation": "从给定的 HttpServletRequest 的 host、port、scheme、context path 和 servlet mapping 准备一个构建器。",
+      "count": 1
+    },
+    {
+      "source": "Default constructor. Protected to prevent direct instantiation.",
+      "translation": "默认构造函数。设为 protected 以防止直接实例化。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

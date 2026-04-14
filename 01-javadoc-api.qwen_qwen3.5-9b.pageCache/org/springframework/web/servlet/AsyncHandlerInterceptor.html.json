@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-04-14 19:35:44",
+  "updated_at": "2026-04-14 19:35:44",
+  "stats": {
+    "total_entries": 10,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 15,
+    "entries_with_hits": 10,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.001
+  },
+  "items": [
+    {
+      "source": "When asynchronous handling completes, the request is dispatched to the\ncontainer for further processing. At this stage the <code>DispatcherServlet</code>\ninvokes <code>preHandle</code>, <code>postHandle</code>, and <code>afterCompletion</code>.\nTo distinguish between the initial request and the subsequent dispatch\nafter asynchronous handling completes, interceptors can check whether the\n<code>jakarta.servlet.DispatcherType</code> of <code>ServletRequest</code>\nis <code>\"REQUEST\"</code> or <code>\"ASYNC\"</code>.",
+      "translation": "当异步处理完成后，请求被分派到容器进行进一步处理。在此阶段，`DispatcherServlet` 会调用 `preHandle`、`postHandle` 和 `afterCompletion`。为了区分初始请求与异步处理完成后的后续分派，拦截器可以检查 `ServletRequest` 的 `<code>jakarta.servlet.DispatcherType</code>` 是 `<code>\"REQUEST\"</code>` 还是 `<code>\"ASYNC\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Note that <code>HandlerInterceptor</code> implementations may need to do work\nwhen an async request times out or completes with a network error. For such\ncases the Servlet container does not dispatch and therefore the\n<code>postHandle</code> and <code>afterCompletion</code> methods will not be invoked.\nInstead, interceptors can register to track an asynchronous request through\nthe <code>registerCallbackInterceptor</code> and <code>registerDeferredResultInterceptor</code>\nmethods on <a href=\"../context/request/async/WebAsyncManager.html\" title=\"class in org.springframework.web.context.request.async\"><code>WebAsyncManager</code></a>. This can be done proactively on every request from\n<code>preHandle</code> regardless of whether async request processing will start.",
+      "translation": "注意，当异步请求超时或因网络错误完成时，`HandlerInterceptor` 实现可能需要执行操作。对于此类情况，Servlet 容器不会进行分派，因此 `postHandle` 和 `afterCompletion` 方法将不会被调用。相反，拦截器可以通过 <a href=\"../context/request/async/WebAsyncManager.html\" title=\"class in org.springframework.web.context.request.async\"><code>WebAsyncManager</code></a> 上的 `registerCallbackInterceptor` 和 `registerDeferredResultInterceptor` 方法注册以跟踪异步请求。这可以在每个请求的 `preHandle` 中主动进行，无论是否启动异步请求处理。",
+      "count": 2
+    },
+    {
+      "source": "When a handler starts an asynchronous request, the <a href=\"DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>\nexits without invoking <code>postHandle</code> and <code>afterCompletion</code> as it\nnormally does for a synchronous request, since the result of request handling\n(for example, ModelAndView) is likely not yet ready and will be produced concurrently\nfrom another thread. In such scenarios, <a href=\"#afterConcurrentHandlingStarted(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.Object)\"><code>afterConcurrentHandlingStarted(HttpServletRequest, HttpServletResponse, Object)</code></a>\nis invoked instead, allowing implementations to perform tasks such as cleaning\nup thread-bound attributes before releasing the thread to the Servlet container.",
+      "translation": "当处理器启动异步请求时，<a href=\"DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a> 会退出，而不会像处理同步请求那样调用 <code>postHandle</code> 和 <code>afterCompletion</code>，因为请求处理的结果（例如 ModelAndView）可能尚未准备好，将由另一个线程并发产生。在此类场景中，将调用 <a href=\"#afterConcurrentHandlingStarted(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.Object)\"><code>afterConcurrentHandlingStarted(HttpServletRequest, HttpServletResponse, Object)</code></a>，从而允许实现执行诸如清理线程绑定属性之类的任务，然后再将线程释放给 Servlet 容器。",
+      "count": 2
+    },
+    {
+      "source": "Implementations may use the provided request and response but should\navoid modifying them in ways that would conflict with the concurrent\nexecution of the handler. A typical use of this method would be to\nclean up thread-local variables.",
+      "translation": "实现可以使用提供的请求和响应，但应避免以与处理程序并发执行冲突的方式对其进行修改。此方法的典型用途是清理线程局部变量。",
+      "count": 2
+    },
+    {
+      "source": "<code>handler</code> - the handler (or <a href=\"../method/HandlerMethod.html\" title=\"class in org.springframework.web.method\"><code>HandlerMethod</code></a>) that started async\nexecution, for type and/or instance examination",
+      "translation": "`handler` - 启动异步执行的处理器（或<a href=\"../method/HandlerMethod.html\" title=\"class in org.springframework.web.method\"><code>HandlerMethod</code></a>），用于类型和/或实例检查",
+      "count": 2
+    },
+    {
+      "source": "Called instead of <code>postHandle</code> and <code>afterCompletion</code>\nwhen the handler is being executed concurrently.",
+      "translation": "在处理器并发执行时，代替调用<code>postHandle</code>和<code>afterCompletion</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在发生错误时",
+      "count": 1
+    },
+    {
+      "source": "<code>request</code> - the current request",
+      "translation": "<code>request</code> - 当前请求",
+      "count": 1
+    },
+    {
+      "source": "<code>response</code> - the current response",
+      "translation": "<code>response</code> - 当前响应",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    }
+  ]
+}

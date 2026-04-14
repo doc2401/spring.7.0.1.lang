@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 13:04:17",
+  "updated_at": "2026-04-14 13:04:17",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 48,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "This <code>CommandLinePropertySource</code> implementation aims to provide the simplest\npossible approach to parsing command line arguments. As with all <code>\nCommandLinePropertySource</code> implementations, command line arguments are broken into two\ndistinct groups: <em>option arguments</em> and <em>non-option arguments</em>, as\ndescribed below <em>(some sections copied from Javadoc for\n<code>SimpleCommandLineArgsParser</code>)</em>:",
+      "translation": "此 `<code>CommandLinePropertySource</code>` 实现旨在提供解析命令行参数的最简单方法。与所有 `<code>CommandLinePropertySource</code>` 实现一样，命令行参数被分为两个不同的组：<em>选项参数</em>和<em>非选项参数</em>，如下所述（部分章节复制自`<code>SimpleCommandLineArgsParser</code>`的Javadoc）：",
+      "count": 2
+    },
+    {
+      "source": "The underlying parser supports the POSIX \"end of options\" delimiter, meaning\nthat any <code>\"--\"</code> (empty option name) in the command line signals that all\nremaining arguments are non-option arguments. For example, <code>\"--opt1=ignored\"</code>,\n<code>\"--opt2\"</code>, and <code>\"filename\"</code> in the following command line are\nconsidered non-option arguments.",
+      "translation": "底层解析器支持 POSIX“选项结束”分隔符，这意味着命令行中的任何 `<code>\"--\"</code>`（空选项名）都表明所有剩余参数均为非选项参数。例如，在以下命令行中，`<code>\"--opt1=ignored\"</code>`、`<code>\"--opt2\"</code>` 和 `<code>\"filename\"</code>` 均被视为非选项参数。",
+      "count": 2
+    },
+    {
+      "source": "That is, options must be prefixed with \"<code>--</code>\" and may or may not\nspecify a value. If a value is specified, the name and value must be separated\n<em>without spaces</em> by an equals sign (\"=\"). The value may optionally be\nan empty string. If an option is present multiple times with different values\n— for example, <code>--foo=bar --foo=baz</code> — all supplied values\nwill be stored for the option.",
+      "translation": "也就是说，选项必须以 `<code>--</code>` 为前缀，并且可以指定或不指定值。如果指定了值，名称和值必须通过等号（\"=\"）<em>不带空格</em>地分隔。值可选地为空字符串。如果一个选项以不同的值多次出现——例如 <code>--foo=bar --foo=baz</code> ——则所有提供的值都将被存储到该选项中。",
+      "count": 2
+    },
+    {
+      "source": "Any arguments following the \"end of options\" delimiter (<code>--</code>) or\nspecified without the \"<code>--</code>\" option prefix will be considered as\n\"non-option arguments\" and made available through the\n<code>CommandLineArgs.getNonOptionArgs()</code> method.",
+      "translation": "任何位于“选项结束”分隔符 (`--`) 之后，或未指定 `--` 前缀的命令行参数，均被视为“非选项参数”，并通过 `CommandLineArgs.getNonOptionArgs()` 方法提供。",
+      "count": 2
+    },
+    {
+      "source": "When more fully-featured command line parsing is necessary, consider\nimplementing your own <code>CommandLinePropertySource</code> against the command line\nparsing library of your choice.",
+      "translation": "当需要更强大的命令行解析功能时，请考虑针对您选择的命令行解析库实现自己的 `<code>CommandLinePropertySource</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Option arguments must adhere to the exact syntax:",
+      "translation": "选项参数必须遵循以下确切语法：",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>SimpleCommandLinePropertySource</code> having the default name\nand backed by the given <code>String[]</code> of command line arguments.",
+      "translation": "创建一个新的具有默认名称的<code>SimpleCommandLinePropertySource</code>，并由给定的<code>String[]</code>命令行参数支持。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>SimpleCommandLinePropertySource</code> having the given name\nand backed by the given <code>String[]</code> of command line arguments.",
+      "translation": "创建一个新的<code>SimpleCommandLinePropertySource</code>，其名称为给定名称，并由给定的<code>String[]</code>命令行参数支持。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the set of option arguments parsed from the command line contains\nan option with the given name.",
+      "translation": "返回从命令行解析的选项参数集合中是否包含具有给定名称的选项。",
+      "count": 2
+    },
+    {
+      "source": "Get the property names for the option arguments.",
+      "translation": "获取选项参数的属性名称。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"EnumerablePropertySource.html#getPropertyNames()\">getPropertyNames</a></code> in class <code><a href=\"EnumerablePropertySource.html\" title=\"class in org.springframework.core.env\">EnumerablePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>",
+      "translation": "<code><a href=\"EnumerablePropertySource.html#getPropertyNames()\">getPropertyNames</a></code> 类中的 <code><a href=\"EnumerablePropertySource.html\" title=\"class in org.springframework.core.env\">EnumerablePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"CommandLinePropertySource.html#containsOption(java.lang.String)\">containsOption</a></code> in class <code><a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\">CommandLinePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>",
+      "translation": "`<code><a href=\"CommandLinePropertySource.html#containsOption(java.lang.String)\">containsOption</a></code>` 在类 `<code><a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\">CommandLinePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"CommandLinePropertySource.html#getOptionValues(java.lang.String)\">getOptionValues</a></code> in class <code><a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\">CommandLinePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>",
+      "translation": "`<a href=\"CommandLinePropertySource.html#getOptionValues(java.lang.String)\">getOptionValues</a>` 在类 `<a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\">CommandLinePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"CommandLinePropertySource.html#getNonOptionArgs()\">getNonOptionArgs</a></code> in class <code><a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\">CommandLinePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>",
+      "translation": "`<code><a href=\"CommandLinePropertySource.html#getNonOptionArgs()\">getNonOptionArgs</a></code>` 在类 `<code><a href=\"CommandLinePropertySource.html\" title=\"class in org.springframework.core.env\">CommandLinePropertySource</a>&lt;org.springframework.core.env.CommandLineArgs&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "End of option arguments",
+      "translation": "选项参数的结尾",
+      "count": 2
+    },
+    {
+      "source": "Beyond the basics",
+      "translation": "超越基础",
+      "count": 2
+    },
+    {
+      "source": "Valid examples of option arguments",
+      "translation": "选项参数的有效示例",
+      "count": 2
+    },
+    {
+      "source": "Invalid examples of option arguments",
+      "translation": "无效的选项参数示例",
+      "count": 2
+    },
+    {
+      "source": "Return the collection of values associated with the command line option having the\ngiven name.\n<ul>\n<li>if the option is present and has no argument (for example: \"--foo\"), return an empty\ncollection (<code>[]</code>)</li>\n<li>if the option is present and has a single value (for example, \"--foo=bar\"), return a\ncollection having one element (<code>[\"bar\"]</code>)</li>\n<li>if the option is present and the underlying command line parsing library\nsupports multiple arguments (for example, \"--foo=bar --foo=baz\"), return a collection\nhaving elements for each value (<code>[\"bar\", \"baz\"]</code>)</li>\n<li>if the option is not present, return <code>null</code></li>\n</ul>",
+      "translation": "返回与给定名称的命令行选项关联的值集合。\n<ul>\n<li>如果该选项存在且没有参数（例如：\"--foo\"），则返回一个空集合 (<code>[]</code>)</li>\n<li>如果该选项存在且具有单个值（例如，\"--foo=bar\"），则返回包含一个元素的集合 (<code>[\"bar\"]</code>)</li>\n<li>如果该选项存在且底层的命令行解析库支持多个参数（例如，\"--foo=bar --foo=baz\"），则返回包含每个值的元素的集合 (<code>[\"bar\", \"baz\"]</code>)</li>\n<li>如果该选项不存在，则返回 <code>null</code></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"CommandLinePropertySource.html#containsOption(java.lang.String)\">CommandLinePropertySource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"CommandLinePropertySource.html#containsOption(java.lang.String)\">CommandLinePropertySource</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"CommandLinePropertySource.html#getOptionValues(java.lang.String)\">CommandLinePropertySource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"CommandLinePropertySource.html#getOptionValues(java.lang.String)\">CommandLinePropertySource</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"CommandLinePropertySource.html#getNonOptionArgs()\">CommandLinePropertySource</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"CommandLinePropertySource.html#getNonOptionArgs()\">CommandLinePropertySource</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return the collection of non-option arguments parsed from the command line.\nNever <code>null</code>.",
+      "translation": "返回从命令行解析出的非选项参数集合。永远不会为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the collection of non-option arguments parsed from the command line.",
+      "translation": "返回从命令行解析出的非选项参数集合。",
+      "count": 1
+    },
+    {
+      "source": "Return the collection of values associated with the command line option having the\ngiven name.",
+      "translation": "返回与给定名称的命令行选项关联的值集合。",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams",
+      "translation": "Chris Beams",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Working with option arguments",
+      "translation": "与选项参数一起工作",
+      "count": 1
+    },
+    {
+      "source": "Working with non-option arguments",
+      "translation": "与非选项参数一起工作",
+      "count": 1
+    },
+    {
+      "source": "Typical usage",
+      "translation": "典型用法",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 12:23:27",
+  "updated_at": "2026-04-14 12:23:27",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 48,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.92,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "<a href=\"../ApplicationListener.html\" title=\"interface in org.springframework.context\"><code>ApplicationListener</code></a> instances which declare no support for asynchronous\nexecution (<a href=\"../ApplicationListener.html#supportsAsyncExecution()\"><code>ApplicationListener.supportsAsyncExecution()</code></a> always run within\nthe original thread which published the event, for example, the transaction-synchronized\n<a href=\"../../transaction/event/TransactionalApplicationListener.html\" title=\"interface in org.springframework.transaction.event\"><code>TransactionalApplicationListener</code></a>.",
+      "translation": "声明不支持异步执行的 `<a href=\"../ApplicationListener.html\" title=\"interface in org.springframework.context\"><code>ApplicationListener</code></a>` 实例（<a href=\"../ApplicationListener.html#supportsAsyncExecution()\"><code>ApplicationListener.supportsAsyncExecution()</code></a>）始终在发布事件的原始线程中运行，例如事务同步的 <a href=\"../../transaction/event/TransactionalApplicationListener.html\" title=\"interface in org.springframework.transaction.event\"><code>TransactionalApplicationListener</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Consider setting an <a href=\"../../util/ErrorHandler.html\" title=\"interface in org.springframework.util\"><code>ErrorHandler</code></a> implementation that catches\nand logs exceptions (a la\n<a href=\"../../scheduling/support/TaskUtils.html#LOG_AND_SUPPRESS_ERROR_HANDLER\"><code>TaskUtils.LOG_AND_SUPPRESS_ERROR_HANDLER</code></a>)\nor an implementation that logs exceptions while nevertheless propagating them\n(for example, <a href=\"../../scheduling/support/TaskUtils.html#LOG_AND_PROPAGATE_ERROR_HANDLER\"><code>TaskUtils.LOG_AND_PROPAGATE_ERROR_HANDLER</code></a>).",
+      "translation": "考虑设置一个 `<a href=\"../../util/ErrorHandler.html\" title=\"interface in org.springframework.util\"><code>ErrorHandler</code></a>` 实现，用于捕获并记录异常（类似于 `<a href=\"../../scheduling/support/TaskUtils.html#LOG_AND_SUPPRESS_ERROR_HANDLER\"><code>TaskUtils.LOG_AND_SUPPRESS_ERROR_HANDLER</code></a>`），或者设置一个在记录异常的同时仍然传播它们的实现（例如，`<a href=\"../../scheduling/support/TaskUtils.html#LOG_AND_PROPAGATE_ERROR_HANDLER\"><code>TaskUtils.LOG_AND_PROPAGATE_ERROR_HANDLER</code></a>`）。",
+      "count": 2
+    },
+    {
+      "source": "Default is equivalent to <a href=\"../../core/task/SyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SyncTaskExecutor</code></a>,\nexecuting all listeners synchronously in the calling thread.",
+      "translation": "默认值等同于<a href=\"../../core/task/SyncTaskExecutor.html\" title=\"class in org.springframework.core.task\"><code>SyncTaskExecutor</code></a>，在调用线程中同步执行所有监听器。",
+      "count": 2
+    },
+    {
+      "source": "Consider using <a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent,org.springframework.core.ResolvableType)\"><code>ApplicationEventMulticaster.multicastEvent(ApplicationEvent, ResolvableType)</code></a>\nif possible as it provides better support for generics-based events.",
+      "translation": "如果可能，请考虑使用 <a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent,org.springframework.core.ResolvableType)\"><code>ApplicationEventMulticaster.multicastEvent(ApplicationEvent, ResolvableType)</code></a>，因为它为基于泛型的事件提供更好的支持。",
+      "count": 2
+    },
+    {
+      "source": "Multicasts all events to all registered listeners, leaving it up to\nthe listeners to ignore events that they are not interested in.\nListeners will usually perform corresponding <code>instanceof</code>\nchecks on the passed-in event object.",
+      "translation": "向所有已注册的监听器广播所有事件，由监听器自行决定是否忽略不感兴趣的事件。通常，监听器会对传入的事件对象执行相应的 `<code>instanceof`</code> 检查。",
+      "count": 2
+    },
+    {
+      "source": "Default is none, with a listener exception stopping the current\nmulticast and getting propagated to the publisher of the current event.\nIf a <a href=\"#setTaskExecutor(java.util.concurrent.Executor)\">task executor</a> is specified, each\nindividual listener exception will get propagated to the executor but\nwon't necessarily stop execution of other listeners.",
+      "translation": "默认为无，当出现监听器异常时，会停止当前的多播并将该异常传播到当前事件的发布者。如果指定了<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\">任务执行器</a>，则每个单独的监听器异常都会传播到该执行器，但不一定会停止其他监听器的执行。",
+      "count": 2
+    },
+    {
+      "source": "If a matching <code>ApplicationListener</code> does not support asynchronous\nexecution, it must be run within the calling thread of this multicast call.",
+      "translation": "如果匹配的 `<code>ApplicationListener</code>` 不支持异步执行，则必须在本次多播调用的调用线程中运行。",
+      "count": 2
+    },
+    {
+      "source": "By default, all listeners are invoked in the calling thread.\nThis allows the danger of a rogue listener blocking the entire application,\nbut adds minimal overhead. Specify an alternative task executor to have\nlisteners executed in different threads, for example from a thread pool.",
+      "translation": "默认情况下，所有监听器都在调用线程中执行。这虽然存在恶意监听器阻塞整个应用程序的风险，但开销极小。若要指定替代的任务执行器以在不同线程（例如来自线程池）中执行监听器，请进行相应配置。",
+      "count": 2
+    },
+    {
+      "source": "Consider specifying an asynchronous task executor here to not block the caller\nuntil all listeners have been executed. However, note that asynchronous execution\nwill not participate in the caller's thread context (class loader, transaction context)\nunless the TaskExecutor explicitly supports this.",
+      "translation": "考虑在此指定一个异步任务执行器，以避免在调用者等待所有监听器执行完成时被阻塞。然而，请注意，除非 `TaskExecutor` 明确支持此功能，否则异步执行不会参与调用者的线程上下文（类加载器、事务上下文）。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent,org.springframework.core.ResolvableType)\">ApplicationEventMulticaster</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ApplicationEventMulticaster.html#multicastEvent(org.springframework.context.ApplicationEvent,org.springframework.core.ResolvableType)\">ApplicationEventMulticaster</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../../util/ErrorHandler.html\" title=\"interface in org.springframework.util\"><code>ErrorHandler</code></a> to invoke in case an exception is thrown\nfrom a listener.",
+      "translation": "将 `<a href=\"../../util/ErrorHandler.html\" title=\"interface in org.springframework.util\"><code>ErrorHandler</code></a>` 设置为在从监听器抛出异常时调用。",
+      "count": 2
+    },
+    {
+      "source": "Set a custom executor (typically a <a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>)\nto invoke each listener with.",
+      "translation": "设置一个自定义执行器（通常是<a href=\"../../core/task/TaskExecutor.html\" title=\"interface in org.springframework.core.task\"><code>TaskExecutor</code></a>），用于调用每个监听器。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SimpleApplicationEventMulticaster.",
+      "translation": "创建一个新的 SimpleApplicationEventMulticaster。",
+      "count": 2
+    },
+    {
+      "source": "Create a new SimpleApplicationEventMulticaster for the given BeanFactory.",
+      "translation": "为给定的 BeanFactory 创建一个新的 SimpleApplicationEventMulticaster。",
+      "count": 2
+    },
+    {
+      "source": "Return the current error handler for this multicaster.",
+      "translation": "返回此多播器的当前错误处理器。",
+      "count": 2
+    },
+    {
+      "source": "Return the current task executor for this multicaster.",
+      "translation": "返回此多播器的当前任务执行器。",
+      "count": 2
+    },
+    {
+      "source": "Invoke the given listener with the given event.",
+      "translation": "调用给定事件对应的监听器。",
+      "count": 2
+    },
+    {
+      "source": "Multicast the given application event to appropriate listeners.",
+      "translation": "将给定的应用程序事件广播到适当的监听器。",
+      "count": 2
+    },
+    {
+      "source": "<code>event</code> - the event to multicast",
+      "translation": "<code>event</code> - 要组播的事件",
+      "count": 2
+    },
+    {
+      "source": "<code>listener</code> - the ApplicationListener to invoke",
+      "translation": "<code>listener</code> - 要调用的 ApplicationListener",
+      "count": 2
+    },
+    {
+      "source": "<code>event</code> - the current event to propagate",
+      "translation": "<code>event</code> - 当前要传播的事件",
+      "count": 2
+    },
+    {
+      "source": "Rod Johnson, Juergen Hoeller, Stephane Nicoll, Brian Clozel",
+      "translation": "Rod Johnson、Juergen Hoeller、Stephane Nicoll 和 Brian Clozel",
+      "count": 2
+    },
+    {
+      "source": "If the <code>eventType</code> is <code>null</code>, a default type is built\nbased on the <code>event</code> instance.",
+      "translation": "如果 `<code>eventType</code>` 为 `<code>null</code>`，则根据 `<code>event</code>` 实例构建默认类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>eventType</code> - the type of event (can be <code>null</code>)",
+      "translation": "<code>eventType</code> - 事件类型（可为 <code>null</code>）",
+      "count": 1
+    }
+  ]
+}

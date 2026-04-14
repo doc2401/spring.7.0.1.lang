@@ -1,0 +1,311 @@
+{
+  "created_at": "2026-04-14 17:36:47",
+  "updated_at": "2026-04-14 17:36:47",
+  "stats": {
+    "total_entries": 59,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 110,
+    "entries_with_hits": 59,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8644067796610169,
+    "usage_percentage": 0.0059
+  },
+  "items": [
+    {
+      "source": "Unbind a resource for the given key from the current context.",
+      "translation": "从当前上下文中解绑给定键对应的资源。",
+      "count": 4
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if synchronization is not active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果未激活同步",
+      "count": 3
+    },
+    {
+      "source": "<code>key</code> - the key to check (usually the resource factory)",
+      "translation": "<code>key</code> - 要检查的键（通常是资源工厂）",
+      "count": 3
+    },
+    {
+      "source": "<code>key</code> - the key to unbind (usually the resource factory)",
+      "translation": "<code>key</code> - 要解绑的键（通常是资源工厂）",
+      "count": 3
+    },
+    {
+      "source": "Transaction synchronization must be activated and deactivated by a transaction\nmanager via <a href=\"#initSynchronization()\"><code>initSynchronization()</code></a> and <a href=\"#clearSynchronization()\"><code>clearSynchronization()</code></a>.\nThis is automatically supported by <a href=\"AbstractReactiveTransactionManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>AbstractReactiveTransactionManager</code></a>,\nand thus by all standard Spring transaction managers.",
+      "translation": "事务同步必须由事务管理器通过<a href=\"#initSynchronization()\"><code>initSynchronization()</code></a>和<a href=\"#clearSynchronization()\"><code>clearSynchronization()</code></a>激活和停用。这由<a href=\"AbstractReactiveTransactionManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>AbstractReactiveTransactionManager</code></a>自动支持，因此所有标准的 Spring 事务管理器也都支持。",
+      "count": 2
+    },
+    {
+      "source": "Resource management code should only register synchronizations when this\nmanager is active, which can be checked via <a href=\"#isSynchronizationActive()\"><code>isSynchronizationActive()</code></a>;\nit should perform immediate resource cleanup else. If transaction synchronization\nisn't active, there is either no current transaction, or the transaction manager\ndoesn't support transaction synchronization.",
+      "translation": "资源管理代码应仅在管理器处于活动状态时注册同步，可通过<a href=\"#isSynchronizationActive()\"><code>isSynchronizationActive()</code></a>进行检查；否则应立即执行资源清理。如果事务同步未激活，则当前没有事务，或者事务管理器不支持事务同步。",
+      "count": 2
+    },
+    {
+      "source": "Note that synchronizations can implement the\n<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> interface.\nThey will be executed in an order according to their order value (if any).",
+      "translation": "注意，同步化可以实现<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>接口。它们将根据其顺序值（如果有）按顺序执行。",
+      "count": 2
+    },
+    {
+      "source": "Resource management code should check for context-bound resources, for example,\ndatabase connections, via <code>getResource</code>. Such code is normally not\nsupposed to bind resources to units of work, as this is the responsibility\nof transaction managers. A further option is to lazily bind on first use if\ntransaction synchronization is active, for performing transactions that span\nan arbitrary number of resources.",
+      "translation": "资源管理代码应通过 `getResource` 检查上下文绑定的资源，例如数据库连接。此类代码通常不应将资源绑定到工作单元上，因为这是事务管理器的职责。另一种选择是，如果启用了事务同步，则在首次使用时懒绑定，以执行跨越任意数量资源的事务。",
+      "count": 2
+    },
+    {
+      "source": "Note that transaction synchronizations receive the read-only flag\nas argument for the <code>beforeCommit</code> callback, to be able\nto suppress change detection on commit. The present method is meant\nto be used for earlier read-only checks.",
+      "translation": "注意，事务同步会将只读标志作为参数传递给 `<code>beforeCommit</code>` 回调，以便在提交时抑制变更检测。当前方法旨在用于更早的只读检查。",
+      "count": 2
+    },
+    {
+      "source": "Supports one resource per key without overwriting, that is, a resource needs\nto be removed before a new one can be set for the same key.\nSupports a list of transaction synchronizations if synchronization is active.",
+      "translation": "每个键仅支持一个资源，且不会覆盖现有资源；即对于同一键，必须先移除原有资源才能设置新资源。如果同步功能已启用，则支持一组事务同步。",
+      "count": 2
+    },
+    {
+      "source": "Synchronization is for example used to always return the same resources within\na transaction, for example, a database connection for any given connection factory.",
+      "translation": "同步例如用于在事务内始终返回相同的资源，例如，对于任何给定的连接工厂的数据库连接。",
+      "count": 2
+    },
+    {
+      "source": "Mainly intended for code that wants to bind resources or synchronizations.",
+      "translation": "主要用于希望绑定资源或同步的代码。",
+      "count": 2
+    },
+    {
+      "source": "To be called by resource management code that wants to differentiate\nbetween active transaction synchronization (with or without a backing\nresource transaction; also on PROPAGATION_SUPPORTS) and an actual\ntransaction being active (with a backing resource transaction;\non PROPAGATION_REQUIRED, PROPAGATION_REQUIRES_NEW, etc).",
+      "translation": "由资源管理代码调用，以便区分活动的事务同步（无论是否有后备资源事务；也包括 PROPAGATION_SUPPORTS）与实际活动的事务（带有后备资源事务；包括 PROPAGATION_REQUIRED、PROPAGATION_REQUIRES_NEW 等）。",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"TransactionSynchronizationManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>TransactionSynchronizationManager</code></a> that is associated with\nthe current transaction context.",
+      "translation": "获取与当前事务上下文关联的<a href=\"TransactionSynchronizationManager.html\" title=\"class in org.springframework.transaction.reactive\"><code>TransactionSynchronizationManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the current transaction, or <code>null</code> if none set.\nTo be called by resource management code for optimizations per use case,\nfor example to optimize fetch strategies for specific named transactions.",
+      "translation": "返回当前事务的名称，如果未设置则返回 `<code>null</code>`。\n由资源管理代码调用以针对特定用例进行优化，例如为特定命名的事务优化获取策略。",
+      "count": 2
+    },
+    {
+      "source": "Bind the given resource for the given key to the current context.",
+      "translation": "将给定键对应的资源绑定到当前上下文。",
+      "count": 2
+    },
+    {
+      "source": "Clear the entire transaction synchronization state:\nregistered synchronizations as well as the various transaction characteristics.",
+      "translation": "清除整个事务同步状态：包括已注册的同步以及各种事务特性。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve a resource for the given key that is bound to the current context.",
+      "translation": "检索与当前上下文绑定的给定键的资源。",
+      "count": 2
+    },
+    {
+      "source": "Return an unmodifiable snapshot list of all registered synchronizations\nfor the current context.",
+      "translation": "返回当前上下文中所有已注册同步的不可变快照列表。",
+      "count": 2
+    },
+    {
+      "source": "Check if there is a resource for the given key bound to the current context.",
+      "translation": "检查当前上下文中是否已绑定给定键的资源。",
+      "count": 2
+    },
+    {
+      "source": "Return if transaction synchronization is active for the current context.\nCan be called before register to avoid unnecessary instance creation.",
+      "translation": "返回当前上下文中事务同步是否处于活动状态。可在注册之前调用，以避免不必要的实例创建。",
+      "count": 2
+    },
+    {
+      "source": "Activate transaction synchronization for the current context.\nCalled by a transaction manager on transaction begin.",
+      "translation": "为当前上下文激活事务同步。\n由事务管理器在事务开始时调用。",
+      "count": 2
+    },
+    {
+      "source": "Deactivate transaction synchronization for the current context.\nCalled by the transaction manager on transaction cleanup.",
+      "translation": "取消当前上下文的交易同步。由事务管理器在清理交易时调用。",
+      "count": 2
+    },
+    {
+      "source": "Expose the name of the current transaction, if any.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "暴露当前事务的名称（如果有）。由事务管理器在事务开始和清理时调用。",
+      "count": 2
+    },
+    {
+      "source": "Expose a read-only flag for the current transaction.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "为当前事务暴露一个只读标志。由事务管理器在事务开始和清理时调用。",
+      "count": 2
+    },
+    {
+      "source": "Expose an isolation level for the current transaction.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "暴露当前事务的隔离级别。由事务管理器在事务开始和清理时调用。",
+      "count": 2
+    },
+    {
+      "source": "Return the isolation level for the current transaction, if any.\nTo be called by resource management code when preparing a newly\ncreated resource (for example, a R2DBC Connection).",
+      "translation": "返回当前事务（如果有）的隔离级别。由资源管理代码在准备新创建的资源（例如，一个 R2DBC 连接）时调用。",
+      "count": 2
+    },
+    {
+      "source": "Expose whether there currently is an actual transaction active.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "暴露当前是否有实际事务处于活动状态。\n由事务管理器在事务开始和清理时调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>readOnly</code> - <code>true</code> to mark the current transaction\nas read-only; <code>false</code> to reset such a read-only marker",
+      "translation": "<code>readOnly</code> - 将当前事务标记为只读时设为 <code>true</code>；重置此类只读标记时设为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>active</code> - <code>true</code> to mark the current context as being associated\nwith an actual transaction; <code>false</code> to reset that marker",
+      "translation": "<code>active</code> - 将当前上下文标记为与真实事务关联时设为 <code>true</code>；重置该标记时设为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../NoTransactionException.html\" title=\"class in org.springframework.transaction\">NoTransactionException</a></code> - if the transaction info cannot be found —\nfor example, because the method was invoked outside a managed transaction",
+      "translation": "<code><a href=\"../NoTransactionException.html\" title=\"class in org.springframework.transaction\">NoTransactionException</a></code> - 如果找不到事务信息（例如，因为该方法是在未管理的事务之外调用的）—",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if there is already a value bound to the context",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果上下文中已经绑定了一个值",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if there is no value bound to the context",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果上下文中没有绑定值",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if synchronization is already active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果同步已经处于活动状态",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if transaction synchronization is not active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果事务同步未激活",
+      "count": 2
+    },
+    {
+      "source": "<code>name</code> - the name of the transaction, or <code>null</code> to reset it",
+      "translation": "<code>name</code> - 事务的名称，或为 <code>null</code> 以重置它",
+      "count": 2
+    },
+    {
+      "source": "<code>isolationLevel</code> - the isolation level to expose, according to the\nR2DBC Connection constants (equivalent to the corresponding Spring\nTransactionDefinition constants), or <code>null</code> to reset it",
+      "translation": "`isolationLevel` - 要暴露的隔离级别，根据 R2DBC 连接常量（相当于相应的 Spring TransactionDefinition 常量），或为 `<code>null</code>` 以重置它。",
+      "count": 2
+    },
+    {
+      "source": "a value bound to the current context (usually the active\nresource object), or <code>null</code> if none",
+      "translation": "绑定到当前上下文（通常是活动资源对象）的值，如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key to bind the value to (usually the resource factory)",
+      "translation": "<code>key</code> - 用于绑定值的键（通常是资源工厂）",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the value to bind (usually the active resource object)",
+      "translation": "<code>value</code> - 要绑定的值（通常是活动资源对象）",
+      "count": 2
+    },
+    {
+      "source": "the previously bound value, or <code>null</code> if none bound",
+      "translation": "之前绑定的值，如果没有绑定则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>synchronization</code> - the synchronization object to register",
+      "translation": "<synchronization> - 要注册的同步对象",
+      "count": 2
+    },
+    {
+      "source": "the currently exposed isolation level, according to the\nR2DBC Connection constants (equivalent to the corresponding Spring\nTransactionDefinition constants), or <code>null</code> if none",
+      "translation": "当前暴露的隔离级别，根据 R2DBC 连接常量（相当于相应的 Spring TransactionDefinition 常量），或者如果没有则为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "if there is a value bound to the current context",
+      "translation": "如果当前上下文已绑定值",
+      "count": 2
+    },
+    {
+      "source": "the previously bound value (usually the active resource object)",
+      "translation": "之前绑定的值（通常是活动资源对象）",
+      "count": 2
+    },
+    {
+      "source": "unmodifiable List of TransactionSynchronization instances",
+      "translation": "不可修改的 TransactionSynchronization 实例列表",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the current transaction, or <code>null</code> if none set.",
+      "translation": "返回当前事务的名称，如果未设置则返回 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Deactivate transaction synchronization for the current context.",
+      "translation": "取消当前上下文的交易同步。",
+      "count": 1
+    },
+    {
+      "source": "Return the isolation level for the current transaction, if any.",
+      "translation": "返回当前事务（如果有）的隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Activate transaction synchronization for the current context.",
+      "translation": "激活当前上下文的交易同步。",
+      "count": 1
+    },
+    {
+      "source": "Return whether there currently is an actual transaction active.",
+      "translation": "返回当前是否有实际事务处于活动状态。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the current transaction is marked as read-only.",
+      "translation": "返回当前事务是否被标记为只读。",
+      "count": 1
+    },
+    {
+      "source": "Return if transaction synchronization is active for the current context.",
+      "translation": "返回当前上下文中事务同步是否处于活动状态。",
+      "count": 1
+    },
+    {
+      "source": "Register a new transaction synchronization for the current context.",
+      "translation": "为当前上下文注册一个新的事务同步。",
+      "count": 1
+    },
+    {
+      "source": "Expose whether there currently is an actual transaction active.",
+      "translation": "暴露当前是否有实际事务处于活动状态。",
+      "count": 1
+    },
+    {
+      "source": "Expose an isolation level for the current transaction.",
+      "translation": "暴露当前事务的隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Expose the name of the current transaction, if any.",
+      "translation": "如果存在当前事务，则暴露其名称。",
+      "count": 1
+    },
+    {
+      "source": "Expose a read-only flag for the current transaction.",
+      "translation": "为当前事务暴露一个只读标志。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Juergen Hoeller",
+      "translation": "Mark Paluch，Juergen Hoeller",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-04-14 16:36:30",
+  "updated_at": "2026-04-14 16:36:30",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 29,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9333333333333333,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "as of Spring Framework 6.0, in favor of methods defined in the\n<a href=\"SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI",
+      "translation": "自 Spring Framework 6.0 起，转而使用在 <a href=\"SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> SPI 中定义的方法。",
+      "count": 5
+    },
+    {
+      "source": "Clients of a <code>ContextLoader</code> should call\n<a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations()</code></a> prior to\ncalling <a href=\"#loadContext(java.lang.String...)\"><code>loadContext()</code></a> in case the\n<code>ContextLoader</code> provides custom support for modifying or generating locations.\nThe results of <a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations()</code></a>\nshould then be supplied to <a href=\"#loadContext(java.lang.String...)\"><code>loadContext()</code></a>.",
+      "translation": "`ContextLoader` 的客户端应在调用<a href=\"#processLocations(java.lang.Class,java.lang.String...)\"><code>processLocations()</code></a>之后，再调用<a href=\"#loadContext(java.lang.String...)\"><code>loadContext()</code></a>，以防 `ContextLoader` 提供用于修改或生成位置的自定义支持。随后，应将 `<code>processLocations()</code>` 的结果提供给 `<code>loadContext()</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE</strong>: <code>ContextLoader</code> is a marker interface and should\nnot be implemented directly. Implement <a href=\"SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a> instead of this\ninterface in order to provide support for annotated classes, active bean definition\nprofiles, application context initializers, and various other features not supported\nby methods defined in the <code>ContextLoader</code> SPI.",
+      "translation": "<strong>注意</strong>：<code>ContextLoader</code> 是一个标记接口，不应直接实现。请改为实现<a href=\"SmartContextLoader.html\" title=\"interface in org.springframework.test.context\"><code>SmartContextLoader</code></a>接口，以支持注解类、激活的 Bean 定义配置文件、应用程序上下文初始化器以及<code>ContextLoader</code> SPI 中定义的方法所不支持的各种其他功能。",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations should register annotation configuration\nprocessors with bean factories of application contexts loaded by this\n<code>ContextLoader</code>. Beans will therefore automatically be candidates\nfor annotation-based dependency injection using\n<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>,\n<code>@Resource</code>, and\n<code>@Inject</code>.",
+      "translation": "具体实现应注册注解配置处理器到由本 <code>ContextLoader</code> 加载的应用程序上下文的 Bean 工厂中。因此，Bean 将自动成为基于注解的依赖注入（使用 <a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>、<code>@Resource</code> 和 <code>@Inject</code>）的候选者。",
+      "count": 2
+    },
+    {
+      "source": "Any <code>ApplicationContext</code> loaded by a <code>ContextLoader</code>\n<strong>must</strong> register a JVM shutdown hook for itself. Unless the\ncontext gets closed early, all context instances will be automatically\nclosed on JVM shutdown. This allows for freeing external resources held by\nbeans within the context, for example, temporary files.",
+      "translation": "任何由 <code>ContextLoader</code> 加载的 <code>ApplicationContext</code> <strong>必须</strong> 为其注册一个 JVM 关闭钩子。除非上下文被提前关闭，否则所有上下文实例将在 JVM 关闭时自动关闭。这可以释放由上下文中 bean 持有的外部资源，例如临时文件。",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations may choose to modify the supplied locations,\ngenerate new locations, or simply return the supplied locations unchanged.",
+      "translation": "具体实现可以选择修改提供的路径、生成新路径，或者简单地原样返回提供的路径。",
+      "count": 2
+    },
+    {
+      "source": "Configuration locations are generally considered to be classpath\nresources by default.",
+      "translation": "配置位置通常默认被视为类路径资源。",
+      "count": 2
+    },
+    {
+      "source": "<code>locations</code> - the unmodified locations to use for loading the\napplication context (can be <code>null</code> or empty)",
+      "translation": "<code>locations</code> - 用于加载应用程序上下文的未修改位置（可以为 <code>null</code> 或为空）",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - the class with which the locations are associated: used to\ndetermine how to process the supplied locations",
+      "translation": "<code>clazz</code> - 与这些位置关联的类：用于确定如何处理提供的这些位置。",
+      "count": 2
+    },
+    {
+      "source": "<code>locations</code> - the resource locations to use to load the application context",
+      "translation": "<code>locations</code> - 用于加载应用程序上下文的资源位置",
+      "count": 2
+    },
+    {
+      "source": "an array of application context resource locations",
+      "translation": "应用程序上下文资源位置的数组",
+      "count": 2
+    },
+    {
+      "source": "Concrete implementations must provide a <code>public</code> no-args constructor.",
+      "translation": "具体实现必须提供一个<code>public</code>无参构造函数。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - if context loading failed",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 如果上下文加载失败",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Juergen Hoeller",
+      "translation": "Sam Brannen，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "a new application context",
+      "translation": "一个新的应用程序上下文",
+      "count": 1
+    }
+  ]
+}

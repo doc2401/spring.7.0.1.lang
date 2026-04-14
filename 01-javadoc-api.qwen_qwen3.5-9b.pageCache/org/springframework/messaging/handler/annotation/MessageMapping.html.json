@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 15:31:27",
+  "updated_at": "2026-04-14 15:31:27",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 44,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8333333333333333,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "Specializations of this annotation include\n<a href=\"../../simp/annotation/SubscribeMapping.html\" title=\"annotation interface in org.springframework.messaging.simp.annotation\"><code>@SubscribeMapping</code></a>\n(for example, STOMP subscriptions) and\n<a href=\"../../rsocket/annotation/ConnectMapping.html\" title=\"annotation interface in org.springframework.messaging.rsocket.annotation\"><code>@ConnectMapping</code></a>\n(for example, RSocket connections). Both narrow the primary mapping further and also match\nagainst the message type. Both can be combined with a type-level\n<code>@MessageMapping</code> that declares a common pattern prefix (or prefixes).",
+      "translation": "此注解的特化包括 <a href=\"../../simp/annotation/SubscribeMapping.html\" title=\"annotation interface in org.springframework.messaging.simp.annotation\"><code>@SubscribeMapping</code></a>（例如，STOMP 订阅）和 <a href=\"../../rsocket/annotation/ConnectMapping.html\" title=\"annotation interface in org.springframework.messaging.rsocket.annotation\"><code>@ConnectMapping</code></a>（例如，RSocket 连接）。两者进一步细化了主映射，并且还会根据消息类型进行匹配。两者都可以与声明公共模式前缀（或前缀）的类型级 <code>@MessageMapping</code> 结合使用。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> When using controller interfaces (for example, for AOP proxying),\nmake sure to consistently put <i>all</i> your mapping annotations - such as\n<code>@MessageMapping</code> and <code>@SubscribeMapping</code> - on\nthe controller <i>interface</i> rather than on the implementation class.",
+      "translation": "<b>注意：</b> 在使用控制器接口（例如用于 AOP 代理）时，请确保始终将所有的映射注解——如<code>@MessageMapping</code>和<code>@SubscribeMapping</code>——放在控制器<i>接口</i>上，而不是实现类上。",
+      "count": 2
+    },
+    {
+      "source": "for RSocket this is either\n<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a> or\n<a href=\"../../../web/util/pattern/PathPattern.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPattern</code></a>\nbased pattern, depending on which is configured, matched to the route of\nthe stream request.",
+      "translation": "对于 RSocket，这要么是\n<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a> 或\n<a href=\"../../../web/util/pattern/PathPattern.html\" title=\"class in org.springframework.web.util.pattern\"><code>PathPattern</code></a>\n基于的模式，具体取决于配置的是哪一种，该模式将匹配流请求的路由。",
+      "count": 2
+    },
+    {
+      "source": "For STOMP over WebSocket messages this is\n<a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a>-style\npatterns matched against the STOMP destination of the message.",
+      "translation": "对于基于 WebSocket 的 STOMP 消息，这些是类似于 <a href=\"../../../util/AntPathMatcher.html\" title=\"class in org.springframework.util\"><code>AntPathMatcher</code></a> 的模式，它们与消息的 STOMP 目标进行匹配。",
+      "count": 2
+    },
+    {
+      "source": "<code>@MessageMapping</code> methods support the following arguments:",
+      "translation": "<code>@MessageMapping</code> 方法支持以下参数：",
+      "count": 2
+    },
+    {
+      "source": "Return value handling depends on the processing scenario:",
+      "translation": "返回值处理取决于处理场景：",
+      "count": 2
+    },
+    {
+      "source": "For further details on the use of this annotation in different contexts,\nsee the following sections of the Spring Framework reference:",
+      "translation": "有关此注解在不同上下文中的使用详情，请参阅 Spring Framework 参考文档的以下部分：",
+      "count": 2
+    },
+    {
+      "source": "If no patterns are configured, the mapping matches all destinations.",
+      "translation": "如果未配置任何模式，映射将匹配所有目标。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"Payload.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>@Payload</code></a> method argument to extract the payload of a\nmessage and have it de-serialized to the declared target type.\n<code>@Payload</code> arguments may also be annotated with Validation annotations\nsuch as <a href=\"../../../validation/annotation/Validated.html\" title=\"annotation interface in org.springframework.validation.annotation\"><code>@Validated</code></a>\nand will then have JSR-303 validation applied. Keep in mind the annotation\nis not required to be present as it is assumed by default for arguments not\nhandled otherwise.",
+      "translation": "<a href=\"Payload.html\" title=\"org.springframework.messaging.handler.annotation 中的注解接口\"><code>@Payload</code></a> 方法参数用于提取消息的负载并将其反序列化为声明的目标类型。<code>@Payload</code> 参数还可以使用验证注解（如 <a href=\"../../../validation/annotation/Validated.html\" title=\"org.springframework.validation.annotation 中的注解接口\"><code>@Validated</code></a>）进行标注，从而应用 JSR-303 验证。请注意，该注解并非必需，因为对于未通过其他方式处理的参数，默认假定其存在。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"Header.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>@Header</code></a> method argument to extract a specific message\nheader value and have a\n<a href=\"../../../core/convert/converter/Converter.html\" title=\"interface in org.springframework.core.convert.converter\"><code>Converter</code></a>\napplied to it to convert the value to the declared target type.",
+      "translation": "<a href=\"Header.html\" title=\"org.springframework.messaging.handler.annotation 中的注解接口\"><code>@Header</code></a> 方法参数用于提取特定的消息头值，并应用一个\n<a href=\"../../../core/convert/converter/Converter.html\" title=\"org.springframework.core.convert.converter 中的接口\"><code>Converter</code></a>\n将其转换为声明的目标类型。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"Headers.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>@Headers</code></a> method argument that is also assignable to\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> for access to all headers.",
+      "translation": "<a href=\"Headers.html\" title=\"org.springframework.messaging.handler.annotation 中的注解接口\"><code>@Headers</code></a> 方法参数，且该参数也可赋值给 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a> 以访问所有标头。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../../support/MessageHeaderAccessor.html\" title=\"class in org.springframework.messaging.support\"><code>MessageHeaderAccessor</code></a> method argument for access to all headers.\nIn some processing scenarios, like STOMP over WebSocket, this may also be\na specialization such as\n<a href=\"../../simp/SimpMessageHeaderAccessor.html\" title=\"class in org.springframework.messaging.simp\"><code>SimpMessageHeaderAccessor</code></a>.",
+      "translation": "<a href=\"../../support/MessageHeaderAccessor.html\" title=\"class in org.springframework.messaging.support\"><code>MessageHeaderAccessor</code></a> 方法参数用于访问所有标头。在某些处理场景中，例如基于 WebSocket 的 STOMP，这也可能是 <a href=\"../../simp/SimpMessageHeaderAccessor.html\" title=\"class in org.springframework.messaging.simp\"><code>SimpMessageHeaderAccessor</code></a> 这样的特化类。",
+      "count": 2
+    },
+    {
+      "source": "STOMP over WebSocket -- the value is turned into a message and sent to a\ndefault response destination or to a custom destination specified with an\n<a href=\"SendTo.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>@SendTo</code></a> or\n<a href=\"../../simp/annotation/SendToUser.html\" title=\"annotation interface in org.springframework.messaging.simp.annotation\"><code>@SendToUser</code></a>\nannotation.",
+      "translation": "STOMP over WebSocket -- 该值会被转换为消息并发送到默认响应目的地，或发送到由 `<a href=\"SendTo.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>@SendTo</code></a>` 或 `<a href=\"../../simp/annotation/SendToUser.html\" title=\"annotation interface in org.springframework.messaging.simp.annotation\"><code>@SendToUser</code></a>` 注解指定的自定义目的地。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"DestinationVariable.html\" title=\"annotation interface in org.springframework.messaging.handler.annotation\"><code>@DestinationVariable</code></a> method argument for\naccess to template variable values extracted from the message destination,\nfor example, <code>/hotels/{hotel}</code>. Variable values may also be converted from\nString to the declared method argument type, if needed.",
+      "translation": "<a href=\"DestinationVariable.html\" title=\"org.springframework.messaging.handler.annotation 注解接口\"><code>@DestinationVariable</code></a> 方法参数用于访问从消息目的地提取的模板变量值，例如 <code>/hotels/{hotel}</code>。如有需要，变量值还可从 String 转换为声明的方法参数类型。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../../MessageHeaders.html\" title=\"class in org.springframework.messaging\"><code>MessageHeaders</code></a>\nmethod argument for access to all headers.",
+      "translation": "<a href=\"../../MessageHeaders.html\" title=\"class in org.springframework.messaging\"><code>MessageHeaders</code></a> 方法参数用于访问所有标头。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Message&lt;T&gt;</code></a> for access to body and headers with the body\nde-serialized if necessary to match the declared type.",
+      "translation": "<a href=\"../../Message.html\" title=\"interface in org.springframework.messaging\"><code>Message&lt;T&gt;</code></a> 用于访问主体和标头，必要时将主体反序列化为声明的类型。",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/Principal.html\" title=\"class or interface in java.security\"><code>Principal</code></a> method arguments are supported in\nsome processing scenarios such as STOMP over WebSocket. It reflects the\nauthenticated user.",
+      "translation": "<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/Principal.html\" title=\"class or interface in java.security\"><code>Principal</code></a> 方法参数在部分处理场景中受到支持，例如基于 WebSocket 的 STOMP。它反映了已认证的用户。",
+      "count": 2
+    },
+    {
+      "source": "STOMP over WebSocket\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#websocket-stomp-handle-annotations\">\n\"Annotated Controllers\"</a>.",
+      "translation": "WebSocket 上的 STOMP\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#websocket-stomp-handle-annotations\">\n“注解控制器”</a>。",
+      "count": 2
+    },
+    {
+      "source": "RSocket\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#rsocket-annot-responders\">\n\"Annotated Responders\"</a>.",
+      "translation": "RSocket\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#rsocket-annot-responders\">\n“注解响应器”</a>。",
+      "count": 2
+    },
+    {
+      "source": "RSocket -- the response is used to reply to the stream request.",
+      "translation": "RSocket -- 响应用于回复流请求。",
+      "count": 2
+    },
+    {
+      "source": "Destination-based mapping expressed by this annotation.",
+      "translation": "由该注解表示的基于目标的映射。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev",
+      "translation": "Rossen Stoyanchev",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

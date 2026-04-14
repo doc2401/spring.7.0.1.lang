@@ -1,0 +1,301 @@
+{
+  "created_at": "2026-04-14 16:23:57",
+  "updated_at": "2026-04-14 16:23:57",
+  "stats": {
+    "total_entries": 57,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 84,
+    "entries_with_hits": 57,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4736842105263157,
+    "usage_percentage": 0.0057
+  },
+  "items": [
+    {
+      "source": "Register the specified <a href=\"ScheduledExecutorTask.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorTasks</code></a>\non the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>.",
+      "translation": "注册指定的 <a href=\"ScheduledExecutorTask.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorTasks</code></a> 到给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "For an alternative, you may set up a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a> instance\ndirectly using constructor injection, or use a factory method definition that points\nto the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html\" title=\"class or interface in java.util.concurrent\"><code>Executors</code></a> class.\n<b>This is strongly recommended in particular for common <code>@Bean</code> methods in\nconfiguration classes, where this <code>FactoryBean</code> variant would force you to\nreturn the <code>FactoryBean</code> type instead of <code>ScheduledExecutorService</code>.</b>",
+      "translation": "作为替代方案，您可以直接使用构造函数注入设置一个 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a>` 实例，或者使用指向 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executors.html\" title=\"class or interface in java.util.concurrent\"><code>Executors</code></a>` 类的工厂方法定义。<b>对于配置类中常见的 `<code>@Bean</code>` 方法，特别强烈推荐使用此方法，因为这种 `<code>FactoryBean</code>` 变体将迫使您返回 `<code>FactoryBean</code>` 类型，而不是 `<code>ScheduledExecutorService</code>`。</b>",
+      "count": 2
+    },
+    {
+      "source": "Allows for registration of <a href=\"ScheduledExecutorTask.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorTasks</code></a>,\nautomatically starting the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> on initialization and\ncanceling it on destruction of the context. In scenarios that only require static\nregistration of tasks at startup, there is no need to access the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> instance itself in application code at all;\n<code>ScheduledExecutorFactoryBean</code> is then just being used for lifecycle integration.",
+      "translation": "支持注册 `<a href=\"ScheduledExecutorTask.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorTasks</code></a>`，在初始化时自动启动 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>`，并在上下文销毁时取消它。在仅需在启动时静态注册任务的场景中，应用程序代码根本无需访问 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>` 实例本身；此时仅使用 `<code>ScheduledExecutorFactoryBean</code>` 进行生命周期集成。",
+      "count": 2
+    },
+    {
+      "source": "<b>WARNING:</b> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnables</code></a> submitted via a native\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> are removed from\nthe execution schedule once they throw an exception. If you would prefer\nto continue execution after such an exception, switch this FactoryBean's\n<a href=\"#setContinueScheduledExecutionAfterException(boolean)\"><code>\"continueScheduledExecutionAfterException\"</code></a>\nproperty to \"true\".",
+      "translation": "<b>警告：</b> 通过原生 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> 提交的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> 在抛出异常后将从执行计划中移除。如果您希望在出现此类异常后继续执行，请将此 FactoryBean 的 <a href=\"#setContinueScheduledExecutionAfterException(boolean)\"><code>\"continueScheduledExecutionAfterException\"</code></a> 属性设置为 \"true\"。",
+      "count": 2
+    },
+    {
+      "source": "Note that <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>\nuses a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> instance that is shared between repeated executions,\nin contrast to Quartz which instantiates a new Job for each execution.",
+      "translation": "请注意，<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> 使用一个在重复执行之间共享的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html\" title=\"class or interface in java.lang\"><code>Runnable</code></a> 实例，而 Quartz 则为每次执行实例化一个新的 Job。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation creates a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a>.\nCan be overridden in subclasses to provide custom <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> instances.",
+      "translation": "默认实现会创建一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a>。\n可以在子类中重写以提供自定义的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Wraps the task's Runnable in a\n<a href=\"../support/DelegatingErrorHandlingRunnable.html\" title=\"class in org.springframework.scheduling.support\"><code>DelegatingErrorHandlingRunnable</code></a>\nthat will catch and log the Exception. If necessary, it will suppress the\nException according to the\n<a href=\"#setContinueScheduledExecutionAfterException(boolean)\"><code>\"continueScheduledExecutionAfterException\"</code></a>\nflag.",
+      "translation": "将任务的 `Runnable` 包装在 `<a href=\"../support/DelegatingErrorHandlingRunnable.html\" title=\"class in org.springframework.scheduling.support\"><code>DelegatingErrorHandlingRunnable</code></a>` 中，该包装器会捕获并记录异常。如有必要，它将根据 `<a href=\"#setContinueScheduledExecutionAfterException(boolean)\"><code>\"continueScheduledExecutionAfterException\"</code></a>` 标志抑制该异常。",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>false</code>. If set to <code>true</code>, the target executor will be\nswitched into remove-on-cancel mode (if possible, with a soft fallback otherwise).",
+      "translation": "默认值为 `<code>false</code>`。如果设置为 `<code>true</code>`，目标执行器将切换到取消时移除模式（如果可能，否则使用软回退）。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", matching the native behavior of a\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>.\nSwitch this flag to \"true\" for exception-proof execution of each task,\ncontinuing scheduled execution as in the case of successful execution.",
+      "translation": "默认为 \"false\"，与 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> 的原生行为一致。将此标志切换为 \"true\" 可实现每个任务的异常防护执行，在任务成功执行的情况下继续按计划执行。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"false\", exposing the raw executor as bean reference.\nSwitch this flag to \"true\" to strictly prevent clients from\nmodifying the executor's configuration.",
+      "translation": "默认为 \"false\"，将原始执行器暴露为 Bean 引用。将此标志切换为 \"true\" 以严格防止客户端修改执行器的配置。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">ExecutorConfigurationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">ExecutorConfigurationSupport</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Set the ScheduledExecutorService's pool size.\nDefault is 1.",
+      "translation": "设置 ScheduledExecutorService 的池大小。默认值为 1。",
+      "count": 2
+    },
+    {
+      "source": "Register a list of ScheduledExecutorTask objects with the ScheduledExecutorService\nthat this FactoryBean creates. Depending on each ScheduledExecutorTask's settings,\nit will be registered via one of ScheduledExecutorService's schedule methods.",
+      "translation": "将一组 `ScheduledExecutorTask` 对象注册到此 `FactoryBean` 创建的 `ScheduledExecutorService`。根据每个 `ScheduledExecutorTask` 的设置，它将通过 `ScheduledExecutorService` 的某个 `schedule` 方法进行注册。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#setPoolSize(int)\"><code>setPoolSize(int)</code></a></li>\n<li><a href=\"#setRemoveOnCancelPolicy(boolean)\"><code>setRemoveOnCancelPolicy(boolean)</code></a></li>\n<li><a href=\"ExecutorConfigurationSupport.html#setThreadFactory(java.util.concurrent.ThreadFactory)\"><code>ExecutorConfigurationSupport.setThreadFactory(ThreadFactory)</code></a></li>\n<li><a href=\"ScheduledExecutorTask.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorTask</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#setPoolSize(int)\"><code>setPoolSize(int)</code></a></li>\n<li><a href=\"#setRemoveOnCancelPolicy(boolean)\"><code>setRemoveOnCancelPolicy(boolean)</code></a></li>\n<li><a href=\"ExecutorConfigurationSupport.html#setThreadFactory(java.util.concurrent.ThreadFactory)\"><code>ExecutorConfigurationSupport.setThreadFactory(ThreadFactory)</code></a></li>\n<li><a href=\"ScheduledExecutorTask.html\" title=\"class in org.springframework.scheduling.concurrent\"><code>ScheduledExecutorTask</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean\">Serialized Form</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\">ScheduledExecutorService</a>&gt;</code>",
+      "translation": "`<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\">ScheduledExecutorService</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\">ScheduledExecutorService</a>&gt;</code>",
+      "translation": "`<a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\">ScheduledExecutorService</a>&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\">ScheduledExecutorService</a>&gt;</code>",
+      "translation": "<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">isSingleton</a></code> 接口 <code><a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\">ScheduledExecutorService</a>&gt;</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">initializeExecutor</a></code> in class <code><a href=\"ExecutorConfigurationSupport.html\" title=\"class in org.springframework.scheduling.concurrent\">ExecutorConfigurationSupport</a></code>",
+      "translation": "`ExecutorConfigurationSupport` 类中的<a href=\"ExecutorConfigurationSupport.html#initializeExecutor(java.util.concurrent.ThreadFactory,java.util.concurrent.RejectedExecutionHandler)\">initializeExecutor</a>",
+      "count": 2
+    },
+    {
+      "source": "<code>threadFactory</code> - the ThreadFactory to use",
+      "translation": "<code>threadFactory</code> - 要使用的 ThreadFactory",
+      "count": 2
+    },
+    {
+      "source": "<code>rejectedExecutionHandler</code> - the RejectedExecutionHandler to use",
+      "translation": "<code>rejectedExecutionHandler</code> - 要使用的 RejectedExecutionHandler",
+      "count": 2
+    },
+    {
+      "source": "<code>poolSize</code> - the specified pool size",
+      "translation": "<code>poolSize</code> - 指定的池大小",
+      "count": 2
+    },
+    {
+      "source": "<code>tasks</code> - the specified ScheduledExecutorTasks (never empty)",
+      "translation": "<code>tasks</code> - 指定的 ScheduledExecutorTasks（永不为空）",
+      "count": 2
+    },
+    {
+      "source": "<code>executor</code> - the ScheduledExecutorService to register the tasks on.",
+      "translation": "<code>executor</code> - 用于注册任务的 ScheduledExecutorService。",
+      "count": 2
+    },
+    {
+      "source": "<code>task</code> - the ScheduledExecutorTask to schedule",
+      "translation": "<code>task</code> - 要调度的 ScheduledExecutorTask。",
+      "count": 2
+    },
+    {
+      "source": "a new ScheduledExecutorService instance",
+      "translation": "一个新的 ScheduledExecutorService 实例",
+      "count": 2
+    },
+    {
+      "source": "the actual Runnable to schedule (may be a decorator)",
+      "translation": "要调度的实际 Runnable（可能是装饰器）",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b> 此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"../../beans/factory/SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口可以通过其<a href=\"../../beans/factory/SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a>方法明确指示独立实例。未实现此扩展接口的普通<a href=\"../../beans/factory/FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>实现，如果<code>isSingleton()</code>实现返回 <code>false</code>，则假定其始终返回独立实例。",
+      "count": 1
+    },
+    {
+      "source": "FactoryBeans are allowed to return <code>null</code> objects. The bean\nfactory will consider this as a normal value to be used and will not throw\na <code>FactoryBeanNotInitializedException</code> in this case. However,\nFactoryBean implementations are encouraged to throw\n<code>FactoryBeanNotInitializedException</code> themselves, as appropriate.",
+      "translation": "FactoryBeans 允许返回 `<code>null</code>` 对象。在此情况下，Bean 工厂会将其视为正常值并使用该值，而不会抛出 `<code>FactoryBeanNotInitializedException</code>`。不过，建议 FactoryBean 实现类根据具体情况自行抛出 `<code>FactoryBeanNotInitializedException</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "As with a <a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>, this allows support for both the\nSingleton and Prototype design patterns.",
+      "translation": "与<a href=\"../../beans/factory/BeanFactory.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>一样，这支持单例和原型两种设计模式。",
+      "count": 1
+    },
+    {
+      "source": "If this FactoryBean is not fully initialized yet at the time of\nthe call (for example because it is involved in a circular reference),\nthrow a corresponding <a href=\"../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>.",
+      "translation": "如果在此调用时该 FactoryBean 尚未完全初始化（例如因为它涉及循环引用），则抛出相应的 <a href=\"../../beans/factory/FactoryBeanNotInitializedException.html\" title=\"class in org.springframework.beans.factory\"><code>FactoryBeanNotInitializedException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> Autowiring will simply ignore FactoryBeans that return\n<code>null</code> here. Therefore, it is highly recommended to implement\nthis method properly, using the current state of the FactoryBean.",
+      "translation": "<b>注意：</b> 自动装配将简单地忽略在此处返回`null`的 FactoryBean。因此，强烈建议使用 FactoryBean 的当前状态正确实现此方法。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "This method can be called <i>before</i> this FactoryBean has\nbeen fully initialized. It must not rely on state created during\ninitialization; of course, it can still use such state if available.",
+      "translation": "此方法可以在该 FactoryBean 完全初始化<i>之前</i>被调用。它不能依赖在初始化期间创建的状态；当然，如果可用，它仍然可以使用此类状态。",
+      "count": 1
+    },
+    {
+      "source": "This allows one to check for specific types of beans without\ninstantiating objects, for example on autowiring.",
+      "translation": "这允许在例如自动装配时，无需实例化对象即可检查特定类型的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "In the case of implementations that create a singleton object,\nthis method should try to avoid singleton creation as far as possible;\nit should rather estimate the type in advance.\nFor prototypes, returning a meaningful type here is advisable too.",
+      "translation": "对于创建单例对象的实现，此方法应尽可能避免创建单例；相反，它应预先估算类型。对于原型对象，在此处返回有意义的类型也是可取的。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "Create the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> instance.\nCalled by <code>afterPropertiesSet</code>.",
+      "translation": "创建 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a>` 实例。\n由 `<code>afterPropertiesSet</code>` 调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#getObject()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#getObjectType()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../beans/factory/FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a> instance.",
+      "translation": "创建一个新的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledExecutorService</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "Create the target <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> instance.",
+      "translation": "创建目标 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html\" title=\"class or interface in java.util.concurrent\"><code>ExecutorService</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"../../beans/factory/FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 1
+    },
+    {
+      "source": "Set the remove-on-cancel mode on <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a>.",
+      "translation": "在 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.html\" title=\"class or interface in java.util.concurrent\"><code>ScheduledThreadPoolExecutor</code></a>` 上设置取消时移除模式。",
+      "count": 1
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Return an instance (possibly shared or independent) of the object\nmanaged by this factory.",
+      "translation": "返回由该工厂管理的对象的实例（可能是共享的或独立的）。",
+      "count": 1
+    },
+    {
+      "source": "Determine the actual Runnable to schedule for the given task.",
+      "translation": "确定要调度的给定任务的实际 Runnable。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether to continue the execution of a scheduled task\nafter it threw an exception.",
+      "translation": "指定在调度任务抛出异常后是否继续执行。",
+      "count": 1
+    },
+    {
+      "source": "Specify whether this FactoryBean should expose an unconfigurable\ndecorator for the created executor.",
+      "translation": "指定此 FactoryBean 是否应为创建的 Executor 暴露一个不可配置的装饰器。",
+      "count": 1
+    },
+    {
+      "source": "Set the ScheduledExecutorService's pool size.",
+      "translation": "设置 ScheduledExecutorService 的池大小。",
+      "count": 1
+    },
+    {
+      "source": "Register a list of ScheduledExecutorTask objects with the ScheduledExecutorService\nthat this FactoryBean creates.",
+      "translation": "将 ScheduledExecutorTask 对象列表注册到此 FactoryBean 创建的 ScheduledExecutorService。",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "a new ExecutorService instance",
+      "translation": "一个新的 ExecutorService 实例",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    }
+  ]
+}

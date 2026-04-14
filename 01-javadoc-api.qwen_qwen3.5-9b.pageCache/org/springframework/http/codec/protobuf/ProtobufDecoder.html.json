@@ -1,0 +1,261 @@
+{
+  "created_at": "2026-04-14 14:10:22",
+  "updated_at": "2026-04-14 14:10:22",
+  "stats": {
+    "total_entries": 49,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 76,
+    "entries_with_hits": 49,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5510204081632653,
+    "usage_percentage": 0.0049
+  },
+  "items": [
+    {
+      "source": "Return the <a href=\"#setMaxMessageSize(int)\"><code>configured</code></a> message size limit.",
+      "translation": "返回<a href=\"#setMaxMessageSize(int)\"><code>configured</code></a>消息大小限制。",
+      "count": 3
+    },
+    {
+      "source": "<code>hints</code> - additional information about how to do decode",
+      "translation": "<code>hints</code> - 关于如何进行解码的附加信息",
+      "count": 3
+    },
+    {
+      "source": "Flux deserialized via\n<a href=\"#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decode(Publisher, ResolvableType, MimeType, Map)</code></a> are expected to use\n<a href=\"https://developers.google.com/protocol-buffers/docs/techniques?hl=en#streaming\">\ndelimited Protobuf messages</a> with the size of each message specified before\nthe message itself. Single values deserialized via\n<a href=\"#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decodeToMono(Publisher, ResolvableType, MimeType, Map)</code></a> are expected\nto use regular Protobuf message format (without the size prepended before\nthe message).",
+      "translation": "通过 `<a href=\"#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decode(Publisher, ResolvableType, MimeType, Map)</code></a>` 反序列化的 Flux 预期使用<a href=\"https://developers.google.com/protocol-buffers/docs/techniques?hl=en#streaming\">定长 Protobuf 消息</a>，每条消息的大小在消息本身之前指定。通过 `<a href=\"#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\"><code>decodeToMono(Publisher, ResolvableType, MimeType, Map)</code></a>` 反序列化的单个值预期使用常规 Protobuf 消息格式（不在消息前附加大小）。",
+      "count": 2
+    },
+    {
+      "source": "This decoder requires Protobuf 3 or higher, and supports\n<code>\"application/x-protobuf\"</code> and <code>\"application/octet-stream\"</code> with\nthe official <code>\"com.google.protobuf:protobuf-java\"</code> library.",
+      "translation": "此解码器需要 Protobuf 3 或更高版本，并支持使用官方 `<code>\"com.google.protobuf:protobuf-java\"</code>` 库处理 `<code>\"application/x-protobuf\"</code>` 和 `<code>\"application/octet-stream\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Notice that default instance of Protobuf message produces empty byte\narray, so <code>Mono.just(Msg.getDefaultInstance())</code> sent over the network\nwill be deserialized as an empty <code>Mono</code>.",
+      "translation": "注意，Protobuf 消息的默认实例会产生一个空字节数组，因此通过网络发送的 `<code>Mono.just(Msg.getDefaultInstance())</code>` 将被反序列化为一个空的 `<code>Mono</code>`。",
+      "count": 2
+    },
+    {
+      "source": "To generate <code>Message</code> Java classes, you need to install the\n<code>protoc</code> binary.",
+      "translation": "要生成 `<code>Message</code>` Java 类，您需要安装 `<code>protoc</code>` 二进制文件。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is set to 256K.",
+      "translation": "默认情况下，该值设置为 256K。",
+      "count": 2
+    },
+    {
+      "source": "Decode a <a href=\"../../../core/io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a> input stream into a Flux of <code>T</code>.",
+      "translation": "将 `<a href=\"../../../core/io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a>` 输入流解码为 `T` 的 Flux。",
+      "count": 2
+    },
+    {
+      "source": "Decode a <a href=\"../../../core/io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a> input stream into a Mono of <code>T</code>.",
+      "translation": "将 `<a href=\"../../../core/io/buffer/DataBuffer.html\" title=\"interface in org.springframework.core.io.buffer\"><code>DataBuffer</code></a>` 输入流解码为 `T` 的 Mono。",
+      "count": 2
+    },
+    {
+      "source": "Use merge methods on <code>Message.Builder</code> to read a single message\nfrom the given <code>DataBuffer</code>.",
+      "translation": "使用<code>Message.Builder</code>的合并方法从给定的<code>DataBuffer</code>中读取单个消息。",
+      "count": 2
+    },
+    {
+      "source": "Construct a new <code>ProtobufDecoder</code>.",
+      "translation": "构建一个新的<code>ProtobufDecoder</code>。",
+      "count": 2
+    },
+    {
+      "source": "Construct a new <code>ProtobufDecoder</code> with an initializer that allows the\nregistration of message extensions.",
+      "translation": "构建一个带有初始化器的新<code>ProtobufDecoder</code>，该初始化器允许注册消息扩展。",
+      "count": 2
+    },
+    {
+      "source": "The default max size for aggregating messages.",
+      "translation": "聚合消息的默认最大大小。",
+      "count": 2
+    },
+    {
+      "source": "Whether the decoder supports the given target element type and the MIME\ntype of the source stream.",
+      "translation": "解码器是否支持给定的目标元素类型以及源流的 MIME 类型。",
+      "count": 2
+    },
+    {
+      "source": "Return a reader for message size information encoded in the input stream.",
+      "translation": "返回一个用于读取输入流中编码的消息大小信息的阅读器。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\">canDecode</a></code> in interface <code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>",
+      "translation": "`canDecode` 在接口 `<a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../core/codec/Decoder.html#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decode</a></code> in interface <code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>",
+      "translation": "`<code><a href=\"../../../core/codec/Decoder.html#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decode</a></code>` 在接口 `<code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>elementType</code> - the expected type of elements in the output stream;\nthis type must have been previously passed to the <a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\"><code>Decoder.canDecode(ResolvableType, MimeType)</code></a>\nmethod and it must have returned <code>true</code>.",
+      "translation": "<code>elementType</code> - 输出流中元素的预期类型；此类型必须已先前传递给<a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\"><code>Decoder.canDecode(ResolvableType, MimeType)</code></a>方法，且该方法必须返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../core/codec/Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decodeToMono</a></code> in interface <code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>",
+      "translation": "`<a href=\"../../../core/codec/Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decodeToMono</a>` 在接口 `<code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../core/codec/Decoder.html#decode(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decode</a></code> in interface <code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>",
+      "translation": "`<code><a href=\"../../../core/codec/Decoder.html#decode(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">decode</a></code>` 在接口 `<code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../../core/codec/Decoder.html#getDecodableMimeTypes()\">getDecodableMimeTypes</a></code> in interface <code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>",
+      "translation": "`<a href=\"../../../core/codec/Decoder.html#getDecodableMimeTypes()\">getDecodableMimeTypes</a>` 在接口 `<code><a href=\"../../../core/codec/Decoder.html\" title=\"interface in org.springframework.core.codec\">Decoder</a>&lt;com.google.protobuf.Message&gt;</code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>inputStream</code> - the <code>DataBuffer</code> input stream to decode",
+      "translation": "<code>inputStream</code> - 要解码的 <code>DataBuffer</code> 输入流",
+      "count": 2
+    },
+    {
+      "source": "<code>extensionRegistry</code> - a message extension registry",
+      "translation": "<code>extensionRegistry</code> - 消息扩展注册表",
+      "count": 2
+    },
+    {
+      "source": "<code>maxMessageSize</code> - the max size per message, or -1 for unlimited",
+      "translation": "<code>maxMessageSize</code> - 每条消息的最大大小，或为 -1 表示无限制。",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeType</code> - the MIME type associated with the input stream (optional)",
+      "translation": "<code>mimeType</code> - 与输入流关联的 MIME 类型（可选）",
+      "count": 2
+    },
+    {
+      "source": "Return the list of MIME types supported by this Decoder. The list may not\napply to every possible target element type and calls to this method\nshould typically be guarded via <a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\"><code>canDecode(elementType, null)</code></a>. The list may also exclude MIME types\nsupported only for a specific element type. Alternatively, use\n<a href=\"../../../core/codec/Decoder.html#getDecodableMimeTypes(org.springframework.core.ResolvableType)\"><code>Decoder.getDecodableMimeTypes(ResolvableType)</code></a> for a more precise list.",
+      "translation": "返回此 Decoder 支持的 MIME 类型列表。该列表可能不适用于所有可能的目标元素类型，因此调用此方法时通常应通过 <a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\"><code>canDecode(elementType, null)</code></a> 进行防护。该列表也可能仅包含针对特定元素类型支持的 MIME 类型。或者，使用 <a href=\"../../../core/codec/Decoder.html#getDecodableMimeTypes(org.springframework.core.ResolvableType)\"><code>Decoder.getDecodableMimeTypes(ResolvableType)</code></a> 获取更精确的列表。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/codec/Decoder.html#canDecode(org.springframework.core.ResolvableType,org.springframework.util.MimeType)\">Decoder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/codec/Decoder.html#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/codec/Decoder.html#decode(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/codec/Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/codec/Decoder.html#decodeToMono(org.reactivestreams.Publisher,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/codec/Decoder.html#decode(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/codec/Decoder.html#decode(org.springframework.core.io.buffer.DataBuffer,org.springframework.core.ResolvableType,org.springframework.util.MimeType,java.util.Map)\">Decoder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../core/codec/Decoder.html#getDecodableMimeTypes()\">Decoder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../core/codec/Decoder.html#getDecodableMimeTypes()\">Decoder</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Component to read the size of a message.",
+      "translation": "用于读取消息大小的组件。",
+      "count": 1
+    },
+    {
+      "source": "Decode a data buffer to an Object of type T.",
+      "translation": "将数据缓冲区解码为类型为 T 的对象。",
+      "count": 1
+    },
+    {
+      "source": "Return the list of MIME types supported by this Decoder.",
+      "translation": "返回此解码器支持的 MIME 类型列表。",
+      "count": 1
+    },
+    {
+      "source": "The max size allowed per message.",
+      "translation": "每条消息允许的最大大小。",
+      "count": 1
+    },
+    {
+      "source": "Decode a data buffer to an Object of type T. This is useful for scenarios,\nthat distinct messages (or events) are decoded and handled individually,\nin fully aggregated form.",
+      "translation": "将数据缓冲区解码为类型为 T 的对象。这在需要以完全聚合的形式单独解码和处理不同消息（或事件）的场景中非常有用。",
+      "count": 1
+    },
+    {
+      "source": "<code>mimeType</code> - the mime type associated with the stream to decode\n(can be <code>null</code> if not specified)",
+      "translation": "<code>mimeType</code> - 与要解码的流关联的 MIME 类型（如果未指定，可以为 <code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if supported, <code>false</code> otherwise",
+      "translation": "如果支持则为<code>true</code>，否则为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>dataBuffer</code> - the <code>DataBuffer</code> to decode",
+      "translation": "<code>dataBuffer</code> - 要解码的 <code>DataBuffer</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>elementType</code> - the target element type for the output stream",
+      "translation": "<code>elementType</code> - 输出流的目标元素类型",
+      "count": 1
+    },
+    {
+      "source": "<code>targetType</code> - the expected output type",
+      "translation": "<code>targetType</code> - 预期的输出类型",
+      "count": 1
+    },
+    {
+      "source": "<code>mimeType</code> - the MIME type associated with the data",
+      "translation": "<code>mimeType</code> - 与数据关联的 MIME 类型",
+      "count": 1
+    },
+    {
+      "source": "the decoded value, possibly <code>null</code>",
+      "translation": "解码后的值，可能为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Sebastien Deleuze",
+      "translation": "Sebastien Deleuze",
+      "count": 1
+    },
+    {
+      "source": "the output stream with decoded elements",
+      "translation": "带有解码元素的输出流",
+      "count": 1
+    },
+    {
+      "source": "the output stream with the decoded element",
+      "translation": "将解码后的元素写入输出流。",
+      "count": 1
+    },
+    {
+      "source": "the list of supported MIME types",
+      "translation": "支持的 MIME 类型列表",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

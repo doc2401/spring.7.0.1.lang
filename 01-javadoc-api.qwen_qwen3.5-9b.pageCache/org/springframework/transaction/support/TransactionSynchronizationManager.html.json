@@ -1,0 +1,336 @@
+{
+  "created_at": "2026-04-14 17:39:20",
+  "updated_at": "2026-04-14 17:39:20",
+  "stats": {
+    "total_entries": 64,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 97,
+    "entries_with_hits": 64,
+    "entries_without_hits": 0,
+    "hit_rate": 1.515625,
+    "usage_percentage": 0.0063999999999999994
+  },
+  "items": [
+    {
+      "source": "This explicit step is only necessary with <a href=\"#bindResource(java.lang.Object,java.lang.Object)\"><code>bindResource(Object, Object)</code></a>.\nFor automatic unbinding, consider <a href=\"#bindSynchronizedResource(java.lang.Object,java.lang.Object)\"><code>bindSynchronizedResource(Object, Object)</code></a>.",
+      "translation": "此显式步骤仅在需要<a href=\"#bindResource(java.lang.Object,java.lang.Object)\"><code>bindResource(Object, Object)</code></a>时是必要的。对于自动解绑，请考虑使用<a href=\"#bindSynchronizedResource(java.lang.Object,java.lang.Object)\"><code>bindSynchronizedResource(Object, Object)</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Transaction synchronization must be activated and deactivated by a transaction\nmanager via <a href=\"#initSynchronization()\"><code>initSynchronization()</code></a> and <a href=\"#clearSynchronization()\"><code>clearSynchronization()</code></a>.\nThis is automatically supported by <a href=\"AbstractPlatformTransactionManager.html\" title=\"class in org.springframework.transaction.support\"><code>AbstractPlatformTransactionManager</code></a>,\nand thus by all standard Spring transaction managers, such as\n<a href=\"../jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> and\n<a href=\"../../jdbc/datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>.",
+      "translation": "事务同步必须由事务管理器通过 <a href=\"#initSynchronization()\"><code>initSynchronization()</code></a> 和 <a href=\"#clearSynchronization()\"><code>clearSynchronization()</code></a> 激活和停用。\n<a href=\"AbstractPlatformTransactionManager.html\" title=\"class in org.springframework.transaction.support\"><code>AbstractPlatformTransactionManager</code></a> 自动支持此功能，因此所有标准的 Spring 事务管理器（例如 <a href=\"../jta/JtaTransactionManager.html\" title=\"class in org.springframework.transaction.jta\"><code>JtaTransactionManager</code></a> 和 <a href=\"../../jdbc/datasource/DataSourceTransactionManager.html\" title=\"class in org.springframework.jdbc.datasource\"><code>DataSourceTransactionManager</code></a>）也都支持此功能。",
+      "count": 2
+    },
+    {
+      "source": "<b>Note: Any bound resource needs to get explicitly unbound through\n<a href=\"#unbindResource(java.lang.Object)\"><code>unbindResource(Object)</code></a>. For automatic unbinding after transaction\ncompletion, use <a href=\"#bindSynchronizedResource(java.lang.Object,java.lang.Object)\"><code>bindSynchronizedResource(Object, Object)</code></a> instead.</b>",
+      "translation": "<b>注意：任何已绑定的资源都需要通过<a href=\"#unbindResource(java.lang.Object)\"><code>unbindResource(Object)</code></a>显式解除绑定。若要在事务完成后自动解除绑定，请使用<a href=\"#bindSynchronizedResource(java.lang.Object,java.lang.Object)\"><code>bindSynchronizedResource(Object, Object)</code></a>。</b>",
+      "count": 2
+    },
+    {
+      "source": "This is effectively a programmatic way to register a transaction-scoped\nresource, similar to the BeanFactory-driven <a href=\"SimpleTransactionScope.html\" title=\"class in org.springframework.transaction.support\"><code>SimpleTransactionScope</code></a>.",
+      "translation": "这实际上是一种以编程方式注册事务范围资源的方法，类似于由 BeanFactory 驱动的<a href=\"SimpleTransactionScope.html\" title=\"class in org.springframework.transaction.support\"><code>SimpleTransactionScope</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Resource management code should check for thread-bound resources, for example, JDBC\nConnections or Hibernate Sessions, via <code>getResource</code>. Such code is\nnormally not supposed to bind resources to threads, as this is the responsibility\nof transaction managers. A further option is to lazily bind on first use if\ntransaction synchronization is active, for performing transactions that span\nan arbitrary number of resources.",
+      "translation": "资源管理代码应通过 <code>getResource</code> 检查线程绑定的资源，例如 JDBC 连接或 Hibernate Session。此类代码通常不应将资源绑定到线程上，因为这是事务管理器的职责。另一种选择是在活动的事务同步期间首次使用时进行懒绑定，以执行跨越任意数量资源的事务。",
+      "count": 2
+    },
+    {
+      "source": "Mainly for debugging purposes. Resource managers should always invoke\n<code>hasResource</code> for a specific resource key that they are interested in.",
+      "translation": "主要用于调试目的。资源管理器应始终调用针对其感兴趣的特定资源键的`hasResource` 方法。",
+      "count": 2
+    },
+    {
+      "source": "Note that transaction synchronizations receive the read-only flag\nas argument for the <code>beforeCommit</code> callback, to be able\nto suppress change detection on commit. The present method is meant\nto be used for earlier read-only checks, for example to set the\nflush mode of a Hibernate Session to \"FlushMode.MANUAL\" upfront.",
+      "translation": "请注意，事务同步会将只读标志作为参数传递给 `<code>beforeCommit</code>` 回调，以便在提交时抑制变更检测。当前方法旨在用于更早的只读检查，例如预先将 Hibernate Session 的刷新模式设置为 \"FlushMode.MANUAL\"。",
+      "count": 2
+    },
+    {
+      "source": "Synchronization is for example used to always return the same resources\nwithin a JTA transaction, for example, a JDBC Connection or a Hibernate Session for\nany given DataSource or SessionFactory, respectively.",
+      "translation": "同步用于在 JTA 事务中始终返回相同的资源，例如，对于给定的 DataSource 或 SessionFactory，分别返回 JDBC 连接或 Hibernate Session。",
+      "count": 2
+    },
+    {
+      "source": "An existing value bound for the given key will be preserved and re-bound\nafter transaction completion, restoring the state before this bind call.",
+      "translation": "给定键已绑定的现有值将在事务完成后被保留并重新绑定，从而恢复此绑定调用之前的状态。",
+      "count": 2
+    },
+    {
+      "source": "Clear the entire transaction synchronization state for the current thread:\nregistered synchronizations as well as the various transaction characteristics.",
+      "translation": "清除当前线程的整个事务同步状态，包括已注册的同步以及各种事务特性。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve a resource for the given key that is bound to the current thread.",
+      "translation": "检索绑定到当前线程的给定键的资源。",
+      "count": 2
+    },
+    {
+      "source": "Return an unmodifiable snapshot list of all registered synchronizations\nfor the current thread.",
+      "translation": "返回当前线程所有已注册同步操作的不可变快照列表。",
+      "count": 2
+    },
+    {
+      "source": "Check if there is a resource for the given key bound to the current thread.",
+      "translation": "检查是否已为当前线程绑定给定键的资源。",
+      "count": 2
+    },
+    {
+      "source": "Unbind a resource for the given key from the current thread.",
+      "translation": "从当前线程解绑给定键的资源。",
+      "count": 2
+    },
+    {
+      "source": "Return if transaction synchronization is active for the current thread.\nCan be called before register to avoid unnecessary instance creation.",
+      "translation": "返回当前线程的事务同步是否处于激活状态。可在注册之前调用，以避免不必要的实例创建。",
+      "count": 2
+    },
+    {
+      "source": "Activate transaction synchronization for the current thread.\nCalled by a transaction manager on transaction begin.",
+      "translation": "为当前线程激活事务同步。由事务管理器在事务开始时调用。",
+      "count": 2
+    },
+    {
+      "source": "Deactivate transaction synchronization for the current thread.\nCalled by the transaction manager on transaction cleanup.",
+      "translation": "为当前线程停用事务同步。\n由事务管理器在事务清理时调用。",
+      "count": 2
+    },
+    {
+      "source": "Return the isolation level for the current transaction, if any.\nTo be called by resource management code when preparing a newly\ncreated resource (for example, a JDBC Connection).",
+      "translation": "返回当前事务的隔离级别（如果有）。由资源管理代码在准备新创建的资源（例如 JDBC 连接）时调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>active</code> - <code>true</code> to mark the current thread as being associated\nwith an actual transaction; <code>false</code> to reset that marker",
+      "translation": "<code>active</code> - 将当前线程标记为与真实事务关联时设为 <code>true</code>；重置该标记时设为 <code>false</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if there is already a value bound to the thread",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果线程已经绑定了一个值",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if transaction synchronization is not active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果事务同步未激活",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if there is no value bound to the thread",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果线程未绑定任何值",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if synchronization is not active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果未激活同步",
+      "count": 2
+    },
+    {
+      "source": "<code>isolationLevel</code> - the isolation level to expose, according to the\nJDBC Connection constants (equivalent to the corresponding Spring\nTransactionDefinition constants), or <code>null</code> to reset it",
+      "translation": "`isolationLevel` - 要暴露的隔离级别，根据 JDBC 连接常量（相当于相应的 Spring TransactionDefinition 常量），或为 `<code>null</code>` 以重置它。",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key to check (usually the resource factory)",
+      "translation": "<code>key</code> - 要检查的键（通常是资源工厂）",
+      "count": 2
+    },
+    {
+      "source": "a value bound to the current thread (usually the active\nresource object), or <code>null</code> if none",
+      "translation": "绑定到当前线程（通常是活动资源对象）的值，如果没有则为<code>null</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key to bind the value to (usually the resource factory)",
+      "translation": "<code>key</code> - 用于绑定值的键（通常是资源工厂）",
+      "count": 2
+    },
+    {
+      "source": "<code>value</code> - the value to bind (usually the active resource object)",
+      "translation": "<code>value</code> - 要绑定的值（通常是活动资源对象）",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - the key to unbind (usually the resource factory)",
+      "translation": "<code>key</code> - 要解绑的键（通常是资源工厂）",
+      "count": 2
+    },
+    {
+      "source": "the currently exposed isolation level, according to the\nJDBC Connection constants (equivalent to the corresponding Spring\nTransactionDefinition constants), or <code>null</code> if none",
+      "translation": "当前暴露的隔离级别，根据 JDBC 连接常量（相当于相应的 Spring TransactionDefinition 常量），或者如果没有则为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "a Map with resource keys (usually the resource factory) and resource\nvalues (usually the active resource object), or an empty Map if there are\ncurrently no resources bound",
+      "translation": "一个包含资源键（通常是资源工厂）和资源值（通常是当前活动的资源对象）的 Map，或者如果当前没有绑定任何资源，则为空 Map。",
+      "count": 2
+    },
+    {
+      "source": "if there is a value bound to the current thread",
+      "translation": "如果当前线程已绑定一个值",
+      "count": 2
+    },
+    {
+      "source": "Resource management code should only register synchronizations when this\nmanager is active, which can be checked via <a href=\"#isSynchronizationActive()\"><code>isSynchronizationActive()</code></a>;\nit should perform immediate resource cleanup else. If transaction synchronization\nisn't active, there is either no current transaction, or the transaction manager\ndoesn't support transaction synchronization.",
+      "translation": "资源管理代码应仅在管理器处于活动状态时注册同步，可通过<a href=\"#isSynchronizationActive()\"><code>isSynchronizationActive()</code></a>进行检查；否则应立即执行资源清理。如果事务同步未激活，则当前没有事务，或者事务管理器不支持事务同步。",
+      "count": 1
+    },
+    {
+      "source": "Note that synchronizations can implement the\n<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a> interface.\nThey will be executed in an order according to their order value (if any).",
+      "translation": "注意，同步化可以实现<a href=\"../../core/Ordered.html\" title=\"interface in org.springframework.core\"><code>Ordered</code></a>接口。它们将根据其顺序值（如果有）按顺序执行。",
+      "count": 1
+    },
+    {
+      "source": "Supports one resource per key without overwriting, that is, a resource needs\nto be removed before a new one can be set for the same key.\nSupports a list of transaction synchronizations if synchronization is active.",
+      "translation": "每个键仅支持一个资源，且不会覆盖现有资源；即对于同一键，必须先移除原有资源才能设置新资源。如果同步功能已启用，则支持一组事务同步。",
+      "count": 1
+    },
+    {
+      "source": "To be called by resource management code that wants to differentiate\nbetween active transaction synchronization (with or without a backing\nresource transaction; also on PROPAGATION_SUPPORTS) and an actual\ntransaction being active (with a backing resource transaction;\non PROPAGATION_REQUIRED, PROPAGATION_REQUIRES_NEW, etc).",
+      "translation": "由资源管理代码调用，以便区分活动的事务同步（无论是否有后备资源事务；也包括 PROPAGATION_SUPPORTS）与实际活动的事务（带有后备资源事务；包括 PROPAGATION_REQUIRED、PROPAGATION_REQUIRES_NEW 等）。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the current transaction, or <code>null</code> if none set.",
+      "translation": "返回当前事务的名称，如果未设置则返回 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the name of the current transaction, or <code>null</code> if none set.\nTo be called by resource management code for optimizations per use case,\nfor example to optimize fetch strategies for specific named transactions.",
+      "translation": "返回当前事务的名称，如果未设置则返回 `<code>null</code>`。\n由资源管理代码调用以针对特定用例进行优化，例如为特定命名的事务优化获取策略。",
+      "count": 1
+    },
+    {
+      "source": "Bind the given resource for the given key to the current thread.",
+      "translation": "将给定键的给定资源绑定到当前线程。",
+      "count": 1
+    },
+    {
+      "source": "Bind the given resource for the given key to the current thread,\nsynchronizing it with the current transaction for automatic unbinding\nafter transaction completion.",
+      "translation": "将给定资源绑定到当前线程的指定键上，并在事务完成后与其同步以实现自动解绑。",
+      "count": 1
+    },
+    {
+      "source": "Deactivate transaction synchronization for the current thread.",
+      "translation": "禁用当前线程的事务同步。",
+      "count": 1
+    },
+    {
+      "source": "Return the isolation level for the current transaction, if any.",
+      "translation": "返回当前事务（如果有）的隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Return all resources that are bound to the current thread.",
+      "translation": "返回绑定到当前线程的所有资源。",
+      "count": 1
+    },
+    {
+      "source": "Activate transaction synchronization for the current thread.",
+      "translation": "为当前线程激活事务同步。",
+      "count": 1
+    },
+    {
+      "source": "Return whether there currently is an actual transaction active.",
+      "translation": "返回当前是否有实际事务处于活动状态。",
+      "count": 1
+    },
+    {
+      "source": "Return whether the current transaction is marked as read-only.",
+      "translation": "返回当前事务是否被标记为只读。",
+      "count": 1
+    },
+    {
+      "source": "Return if transaction synchronization is active for the current thread.",
+      "translation": "返回当前线程的事务同步是否处于活动状态。",
+      "count": 1
+    },
+    {
+      "source": "Register a new transaction synchronization for the current thread.",
+      "translation": "为当前线程注册一个新的事务同步。",
+      "count": 1
+    },
+    {
+      "source": "Expose whether there currently is an actual transaction active.",
+      "translation": "暴露当前是否有实际事务处于活动状态。",
+      "count": 1
+    },
+    {
+      "source": "Expose an isolation level for the current transaction.",
+      "translation": "暴露当前事务的隔离级别。",
+      "count": 1
+    },
+    {
+      "source": "Expose the name of the current transaction, if any.",
+      "translation": "如果存在当前事务，则暴露其名称。",
+      "count": 1
+    },
+    {
+      "source": "Expose a read-only flag for the current transaction.",
+      "translation": "为当前事务暴露一个只读标志。",
+      "count": 1
+    },
+    {
+      "source": "Expose the name of the current transaction, if any.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "暴露当前事务的名称（如果有）。由事务管理器在事务开始和清理时调用。",
+      "count": 1
+    },
+    {
+      "source": "Expose a read-only flag for the current transaction.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "为当前事务暴露一个只读标志。由事务管理器在事务开始和清理时调用。",
+      "count": 1
+    },
+    {
+      "source": "Expose an isolation level for the current transaction.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "暴露当前事务的隔离级别。由事务管理器在事务开始和清理时调用。",
+      "count": 1
+    },
+    {
+      "source": "Expose whether there currently is an actual transaction active.\nCalled by the transaction manager on transaction begin and on cleanup.",
+      "translation": "暴露当前是否有实际事务处于活动状态。\n由事务管理器在事务开始和清理时调用。",
+      "count": 1
+    },
+    {
+      "source": "<code>readOnly</code> - <code>true</code> to mark the current transaction\nas read-only; <code>false</code> to reset such a read-only marker",
+      "translation": "<code>readOnly</code> - 将当前事务标记为只读时设为 <code>true</code>；重置此类只读标记时设为 <code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if synchronization is already active",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果同步已经处于活动状态",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the transaction, or <code>null</code> to reset it",
+      "translation": "<code>name</code> - 事务的名称，或为 <code>null</code> 以重置它",
+      "count": 1
+    },
+    {
+      "source": "the previously bound value, or <code>null</code> if none bound",
+      "translation": "之前绑定的值，如果没有绑定则为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>synchronization</code> - the synchronization object to register",
+      "translation": "<synchronization> - 要注册的同步对象",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller",
+      "translation": "Jürgen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "the previously bound value (usually the active resource object)",
+      "translation": "之前绑定的值（通常是活动资源对象）",
+      "count": 1
+    },
+    {
+      "source": "unmodifiable List of TransactionSynchronization instances",
+      "translation": "不可修改的 TransactionSynchronization 实例列表",
+      "count": 1
+    }
+  ]
+}

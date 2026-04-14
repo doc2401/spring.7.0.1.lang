@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 15:37:22",
+  "updated_at": "2026-04-14 15:37:22",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 55,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8333333333333333,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "Return the underlying <code>RSocket</code> if the requester was created with a\n\"live\" RSocket via <a href=\"#wrap(io.rsocket.RSocket,org.springframework.util.MimeType,org.springframework.util.MimeType,org.springframework.messaging.rsocket.RSocketStrategies)\"><code>wrap(RSocket, MimeType, MimeType, RSocketStrategies)</code></a>\nor via one of the (deprecated) connect methods on the\n<code>RSocketRequester</code> builder, or otherwise return <code>null</code>.",
+      "translation": "如果请求者是通过<a href=\"#wrap(io.rsocket.RSocket,org.springframework.util.MimeType,org.springframework.util.MimeType,org.springframework.messaging.rsocket.RSocketStrategies)\"><code>wrap(RSocket, MimeType, MimeType, RSocketStrategies)</code></a>创建的“活动”RSocket，或者通过<code>RSocketRequester</code>构建器上的某个（已过时）连接方法创建的，则返回底层的<code>RSocket</code>；否则返回<code>null</code>。",
+      "count": 3
+    },
+    {
+      "source": "Begin to specify a new request with the given metadata value, which can\nbe a concrete value or any producer of a single value that can be adapted\nto a <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a> via <a href=\"../../core/ReactiveAdapterRegistry.html\" title=\"class in org.springframework.core\"><code>ReactiveAdapterRegistry</code></a>.",
+      "translation": "开始使用给定的元数据值指定新请求，该值可以是具体值，也可以是任何能够生成单个值的对象，且可通过 <a href=\"../../core/ReactiveAdapterRegistry.html\" title=\"class in org.springframework.core\"><code>ReactiveAdapterRegistry</code></a> 适配为 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Obtain a builder to create a client <a href=\"RSocketRequester.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketRequester</code></a> by connecting\nto an RSocket server.",
+      "translation": "通过连接到 RSocket 服务器来获取用于创建客户端的构建器 <a href=\"RSocketRequester.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketRequester</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Shortcut method that delegates to the same on the underlying\n<a href=\"#rsocketClient()\"><code>rsocketClient()</code></a> in order to close the connection from the\nunderlying transport and notify subscribers.",
+      "translation": "委托给底层 <a href=\"#rsocketClient()\"><code>rsocketClient()</code></a> 的快捷方法，以关闭底层传输的连接并通知订阅者。",
+      "count": 3
+    },
+    {
+      "source": "Shortcut method that delegates to the same on the underlying\n<a href=\"#rsocketClient()\"><code>rsocketClient()</code></a>.",
+      "translation": "委托到基础 <a href=\"#rsocketClient()\"><code>rsocketClient()</code></a> 上的相同快捷方法。",
+      "count": 3
+    },
+    {
+      "source": "Return the configured <a href=\"RSocketStrategies.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketStrategies</code></a>.",
+      "translation": "返回配置的<a href=\"RSocketStrategies.html\" title=\"interface in org.springframework.messaging.rsocket\"><code>RSocketStrategies</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "The route can be a template with placeholders, for example,\n<code>\"flight.{code}\"</code> in which case the supplied route variables are\nformatted via <code>toString()</code> and expanded into the template.\nIf a formatted variable contains a \".\" it is replaced with the escape\nsequence \"%2E\" to avoid treating it as separator by the responder.",
+      "translation": "路由可以是带有占位符的模板，例如 `<code>\"flight.{code}\"</code>`，在这种情况下，提供的路由变量将通过 <code>toString()</code> 格式化并展开到模板中。如果格式化的变量包含 \".\"，则将其替换为转义序列 \"%2E\"，以避免响应器将其视为分隔符。",
+      "count": 2
+    },
+    {
+      "source": "If the connection is set to use composite metadata, the route is\nencoded as <code>\"message/x.rsocket.routing.v0\"</code>. Otherwise, the route\nis encoded according to the mime type for the connection.",
+      "translation": "如果连接设置为使用组合元数据，则路由编码为 `<code>\"message/x.rsocket.routing.v0\"</code>`。否则，路由根据连接的 MIME 类型进行编码。",
+      "count": 2
+    },
+    {
+      "source": "Return the data <code>MimeType</code> selected for the underlying RSocket\nat connection time. On the client side this is configured via\n<a href=\"RSocketRequester.Builder.html#dataMimeType(org.springframework.util.MimeType)\"><code>RSocketRequester.Builder.dataMimeType(MimeType)</code></a> while on the\nserver side it's obtained from the <code>ConnectionSetupPayload</code>.",
+      "translation": "返回在连接时为底层 RSocket 选定的 `MimeType` 数据。在客户端，这通过<a href=\"RSocketRequester.Builder.html#dataMimeType(org.springframework.util.MimeType)\"><code>RSocketRequester.Builder.dataMimeType(MimeType)</code></a>进行配置，而在服务端则从 `ConnectionSetupPayload` 中获取。",
+      "count": 2
+    },
+    {
+      "source": "Return the metadata <code>MimeType</code> selected for the underlying RSocket\nat connection time. On the client side this is configured via\n<a href=\"RSocketRequester.Builder.html#metadataMimeType(org.springframework.util.MimeType)\"><code>RSocketRequester.Builder.metadataMimeType(MimeType)</code></a> while on the\nserver side it's obtained from the <code>ConnectionSetupPayload</code>.",
+      "translation": "返回连接时所选的底层 RSocket 的元数据 `<code>MimeType</code>`。在客户端，这通过<a href=\"RSocketRequester.Builder.html#metadataMimeType(org.springframework.util.MimeType)\"><code>RSocketRequester.Builder.metadataMimeType(MimeType)</code></a>进行配置；而在服务端，则从 `<code>ConnectionSetupPayload</code>` 中获取。",
+      "count": 2
+    },
+    {
+      "source": "Wrap an existing <code>RSocket</code>. Typically for internal framework use,\nto wrap the remote <code>RSocket</code> in a client or server responder, but\nit can also be used to wrap any <code>RSocket</code>.",
+      "translation": "包装现有的 `<code>RSocket</code>`。通常用于内部框架，将远程 `<code>RSocket</code>` 包装在客户端或服务器响应器中，但它也可用于包装任何 `<code>RSocket</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Return the underlying <code>RSocketClient</code> used to make requests with.",
+      "translation": "返回用于发起请求的底层<code>RSocketClient</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>mimeType</code> - the mime type that describes the metadata;\nThis is required for connection using composite metadata. Otherwise, the\nvalue is encoded according to the mime type for the connection and this\nargument may be left as <code>null</code>.",
+      "translation": "`mimeType` - 描述元数据的 MIME 类型；\n使用复合元数据进行连接时需要此参数。否则，该值将根据连接的 MIME 类型进行编码，此时此参数可留为 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<code>dispose</code> in interface <code>reactor.core.Disposable</code>",
+      "translation": "<code>dispose</code> 在接口 <code>reactor.core.Disposable</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>isDisposed</code> in interface <code>reactor.core.Disposable</code>",
+      "translation": "<code>isDisposed</code> 在接口 <code>reactor.core.Disposable</code> 中",
+      "count": 2
+    },
+    {
+      "source": "<code>route</code> - the route expressing a remote handler mapping",
+      "translation": "<code>route</code> - 表示远程处理器映射的路由",
+      "count": 2
+    },
+    {
+      "source": "<code>routeVars</code> - variables to be expanded into the route template",
+      "translation": "<code>routeVars</code> - 要扩展到路由模板的变量",
+      "count": 2
+    },
+    {
+      "source": "<code>metadata</code> - the metadata value to encode",
+      "translation": "<code>metadata</code> - 要编码的元数据值",
+      "count": 2
+    },
+    {
+      "source": "a spec for further defining and executing the request",
+      "translation": "用于进一步定义和执行请求的规范",
+      "count": 2
+    },
+    {
+      "source": "A thin wrapper around a sending <code>RSocket</code> with a fluent API accepting\nand returning higher level Objects for input and for output, along with\nmethods to prepare routing and other metadata.",
+      "translation": "一个围绕发送 `<code>RSocket` 的轻量级包装器，提供流式 API，用于接受和返回更高级别的输入输出对象，并包含准备路由和其他元数据的方法。",
+      "count": 1
+    },
+    {
+      "source": "Return the data <code>MimeType</code> selected for the underlying RSocket\nat connection time.",
+      "translation": "返回在连接时选择的底层 RSocket 的<code>MimeType</code>数据。",
+      "count": 1
+    },
+    {
+      "source": "Return the metadata <code>MimeType</code> selected for the underlying RSocket\nat connection time.",
+      "translation": "返回连接时选择的底层 RSocket 的元数据 `<code>MimeType</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Wrap an existing <code>RSocket</code>.",
+      "translation": "包装现有的<code>RSocket</code>。",
+      "count": 1
+    },
+    {
+      "source": "Builder to create a requester by connecting to a server.",
+      "translation": "用于通过连接到服务器来创建请求者的 Builder。",
+      "count": 1
+    },
+    {
+      "source": "Spec for providing additional composite metadata entries.",
+      "translation": "提供额外复合元数据条目的规范。",
+      "count": 1
+    },
+    {
+      "source": "Spec to declare the input for an RSocket request.",
+      "translation": "用于声明 RSocket 请求输入的规范。",
+      "count": 1
+    },
+    {
+      "source": "Spec to declare the expected output for an RSocket request.",
+      "translation": "用于声明 RSocket 请求预期输出的规范。",
+      "count": 1
+    },
+    {
+      "source": "Begin to specify a new request with the given route to a remote handler.",
+      "translation": "使用给定的路由开始向远程处理器指定一个新请求。",
+      "count": 1
+    },
+    {
+      "source": "Rossen Stoyanchev, Brian Clozel",
+      "translation": "Rossen Stoyanchev，Brian Clozel",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

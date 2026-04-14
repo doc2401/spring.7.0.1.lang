@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-04-14 17:16:21",
+  "updated_at": "2026-04-14 17:16:21",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 95,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 2.021276595744681,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "The returned builder can be wrapped in <code>assertThat</code> to enable\nassertions on the result. For multi-statements assertions, use\n<a href=\"MockMvcTester.MockMvcRequestBuilder.html#exchange()\"><code>exchange()</code></a> to assign the\nresult. To control the time to wait for asynchronous request to complete\non a per-request basis, use\n<a href=\"MockMvcTester.MockMvcRequestBuilder.html#exchange(java.time.Duration)\"><code>exchange(Duration)</code></a>.",
+      "translation": "返回的构建器可以包装在 `<code>assertThat</code>` 中以对结果启用断言。对于多语句断言，请使用 <a href=\"MockMvcTester.MockMvcRequestBuilder.html#exchange()\"><code>exchange()</code></a> 来分配结果。若要按每个请求控制等待异步请求完成的时间，请使用 <a href=\"MockMvcTester.MockMvcRequestBuilder.html#exchange(java.time.Duration)\"><code>exchange(Duration)</code></a>。",
+      "count": 8
+    },
+    {
+      "source": "a request builder for specifying the target URI",
+      "translation": "用于指定目标 URI 的请求构建器",
+      "count": 8
+    },
+    {
+      "source": "Create an instance that delegates to the given <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> instance.",
+      "translation": "创建一个委托给给定<a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> 实例的实例。",
+      "count": 3
+    },
+    {
+      "source": "<code>controllers</code> - one or more <code>@Controller</code> instances or\n<code>@Controller</code> types to test; a type (<code>Class</code>) will be turned\ninto an instance",
+      "translation": "`controllers` - 一个或多个要测试的 `@Controller` 实例或 `@Controller` 类型；类型（`Class`）将被转换为实例。",
+      "count": 3
+    },
+    {
+      "source": "<code>applicationContext</code> - the application context to detect the Spring\nMVC infrastructure and application controllers from",
+      "translation": "<code>applicationContext</code> - 用于检测 Spring MVC 基础设施和应用控制器的应用上下文",
+      "count": 3
+    },
+    {
+      "source": "One main difference between <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> and <code>MockMvcTester</code> is\nthat an unresolved exception is not thrown directly when using\n<code>MockMvcTester</code>. Rather an <a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\"><code>MvcTestResult</code></a> is available with an\n<a href=\"MvcTestResult.html#getUnresolvedException()\">unresolved exception</a>.\nBoth resolved and unresolved exceptions are considered a failure that can\nbe asserted as follows:",
+      "translation": "`MockMvc` 与 `MockMvcTester` 之间的一个主要区别在于，使用 `MockMvcTester` 时不会直接抛出未解决的异常。相反，会有一个 `<a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\"><code>MvcTestResult</code></a>` 可用，其中包含一个 <a href=\"MvcTestResult.html#getUnresolvedException()\">未解决异常</a>。已解决和未解决的异常均被视为失败，可以按如下方式断言：",
+      "count": 2
+    },
+    {
+      "source": "Contrary to <a href=\"../MockMvc.html#perform(org.springframework.test.web.servlet.RequestBuilder)\"><code>MockMvc.perform(RequestBuilder)</code></a>, this does not\nthrow an exception if the request fails with an unresolved exception.\nRather, the result provides the exception, if any. Assuming that a\n<a href=\"../request/MockMvcRequestBuilders.html#post(java.net.URI)\"><code>POST</code></a> request against\n<code>/boom</code> throws an <code>IllegalStateException</code>, the following\nasserts that the invocation has indeed failed with the expected error\nmessage:",
+      "translation": "与<a href=\"../MockMvc.html#perform(org.springframework.test.web.servlet.RequestBuilder)\"><code>MockMvc.perform(RequestBuilder)</code></a>不同，如果请求因未解析的异常而失败，此处不会抛出异常。相反，结果会提供该异常（如果有）。假设对<code>/boom</code>发出的<a href=\"../request/MockMvcRequestBuilders.html#post(java.net.URI)\"><code>POST</code></a>请求抛出了<code>IllegalStateException</code>，则以下断言确认调用确实以预期的错误消息失败：",
+      "count": 2
+    },
+    {
+      "source": "Use this approach if you have a custom <a href=\"../RequestBuilder.html\" title=\"interface in org.springframework.test.web.servlet\"><code>RequestBuilder</code></a> implementation\nthat you'd like to integrate here. This approach is also invoking <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a>\nwithout any additional processing of asynchronous requests.",
+      "translation": "如果您有一个自定义的<a href=\"../RequestBuilder.html\" title=\"interface in org.springframework.test.web.servlet\"><code>RequestBuilder</code></a>实现，并希望在此处集成它，请使用此方法。此方法也会调用<a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a>，而不对异步请求进行任何额外处理。",
+      "count": 2
+    },
+    {
+      "source": "If no further customization of the underlying <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> instance\nis required, use <a href=\"#from(org.springframework.web.context.WebApplicationContext)\"><code>from(WebApplicationContext)</code></a>.",
+      "translation": "如果不需要对底层的<a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a>实例进行进一步自定义，请使用<a href=\"#from(org.springframework.web.context.WebApplicationContext)\"><code>from(WebApplicationContext)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Consider using <a href=\"#from(org.springframework.web.context.WebApplicationContext,java.util.function.Function)\"><code>from(WebApplicationContext, Function)</code></a> if\nfurther customization of the underlying <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> instance is\nrequired.",
+      "translation": "如果需要对底层的<a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a>实例进行进一步自定义，请考虑使用<a href=\"#from(org.springframework.web.context.WebApplicationContext,java.util.function.Function)\"><code>from(WebApplicationContext, Function)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The minimum infrastructure required by the\n<a href=\"../../../../web/servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>\nto serve requests with annotated controllers is created. Consider using\n<a href=\"#of(java.util.Collection,java.util.function.Function)\"><code>of(Collection, Function)</code></a> if additional configuration of the MVC\ninfrastructure is required.",
+      "translation": "由 `<a href=\"../../../../web/servlet/DispatcherServlet.html\" title=\"class in org.springframework.web.servlet\"><code>DispatcherServlet</code></a>` 创建所需的最小基础设施，以提供带有注解的控制器所处理的请求。如果需要额外的 MVC 基础设施配置，请考虑使用 `<a href=\"#of(java.util.Collection,java.util.function.Function)\"><code>of(Collection, Function)</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "Use only this method if you need to provide a custom\n<a href=\"../RequestBuilder.html\" title=\"interface in org.springframework.test.web.servlet\"><code>RequestBuilder</code></a>. For regular cases, users should initiate the\nconfiguration of the request using one of the methods available on\nthis instance, for example, <a href=\"#get()\"><code>get()</code></a> for HTTP GET.",
+      "translation": "仅在需要提供自定义<a href=\"../RequestBuilder.html\" title=\"interface in org.springframework.test.web.servlet\"><code>RequestBuilder</code></a>时使用此方法。对于常规情况，用户应使用此实例上的可用方法之一来发起请求配置，例如，对于 HTTP GET 使用<a href=\"#get()\"><code>get()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If the request is processing asynchronously, <code>exchange</code> waits for\nits completion, either using the\n<a href=\"../../../../mock/web/MockAsyncContext.html#setTimeout(long)\">default\ntimeout</a> or a given one. If you prefer to get the result of an\nasynchronous request immediately, use <code>asyncExchange</code>:",
+      "translation": "如果请求是异步处理的，<code>exchange</code> 会等待其完成，使用<a href=\"../../../../mock/web/MockAsyncContext.html#setTimeout(long)\">默认超时时间</a>或指定的超时时间。如果您希望立即获取异步请求的结果，请使用 <code>asyncExchange</code>：",
+      "count": 2
+    },
+    {
+      "source": "A tester instance can be created from a <a href=\"../../../../web/context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>:",
+      "translation": "可以从 `<a href=\"../../../../web/context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>` 创建测试实例：",
+      "count": 2
+    },
+    {
+      "source": "You can also perform requests using the static builders approach that\n<a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> uses. For instance:",
+      "translation": "您还可以使用与 <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> 使用的静态构建器方法执行请求。例如：",
+      "count": 2
+    },
+    {
+      "source": "Any attempt to access the result with an unresolved exception will\nthrow an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AssertionError.html\" title=\"class or interface in java.lang\"><code>AssertionError</code></a>:",
+      "translation": "任何尝试使用未解决的异常访问结果的操作都会抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AssertionError.html\" title=\"class or interface in java.lang\"><code>AssertionError</code></a>：",
+      "count": 2
+    },
+    {
+      "source": "<code>MockMvcTester</code> can be configured with a list of\n<a href=\"../../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">message converters</a> to allow the response\nbody to be deserialized, rather than asserting on the raw values.",
+      "translation": "<code>MockMvcTester</code> 可以配置为消息转换器列表，以允许反序列化响应正文，而不是对原始值进行断言。",
+      "count": 2
+    },
+    {
+      "source": "Simple, single-statement assertions can be done wrapping the request\nbuilder in <code>assertThat()</code> provides access to assertions. For instance:",
+      "translation": "简单的单语句断言可以通过将请求构建器包装在 `<code>assertThat()`</code> 中来实现，从而访问断言。例如：",
+      "count": 2
+    },
+    {
+      "source": "For more complex scenarios the <a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\">result</a> of the\nexchange can be assigned in a variable to run multiple assertions:",
+      "translation": "对于更复杂的场景，可以将 `<a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\">exchange</a>` 的 <a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\">result</a> 赋值给变量以运行多个断言：",
+      "count": 2
+    },
+    {
+      "source": "A tester can be created in standalone mode by providing the controller\ninstances to include:",
+      "translation": "可以通过提供要包含的控制器实例，以独立模式创建测试器：",
+      "count": 2
+    },
+    {
+      "source": "This allows full control over the instantiation and initialization of\ncontrollers and their dependencies, similar to plain unit tests while\nalso making it possible to test one controller at a time.",
+      "translation": "这允许对控制器及其依赖项的实例化和初始化进行完全控制，类似于普通的单元测试，同时也使得逐个测试每个控制器成为可能。",
+      "count": 2
+    },
+    {
+      "source": "If none are specified, only basic assertions on the response body can\nbe performed. Consider registering a suitable JSON converter for asserting\nagainst JSON data structures.",
+      "translation": "如果未指定任何内容，则只能对响应主体执行基本断言。请考虑注册一个合适的 JSON 转换器以对 JSON 数据结构进行断言。",
+      "count": 2
+    },
+    {
+      "source": "Perform a request using the given <a href=\"../RequestBuilder.html\" title=\"interface in org.springframework.test.web.servlet\"><code>RequestBuilder</code></a> and return a\n<a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\"><code>result</code></a> that can be used with standard\n<code>AssertJ</code> assertions.",
+      "translation": "使用给定的 <a href=\"../RequestBuilder.html\" title=\"interface in org.springframework.test.web.servlet\"><code>RequestBuilder</code></a> 执行请求，并返回一个可与标准 <code>AssertJ</code> 断言一起使用的 <a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\"><code>result</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Shortcut to create an instance using the given fully initialized (i.e.,\n<em>refreshed</em>) <a href=\"../../../../web/context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>.",
+      "translation": "使用给定的完全初始化（即，<em>刷新</em>）的<a href=\"../../../../web/context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>创建实例的快捷方式。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance using the given, fully initialized (i.e.,\n<em>refreshed</em>) <a href=\"../../../../web/context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>.",
+      "translation": "使用给定的、完全初始化（即<em>刷新</em>）的<a href=\"../../../../web/context/WebApplicationContext.html\" title=\"interface in org.springframework.web.context\"><code>WebApplicationContext</code></a>创建实例。",
+      "count": 2
+    },
+    {
+      "source": "Return a new instance using the specified <a href=\"../../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">message converters</a>.",
+      "translation": "使用指定的<a href=\"../../../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\">消息转换器</a>返回一个新实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>customizations</code> - a function that creates a <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a>\ninstance based on a <a href=\"../setup/DefaultMockMvcBuilder.html\" title=\"class in org.springframework.test.web.servlet.setup\"><code>DefaultMockMvcBuilder</code></a>",
+      "translation": "<code>customizations</code> - 一个基于 <a href=\"../setup/DefaultMockMvcBuilder.html\" title=\"class in org.springframework.test.web.servlet.setup\"><code>DefaultMockMvcBuilder</code></a> 创建 <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> 实例的函数",
+      "count": 2
+    },
+    {
+      "source": "<code>customizations</code> - a function that creates a <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> instance\nbased on a <a href=\"../setup/StandaloneMockMvcBuilder.html\" title=\"class in org.springframework.test.web.servlet.setup\"><code>StandaloneMockMvcBuilder</code></a>, typically to configure the\nSpring MVC infrastructure",
+      "translation": "<code>customizations</code> - 一个基于 <a href=\"../setup/StandaloneMockMvcBuilder.html\" title=\"class in org.springframework.test.web.servlet.setup\"><code>StandaloneMockMvcBuilder</code></a> 创建 <a href=\"../MockMvc.html\" title=\"class in org.springframework.test.web.servlet\"><code>MockMvc</code></a> 实例的函数，通常用于配置 Spring MVC 基础设施",
+      "count": 2
+    },
+    {
+      "source": "an <a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\"><code>MvcTestResult</code></a> to be wrapped in <code>assertThat</code>",
+      "translation": "一个 `<a href=\"MvcTestResult.html\" title=\"interface in org.springframework.test.web.servlet.assertj\"><code>MvcTestResult</code></a>` 需要被包装在 `assertThat` 中。",
+      "count": 2
+    },
+    {
+      "source": "<code>mockMvc</code> - the MockMvc instance to delegate calls to",
+      "translation": "<code>mockMvc</code> - 用于委托调用的 MockMvc 实例",
+      "count": 2
+    },
+    {
+      "source": "<code>httpMessageConverters</code> - the message converters to use",
+      "translation": "<code>httpMessageConverters</code> - 要使用的消息转换器",
+      "count": 2
+    },
+    {
+      "source": "<code>requestBuilder</code> - used to prepare the request to execute",
+      "translation": "<code>requestBuilder</code> - 用于准备要执行的请求",
+      "count": 2
+    },
+    {
+      "source": "a new instance using the specified converters",
+      "translation": "使用指定的转换器创建新实例",
+      "count": 2
+    },
+    {
+      "source": "A builder for <a href=\"../../../../mock/web/MockMultipartHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockMultipartHttpServletRequest</code></a> that supports AssertJ.",
+      "translation": "一个支持 AssertJ 的用于构建<code>MockMultipartHttpServletRequest</code>的<a href=\"../../../../mock/web/MockMultipartHttpServletRequest.html\" title=\"class in org.springframework.mock.web\">Builder</a>。",
+      "count": 1
+    },
+    {
+      "source": "A builder for <a href=\"../../../../mock/web/MockHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletRequest</code></a> that supports AssertJ.",
+      "translation": "支持 AssertJ 的 `<a href=\"../../../../mock/web/MockHttpServletRequest.html\" title=\"class in org.springframework.mock.web\"><code>MockHttpServletRequest</code></a>` 构建器。",
+      "count": 1
+    },
+    {
+      "source": "Prepare a request for the specified <code>HttpMethod</code>.",
+      "translation": "为指定的<code>HttpMethod</code>准备请求。",
+      "count": 1
+    },
+    {
+      "source": "Shortcut to create an instance by registering one or more <code>@Controller</code>\ninstances.",
+      "translation": "通过注册一个或多个<code>@Controller</code>实例来创建实例的快捷方式。",
+      "count": 1
+    },
+    {
+      "source": "Create an instance by registering one or more <code>@Controller</code> instances\nand configuring Spring MVC infrastructure programmatically.",
+      "translation": "通过注册一个或多个<code>@Controller</code>实例并编程方式配置 Spring MVC 基础设施来创建实例。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP DELETE request.",
+      "translation": "准备一个 HTTP DELETE 请求。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP GET request.",
+      "translation": "准备一个 HTTP GET 请求。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP HEAD request.",
+      "translation": "准备一个 HTTP HEAD 请求。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP OPTIONS request.",
+      "translation": "准备一个 HTTP OPTIONS 请求。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP PATCH request.",
+      "translation": "准备一个 HTTP PATCH 请求。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP POST request.",
+      "translation": "准备一个 HTTP POST 请求。",
+      "count": 1
+    },
+    {
+      "source": "Prepare an HTTP PUT request.",
+      "translation": "准备一个 HTTP PUT 请求。",
+      "count": 1
+    },
+    {
+      "source": "Stephane Nicoll, Brian Clozel",
+      "translation": "Stephane Nicoll，Brian Clozel",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

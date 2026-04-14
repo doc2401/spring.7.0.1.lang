@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-04-14 11:19:09",
+  "updated_at": "2026-04-14 11:19:09",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 39,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "Note that as it is expected to be used mostly for accessing factory methods,\nthis factory by default operates in a <b>singleton</b> fashion. The first request\nto <a href=\"#getObject()\"><code>getObject()</code></a> by the owning bean factory will cause a method invocation,\nwhose return value will be cached for subsequent requests. An internal\n<a href=\"#setSingleton(boolean)\"><code>singleton</code></a> property may be set to \"false\", to cause this\nfactory to invoke the target method each time it is asked for an object.",
+      "translation": "请注意，由于预期主要用于访问工厂方法，该工厂默认以<b>单例</b>模式运行。拥有者 bean 工厂对<a href=\"#getObject()\"><code>getObject()</code></a>的首次请求将触发方法调用，其返回值将被缓存以供后续请求使用。可以设置内部<a href=\"#setSingleton(boolean)\"><code>singleton</code></a>属性为\"false\"，以导致该工厂在每次被要求获取对象时都调用目标方法。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: If your target method does not produce a result to expose, consider\n<a href=\"MethodInvokingBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>MethodInvokingBean</code></a> instead, which avoids the type determination and\nlifecycle limitations that this <a href=\"MethodInvokingFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>MethodInvokingFactoryBean</code></a> comes with.</b>",
+      "translation": "<b>注意：如果您的目标方法不产生需要暴露的结果，请考虑使用<a href=\"MethodInvokingBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>MethodInvokingBean</code></a>，它可以避免此<a href=\"MethodInvokingFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>MethodInvokingFactoryBean</code></a>所带来的类型确定和生命周期限制。</b>",
+      "count": 2
+    },
+    {
+      "source": "An example (in an XML based bean factory definition) of a bean definition\nwhich uses this class to call a static factory method:",
+      "translation": "一个示例（在基于 XML 的 BeanFactory 定义中）展示如何使用此类调用静态工厂方法：",
+      "count": 2
+    },
+    {
+      "source": "An example of calling a static method then an instance method to get at a\nJava system property. Somewhat verbose, but it works.",
+      "translation": "调用静态方法然后实例方法来获取 Java 系统属性的示例。虽然有些冗长，但它是有效的。",
+      "count": 2
+    },
+    {
+      "source": "Set if a singleton should be created, or a new object on each\n<a href=\"#getObject()\"><code>getObject()</code></a> request otherwise.",
+      "translation": "设置是否应创建单例，否则在每次 `<a href=\"#getObject()\"><code>getObject()</code></a>` 请求时创建新对象。",
+      "count": 2
+    },
+    {
+      "source": "Set if a singleton should be created, or a new object on each\n<a href=\"#getObject()\"><code>getObject()</code></a> request otherwise. Default is \"true\".",
+      "translation": "设置是否应创建单例，否则在每次`<a href=\"#getObject()\"><code>getObject()</code></a>`请求时创建新对象。默认值为\"true\"。",
+      "count": 2
+    },
+    {
+      "source": "Return the type of object that this FactoryBean creates,\nor <code>null</code> if not known in advance.",
+      "translation": "返回此 FactoryBean 创建的对象类型，如果无法预先确定则返回 `<code>null</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Returns the same value each time if the singleton property is set\nto \"true\", otherwise returns the value returned from invoking the\nspecified method on the fly.",
+      "translation": "如果将单例属性设置为\"true\"，则每次返回相同的值；否则，动态调用指定方法并返回其返回值。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"MethodInvokingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in class <code><a href=\"MethodInvokingBean.html\" title=\"class in org.springframework.beans.factory.config\">MethodInvokingBean</a></code>",
+      "translation": "`<code><a href=\"MethodInvokingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 类中的 `<code><a href=\"MethodInvokingBean.html\" title=\"class in org.springframework.beans.factory.config\">MethodInvokingBean</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "This invoker supports any kind of target method. A static method may be specified\nby setting the <a href=\"../../../util/MethodInvoker.html#setTargetMethod(java.lang.String)\"><code>targetMethod</code></a> property to a String representing\nthe static method name, with <a href=\"../../../util/MethodInvoker.html#setTargetClass(java.lang.Class)\"><code>targetClass</code></a> specifying the Class\nthat the static method is defined on. Alternatively, a target instance method may be\nspecified, by setting the <a href=\"../../../util/MethodInvoker.html#setTargetObject(java.lang.Object)\"><code>targetObject</code></a> property as the target\nobject, and the <a href=\"../../../util/MethodInvoker.html#setTargetMethod(java.lang.String)\"><code>targetMethod</code></a> property as the name of the\nmethod to call on that target object. Arguments for the method invocation may be\nspecified by setting the <a href=\"../../../util/MethodInvoker.html#setArguments(java.lang.Object...)\"><code>arguments</code></a> property.",
+      "translation": "此调用器支持任何类型的目标方法。可以通过将 `<a href=\"../../../util/MethodInvoker.html#setTargetMethod(java.lang.String)\"><code>targetMethod</code></a>` 属性设置为表示静态方法名的字符串来指定静态方法，并使用 `<a href=\"../../../util/MethodInvoker.html#setTargetClass(java.lang.Class)\"><code>targetClass</code></a>` 指定定义该静态方法的类。或者，可以通过将 `<a href=\"../../../util/MethodInvoker.html#setTargetObject(java.lang.Object)\"><code>targetObject</code></a>` 属性设置为目标对象，并将 `<a href=\"../../../util/MethodInvoker.html#setTargetMethod(java.lang.String)\"><code>targetMethod</code></a>` 属性设置为要在该目标对象上调用的方法名来指定目标实例方法。可以通过将 `<a href=\"../../../util/MethodInvoker.html#setArguments(java.lang.Object...)\"><code>arguments</code></a>` 属性设置为方法来指定方法调用的参数。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> This method returning <code>false</code> does not\nnecessarily indicate that returned objects are independent instances.\nAn implementation of the extended <a href=\"../SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a> interface\nmay explicitly indicate independent instances through its\n<a href=\"../SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> method. Plain <a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\nimplementations which do not implement this extended interface are\nsimply assumed to always return independent instances if the\n<code>isSingleton()</code> implementation returns <code>false</code>.",
+      "translation": "<b>注意：</b>此方法返回 <code>false</code> 并不一定表示返回的对象是独立实例。实现扩展的<a href=\"../SmartFactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>SmartFactoryBean</code></a>接口的实现可以通过其\n<a href=\"../SmartFactoryBean.html#isPrototype()\"><code>SmartFactoryBean.isPrototype()</code></a> 方法明确指示独立实例。未实现此扩展接口的普通 <a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>\n实现，如果其<code>isSingleton()</code> 实现返回 <code>false</code>，则假定总是返回独立实例。",
+      "count": 1
+    },
+    {
+      "source": "<b>NOTE:</b> If a FactoryBean indicates that it holds a singleton\nobject, the object returned from <code>getObject()</code> might get cached\nby the owning BeanFactory. Hence, do not return <code>true</code>\nunless the FactoryBean always exposes the same reference.",
+      "translation": "<b>注意：</b>如果 FactoryBean 表明它持有一个单例对象，那么从 <code>getObject()</code> 返回的对象可能会被其拥有的 BeanFactory 缓存。因此，除非 FactoryBean 始终暴露相同的引用，否则不要返回 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "This class depends on <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> being called once\nall properties have been set, as per the InitializingBean contract.",
+      "translation": "该类依赖于在根据 InitializingBean 约定设置完所有属性后调用一次<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation returns <code>true</code>, since a\n<code>FactoryBean</code> typically manages a singleton instance.",
+      "translation": "默认实现返回 <code>true</code>，因为 <code>FactoryBean</code> 通常管理一个单例实例。",
+      "count": 1
+    },
+    {
+      "source": "This method allows the bean instance to perform validation of its overall\nconfiguration and final initialization when all bean properties have been set.",
+      "translation": "此方法允许 Bean 实例在其所有属性设置完成后，执行其整体配置验证和最终初始化。",
+      "count": 1
+    },
+    {
+      "source": "The singleton status of the FactoryBean itself will generally\nbe provided by the owning BeanFactory; usually, it has to be\ndefined as singleton there.",
+      "translation": "FactoryBean 本身的单例状态通常由拥有它的 BeanFactory 提供；通常，它必须在那里被定义为单例。",
+      "count": 1
+    },
+    {
+      "source": "Invoked by the containing <code>BeanFactory</code> after it has set all bean properties\nand satisfied <a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>, <code>ApplicationContextAware</code> etc.",
+      "translation": "由包含的<code>BeanFactory</code>在设置所有 bean 属性并满足<a href=\"../BeanFactoryAware.html\" title=\"interface in org.springframework.beans.factory\"><code>BeanFactoryAware</code></a>、<code>ApplicationContextAware</code>等接口后调用。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">InitializingBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../FactoryBean.html#isSingleton()\">FactoryBean</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Is the object managed by this factory a singleton? That is,\nwill <a href=\"../FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> always return the same object\n(a reference that can be cached)?",
+      "translation": "该工厂管理的对象是单例吗？也就是说，<a href=\"../FactoryBean.html#getObject()\"><code>FactoryBean.getObject()</code></a> 是否总是返回同一个对象（一个可以缓存的引用）？",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObject()\">getObject</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<code><a href=\"../FactoryBean.html#getObject()\">getObject</a></code>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "`<a href=\"../FactoryBean.html#getObjectType()\">getObjectType</a>` 在接口 `<code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../FactoryBean.html#isSingleton()\">isSingleton</a></code> in interface <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "<code><a href=\"../FactoryBean.html#isSingleton()\">isSingleton</a></code> 接口 <code><a href=\"../FactoryBean.html\" title=\"interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口 `<code><a href=\"../InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in the event of misconfiguration (such as failure to set an\nessential property) or if initialization fails for any other reason",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - 在配置错误（例如未设置必需属性）或因任何其他原因导致初始化失败的情况下",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"class or interface in java.lang\">Exception</a></code> - in case of creation errors",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html\" title=\"java.lang 中的类或接口\">Exception</a></code> - 在创建错误时",
+      "count": 1
+    },
+    {
+      "source": "an instance of the bean (can be <code>null</code>)",
+      "translation": "bean 的实例（可以为<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "the type of object that this FactoryBean creates,\nor <code>null</code> if not known at the time of the call",
+      "translation": "该 FactoryBean 创建的对象类型，或在调用时未知则为 `<code>null</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Colin Sampaleanu, Juergen Hoeller",
+      "translation": "Colin Sampaleanu，Juergen Hoeller",
+      "count": 1
+    },
+    {
+      "source": "whether the exposed object is a singleton",
+      "translation": "已暴露的对象是否为单例",
+      "count": 1
+    }
+  ]
+}

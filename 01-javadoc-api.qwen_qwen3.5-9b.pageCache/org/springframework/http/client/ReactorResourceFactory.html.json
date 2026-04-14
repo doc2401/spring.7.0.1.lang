@@ -1,0 +1,321 @@
+{
+  "created_at": "2026-04-14 13:58:50",
+  "updated_at": "2026-04-14 13:58:50",
+  "stats": {
+    "total_entries": 61,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 89,
+    "entries_with_hits": 61,
+    "entries_without_hits": 0,
+    "hit_rate": 1.459016393442623,
+    "usage_percentage": 0.0060999999999999995
+  },
+  "items": [
+    {
+      "source": "Lazily tries to start the resources on demand if not initialized yet.",
+      "translation": "如果尚未初始化，则懒式地按需启动资源。",
+      "count": 3
+    },
+    {
+      "source": "<code>supplier</code> - the supplier to use",
+      "translation": "<code>supplier</code> - 要使用的供应商",
+      "count": 3
+    },
+    {
+      "source": "Note that after a <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> stop/restart, new instances of\nthe configured <code>LoopResources</code> and <code>ConnectionProvider</code> are\ncreated, so any references to those should be updated. However, this factory\ndoes not participate in <a href=\"#isPauseable()\">pause</a> scenarios.",
+      "translation": "注意，在 `<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>` 停止/重启后，会创建新配置的<code>LoopResources</code>和<code>ConnectionProvider</code>实例，因此应更新对这些的引用。然而，此工厂不参与<a href=\"#isPauseable()\">暂停</a>场景。",
+      "count": 2
+    },
+    {
+      "source": "Note that this supplier is ignored if <a href=\"#isUseGlobalResources()\"><code>isUseGlobalResources()</code></a>\nis <code>true</code> or once the <a href=\"#setConnectionProvider(reactor.netty.resources.ConnectionProvider)\"><code>ConnectionProvider</code></a>\nis set.",
+      "translation": "请注意，如果<a href=\"#isUseGlobalResources()\"><code>isUseGlobalResources()</code></a>为<code>true</code>，或者一旦设置了<a href=\"#setConnectionProvider(reactor.netty.resources.ConnectionProvider)\"><code>ConnectionProvider</code></a>，则忽略此供应者。",
+      "count": 2
+    },
+    {
+      "source": "Note that this supplier is ignored if <a href=\"#isUseGlobalResources()\"><code>isUseGlobalResources()</code></a>\nis <code>true</code> or once the <a href=\"#setLoopResources(reactor.netty.resources.LoopResources)\"><code>LoopResources</code></a>\nis set.",
+      "translation": "请注意，如果<a href=\"#isUseGlobalResources()\"><code>isUseGlobalResources()</code></a>为<code>true</code>，或者一旦设置了<a href=\"#setLoopResources(reactor.netty.resources.LoopResources)\"><code>LoopResources</code></a>，则忽略此供应者。",
+      "count": 2
+    },
+    {
+      "source": "This factory implements <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a> and is expected typically\nto be declared as a Spring-managed bean.",
+      "translation": "该工厂实现了<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>SmartLifecycle</code></a>，通常预期声明为 Spring 管理的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is set to\n<code>LoopResources.DEFAULT_SHUTDOWN_QUIET_PERIOD</code> which is 2 seconds but\ncan also be overridden with the system property\n<code>ReactorNetty.SHUTDOWN_QUIET_PERIOD</code>.",
+      "translation": "默认情况下，该值设置为 `<code>LoopResources.DEFAULT_SHUTDOWN_QUIET_PERIOD</code>`（即 2 秒），但也可以通过系统属性 `<code>ReactorNetty.SHUTDOWN_QUIET_PERIOD</code>` 进行覆盖。",
+      "count": 2
+    },
+    {
+      "source": "By default, this is set to\n<code>LoopResources.DEFAULT_SHUTDOWN_TIMEOUT</code> which is 15 seconds but\ncan also be overridden with the system property\n<code>ReactorNetty.SHUTDOWN_TIMEOUT</code>.",
+      "translation": "默认情况下，该值设置为 `<code>LoopResources.DEFAULT_SHUTDOWN_TIMEOUT</code>`（即 15 秒），但也可以通过系统属性 `<code>ReactorNetty.SHUTDOWN_TIMEOUT</code>` 进行覆盖。",
+      "count": 2
+    },
+    {
+      "source": "Default is \"true\" in which case this factory initializes and stops the\nglobal Reactor Netty resources within Spring's <code>ApplicationContext</code>\nlifecycle. If set to \"false\" the factory manages its resources independent\nof the global ones.",
+      "translation": "默认为\"true\"，此时该工厂会在 Spring 的 `<code>ApplicationContext</code>` 生命周期内初始化并停止全局 Reactor Netty 资源。如果设置为\"false\"，则该工厂独立于全局资源管理其自身资源。",
+      "count": 2
+    },
+    {
+      "source": "By default, <code>ConnectionProvider.elastic(\"http\")</code> is used.",
+      "translation": "默认情况下，使用<code>ConnectionProvider.elastic(\"http\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "By default, <code>LoopResources.create(\"webflux-http\")</code> is used.",
+      "translation": "默认情况下，使用<code>LoopResources.create(\"webflux-http\")</code>。",
+      "count": 2
+    },
+    {
+      "source": "Setting an <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> is optional: If set, Reactor resources\nwill be initialized in the <a href=\"#start()\"><code>lifecycle start</code></a> phase and closed\nin the <a href=\"#stop()\"><code>lifecycle stop</code></a> phase. If not set, it will happen in\n<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> and <a href=\"#destroy()\"><code>destroy()</code></a>, respectively.",
+      "translation": "设置 `<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>` 是可选的：如果设置了，Reactor 资源将在 <a href=\"#start()\"><code>lifecycle start</code></a> 阶段初始化，并在 <a href=\"#stop()\"><code>lifecycle stop</code></a> 阶段关闭。如果未设置，则分别在 <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> 和 <a href=\"#destroy()\"><code>destroy()</code></a> 中进行。",
+      "count": 2
+    },
+    {
+      "source": "Setting an <a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> is optional: If set, Reactor resources\nwill be initialized in the <a href=\"#start()\"><code>lifecycle start</code></a> phase and closed\nin the <a href=\"#stop()\"><code>lifecycle stop</code></a> phase.",
+      "translation": "设置 `<a href=\"../../context/ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a>` 是可选的：如果设置了，Reactor 资源将在 <a href=\"#start()\"><code>lifecycle start</code></a> 阶段初始化，并在 <a href=\"#stop()\"><code>lifecycle stop</code></a> 阶段关闭。",
+      "count": 2
+    },
+    {
+      "source": "Returns <code>false</code> to indicate that a <code>ReactorResourceFactory</code>\nshould be skipped in a pause scenario.",
+      "translation": "返回<code>false</code>以指示在暂停场景中应跳过<code>ReactorResourceFactory</code>。",
+      "count": 2
+    },
+    {
+      "source": "Add a Consumer for configuring the global Reactor Netty resources on\nstartup. When this option is used, <a href=\"#setUseGlobalResources(boolean)\"><code>setUseGlobalResources(boolean)</code></a> is also\nenabled.",
+      "translation": "添加一个 Consumer 用于在启动时配置全局 Reactor Netty 资源。当使用此选项时，<a href=\"#setUseGlobalResources(boolean)\"><code>setUseGlobalResources(boolean)</code></a> 也会被启用。",
+      "count": 2
+    },
+    {
+      "source": "Starts the resources if initialized outside an ApplicationContext.\nThis is for backwards compatibility; the preferred way is to rely on\nthe ApplicationContext's <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>lifecycle management</code></a>.",
+      "translation": "在 ApplicationContext 外部初始化资源时启动它们。这是为了向后兼容；首选的方式是依赖 ApplicationContext 的<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>生命周期管理</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Stops the resources if initialized outside an ApplicationContext.\nThis is for backwards compatibility; the preferred way is to rely on\nthe ApplicationContext's <a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>lifecycle management</code></a>.",
+      "translation": "如果在 ApplicationContext 之外初始化资源，则停止这些资源。这是为了向后兼容；首选的方式是依赖 ApplicationContext 的<a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\"><code>生命周期管理</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Whether this factory exposes the global\n<code>HttpResources</code> holder.",
+      "translation": "该工厂是否暴露了全局的 <code>HttpResources</code> 持有者。",
+      "count": 2
+    },
+    {
+      "source": "Use this when you want to provide an externally managed\n<code>ConnectionProvider</code> instance.",
+      "translation": "在使用此方法时，您希望提供一个外部管理的 <code>ConnectionProvider</code> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Use this option when you want to provide an externally managed\n<code>LoopResources</code> instance.",
+      "translation": "使用此选项时，您希望提供一个外部管理的 `<code>LoopResources</code>` 实例。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#isPauseable()\">isPauseable</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#isPauseable()\">isPauseable</a></code>` 在接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code>useGlobalResources</code> - whether to expose and manage the global resources",
+      "translation": "<code>useGlobalResources</code> - 是否公开并管理全局资源",
+      "count": 2
+    },
+    {
+      "source": "<code>consumer</code> - the consumer to apply",
+      "translation": "<code>consumer</code> - 要应用的操作符",
+      "count": 2
+    },
+    {
+      "source": "<code>connectionProvider</code> - the connection provider to use as is",
+      "translation": "<code>connectionProvider</code> - 按原样使用的连接提供者",
+      "count": 2
+    },
+    {
+      "source": "<code>loopResources</code> - the loop resources to use as is",
+      "translation": "<code>loopResources</code> - 按原样使用的循环资源",
+      "count": 2
+    },
+    {
+      "source": "Rossen Stoyanchev, Brian Clozel, Sebastien Deleuze, Juergen Hoeller, Sam Brannen",
+      "translation": "Rossen Stoyanchev, Brian Clozel, Sebastien Deleuze, Juergen Hoeller, Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <a href=\"../../context/SmartLifecycle.html#DEFAULT_PHASE\"><code>SmartLifecycle.DEFAULT_PHASE</code></a> in order to\nlet <code>stop()</code> callbacks execute before regular <code>Lifecycle</code>\nimplementations.",
+      "translation": "默认实现返回<a href=\"../../context/SmartLifecycle.html#DEFAULT_PHASE\"><code>SmartLifecycle.DEFAULT_PHASE</code></a>，以便在常规`Lifecycle`实现之前执行<code>stop()</code>回调。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will return <code>true</code> only if <i>all</i>\ncomponents that apply are currently running.",
+      "translation": "对于容器而言，仅当所有适用的组件当前都在运行时，此方法才返回 `<code>true</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Note that this stop notification is not guaranteed to come before destruction:\nOn regular shutdown, <code>Lifecycle</code> beans will first receive a stop notification\nbefore the general destruction callbacks are being propagated; however, on hot\nrefresh during a context's lifetime or on aborted refresh attempts, a given bean's\ndestroy method will be called without any consideration of stop signals upfront.",
+      "translation": "请注意，此停止通知并不保证在销毁之前发出：\n在常规关闭过程中，<code>Lifecycle</code> 圈会先接收停止通知，然后再传播通用的销毁回调；然而，在上下文生命周期期间的热刷新或中止的刷新尝试中，给定 bean 的销毁方法将在不考虑任何预先停止信号的情况下被调用。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is already running.",
+      "translation": "如果组件已经在运行，则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate a hard start signal to all\ncomponents that apply, even to non-auto-startup components.",
+      "translation": "对于容器而言，这将向所有适用的组件传播硬启动信号，即使包括非自动启动的组件。",
+      "count": 1
+    },
+    {
+      "source": "Should not throw an exception if the component is not running (not started yet).",
+      "translation": "如果组件尚未运行（尚未启动），则不应抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "In the case of a container, this will propagate the stop signal to all components\nthat apply.",
+      "translation": "对于容器，这将向所有适用的组件传播停止信号。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#start()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#stop()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/Lifecycle.html#isRunning()\">Lifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../context/SmartLifecycle.html#getPhase()\">SmartLifecycle</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">SmartLifecycle</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return the configured <code>ConnectionProvider</code>.",
+      "translation": "返回配置的<code>ConnectionProvider</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the configured <code>LoopResources</code>.",
+      "translation": "返回配置的<code>LoopResources</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use this when you don't want to participate in global resources and\nyou want to customize the creation of the managed <code>ConnectionProvider</code>.",
+      "translation": "在使用此方法时，您无需参与全局资源的管理，并可自定义受管 `<code>ConnectionProvider` 的创建。",
+      "count": 1
+    },
+    {
+      "source": "Use this when you don't want to participate in global resources and\nyou want to customize the creation of the managed <code>LoopResources</code>.",
+      "translation": "在使用此方法时，您无需参与全局资源的管理，并可自定义受管<code>LoopResources</code>的创建。",
+      "count": 1
+    },
+    {
+      "source": "Configure the maximum amount of time to wait until the disposal of the\nunderlying resources regardless if a task was submitted during the\n<code>shutdownQuietPeriod</code>.",
+      "translation": "配置在 `<code>shutdownQuietPeriod</code>` 期间未提交任务的情况下，等待底层资源被处置的最大时间量。",
+      "count": 1
+    },
+    {
+      "source": "Whether to use global Reactor Netty resources via <code>HttpResources</code>.",
+      "translation": "是否通过 <code>HttpResources</code> 使用全局 Reactor Netty 资源。",
+      "count": 1
+    },
+    {
+      "source": "Add a Consumer for configuring the global Reactor Netty resources on\nstartup.",
+      "translation": "添加一个 Consumer 用于在启动时配置全局 Reactor Netty 资源。",
+      "count": 1
+    },
+    {
+      "source": "Starts the resources if initialized outside an ApplicationContext.",
+      "translation": "如果在 ApplicationContext 之外初始化资源，则启动这些资源。",
+      "count": 1
+    },
+    {
+      "source": "Stops the resources if initialized outside an ApplicationContext.",
+      "translation": "如果在 ApplicationContext 之外初始化，则停止资源。",
+      "count": 1
+    },
+    {
+      "source": "Return the phase that this lifecycle object is supposed to run in.",
+      "translation": "返回该生命周期对象应该运行的阶段。",
+      "count": 1
+    },
+    {
+      "source": "Check whether this component is currently running.",
+      "translation": "检查该组件当前是否正在运行。",
+      "count": 1
+    },
+    {
+      "source": "Configure the amount of time we'll wait before shutting down resources.",
+      "translation": "配置在关闭资源之前等待的时间。",
+      "count": 1
+    },
+    {
+      "source": "Start this component.",
+      "translation": "启动此组件。",
+      "count": 1
+    },
+    {
+      "source": "Stop this component, typically in a synchronous fashion, such that the component is\nfully stopped upon return of this method.",
+      "translation": "停止此组件，通常以同步方式执行，使得该方法返回时组件已完全停止。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code> in interface <code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "`<code><a href=\"../../context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\">setApplicationContext</a></code>` 接口 `<code><a href=\"../../context/ApplicationContextAware.html\" title=\"interface in org.springframework.context\">ApplicationContextAware</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code> in interface <code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/InitializingBean.html#afterPropertiesSet()\">afterPropertiesSet</a></code>` 接口中的 `<code><a href=\"../../beans/factory/InitializingBean.html\" title=\"interface in org.springframework.beans.factory\">InitializingBean</a></code>`",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code> in interface <code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "`<code><a href=\"../../beans/factory/DisposableBean.html#destroy()\">destroy</a></code>` 在接口 `<code><a href=\"../../beans/factory/DisposableBean.html\" title=\"interface in org.springframework.beans.factory\">DisposableBean</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#start()\">start</a></code>` 接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#stop()\">stop</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code> in interface <code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/Lifecycle.html#isRunning()\">isRunning</a></code>` 在接口 `<code><a href=\"../../context/Lifecycle.html\" title=\"interface in org.springframework.context\">Lifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"../../context/Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "`<code><a href=\"../../context/SmartLifecycle.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"../../context/SmartLifecycle.html\" title=\"interface in org.springframework.context\">SmartLifecycle</a></code>` 中",
+      "count": 1
+    },
+    {
+      "source": "<code>applicationContext</code> - the ApplicationContext object to be used by this object",
+      "translation": "<code>applicationContext</code> - 此对象将使用的 ApplicationContext 对象",
+      "count": 1
+    },
+    {
+      "source": "whether the component is currently running",
+      "translation": "该组件当前是否正在运行",
+      "count": 1
+    }
+  ]
+}

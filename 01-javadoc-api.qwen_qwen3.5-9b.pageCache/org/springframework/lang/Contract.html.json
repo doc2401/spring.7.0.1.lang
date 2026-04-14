@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-04-14 15:22:26",
+  "updated_at": "2026-04-14 15:22:26",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.88,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Inspired by <code>org.jetbrains.annotations.Contract</code>, this variant has\nbeen introduced in the <code>org.springframework.lang</code> package to avoid\nrequiring an extra dependency, while still following the same semantics.",
+      "translation": "受 `<code>org.jetbrains.annotations.Contract</code>` 启发，此变体已引入到 `<code>org.springframework.lang</code>` 包中，以避免需要额外的依赖项，同时遵循相同的语义。",
+      "count": 2
+    },
+    {
+      "source": "Specifies some aspects of the method behavior depending on the arguments.\nCan be used by tools for advanced data flow analysis. Note that this annotation\njust describes how the code works and doesn't add any functionality by means of\ncode generation.",
+      "translation": "根据参数指定方法行为的一些方面。工具可以使用此注解进行高级数据流分析。请注意，此注解仅描述代码的工作原理，不会通过代码生成添加任何功能。",
+      "count": 2
+    },
+    {
+      "source": "Method contract has the following syntax:",
+      "translation": "方法契约具有以下语法：",
+      "count": 2
+    },
+    {
+      "source": "The constraints denote the following:",
+      "translation": "约束条件表明如下：",
+      "count": 2
+    },
+    {
+      "source": "The additional return values denote the following:",
+      "translation": "额外的返回值表示以下内容：",
+      "count": 2
+    },
+    {
+      "source": "Contains the contract clauses describing causal relations between call arguments and the returned value.",
+      "translation": "包含描述调用参数与返回值之间因果关系的合同子句。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://github.com/JetBrains/java-annotations/blob/master/src/jvmMain/java/org/jetbrains/annotations/Contract.java\">org.jetbrains.annotations.Contract</a></li>\n<li><a href=\"https://github.com/uber/NullAway/wiki/Configuration#custom-contract-annotations\">\nNullAway custom contract annotations</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://github.com/JetBrains/java-annotations/blob/master/src/jvmMain/java/org/jetbrains/annotations/Contract.java\">org.jetbrains.annotations.Contract</a></li>\n<li><a href=\"https://github.com/uber/NullAway/wiki/Configuration#custom-contract-annotations\">\nNullAway 自定义契约注解</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code>@Contract(\"true -&gt; fail\")</code> - a typical <code>assertFalse</code> method which throws an exception if <code>true</code> is passed to it.",
+      "translation": "`@Contract(\"true -> fail\")` - 一个典型的 `assertFalse` 方法，如果向其传递 `true` 则会抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Contract(\"_ -&gt; this\")</code> - the method always returns its qualifier (e.g. <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/StringBuilder.html#append(java.lang.String)\" title=\"class or interface in java.lang\"><code>StringBuilder.append(String)</code></a>).",
+      "translation": "<code>@Contract(\"_ -> this\")</code> - 该方法始终返回其限定符（例如 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/StringBuilder.html#append(java.lang.String)\" title=\"class or interface in java.lang\"><code>StringBuilder.append(String)</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Contract(\"null -&gt; fail; _ -&gt; param1\")</code> - the method throws an exception if the first argument is null,\notherwise it returns the first argument (e.g. <code>Objects.requireNonNull</code>).",
+      "translation": "<code>@Contract(\"null -> fail; _ -> param1\")</code> - 如果第一个参数为 null，该方法将抛出异常；否则返回第一个参数（例如 `Objects.requireNonNull`）。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Contract(\"!null, _ -&gt; param1; null, !null -&gt; param2; null, null -&gt; fail\")</code> - the method returns the first non-null argument,\nor throws an exception if both arguments are null (e.g. <code>Objects.requireNonNullElse</code>).",
+      "translation": "<code>@Contract(\"!null, _ -> param1; null, !null -> param2; null, null -> fail\")</code> - 该方法返回第一个非空参数，或者如果两个参数都为空则抛出异常（例如 <code>Objects.requireNonNullElse</code>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>_</code> - any value",
+      "translation": "<code>_</code> - 任何值",
+      "count": 2
+    },
+    {
+      "source": "<code>null</code> - null value",
+      "translation": "<code>null</code> - 空值",
+      "count": 2
+    },
+    {
+      "source": "<code>!null</code> - a value statically proved to be not-null",
+      "translation": "<code>!null</code> - 一个被静态证明不为 null 的值",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> - true boolean value",
+      "translation": "<code>true</code> - 布尔值 true",
+      "count": 2
+    },
+    {
+      "source": "<code>false</code> - false boolean value",
+      "translation": "<code>false</code> - 布尔值 false",
+      "count": 2
+    },
+    {
+      "source": "<code>fail</code> - the method throws an exception, if the arguments satisfy argument constraints",
+      "translation": "<code>fail</code> - 如果参数满足参数约束条件，该方法将抛出异常。",
+      "count": 2
+    },
+    {
+      "source": "<code>new</code> - the method returns a non-null new object which is distinct from any other object existing in the heap prior to method execution.\nIf the method has no visible side effects, then we can be sure that the new object is not stored to any field/array and will be lost if the method's return value is not used.",
+      "translation": "<code>new</code> - 该方法返回一个非 null 的新对象，该对象在执行方法之前与堆中存在的任何其他对象都不同。如果该方法没有可见的副作用，那么我们可以确定新对象未被存储到任何字段或数组中，并且如果未使用方法的返回值，该对象将会丢失。",
+      "count": 2
+    },
+    {
+      "source": "<code>this</code> - the method returns its qualifier value (not applicable for static methods)",
+      "translation": "`this` - 该方法返回其限定值（不适用于静态方法）",
+      "count": 2
+    },
+    {
+      "source": "<code>param1, param2, ...</code> - the method returns its first (second, ...) parameter value",
+      "translation": "<code>param1, param2, ...</code> - 该方法返回其第一个（第二个，...）参数值。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Contract(\"_, null -&gt; null\")</code> - the method returns null if its second argument is null.",
+      "translation": "<code>@Contract(\"_, null -> null\")</code> - 如果第二个参数为 null，则该方法返回 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Contract(\"_, null -&gt; null; _, !null -&gt; !null\")</code> - the method returns null if its second argument is null and not-null otherwise.",
+      "translation": "<code>@Contract(\"_, null -> null; _, !null -> !null\")</code> - 如果第二个参数为 null，则该方法返回 null；否则返回非 null 值。",
+      "count": 2
+    },
+    {
+      "source": "Sebastien Deleuze",
+      "translation": "Sebastien Deleuze",
+      "count": 1
+    },
+    {
+      "source": "Required Element Summary",
+      "translation": "必需元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

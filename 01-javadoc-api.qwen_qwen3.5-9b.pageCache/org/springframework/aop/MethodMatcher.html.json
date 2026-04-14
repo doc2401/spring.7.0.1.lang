@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-04-14 10:17:25",
+  "updated_at": "2026-04-14 10:17:25",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "If an implementation returns <code>true</code> from its 2-arg\n<a href=\"#matches(java.lang.reflect.Method,java.lang.Class)\"><code>matches(Method, Class)</code></a> method and its <a href=\"#isRuntime()\"><code>isRuntime()</code></a> method\nreturns <code>true</code>, the 3-arg <a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>\nmethod will be invoked <i>immediately before each potential execution of the\nrelated advice</i> to decide whether the advice should run. All previous advice,\nsuch as earlier interceptors in an interceptor chain, will have run, so any\nstate changes they have produced in parameters or <code>ThreadLocal</code> state will\nbe available at the time of evaluation.",
+      "translation": "如果实现从其 2 参数<a href=\"#matches(java.lang.reflect.Method,java.lang.Class)\"><code>matches(Method, Class)</code></a>方法返回<code>true</code>，且其<a href=\"#isRuntime()\"><code>isRuntime()</code></a>方法也返回<code>true</code>，则 3 参数<a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>方法将在<i>相关建议的每次潜在执行之前立即</i>被调用，以决定是否应运行该建议。所有先前的建议（例如拦截器链中较早的拦截器）将已经运行，因此它们在参数或<code>ThreadLocal</code>状态中产生的任何状态变化在评估时都将可用。",
+      "count": 2
+    },
+    {
+      "source": "<strong>WARNING</strong>: Concrete implementations of this interface must\nprovide proper implementations of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\"><code>Object.equals(Object)</code></a>,\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\"><code>Object.hashCode()</code></a>, and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\"><code>Object.toString()</code></a> in order to allow the\nmatcher to be used in caching scenarios — for example, in proxies generated\nby CGLIB. As of Spring Framework 6.0.13, the <code>toString()</code> implementation\nmust generate a unique string representation that aligns with the logic used\nto implement <code>equals()</code>. See concrete implementations of this interface\nwithin the framework for examples.",
+      "translation": "<strong>警告</strong>：此接口的具体实现必须提供对 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\"><code>Object.equals(Object)</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\"><code>Object.hashCode()</code></a> 和 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\"><code>Object.toString()</code></a> 的正确实现，以便允许匹配器用于缓存场景——例如在 CGLIB 生成的代理中。自 Spring Framework 6.0.13 起，<code>toString()</code> 的实现必须生成与 <code>equals()</code> 实现逻辑一致的唯一字符串表示形式。请参阅框架内此接口的具体实现以获取示例。",
+      "count": 2
+    },
+    {
+      "source": "If an implementation returns <code>false</code> from its <a href=\"#isRuntime()\"><code>isRuntime()</code></a>\nmethod, evaluation can be performed statically, and the result will be the same\nfor all invocations of this method, whatever their arguments. This means that\nif the <a href=\"#isRuntime()\"><code>isRuntime()</code></a> method returns <code>false</code>, the 3-arg\n<a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a> method will never be invoked.",
+      "translation": "如果实现从其<a href=\"#isRuntime()\"><code>isRuntime()</code></a>方法返回<code>false</code>，则可以进行静态评估，并且无论该方法的参数如何，所有对该方法的调用结果都将相同。这意味着，如果<a href=\"#isRuntime()\"><code>isRuntime()</code></a>方法返回<code>false</code>，则 3 个参数的<a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>方法将永远不会被调用。",
+      "count": 2
+    },
+    {
+      "source": "If this method returns <code>false</code> or if <a href=\"#isRuntime()\"><code>isRuntime()</code></a>\nreturns <code>false</code>, no runtime check (i.e. no\n<a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a> call) will be made.",
+      "translation": "如果此方法返回 <code>false</code> 或 <a href=\"#isRuntime()\"><code>isRuntime()</code></a> 返回 <code>false</code>，则不会进行运行时检查（即不会调用 <a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "This method is invoked only if <a href=\"#matches(java.lang.reflect.Method,java.lang.Class)\"><code>matches(Method, Class)</code></a> returns\n<code>true</code> for the given method and target class, and if\n<a href=\"#isRuntime()\"><code>isRuntime()</code></a> returns <code>true</code>.",
+      "translation": "此方法仅在 `<a href=\"#matches(java.lang.reflect.Method,java.lang.Class)\"><code>matches(Method, Class)</code></a>` 对给定方法和目标类返回`<code>true</code>`，且 `<a href=\"#isRuntime()\"><code>isRuntime()</code></a>` 返回`<code>true</code>` 时被调用。",
+      "count": 2
+    },
+    {
+      "source": "A <code>MethodMatcher</code> may be evaluated <b>statically</b> or at <b>runtime</b>\n(dynamically). Static matching involves a method and (possibly) method attributes.\nDynamic matching also makes arguments for a particular call available, and any\neffects of running previous advice applying to the joinpoint.",
+      "translation": "`MethodMatcher` 可以 <b>静态</b> 或在 <b>运行时</b>（动态）进行评估。静态匹配涉及方法和（可能）方法属性。动态匹配还会提供特定调用的参数以及运行应用于连接点的先前切面的任何效果。",
+      "count": 2
+    },
+    {
+      "source": "Invoked immediately before potential running of the advice, after any\nadvice earlier in the advice chain has run.",
+      "translation": "在潜在运行建议之前立即调用，且在建议链中任何较早的建议运行之后。",
+      "count": 2
+    },
+    {
+      "source": "Is this <code>MethodMatcher</code> dynamic, that is, must a final check be made\nvia the <a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a> method at runtime even\nif <a href=\"#matches(java.lang.reflect.Method,java.lang.Class)\"><code>matches(Method, Class)</code></a> returns <code>true</code>?",
+      "translation": "这个 `<code>MethodMatcher</code>` 是动态的吗？也就是说，即使 `<a href=\"#matches(java.lang.reflect.Method,java.lang.Class)\"><code>matches(Method, Class)</code></a>` 返回了 `<code>true</code>`，是否仍必须在运行时通过 `<a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>` 方法执行最终检查？",
+      "count": 2
+    },
+    {
+      "source": "Canonical instance of a <code>MethodMatcher</code> that matches all methods.",
+      "translation": "匹配所有方法的<code>MethodMatcher</code>的规范实例。",
+      "count": 2
+    },
+    {
+      "source": "whether a runtime match via <a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>\nis required if static matching passed",
+      "translation": "如果静态匹配已通过，是否还需要通过<a href=\"#matches(java.lang.reflect.Method,java.lang.Class,java.lang.Object...)\"><code>matches(Method, Class, Object[])</code></a>进行运行时匹配。",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - the candidate method",
+      "translation": "<code>method</code> - 候选方法",
+      "count": 2
+    },
+    {
+      "source": "<code>targetClass</code> - the target class",
+      "translation": "<code>targetClass</code> - 目标类",
+      "count": 2
+    },
+    {
+      "source": "Can be invoked when an AOP proxy is created, and need not be invoked\nagain before each method invocation.",
+      "translation": "可在创建 AOP 代理时调用，无需在每次方法调用前再次调用。",
+      "count": 1
+    },
+    {
+      "source": "Perform static checking to determine whether the given method matches.",
+      "translation": "执行静态检查以确定给定方法是否匹配。",
+      "count": 1
+    },
+    {
+      "source": "Check whether there is a runtime (dynamic) match for this method, which\nmust have matched statically.",
+      "translation": "检查此方法是否存在运行时（动态）匹配，该匹配必须已在静态时完成。",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - arguments to the method",
+      "translation": "<code>args</code> - 方法的参数",
+      "count": 1
+    },
+    {
+      "source": "Rod Johnson, Sam Brannen",
+      "translation": "罗德·约翰逊，萨姆·布拉南",
+      "count": 1
+    },
+    {
+      "source": "whether this method matches statically",
+      "translation": "此方法是否进行静态匹配",
+      "count": 1
+    },
+    {
+      "source": "whether there's a runtime match",
+      "translation": "是否存在运行时匹配",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

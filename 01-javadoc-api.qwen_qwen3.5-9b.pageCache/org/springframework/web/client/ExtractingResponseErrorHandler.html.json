@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-04-14 18:24:07",
+  "updated_at": "2026-04-14 18:24:07",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 37,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6818181818181819,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Create a new <code>ExtractingResponseErrorHandler</code> with the given\n<a href=\"../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverter</code></a> instances.",
+      "translation": "创建一个新的带有给定<a href=\"../../http/converter/HttpMessageConverter.html\" title=\"interface in org.springframework.http.converter\"><code>HttpMessageConverter</code></a>实例的<code>ExtractingResponseErrorHandler</code>。",
+      "count": 3
+    },
+    {
+      "source": "To use this error handler, you must specify a\n<a href=\"#setStatusMapping(java.util.Map)\">status mapping</a> and/or a\n<a href=\"#setSeriesMapping(java.util.Map)\">series mapping</a>. If either of these\nmappings has a match for the <a href=\"../../http/client/ClientHttpResponse.html#getStatusCode()\">status code</a> of a given <code>ClientHttpResponse</code>,\n<a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a> will return <code>true</code>, and\n<a href=\"#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\"><code>handleError(ClientHttpResponse, HttpStatusCode, URI, HttpMethod)</code></a>\nwill attempt to use the <a href=\"#setMessageConverters(java.util.List)\">configured\nmessage converters</a> to convert the response into the mapped subclass of\n<a href=\"RestClientException.html\" title=\"class in org.springframework.web.client\"><code>RestClientException</code></a>. Note that the\n<a href=\"#setStatusMapping(java.util.Map)\">status mapping</a> takes precedence over\n<a href=\"#setSeriesMapping(java.util.Map)\">series mapping</a>.",
+      "translation": "要使用此错误处理器，必须指定一个 <a href=\"#setStatusMapping(java.util.Map)\">状态映射</a> 和/或一个 <a href=\"#setSeriesMapping(java.util.Map)\">系列映射</a>。如果这些映射中的任何一个与给定 <code>ClientHttpResponse</code> 的 <a href=\"../../http/client/ClientHttpResponse.html#getStatusCode()\">状态码</a> 匹配，则 <a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a> 将返回 <code>true</code>，并且 <a href=\"#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\"><code>handleError(ClientHttpResponse, HttpStatusCode, URI, HttpMethod)</code></a> 将尝试使用配置的 <a href=\"#setMessageConverters(java.util.List)\">消息转换器</a> 将响应转换为 <a href=\"RestClientException.html\" title=\"class in org.springframework.web.client\"><code>RestClientException</code></a> 的映射子类。请注意，<a href=\"#setStatusMapping(java.util.Map)\">状态映射</a> 优先于 <a href=\"#setSeriesMapping(java.util.Map)\">系列映射</a>。",
+      "count": 2
+    },
+    {
+      "source": "If there is no match, this error handler will default to the behavior of\n<a href=\"DefaultResponseErrorHandler.html\" title=\"class in org.springframework.web.client\"><code>DefaultResponseErrorHandler</code></a>. Note that you can override this default\nbehavior by specifying a <a href=\"#setSeriesMapping(java.util.Map)\">series mapping</a>\nfrom <code>HttpStatus.Series#CLIENT_ERROR</code> and/or\n<code>HttpStatus.Series#SERVER_ERROR</code> to <code>null</code>.",
+      "translation": "如果没有匹配项，此错误处理程序将默认采用<a href=\"DefaultResponseErrorHandler.html\" title=\"class in org.springframework.web.client\"><code>DefaultResponseErrorHandler</code></a>的行为。请注意，您可以通过指定从<code>HttpStatus.Series#CLIENT_ERROR</code>和/或<code>HttpStatus.Series#SERVER_ERROR</code>到<code>null</code>的<a href=\"#setSeriesMapping(java.util.Map)\">系列映射</a>来覆盖此默认行为。",
+      "count": 2
+    },
+    {
+      "source": "Note that <a href=\"#setMessageConverters(java.util.List)\"><code>setMessageConverters(List)</code></a> must be called when using this constructor.",
+      "translation": "注意，在使用此构造函数时，必须调用<a href=\"#setMessageConverters(java.util.List)\"><code>setMessageConverters(List)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set the mapping from HTTP status code to <code>RestClientException</code> subclass.\nIf this mapping has a match\nfor the <a href=\"../../http/client/ClientHttpResponse.html#getStatusCode()\">status code</a> of a given\n<code>ClientHttpResponse</code>, <a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a> will return\n<code>true</code> and <a href=\"#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\"><code>handleError(ClientHttpResponse, HttpStatusCode, URI, HttpMethod)</code></a>\nwill attempt to use the <a href=\"#setMessageConverters(java.util.List)\">configured\nmessage converters</a> to convert the response into the mapped subclass of\n<a href=\"RestClientException.html\" title=\"class in org.springframework.web.client\"><code>RestClientException</code></a>.",
+      "translation": "设置从 HTTP 状态码到 `<code>RestClientException</code>` 子类的映射。如果此映射与给定 `<code>ClientHttpResponse</code>` 的 <a href=\"../../http/client/ClientHttpResponse.html#getStatusCode()\">状态码</a> 匹配，则 <a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a> 将返回 `<code>true</code>`，并且 <a href=\"#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\"><code>handleError(ClientHttpResponse, HttpStatusCode, URI, HttpMethod)</code></a> 将尝试使用配置的 <a href=\"#setMessageConverters(java.util.List)\">消息转换器</a> 将响应转换为映射的 `<code>RestClientException</code>` 子类。",
+      "count": 2
+    },
+    {
+      "source": "Set the mapping from HTTP status series to <code>RestClientException</code> subclass.\nIf this mapping has a match\nfor the <a href=\"../../http/client/ClientHttpResponse.html#getStatusCode()\">status code</a> of a given\n<code>ClientHttpResponse</code>, <a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a> will return\n<code>true</code> and <a href=\"#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\"><code>handleError(ClientHttpResponse, HttpStatusCode, URI, HttpMethod)</code></a>\nwill attempt to use the <a href=\"#setMessageConverters(java.util.List)\">configured\nmessage converters</a> to convert the response into the mapped subclass of\n<a href=\"RestClientException.html\" title=\"class in org.springframework.web.client\"><code>RestClientException</code></a>.",
+      "translation": "设置从 HTTP 状态系列到 `<code>RestClientException`</code> 子类的映射。如果此映射与给定 <code>ClientHttpResponse</code> 的<a href=\"../../http/client/ClientHttpResponse.html#getStatusCode()\">状态码</a>匹配，则 <a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a>将返回<code>true</code>，并且 <a href=\"#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\"><code>handleError(ClientHttpResponse, HttpStatusCode, URI, HttpMethod)</code></a> 将尝试使用<a href=\"#setMessageConverters(java.util.List)\">配置的转换器</a>将响应转换为映射的 <a href=\"RestClientException.html\" title=\"class in org.springframework.web.client\"><code>RestClientException</code></a>子类。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.HttpStatusCode)\">DefaultResponseErrorHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.HttpStatusCode)\">DefaultResponseErrorHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"DefaultResponseErrorHandler.html#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\">DefaultResponseErrorHandler</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"DefaultResponseErrorHandler.html#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\">DefaultResponseErrorHandler</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Template method called from <a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a>.",
+      "translation": "由 `<a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.client.ClientHttpResponse)\"><code>DefaultResponseErrorHandler.hasError(ClientHttpResponse)</code></a>` 调用的模板方法。",
+      "count": 2
+    },
+    {
+      "source": "Set the message converters to use by this extractor.",
+      "translation": "设置此提取器使用的消息转换器。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.HttpStatusCode)\">hasError</a></code> in class <code><a href=\"DefaultResponseErrorHandler.html\" title=\"class in org.springframework.web.client\">DefaultResponseErrorHandler</a></code>",
+      "translation": "`<code><a href=\"DefaultResponseErrorHandler.html#hasError(org.springframework.http.HttpStatusCode)\">hasError</a></code>` 在类 `<code><a href=\"DefaultResponseErrorHandler.html\" title=\"class in org.springframework.web.client\">DefaultResponseErrorHandler</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"DefaultResponseErrorHandler.html#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\">handleError</a></code> in class <code><a href=\"DefaultResponseErrorHandler.html\" title=\"class in org.springframework.web.client\">DefaultResponseErrorHandler</a></code>",
+      "translation": "`<code><a href=\"DefaultResponseErrorHandler.html#handleError(org.springframework.http.client.ClientHttpResponse,org.springframework.http.HttpStatusCode,java.net.URI,org.springframework.http.HttpMethod)\">handleError</a></code>` 类中的 `<code><a href=\"DefaultResponseErrorHandler.html\" title=\"class in org.springframework.web.client\">DefaultResponseErrorHandler</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>messageConverters</code> - the message converters to use",
+      "translation": "<code>messageConverters</code> - 要使用的消息转换器",
+      "count": 2
+    },
+    {
+      "source": "Simon Galperin, Arjen Poutsma",
+      "translation": "Simon Galperin，Arjen Poutsma",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to\n<a href=\"HttpClientErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpClientErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a> for errors in the 4xx range, to\n<a href=\"HttpServerErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpServerErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a> for errors in the 5xx range,\nor otherwise raises <a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\"><code>UnknownHttpStatusCodeException</code></a>.",
+      "translation": "默认实现会针对 4xx 范围的错误委托给<a href=\"HttpClientErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpClientErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a>，针对 5xx 范围的错误委托给<a href=\"HttpServerErrorException.html#create(org.springframework.http.HttpStatusCode,java.lang.String,org.springframework.http.HttpHeaders,byte%5B%5D,java.nio.charset.Charset)\"><code>HttpServerErrorException.create(HttpStatusCode, String, HttpHeaders, byte[], Charset)</code></a>，否则抛出<a href=\"UnknownHttpStatusCodeException.html\" title=\"class in org.springframework.web.client\"><code>UnknownHttpStatusCodeException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation checks <a href=\"../../http/HttpStatusCode.html#isError()\"><code>HttpStatusCode.isError()</code></a>.\nCan be overridden in subclasses.",
+      "translation": "默认实现检查<a href=\"../../http/HttpStatusCode.html#isError()\"><code>HttpStatusCode.isError()</code></a>。可在子类中重写。",
+      "count": 1
+    },
+    {
+      "source": "Create a new, empty <code>ExtractingResponseErrorHandler</code>.",
+      "translation": "创建一个新的、空的<code>ExtractingResponseErrorHandler</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the mapping from HTTP status series to <code>RestClientException</code> subclass.",
+      "translation": "设置从 HTTP 状态系列到 `<code>RestClientException</code>` 子类的映射。",
+      "count": 1
+    },
+    {
+      "source": "Set the mapping from HTTP status code to <code>RestClientException</code> subclass.",
+      "translation": "设置从 HTTP 状态码到 `<code>RestClientException</code>` 子类的映射。",
+      "count": 1
+    },
+    {
+      "source": "Handle the error based on the resolved status code.",
+      "translation": "根据解析后的状态码处理错误。",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if the response indicates an error; <code>false</code> otherwise",
+      "translation": "<code>true</code> 表示响应指示错误；否则为 <code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>statusCode</code> - the HTTP status code",
+      "translation": "<code>statusCode</code> - HTTP 状态码",
+      "count": 1
+    }
+  ]
+}

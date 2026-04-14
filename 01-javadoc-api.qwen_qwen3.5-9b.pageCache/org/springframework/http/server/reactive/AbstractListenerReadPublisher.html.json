@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 14:23:48",
+  "updated_at": "2026-04-14 14:23:48",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Check if data is available and either call <a href=\"#onDataAvailable()\"><code>onDataAvailable()</code></a>\nimmediately or schedule a notification.",
+      "translation": "检查数据是否可用，并立即调用<a href=\"#onDataAvailable()\"><code>onDataAvailable()</code></a>或安排通知。",
+      "count": 3
+    },
+    {
+      "source": "Invoked when reading is possible, either in the same thread after a check\nvia <a href=\"#checkOnDataAvailable()\"><code>checkOnDataAvailable()</code></a>, or as a callback from the underlying\ncontainer.",
+      "translation": "在通过<a href=\"#checkOnDataAvailable()\"><code>checkOnDataAvailable()</code></a>检查后同一线程中，或作为底层容器的回调时，如果可以进行读取，则调用此方法。",
+      "count": 3
+    },
+    {
+      "source": "<strong>Note:</strong> This method is guaranteed not to compete with\n<a href=\"#checkOnDataAvailable()\"><code>checkOnDataAvailable()</code></a> so it can be used to safely suspend\nreading, if the underlying API supports it, i.e. without competing with\nan implicit call to resume via <code>checkOnDataAvailable()</code>.",
+      "translation": "<strong>注意：</strong> 此方法保证不会与<a href=\"#checkOnDataAvailable()\"><code>checkOnDataAvailable()</code></a>竞争，因此如果底层 API 支持，可以安全地挂起读取，即不与通过 <code>checkOnDataAvailable()</code> 进行的隐式恢复调用竞争。",
+      "count": 2
+    },
+    {
+      "source": "Specifically a base class for reading from the HTTP request body with\nServlet non-blocking I/O as well as handling incoming\nWebSocket messages with standard Jakarta WebSocket (JSR-356), and Jetty.",
+      "translation": "具体来说，这是一个用于从 HTTP 请求体中读取数据的基础类，支持 Servlet 的非阻塞 I/O，并能够处理传入的 WebSocket 消息，兼容标准的 Jakarta WebSocket（JSR-356）以及 Jetty。",
+      "count": 2
+    },
+    {
+      "source": "Special logger for debugging Reactive Streams signals.",
+      "translation": "用于调试 Reactive Streams 信号的专用日志记录器。",
+      "count": 2
+    },
+    {
+      "source": "Create an instance with the given log prefix.",
+      "translation": "使用给定的日志前缀创建实例。",
+      "count": 2
+    },
+    {
+      "source": "Invoked after an I/O read error from the underlying server or after a\ncancellation signal from the downstream consumer to allow subclasses\nto discard any current cached data they might have.",
+      "translation": "在底层服务器发生 I/O 读取错误或下游消费者发出取消信号后调用，以便子类可以丢弃可能存在的任何当前缓存数据。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured log message prefix.",
+      "translation": "返回配置的日志消息前缀。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can call this method to signal onComplete, delegating a\nnotification from the container when all data has been read.",
+      "translation": "子类可以调用此方法来发出 onComplete 信号，委托容器在读取完所有数据时进行通知。",
+      "count": 2
+    },
+    {
+      "source": "Subclasses can call this to signal onError, delegating a\nnotification from the container for an error.",
+      "translation": "子类可以调用此方法来触发 onError，从而委托容器对错误的通知。",
+      "count": 2
+    },
+    {
+      "source": "Read once from the input, if possible.",
+      "translation": "如果可能，请从输入中读取一次。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\">subscribe</a></code> in interface <code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\">Publisher</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerReadPublisher\">T</a>&gt;</code>",
+      "translation": "`<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\">subscribe</a>` 方法在接口 `<code><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\">Publisher</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AbstractListenerReadPublisher\">T</a>&gt;</code>` 中。",
+      "count": 2
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the type of element signaled</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 被通知元素的类型</span>",
+      "count": 2
+    },
+    {
+      "source": "the item that was read; or <code>null</code>",
+      "translation": "已读取的项目；或<code>null</code>",
+      "count": 2
+    },
+    {
+      "source": "Arjen Poutsma, Violeta Georgieva, Rossen Stoyanchev",
+      "translation": "Arjen Poutsma, Violeta Georgieva, Rossen Stoyanchev",
+      "count": 2
+    },
+    {
+      "source": "Invoked when reading is paused due to a lack of demand.",
+      "translation": "在因需求不足而暂停读取时调用。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

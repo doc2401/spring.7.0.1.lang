@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-04-14 16:37:40",
+  "updated_at": "2026-04-14 16:37:40",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 31,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.631578947368421,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "Configures the <a href=\"NestedTestConfiguration.EnclosingConfiguration.html\" title=\"enum class in org.springframework.test.context\"><code>NestedTestConfiguration.EnclosingConfiguration</code></a> mode.",
+      "translation": "配置 `<a href=\"NestedTestConfiguration.EnclosingConfiguration.html\" title=\"enum class in org.springframework.test.context\"><code>NestedTestConfiguration.EnclosingConfiguration</code></a>` 模式。",
+      "count": 3
+    },
+    {
+      "source": "If <code>@NestedTestConfiguration</code> is not <em>present</em> or\n<em>meta-present</em> on a test class, in its supertype hierarchy, or in its\nenclosing class hierarchy, the default <em>enclosing configuration inheritance\nmode</em> will be used. A <code>@NestedTestConfiguration</code> declaration on an\nenclosing class for a nested interface will be ignored when searching for the\nannotation on classes that implement the interface. See\n<a href=\"#ENCLOSING_CONFIGURATION_PROPERTY_NAME\"><code>ENCLOSING_CONFIGURATION_PROPERTY_NAME</code></a> for details on how to change\nthe default mode.",
+      "translation": "如果测试类、其超类型层次结构或其包含类层次结构中不存在 `<code>@NestedTestConfiguration</code>` 或仅为“元存在”（meta-present），则将使用默认的“包含配置继承模式”（enclosing configuration inheritance mode）。当在实现接口的类中搜索注解时，嵌套接口上包含类的 `<code>@NestedTestConfiguration</code>` 声明将被忽略。有关如何更改默认模式的详细信息，请参阅 <a href=\"#ENCLOSING_CONFIGURATION_PROPERTY_NAME\"><code>ENCLOSING_CONFIGURATION_PROPERTY_NAME</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "When the <a href=\"NestedTestConfiguration.EnclosingConfiguration.html#INHERIT\"><code>INHERIT</code></a> mode is in use,\nconfiguration from an enclosing test class will be inherited by inner test\nclasses, analogous to the semantics within a test class inheritance hierarchy.\nWhen the <a href=\"NestedTestConfiguration.EnclosingConfiguration.html#OVERRIDE\"><code>OVERRIDE</code></a> mode is in use,\ninner test classes will have to declare their own Spring test configuration\nannotations. If you wish to explicitly configure the mode, annotate either\nthe inner test class or one of its enclosing classes with\n<code>@NestedTestConfiguration(...)</code>. Note that a\n<code>@NestedTestConfiguration(...)</code> declaration is inherited within the\nsuperclass hierarchy as well as within the enclosing class hierarchy. Thus,\nthere is no need to redeclare the annotation unless you wish to switch the\nmode.",
+      "translation": "当使用 `<a href=\"NestedTestConfiguration.EnclosingConfiguration.html#INHERIT\"><code>INHERIT</code></a>` 模式时，内部测试类将继承外部测试类的配置，其语义类似于测试类继承层次结构中的行为。当使用 `<a href=\"NestedTestConfiguration.EnclosingConfiguration.html#OVERRIDE\"><code>OVERRIDE</code></a>` 模式时，内部测试类必须声明自己的 Spring 测试配置注解。如果您希望显式配置模式，请在内层测试类或其任一外部类上添加 `<code>@NestedTestConfiguration(...)</code>` 注解。请注意，`<code>@NestedTestConfiguration(...)</code>` 声明会在父类层次结构以及外部类层次结构中继承。因此，除非您希望切换模式，否则无需重新声明该注解。",
+      "count": 2
+    },
+    {
+      "source": "Supported values include enum constants defined in\n<a href=\"NestedTestConfiguration.EnclosingConfiguration.html\" title=\"enum class in org.springframework.test.context\"><code>NestedTestConfiguration.EnclosingConfiguration</code></a>, ignoring case. For example, the default\nmay be changed to <a href=\"NestedTestConfiguration.EnclosingConfiguration.html#OVERRIDE\"><code>NestedTestConfiguration.EnclosingConfiguration.OVERRIDE</code></a> by supplying\nthe following JVM system property via the command line.",
+      "translation": "支持的值包括<a href=\"NestedTestConfiguration.EnclosingConfiguration.html\" title=\"enum class in org.springframework.test.context\"><code>NestedTestConfiguration.EnclosingConfiguration</code></a>中定义的枚举常量，忽略大小写。例如，可以通过命令行提供以下 JVM 系统属性将默认值更改为<a href=\"NestedTestConfiguration.EnclosingConfiguration.html#OVERRIDE\"><code>NestedTestConfiguration.EnclosingConfiguration.OVERRIDE</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If the property is not set to <code>OVERRIDE</code>, test configuration for\nan inner test class will be <em>inherited</em> according to\n<a href=\"NestedTestConfiguration.EnclosingConfiguration.html#INHERIT\"><code>NestedTestConfiguration.EnclosingConfiguration.INHERIT</code></a> semantics by default.",
+      "translation": "如果该属性未设置为 `<code>OVERRIDE</code>`，则内部测试类的测试配置将默认根据 <a href=\"NestedTestConfiguration.EnclosingConfiguration.html#INHERIT\"><code>NestedTestConfiguration.EnclosingConfiguration.INHERIT</code></a> 语义进行 <em>继承</em>。",
+      "count": 2
+    },
+    {
+      "source": "If you are developing a component that integrates with the Spring TestContext\nFramework and needs to support annotation inheritance within enclosing class\nhierarchies, you must use the annotation search utilities provided in\n<a href=\"TestContextAnnotationUtils.html\" title=\"class in org.springframework.test.context\"><code>TestContextAnnotationUtils</code></a> in order to honor\n<code>@NestedTestConfiguration</code> semantics.",
+      "translation": "如果您正在开发一个与 Spring TestContext 框架集成且需要在封闭类层次结构中支持注解继承的组件，则必须使用<a href=\"TestContextAnnotationUtils.html\" title=\"class in org.springframework.test.context\"><code>TestContextAnnotationUtils</code></a>中提供的注解搜索工具，以遵循<code>@NestedTestConfiguration</code>语义。",
+      "count": 2
+    },
+    {
+      "source": "Note that <code>@NestedTestConfiguration</code> does not apply to\n<a href=\"junit/jupiter/SpringExtensionConfig.html\" title=\"annotation interface in org.springframework.test.context.junit.jupiter\"><code>@SpringExtensionConfig</code></a>.",
+      "translation": "注意，<code>@NestedTestConfiguration</code> 不适用于 <a href=\"junit/jupiter/SpringExtensionConfig.html\" title=\"annotation interface in org.springframework.test.context.junit.jupiter\"><code>@SpringExtensionConfig</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The use of this annotation typically only makes sense in conjunction with\n<a class=\"external-link\" href=\"https://docs.junit.org/6.0.1/api/org.junit.jupiter.api/org/junit/jupiter/api/Nested.html\" title=\"class or interface in org.junit.jupiter.api\"><code>@Nested</code></a> test classes in JUnit Jupiter;\nhowever, there may be other testing frameworks with support for nested test\nclasses that could also make use of this annotation.",
+      "translation": "此注解的使用通常仅在结合 JUnit Jupiter 中的<a class=\"external-link\" href=\"https://docs.junit.org/6.0.1/api/org.junit.jupiter.api/org/junit/jupiter/api/Nested.html\" title=\"class or interface in org.junit.jupiter.api\"><code>@Nested</code></a>测试类时才有意义；然而，可能存在其他支持嵌套测试类的测试框架，也可以利用此注解。",
+      "count": 2
+    },
+    {
+      "source": "The <em>Spring TestContext Framework</em> honors <code>@NestedTestConfiguration</code>\nsemantics for the following annotations.",
+      "translation": "<em>Spring TestContext Framework</em> 支持以下注解的 `<code>@NestedTestConfiguration</code>` 语义。",
+      "count": 2
+    },
+    {
+      "source": "May alternatively be configured via the\n<a href=\"../../core/SpringProperties.html\" title=\"class in org.springframework.core\"><code>SpringProperties</code></a>\nmechanism.",
+      "translation": "也可通过 <a href=\"../../core/SpringProperties.html\" title=\"class in org.springframework.core\"><code>SpringProperties</code></a> 机制进行配置。",
+      "count": 2
+    },
+    {
+      "source": "Supported Annotations",
+      "translation": "支持的注解",
+      "count": 2
+    },
+    {
+      "source": "This annotation may be used as a <em>meta-annotation</em> to create custom\n<em>composed annotations</em>.",
+      "translation": "此注解可用作 <em>元注解</em> 来创建自定义的 <em>组合注解</em>。",
+      "count": 1
+    },
+    {
+      "source": "Enumeration of <em>modes</em> that dictate how test configuration from\nenclosing classes is processed for inner test classes.",
+      "translation": "枚举<em>模式</em>，用于规定如何处理外层类中的测试配置以应用于内部测试类。",
+      "count": 1
+    },
+    {
+      "source": "JVM system property used to change the default <em>enclosing configuration\ninheritance mode</em>: \"spring.test.enclosing.configuration\".",
+      "translation": "用于更改默认<em>包含配置继承模式</em>的 JVM 系统属性：\"spring.test.enclosing.configuration\"。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen",
+      "translation": "Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Required Element Summary",
+      "translation": "必需元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

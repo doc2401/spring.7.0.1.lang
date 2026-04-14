@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-04-14 12:04:43",
+  "updated_at": "2026-04-14 12:04:43",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 44,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8333333333333333,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "This interface extends <a href=\"Phased.html\" title=\"interface in org.springframework.context\"><code>Phased</code></a>, and the <a href=\"#getPhase()\"><code>getPhase()</code></a> method's\nreturn value indicates the phase within which this <code>Lifecycle</code> component\nshould be started and stopped. The startup process begins with the <i>lowest</i>\nphase value and ends with the <i>highest</i> phase value (<code>Integer.MIN_VALUE</code>\nis the lowest possible, and <code>Integer.MAX_VALUE</code> is the highest possible).\nThe shutdown process will apply the reverse order. Any components with the\nsame value will be arbitrarily ordered within the same phase.",
+      "translation": "该接口扩展了<a href=\"Phased.html\" title=\"interface in org.springframework.context\"><code>Phased</code></a>，且<a href=\"#getPhase()\"><code>getPhase()</code></a>方法的返回值指示此<code>Lifecycle</code>组件应在哪个阶段启动和停止。启动过程从<i>最低</i>的阶段值开始，到<i>最高</i>的阶段值结束（<code>Integer.MIN_VALUE</code>是最低可能值，<code>Integer.MAX_VALUE</code>是最高可能值）。关闭过程将按相反顺序应用。任何具有相同值的组件将在同一阶段内任意排序。",
+      "count": 2
+    },
+    {
+      "source": "Any <code>Lifecycle</code> components within the context that do not also\nimplement <code>SmartLifecycle</code> will be treated as if they have a phase\nvalue of <code>0</code>. This allows a <code>SmartLifecycle</code> component to start\nbefore those <code>Lifecycle</code> components if the <code>SmartLifecycle</code>\ncomponent has a negative phase value, or the <code>SmartLifecycle</code> component\nmay start after those <code>Lifecycle</code> components if the <code>SmartLifecycle</code>\ncomponent has a positive phase value.",
+      "translation": "上下文中的任何未同时实现<code>SmartLifecycle</code>的<code>Lifecycle</code>组件，将被视为具有<code>0</code>的阶段值。这使得如果<code>SmartLifecycle</code>组件具有负阶段值，它可以在这些<code>Lifecycle</code>组件之前启动；或者如果<code>SmartLifecycle</code>组件具有正阶段值，它可以在这些<code>Lifecycle</code>组件之后启动。",
+      "count": 2
+    },
+    {
+      "source": "A value of <code>false</code> indicates that the component prefers to\nbe skipped in a pause scenario, neither receiving a <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>\ncall nor a subsequent <a href=\"Lifecycle.html#start()\"><code>Lifecycle.start()</code></a> call, analogous to a plain\n<a href=\"Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> implementation. It will only receive a <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>\ncall on close and on explicit context-wide stopping but not on pause.",
+      "translation": "值为 `<code>false</code>` 表示该组件在暂停场景中倾向于被跳过，既不接收 `<a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>` 调用，也不接收随后的 `<a href=\"Lifecycle.html#start()\"><code>Lifecycle.start()</code></a>` 调用，类似于普通的 `<a href=\"Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a>` 实现。它仅在关闭和显式的全局停止时接收 `<a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>` 调用，而在暂停时不会接收该调用。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#isAutoStartup()\"><code>isAutoStartup()</code></a> return value indicates whether this object should\nbe started at the time of a context refresh. The callback-accepting\n<a href=\"#stop(java.lang.Runnable)\"><code>stop(Runnable)</code></a> method is useful for objects that have an asynchronous\nshutdown process. Any implementation of this interface <i>must</i> invoke the\ncallback's <code>run()</code> method upon shutdown completion to avoid unnecessary\ndelays in the overall <code>ApplicationContext</code> shutdown.",
+      "translation": "`<a href=\"#isAutoStartup()\"><code>isAutoStartup()</code></a>` 的返回值指示此对象是否应在上下文刷新时启动。接受回调的 `<a href=\"#stop(java.lang.Runnable)\"><code>stop(Runnable)</code></a>` 方法适用于具有异步关闭过程的对象。该接口的任何实现<i>必须</i>在关闭完成后调用回调的`<code>run()</code>` 方法，以避免整体`<code>ApplicationContext</code>` 关闭过程中出现不必要的延迟。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> will call <i>only</i> this variant of the\n<code>stop</code> method; i.e. <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> will not be called for\n<code>SmartLifecycle</code> implementations unless explicitly delegated to within\nthe implementation of this method.",
+      "translation": "`<a href=\"LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>` 将仅调用此版本的 `<code>stop</code>` 方法；即，除非在此方法的实现中显式委托，否则不会为 `<code>SmartLifecycle</code>` 实现调用 `<a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>`。",
+      "count": 2
+    },
+    {
+      "source": "A value of <code>false</code> indicates that the component is intended to\nbe started through an explicit <a href=\"Lifecycle.html#start()\"><code>Lifecycle.start()</code></a> call instead, analogous\nto a plain <a href=\"Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> implementation.",
+      "translation": "值为 `<code>false</code>` 表示该组件旨在通过显式的 <a href=\"Lifecycle.html#start()\"><code>Lifecycle.start()</code></a> 调用来启动，类似于普通的 <a href=\"Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> 实现。",
+      "count": 2
+    },
+    {
+      "source": "This is different from the common phase <code>0</code> associated with regular\n<a href=\"Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> implementations, putting the typically auto-started\n<code>SmartLifecycle</code> beans into a later startup phase and an earlier\nshutdown phase.",
+      "translation": "这与常规 <a href=\"Lifecycle.html\" title=\"interface in org.springframework.context\"><code>Lifecycle</code></a> 实现关联的常见阶段 <code>0</code> 不同，它将通常自动启动的 <code>SmartLifecycle</code> Bean 置于稍后的启动阶段和较早的关闭阶段。",
+      "count": 2
+    },
+    {
+      "source": "The provided callback is used by the <a href=\"LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a> to support\nan ordered, and potentially concurrent, shutdown of all components having a\ncommon shutdown order value. The callback <b>must</b> be executed after\nthe <code>SmartLifecycle</code> component does indeed stop.",
+      "translation": "提供的回调由 `<a href=\"LifecycleProcessor.html\" title=\"interface in org.springframework.context\"><code>LifecycleProcessor</code></a>` 使用，以支持具有公共关闭顺序值的所有组件的有序且可能并发的关闭。该回调<b>必须</b>在`SmartLifecycle` 组件确实停止后执行。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <a href=\"#DEFAULT_PHASE\"><code>DEFAULT_PHASE</code></a> in order to\nlet <code>stop()</code> callbacks execute before regular <code>Lifecycle</code>\nimplementations.",
+      "translation": "默认实现返回<a href=\"#DEFAULT_PHASE\"><code>DEFAULT_PHASE</code></a>，以便让<code>stop()</code>回调在常规的<code>Lifecycle</code>实现之前执行。",
+      "count": 2
+    },
+    {
+      "source": "Note that, due to the auto-startup support in <code>SmartLifecycle</code>, a\n<code>SmartLifecycle</code> bean instance will usually get initialized on startup\nof the application context in any case. As a consequence, the bean definition\nlazy-init flag has very limited actual effect on <code>SmartLifecycle</code> beans.",
+      "translation": "请注意，由于 `<code>SmartLifecycle</code>` 中的自动启动支持，`<code>SmartLifecycle</code>` Bean 实例通常会在应用程序上下文启动时初始化。因此，Bean 定义的懒加载标志对 `<code>SmartLifecycle</code>` Bean 的实际影响非常有限。",
+      "count": 2
+    },
+    {
+      "source": "Note that certain <code>SmartLifecycle</code> components come with a different\ndefault phase: for example, executors/schedulers with <code>Integer.MAX_VALUE / 2</code>.",
+      "translation": "注意，某些 `<code>SmartLifecycle</code>` 组件具有不同的默认阶段：例如，带有 `<code>Integer.MAX_VALUE / 2</code>` 的调度器/执行器。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> and immediately\ntriggers the given callback in the calling thread. Note that there is no\nsynchronization between the two, so custom implementations may at least\nwant to put the same steps within their common lifecycle monitor (if any).",
+      "translation": "默认实现会委托给 <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>，并立即在调用线程中触发给定的回调。请注意，这两者之间没有同步机制，因此自定义实现至少应该将其中的相同步骤放在其公共生命周期监视器（如果有）内。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation returns <code>true</code>.",
+      "translation": "默认实现返回<code>true</code>。",
+      "count": 2
+    },
+    {
+      "source": "Example: if component B depends on component A having already started,\nthen component A should have a lower phase value than component B. During\nthe shutdown process, component B would be stopped before component A.",
+      "translation": "如果组件 B 依赖于组件 A 已经启动，则组件 A 的相位值应低于组件 B。在关闭过程中，组件 B 将在组件 A 之前停止。",
+      "count": 2
+    },
+    {
+      "source": "Any explicit \"depends-on\" relationship will take precedence over the phase\norder such that the dependent bean always starts after its dependency and\nalways stops before its dependency.",
+      "translation": "任何显式的“依赖”关系都将优先于阶段顺序，以确保依赖的 Bean 总是在其依赖项之后启动，并在其依赖项之前停止。",
+      "count": 2
+    },
+    {
+      "source": "Returns <code>true</code> if this <code>Lifecycle</code> component is able to\nparticipate in a restart sequence, receiving corresponding <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a>\nand <a href=\"Lifecycle.html#start()\"><code>Lifecycle.start()</code></a> calls with a potential pause in-between.",
+      "translation": "如果此 `<code>Lifecycle</code>` 组件能够参与重启序列，则返回 `<code>true</code>，即在中间可能暂停的情况下接收相应的 <a href=\"Lifecycle.html#stop()\"><code>Lifecycle.stop()</code></a> 和 <a href=\"Lifecycle.html#start()\"><code>Lifecycle.start()</code></a> 调用。",
+      "count": 2
+    },
+    {
+      "source": "Returns <code>true</code> if this <code>Lifecycle</code> component should get\nstarted automatically by the container at the time that the containing\n<a href=\"ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> gets refreshed or restarted.",
+      "translation": "如果此 `<code>Lifecycle</code>` 组件应在包含的 <a href=\"ApplicationContext.html\" title=\"interface in org.springframework.context\"><code>ApplicationContext</code></a> 刷新或重启时自动启动，则返回 `<code>true</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"#getPhase()\"><code>getPhase()</code></a></li>\n<li><a href=\"../scheduling/concurrent/ExecutorConfigurationSupport.html#DEFAULT_PHASE\"><code>ExecutorConfigurationSupport.DEFAULT_PHASE</code></a></li>\n<li><a href=\"support/DefaultLifecycleProcessor.html#setTimeoutPerShutdownPhase(long)\"><code>DefaultLifecycleProcessor.setTimeoutPerShutdownPhase(long)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.context.SmartLifecycle.DEFAULT_PHASE\">Constant Field Values</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"#getPhase()\"><code>getPhase()</code></a></li>\n<li><a href=\"../scheduling/concurrent/ExecutorConfigurationSupport.html#DEFAULT_PHASE\"><code>ExecutorConfigurationSupport.DEFAULT_PHASE</code></a></li>\n<li><a href=\"support/DefaultLifecycleProcessor.html#setTimeoutPerShutdownPhase(long)\"><code>DefaultLifecycleProcessor.setTimeoutPerShutdownPhase(long)</code></a></li>\n<li><a href=\"../../../constant-values.html#org.springframework.context.SmartLifecycle.DEFAULT_PHASE\">常量字段值</a></li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"Phased.html#getPhase()\">getPhase</a></code> in interface <code><a href=\"Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>",
+      "translation": "`<code><a href=\"Phased.html#getPhase()\">getPhase</a></code>` 接口 `<code><a href=\"Phased.html\" title=\"interface in org.springframework.context\">Phased</a></code>` 中",
+      "count": 2
+    },
+    {
+      "source": "Mark Fisher, Juergen Hoeller, Sam Brannen",
+      "translation": "Mark Fisher，Juergen Hoeller，Sam Brannen",
+      "count": 2
+    },
+    {
+      "source": "The default phase for <code>SmartLifecycle</code>: <code>Integer.MAX_VALUE</code>.",
+      "translation": "<code>SmartLifecycle</code> 的默认阶段：<code>Integer.MAX_VALUE</code>。",
+      "count": 1
+    },
+    {
+      "source": "Return the phase that this lifecycle object is supposed to run in.",
+      "translation": "返回该生命周期对象应该运行的阶段。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that a Lifecycle component must stop if it is currently running.",
+      "translation": "指示生命周期组件如果当前正在运行，则必须停止。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

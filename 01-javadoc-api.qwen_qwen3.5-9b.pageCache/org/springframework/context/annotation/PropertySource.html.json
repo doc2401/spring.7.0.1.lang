@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-04-14 12:12:09",
+  "updated_at": "2026-04-14 12:12:09",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 63,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "In order to resolve ${...} placeholders in <code>&lt;bean&gt;</code> definitions or <code>@Value</code>\nannotations using properties from a <code>PropertySource</code>, you must ensure that an\nappropriate <em>embedded value resolver</em> is registered in the <code>BeanFactory</code>\nused by the <code>ApplicationContext</code>. This happens automatically when using\n<code>&lt;context:property-placeholder&gt;</code> in XML. When using <code>@Configuration</code> classes\nthis can be achieved by explicitly registering a <code>PropertySourcesPlaceholderConfigurer</code>\nvia a <code>static</code> <code>@Bean</code> method. Note, however, that explicit registration\nof a <code>PropertySourcesPlaceholderConfigurer</code> via a <code>static</code> <code>@Bean</code>\nmethod is typically only required if you need to customize configuration such as the\nplaceholder syntax, etc. See the \"Working with externalized values\" section of\n<a href=\"Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a>'s javadocs and \"a note on\nBeanFactoryPostProcessor-returning <code>@Bean</code> methods\" of <a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a>'s\njavadocs for details and examples.",
+      "translation": "为了解决 `<bean>` 定义或 `@Value` 注解中的 `${...}` 占位符，并使用来自 `PropertySource` 的属性，您必须确保在 `ApplicationContext` 使用的 `BeanFactory` 中注册了适当的嵌入式值解析器（embedded value resolver）。在使用 XML 中的 `<context:property-placeholder>` 时，此操作会自动完成。当使用 `@Configuration` 类时，可以通过静态的 `@Bean` 方法显式注册 `PropertySourcesPlaceholderConfigurer` 来实现。然而请注意，通过静态 `@Bean` 方法显式注册 `PropertySourcesPlaceholderConfigurer` 通常仅在您需要自定义配置（例如占位符语法等）时才需要。有关详细信息和示例，请参阅 `<a href=\"Configuration.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Configuration</code></a>` 的 javadoc 中的“Working with externalized values\"部分，以及 `<a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a>` 的 javadoc 中的\"a note on BeanFactoryPostProcessor-returning <code>@Bean</code> methods\"部分。",
+      "count": 2
+    },
+    {
+      "source": "Given a file <code>app.properties</code> containing the key/value pair\n<code>testbean.name=myTestBean</code>, the following <code>@Configuration</code> class\nuses <code>@PropertySource</code> to contribute <code>app.properties</code> to the\n<code>Environment</code>'s set of <code>PropertySources</code>.",
+      "translation": "给定包含键值对 `testbean.name=myTestBean` 的文件 `<code>app.properties</code>`，以下 `<code>@Configuration</code>` 类使用 `<code>@PropertySource</code>` 将 `<code>app.properties</code>` 贡献到 `<code>Environment</code>` 的 `<code>PropertySources</code>` 集合中。",
+      "count": 2
+    },
+    {
+      "source": "In certain situations, it may not be possible or practical to tightly control\nproperty source ordering when using <code>@PropertySource</code> annotations. For example,\nif the <code>@Configuration</code> classes above were registered via component-scanning,\nthe ordering is difficult to predict. In such cases — and if overriding is important\n— it is recommended that the user fall back to using the programmatic\n<code>PropertySource</code> API. See <a href=\"../../core/env/ConfigurableEnvironment.html\" title=\"interface in org.springframework.core.env\"><code>ConfigurableEnvironment</code></a> and <a href=\"../../core/env/MutablePropertySources.html\" title=\"class in org.springframework.core.env\"><code>MutablePropertySources</code></a> javadocs for details.",
+      "translation": "在某些情况下，使用 `<code>@PropertySource</code>` 注解时可能无法或难以严格控制属性源顺序。例如，如果上述 `<code>@Configuration</code>` 类是通过组件扫描注册的，则其顺序难以预测。在这种情况下——如果覆盖很重要——建议用户回退到使用程序化的 `<code>PropertySource</code>` API。有关详细信息，请参阅 <a href=\"../../core/env/ConfigurableEnvironment.html\" title=\"interface in org.springframework.core.env\"><code>ConfigurableEnvironment</code></a> 和 <a href=\"../../core/env/MutablePropertySources.html\" title=\"class in org.springframework.core.env\"><code>MutablePropertySources</code></a> 的 JavaDoc。",
+      "count": 2
+    },
+    {
+      "source": "<code>@PropertySource</code> can be used as a <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">repeatable</a></em>\nannotation. <code>@PropertySource</code> may also be used as a <em>meta-annotation</em>\nto create custom <em>composed annotations</em> with attribute overrides.",
+      "translation": "<code>@PropertySource</code> 可用作一个 <em><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html\" title=\"class or interface in java.lang.annotation\">可重复</a></em>\n注解。<code>@PropertySource</code> 也可用作 <em>元注解</em>\n来创建具有属性覆盖的自定义 <em>组合注解</em>。",
+      "count": 2
+    },
+    {
+      "source": "If omitted, the <a href=\"#factory()\"><code>factory()</code></a> will generate a name based on the\nunderlying resource (in the case of\n<a href=\"../../core/io/support/DefaultPropertySourceFactory.html\" title=\"class in org.springframework.core.io.support\"><code>DefaultPropertySourceFactory</code></a>: derived from the resource description through\na corresponding name-less\n<a href=\"../../core/io/support/ResourcePropertySource.html\" title=\"class in org.springframework.core.io.support\"><code>ResourcePropertySource</code></a> constructor).",
+      "translation": "如果省略，<a href=\"#factory()\"><code>factory()</code></a> 将根据底层资源生成名称（在 <a href=\"../../core/io/support/DefaultPropertySourceFactory.html\" title=\"class in org.springframework.core.io.support\"><code>DefaultPropertySourceFactory</code></a> 的情况下：通过无名称的 <a href=\"../../core/io/support/ResourcePropertySource.html\" title=\"class in org.springframework.core.io.support\"><code>ResourcePropertySource</code></a> 构造函数从资源描述派生）。",
+      "count": 2
+    },
+    {
+      "source": "Notice that the <code>Environment</code> object is\n<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a> into the\nconfiguration class and then used when populating the <code>TestBean</code> object. Given\nthe configuration above, a call to <code>testBean.getName()</code> will return \"myTestBean\".",
+      "translation": "注意，<code>Environment</code> 对象被<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>注入到配置类中，然后在填充 <code>TestBean</code> 对象时使用。鉴于上述配置，调用 <code>testBean.getName()</code> 将返回 \"myTestBean\"。",
+      "count": 2
+    },
+    {
+      "source": "The default <a href=\"#factory()\"><code>factory</code></a> supports both traditional and\nXML-based properties file formats — for example,\n<code>\"classpath:/com/myco/app.properties\"</code> or <code>\"file:/path/to/file.xml\"</code>.",
+      "translation": "默认<a href=\"#factory()\"><code>factory</code></a>同时支持传统的和基于 XML 的属性文件格式——例如，<code>\"classpath:/com/myco/app.properties\"</code>或<code>\"file:/path/to/file.xml\"</code>。",
+      "count": 2
+    },
+    {
+      "source": "By default, a default factory for standard resource files will be used\nwhich supports <code>*.properties</code> and <code>*.xml</code> file formats for\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a>.",
+      "translation": "默认情况下，将使用标准资源文件的默认工厂，该工厂支持 <code>*.properties</code> 和 <code>*.xml</code> 文件格式以用于<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Properties.html\" title=\"class or interface in java.util\"><code>Properties</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "For example, given two properties files <code>a.properties</code> and\n<code>b.properties</code>, consider the following two configuration classes\nthat reference them with <code>@PropertySource</code> annotations:",
+      "translation": "例如，给定两个属性文件 `<code>a.properties</code>` 和 `<code>b.properties</code>`，考虑以下两个引用它们的配置类，这些类使用了 `<code>@PropertySource</code>` 注解：",
+      "count": 2
+    },
+    {
+      "source": "In the scenario above, the properties in <code>b.properties</code> will override any\nduplicates that exist in <code>a.properties</code>, because <code>ConfigB</code> was registered\nlast.",
+      "translation": "在上面的场景中，<code>b.properties</code> 中的属性将覆盖 <code>a.properties</code> 中存在的任何重复项，因为 <code>ConfigB</code> 是最后注册的。",
+      "count": 2
+    },
+    {
+      "source": "<code>${...}</code> placeholders will be resolved against property sources already\nregistered with the <code>Environment</code>. See <a href=\"PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\">above</a>\nfor examples.",
+      "translation": "`${...}` 占位符将针对已注册到 `<code>Environment</code>` 的属性源进行解析。有关示例，请参见 <a href=\"PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\">上方</a>。",
+      "count": 2
+    },
+    {
+      "source": "Any ${...} placeholders present in a <code>@PropertySource</code> <a href=\"#value()\">resource location</a> will be resolved against the set of property sources already\nregistered against the environment. For example:",
+      "translation": "任何 `<code>@PropertySource</code>` 的<a href=\"#value()\">资源位置</a>中存在的 `${...}` 占位符都将在环境中已注册的资源源集上进行解析。例如：",
+      "count": 2
+    },
+    {
+      "source": "Assuming that \"my.placeholder\" is present in one of the property sources already\nregistered — for example, system properties or environment variables —\nthe placeholder will be resolved to the corresponding value. If not, then \"default/path\"\nwill be used as a default. Expressing a default value (delimited by colon \":\") is\noptional. If no default is specified and a property cannot be resolved, an <code>\nIllegalArgumentException</code> will be thrown.",
+      "translation": "假设\"my.placeholder\"已存在于某个已注册的属性源中（例如系统属性或环境变量），则该占位符将被解析为相应的值。否则，将使用\"default/path\"作为默认值。指定默认值（由冒号\":\"分隔）是可选的。如果未指定默认值且无法解析属性，将抛出<code>IllegalArgumentException</code>。",
+      "count": 2
+    },
+    {
+      "source": "In cases where a given property key exists in more than one property resource\nfile, the last <code>@PropertySource</code> annotation processed will 'win' and override\nany previous key with the same name.",
+      "translation": "在给定属性键存在于多个属性资源文件的情况下，最后处理的 `<code>@PropertySource</code>` 注解将“胜出”并覆盖任何具有相同名称的先前键。",
+      "count": 2
+    },
+    {
+      "source": "The name of a <code>PropertySource</code> serves two general purposes.",
+      "translation": "<code>PropertySource</code> 的名称有两个一般用途。",
+      "count": 2
+    },
+    {
+      "source": "As of Spring Framework 6.1, resource location wildcards are also\nsupported — for example, <code>\"classpath*:/config/*.properties\"</code>.",
+      "translation": "自 Spring Framework 6.1 起，也支持资源位置通配符——例如 `<code>\"classpath*:/config/*.properties\"</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Each location will be added to the enclosing <code>Environment</code> as its own\nproperty source, and in the order declared (or in the order in which resource\nlocations are resolved when location wildcards are used).",
+      "translation": "每个位置都将被作为其自身的属性源添加到包围的 `<code>Environment</code>` 中，顺序为声明的顺序（或者在使用位置通配符时解析资源位置的顺序）。",
+      "count": 2
+    },
+    {
+      "source": "<code>true</code> is appropriate if the properties file is completely optional.",
+      "translation": "<code>true</code> 适用于属性文件完全可选的情况。",
+      "count": 2
+    },
+    {
+      "source": "The override ordering depends on the order in which these classes are registered\nwith the application context.",
+      "translation": "覆盖顺序取决于这些类在应用程序上下文中注册的顺序。",
+      "count": 2
+    },
+    {
+      "source": "Specify a custom <a href=\"../../core/io/support/PropertySourceFactory.html\" title=\"interface in org.springframework.core.io.support\"><code>PropertySourceFactory</code></a>, if any.",
+      "translation": "指定自定义的<a href=\"../../core/io/support/PropertySourceFactory.html\" title=\"interface in org.springframework.core.io.support\"><code>PropertySourceFactory</code></a>（如果有）。",
+      "count": 2
+    },
+    {
+      "source": "Indicate if a failure to find a <a href=\"#value()\"><code>property resource</code></a> should be\nignored.",
+      "translation": "指示是否应忽略找不到<code>property resource</code><a href=\"#value()\">属性资源</a>的情况。",
+      "count": 2
+    },
+    {
+      "source": "A specific character encoding for the given resources, for example, \"UTF-8\".",
+      "translation": "给定资源（例如\"UTF-8\"）的特定字符编码。",
+      "count": 2
+    },
+    {
+      "source": "Programmatic interaction with\n<a href=\"../../core/env/MutablePropertySources.html\" title=\"class in org.springframework.core.env\"><code>MutablePropertySources</code></a>:\nthe name can be used to retrieve properties from a particular property\nsource (or to determine if a particular named property source already exists).\nThe name can also be used to add a new property source relative to an existing\nproperty source (see\n<a href=\"../../core/env/MutablePropertySources.html#addBefore(java.lang.String,org.springframework.core.env.PropertySource)\"><code>addBefore()</code></a> and\n<a href=\"../../core/env/MutablePropertySources.html#addAfter(java.lang.String,org.springframework.core.env.PropertySource)\"><code>addAfter()</code></a>).",
+      "translation": "与 <a href=\"../../core/env/MutablePropertySources.html\" title=\"class in org.springframework.core.env\"><code>MutablePropertySources</code></a> 进行程序化交互：名称可用于从特定的属性源检索属性（或确定是否已存在特定命名的属性源）。名称还可用于相对于现有的属性源添加新的属性源（参见 <a href=\"../../core/env/MutablePropertySources.html#addBefore(java.lang.String,org.springframework.core.env.PropertySource)\"><code>addBefore()</code></a> 和 <a href=\"../../core/env/MutablePropertySources.html#addAfter(java.lang.String,org.springframework.core.env.PropertySource)\"><code>addAfter()</code></a>）。",
+      "count": 2
+    },
+    {
+      "source": "Resolving <code>${...}</code> placeholders in <code>&lt;bean&gt;</code> and <code>@Value</code> annotations",
+      "translation": "解析 `<bean>` 和 `@Value` 注解中的 `${...}` 占位符",
+      "count": 2
+    },
+    {
+      "source": "Diagnostics: to determine the source of the properties in logging and\ndebugging — for example, in a Spring Boot application via Spring\nBoot's <code>PropertySourceOrigin</code>.",
+      "translation": "诊断：用于确定日志和调试中属性的来源——例如，在 Spring Boot 应用程序中通过 Spring Boot 的<code>PropertySourceOrigin</code>。",
+      "count": 2
+    },
+    {
+      "source": "Resolving ${...} placeholders within <code>@PropertySource</code> resource locations",
+      "translation": "在 `<code>@PropertySource</code>` 资源位置中解析 `${...}` 占位符",
+      "count": 2
+    },
+    {
+      "source": "A note on property overriding with <code>@PropertySource</code>",
+      "translation": "关于使用<code>@PropertySource</code>覆盖属性的说明",
+      "count": 2
+    },
+    {
+      "source": "Example usage",
+      "translation": "示例用法",
+      "count": 2
+    },
+    {
+      "source": "Default is <code>false</code>.",
+      "translation": "默认值为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "Indicate the resource locations of the properties files to be loaded.",
+      "translation": "指示要加载的属性文件的资源位置。",
+      "count": 1
+    },
+    {
+      "source": "Indicate the unique name of this property source.",
+      "translation": "指明该属性源的唯一名称。",
+      "count": 1
+    },
+    {
+      "source": "Chris Beams, Juergen Hoeller, Phillip Webb, Sam Brannen",
+      "translation": "Chris Beams, Juergen Hoeller, Phillip Webb, Sam Brannen",
+      "count": 1
+    },
+    {
+      "source": "Required Element Summary",
+      "translation": "必需元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-04-14 16:52:47",
+  "updated_at": "2026-04-14 16:52:47",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 28,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2727272727272727,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "In contrast to <a href=\"#INFERRED\"><code>INFERRED</code></a>, this mode requires the\npresence of a transaction manager <strong>and</strong> a data\nsource.",
+      "translation": "与<a href=\"#INFERRED\"><code>INFERRED</code></a>相反，此模式需要事务管理器<strong>以及</strong>数据源。",
+      "count": 2
+    },
+    {
+      "source": "Indicates that the transaction mode to use when executing SQL\nscripts should be <em>inferred</em> using the rules listed below.\nIn the context of these rules, the term \"<em>available</em>\"\nmeans that the bean for the data source or transaction manager\nis either explicitly specified via a corresponding annotation\nattribute in <code>@SqlConfig</code> or discoverable via conventions. See\n<a href=\"../transaction/TestContextTransactionUtils.html\" title=\"class in org.springframework.test.context.transaction\"><code>TestContextTransactionUtils</code></a>\nfor details on the conventions used to discover such beans in\nthe <code>ApplicationContext</code>.\n\n<h4 id=\"inference-rules-heading\">Inference Rules</h4>\n<ol>\n<li>If neither a transaction manager nor a data source is\navailable, an exception will be thrown.\n</li><li>If a transaction manager is not available but a data source\nis available, SQL scripts will be executed directly against the\ndata source without a transaction.\n</li><li>If a transaction manager is available:\n<ul>\n<li>If a data source is not available, an attempt will be made\nto retrieve it from the transaction manager by using reflection\nto invoke a public method named <code>getDataSource()</code> on the\ntransaction manager. If the attempt fails, an exception will be\nthrown.\n</li><li>Using the resolved transaction manager and data source, SQL\nscripts will be executed within an existing transaction if\npresent; otherwise, scripts will be executed in a new transaction\nthat will be immediately committed. An <em>existing</em>\ntransaction will typically be managed by the\n<a href=\"../transaction/TransactionalTestExecutionListener.html\" title=\"class in org.springframework.test.context.transaction\"><code>TransactionalTestExecutionListener</code></a>.\n</li></ul>\n</li></ol>",
+      "translation": "指示在执行 SQL 脚本时应使用以下规则推断出的事务模式。在这些规则的上下文中，术语\"<em>可用</em>\"（available）表示数据源或事务管理器的 bean 已通过 `<code>@SqlConfig</code>` 中相应的注解属性显式指定，或通过约定可被发现。有关在 `<code>ApplicationContext</code>` 中发现此类 bean 所使用的约定的详细信息，请参阅\n<a href=\"../transaction/TestContextTransactionUtils.html\" title=\"class in org.springframework.test.context.transaction\"><code>TestContextTransactionUtils</code></a>。\n\n<h4 id=\"inference-rules-heading\">推断规则</h4>\n<ol>\n<li>如果事务管理器或数据源均不可用，将抛出异常。\n</li><li>如果事务管理器不可用但数据源可用，SQL 脚本将直接在无事务的情况下针对数据源执行。\n</li><li>如果事务管理器可用：\n<ul>\n<li>如果数据源不可用，将尝试通过反射调用名为 <code>getDataSource()</code> 的公共方法来从事务管理器中检索它。如果尝试失败，将抛出异常。\n</li><li>使用解析后的事务管理器和数据源，如果存在现有事务，SQL 脚本将在该事务内执行；否则，脚本将在一个新事务中执行，该事务将立即提交。<em>现有</em>（existing）事务通常由\n<a href=\"../transaction/TransactionalTestExecutionListener.html\" title=\"class in org.springframework.test.context.transaction\"><code>TransactionalTestExecutionListener</code></a> 管理。\n</li></ul>\n</li></ol>",
+      "count": 2
+    },
+    {
+      "source": "Returns an array containing the constants of this enum class, in\nthe order they are declared.",
+      "translation": "返回一个包含此枚举类常量的数组，按声明顺序排列。",
+      "count": 2
+    },
+    {
+      "source": "If <code>@SqlConfig</code> is declared <strong>only</strong> locally,\nthe default transaction mode is <a href=\"#INFERRED\"><code>INFERRED</code></a>.",
+      "translation": "如果仅局部声明了<code>@SqlConfig</code>，默认事务模式为<a href=\"#INFERRED\"><code>INFERRED</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If <code>@SqlConfig</code> is declared globally, the default transaction\nmode is <a href=\"#INFERRED\"><code>INFERRED</code></a>.",
+      "translation": "如果全局声明了 `<code>@SqlConfig</code>`，则默认事务模式为 <a href=\"#INFERRED\"><code>INFERRED</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If <code>@SqlConfig</code> is declared globally <strong>and</strong>\nlocally, the default transaction mode for the local declaration is\ninherited from the global declaration.",
+      "translation": "如果 `<code>@SqlConfig</code>` 同时在全局和局部声明，则局部声明的默认事务模式将从全局声明中继承。",
+      "count": 2
+    },
+    {
+      "source": "The meaning of <em>default</em> depends on the context in which\n<code>@SqlConfig</code> is declared:",
+      "translation": "<em>default</em> 的含义取决于声明<code>@SqlConfig</code>的上下文：",
+      "count": 1
+    },
+    {
+      "source": "Enumeration of <em>modes</em> that dictate whether SQL scripts should be\nexecuted within a transaction and what the transaction propagation behavior\nshould be.",
+      "translation": "枚举<em>模式</em>，用于规定是否应在事务内执行 SQL 脚本以及事务传播行为应为何种方式。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that the <em>default</em> transaction mode should be used.",
+      "translation": "指示应使用<em>默认</em>事务模式。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that the transaction mode to use when executing SQL\nscripts should be <em>inferred</em> using the rules listed below.",
+      "translation": "指示在执行 SQL 脚本时应使用<em>推断</em>的事务模式，采用以下列出的规则。",
+      "count": 1
+    },
+    {
+      "source": "Indicates that SQL scripts should always be executed in a new,\n<em>isolated</em> transaction that will be immediately committed.",
+      "translation": "指示 SQL 脚本始终在立即提交的新、<em>隔离</em>事务中执行。",
+      "count": 1
+    },
+    {
+      "source": "Returns the enum constant of this class with the specified name.\nThe string must match <i>exactly</i> an identifier used to declare an\nenum constant in this class.  (Extraneous whitespace characters are \nnot permitted.)",
+      "translation": "返回此类的具有指定名称的枚举常量。该字符串必须与用于在此类中声明枚举常量的标识符<i>完全匹配</i>。（不允许存在多余的空白字符。）",
+      "count": 1
+    },
+    {
+      "source": "Returns the enum constant of this class with the specified name.",
+      "translation": "返回此类的具有指定名称的枚举常量。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if this enum class has no constant with the specified name",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果此枚举类没有指定名称的常量",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html\" title=\"class or interface in java.lang\">NullPointerException</a></code> - if the argument is null",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html\" title=\"java.lang 中的类或接口\">NullPointerException</a></code> - 如果参数为 null",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - the name of the enum constant to be returned.",
+      "translation": "<code>name</code> - 要返回的枚举常量的名称。",
+      "count": 1
+    },
+    {
+      "source": "Sam Brannen, Tadaya Tsuyukubo",
+      "translation": "Sam Brannen，Tsuyukubo Tadaya",
+      "count": 1
+    },
+    {
+      "source": "an array containing the constants of this enum class, in the order they are declared",
+      "translation": "一个包含此枚举类常量的数组，按声明顺序排列。",
+      "count": 1
+    },
+    {
+      "source": "the enum constant with the specified name",
+      "translation": "指定名称的枚举常量",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Enum Constant Summary",
+      "translation": "枚举常量摘要",
+      "count": 1
+    },
+    {
+      "source": "Enum Constant Details",
+      "translation": "枚举常量详情",
+      "count": 1
+    }
+  ]
+}

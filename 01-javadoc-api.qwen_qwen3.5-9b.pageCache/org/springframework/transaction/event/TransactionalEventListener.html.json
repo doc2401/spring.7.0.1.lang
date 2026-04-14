@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-04-14 17:31:00",
+  "updated_at": "2026-04-14 17:31:00",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 27,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.588235294117647,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "<strong>WARNING:</strong> if the <code>TransactionPhase</code> is set to\n<a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>AFTER_COMMIT</code></a> (the default),\n<a href=\"TransactionPhase.html#AFTER_ROLLBACK\"><code>AFTER_ROLLBACK</code></a>, or\n<a href=\"TransactionPhase.html#AFTER_COMPLETION\"><code>AFTER_COMPLETION</code></a>, the transaction will\nhave been committed or rolled back already, but the transactional resources might\nstill be active and accessible. As a consequence, any data access code triggered\nat this point will still \"participate\" in the original transaction, but changes\nwill not be committed to the transactional resource. See\n<a href=\"../support/TransactionSynchronization.html#afterCompletion(int)\"><code>TransactionSynchronization.afterCompletion(int)</code></a> for details.",
+      "translation": "<strong>警告：</strong> 如果 <code>TransactionPhase</code> 设置为\n<a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>AFTER_COMMIT</code></a>（默认值）、\n<a href=\"TransactionPhase.html#AFTER_ROLLBACK\"><code>AFTER_ROLLBACK</code></a> 或\n<a href=\"TransactionPhase.html#AFTER_COMPLETION\"><code>AFTER_COMPLETION</code></a>，事务将已经提交或回滚，但事务性资源可能仍然处于活动状态并可访问。因此，此时触发的任何数据访问代码仍将“参与”原始事务，但更改不会提交到事务性资源。有关详细信息，请参阅\n<a href=\"../support/TransactionSynchronization.html#afterCompletion(int)\"><code>TransactionSynchronization.afterCompletion(int)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "If the event is not published within an active transaction, the event is discarded\nunless the <a href=\"#fallbackExecution()\"><code>fallbackExecution()</code></a> flag is explicitly set. If a transaction is\nrunning, the event is handled according to its <code>TransactionPhase</code>.",
+      "translation": "如果事件未在活跃事务中发布，除非明确设置了 `<a href=\"#fallbackExecution()\"><code>fallbackExecution()</code></a>` 标志，否则该事件将被丢弃。如果正在运行事务，则根据事件的 `<code>TransactionPhase</code>` 进行处理。",
+      "count": 2
+    },
+    {
+      "source": "Adding <a href=\"../../core/annotation/Order.html\" title=\"annotation interface in org.springframework.core.annotation\"><code>@Order</code></a> to your annotated\nmethod allows you to prioritize that listener amongst other listeners running before\nor after transaction completion.",
+      "translation": "向您的注解方法添加 <a href=\"../../core/annotation/Order.html\" title=\"org.springframework.core.annotation 中的注解接口\"><code>@Order</code></a>，可让您在事务完成之前或之后运行的其他监听器中对该监听器进行优先级排序。",
+      "count": 2
+    },
+    {
+      "source": "If no transaction is in progress, the event is not processed at\nall unless <a href=\"#fallbackExecution()\"><code>fallbackExecution()</code></a> has been enabled explicitly.",
+      "translation": "如果没有正在进行的交易，除非已显式启用 `<a href=\"#fallbackExecution()\"><code>fallbackExecution()</code></a>`，否则该事件将完全不进行处理。",
+      "count": 2
+    },
+    {
+      "source": "If this attribute is specified with a single value, the annotated\nmethod may optionally accept a single parameter. However, if this\nattribute is specified with multiple values, the annotated method\nmust <em>not</em> declare any parameters.",
+      "translation": "如果此属性指定了单个值，则带注解的方法可选地接受一个参数。但是，如果此属性指定了多个值，则带注解的方法不得声明任何参数。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>\"\"</code>, meaning the event is always handled.",
+      "translation": "默认值为 `<code>\"\"</code>，表示该事件始终被处理。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"#classes()\"><code>classes()</code></a>.",
+      "translation": "`<a href=\"#classes()\">classes()</a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "Whether the event should be handled if no transaction is running.",
+      "translation": "如果没有正在运行的事务，是否应该处理该事件。",
+      "count": 2
+    },
+    {
+      "source": "An optional identifier for the listener, defaulting to the fully-qualified\nsignature of the declaring method (for example, \"mypackage.MyClass.myMethod()\").",
+      "translation": "监听器的可选标识符，默认为声明方法的完全限定签名（例如，\"mypackage.MyClass.myMethod()\"）。",
+      "count": 2
+    },
+    {
+      "source": "Stephane Nicoll, Sam Brannen, Oliver Drotbohm",
+      "translation": "Stephane Nicoll, Sam Brannen, Oliver Drotbohm",
+      "count": 2
+    },
+    {
+      "source": "As of 6.1, transactional event listeners can work with thread-bound transactions managed\nby a <a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> as well as reactive\ntransactions managed by a <a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>.\nFor the former, listeners are guaranteed to see the current thread-bound transaction.\nSince the latter uses the Reactor context instead of thread-local variables, the transaction\ncontext needs to be included in the published event instance as the event source:\nsee <a href=\"../reactive/TransactionalEventPublisher.html\" title=\"class in org.springframework.transaction.reactive\"><code>TransactionalEventPublisher</code></a>.",
+      "translation": "自 6.1 版本起，事务性事件监听器可以与由 `<a href=\"../PlatformTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 管理的线程绑定事务以及由 `<a href=\"../ReactiveTransactionManager.html\" title=\"interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a>` 管理的响应式事务一起工作。对于前者，监听器保证能看到当前线程绑定的事务。由于后者使用 Reactor 上下文而非线程本地变量，因此需要将事务上下文包含在发布的事件实例中作为事件源：请参阅 `<a href=\"../reactive/TransactionalEventPublisher.html\" title=\"class in org.springframework.transaction.reactive\"><code>TransactionalEventPublisher</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "The default phase is <a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>TransactionPhase.AFTER_COMMIT</code></a>.",
+      "translation": "默认阶段是<a href=\"TransactionPhase.html#AFTER_COMMIT\"><code>TransactionPhase.AFTER_COMMIT</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The event classes that this listener handles.",
+      "translation": "该监听器处理的事件类。",
+      "count": 1
+    },
+    {
+      "source": "Spring Expression Language (SpEL) attribute used for making the event\nhandling conditional.",
+      "translation": "用于使事件处理条件化的 Spring 表达式语言 (SpEL) 属性。",
+      "count": 1
+    },
+    {
+      "source": "Phase to bind the handling of an event to.",
+      "translation": "绑定事件处理的阶段。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-04-14 11:41:07",
+  "updated_at": "2026-04-14 11:41:07",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 54,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8620689655172413,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "<code>attributeName</code> - the attribute name taken straight from the\nXML element being parsed (never <code>null</code>)",
+      "translation": "<code>attributeName</code> - 直接从正在解析的 XML 元素中获取的属性名（永远不会为 <code>null</code>）",
+      "count": 3
+    },
+    {
+      "source": "The observant reader will notice that the sole attribute on the\n<code>&lt;util:properties/&gt;</code> element matches the\n<a href=\"../../../core/io/support/PropertiesLoaderSupport.html#setLocation(org.springframework.core.io.Resource)\"><code>PropertiesLoaderSupport.setLocation(org.springframework.core.io.Resource)</code></a>\nmethod name on the <code>PropertiesFactoryBean</code> (the general\nusage thus illustrated holds true for any number of attributes).\nAll that the <code>PropertiesBeanDefinitionParser</code> needs\nactually do is supply an implementation of the\n<a href=\"AbstractSingleBeanDefinitionParser.html#getBeanClass(org.w3c.dom.Element)\"><code>AbstractSingleBeanDefinitionParser.getBeanClass(org.w3c.dom.Element)</code></a> method to return the\n<code>PropertiesFactoryBean</code> type.",
+      "translation": "细心的读者会注意到，`<util:properties/>` 元素上的唯一属性与 `<code>PropertiesLoaderSupport.setLocation(org.springframework.core.io.Resource)</code>` 方法名匹配（此处所演示的一般用法对任意数量的属性均适用）。`<code>PropertiesBeanDefinitionParser</code>` 实际上只需提供一个 `<code>AbstractSingleBeanDefinitionParser.getBeanClass(org.w3c.dom.Element)</code>` 方法的实现，以返回 `<code>PropertiesFactoryBean</code>` 类型。",
+      "count": 2
+    },
+    {
+      "source": "Please note that the <code>AbstractSimpleBeanDefinitionParser</code>\nis limited to populating the created bean definition with property values.\nif you want to parse constructor arguments and nested elements from the\nsupplied XML element, then you will have to implement the\n<a href=\"#postProcess(org.springframework.beans.factory.support.BeanDefinitionBuilder,org.w3c.dom.Element)\"><code>postProcess(org.springframework.beans.factory.support.BeanDefinitionBuilder, org.w3c.dom.Element)</code></a>\nmethod and do such parsing yourself, or (more likely) subclass the\n<a href=\"AbstractSingleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractSingleBeanDefinitionParser</code></a> or <a href=\"AbstractBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractBeanDefinitionParser</code></a>\nclasses directly.",
+      "translation": "请注意，`AbstractSimpleBeanDefinitionParser` 仅限于为创建的 Bean 定义填充属性值。如果您想从提供的 XML 元素中解析构造函数参数和嵌套元素，则必须实现<a href=\"#postProcess(org.springframework.beans.factory.support.BeanDefinitionBuilder,org.w3c.dom.Element)\"><code>postProcess(org.springframework.beans.factory.support.BeanDefinitionBuilder, org.w3c.dom.Element)</code></a>方法并自行执行此类解析，或者（更有可能的情况）直接继承<a href=\"AbstractSingleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractSingleBeanDefinitionParser</code></a>或<a href=\"AbstractBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\"><code>AbstractBeanDefinitionParser</code></a>类。",
+      "count": 2
+    },
+    {
+      "source": "This implementation maps any attributes present on the\nsupplied element to <a href=\"../../PropertyValue.html\" title=\"class in org.springframework.beans\"><code>PropertyValue</code></a>\ninstances, and\n<a href=\"../support/BeanDefinitionBuilder.html#addPropertyValue(java.lang.String,java.lang.Object)\"><code>adds them</code></a>\nto the\n<a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>builder</code></a>.",
+      "translation": "此实现将提供的元素上的任何属性映射到 <a href=\"../../PropertyValue.html\" title=\"class in org.springframework.beans\"><code>PropertyValue</code></a> 实例，并 <a href=\"../support/BeanDefinitionBuilder.html#addPropertyValue(java.lang.String,java.lang.Object)\"><code>添加它们</code></a> 到 <a href=\"../config/BeanDefinition.html\" title=\"interface in org.springframework.beans.factory.config\"><code>builder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "For an example of this parser in action (so to speak), do look at\nthe source code for the\n<code>UtilNamespaceHandler.PropertiesBeanDefinitionParser</code>;\nthe observant (and even not so observant) reader will immediately notice that\nthere is next to no code in the implementation. The\n<code>PropertiesBeanDefinitionParser</code> populates a\n<a href=\"../config/PropertiesFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>PropertiesFactoryBean</code></a>\nfrom an XML element that looks like this:",
+      "translation": "作为此解析器实际运行（这么说吧）的一个示例，请查看\n<code>UtilNamespaceHandler.PropertiesBeanDefinitionParser</code> 的源代码；\n敏锐的（甚至是不那么敏锐的）读者会立即注意到，该实现中几乎没有代码。\n<code>PropertiesBeanDefinitionParser</code> 从一个类似于以下的 XML 元素填充一个\n<a href=\"../config/PropertiesFactoryBean.html\" title=\"class in org.springframework.beans.factory.config\"><code>PropertiesFactoryBean</code></a>：",
+      "count": 2
+    },
+    {
+      "source": "Extend this parser class when you want to create a single\nbean definition from a relatively simple custom XML element. The\nresulting <code>BeanDefinition</code> will be automatically\nregistered with the relevant\n<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>.",
+      "translation": "在需要从一个相对简单的自定义 XML 元素创建单个 bean 定义时，扩展此解析器类。生成的 <code>BeanDefinition</code> 将自动注册到相关的\n<a href=\"../support/BeanDefinitionRegistry.html\" title=\"interface in org.springframework.beans.factory.support\"><code>BeanDefinitionRegistry</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#extractPropertyName(java.lang.String)\"><code>extractPropertyName(String)</code></a> method is used to\nreconcile the name of an attribute with the name of a JavaBean\nproperty.",
+      "translation": "`<a href=\"#extractPropertyName(java.lang.String)\"><code>extractPropertyName(String)</code></a>` 方法用于协调属性名称与 JavaBean 属性名称。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation uses the\n<a href=\"../../../core/Conventions.html#attributeNameToPropertyName(java.lang.String)\"><code>Conventions.attributeNameToPropertyName(String)</code></a>\nmethod to perform the extraction.",
+      "translation": "默认实现使用 <a href=\"../../../core/Conventions.html#attributeNameToPropertyName(java.lang.String)\"><code>Conventions.attributeNameToPropertyName(String)</code></a> 方法执行提取。",
+      "count": 2
+    },
+    {
+      "source": "The name returned must obey the standard JavaBean property name\nconventions. For example for a class with a setter method\n'<code>setBingoHallFavourite(String)</code>', the name returned had\nbetter be '<code>bingoHallFavourite</code>' (with that exact casing).",
+      "translation": "返回的名称必须遵循标准的 JavaBean 属性命名约定。例如，对于具有 setter 方法`<code>setBingoHallFavourite(String)</code>`的类，返回的名称最好是'<code>bingoHallFavourite</code>'（使用完全相同的拼写）。",
+      "count": 2
+    },
+    {
+      "source": "All that is required of the Java developer tasked with writing\nthe parser to parse the above XML tag into an actual\n<code>SimpleCache</code> bean definition is the following:",
+      "translation": "负责编写解析器的 Java 开发人员只需执行以下操作，即可将上述 XML 标签解析为实际的 `<code>SimpleCache</code>` Bean 定义：",
+      "count": 2
+    },
+    {
+      "source": "The process of actually registering the\n<code>SimpleCacheBeanDefinitionParser</code> with the Spring XML parsing\ninfrastructure is described in the Spring Framework reference documentation\n(in one of the appendices).",
+      "translation": "实际将 `<code>SimpleCacheBeanDefinitionParser</code>` 注册到 Spring XML 解析基础设施的过程，在 Spring Framework 参考文档（附录之一）中有描述。",
+      "count": 2
+    },
+    {
+      "source": "An example will hopefully make the use of this particular parser\nclass immediately clear. Consider the following class definition:",
+      "translation": "一个示例将希望能使这个特定解析器类的用途立即变得清晰。考虑以下类定义：",
+      "count": 2
+    },
+    {
+      "source": "Then let us assume the following XML tag has been defined to\npermit the easy configuration of instances of the above class;",
+      "translation": "然后，让我们假设已定义以下 XML 标签，以便轻松配置上述类的实例；",
+      "count": 2
+    },
+    {
+      "source": "The default implementation considers any attribute as eligible,\nexcept for the \"id\" attribute and namespace declaration attributes.",
+      "translation": "默认实现认为任何属性都符合条件，但\"id\"属性和命名空间声明属性除外。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation considers any attribute as eligible,\nexcept for the \"id\" attribute.",
+      "translation": "默认实现认为任何属性都符合条件，除了\"id\"属性。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation does nothing.",
+      "translation": "默认实现什么都不做。",
+      "count": 2
+    },
+    {
+      "source": "Parse the supplied <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> and populate the supplied\n<a href=\"../support/BeanDefinitionBuilder.html\" title=\"class in org.springframework.beans.factory.support\"><code>BeanDefinitionBuilder</code></a> as required.",
+      "translation": "解析提供的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/org/w3c/dom/Element.html\" title=\"class or interface in org.w3c.dom\"><code>Element</code></a> 并按需填充提供的\n<a href=\"../support/BeanDefinitionBuilder.html\" title=\"class in org.springframework.beans.factory.support\"><code>BeanDefinitionBuilder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Determine whether the given attribute is eligible for being\nturned into a corresponding bean property value.",
+      "translation": "确定给定的属性是否可转换为对应的 Bean 属性值。",
+      "count": 2
+    },
+    {
+      "source": "<code><a href=\"AbstractSingleBeanDefinitionParser.html#doParse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext,org.springframework.beans.factory.support.BeanDefinitionBuilder)\">doParse</a></code> in class <code><a href=\"AbstractSingleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\">AbstractSingleBeanDefinitionParser</a></code>",
+      "translation": "`<code><a href=\"AbstractSingleBeanDefinitionParser.html#doParse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext,org.springframework.beans.factory.support.BeanDefinitionBuilder)\">doParse</a></code>` 类中的 `<code><a href=\"AbstractSingleBeanDefinitionParser.html\" title=\"class in org.springframework.beans.factory.xml\">AbstractSingleBeanDefinitionParser</a></code>`",
+      "count": 2
+    },
+    {
+      "source": "<code>attribute</code> - the XML attribute to check",
+      "translation": "<code>attribute</code> - 要检查的 XML 属性",
+      "count": 2
+    },
+    {
+      "source": "the extracted JavaBean property name (must never be <code>null</code>)",
+      "translation": "提取的 JavaBean 属性名称（绝不能为<code>null</code>）",
+      "count": 2
+    },
+    {
+      "source": "<code>beanDefinition</code> - the parsed (and probably totally defined) bean definition being built",
+      "translation": "<code>beanDefinition</code> - 正在构建的已解析（且可能完全定义）的 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "<code>element</code> - the XML element that was the source of the bean definition's metadata",
+      "translation": "<code>element</code> - 该 Bean 定义元数据的来源 XML 元素",
+      "count": 2
+    },
+    {
+      "source": "Rob Harrop, Rick Evans, Juergen Hoeller",
+      "translation": "Rob Harrop, Rick Evans, Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "Extract a JavaBean property name from the supplied attribute name.",
+      "translation": "从提供的属性名中提取 JavaBean 属性名。",
+      "count": 1
+    },
+    {
+      "source": "Hook method that derived classes can implement to inspect/change a\nbean definition after parsing is complete.",
+      "translation": "派生类可以实现的钩子方法，用于在解析完成后检查/修改 Bean 定义。",
+      "count": 1
+    },
+    {
+      "source": "<code>builder</code> - used to define the <code>BeanDefinition</code>",
+      "translation": "<code>builder</code> - 用于定义 <code>BeanDefinition</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>element</code> - the XML element being parsed",
+      "translation": "<code>element</code> - 正在解析的 XML 元素",
+      "count": 1
+    },
+    {
+      "source": "<code>parserContext</code> - the object encapsulating the current state of the parsing process",
+      "translation": "<code>parserContext</code> - 封装当前解析过程状态的对象",
+      "count": 1
+    }
+  ]
+}

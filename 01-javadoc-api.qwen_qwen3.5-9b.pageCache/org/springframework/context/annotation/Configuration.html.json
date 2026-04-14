@@ -1,0 +1,291 @@
+{
+  "created_at": "2026-04-14 12:08:57",
+  "updated_at": "2026-04-14 12:08:57",
+  "stats": {
+    "total_entries": 55,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 106,
+    "entries_with_hits": 55,
+    "entries_without_hits": 0,
+    "hit_rate": 1.9272727272727272,
+    "usage_percentage": 0.0055000000000000005
+  },
+  "items": [
+    {
+      "source": "This approach is often used in conjunction with Spring's\n<a href=\"../support/PropertySourcesPlaceholderConfigurer.html\" title=\"class in org.springframework.context.support\"><code>PropertySourcesPlaceholderConfigurer</code></a> that can be enabled <em>automatically</em>\nin XML configuration via <code>&lt;context:property-placeholder/&gt;</code> or <em>explicitly</em>\nin a <code>@Configuration</code> class via a dedicated <code>static</code> <code>@Bean</code> method\n(see \"a note on BeanFactoryPostProcessor-returning <code>@Bean</code> methods\" of\n<a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a>'s javadocs for details). Note, however, that explicit registration\nof a <code>PropertySourcesPlaceholderConfigurer</code> via a <code>static</code> <code>@Bean</code>\nmethod is typically only required if you need to customize configuration such as the\nplaceholder syntax, etc. Specifically, if no bean post-processor (such as a\n<code>PropertySourcesPlaceholderConfigurer</code>) has registered an <em>embedded value\nresolver</em> for the <code>ApplicationContext</code>, Spring will register a default\n<em>embedded value resolver</em> which resolves placeholders against property sources\nregistered in the <code>Environment</code>. See the section below on composing\n<code>@Configuration</code> classes with Spring XML using <code>@ImportResource</code>; see\nthe <a href=\"../../beans/factory/annotation/Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a> javadocs; and see the <a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a> javadocs for details\non working with <code>BeanFactoryPostProcessor</code> types such as\n<code>PropertySourcesPlaceholderConfigurer</code>.",
+      "translation": "这种方法通常与 Spring 的<a href=\"../support/PropertySourcesPlaceholderConfigurer.html\" title=\"class in org.springframework.context.support\"><code>PropertySourcesPlaceholderConfigurer</code></a>配合使用，该配置器可以通过 XML 配置中的<code>&lt;context:property-placeholder/&gt;</code><em>自动</em>启用，或在<code>@Configuration</code>类中通过专用的<code>static</code><code>@Bean</code>方法<em>显式</em>启用（有关 BeanFactoryPostProcessor-returning <code>@Bean</code> 方法的说明，请参阅<a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a>的 javadocs 中的“关于返回 BeanFactoryPostProcessor 的<code>@Bean</code>方法”一节）。然而请注意，通过<code>static</code><code>@Bean</code>方法显式注册<code>PropertySourcesPlaceholderConfigurer</code>通常仅在您需要自定义配置（例如占位符语法等）时才需要。具体而言，如果没有 bean 后置处理器（如<code>PropertySourcesPlaceholderConfigurer</code>）为<code>ApplicationContext</code>注册了<em>嵌入式值解析器</em>，Spring 将注册一个默认的<em>嵌入式值解析器</em>，该解析器针对在<code>Environment</code>中注册的属性源解析占位符。请参阅以下关于使用<code>@ImportResource</code>组合<code>@Configuration</code>类与 Spring XML 的章节；请参阅<a href=\"../../beans/factory/annotation/Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a>的 javadocs；并请参阅<a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean</code></a>的 javadocs，以了解如何与<code>PropertySourcesPlaceholderConfigurer</code>等<code>BeanFactoryPostProcessor</code>类型一起工作。",
+      "count": 2
+    },
+    {
+      "source": "Spring features such as asynchronous method execution, scheduled task execution,\nannotation driven transaction management, and even Spring MVC can be enabled and\nconfigured from <code>@Configuration</code> classes using their respective \"<code>@Enable</code>\"\nannotations. See\n<a href=\"../../scheduling/annotation/EnableAsync.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@EnableAsync</code></a>,\n<a href=\"../../scheduling/annotation/EnableScheduling.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@EnableScheduling</code></a>,\n<a href=\"../../transaction/annotation/EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>@EnableTransactionManagement</code></a>,\n<a href=\"EnableAspectJAutoProxy.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@EnableAspectJAutoProxy</code></a>,\nand <a href=\"../../web/servlet/config/annotation/EnableWebMvc.html\" title=\"annotation interface in org.springframework.web.servlet.config.annotation\"><code>@EnableWebMvc</code></a>\nfor details.",
+      "translation": "Spring 的异步方法执行、定时任务执行、基于注解的事务管理，甚至 Spring MVC 等功能都可以通过其各自的 `<code>@Enable</code>` 注解在 `<code>@Configuration</code>` 类中启用和配置。有关详细信息，请参阅\n<a href=\"../../scheduling/annotation/EnableAsync.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@EnableAsync</code></a>、\n<a href=\"../../scheduling/annotation/EnableScheduling.html\" title=\"annotation interface in org.springframework.scheduling.annotation\"><code>@EnableScheduling</code></a>、\n<a href=\"../../transaction/annotation/EnableTransactionManagement.html\" title=\"annotation interface in org.springframework.transaction.annotation\"><code>@EnableTransactionManagement</code></a>、\n<a href=\"EnableAspectJAutoProxy.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@EnableAspectJAutoProxy</code></a> 以及\n<a href=\"../../web/servlet/config/annotation/EnableWebMvc.html\" title=\"annotation interface in org.springframework.web.servlet.config.annotation\"><code>@EnableWebMvc</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Since <code>@Configuration</code> is meta-annotated with <a href=\"../../stereotype/Component.html\" title=\"annotation interface in org.springframework.stereotype\"><code>@Component</code></a>,\n<code>@Configuration</code> classes are candidates for component scanning —\nfor example, using <a href=\"ComponentScan.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ComponentScan</code></a> or Spring XML's\n<code>&lt;context:component-scan/&gt;</code> element — and therefore may also take\nadvantage of <a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>/<code>@Inject</code>\nlike any regular <code>@Component</code>. In particular, if a single constructor is\npresent, autowiring semantics will be applied transparently for that constructor:",
+      "translation": "由于 `<code>@Configuration</code>` 使用带有 `<a href=\"../../stereotype/Component.html\" title=\"annotation interface in org.springframework.stereotype\"><code>@Component</code></a>` 元注解，因此 `<code>@Configuration</code>` 类是组件扫描的候选对象——例如，可以使用 `<a href=\"ComponentScan.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ComponentScan</code></a>` 或 Spring XML 中的 `<code>&lt;context:component-scan/&gt;</code>` 元素——因此也可以像任何普通的 `<code>@Component</code>` 一样利用 `<a href=\"../../beans/factory/annotation/Autowired.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Autowired</code></a>`/<code>@Inject</code>。特别是，如果存在单个构造函数，将透明地对该构造函数应用自动装配语义：",
+      "count": 2
+    },
+    {
+      "source": "By default, <code>@Bean</code> methods will be <em>eagerly instantiated</em> at container\nbootstrap time.  To avoid this, <code>@Configuration</code> may be used in conjunction with\nthe <a href=\"Lazy.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Lazy</code></a> annotation to indicate that all <code>@Bean</code> methods declared\nwithin the class are by default lazily initialized. Note that <code>@Lazy</code> may be used\non individual <code>@Bean</code> methods as well.",
+      "translation": "默认情况下，<code>@Bean</code> 方法将在容器引导时进行<em>急切实例化</em>。为避免这种情况，可以结合使用<a href=\"Lazy.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Lazy</code></a>注解与<code>@Configuration</code>，以指示该类中声明的所有<code>@Bean</code>方法默认采用延迟初始化。请注意，<code>@Lazy</code>也可用于单个<code>@Bean</code>方法。",
+      "count": 2
+    },
+    {
+      "source": "When bootstrapping such an arrangement, only <code>AppConfig</code> need be registered\nagainst the application context. By virtue of being a nested <code>@Configuration</code>\nclass, <code>DatabaseConfig</code> <em>will be registered automatically</em>. This avoids\nthe need to use an <code>@Import</code> annotation when the relationship between\n<code>AppConfig</code> and <code>DatabaseConfig</code> is already implicitly clear.",
+      "translation": "在引导此类配置时，只需将 `<code>AppConfig` 注册到应用程序上下文中。由于 `<code>DatabaseConfig` 是一个嵌套的 `<code>@Configuration` 类，它<em>将被自动注册</em>。这避免了在 `<code>AppConfig` 和 `<code>DatabaseConfig` 之间的关系已经隐含明确时使用 `<code>@Import` 注解的需要。",
+      "count": 2
+    },
+    {
+      "source": "As mentioned above, <code>@Configuration</code> classes may be declared as regular Spring\n<code>&lt;bean&gt;</code> definitions within Spring XML files. It is also possible to\nimport Spring XML configuration files into <code>@Configuration</code> classes using\nthe <a href=\"ImportResource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ImportResource</code></a> annotation. Bean definitions imported from\nXML can be injected — for example, using the <code>@Inject</code> annotation:",
+      "translation": "如上所述，<code>@Configuration</code> 类可以声明为 Spring XML 文件中的常规 Spring <code>&lt;bean&gt;</code> 定义。此外，还可以使用<a href=\"ImportResource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ImportResource</code></a> 注解将 Spring XML 配置文件导入到<code>@Configuration</code> 类中。从 XML 导入的 Bean 定义可以注入——例如，使用 <code>@Inject</code> 注解：",
+      "count": 2
+    },
+    {
+      "source": "The Spring <em>TestContext framework</em> available in the <code>spring-test</code> module\nprovides the <code>@ContextConfiguration</code> annotation which can accept an array of\n<em>component class</em> references — typically <code>@Configuration</code> or\n<code>@Component</code> classes.",
+      "translation": "Spring 的 `<em>TestContext framework</em>`（位于 `<code>spring-test</code>` 模块中）提供了 `<code>@ContextConfiguration</code>` 注解，该注解可以接受一个 `<em>component class</em>` 引用数组——通常是 `<code>@Configuration</code>` 或 `<code>@Component</code>` 类。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Configuration</code> classes are typically bootstrapped using either\n<a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a> or its web-capable variant,\n<a href=\"../../web/context/support/AnnotationConfigWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>AnnotationConfigWebApplicationContext</code></a>. A simple example with the former follows:",
+      "translation": "`<code>@Configuration</code>` 类通常使用 `<a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a>` 或其支持 Web 功能的变体 `<a href=\"../../web/context/support/AnnotationConfigWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>AnnotationConfigWebApplicationContext</code></a>` 进行引导。以下是一个使用前者（`<code>AnnotationConfigApplicationContext</code>`）的简单示例：",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a> javadocs for further details, and see\n<a href=\"../../web/context/support/AnnotationConfigWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>AnnotationConfigWebApplicationContext</code></a> for web configuration instructions in a\n<code>Servlet</code> container.",
+      "translation": "有关更多详细信息，请参阅 <a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a> 的 JavaDoc，并查看\n<a href=\"../../web/context/support/AnnotationConfigWebApplicationContext.html\" title=\"class in org.springframework.web.context.support\"><code>AnnotationConfigWebApplicationContext</code></a> 以获取在\n<code>Servlet</code> 容器中进行 Web 配置的说明。",
+      "count": 2
+    },
+    {
+      "source": "Properties resolved through the <code>Environment</code> reside in one or more \"property\nsource\" objects, and <code>@Configuration</code> classes may contribute property sources to\nthe <code>Environment</code> object using the <a href=\"PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a>\nannotation:",
+      "translation": "通过 `<code>Environment`</code> 解析的属性位于一个或多个“属性源”对象中，且 `<code>@Configuration</code>` 类可以使用 <a href=\"PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a> 注解向 `<code>Environment`</code> 对象贡献属性源：",
+      "count": 2
+    },
+    {
+      "source": "<code>@Configuration</code> classes may be composed using the <a href=\"Import.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Import</code></a> annotation,\nsimilar to the way that <code>&lt;import&gt;</code> works in Spring XML. Because\n<code>@Configuration</code> objects are managed as Spring beans within the container,\nimported configurations may be injected — for example, via constructor injection:",
+      "translation": "`@Configuration` 类可以使用 `<a href=\"Import.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Import</code></a>` 注解进行组合，类似于 Spring XML 中 `<import>` 的工作方式。由于 `@Configuration` 对象在容器中被管理为 Spring Bean，因此可以注入导入的配置——例如通过构造函数注入：",
+      "count": 2
+    },
+    {
+      "source": "Turning off bean method interception effectively processes <code>@Bean</code>\nmethods individually like when declared on non-<code>@Configuration</code> classes,\na.k.a. \"@Bean Lite Mode\" (see <a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean's javadoc</code></a>). It is therefore\nbehaviorally equivalent to removing the <code>@Configuration</code> stereotype.",
+      "translation": "关闭 Bean 方法拦截会像声明在非 `<code>@Configuration</code>` 类上一样单独处理 `<code>@Bean</code>` 方法，即所谓的\"@Bean Lite Mode\"（参见<a href=\"Bean.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Bean's javadoc</code></a>）。因此，其行为等效于移除 `<code>@Configuration</code>` 注解。",
+      "count": 2
+    },
+    {
+      "source": "As an alternative to registering <code>@Configuration</code> classes directly against an\n<code>AnnotationConfigApplicationContext</code>, <code>@Configuration</code> classes may be\ndeclared as normal <code>&lt;bean&gt;</code> definitions within Spring XML files:",
+      "translation": "作为直接对 `AnnotationConfigApplicationContext` 注册 `<code>@Configuration</code>` 类的替代方案，可以在 Spring XML 文件中将 `<code>@Configuration</code>` 类声明为普通的 `<code>&lt;bean&gt;</code>` 定义：",
+      "count": 2
+    },
+    {
+      "source": "In the example above, <code>&lt;context:annotation-config/&gt;</code> is required in order to\nenable <a href=\"ConfigurationClassPostProcessor.html\" title=\"class in org.springframework.context.annotation\"><code>ConfigurationClassPostProcessor</code></a> and other annotation-related\npost processors that facilitate handling <code>@Configuration</code> classes.",
+      "translation": "在上例中，需要包含 `<context:annotation-config/>` 以启用 `<a href=\"ConfigurationClassPostProcessor.html\" title=\"class in org.springframework.context.annotation\"><code>ConfigurationClassPostProcessor</code></a>` 及其他与注解相关的后置处理器，这些处理器有助于处理 `<code>@Configuration</code>` 类。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Configuration</code> classes may not only be bootstrapped using component\nscanning, but may also themselves <em>configure</em> component scanning using\nthe <a href=\"ComponentScan.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ComponentScan</code></a> annotation:",
+      "translation": "`<code>@Configuration</code>` 类不仅可以通过组件扫描进行引导，还可以使用 `<a href=\"ComponentScan.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ComponentScan</code></a>` 注解来配置组件扫描：",
+      "count": 2
+    },
+    {
+      "source": "Externalized values may be looked up by injecting the Spring\n<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a> into a <code>@Configuration</code>\nclass — for example, using the <code>@Autowired</code> annotation:",
+      "translation": "外部化值可以通过将 Spring `<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>` 注入到 `<code>@Configuration</code>` 类中进行查找——例如，使用 `<code>@Autowired</code>` 注解：",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>\nand <a href=\"PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a> javadocs for further details.",
+      "translation": "请参阅<a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>和<a href=\"PropertySource.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@PropertySource</code></a>的 JavaDoc 以获取更多信息。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Configuration</code> classes may be marked with the <a href=\"Profile.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Profile</code></a> annotation to\nindicate they should be processed only if a given profile or profiles are <em>active</em>:",
+      "translation": "<code>@Configuration</code> 类可以标记有<a href=\"Profile.html\" title=\"org.springframework.context.annotation 中的注解接口\"><code>@Profile</code></a> 注解，以指示仅当给定配置文件或配置文件处于 <em>活动</em> 状态时才对其进行处理：",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"Profile.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@Profile</code></a> and <a href=\"../../core/env/Environment.html\" title=\"interface in org.springframework.core.env\"><code>Environment</code></a>\njavadocs for further details.",
+      "translation": "有关更多详细信息，请参阅<a href=\"Profile.html\" title=\"org.springframework.context.annotation 中的注解接口\"><code>@Profile</code></a>和<a href=\"../../core/env/Environment.html\" title=\"org.springframework.core.env 中的接口\"><code>Environment</code></a>的 JavaDoc。",
+      "count": 2
+    },
+    {
+      "source": "The custom name applies only if the <code>@Configuration</code> class is picked\nup via component scanning or supplied directly to an\n<a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a>. If the <code>@Configuration</code> class\nis registered as a traditional XML bean definition, the name/id of the bean\nelement will take precedence.",
+      "translation": "自定义名称仅在通过组件扫描拾取 `<code>@Configuration</code>` 类或直接将其提供给 <a href=\"AnnotationConfigApplicationContext.html\" title=\"class in org.springframework.context.annotation\"><code>AnnotationConfigApplicationContext</code></a> 时适用。如果将 `<code>@Configuration</code>` 类注册为传统的 XML Bean 定义，则 Bean 元素的名称/ID 将优先采用。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>true</code>, allowing for 'inter-bean references' via direct\nmethod calls within the configuration class as well as for external calls to\nthis configuration's <code>@Bean</code> methods, for example, from another configuration class.\nIf this is not needed since each of this particular configuration's <code>@Bean</code>\nmethods is self-contained and designed as a plain factory method for container use,\nswitch this flag to <code>false</code> in order to avoid CGLIB subclass processing.",
+      "translation": "默认值为 `<code>true</code>`，允许通过配置类内的直接方法调用实现“Bean 间引用”，也允许从其他配置类向外部的此配置的 `<code>@Bean</code>` 方法发起调用。如果不需要此功能，因为该特定配置的每个 `<code>@Bean</code>` 方法都是自包含的，并设计为供容器使用的普通工厂方法，请将此标志切换为 `<code>false</code>`，以避免 CGLIB 子类处理。",
+      "count": 2
+    },
+    {
+      "source": "Externalized values may be injected into <code>@Configuration</code> classes using\nthe <a href=\"../../beans/factory/annotation/Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a> annotation:",
+      "translation": "外部化值可以使用<a href=\"../../beans/factory/annotation/Value.html\" title=\"annotation interface in org.springframework.beans.factory.annotation\"><code>@Value</code></a>注解注入到<code>@Configuration</code>类中：",
+      "count": 2
+    },
+    {
+      "source": "Now both <code>AppConfig</code> and the imported <code>DatabaseConfig</code> can be bootstrapped\nby registering only <code>AppConfig</code> against the Spring context:",
+      "translation": "现在只需将<code>AppConfig</code>注册到 Spring 上下文中，即可引导<code>AppConfig</code>和导入的<code>DatabaseConfig</code>：",
+      "count": 2
+    },
+    {
+      "source": "Note also that nested <code>@Configuration</code> classes can be used to good effect\nwith the <code>@Profile</code> annotation to provide two options of the same bean to the\nenclosing <code>@Configuration</code> class.",
+      "translation": "同样请注意，嵌套的 `<code>@Configuration</code>` 类可与 `<code>@Profile</code>` 注解配合使用，为外围的 `<code>@Configuration</code>` 类提供同一 bean 的两个选项。",
+      "count": 2
+    },
+    {
+      "source": "See the <a href=\"ComponentScan.html\" title=\"annotation interface in org.springframework.context.annotation\"><code>@ComponentScan</code></a> javadocs for details.",
+      "translation": "有关详细信息，请参阅 <a href=\"ComponentScan.html\" title=\"org.springframework.context.annotation 中的注解接口\"><code>@ComponentScan</code></a> 的 JavaDoc。",
+      "count": 2
+    },
+    {
+      "source": "Alias for <a href=\"../../stereotype/Component.html#value()\"><code>Component.value()</code></a>.",
+      "translation": "`<a href=\"../../stereotype/Component.html#value()\"><code>Component.value()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "The default is <code>true</code>, preventing accidental method overloads which\nget interpreted as overloaded factory methods for the same bean definition\n(as opposed to separate bean definitions with individual conditions etc).\nSwitch this flag to <code>false</code> in order to allow for method overloading\naccording to those semantics, accepting the risk for accidental overlaps.",
+      "translation": "默认值为 `<code>true</code>`，以防止意外发生方法重载，这些重载会被解释为同一 bean 定义的工厂方法（而不是具有各自条件等的独立 bean 定义）。将此标志切换为 `<code>false</code>` 以允许根据这些语义进行方法重载，但需承担意外重叠的风险。",
+      "count": 2
+    },
+    {
+      "source": "Alternatively, you may also declare profile conditions at the <code>@Bean</code> method level\n— for example, for alternative bean variants within the same configuration class:",
+      "translation": "或者，您也可以在 `<code>@Bean</code>` 方法级别声明配置文件条件——例如，用于同一配置类中的替代 Bean 变体：",
+      "count": 2
+    },
+    {
+      "source": "<code>@Configuration</code> classes may be nested within one another as follows:",
+      "translation": "<code>@Configuration</code> 类可以按如下方式嵌套：",
+      "count": 2
+    },
+    {
+      "source": "See the\n<a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#testcontext-framework\">TestContext framework</a>\nreference documentation for details.",
+      "translation": "有关详细信息，请参阅 <a href=\"https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#testcontext-framework\">TestContext 框架</a> 参考文档。",
+      "count": 2
+    },
+    {
+      "source": "as of 7.0, always relying on <code>@Bean</code> unique methods,\njust possibly with <code>Optional</code>/<code>ObjectProvider</code> arguments",
+      "translation": "自 7.0 版本起，始终依赖唯一的 `<code>@Bean</code>` 方法，可能带有 `<code>Optional</code>`/<code>ObjectProvider</code>` 参数。",
+      "count": 2
+    },
+    {
+      "source": "Configuration classes must be non-final (allowing for subclasses at runtime),\nunless the <a href=\"#proxyBeanMethods()\"><code>proxyBeanMethods</code></a> flag is set to <code>false</code>\nin which case no runtime-generated subclass is necessary.",
+      "translation": "配置类必须是非 final 的（允许在运行时创建子类），除非将<a href=\"#proxyBeanMethods()\"><code>proxyBeanMethods</code></a>标志设置为<code>false</code>，在这种情况下则不需要运行时生成的子类。",
+      "count": 2
+    },
+    {
+      "source": "Any nested configuration classes must be declared as <code>static</code>.",
+      "translation": "任何嵌套配置类都必须声明为<code>static</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>@Bean</code> methods may not in turn create further configuration classes\n(any such instances will be treated as regular beans, with their configuration\nannotations remaining undetected).",
+      "translation": "<code>@Bean</code> 方法不能进而创建其他配置类（任何此类实例都将被视为普通 bean，其配置注解将保持未被检测）。",
+      "count": 2
+    },
+    {
+      "source": "Testing support for <code>@Configuration</code> classes",
+      "translation": "测试对 `<code>@Configuration</code>` 类的支持",
+      "count": 2
+    },
+    {
+      "source": "Enabling built-in Spring features using <code>@Enable</code> annotations",
+      "translation": "使用 `<code>@Enable</code>` 注解启用内置的 Spring 功能",
+      "count": 2
+    },
+    {
+      "source": "Constraints when authoring <code>@Configuration</code> classes",
+      "translation": "编写<code>@Configuration</code>类时的约束条件",
+      "count": 2
+    },
+    {
+      "source": "Via Spring <code>&lt;beans&gt;</code> XML",
+      "translation": "通过 Spring `<beans>` XML",
+      "count": 2
+    },
+    {
+      "source": "Using the <code>Environment</code> API",
+      "translation": "使用<code>Environment</code>  API",
+      "count": 2
+    },
+    {
+      "source": "Using the <code>@Value</code> annotation",
+      "translation": "使用<code>@Value</code>注解",
+      "count": 2
+    },
+    {
+      "source": "With the <code>@Import</code> annotation",
+      "translation": "使用<code>@Import</code> 注解",
+      "count": 2
+    },
+    {
+      "source": "With the <code>@Profile</code> annotation",
+      "translation": "使用<code>@Profile</code>注解",
+      "count": 2
+    },
+    {
+      "source": "With Spring XML using the <code>@ImportResource</code> annotation",
+      "translation": "使用带有 `<code>@ImportResource</code>` 注解的 Spring XML。",
+      "count": 2
+    },
+    {
+      "source": "With nested <code>@Configuration</code> classes",
+      "translation": "带有嵌套<code>@Configuration</code>类时",
+      "count": 2
+    },
+    {
+      "source": "Configuration classes must be provided as classes (i.e. not as instances returned\nfrom factory methods), allowing for runtime enhancements through a generated subclass.",
+      "translation": "配置类必须作为类提供（即不能是工厂方法返回的实例），以便通过生成的子类实现运行时增强。",
+      "count": 2
+    },
+    {
+      "source": "Configuration classes must be non-local (i.e. may not be declared within a method).",
+      "translation": "配置类必须是非局部的（即不能声明在方法内）。",
+      "count": 2
+    },
+    {
+      "source": "Rod Johnson, Chris Beams, Juergen Hoeller",
+      "translation": "Rod Johnson、Chris Beams 和 Juergen Hoeller",
+      "count": 2
+    },
+    {
+      "source": "the explicit component name, if any (or empty String otherwise)",
+      "translation": "显式组件名称（如果有），否则为空字符串。",
+      "count": 2
+    },
+    {
+      "source": "Working with externalized values",
+      "translation": "与外部化值一起工作",
+      "count": 2
+    },
+    {
+      "source": "Configuring lazy initialization",
+      "translation": "配置延迟初始化",
+      "count": 2
+    },
+    {
+      "source": "Via component scanning",
+      "translation": "通过组件扫描",
+      "count": 2
+    },
+    {
+      "source": "Specify whether <code>@Bean</code> methods should get proxied in order to enforce\nbean lifecycle behavior, for example, to return shared singleton bean instances even\nin case of direct <code>@Bean</code> method calls in user code.",
+      "translation": "指定是否应该为 `<code>@Bean</code>` 方法生成代理，以强制实施 Bean 生命周期行为，例如，即使在用户代码中直接调用 `<code>@Bean</code>` 方法，也返回共享的单例 Bean 实例。",
+      "count": 1
+    },
+    {
+      "source": "Explicitly specify the name of the Spring bean definition associated with the\n<code>@Configuration</code> class.",
+      "translation": "显式指定与 `<code>@Configuration</code>` 类关联的 Spring  Bean 定义名称。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}
