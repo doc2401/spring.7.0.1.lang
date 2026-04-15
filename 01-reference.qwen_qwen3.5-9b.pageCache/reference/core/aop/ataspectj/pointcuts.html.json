@@ -1,0 +1,986 @@
+{
+  "created_at": "2026-04-15 07:25:30",
+  "updated_at": "2026-04-15 07:25:30",
+  "stats": {
+    "total_entries": 194,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 268,
+    "entries_with_hits": 194,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3814432989690721,
+    "usage_percentage": 0.0194
+  },
+  "items": [
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>publicMethod</code> matches if a method execution join point represents the execution\nof any public method.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>inTrading</code> matches if a method execution is in the trading module.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>tradingOperation</code> matches if a method execution represents any public method in the\ntrading module.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>publicMethod</code> 匹配任何公共方法的执行连接点。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>inTrading</code> 匹配在交易模块中的方法执行。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>tradingOperation</code> 匹配交易模块中任何公共方法的方法执行。</td>\n</tr>\n</tbody>",
+      "count": 3
+    },
+    {
+      "source": "The full AspectJ pointcut language supports additional pointcut designators that are not\nsupported in Spring: <code>call</code>, <code>get</code>, <code>set</code>, <code>preinitialization</code>,\n<code>staticinitialization</code>, <code>initialization</code>, <code>handler</code>, <code>adviceexecution</code>, <code>withincode</code>, <code>cflow</code>,\n<code>cflowbelow</code>, <code>if</code>, <code>@this</code>, and <code>@withincode</code>. Use of these pointcut designators in pointcut\nexpressions interpreted by Spring AOP results in an <code>IllegalArgumentException</code> being\nthrown.",
+      "translation": "完整的 AspectJ 点切面语言支持 Spring 不支持的额外点切面设计符：<code>call</code>、<code>get</code>、<code>set</code>、<code>preinitialization</code>、<code>staticinitialization</code>、<code>initialization</code>、<code>handler</code>、<code>adviceexecution</code>、<code>withincode</code>、<code>cflow</code>、<code>cflowbelow</code>、<code>if</code>、<code>@this</code> 和 <code>@withincode</code>。在 Spring AOP 解释的点切面表达式中使用这些点切面设计符会导致抛出 <code>IllegalArgumentException</code>。",
+      "count": 2
+    },
+    {
+      "source": "All parts except the returning type pattern (<code>ret-type-pattern</code> in the preceding snippet),\nthe name pattern, and the parameters pattern are optional. The returning type pattern determines\nwhat the return type of the method must be in order for a join point to be matched.\n<code>*</code> is most frequently used as the returning type pattern. It matches any return\ntype. A fully-qualified type name matches only when the method returns the given\ntype. The name pattern matches the method name. You can use the <code>*</code> wildcard as all or\npart of a name pattern. If you specify a declaring type pattern,\ninclude a trailing <code>.</code> to join it to the name pattern component.\nThe parameters pattern is slightly more complex: <code>()</code> matches a\nmethod that takes no parameters, whereas <code>(..)</code> matches any number (zero or more) of parameters.\nThe <code>(*)</code> pattern matches a method that takes one parameter of any type.\n<code>(*,String)</code> matches a method that takes two parameters. The first can be of any type, while the\nsecond must be a <code>String</code>. Consult the\n<a href=\"https://www.eclipse.org/aspectj/doc/released/progguide/semantics-pointcuts.html\">Language\nSemantics</a> section of the AspectJ Programming Guide for more information.",
+      "translation": "除了返回类型模式（前例中的<code>ret-type-pattern</code>）、名称模式和参数模式外，其余部分均为可选。返回类型模式决定了方法必须具有何种返回类型才能匹配连接点。<code>*</code>最常用作返回类型模式，它匹配任何返回类型。完全限定的类型名仅当方法返回该给定类型时才匹配。名称模式匹配方法名。您可以使用<code>*</code>通配符作为名称模式的全部或部分。如果指定了声明类型模式，请在末尾包含一个<code>.</code>将其与名称模式组件连接起来。参数模式稍显复杂：<code>()</code>匹配不接受任何参数的方法，而<code>(..)</code>匹配任意数量（零个或多个）的参数。<code>(*)</code>模式匹配接受一个任意类型参数的方法。<code>(*,String)</code>匹配接受两个参数的方法：第一个可以是任意类型，而第二个必须是<code>String</code>。有关更多信息，请参阅 AspectJ 编程指南中的<a href=\"https://www.eclipse.org/aspectj/doc/released/progguide/semantics-pointcuts.html\">语言语义</a>部分。",
+      "count": 2
+    },
+    {
+      "source": "The <code>idOrNameOfBean</code> token can be the name of any Spring bean. Limited wildcard\nsupport that uses the <code>*</code> character is provided, so, if you establish some naming\nconventions for your Spring beans, you can write a <code>bean</code> PCD expression\nto select them. As is the case with other pointcut designators, the <code>bean</code> PCD can\nbe used with the <code>&amp;&amp;</code> (and), <code>||</code> (or), and <code>!</code> (negation) operators, too.",
+      "translation": "<code>idOrNameOfBean</code> 标记可以是任何 Spring Bean 的名称。提供了使用 <code>*</code> 字符的有限通配符支持，因此，如果您为 Spring Bean 建立了一些命名约定，则可以编写一个 <code>bean</code> PCD 表达式来选择它们。与其他切入点设计器一样，<code>bean</code> PCD 也可以与 <code>&amp;&amp;</code>（与）、<code>||</code>（或）和 <code>!</code>（否定）运算符一起使用。",
+      "count": 2
+    },
+    {
+      "source": "The pointcut expression that forms the value of the <code>@Pointcut</code> annotation is a regular\nAspectJ pointcut expression. For a full discussion of AspectJ’s pointcut language, see\nthe <a href=\"https://www.eclipse.org/aspectj/doc/released/progguide/index.html\">AspectJ\nProgramming Guide</a> (and, for extensions, the\n<a href=\"https://www.eclipse.org/aspectj/doc/released/adk15notebook/index.html\">AspectJ 5\nDeveloper’s Notebook</a>) or one of the books on AspectJ (such as <em>Eclipse AspectJ</em>, by Colyer\net al., or <em>AspectJ in Action</em>, by Ramnivas Laddad).",
+      "translation": "`@Pointcut` 注解的值由一个点切面表达式形成，该表达式是标准的 AspectJ 点切面表达式。关于 AspectJ 点切面语言的完整讨论，请参阅 <a href=\"https://www.eclipse.org/aspectj/doc/released/progguide/index.html\">AspectJ 编程指南</a>（以及关于扩展内容的 <a href=\"https://www.eclipse.org/aspectj/doc/released/adk15notebook/index.html\">AspectJ 5 开发者笔记</a>），或者 AspectJ 的相关书籍（例如 Colyer 等人著的 <em>Eclipse AspectJ</em>，或 Ramnivas Laddad 著的 <em>AspectJ in Action</em>）。",
+      "count": 2
+    },
+    {
+      "source": "Kinded designators select a particular kind of join point:\n<code>execution</code>, <code>get</code>, <code>set</code>, <code>call</code>, and <code>handler</code>.",
+      "translation": "Kinded 设计符选择特定类型的连接点：<code>execution</code>、<code>get</code>、<code>set</code>、<code>call</code> 和 <code>handler</code>。",
+      "count": 2
+    },
+    {
+      "source": "Because Spring AOP limits matching to only method execution join points, the preceding discussion\nof the pointcut designators gives a narrower definition than you can find in the\nAspectJ programming guide. In addition, AspectJ itself has type-based semantics and, at\nan execution join point, both <code>this</code> and <code>target</code> refer to the same object: the\nobject executing the method. Spring AOP is a proxy-based system and differentiates\nbetween the proxy object itself (which is bound to <code>this</code>) and the target object behind the\nproxy (which is bound to <code>target</code>).",
+      "translation": "由于 Spring AOP 将匹配范围限制为仅方法执行连接点，前述关于切入点设计符的讨论给出的定义比 AspectJ 编程指南中的定义更窄。此外，AspectJ 本身具有基于类型的语义，在执行连接点处，<code>this</code>和<code>target</code>都指向同一个对象：即正在执行该方法的对象。Spring AOP 是一个基于代理的系统，它区分代理对象本身（绑定到<code>this</code>）和代理背后的目标对象（绑定到<code>target</code>）。",
+      "count": 2
+    },
+    {
+      "source": "It is a best practice to build more complex pointcut expressions out of smaller <em>named\npointcuts</em>, as shown above. When referring to pointcuts by name, normal Java visibility\nrules apply (you can see <code>private</code> pointcuts in the same type, <code>protected</code> pointcuts in\nthe hierarchy, <code>public</code> pointcuts anywhere, and so on). Visibility does not affect\npointcut matching.",
+      "translation": "将更复杂的切入点表达式构建为较小的<em>命名切入点</em>是一种最佳实践，如上所示。当通过名称引用切入点时，适用正常的 Java 可见性规则（您可以在同一类型中看到<code>private</code>切入点，在层次结构中查看<code>protected</code>切入点，在任何位置查看<code>public</code>切入点等）。可见性不影响切入点的匹配。",
+      "count": 2
+    },
+    {
+      "source": "The <code>&lt;aop:config&gt;</code> and <code>&lt;aop:advisor&gt;</code> elements are discussed in <a class=\"xref page\" href=\"../schema.html\">Schema-based AOP Support</a>. The\ntransaction elements are discussed in <a class=\"xref page\" href=\"../../../data-access/transaction.html\">Transaction Management</a>.",
+      "translation": "<code>&lt;aop:config&gt;</code> 和 <code>&lt;aop:advisor&gt;</code> 元素在<a class=\"xref page\" href=\"../schema.html\">基于 Schema 的 AOP 支持</a>中讨论。事务元素在<a class=\"xref page\" href=\"../../../data-access/transaction.html\">事务管理</a>中讨论。",
+      "count": 2
+    },
+    {
+      "source": "You can combine pointcut expressions by using <code>&amp;&amp;,</code> <code>||</code> and <code>!</code>. You can also refer to\npointcut expressions by name. The following example shows three pointcut expressions:",
+      "translation": "您可以使用<code>&amp;&amp;</code>、<code>||</code>和<code>!</code>组合切点表达式。您也可以按名称引用切点表达式。以下示例展示了三个切点表达式：",
+      "count": 2
+    },
+    {
+      "source": "You can refer to the pointcuts defined in such a class anywhere you need a pointcut\nexpression by referencing the fully-qualified name of the class combined with the\n<code>@Pointcut</code> method’s name. For example, to make the service layer transactional, you\ncould write the following which references the\n<code>com.xyz.CommonPointcuts.businessService()</code> <em>named pointcut</em>:",
+      "translation": "您可以在任何需要点切面表达式的地方引用此类中定义的点切面，方法是引用类的完全限定名与<code>@Pointcut</code> 方法的名称。例如，要使服务层具有事务性，您可以编写以下内容，其中引用了名为<code>com.xyz.CommonPointcuts.businessService()</code>的<em>命名点切面</em>：",
+      "count": 2
+    },
+    {
+      "source": "Note that the pointcut given in this example is different from <code>execution(*\n*(java.io.Serializable))</code>. The args version matches if the argument passed at runtime is\n<code>Serializable</code>, and the execution version matches if the method signature declares a single\nparameter of type <code>Serializable</code>.",
+      "translation": "请注意，本示例中给出的切入点与 <code>execution(* *(java.io.Serializable))</code> 不同。args 版本在运行时传递的参数是 <code>Serializable</code> 时匹配，而 execution 版本在方法签名声明单个类型为 <code>Serializable</code> 的参数时匹配。",
+      "count": 2
+    },
+    {
+      "source": "Contextual designators match (and optionally bind) based on context:\n<code>this</code>, <code>target</code>, and <code>@annotation</code>",
+      "translation": "上下文设计符根据上下文进行匹配（并可选地绑定）：<code>this</code>、<code>target</code> 和 <code>@annotation</code>。",
+      "count": 2
+    },
+    {
+      "source": "Pointcuts determine join points of interest and thus enable us to control\nwhen advice runs. Spring AOP only supports method execution join points for Spring\nbeans, so you can think of a pointcut as matching the execution of methods on Spring\nbeans. A pointcut declaration has two parts: a signature comprising a name and any\nparameters and a pointcut expression that determines exactly which method\nexecutions we are interested in. In the @AspectJ annotation-style of AOP, a pointcut\nsignature is provided by a regular method definition, and the pointcut expression is\nindicated by using the <code>@Pointcut</code> annotation (the method serving as the pointcut signature\nmust have a <code>void</code> return type).",
+      "translation": "切面点用于确定感兴趣的连接点，从而使我们能够控制何时执行通知。Spring AOP 仅支持 Spring bean 的方法执行连接点，因此您可以将切面点视为匹配在 Spring bean 上方法执行的执行。切面点声明包含两部分：一个由名称和任何参数组成的签名，以及一个确定我们确切感兴趣哪些方法执行的切面点表达式。在 @AspectJ 注解风格的 AOP 中，切面点签名由常规方法定义提供，而切面点表达式通过使用 <code>@Pointcut</code> 注解来指示（作为切面点签名的方法必须具有 <code>void</code> 返回类型）。",
+      "count": 2
+    },
+    {
+      "source": "An example may help make this distinction between a pointcut signature and a pointcut\nexpression clear. The following example defines a pointcut named <code>anyOldTransfer</code> that\nmatches the execution of any method named <code>transfer</code>:",
+      "translation": "一个示例有助于阐明切入点签名与切入点表达式之间的区别。以下示例定义了一个名为<code>anyOldTransfer</code>的切入点，用于匹配任何名为<code>transfer</code>的方法的执行：",
+      "count": 2
+    },
+    {
+      "source": "Spring AOP also supports an additional PCD named <code>bean</code>. This PCD lets you limit\nthe matching of join points to a particular named Spring bean or to a set of named\nSpring beans (when using wildcards). The <code>bean</code> PCD has the following form:",
+      "translation": "Spring AOP 还支持一个名为<code>bean</code>的额外 PCD。此 PCD 允许您将连接点的匹配限制为特定的命名 Spring bean，或一组命名的 Spring bean（在使用通配符时）。<code>bean</code> PCD 具有以下形式：",
+      "count": 2
+    },
+    {
+      "source": "The <code>bean</code> PCD is supported only in Spring AOP and not in\nnative AspectJ weaving. It is a Spring-specific extension to the standard PCDs that\nAspectJ defines and is, therefore, not available for aspects declared in the <code>@Aspect</code> model.",
+      "translation": "<code>bean</code> 类型的 PCD 仅受 Spring AOP 支持，而不支持原生 AspectJ 织入。它是 Spring 对 AspectJ 定义的标准 PCD 的特定扩展，因此对于在 <code>@Aspect</code> 模型中声明的切面不可用。",
+      "count": 2
+    },
+    {
+      "source": "When working with enterprise applications, developers often have the need to refer to\nmodules of the application and particular sets of operations from within several aspects.\nWe recommend defining a dedicated class that captures commonly used <em>named pointcut</em>\nexpressions for this purpose. Such a class typically resembles the following\n<code>CommonPointcuts</code> example (though what you name the class is up to you):",
+      "translation": "在处理企业级应用程序时，开发人员经常需要从多个方面引用应用程序的模块和特定的操作集。我们建议定义一个专用类来捕获常用的 <em>命名切点</em> 表达式，以便实现此目的。此类通常类似于以下 <code>CommonPointcuts</code> 示例（尽管类的名称由您自行决定）：",
+      "count": 2
+    },
+    {
+      "source": "Scoping designators select a group of join points of interest\n(probably of many kinds): <code>within</code> and <code>withincode</code>",
+      "translation": "作用域设计符用于选择一组感兴趣的重入点（可能包含多种类型）：<code>within</code> 和 <code>withincode</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>execution</code>: For matching method execution join points. This is the primary\npointcut designator to use when working with Spring AOP.",
+      "translation": "<code>execution</code>：用于匹配方法执行连接点。这是在使用 Spring AOP 时应使用的主要切入点设计符。",
+      "count": 2
+    },
+    {
+      "source": "<code>within</code>: Limits matching to join points within certain types (the execution\nof a method declared within a matching type when using Spring AOP).",
+      "translation": "<code>within</code>：将匹配限制在特定类型的连接点内（在使用 Spring AOP 时，指匹配类型中声明的方法的执行）。",
+      "count": 2
+    },
+    {
+      "source": "<code>this</code>: Limits matching to join points (the execution of methods when using Spring\nAOP) where the bean reference (Spring AOP proxy) is an instance of the given type.",
+      "translation": "<code>this</code>：将匹配限制为连接点（在使用 Spring AOP 时方法的执行），其中 Bean 引用（Spring AOP 代理）是指定类型的实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>target</code>: Limits matching to join points (the execution of methods when using\nSpring AOP) where the target object (application object being proxied) is an instance\nof the given type.",
+      "translation": "<code>target</code>：将匹配限制为连接点（在使用 Spring AOP 时方法的执行），其中目标对象（被代理的应用程序对象）是指定类型的实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>args</code>: Limits matching to join points (the execution of methods when using Spring\nAOP) where the arguments are instances of the given types.",
+      "translation": "<code>args</code>：将匹配限制为连接点（在使用 Spring AOP 时方法的执行），其参数是指定类型的实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>@target</code>: Limits matching to join points (the execution of methods when using\nSpring AOP) where the class of the executing object has an annotation of the given type.",
+      "translation": "<code>@target</code>：将匹配限制为连接点（在使用 Spring AOP 时方法的执行），其中执行对象的类具有给定类型的注解。",
+      "count": 2
+    },
+    {
+      "source": "<code>@args</code>: Limits matching to join points (the execution of methods when using Spring\nAOP) where the runtime type of the actual arguments passed have annotations of the\ngiven types.",
+      "translation": "<code>@args</code>：将匹配限制为连接点（在使用 Spring AOP 时方法的执行），其中实际传递参数的运行时类型具有给定类型的注解。",
+      "count": 2
+    },
+    {
+      "source": "<code>@within</code>: Limits matching to join points within types that have the given\nannotation (the execution of methods declared in types with the given annotation when\nusing Spring AOP).",
+      "translation": "<code>@within</code>：将匹配限制在具有给定注解的类型内的连接点（在使用 Spring AOP 时，即执行具有给定注解的类中声明的方法）。",
+      "count": 2
+    },
+    {
+      "source": "<code>@annotation</code>: Limits matching to join points where the subject of the join point\n(the method being run in Spring AOP) has the given annotation.",
+      "translation": "<code>@annotation</code>：将匹配限制在具有给定注解的切入点主体（Spring AOP 中正在运行的方法）所在的连接点上。",
+      "count": 2
+    },
+    {
+      "source": "If your interception needs include method calls or even constructors within the target\nclass, consider the use of Spring-driven <a class=\"xref page\" href=\"../using-aspectj.html#aop-aj-ltw\">native AspectJ weaving</a> instead\nof Spring’s proxy-based AOP framework. This constitutes a different mode of AOP usage\nwith different characteristics, so be sure to make yourself familiar with weaving\nbefore making a decision.",
+      "translation": "如果您的拦截需求包括目标类中的方法调用甚至构造函数，请考虑使用 Spring 驱动的 <a class=\"xref page\" href=\"../using-aspectj.html#aop-aj-ltw\">原生 AspectJ 织入</a>，而不是基于代理的 Spring AOP 框架。这构成了 AOP 使用的不同模式，具有不同的特性，因此在做出决定之前，请务必熟悉织入技术。",
+      "count": 2
+    },
+    {
+      "source": "The <code>bean</code> PCD operates at the instance level (building on the Spring bean name\nconcept) rather than at the type level only (to which weaving-based AOP is limited).\nInstance-based pointcut designators are a special capability of Spring’s\nproxy-based AOP framework and its close integration with the Spring bean factory, where\nit is natural and straightforward to identify specific beans by name.",
+      "translation": "<code>bean</code> PCD 在实例级别运行（基于 Spring bean 名称概念），而不仅仅局限于类型级别（基于织造的 AOP 仅限于此）。基于实例的点切面设计符是 Spring 代理式 AOP 框架的特殊功能，该框架与 Spring Bean 工厂紧密集成，在此环境中通过名称识别特定 bean 既自然又直接。",
+      "count": 2
+    },
+    {
+      "source": "Spring AOP users are likely to use the <code>execution</code> pointcut designator the most often.\nThe format of an execution expression follows:",
+      "translation": "Spring AOP 用户最有可能频繁使用<code>execution</code>切入点设计符。\nexecution 表达式的格式如下：",
+      "count": 2
+    },
+    {
+      "source": "The execution of any method with a name that begins with <code>set</code>:",
+      "translation": "执行任何以<code>set</code>开头的名称的方法：",
+      "count": 2
+    },
+    {
+      "source": "The execution of any method defined by the <code>AccountService</code> interface:",
+      "translation": "<code>AccountService</code> 接口中定义的任意方法的执行：",
+      "count": 2
+    },
+    {
+      "source": "The execution of any method defined in the <code>service</code> package:",
+      "translation": "<code>service</code> 包中定义的任意方法的执行：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) where the proxy implements the\n<code>AccountService</code> interface:",
+      "translation": "任何代理实现了 <code>AccountService</code> 接点的连接点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) where the target object\nimplements the <code>AccountService</code> interface:",
+      "translation": "任何目标对象实现了<code>AccountService</code>接口的连接点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) that takes a single parameter\nand where the argument passed at runtime is <code>Serializable</code>:",
+      "translation": "任何只接受单个参数且在运行时传入的参数为<code>Serializable</code>的连接点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) where the target object has a\n<code>@Transactional</code> annotation:",
+      "translation": "任何目标对象具有<code>@Transactional</code>注解的 JoinPoint（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) where the declared type of the\ntarget object has an <code>@Transactional</code> annotation:",
+      "translation": "任何目标对象的声明类型具有<code>@Transactional</code>注解的切点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) where the executing method has an\n<code>@Transactional</code> annotation:",
+      "translation": "任何执行方法带有<code>@Transactional</code>注解的切点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) which takes a single parameter,\nand where the runtime type of the argument passed has the <code>@Classified</code> annotation:",
+      "translation": "任何仅接受单个参数的连接点（在 Spring AOP 中仅为方法执行），且传入参数的运行时类型带有<code>@Classified</code>注解：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) on a Spring bean named\n<code>tradeService</code>:",
+      "translation": "任何在名为<code>tradeService</code>的 Spring bean 上的连接点（Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) on Spring beans having names that\nmatch the wildcard expression <code>*Service</code>:",
+      "translation": "任何匹配通配符表达式<code>*Service</code>的 Spring bean 名称上的连接点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Spring AOP supports the following AspectJ pointcut designators (PCD) for use in pointcut\nexpressions:",
+      "translation": "Spring AOP 支持以下 AspectJ 点切面设计符（PCD），可用于点切面表达式：",
+      "count": 2
+    },
+    {
+      "source": "The set of pointcut designators supported by Spring AOP may be extended in future\nreleases to support more of the AspectJ pointcut designators.",
+      "translation": "Spring AOP 支持的点切面设计符集合可能会在未来的版本中扩展，以支持更多的 AspectJ 点切面设计符。",
+      "count": 2
+    },
+    {
+      "source": "Due to the proxy-based nature of Spring’s AOP framework, calls within the target object\nare, by definition, not intercepted. For JDK proxies, only public interface method\ncalls on the proxy can be intercepted. With CGLIB, public and protected method calls on\nthe proxy are intercepted (and even package-visible methods, if necessary). However,\ncommon interactions through proxies should always be designed through public signatures.",
+      "translation": "由于 Spring AOP 框架基于代理，目标对象内部的调用按定义不会被拦截。对于 JDK 代理，只有对代理的公共接口方法调用可以被拦截。使用 CGLIB 时，对代理的公共和受保护方法调用会被拦截（必要时甚至包括包可见方法）。然而，通过代理进行的常见交互应始终通过公共签名进行设计。",
+      "count": 2
+    },
+    {
+      "source": "Note that pointcut definitions are generally matched against any intercepted method.\nIf a pointcut is strictly meant to be public-only, even in a CGLIB proxy scenario with\npotential non-public interactions through proxies, it needs to be defined accordingly.",
+      "translation": "注意，切面定义通常与任何拦截的方法进行匹配。如果切面严格限定为仅公开（public），即使在可能存在通过代理的非公开交互的 CGLIB 代理场景中，也需要相应地定义它。",
+      "count": 2
+    },
+    {
+      "source": "The following examples show some common pointcut expressions:",
+      "translation": "以下示例展示了一些常见的切点表达式：",
+      "count": 2
+    },
+    {
+      "source": "The execution of any public method:",
+      "translation": "任何公共方法的执行：",
+      "count": 2
+    },
+    {
+      "source": "The execution of any method defined in the service package or one of its sub-packages:",
+      "translation": "service 包或其任一子包中定义的任意方法的执行：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) within the service package:",
+      "translation": "服务包内的任何连接点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "Any join point (method execution only in Spring AOP) within the service package or one of its\nsub-packages:",
+      "translation": "服务包或其任一子包内的任何连接点（在 Spring AOP 中仅指方法执行）：",
+      "count": 2
+    },
+    {
+      "source": "During compilation, AspectJ processes pointcuts in order to optimize matching\nperformance. Examining code and determining if each join point matches (statically or\ndynamically) a given pointcut is a costly process. (A dynamic match means the match\ncannot be fully determined from static analysis and that a test is placed in the code to\ndetermine if there is an actual match when the code is running). On first encountering a\npointcut declaration, AspectJ rewrites it into an optimal form for the matching\nprocess. What does this mean? Basically, pointcuts are rewritten in DNF (Disjunctive\nNormal Form) and the components of the pointcut are sorted such that those components\nthat are cheaper to evaluate are checked first. This means you do not have to worry\nabout understanding the performance of various pointcut designators and may supply them\nin any order in a pointcut declaration.",
+      "translation": "在编译期间，AspectJ 会按顺序处理切入点（pointcuts）以优化匹配性能。检查代码并确定每个连接点（join point）是否（静态地或动态地）匹配给定的切入点是一个耗时的过程。（动态匹配意味着无法仅通过静态分析完全确定匹配结果，因此需要在代码中放置测试，以便在代码运行时确定是否存在实际匹配）。首次遇到切入点声明时，AspectJ 会将其重写为适合匹配过程的最优形式。这意味着什么？基本上，切入点会被重写为析取范式（DNF, Disjunctive Normal Form），并且切入点的组件会被排序，使得成本较低的组件优先进行检查。这意味着您无需担心理解各种切入点设计符的性能，可以在切入点声明中以任意顺序提供它们。",
+      "count": 2
+    },
+    {
+      "source": "However, AspectJ can work only with what it is told. For optimal performance of\nmatching, you should think about what you are trying to achieve and narrow the search\nspace for matches as much as possible in the definition. The existing designators\nnaturally fall into one of three groups: kinded, scoping, and contextual:",
+      "translation": "然而，AspectJ 只能根据所告知的内容工作。为了获得最佳匹配性能，您应思考要实现的目标，并在定义中尽可能缩小匹配的搜索空间。现有的设计符自然地分为三类：种类限定符、作用域限定符和上下文限定符：",
+      "count": 2
+    },
+    {
+      "source": "A well written pointcut should include at least the first two types (kinded and\nscoping). You can include the contextual designators to match based on\njoin point context or bind that context for use in the advice. Supplying only a\nkinded designator or only a contextual designator works but could affect weaving\nperformance (time and memory used), due to extra processing and analysis. Scoping\ndesignators are very fast to match, and using them means AspectJ can very quickly\ndismiss groups of join points that should not be further processed. A good\npointcut should always include one if possible.",
+      "translation": "编写良好的切面点应至少包含前两种类型（即 kinded 和 scoping）。您可以包含上下文设计符以根据连接点上下文进行匹配，或将该上下文绑定以便在Advice中使用。仅提供 kinded 设计符或仅提供上下文设计符虽然可行，但由于需要额外的处理和解析，可能会影响织入性能（时间和内存使用）。Scoping 设计符的匹配速度非常快，使用它们意味着 AspectJ 可以非常迅速地排除不应进一步处理的一组连接点。如果可能的话，良好的切面点应始终包含一个 scoping 设计符。",
+      "count": 2
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../../../index.html\">Spring Framework</a></li>\n      <li><a href=\"../../../core.html\">Core Technologies</a></li>\n      <li><a href=\"../../aop.html\">Aspect Oriented Programming with Spring</a></li>\n      <li><a href=\"../ataspectj.html\">@AspectJ support</a></li>\n      <li><a href=\"pointcuts.html\">Declaring a Pointcut</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../../../index.html\">Spring Framework</a></li>\n      <li><a href=\"../../../core.html\">核心技术</a></li>\n      <li><a href=\"../../aop.html\">Spring 中的面向切面编程</a></li>\n      <li><a href=\"../ataspectj.html\">@AspectJ 支持</a></li>\n      <li><a href=\"pointcuts.html\">声明切入点</a></li>\n    </ul>\n  </nav>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"file:///workspaces/spring-framework.7.0.1.build/framework-docs/modules/ROOT/pages/core/aop/ataspectj/pointcuts.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/doc2401/spring-framework.7.0.1.build\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>\n        <a href=\"https://stackoverflow.com/questions/tagged/spring\">\n          <svg id=\"svg-stash-24b05902\"></svg>\n          Stack Overflow\n        </a>",
+      "translation": "<a href=\"file:///workspaces/spring-framework.7.0.1.build/framework-docs/modules/ROOT/pages/core/aop/ataspectj/pointcuts.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/doc2401/spring-framework.7.0.1.build\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>\n        <a href=\"https://stackoverflow.com/questions/tagged/spring\">\n          <svg id=\"svg-stash-24b05902\"></svg>\n          Stack Overflow\n        </a>",
+      "count": 2
+    },
+    {
+      "source": "Other pointcut types",
+      "translation": "其他切点类型",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../aop.html\">Aspect Oriented Programming with Spring</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../introduction-defn.html\">AOP Concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../introduction-spring-defn.html\">Spring AOP Capabilities and Goals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../introduction-proxies.html\">AOP Proxies</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../ataspectj.html\">@AspectJ support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"aspectj-support.html\">Enabling @AspectJ Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"at-aspectj.html\">Declaring an Aspect</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"pointcuts.html\">Declaring a Pointcut</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"advice.html\">Declaring Advice</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"introductions.html\">Introductions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"instantiation-models.html\">Aspect Instantiation Models</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"example.html\">An AOP Example</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../schema.html\">Schema-based AOP Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../choosing.html\">Choosing which AOP Declaration Style to Use</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../mixing-styles.html\">Mixing Aspect Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../proxying.html\">Proxying Mechanisms</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../aspectj-programmatic.html\">Programmatic Creation of @AspectJ Proxies</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../using-aspectj.html\">Using AspectJ with Spring Applications</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../resources.html\">Further Resources</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../aop.html\">Spring 中的面向切面编程</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../introduction-defn.html\">AOP 概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../introduction-spring-defn.html\">Spring AOP 的功能和目标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../introduction-proxies.html\">AOP 代理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../ataspectj.html\">@AspectJ 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"aspectj-support.html\">启用 @AspectJ 支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"at-aspectj.html\">声明切面</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"pointcuts.html\">声明切点</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"advice.html\">声明通知</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"introductions.html\">引入</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"instantiation-models.html\">切面实例化模型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"example.html\">一个 AOP 示例</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../schema.html\">基于模式的 AOP 支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../choosing.html\">选择要使用的 AOP 声明风格</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../mixing-styles.html\">混合切面类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../proxying.html\">代理机制</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../aspectj-programmatic.html\">@AspectJ 代理的程序化创建</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../using-aspectj.html\">在 Spring 应用程序中使用 AspectJ</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../resources.html\">进一步资源</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>this</code> is more commonly used in a binding form. See the section on <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a>\nfor how to make the proxy object available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>this</code> 更常用于绑定形式。请参阅<a class=\"xref page\" href=\"advice.html\">声明 Advice</a>部分，以了解如何在 Advice 主体中提供代理对象。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>target</code> is more commonly used in a binding form. See the <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a> section\nfor how to make the target object available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>target</code> 在绑定形式中更常用。请参阅<a class=\"xref page\" href=\"advice.html\">声明 Advice</a>部分，以了解如何在 Advice 主体中提供目标对象。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>args</code> is more commonly used in a binding form. See the <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a> section\nfor how to make the method arguments available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>args</code> 在绑定表单中更常用。请参阅<a class=\"xref page\" href=\"advice.html\">声明 Advice</a>部分，了解如何在 Advice 主体中使方法参数可用。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nYou can also use <code>@target</code> in a binding form. See the <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a> section for\nhow to make the annotation object available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n在绑定形式中，您也可以使用 <code>@target</code>。有关如何在建议主体中使注解对象可用，请参阅<a class=\"xref page\" href=\"advice.html\">声明建议</a>部分。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nYou can also use <code>@within</code> in a binding form. See the <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a> section for\nhow to make the annotation object available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n在绑定形式中，您也可以使用 <code>@within</code>。有关如何在建议主体中使注解对象可用，请参阅<a class=\"xref page\" href=\"advice.html\">声明建议</a>部分。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nYou can also use <code>@annotation</code> in a binding form. See the <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a> section\nfor how to make the annotation object available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n在绑定形式中也可以使用 <code>@annotation</code>。请参阅<a class=\"xref page\" href=\"advice.html\">声明 Advice</a>部分，以了解如何在 Advice 主体中提供注解对象。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nYou can also use <code>@args</code> in a binding form. See the <a class=\"xref page\" href=\"advice.html\">Declaring Advice</a> section\nhow to make the annotation object(s) available in the advice body.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n在绑定表单中也可以使用 <code>@args</code>。请参阅<a class=\"xref page\" href=\"advice.html\">声明 Advice</a>部分，了解如何在 Advice 主体中提供注解对象。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"prev\"><a href=\"at-aspectj.html\">Declaring an Aspect</a></span>\n  <span class=\"next\"><a href=\"advice.html\">Declaring Advice</a></span>",
+      "translation": "<span class=\"prev\"><a href=\"at-aspectj.html\">声明切面</a></span>\n  <span class=\"next\"><a href=\"advice.html\">声明通知</a></span>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#aop-pointcuts-designators\"></a>Supported Pointcut Designators",
+      "translation": "<a class=\"anchor\" href=\"#aop-pointcuts-designators\"></a>支持的切点设计符",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#aop-pointcuts-combining\"></a>Combining Pointcut Expressions",
+      "translation": "<a class=\"anchor\" href=\"#aop-pointcuts-combining\"></a>组合切点表达式",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#aop-common-pointcuts\"></a>Sharing Named Pointcut Definitions",
+      "translation": "<a class=\"anchor\" href=\"#aop-common-pointcuts\"></a>共享命名切面定义",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#writing-good-pointcuts\"></a>Writing Good Pointcuts",
+      "translation": "<a class=\"anchor\" href=\"#writing-good-pointcuts\"></a>编写良好的切点",
+      "count": 2
+    },
+    {
+      "source": "Annotated Controllers",
+      "translation": "注释控制器",
+      "count": 2
+    },
+    {
+      "source": "Declaring a Pointcut",
+      "translation": "声明切点",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache Software Foundation 在美国和/或其他国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 及其附属公司的商标。Kubernetes® 是 Linux Foundation 在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是 Microsoft Corporation 的注册商标。“AWS”和“Amazon Web Services\"是 Amazon.com Inc. 或其附属公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概述</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用程序</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概述</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../../../index.html\">Spring Framework</a>",
+      "translation": "<a class=\"title\" href=\"../../../index.html\">Spring 框架</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../../../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../../../search.html\">在所有的 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/key-abstractions.html\">Key Abstractions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/bootstrapping.html\">Bootstrapping the TestContext Framework</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/tel-config.html\"><code>TestExecutionListener</code> Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/application-events.html\">Application Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/test-execution-events.html\">Test Execution Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management.html\">Context Management</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/xml.html\">Context Configuration with XML resources</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/groovy.html\">Context Configuration with Groovy Scripts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/javaconfig.html\">Context Configuration with Component Classes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/mixed-config.html\">Mixing XML, Groovy Scripts, and Component Classes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/context-customizers.html\">Context Configuration with Context Customizers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/initializers.html\">Context Configuration with Context Initializers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/inheritance.html\">Context Configuration Inheritance</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/env-profiles.html\">Context Configuration with Environment Profiles</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/property-sources.html\">Context Configuration with Test Property Sources</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/dynamic-property-sources.html\">Context Configuration with Dynamic Property Sources</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/web.html\">Loading a <code>WebApplicationContext</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/web-mocks.html\">Working with Web Mocks</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/caching.html\">Context Caching</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/failure-threshold.html\">Context Failure Threshold</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/hierarchies.html\">Context Hierarchies</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/fixture-di.html\">Dependency Injection of Test Fixtures</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/bean-overriding.html\">Bean Overriding in Tests</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/web-scoped-beans.html\">Testing Request- and Session-scoped Beans</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/tx.html\">Transaction Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/executing-sql.html\">Executing SQL Scripts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/parallel-test-execution.html\">Parallel Test Execution</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/support-classes.html\">TestContext Framework Support Classes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/aot.html\">Ahead of Time Support for Tests</a>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/key-abstractions.html\">核心抽象</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/bootstrapping.html\">启动 TestContext 框架</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/tel-config.html\"><code>TestExecutionListener</code> 配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/application-events.html\">应用程序事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/test-execution-events.html\">测试执行事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management.html\">上下文管理</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/xml.html\">使用 XML 资源进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/groovy.html\">使用 Groovy 脚本进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/javaconfig.html\">使用组件类进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/mixed-config.html\">混合使用 XML、Groovy 脚本和组件类</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/context-customizers.html\">使用上下文自定义器进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/initializers.html\">使用上下文初始化器进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/inheritance.html\">上下文配置继承</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/env-profiles.html\">使用环境配置文件进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/property-sources.html\">使用测试属性源进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/dynamic-property-sources.html\">使用动态属性源进行上下文配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/web.html\">加载 <code>WebApplicationContext</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/web-mocks.html\">处理 Web Mocks</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/caching.html\">上下文缓存</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/failure-threshold.html\">上下文失败阈值</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/ctx-management/hierarchies.html\">上下文层次结构</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/fixture-di.html\">测试夹具的依赖注入</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/bean-overriding.html\">测试中的 Bean 覆盖</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/web-scoped-beans.html\">测试请求和会话范围的 Bean</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/tx.html\">事务管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/executing-sql.html\">执行 SQL 脚本</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/parallel-test-execution.html\">并行测试执行</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/support-classes.html\">TestContext 框架支持类</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/testcontext-framework/aot.html\">测试的前置时间支持</a>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/websocket.html\">WebSockets</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/server.html\">WebSocket API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/fallback.html\">SockJS Fallback</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp.html\">STOMP</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/overview.html\">Overview</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/benefits.html\">Benefits</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/enable.html\">Enable STOMP</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/server-config.html\">WebSocket Transport</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/message-flow.html\">Flow of Messages</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-annotations.html\">Annotated Controllers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-send.html\">Sending Messages</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-simple-broker.html\">Simple Broker</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-broker-relay.html\">External Broker</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-broker-relay-configure.html\">Connecting to a Broker</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/destination-separator.html\">Dots as Separators</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/authentication.html\">Authentication</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/authentication-token-based.html\">Token Authentication</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/authorization.html\">Authorization</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/user-destination.html\">User Destinations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/ordered-messages.html\">Order of Messages</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/application-context-events.html\">Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/interceptors.html\">Interception</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/client.html\">STOMP Client</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/scope.html\">WebSocket Scope</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/configuration-performance.html\">Performance</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/stats.html\">Monitoring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/testing.html\">Testing</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/websocket.html\">WebSockets</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/server.html\">WebSocket API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/fallback.html\">SockJS Fallback</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp.html\">STOMP</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/overview.html\">概述</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/benefits.html\">优势</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/enable.html\">启用 STOMP</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/server-config.html\">WebSocket 传输</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/message-flow.html\">消息流</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-annotations.html\">注解控制器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-send.html\">发送消息</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-simple-broker.html\">简单代理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-broker-relay.html\">外部代理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/handle-broker-relay-configure.html\">连接到代理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/destination-separator.html\">使用点作为分隔符</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/authentication.html\">身份验证</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/authentication-token-based.html\">令牌身份验证</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/authorization.html\">授权</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/user-destination.html\">用户目的地</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/ordered-messages.html\">消息顺序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/application-context-events.html\">事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/interceptors.html\">拦截</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/client.html\">STOMP 客户端</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/scope.html\">WebSocket 作用域</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/configuration-performance.html\">性能</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/stats.html\">监控</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/websocket/stomp/testing.html\">测试</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc.html\">MockMvc</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/overview.html\">Overview</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/setup-options.html\">Setup Options</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest.html\">Hamcrest Integration</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/static-imports.html\">Static Imports</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/setup.html\">Configuring MockMvc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/setup-steps.html\">Setup Features</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/requests.html\">Performing Requests</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/expectations.html\">Defining Expectations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/async-requests.html\">Async Requests</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/vs-streaming-response.html\">Streaming Responses</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/filters.html\">Filter Registrations</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj.html\">AssertJ Integration</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/setup.html\">Configuring MockMvcTester</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/requests.html\">Performing Requests</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/assertions.html\">Defining Expectations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/integration.html\">MockMvc integration</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit.html\">HtmlUnit Integration</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/why.html\">Why HtmlUnit Integration?</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/mah.html\">MockMvc and HtmlUnit</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/webdriver.html\">MockMvc and WebDriver</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/geb.html\">MockMvc and Geb</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/vs-end-to-end-integration-tests.html\">MockMvc vs End-to-End Tests</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/resources.html\">Further Examples</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc.html\">MockMvc</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/overview.html\">概述</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/setup-options.html\">设置选项</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest.html\">Hamcrest 集成</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/static-imports.html\">静态导入</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/setup.html\">配置 MockMvc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/setup-steps.html\">设置功能</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/requests.html\">执行请求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/expectations.html\">定义期望</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/async-requests.html\">异步请求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/vs-streaming-response.html\">流式响应</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/hamcrest/filters.html\">过滤器注册</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj.html\">AssertJ 集成</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/setup.html\">配置 MockMvcTester</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/requests.html\">执行请求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/assertions.html\">定义期望</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/assertj/integration.html\">MockMvc 集成</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit.html\">HtmlUnit 集成</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/why.html\">为什么使用 HtmlUnit 集成？</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/mah.html\">MockMvc 和 HtmlUnit</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/webdriver.html\">MockMvc 和 WebDriver</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/htmlunit/geb.html\">MockMvc 和 Geb</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/vs-end-to-end-integration-tests.html\">MockMvc 与端到端测试对比</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../testing/mockmvc/resources.html\">更多示例</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../expressions.html\">Spring Expression Language (SpEL)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../expressions/evaluation.html\">Evaluation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../expressions/beandef.html\">Expressions in Bean Definitions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../expressions/language-ref.html\">Language Reference</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/literal.html\">Literal Expressions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/properties-arrays.html\">Properties, Arrays, Lists, Maps, and Indexers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/inline-lists.html\">Inline Lists</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/inline-maps.html\">Inline Maps</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/array-construction.html\">Array Construction</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/methods.html\">Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operators.html\">Operators</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/types.html\">Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/constructors.html\">Constructors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/variables.html\">Variables</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/functions.html\">Functions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/varargs.html\">Varargs Invocations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/bean-references.html\">Bean References</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operator-ternary.html\">Ternary Operator (If-Then-Else)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operator-elvis.html\">The Elvis Operator</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operator-safe-navigation.html\">Safe Navigation Operator</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/collection-selection.html\">Collection Selection</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/collection-projection.html\">Collection Projection</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/templating.html\">Expression Templating</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../expressions/example-classes.html\">Classes Used in the Examples</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../expressions.html\">Spring 表达式语言 (SpEL)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../expressions/evaluation.html\">求值</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../expressions/beandef.html\">Bean 定义中的表达式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../expressions/language-ref.html\">语言参考</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/literal.html\">字面量表达式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/properties-arrays.html\">属性、数组、列表、Map 和索引器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/inline-lists.html\">内联列表</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/inline-maps.html\">内联 Map</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/array-construction.html\">数组构造</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/methods.html\">方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operators.html\">运算符</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/types.html\">类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/constructors.html\">构造函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/variables.html\">变量</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/functions.html\">函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/varargs.html\">可变参数调用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/bean-references.html\">Bean 引用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operator-ternary.html\">三元运算符 (If-Then-Else)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operator-elvis.html\">Elvis 运算符</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/operator-safe-navigation.html\">安全导航运算符</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/collection-selection.html\">集合选择</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/collection-projection.html\">集合投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../expressions/language-ref/templating.html\">表达式模板</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../expressions/example-classes.html\">示例中使用的类</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods.html\">Handler Methods</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/arguments.html\">Method Arguments</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/return-types.html\">Return Values</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/typeconversion.html\">Type Conversion</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/matrix-variables.html\">Matrix Variables</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestparam.html\"><code>@RequestParam</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestheader.html\"><code>@RequestHeader</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/cookievalue.html\"><code>@CookieValue</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/modelattrib-method-args.html\"><code>@ModelAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/sessionattributes.html\"><code>@SessionAttributes</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/sessionattribute.html\"><code>@SessionAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestattrib.html\"><code>@RequestAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/redirecting-passing-data.html\">Redirect Attributes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/flash-attributes.html\">Flash Attributes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/multipart-forms.html\">Multipart</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestbody.html\"><code>@RequestBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/httpentity.html\">HttpEntity</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/responsebody.html\"><code>@ResponseBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/responseentity.html\">ResponseEntity</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/jackson.html\">Jackson JSON</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods.html\">Handler Methods</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/arguments.html\">方法参数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/return-types.html\">返回值</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/typeconversion.html\">类型转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/matrix-variables.html\">矩阵变量</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestparam.html\"><code>@RequestParam</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestheader.html\"><code>@RequestHeader</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/cookievalue.html\"><code>@CookieValue</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/modelattrib-method-args.html\"><code>@ModelAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/sessionattributes.html\"><code>@SessionAttributes</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/sessionattribute.html\"><code>@SessionAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestattrib.html\"><code>@RequestAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/redirecting-passing-data.html\">重定向属性</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/flash-attributes.html\">Flash 属性</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/multipart-forms.html\">Multipart</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/requestbody.html\"><code>@RequestBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/httpentity.html\">HttpEntity</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/responsebody.html\"><code>@ResponseBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/responseentity.html\">ResponseEntity</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-methods/jackson.html\">Jackson JSON</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods.html\">Handler Methods</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/arguments.html\">Method Arguments</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/return-types.html\">Return Values</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/typeconversion.html\">Type Conversion</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/matrix-variables.html\">Matrix Variables</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestparam.html\"><code>@RequestParam</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestheader.html\"><code>@RequestHeader</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/cookievalue.html\"><code>@CookieValue</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/modelattrib-method-args.html\"><code>@ModelAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/sessionattributes.html\"><code>@SessionAttributes</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/sessionattribute.html\"><code>@SessionAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestattrib.html\"><code>@RequestAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/multipart-forms.html\">Multipart Content</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestbody.html\"><code>@RequestBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/httpentity.html\"><code>HttpEntity</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/responsebody.html\"><code>@ResponseBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/responseentity.html\"><code>ResponseEntity</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/jackson.html\">Jackson JSON</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods.html\">处理器方法</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/arguments.html\">方法参数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/return-types.html\">返回值</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/typeconversion.html\">类型转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/matrix-variables.html\">矩阵变量</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestparam.html\"><code>@RequestParam</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestheader.html\"><code>@RequestHeader</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/cookievalue.html\"><code>@CookieValue</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/modelattrib-method-args.html\"><code>@ModelAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/sessionattributes.html\"><code>@SessionAttributes</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/sessionattribute.html\"><code>@SessionAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestattrib.html\"><code>@RequestAttribute</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/multipart-forms.html\">多部分内容</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/requestbody.html\"><code>@RequestBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/httpentity.html\"><code>HttpEntity</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/responsebody.html\"><code>@ResponseBody</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/responseentity.html\"><code>ResponseEntity</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"5\">\n    <a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-methods/jackson.html\">Jackson JSON</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/transaction.html\">Transaction Management</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/motivation.html\">Advantages of the Spring Framework’s Transaction Support Model</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/strategies.html\">Understanding the Spring Framework Transaction Abstraction</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/tx-resource-synchronization.html\">Synchronizing Resources with Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative.html\">Declarative Transaction Management</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/tx-decl-explained.html\">Understanding the Spring Framework’s Declarative Transaction Implementation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/first-example.html\">Example of Declarative Transaction Implementation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/rolling-back.html\">Rolling Back a Declarative Transaction</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/diff-tx.html\">Configuring Different Transactional Semantics for Different Beans</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/txadvice-settings.html\">&lt;tx:advice/&gt; Settings</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/annotations.html\">Using <code>@Transactional</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/tx-propagation.html\">Transaction Propagation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/applying-more-than-just-tx-advice.html\">Advising Transactional Operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/aspectj.html\">Using <code>@Transactional</code> with AspectJ</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/programmatic.html\">Programmatic Transaction Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/tx-decl-vs-prog.html\">Choosing Between Programmatic and Declarative Transaction Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/event.html\">Transaction-bound Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/application-server-integration.html\">Application server-specific integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/solutions-to-common-problems.html\">Solutions to Common Problems</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/resources.html\">Further Resources</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/transaction.html\">事务管理</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/motivation.html\">Spring Framework 事务支持模型的优势</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/strategies.html\">理解 Spring Framework 事务抽象</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/tx-resource-synchronization.html\">与事务同步资源</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative.html\">声明式事务管理</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/tx-decl-explained.html\">理解 Spring Framework 的声明式事务实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/first-example.html\">声明式事务实现的示例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/rolling-back.html\">回滚声明式事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/diff-tx.html\">为不同的 Bean 配置不同的事务语义</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/txadvice-settings.html\">&lt;tx:advice/&gt; 设置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/annotations.html\">使用 <code>@Transactional</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/tx-propagation.html\">事务传播</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/applying-more-than-just-tx-advice.html\">建议事务操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/declarative/aspectj.html\">使用 AspectJ 与 <code>@Transactional</code></a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/programmatic.html\">编程式事务管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/tx-decl-vs-prog.html\">在编程式和声明式事务管理之间进行选择</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/event.html\">与事务相关的事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/application-server-integration.html\">特定于应用服务器的集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/solutions-to-common-problems.html\">常见问题的解决方案</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/transaction/resources.html\">进一步资源</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config.html\">MVC Config</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/enable.html\">Enable MVC Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/customize.html\">MVC Config API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/conversion.html\">Type Conversion</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/validation.html\">Validation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/interceptors.html\">Interceptors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/content-negotiation.html\">Content Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/message-converters.html\">Message Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/view-controller.html\">View Controllers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/view-resolvers.html\">View Resolvers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/static-resources.html\">Static Resources</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/default-servlet-handler.html\">Default Servlet</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/path-matching.html\">Path Matching</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/api-version.html\">API Version</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/advanced-java.html\">Advanced Java Config</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/advanced-xml.html\">Advanced XML Config</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config.html\">MVC 配置</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/enable.html\">启用 MVC 配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/customize.html\">MVC 配置 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/conversion.html\">类型转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/validation.html\">验证</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/interceptors.html\">拦截器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/content-negotiation.html\">内容类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/message-converters.html\">消息转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/view-controller.html\">视图控制器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/view-resolvers.html\">视图解析器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/static-resources.html\">静态资源</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/default-servlet-handler.html\">默认 Servlet</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/path-matching.html\">路径匹配</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/api-version.html\">API 版本</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/advanced-java.html\">高级 Java 配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-config/advanced-xml.html\">高级 XML 配置</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../languages.html\">Language Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../languages/kotlin.html\">Kotlin</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/null-safety.html\">Null-safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/classes-interfaces.html\">Classes and Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/annotations.html\">Annotations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/bean-registration-dsl.html\">Bean Registration DSL</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/web.html\">Web</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/coroutines.html\">Coroutines</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/spring-projects-in.html\">Spring Projects in Kotlin</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/resources.html\">Resources</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../../languages/groovy.html\">Apache Groovy</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../languages.html\">语言支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../languages/kotlin.html\">Kotlin</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/extensions.html\">扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/null-safety.html\">空安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/classes-interfaces.html\">类和接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/annotations.html\">注解</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/bean-registration-dsl.html\">Bean 注册 DSL</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/web.html\">Web</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/coroutines.html\">协程</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/spring-projects-in.html\">Kotlin 中的 Spring 项目</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../languages/kotlin/resources.html\">资源</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../../languages/groovy.html\">Apache Groovy</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../beans/annotation-config.html\">Annotation-based Container Configuration</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/autowired.html\">Using <code>@Autowired</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/autowired-primary.html\">Fine-tuning Annotation-based Autowiring with <code>@Primary</code> or <code>@Fallback</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/autowired-qualifiers.html\">Fine-tuning Annotation-based Autowiring with Qualifiers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/generics-as-qualifiers.html\">Using Generics as Autowiring Qualifiers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/custom-autowire-configurer.html\">Using <code>CustomAutowireConfigurer</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/resource.html\">Injection with <code>@Resource</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/value-annotations.html\">Using <code>@Value</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/postconstruct-and-predestroy-annotations.html\">Using <code>@PostConstruct</code> and <code>@PreDestroy</code></a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../beans/annotation-config.html\">基于注解的容器配置</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/autowired.html\">使用 <code>@Autowired</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/autowired-primary.html\">使用 <code>@Primary</code> 或 <code>@Fallback</code> 微调基于注解的自动装配</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/autowired-qualifiers.html\">使用限定符微调基于注解的自动装配</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/generics-as-qualifiers.html\">使用泛型作为自动装配限定符</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/custom-autowire-configurer.html\">使用 <code>CustomAutowireConfigurer</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/resource.html\">使用 <code>@Resource</code> 进行注入</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/value-annotations.html\">使用 <code>@Value</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/annotation-config/postconstruct-and-predestroy-annotations.html\">使用 <code>@PostConstruct</code> 和 <code>@PreDestroy</code></a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet.html\">DispatcherServlet</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/context-hierarchy.html\">Context Hierarchy</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/special-bean-types.html\">Special Bean Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/config.html\">Web MVC Config</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/container-config.html\">Servlet Config</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/sequence.html\">Processing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/handlermapping-path.html\">Path Matching</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/handlermapping-interceptor.html\">Interception</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/exceptionhandlers.html\">Exceptions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/viewresolver.html\">View Resolution</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/localeresolver.html\">Locale</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/multipart.html\">Multipart Resolver</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/logging.html\">Logging</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet.html\">DispatcherServlet</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/context-hierarchy.html\">上下文层次结构</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/special-bean-types.html\">特殊 Bean 类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/config.html\">Web MVC 配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/container-config.html\">Servlet 配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/sequence.html\">处理流程</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/handlermapping-path.html\">路径匹配</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/handlermapping-interceptor.html\">拦截</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/exceptionhandlers.html\">异常处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/viewresolver.html\">视图解析</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/localeresolver.html\">区域设置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/multipart.html\">多部分解析器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc/mvc-servlet/logging.html\">日志记录</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../aop-api.html\">Spring AOP APIs</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/pointcuts.html\">Pointcut API in Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/advice.html\">Advice API in Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/advisor.html\">The Advisor API in Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/pfb.html\">Using the <code>ProxyFactoryBean</code> to Create AOP Proxies</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/concise-proxy.html\">Concise Proxy Definitions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/prog.html\">Creating AOP Proxies Programmatically with the <code>ProxyFactory</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/advised.html\">Manipulating Advised Objects</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/autoproxy.html\">Using the \"auto-proxy\" facility</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/targetsource.html\">Using <code>TargetSource</code> Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/extensibility.html\">Defining New Advice Types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../aop-api.html\">Spring AOP APIs</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/pointcuts.html\">Spring 中的切点 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/advice.html\">Spring 中的通知 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/advisor.html\">Spring 中的 Advisor API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/pfb.html\">使用 <code>ProxyFactoryBean</code> 创建 AOP 代理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/concise-proxy.html\">简洁的代理定义</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/prog.html\">使用 <code>ProxyFactory</code> 以编程方式创建 AOP 代理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/advised.html\">操作 Advised 对象</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/autoproxy.html\">使用“自动代理”设施</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/targetsource.html\">使用 <code>TargetSource</code> 实现类</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../aop-api/extensibility.html\">定义新的通知类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc.html\">Data Access with JDBC</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/choose-style.html\">Choosing an Approach for JDBC Database Access</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/packages.html\">Package Hierarchy</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/core.html\">Using the JDBC Core Classes to Control Basic JDBC Processing and Error Handling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/connections.html\">Controlling Database Connections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/advanced.html\">JDBC Batch Operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/simple.html\">Simplifying JDBC Operations with the <code>SimpleJdbc</code> Classes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/object.html\">Modeling JDBC Operations as Java Objects</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/parameter-handling.html\">Common Problems with Parameter and Data Value Handling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/embedded-database-support.html\">Embedded Database Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/initializing-datasource.html\">Initializing a <code>DataSource</code></a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc.html\">使用 JDBC 进行数据访问</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/choose-style.html\">选择 JDBC 数据库访问方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/packages.html\">包层次结构</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/core.html\">使用 JDBC 核心类控制基本 JDBC 处理和错误处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/connections.html\">控制数据库连接</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/advanced.html\">JDBC 批量操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/simple.html\">使用 <code>SimpleJdbc</code> 类简化 JDBC 操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/object.html\">将 JDBC 操作建模为 Java 对象</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/parameter-handling.html\">参数和数据值处理的常见问题</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/embedded-database-support.html\">嵌入式数据库支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/jdbc/initializing-datasource.html\">初始化 <code>DataSource</code></a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view.html\">View Technologies</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-thymeleaf.html\">Thymeleaf</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-freemarker.html\">FreeMarker</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-groovymarkup.html\">Groovy Markup</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-script.html\">Script Views</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-fragments.html\">HTML Fragments</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-jsp.html\">JSP and JSTL</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-feeds.html\">RSS and Atom</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-document.html\">PDF and Excel</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-jackson.html\">Jackson</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-xml-marshalling.html\">XML Marshalling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-xslt.html\">XSLT Views</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view.html\">视图技术</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-thymeleaf.html\">Thymeleaf</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-freemarker.html\">FreeMarker</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-groovymarkup.html\">Groovy Markup</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-script.html\">脚本视图</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-fragments.html\">HTML 片段</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-jsp.html\">JSP 和 JSTL</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-feeds.html\">RSS 和 Atom</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-document.html\">PDF 和 Excel</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-jackson.html\">Jackson</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-xml-marshalling.html\">XML 序列化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../../web/webmvc-view/mvc-xslt.html\">XSLT 视图</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient.html\">WebClient</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-builder.html\">Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-retrieve.html\"><code>retrieve()</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-exchange.html\">Exchange</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-body.html\">Request Body</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-filter.html\">Filters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-attributes.html\">Attributes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-context.html\">Context</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-synchronous.html\">Synchronous Use</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-testing.html\">Testing</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient.html\">WebClient</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-builder.html\">配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-retrieve.html\"><code>retrieve()</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-exchange.html\">Exchange</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-body.html\">请求体</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-filter.html\">过滤器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-attributes.html\">属性</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-context.html\">上下文</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-synchronous.html\">同步使用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../web/webflux-webclient/client-testing.html\">测试</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../beans/java.html\">Java-based Container Configuration</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/basic-concepts.html\">Basic Concepts: <code>@Bean</code> and <code>@Configuration</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/instantiating-container.html\">Instantiating the Spring Container by Using <code>AnnotationConfigApplicationContext</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/bean-annotation.html\">Using the <code>@Bean</code> Annotation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/configuration-annotation.html\">Using the <code>@Configuration</code> annotation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/composing-configuration-classes.html\">Composing Java-based Configurations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/programmatic-bean-registration.html\">Programmatic Bean Registration</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../beans/java.html\">基于 Java 的容器配置</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/basic-concepts.html\">基本概念：<code>@Bean</code> 和<code>@Configuration</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/instantiating-container.html\">使用<code>AnnotationConfigApplicationContext</code>实例化 Spring 容器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/bean-annotation.html\">使用<code>@Bean</code>注解</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/configuration-annotation.html\">使用<code>@Configuration</code>注解</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/composing-configuration-classes.html\">组合基于 Java 的配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/java/programmatic-bean-registration.html\">程序化 Bean 注册</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../integration/jmx.html\">JMX</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/exporting.html\">Exporting Your Beans to JMX</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/interface.html\">Controlling the Management Interface of Your Beans</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/naming.html\">Controlling  <code>ObjectName</code> Instances for Your Beans</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/jsr160.html\">Using JSR-160 Connectors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/proxy.html\">Accessing MBeans through Proxies</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/notifications.html\">Notifications</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/resources.html\">Further Resources</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../integration/jmx.html\">JMX</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/exporting.html\">将您的 Bean 导出到 JMX</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/interface.html\">控制您的 Bean 的管理接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/naming.html\">控制您的 Bean 的<code>ObjectName</code>实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/jsr160.html\">使用 JSR-160 连接器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/proxy.html\">通过代理访问 MBeans</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/notifications.html\">通知</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jmx/resources.html\">更多资源</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../validation.html\">Validation, Data Binding, and Type Conversion</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/validator.html\">Validation Using Spring’s Validator Interface</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/data-binding.html\">Data Binding</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/error-code-resolution.html\">Resolving Error Codes to Error Messages</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/convert.html\">Spring Type Conversion</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/format.html\">Spring Field Formatting</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/format-configuring-formatting-globaldatetimeformat.html\">Configuring a Global Date and Time Format</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/beanvalidation.html\">Java Bean Validation</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../validation.html\">验证、数据绑定和类型转换</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/validator.html\">使用 Spring 的 Validator 接口进行验证</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/data-binding.html\">数据绑定</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/error-code-resolution.html\">将错误代码解析为错误消息</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/convert.html\">Spring 类型转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/format.html\">Spring 字段格式化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/format-configuring-formatting-globaldatetimeformat.html\">配置全局日期和时间格式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../validation/beanvalidation.html\">Java Bean Validation</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../integration/cache.html\">Cache Abstraction</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/strategies.html\">Understanding the Cache Abstraction</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/annotations.html\">Declarative Annotation-based Caching</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/jsr-107.html\">JCache (JSR-107) Annotations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/declarative-xml.html\">Declarative XML-based Caching</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/store-configuration.html\">Configuring the Cache Storage</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/plug.html\">Plugging-in Different Back-end Caches</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/specific-config.html\">How can I Set the TTL/TTI/Eviction policy/XXX feature?</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../integration/cache.html\">缓存抽象</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/strategies.html\">理解缓存抽象</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/annotations.html\">声明式注解缓存</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/jsr-107.html\">JCache (JSR-107) 注解</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/declarative-xml.html\">声明式 XML 缓存</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/store-configuration.html\">配置缓存存储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/plug.html\">集成不同的后端缓存</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/cache/specific-config.html\">如何设置 TTL/TTI/驱逐策略/XXX 功能？</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../beans/dependencies.html\">Dependencies</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-collaborators.html\">Dependency Injection</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-properties-detailed.html\">Dependencies and Configuration in Detail</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-dependson.html\">Using <code>depends-on</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-lazy-init.html\">Lazy-initialized Beans</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-autowire.html\">Autowiring Collaborators</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-method-injection.html\">Method Injection</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../beans/dependencies.html\">依赖项</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-collaborators.html\">依赖注入</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-properties-detailed.html\">依赖项和配置的详细信息</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-dependson.html\">使用<code>depends-on</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-lazy-init.html\">懒加载 Bean</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-autowire.html\">自动装配协作对象</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"4\">\n    <a class=\"nav-link\" href=\"../../beans/dependencies/factory-method-injection.html\">方法注入</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../integration/jms.html\">JMS (Java Message Service)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/using.html\">Using Spring JMS</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/sending.html\">Sending a Message</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/receiving.html\">Receiving a Message</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/jca-message-endpoint-manager.html\">Support for JCA Message Endpoints</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/annotated.html\">Annotation-driven Listener Endpoints</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/namespace.html\">JMS Namespace Support</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../integration/jms.html\">JMS (Java Message Service)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/using.html\">使用 Spring JMS</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/sending.html\">发送消息</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/receiving.html\">接收消息</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/jca-message-endpoint-manager.html\">支持 JCA 消息端点</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/annotated.html\">注解驱动的监听器端点</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../integration/jms/namespace.html\">JMS 命名空间支持</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/orm.html\">Object Relational Mapping (ORM) Data Access</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/introduction.html\">Introduction to ORM with Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/general.html\">General ORM Integration Considerations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/hibernate.html\">Hibernate</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/jpa.html\">JPA</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../../data-access/orm.html\">对象关系映射 (ORM) 数据访问</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/introduction.html\">使用 Spring 的 ORM 简介</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/general.html\">通用 ORM 集成考虑因素</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/hibernate.html\">Hibernate</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../../data-access/orm/jpa.html\">JPA</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../appendix.html\">Appendix</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../appendix/xsd-schemas.html\">XML Schemas</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../appendix/xml-custom.html\">XML Schema Authoring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../appendix/application-startup-steps.html\">Application Startup Steps</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../appendix.html\">附录</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../appendix/xsd-schemas.html\">XML 模式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../appendix/xml-custom.html\">XML 模式编写</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../appendix/application-startup-steps.html\">应用程序启动步骤</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/context-load-time-weaver.html\">Registering a <code>LoadTimeWeaver</code></a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/context-load-time-weaver.html\">注册一个<code>LoadTimeWeaver</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/context-introduction.html\">Additional Capabilities of the <code>ApplicationContext</code></a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/context-introduction.html\"><code>ApplicationContext</code> 的附加功能</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/introduction.html\">Introduction to the Spring IoC Container and Beans</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/introduction.html\">Spring IoC 容器和 Bean 简介</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/basics.html\">Container Overview</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/basics.html\">容器概述</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/definition.html\">Bean Overview</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/definition.html\">Bean 概述</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/factory-scopes.html\">Bean Scopes</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/factory-scopes.html\">Bean 作用域</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/factory-nature.html\">Customizing the Nature of a Bean</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/factory-nature.html\">自定义 Bean 的性质</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/child-bean-definitions.html\">Bean Definition Inheritance</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/child-bean-definitions.html\">Bean 定义继承</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/factory-extension.html\">Container Extension Points</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/factory-extension.html\">容器扩展点</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/classpath-scanning.html\">Classpath Scanning and Managed Components</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/classpath-scanning.html\">类路径扫描和托管组件</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/standard-annotations.html\">Using JSR 330 Standard Annotations</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/standard-annotations.html\">使用 JSR 330 标准注解</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../beans/environment.html\">Environment Abstraction</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../beans/environment.html\">环境抽象</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../resilience.html\">Resilience Features</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../resilience.html\">弹性功能</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../databuffer-codec.html\">Data Buffers and Codecs</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../databuffer-codec.html\">数据缓冲区和编解码器</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../aot.html\">Ahead of Time Optimizations</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../aot.html\">即时优化</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../data-access/dao.html\">DAO Support</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../data-access/dao.html\">DAO 支持</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../data-access/r2dbc.html\">Data Access with R2DBC</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../data-access/r2dbc.html\">使用 R2DBC 进行数据访问</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../data-access/oxm.html\">Marshalling XML by Using Object-XML Mappers</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../data-access/oxm.html\">使用对象 -XML 映射器进行 XML 序列化</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/message-converters.html\">HTTP Message Conversion</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/message-converters.html\">HTTP 消息转换</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-requestmapping.html\">Mapping Requests</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-requestmapping.html\">映射请求</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-advice.html\">Controller Advice</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-controller/ann-advice.html\">Controller 建议</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc-functional.html\">Functional Endpoints</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc-functional.html\">功能端点</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-uri-building.html\">URI Links</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-uri-building.html\">URI 链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-ann-async.html\">Asynchronous Requests</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-ann-async.html\">异步请求</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-range.html\">Range Requests</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-range.html\">范围请求</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc-versioning.html\">API Versioning</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc-versioning.html\">API 版本控制</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-ann-rest-exceptions.html\">Error Responses</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-ann-rest-exceptions.html\">错误响应</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-security.html\">Web Security</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-security.html\">Web 安全</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-caching.html\">HTTP Caching</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc/mvc-caching.html\">HTTP 缓存</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webmvc-client.html\">REST Clients</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webmvc-client.html\">REST 客户端</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/integration.html\">Other Web Frameworks</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/integration.html\">其他 Web 框架</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/reactive-spring.html\">Reactive Core</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/reactive-spring.html\">响应式核心</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-requestmapping.html\">Mapping Requests</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-requestmapping.html\">映射请求</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-advice.html\">Controller Advice</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/controller/ann-advice.html\">控制器建议</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux-functional.html\">Functional Endpoints</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux-functional.html\">功能端点</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/uri-building.html\">URI Links</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/uri-building.html\">URI 链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/range.html\">Range Requests</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/range.html\">范围请求</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux-versioning.html\">API Versioning</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux-versioning.html\">API 版本控制</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/ann-rest-exceptions.html\">Error Responses</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/ann-rest-exceptions.html\">错误响应</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/security.html\">Web Security</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/security.html\">Web 安全</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/caching.html\">HTTP Caching</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/caching.html\">HTTP 缓存</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux-view.html\">View Technologies</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux-view.html\">查看技术</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux/config.html\">WebFlux Config</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux/config.html\">WebFlux 配置</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux-http-service-client.html\">HTTP Service Client</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux-http-service-client.html\">HTTP 服务客户端</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../web/webflux-reactive-libraries.html\">Reactive Libraries</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../web/webflux-reactive-libraries.html\">响应式库</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/introduction.html\">Introduction to Spring Testing</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/introduction.html\">Spring 测试简介</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/unit.html\">Unit Testing</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/unit.html\">单元测试</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/integration.html\">Integration Testing</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/integration.html\">集成测试</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/support-jdbc.html\">JDBC Testing Support</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/support-jdbc.html\">JDBC 测试支持</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/spring-mvc-test-client.html\">Testing Client Applications</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/spring-mvc-test-client.html\">测试客户端应用程序</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-standard.html\">Standard Annotation Support</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-standard.html\">标准注解支持</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-junit4.html\">Spring JUnit 4 Testing Annotations</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-junit4.html\">Spring JUnit 4 测试注解</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-junit-jupiter.html\">Spring JUnit Jupiter Testing Annotations</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-junit-jupiter.html\">Spring JUnit Jupiter 测试注解</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-meta.html\">Meta-Annotation Support for Testing</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/annotations/integration-meta.html\">测试的元注解支持</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../testing/resources.html\">Further Resources</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../testing/resources.html\">更多资源</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../integration/rest-clients.html\">REST Clients</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../integration/rest-clients.html\">REST 客户端</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../integration/scheduling.html\">Task Execution and Scheduling</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../integration/scheduling.html\">任务执行与调度</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../integration/observability.html\">Observability Support</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../integration/observability.html\">可观测性支持</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../integration/aot-cache.html\">JVM AOT Cache</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../integration/aot-cache.html\">JVM AOT 缓存</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../../../integration/checkpoint-restore.html\">JVM Checkpoint Restore</a>",
+      "translation": "<a class=\"nav-link\" href=\"../../../integration/checkpoint-restore.html\">JVM 检查点恢复</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link link-external\" href=\"https://docs.spring.io/spring-framework/docs/7.0.1/javadoc-api/\" target=\"_blank\">Java API</a>",
+      "translation": "<a class=\"nav-link link-external\" href=\"https://docs.spring.io/spring-framework/docs/7.0.1/javadoc-api/\" target=\"_blank\">Java API</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link link-external\" href=\"https://docs.spring.io/spring-framework/docs/7.0.1/kdoc-api/\" target=\"_blank\">Kotlin API</a>",
+      "translation": "<a class=\"nav-link link-external\" href=\"https://docs.spring.io/spring-framework/docs/7.0.1/kdoc-api/\" target=\"_blank\">Kotlin API</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为什么选择 Spring",
+      "count": 1
+    },
+    {
+      "source": "Spring Framework",
+      "translation": "Spring Framework",
+      "count": 1
+    },
+    {
+      "source": "Core Technologies",
+      "translation": "核心技术",
+      "count": 1
+    },
+    {
+      "source": "The IoC Container",
+      "translation": "IoC 容器",
+      "count": 1
+    },
+    {
+      "source": "Data Access",
+      "translation": "数据访问",
+      "count": 1
+    },
+    {
+      "source": "Web on Servlet Stack",
+      "translation": "Servlet 堆栈上的 Web",
+      "count": 1
+    },
+    {
+      "source": "Spring Web MVC",
+      "translation": "Spring Web MVC",
+      "count": 1
+    },
+    {
+      "source": "Web on Reactive Stack",
+      "translation": "Reactive 栈上的 Web",
+      "count": 1
+    },
+    {
+      "source": "Spring WebFlux",
+      "translation": "Spring WebFlux",
+      "count": 1
+    },
+    {
+      "source": "Spring TestContext Framework",
+      "translation": "Spring TestContext 框架",
+      "count": 1
+    },
+    {
+      "source": "Spring Testing Annotations",
+      "translation": "Spring 测试注解",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}
